@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html lang="zh" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Markdown 入门指南 | PaperModX</title>
+<meta name="keywords" content="markdown, syntax, example">
+<meta name="description" content="Markdown 概述、工作原理以及用途。">
+<meta name="author" content="markdown.xyz">
+<link rel="canonical" href="https://wananaiko.vercel.app/zh/posts/markdown-syntax/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.min.34f610da9fa2cd806ab9ff3f025f84f8f50c190cfbe3eb63b50b7d092bd7afdf.css" integrity="sha256-NPYQ2p&#43;izYBquf8/Al&#43;E&#43;PUMGQz74&#43;tjtQt9CSvXr98=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://wananaiko.vercel.app/favicon.ico">
+<link rel="apple-touch-icon" href="https://wananaiko.vercel.app/apple-touch-icon.png">
+<link rel="alternate" hreflang="en" href="https://wananaiko.vercel.app/posts/markdown-syntax/">
+<link rel="alternate" hreflang="zh" href="https://wananaiko.vercel.app/zh/posts/markdown-syntax/">
+<script async defer data-website-id="f4e3ad0a-7fc1-4f18-b08c-9be77b60cdd5" src="https://oishii.reorx.com/oishii.js"></script>
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Markdown 入门指南 | PaperModX" />
+<meta name="twitter:description" content="Markdown 概述、工作原理以及用途。" />
+<meta property="og:title" content="Markdown 入门指南 | PaperModX" />
+<meta property="og:description" content="Markdown 概述、工作原理以及用途。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://wananaiko.vercel.app/zh/posts/markdown-syntax/" />
+    <meta property="og:image" content="https://wananaiko.vercel.app/cover.png"/>
+<meta property="article:section" content="posts" />
+  <meta property="article:published_time" content="2022-04-12T00:00:00&#43;00:00" />
+  <meta property="article:modified_time" content="2022-04-12T00:00:00&#43;00:00" /><meta property="og:site_name" content="PaperModX" />
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "文章列表",
+      "item": "https://wananaiko.vercel.app/zh/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Markdown 入门指南",
+      "item": "https://wananaiko.vercel.app/zh/posts/markdown-syntax/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Markdown 入门指南 | PaperModX",
+  "name": "Markdown 入门指南",
+  "description": "Markdown 概述、工作原理以及用途。",
+  "keywords": [
+    "markdown", "syntax", "example"
+  ],
+  "wordCount" : "557",
+  "inLanguage": "zh",
+  "datePublished": "2022-04-12T00:00:00Z",
+  "dateModified": "2022-04-12T00:00:00Z",
+  "author":{
+    "@type": "Person",
+    "name": "markdown.xyz"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://wananaiko.vercel.app/zh/posts/markdown-syntax/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "PaperModX",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://wananaiko.vercel.app/favicon.ico"
+    }
+  }
+}
+</script><style>
+  #icons {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 2em;
+  }
+  #icons .item {
+    width: 80px;
+    height: 50px;
+    margin: 10px;
+  }
+  #icons .item .name {
+    font-size: 12px;
+    user-select: all;
+    text-align: center;
+  }
+  #icons .item .icon {
+    display: flex;
+    justify-content: center;
+  }
+  #icons .item svg {
+    width: 30px;
+    height: 30px;
+  }
+</style>
+
+
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary-bg: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list-page {
+                background: var(--theme);
+            }
+
+            .list-page:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list-page:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+
+</head>
+
+<body class=" type-posts kind-page layout-" id="top"><script data-no-instant>
+function switchTheme(theme) {
+  switch (theme) {
+    case 'light':
+      document.body.classList.remove('dark');
+      break;
+    case 'dark':
+      document.body.classList.add('dark');
+      break;
+    
+    default:
+      if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+      }
+  }
+}
+
+function isDarkTheme() {
+  return document.body.className.includes("dark");
+}
+
+function getPrefTheme() {
+  return localStorage.getItem("pref-theme");
+}
+
+function setPrefTheme(theme) {
+  switchTheme(theme)
+  localStorage.setItem("pref-theme", theme);
+}
+
+const toggleThemeCallbacks = {}
+toggleThemeCallbacks['main'] = (isDark) => {
+  
+  if (isDark) {
+    setPrefTheme('light');
+  } else {
+    setPrefTheme('dark');
+  }
+}
+
+
+
+
+window.addEventListener('toggle-theme', function() {
+  
+  const isDark = isDarkTheme()
+  for (const key in toggleThemeCallbacks) {
+    toggleThemeCallbacks[key](isDark)
+  }
+});
+
+
+function toggleThemeListener() {
+  
+  window.dispatchEvent(new CustomEvent('toggle-theme'));
+}
+
+</script>
+<script>
+  
+  (function() {
+    const defaultTheme = 'auto';
+    const prefTheme = getPrefTheme();
+    const theme = prefTheme ? prefTheme : defaultTheme;
+
+    switchTheme(theme);
+  })();
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://wananaiko.vercel.app/" accesskey="h" title="PaperModX (Alt + H)">PaperModX</a>
+            <span class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </span>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://wananaiko.vercel.app/docs/" title="文档"
+                >文档
+                </a>
+            </li>
+            <li>
+                <a href="https://wananaiko.vercel.app/tags/" title="标签"
+                >标签
+                </a>
+            </li>
+            <li>
+                <a href="https://wananaiko.vercel.app/archives/" title="归档"
+                >归档
+                </a>
+            </li>
+            <li>
+                <a href="https://wananaiko.vercel.app/search/" title="搜索"
+                >搜索
+                </a>
+            </li>
+            <li>
+                <a href="https://reorx.com/" title="@作者" target="_blank"
+                >@作者<span class="external-link"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-external-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M11 7h-5a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-5" />
+  <line x1="10" y1="14" x2="20" y2="4" />
+  <polyline points="15 4 20 4 20 9" />
+</svg>
+</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main post">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="https://wananaiko.vercel.app/">主页</a>&nbsp;»&nbsp;<a href="https://wananaiko.vercel.app/zh/posts/">文章列表</a></div><h1 class="post-title">Markdown 入门指南</h1>
+    <div class="post-description">Markdown 概述、工作原理以及用途。</div>
+    <div class="post-meta"><span class="meta-item">
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar" style="user-select: text;"><rect x="3" y="4" width="18" height="18" rx="2" ry="2" style="user-select: text;"></rect><line x1="16" y1="2" x2="16" y2="6" style="user-select: text;"></line><line x1="8" y1="2" x2="8" y2="6" style="user-select: text;"></line><line x1="3" y1="10" x2="21" y2="10" style="user-select: text;"></line></svg>
+  <span>2022-04-12</span></span><span class="meta-item">
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon" style="user-select: text;"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z" style="user-select: text;"></path><line x1="7" y1="7" x2="7" y2="7" style="user-select: text;"></line></svg>
+  <span class="post-tags"><a href="https://wananaiko.vercel.app/zh/tags/markdown/">markdown</a><a href="https://wananaiko.vercel.app/zh/tags/syntax/">syntax</a><a href="https://wananaiko.vercel.app/zh/tags/example/">example</a></span></span><span class="meta-item">
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text" style="user-select: text;"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" style="user-select: text;"></path><polyline points="14 2 14 8 20 8" style="user-select: text;"></polyline><line x1="16" y1="13" x2="8" y2="13" style="user-select: text;"></line><line x1="16" y1="17" x2="8" y2="17" style="user-select: text;"></line><polyline points="10 9 9 9 8 9" style="user-select: text;"></polyline></svg>
+  <span>557 字</span></span><span class="meta-item">
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><circle cx="12" cy="12" r="9"></circle><polyline points="12 7 12 12 15 15"></polyline></svg>
+  <span>3 分钟</span></span><span class="meta-item">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M4 5h7"></path><path d="M7 4c0 4.846 0 7 .5 8"></path><path d="M10 8.5c0 2.286 -2 4.5 -3.5 4.5s-2.5 -1.135 -2.5 -2c0 -2 1 -3 3 -3s5 .57 5 2.857c0 1.524 -.667 2.571 -2 3.143"></path><path d="M12 20l4 -9l4 9"></path><path d="M19.1 18h-6.2"></path></svg>
+  <span class="i18n-links">
+    <a href="https://wananaiko.vercel.app/posts/markdown-syntax/">English</a>
+  </span></span>
+
+      
+      
+    </div>
+  </header> <div class="toc side right">
+    <details  open>
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">目录</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#markdown-%e5%85%a5%e9%97%a8" aria-label="Markdown 入门">Markdown 入门</a><ul>
+                        
+                <li>
+                    <a href="#markdown-%e6%98%af%e4%bb%80%e4%b9%88" aria-label="Markdown 是什么？">Markdown 是什么？</a></li>
+                <li>
+                    <a href="#%e4%b8%ba%e4%bb%80%e4%b9%88%e8%a6%81%e4%bd%bf%e7%94%a8-markdown" aria-label="为什么要使用 Markdown？">为什么要使用 Markdown？</a></li>
+                <li>
+                    <a href="#%e5%b7%a5%e6%ac%b2%e5%96%84%e5%85%b6%e4%ba%8b%e5%bf%85%e5%85%88%e5%88%a9%e5%85%b6%e5%99%a8" aria-label="工欲善其事，必先利其器">工欲善其事，必先利其器</a></li>
+                <li>
+                    <a href="#markdown-%e7%9a%84%e5%b7%a5%e4%bd%9c%e5%8e%9f%e7%90%86" aria-label="Markdown 的工作原理">Markdown 的工作原理</a></li>
+                <li>
+                    <a href="#markdown-%e6%9c%89%e4%bb%80%e4%b9%88%e7%94%a8" aria-label="Markdown 有什么用？">Markdown 有什么用？</a><ul>
+                        
+                <li>
+                    <a href="#%e7%bd%91%e7%ab%99" aria-label="网站">网站</a></li>
+                <li>
+                    <a href="#%e6%96%87%e4%bb%b6%e8%b5%84%e6%96%99" aria-label="文件资料">文件资料</a></li>
+                <li>
+                    <a href="#%e7%ac%94%e8%ae%b0" aria-label="笔记">笔记</a></li>
+                <li>
+                    <a href="#%e4%b9%a6%e7%b1%8d" aria-label="书籍">书籍</a></li>
+                <li>
+                    <a href="#%e6%bc%94%e7%a4%ba%e6%96%87%e7%a8%bf" aria-label="演示文稿">演示文稿</a></li>
+                <li>
+                    <a href="#%e9%82%ae%e4%bb%b6" aria-label="邮件">邮件</a></li>
+                <li>
+                    <a href="#%e6%96%87%e6%a1%a3" aria-label="文档">文档</a></li></ul>
+                </li>
+                <li>
+                    <a href="#markdown-%e6%96%b9%e8%a8%80" aria-label="Markdown 方言">Markdown 方言</a></li>
+                <li>
+                    <a href="#%e5%85%b6%e5%ae%83%e8%b5%84%e6%ba%90" aria-label="其它资源">其它资源</a>
+                </li>
+            </ul>
+            </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><h1 id="markdown-入门">Markdown 入门</h1>
+<blockquote>
+<p>原文链接: <a href="https://www.markdown.xyz/getting-started/">Markdown 入门指南 | Markdown 指南中文版</a></p>
+</blockquote>
+<p><em>Markdown 的概述、工作原理，以及用途。</em></p>
+<!--TOC-->
+<h2 id="markdown-是什么">Markdown 是什么？</h2>
+<p>Markdown
+是一种轻量级的标记语言，可用于在纯文本文档中添加格式化元素。Markdown 由
+<a href="https://daringfireball.net/projects/markdown/">John Gruber</a> 于 2004
+年创建，如今已成为世界上最受欢迎的标记语言之一。</p>
+<p>使用 Markdown 与使用 <a href="https://en.wikipedia.org/wiki/WYSIWYG">WYSIWYG</a>
+编辑器不同。在 Microsoft Word
+之类的应用程序中，单击按钮以设置单词和短语的格式，并且，更改立即可见。而
+Markdown 与此不同，当你创建 Markdown 格式的文件时，可以在文本中添加
+Markdown 语法，以指示哪些单词和短语看起来应该有所不同。</p>
+<p>例如，要表示标题，只须在短语前面添加一个井号即可（例如，
+<code># Heading One</code>）。或者要加粗一个短语，只须在短语前后各加两个星号即可（例如，<code>**this text is bold**</code>）。可能需要一段时间才能习惯在文本中看到
+Markdown
+语法，尤其是如果你已习惯了所见即所得的应用程序。以下屏幕截展示了
+Markdown 文件在 <a href="https://code.visualstudio.com/">VSCode</a> 中显示的效果。</p>
+<p></p>
+<p>你可以使用文本编辑器为纯文本文件添加 Markdown
+格式的元素。或者，你也可以安装针对 macOS、Windows、Linux、iOS 和 Android
+操作系统的 Markdown 应用程序。或者还可以使用一些基于 Web 的应用程序用于
+Markdown 编写。</p>
+<p>依赖于你所使用的应用程序，你可能无法实时预览格式化的文档。但是没关系。<a href="https://daringfireball.net/projects/markdown/">根据
+Gruber 的说法</a>，Markdown
+的语法被设计为可读性强且不显眼，因此即使 Markdown
+文件中的文本未经过渲染也易于阅读。</p>
+<blockquote>
+<p>Markdown 语法的首要设计目标是尽可能易读。基于这个目标，Markdown
+格式的文档能够以纯文本形式原样发布，而不会看起来像被填满了标签或格式化指令。</p>
+</blockquote>
+<h2 id="为什么要使用-markdown">为什么要使用 Markdown？</h2>
+<p>你可能想知道为什么人们使用 Markdown
+而不是所用即所得（WYSIWYG）编辑器。当你可以通过按下界面中的按钮来设置文本格式时，为什么还要使用
+Markdown 来书写呢？事实证明，人们使用 Markdown 而不是 WYSIWYG
+编辑器的原因有两个：</p>
+<ul>
+<li>
+<p>Markdown 处处可用。人们使用它来创建
+<a href="#websites">网站</a>、<a href="#documents">文档</a>、<a href="#notes">便签</a>、<a href="#books">书籍</a>、<a href="#presentations">演示文稿</a>、<a href="#email">邮件</a>
+和 <a href="#documentation">技术文档</a>。</p>
+</li>
+<li>
+<p>Markdown 是可移植的。几乎可以使用任何应用程序打开包含 Markdown
+格式的文本文件。如果你不喜欢当前使用的 Markdown 应用程序了，则可以将
+Markdown 文件导入另一个 Markdown 应用程序中。这与 Microsoft Word
+等文字处理应用程序形成了鲜明的对比，Microsoft Word
+将你的内容锁定在专有文件格式中。</p>
+</li>
+<li>
+<p>Markdown 是独立于平台的。你可以在运行任何操作系统的任何设备上创建
+Markdown 格式的文本。</p>
+</li>
+<li>
+<p>Markdown
+能适应未来的变化。即使你正在使用的应用程序将来会在某个时候不能使用了，你仍然可以使用文本编辑器读取
+Markdown
+格式的文本。当涉及需要无限期保存的书籍、大学论文和其他里程碑式的文件时，这是一个重要的考虑因素。</p>
+</li>
+<li>
+<p>Markdown 无处不在。例如 <a href="/tools/reddit/">Reddit</a> 和 GitHub
+等网站都支持 Markdown，许多桌面和基于 Web 的应用程序也都支持
+Markdown。</p>
+</li>
+</ul>
+<h2 id="工欲善其事必先利其器">工欲善其事，必先利其器</h2>
+<p>Markdown
+入门的最佳方式就是多使用它。由于有大量免费工具的存在，这比以前任何时候都更容易开始上手了。</p>
+<p>你甚至都不需要下载任何程序，就可以使用几种在线的 Markdown 编辑器来编写
+Markdown。<a href="https://www.zybuluo.com/mdeditor">MDEditor</a> 是最好的在线 Markdown
+编辑器之一。进入其站点就可以开始在左侧窗格中书写了。渲染后的文档在右侧窗格预览。</p>
+<p></p>
+<p>阅读本指南时，你可以打开 MDEditor 网站。这样，你就可以一边学习 Markdown
+语法一边练习了。熟悉 Markdown
+之后，你可以在台式计算机或移动设备上安装支持 Markdown 的应用程序。</p>
+<h2 id="markdown-的工作原理">Markdown 的工作原理</h2>
+<p>MDEditor 让 Markdown
+的编写变得容易，因为它隐藏了幕后发生的事情，但是该过程的总体工作方式是值得探索的。</p>
+<p>在使用 Markdown 格式书写时，文本内容存储在带有 <code>.md</code> 或 <code>.markdown</code>
+扩展名的纯文本文件中。那然后呢？你的 Markdown 格式的文件如何转换为 HTML
+或可打印的文档呢？</p>
+<p>简单来说，你需要一个能够处理 Markdown 文件的 <em>Markdown
+应用程序</em>。有许多应用程序可供选择，从简单的脚本到类似于 Microsoft Word
+的桌面应用程序，应有尽有。尽管它们在视觉上有所不同，但所有应用程序都执行相同的操作。像
+MDEditor 一样，它们都是将 Markdown 格式的文本转换为 HTML，以便可以在
+Web 浏览器中显示。</p>
+<p>Markdown 应用程序使用一种称为 <em>Markdown
+处理器</em>（也通常称为“解析器”或“实现”）的东西将获取到的 Markdown
+格式的文本输出为 HTML 格式。此时，可以在 Web
+浏览器中查看你的文档，或者将其与样式表组合并打印。你可以在下图看到此过程的直观表示。</p>
+<div class="alert alert-info">
+注意： Markdown
+应用程序和处理器是两个单独的组件。为了简洁起见，在下图中，我将它们组合为一个元素（即
+“Markdown应用程序”）。
+</div>
+<p></p>
+<p>总而言之，这是一个四步的过程：</p>
+<ol>
+<li>使用文本编辑器或 Markdown 专用的应用程序创建 Markdown
+文件。该文件应带有 <code>.md</code> 或 <code>.markdown</code> 扩展名。</li>
+<li>在 Markdown 应用程序中打开 Markdown 文件。</li>
+<li>使用 Markdown 应用程序将 Markdown 文件转换为 HTML 文档。</li>
+<li>在 web 浏览器中查看 HTML 文件，或使用 Markdown
+应用程序将其转换为其他文件格式，例如 PDF。</li>
+</ol>
+<p>从你的角度来看，该过程将根据你使用的应用程序的不同而有所不同。例如，MDEditor
+本质上将第 1-3
+步组合到一个单一、无缝的界面中，你要做的就是在左窗格中键入内容，然后转换结果就在右窗格中就神奇地出现了。但是，如果你使用的是其他工具（例如带有静态网站生成器的文本编辑器），则会发现该过程更为明显。</p>
+<h2 id="markdown-有什么用">Markdown 有什么用？</h2>
+<p>Markdown 是做笔记、为网站创建内容以及生成可打印文档的快速、简便的方法。</p>
+<p>学习 Markdown
+语法并不需要很长时间，一旦你知道如何使用它，你就可以在几乎所有地方使用
+Markdown 进行书写了。大多数人使用 Markdown 来为网站创建内容，但是
+Markdown 也可以很好地格式化从电子邮件到购物清单的所有内容。</p>
+<p>下面是一些你可以使用 Markdown 的场景。</p>
+<h3 id="网站">网站</h3>
+<p>Markdown 是为 web
+而设计的，因此，市面上有很多专门用于创建网站内容的应用程序就不足为奇了。</p>
+<p>如果你您正在寻找利用 Markdown 文件创建网站的最简单方法，请参考
+<a href="https://blot.im">blot.im</a> 和 <a href="https://smallvictori.es">smallvictori.es</a>
+两个站点。在你注册某个服务之后，它们将在你的计算机上创建一个 Dropbox
+文件夹。你只需将 Markdown
+文件拖放到该文件夹​​中，然后嗖的一声，这些文件就在你的网站上了。再简单不过了。</p>
+<p>如果您熟悉 HTML、CSS和版本管理工具，请试试
+<a href="/tools/jekyll/">Jekyll</a>，这是一个广受欢迎的静态网站生成器，它能将
+Markdown 文件并构建为 HTML 网站。这种方法的优势之一是 <a href="/tools/github-pages/">GitHub
+Pages</a> 为 Jekyll 生成的网站提供免费托管服务。如果
+Jekyll 不是你的理想之选，你可以在
+<a href="https://www.staticgen.com/">其它大量可用的静态站点生成器</a> 中选择一个。</p>
+<div class="alert alert-info">
+注意： 此 <b>Markdown指南</b> 就是用 Jekyll 创建的。你可以在
+GitHub 上查看其源码。
+</div>
+<p>如果你想使用内容管理系统（CMS）来支撑你的网站，请试试
+<a href="/tools/ghost/">Ghost</a>。这是一个免费的开源博客平台，具有出色的 Markdown
+编辑器。如果你是 WordPress 用户，你将很高兴地知道 WordPress.com
+上托管的网站都 <a href="https://en.support.wordpress.com/markdown/">支持
+Markdown</a>。自托管的
+WordPress 网站可以使用 <a href="https://jetpack.com/support/markdown/">Jetpack
+插件</a>实现对 Markdown 的支持。</p>
+<h3 id="文件资料">文件资料</h3>
+<p>Markdown 并不具备像 Microsoft Word
+这样的文字处理程序的所有功能，但是对于创建基本文件（例如作业和信件）来说已经足够了。你可以使用
+Markdown 文档创作工具来创建 Markdown 格式的文档并将其导出为 PDF 或 HTML
+格式。PDF 格式是关键，因为一旦有了 PDF
+文档，您就可以使用它进行任何操作：打印、通过电子邮件发送或将其上传到网站。</p>
+<p>这是我推荐的一些Markdown文档创作工具：</p>
+<table>
+<thead>
+<tr>
+<th>平台</th>
+<th>工具</th>
+<th>链接</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mac</td>
+<td>MacDown</td>
+<td><a href="https://macdown.uranusjr.com/">https://macdown.uranusjr.com/</a></td>
+</tr>
+<tr>
+<td>Mac</td>
+<td>Marked</td>
+<td><a href="https://marked2app.com/">https://marked2app.com/</a></td>
+</tr>
+<tr>
+<td>Mac / iOS / Android</td>
+<td>iA Writer</td>
+<td><a href="https://ia.net/writer">https://ia.net/writer</a></td>
+</tr>
+<tr>
+<td>Windows</td>
+<td>ghostwriter</td>
+<td><a href="https://wereturtle.github.io/ghostwriter/">https://wereturtle.github.io/ghostwriter/</a></td>
+</tr>
+<tr>
+<td>Windows</td>
+<td>Markdown Monster</td>
+<td><a href="https://markdownmonster.west-wind.com/">https://markdownmonster.west-wind.com/</a></td>
+</tr>
+<tr>
+<td>Linux</td>
+<td>ReText</td>
+<td><a href="https://github.com/retext-project/retext">https://github.com/retext-project/retext</a></td>
+</tr>
+<tr>
+<td>Linux</td>
+<td>ghostwriter</td>
+<td><a href="https://wereturtle.github.io/ghostwriter/">https://wereturtle.github.io/ghostwriter/</a></td>
+</tr>
+<tr>
+<td>Web</td>
+<td>MDEditor</td>
+<td><a href="https://www.zybuluo.com/mdeditor">https://www.zybuluo.com/mdeditor</a></td>
+</tr>
+</tbody>
+</table>
+<div class="alert alert-success">
+提示：iA Writer
+提供了模板用于预览、打印和导出 Markdown 格式的文档。例如，“ Academic –
+MLA 样式”的模板会缩进段落并添加双句间距。
+</div>
+<h3 id="笔记">笔记</h3>
+<p>在几乎所有方面，Markdown
+都是记笔记的理想语法。不幸的是，两个最受欢迎的笔记应用程序
+<a href="https://evernote.com/">Evernote</a> 和 <a href="https://www.onenote.com/">OneNote</a>
+目前都不支持 Markdown。好消息是，其他一些笔记应用程序 <em>是</em> 支持 Markdown
+的：</p>
+<ul>
+<li><a href="/tools/simplenote/">Simplenote</a>
+是适用于所有平台的免费、简单的笔记应用程序。</li>
+<li><a href="/tools/notable/">Notable</a> 是可以在各种平台上运行的笔记应用程序。</li>
+<li><a href="/tools/bear/">Bear</a> 是适用于 Mac 和 iOS 设备的类似 Evernote
+的应用程序。默认情况下，它并不专门针对 Markdown 的，但是你可以启用
+Markdown 兼容模式。</li>
+<li><a href="/tools/boostnote/">Boostnote</a>
+自称是“专为程序员设计的开源笔记应用程序”。</li>
+</ul>
+<p>如果你无法放弃 Evernote，可以试试
+<a href="https://marxi.co/">Marxico</a>，一个专门针对 Evernote 的基于订阅付费的
+Markdown编辑器，或在 Evernote 网站上使用 <a href="/tools/markdown-here/">Markdown
+Here</a> 插件。</p>
+<h3 id="书籍">书籍</h3>
+<p>想要自行出版小说？请试试 <a href="https://leanpub.com/">Leanpub</a>，该服务可将你的
+Markdown 格式的文件转换为电子书。Leanpub 以 PDF、EPUB 和 MOBI
+文件格式输出你的图书。如果你要创建纸版书籍，可以将 PDF 文件上传到类似
+<a href="https://kdp.amazon.com">Kindle Direct Publishing</a>
+之类的服务提供商处。要了解有关使用 Markdown
+编写和自行出版书籍的更多信息，请阅读
+<a href="https://medium.com/techspiration-ideas-making-it-happen/how-i-wrote-and-published-my-novel-using-only-open-source-tools-5cdfbd7c00ca">此博文</a>。</p>
+<h3 id="演示文稿">演示文稿</h3>
+<p>信不信由你，你可以将 Markdown 格式的文件转换成演示文稿。在 Markdown
+中创建演示文稿需要一点时间来适应，但是一旦你掌握了它，你就能体会到比使用
+PowerPoint 或 Keynote
+之类的应用程序更快、更容易。<a href="https://remarkjs.com">Remark</a>（<a href="https://github.com/gnab/remark">GitHub
+仓库</a>）和
+<a href="https://jdan.github.io/cleaver/">Cleaver</a>（<a href="https://github.com/jdan/cleaver">GitHub
+仓库</a>）一样，是一种基于浏览器的、流行的
+Markdown 幻灯片工具。如果你使用的是
+Mac，并且希望安装一个应用程序来使用的话，请试试
+<a href="https://www.decksetapp.com/">Deckset</a> 或
+<a href="https://marked2app.com/">Marked</a>。</p>
+<h3 id="邮件">邮件</h3>
+<p>如果你需要发送大量电子邮件，并且对大多数电子邮件提供商网站上可用的格式设置控件感到厌倦，那么你将很高兴地发现有一种使用
+Markdown 编写电子邮件的简便方法：<a href="/tools/markdown-here/">Markdown Here</a>
+是一个免费、开源的浏览器扩展程序，可将 Markdown
+格式的文本转换为可用于发送的 HTML。</p>
+<h3 id="文档">文档</h3>
+<p>Markdown 非常适合技术文档。像 GitHub 这样的公司越来越多地转向使用
+Markdown 来创建其文档了，请查看此
+<a href="https://github.com/blog/1939-how-github-uses-github-to-document-github">博文</a>
+以了解如何将 Markdown 格式的文档迁移到
+<a href="/tools/jekyll/">Jekyll</a>。如果你是为产品或服务编写文档，请试试以下的便捷工具：</p>
+<ul>
+<li><a href="https://readthedocs.org">Read the Docs</a> 可以将你所开源的 Markdown
+文件生成文档网站。只需将你的 GitHub
+仓库连接到他们的服务，然后你就可以将内容推送到该仓库中，Read the
+Docs 会完成其余的工作。他们还为
+<a href="https://readthedocs.com/">商业实体提供服务</a>。</li>
+<li><a href="/tools/mkdocs/">MkDocs</a>
+是一个快速、简单的静态站点生成器，专门用于构建项目文档。文档源文件使用
+Markdown 编写，并使用一个 YAML 配置文件进行配置。MkDocs 有多个
+<a href="https://www.mkdocs.org/user-guide/styling-your-docs/">内置主题</a>，包括移植自
+<a href="https://readthedocs.org/">Read the Docs</a>
+的文档主题。最新的一个主题是 <a href="https://squidfunk.github.io/mkdocs-material/">MkDocs
+Material</a>。</li>
+<li><a href="/tools/docusaurus/">Docusaurus</a>
+是一个静态网站生成器，专门用于创建文档网站。它支持翻译、搜索和版本控制。</li>
+<li><a href="https://vuepress.vuejs.org/">VuePress</a> 是基于
+<a href="https://vuejs.org/">Vue</a>
+构建的静态站点生成器，并针对编写技术文档进行了优化。</li>
+<li><a href="/tools/jekyll/">Jekyll</a> 前面已经提到过它了，但它也是将 Markdown
+文件生成文档网站的一个不错的选择。如果你选择 Jekyll，请务必试试
+<a href="https://idratherbewriting.com/documentation-theme-jekyll/">Jekyll
+文档主题</a>。</li>
+</ul>
+<h2 id="markdown-方言">Markdown 方言</h2>
+<p>使用 Markdown 的过程中，最令人困惑的地方是：实际上每个 Markdown
+应用程序都实现了稍有不同的 Markdown 语法。Markdown 的这些变体通常被称为
+<em>flavors（方言）</em>。掌握你的应用程序所实现的 Markdown
+语法是你需要主义的。</p>
+<p>为了让你了解各 Markdown 变体的概念，将它们比作语言的方言（language
+dialects）可能会有所帮助。华雷斯城（Ciudad
+Juárez）的人说西班牙语，就像巴塞罗那（Barcelona）人一样，但是两个城市使用的方言之间有很大的不同。使用不同
+Markdown 应用程序的人也是如此。MDEditor 支持的
+Markdown 格式与 Ulysses 有着很大的不同。</p>
+<p>实际上，这意味着当一个应用程序说它支持 “Markdown”
+时，你永远也不会确切地知到它的实际意思。它说的是仅支持
+<a href="/basic-syntax/">基本语法</a>？还是所有基本语法加
+<a href="/extended-syntax/">扩展语法</a>
+？或者是某些语法的组合呢？在你阅读其文档或开始使用该应用程序之前，你永远都不会知到。</p>
+<p>如果你只是新手，我能给你的最好建议就是选择一个具有良好 Markdown
+支持的应用程序。这对保持 Markdown
+文件的可移植性大有帮助。你可能需要在其它应用程序中保存或使用你的
+Markdown 文件，要实现这一点，你应当从使用一个具有良好 Markdown
+支持的应用程序开始。你可以在 <a href="/tools/">Markdown 工具列表</a>
+中找到合适的应用程序。</p>
+<h2 id="其它资源">其它资源</h2>
+<p>网上有很多资源用来学习 Markdown。以下列出一些：</p>
+<ul>
+<li><a href="https://daringfireball.net/projects/markdown/">John Gruber’s Markdown
+documentation</a>.
+Markdown 的创建者编写的原始指南。</li>
+<li><a href="https://www.markdowntutorial.com/">Markdown Tutorial</a>.
+一个开源网站，你能用浏览器在这个网站上尝试 Markdown。</li>
+<li><a href="https://github.com/mundimark/awesome-markdown">Awesome Markdown</a>.
+Markdown 工具和学习资源列表。</li>
+<li><a href="https://dave.autonoma.ca/blog/2019/05/22/typesetting-markdown-part-1">Typesetting
+Markdown</a>.
+这是一个系列教程，介绍了使用 <a href="https://pandoc.org/">pandoc</a> 和
+<a href="https://www.contextgarden.net/">ConTeXt</a> 对 Markdown
+文档进行排版的系统。</li>
+</ul>
+
+  </div>
+
+  <footer class="post-footer">
+
+  </footer><div class="comments">
+  <div class="title">
+    <span>Comments</span>
+    <span class="counter"><span class="remark42__counter" data-url="https://wananaiko.vercel.app/zh/posts/markdown-syntax/"></span></span>
+  </div>
+  <div id="remark42">
+  </div>
+</div>
+
+<script>
+  var remark_config = {
+    host: 'https:\/\/remark42.reorx.com',
+    site_id: 'reorx.github.io',
+    components: ['embed', 'counter'],
+    max_shown_comments: 20,
+    theme: 'light',
+    simple_view: true,
+    admonition: JSON.stringify(['Please subscribe by email to receive reply notifications.']),
+  };
+  if (isDarkTheme()) {
+    remark_config.theme = 'dark'
+  }
+
+  (function() {
+    
+    const key = 'remark42'
+    if (!toggleThemeCallbacks.hasOwnProperty(key)) {
+      toggleThemeCallbacks[key] = (isDark) => {
+        const remark42 = window.REMARK42
+        if (!remark42 || !document.querySelector('#remark42')) {
+          return;
+        }
+        if (isDark) {
+          remark42.changeTheme('light');
+        } else {
+          remark42.changeTheme('dark');
+        }
+      }
+    }
+
+    
+    const remark42 = window.REMARK42
+    if (remark42) {
+      remark42.destroy()
+      remark42.createInstance(remark_config)
+    } else {
+      for (const component of remark_config.components) {
+        var d = document, s = d.createElement('script');
+        s.src = `${remark_config.host}/web/${component}.mjs`;
+        s.type = 'module';
+        s.defer = true;
+        
+        s.setAttribute('data-no-instant', '')
+        d.head.appendChild(s);
+      }
+    }
+  })();
+</script>
+
+</article>
+    </main>
+    
+<footer class="footer">
+  <span>&copy; 2022 <a href="https://wananaiko.vercel.app/">PaperModX</a></span><span style="display: inline-block; margin-left: 1em;">
+    <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA</a>
+  </span>
+  <span style="display: inline-block; margin-left: 1em;">
+    Powered by
+    <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+    <a href="https://github.com/reorx/hugo-PaperModX/" rel="noopener" target="_blank">PaperModX</a>
+  </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+    <path d="M12 6H0l6-6z" />
+  </svg>
+</a>
+
+<script>
+  (function() {
+     
+    const disableThemeToggle = '' == '1';
+    if (disableThemeToggle) {
+      return;
+    }
+
+    let button = document.getElementById("theme-toggle")
+    
+    button.removeEventListener('click', toggleThemeListener)
+    
+    button.addEventListener('click', toggleThemeListener)
+  })();
+</script>
+
+<script>
+  (function () {
+    let menu = document.getElementById('menu')
+    if (menu) {
+      menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+      menu.onscroll = function () {
+        localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+      }
+    }
+
+    const disableSmoothScroll = '' == '1';
+    const enableInstantClick = '1' == '1';
+    
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches || disableSmoothScroll || enableInstantClick) {
+      return;
+    }
+    
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener("click", function (e) {
+        e.preventDefault();
+        var id = this.getAttribute("href").substr(1);
+        document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+          behavior: "smooth"
+        });
+        if (id === "top") {
+          history.replaceState(null, null, " ");
+        } else {
+          history.pushState(null, null, `#${id}`);
+        }
+      });
+    });
+  })();
+</script>
+<script>
+  var mybutton = document.getElementById("top-link");
+  window.onscroll = function () {
+    if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+      mybutton.style.visibility = "visible";
+      mybutton.style.opacity = "1";
+    } else {
+      mybutton.style.visibility = "hidden";
+      mybutton.style.opacity = "0";
+    }
+  };
+</script>
+<script>
+  if (window.scrollListeners) {
+    
+    for (const listener of scrollListeners) {
+      window.removeEventListener('scroll', listener)
+    }
+  }
+  window.scrollListeners = []
+</script>
+
+
+
+<script src="/js/medium-zoom.min.js" data-no-instant
+></script>
+<script>
+  document.querySelectorAll('pre > code').forEach((codeblock) => {
+    const container = codeblock.parentNode.parentNode;
+
+    const copybutton = document.createElement('button');
+    copybutton.classList.add('copy-code');
+    copybutton.innerText = '复制';
+
+    function copyingDone() {
+      copybutton.innerText = '已复制！';
+      setTimeout(() => {
+        copybutton.innerText = '复制';
+      }, 2000);
+    }
+
+    copybutton.addEventListener('click', (cb) => {
+      if ('clipboard' in navigator) {
+        navigator.clipboard.writeText(codeblock.textContent);
+        copyingDone();
+        return;
+      }
+
+      const range = document.createRange();
+      range.selectNodeContents(codeblock);
+      const selection = window.getSelection();
+      selection.removeAllRanges();
+      selection.addRange(range);
+      try {
+        document.execCommand('copy');
+        copyingDone();
+      } catch (e) { };
+      selection.removeRange(range);
+    });
+
+    if (container.classList.contains("highlight")) {
+      container.appendChild(copybutton);
+    } else if (container.parentNode.firstChild == container) {
+      
+    } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+      
+      codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+    } else {
+      
+      codeblock.parentNode.appendChild(copybutton);
+    }
+  });
+</script>
+
+
+
+
+<script>
+  
+  
+  (function() {
+    const enableTocScroll = '1' == '1'
+    if (!enableTocScroll) {
+      return
+    }
+    if (!document.querySelector('.toc')) {
+      console.log('no toc found, ignore toc scroll')
+      return
+    }
+    
+
+    
+    const scrollListeners = window.scrollListeners
+    const headings = document.querySelectorAll('h1[id],h2[id],h3[id],h4[id],h5[id]');
+    const activeClass = 'active';
+
+    
+    let activeHeading = headings[0];
+    getLinkByHeading(activeHeading).classList.add(activeClass);
+
+    const onScroll = () => {
+      const passedHeadings = [];
+      for (const h of headings) {
+        
+        if (getOffsetTop(h) < 5) {
+          passedHeadings.push(h)
+        } else {
+          break;
+        }
+      }
+      if (passedHeadings.length > 0) {
+        newActiveHeading = passedHeadings[passedHeadings.length - 1];
+      } else {
+        newActiveHeading = headings[0];
+      }
+      if (activeHeading != newActiveHeading) {
+        getLinkByHeading(activeHeading).classList.remove(activeClass);
+        activeHeading = newActiveHeading;
+        getLinkByHeading(activeHeading).classList.add(activeClass);
+      }
+    }
+
+    let timer = null;
+    const scrollListener = () => {
+      if (timer !== null) {
+        clearTimeout(timer)
+      }
+      timer = setTimeout(onScroll, 50)
+    }
+    window.addEventListener('scroll', scrollListener, false);
+    scrollListeners.push(scrollListener)
+
+    function getLinkByHeading(heading) {
+      const id = encodeURI(heading.getAttribute('id')).toLowerCase();
+      return document.querySelector(`.toc ul li a[href="#${id}"]`);
+    }
+
+    function getOffsetTop(heading) {
+      if (!heading.getClientRects().length) {
+        return 0;
+      }
+      let rect = heading.getBoundingClientRect();
+      return rect.top
+    }
+  })();
+  </script>
+<script>
+  mediumZoom('.entry-cover img');
+  mediumZoom('.post-content img:not([no-zoom])');
+</script>
+
+<script src="/js/instantclick.min.js" data-no-instant
+></script>
+<script data-no-instant>
+  
+  
+  
+  
+  
+  
+  InstantClick.init();
+</script>
+</body>
+
+</html>
