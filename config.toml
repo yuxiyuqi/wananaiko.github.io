@@ -116,6 +116,11 @@ url = "/archives/"
 weight = 5
 
 [[languages.en.menu.main]]
+name = "Memos"
+url = "/memos/"
+weight = 6
+
+[[languages.en.menu.main]]
 name = "Search"
 url = "/search/"
 weight = 10
