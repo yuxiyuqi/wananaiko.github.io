@@ -1,881 +1,215 @@
-baseURL = ""
-# [en, zh-cn, fr, pl, ...] determines default content language
-# [en, zh-cn, fr, pl, ...] 设置默认的语言
-defaultContentLanguage = "zh-cn"
-# theme
-# 主题
-theme = "DoIt"
-# themes directory
-# 主题目录
-themesDir = "./themes"
-
-# website title
-# 网站标题
-title = "网站标题"
-
-# whether to use robots.txt
-# 是否使用 robots.txt
+baseURL = "https://reorx.github.io/hugo-PaperModX/"
+title = "PaperModX"
+paginate = 5
+theme = "PaperModX"
+enableInlineShortcodes = true
 enableRobotsTXT = true
-# whether to use git commit log
-# 是否使用 git 信息
-enableGitInfo = true
-# whether to use emoji code
-# 是否使用 emoji 代码
+buildDrafts = false
+buildFuture = false
+buildExpired = false
 enableEmoji = true
 
-[languages]
-  [languages.zh-cn]
-    weight = 2
-    # 网站语言, 仅在这里 CN 大写
-    languageCode = "zh-CN"
-    # 语言名称
-    languageName = "简体中文"
-    # 是否包括中日韩文字
-    hasCJKLanguage = true
-    # 默认每页列表显示的文章数目
-    paginate = 12
-    # [UA-XXXXXXXX-X] 谷歌分析代号
-    googleAnalytics = ""
-    # 版权描述，仅仅用于 SEO
-    copyright = "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License."
-    # 菜单配置
-    [languages.zh-cn.menu]
-      [[languages.zh-cn.menu.main]]
-        identifier = "posts"
-        # 你可以在名称 (允许 HTML 格式) 之前添加其他信息, 例如图标
-        pre = ""
-        # 你可以在名称 (允许 HTML 格式) 之后添加其他信息, 例如图标
-        post = ""
-        name = "所有文章"
-        url = "/posts/"
-        title = ""
-        weight = 1
-      [[languages.zh-cn.menu.main]]
-        identifier = "tags"
-        pre = ""
-        post = ""
-        name = "标签"
-        url = "/tags/"
-        title = ""
-        weight = 2
-      [[languages.zh-cn.menu.main]]
-        identifier = "categories"
-        pre = ""
-        post = ""
-        name = "分类"
-        url = "/categories/"
-        title = ""
-        weight = 3
-      [[languages.zh-cn.menu.main]]
-        identifier = "series"
-        pre = ""
-        post = ""
-        name = "系列"
-        url = "/series/"
-        title = ""
-        weight = 4
-      [[languages.zh-cn.menu.main]]
-        identifier = "github"
-        pre = "<i class='fab fa-github fa-fw'></i>"
-        post = ""
-        name = ""
-        url = ""
-        title = "GitHub"
-        weight = 9
-    [languages.zh-cn.params]
-      # 网站描述
-      description = "网站描述"
-      # 网站关键词
-      keywords = ["Theme", "Hugo"]
-      # 应用图标配置
-      [languages.zh-cn.params.app]
-        # 当添加到 iOS 主屏幕或者 Android 启动器时的标题, 覆盖默认标题
-        title = ""
-        # 是否隐藏网站图标资源链接
-        noFavicon = false
-        # 更现代的 SVG 网站图标, 可替代旧的 .png 和 .ico 文件
-        svgFavicon = ""
-        # Safari 图标颜色
-        iconColor = "#5bbad5"
-        # Windows v8-10 磁贴颜色
-        tileColor = "#da532c"
-      # 搜索配置
-      [languages.zh-cn.params.search]
-        enable = true
-        # 搜索引擎的类型 ("lunr", "algolia", "fuse")
-        type = "fuse"
-        # 文章内容最长索引长度
-        contentLength = 4000
-        # 搜索框的占位提示语
-        placeholder = ""
-        # 最大结果数目
-        maxResultLength = 10
-        # 结果内容片段长度
-        snippetLength = 50
-        # 搜索结果中高亮部分的 HTML 标签
-        highlightTag = "em"
-        # 是否在搜索索引中使用基于 baseURL 的绝对路径
-        absoluteURL = false
-        [languages.zh-cn.params.search.algolia]
-          index = ""
-          appID = ""
-          searchKey = ""
-        [languages.zh-cn.params.search.fuse]
-          # https://fusejs.io/api/options.html
-          isCaseSensitive = false
-          minMatchCharLength = 2
-          findAllMatches = false
-          location = 0
-          threshold = 0.1
-          distance = 100
-          ignoreLocation = true
-          useExtendedSearch = false
-          ignoreFieldNorm = false
-      # 主页信息设置
-      [languages.zh-cn.params.home]
-        # RSS 文章数目
-        rss = 10
-        # 主页个人信息
-        [languages.zh-cn.params.home.profile]
-          enable = true
-          # Gravatar 邮箱，用于优先在主页显示的头像
-          gravatarEmail = ""
-          # 主页显示头像的 URL
-          avatarURL = "/images/avatar.webp"
-          # 主页显示的网站标题 (支持 HTML 格式)
-          title = "主页标题"
-          # 主页显示的网站副标题
-          subtitle = "主页副标题"
-          # 是否为副标题显示打字机动画
-          typeit = true
-          # 是否显示社交账号
-          social = true
-          # 免责声明 (支持 HTML 格式)
-          disclaimer = ""
-        # 主页文章列表
-        [languages.zh-cn.params.home.posts]
-          enable = true
-          # 主页每页显示文章数量
-          paginate = 7
-      # 主页的社交信息设置
-      [languages.zh-cn.params.social]
-        GitHub = ""
-        Linkedin = ""
-        Twitter = ""
-        Instagram = ""
-        Facebook = ""
-        Telegram = ""
-        Medium = ""
-        Gitlab = ""
-        Youtubelegacy = ""
-        Youtubecustom = ""
-        Youtubechannel = ""
-        Tumblr = ""
-        Quora = ""
-        Keybase = ""
-        Pinterest = ""
-        Reddit = ""
-        Codepen = ""
-        FreeCodeCamp = ""
-        Bitbucket = ""
-        Stackoverflow = ""
-        Weibo = "xxxx"
-        Odnoklassniki = ""
-        VK = ""
-        Flickr = ""
-        Xing = ""
-        Snapchat = ""
-        Soundcloud = ""
-        Spotify = ""
-        Bandcamp = ""
-        Paypal = ""
-        Fivehundredpx = ""
-        Mix = ""
-        Goodreads = ""
-        Lastfm = ""
-        Foursquare = ""
-        Hackernews = ""
-        Kickstarter = ""
-        Patreon = ""
-        Steam = ""
-        Twitch = ""
-        Strava = ""
-        Skype = ""
-        Whatsapp = ""
-        Zhihu = ""
-        Douban = ""
-        Angellist = ""
-        Slidershare = ""
-        Jsfiddle = ""
-        Deviantart = ""
-        Behance = ""
-        Dribbble = ""
-        Wordpress = ""
-        Vine = ""
-        Googlescholar = ""
-        Researchgate = ""
-        Mastodon = ""
-        Thingiverse = ""
-        Devto = ""
-        Gitea = ""
-        XMPP = ""
-        Matrix = ""
-        Bilibili = "xxxx"
-        ORCID = ""
-        Liberapay = ""
-        Ko-Fi = ""
-        BuyMeACoffee = ""
-        Linktree = ""
-        QQ = ""
-        QQGroup = ""
-        Email = ""
-        RSS = true
-        # 赞助设置
-      [languages.zh-cn.params.sponsor]
-        enable = false
-        bio = "如果你觉得这篇文章对你有所帮助，欢迎赞赏~"
-        link = ""
-        # custom = "<a href=\"https://www.buymeacoffee.com/PCloud\" target=\"_blank\"><img src=\"https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png\" alt=\"Buy Me A Coffee\" style=\"height: 40px !important;width: 145 !important;\" ></a>"
-
-
 [params]
-  # website title
-  # 网站标题
-  title = "网站标题"
-  # DoIt theme version
-  # DoIt 主题版本
-  version = "0.2.X"
-  # site default theme ("light", "dark", "black", "auto")
-  # 网站默认主题 ("light", "dark", "black", "auto")
-  defaultTheme = "auto"
-  # public git repo url only then enableGitInfo is true
-  # 公共 git 仓库路径，仅在 enableGitInfo 设为 true 时有效
-  gitRepo = ""
-  # which hash function used for SRI, when empty, no SRI is used ("sha256", "sha384", "sha512", "md5")
-  # 哪种哈希函数用来 SRI, 为空时表示不使用 SRI ("sha256", "sha384", "sha512", "md5")
-  fingerprint = ""
-  # date format
-  # 日期格式
-  dateFormat = "2006-01-02"
-  # website images for Open Graph and Twitter Cards
-  # 网站图片, 用于 Open Graph 和 Twitter Cards
-  images = ["/images/avatar.webp"]
-  # enable PWA
-  # 开启 PWA 支持
-  enablePWA = true
-  # Header config
-  # 页面头部导航栏配置
-  [params.header]
-    # desktop header mode ("fixed", "normal", "auto")
-    # 桌面端导航栏模式 ("fixed", "normal", "auto")
-    desktopMode = "fixed"
-    # mobile header mode ("fixed", "normal", "auto")
-    # 移动端导航栏模式 ("fixed", "normal", "auto")
-    mobileMode = "auto"
-    # theme change mode ("switch", "select")
-    # 主题切换模式 ("switch", "select")
-    themeChangeMode = "select"
-    # Header title config
-    # 页面头部导航栏标题配置
-    [params.header.title]
-      # URL of the LOGO
-      # LOGO 的 URL
-      logo = ""
-      # title name
-      # 标题名称
-      name = "头部标题"
-      # you can add extra information before the name (HTML format is supported), such as icons
-      # 你可以在名称 (允许 HTML 格式) 之前添加其他信息, 例如图标
-      pre = "<i class='far fa-edit fa-fw'></i>"
-      # you can add extra information after the name (HTML format is supported), such as icons
-      # 你可以在名称 (允许 HTML 格式) 之后添加其他信息, 例如图标
-      post = ""
-      # whether to use typeit animation for title name
-      # 是否为标题显示打字机动画
-      typeit = true
+env = "production"
+description = "Theme PaperModX - https://github.com/reorx/hugo-PaperModX"
+author = [ "Reorx" ]
+mainSections = [ "docs", "posts" ]
+disableAnchoredHeadings = true
+images = [ "cover.png" ]
+DateFormat = "2006-01-02"
+useCustomAnalytics = true
+defaultTheme = "auto"
+ShowShareButtons = true
+ShowReadingTime = true
+ShowWordCount = true
+displayFullLangName = true
+ShowPostNavLinks = true
+ShowBreadCrumbs = true
+ShowCodeCopyButtons = true
+ShowToc = true
+TocOpen = true
+TocSide = "right"
+EnableInstantClick = true
+EnableImageZoom = true
 
-  # Footer config
-  # 页面底部信息配置
-  [params.footer]
-    enable = true
-    # Custom content (HTML format is supported)
-    # 自定义内容 (支持 HTML 格式)
-    custom = ''
-    # whether to show Hugo and theme info
-    # 是否显示 Hugo 和主题信息
-    hugo = true
-    # whether to show copyright info
-    # 是否显示版权信息
-    copyright = true
-    # whether to show the author
-    # 是否显示作者
-    author = true
-    # site creation time
-    # 网站创立年份
-    since = 2019
-    # ICP info only in China (HTML format is supported)
-    # ICP 备案信息，仅在中国使用 (支持 HTML 格式)
-    icp = ""
-    # license info (HTML format is supported)
-    # 许可协议信息 (支持 HTML 格式)
-    license= '<a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a>'
+[params.commentSystems.disqus]
+shortname = "reorx"
 
-  # Section (all posts) page config
-  # Section (所有文章) 页面配置
-  [params.section]
-    # special amount of posts in each section page
-    # section 页面每页显示文章数量
-    paginate = 20
-    # date format (month and day)
-    # 日期格式 (月和日)
-    dateFormat = "01-02"
-    # amount of RSS pages
-    # RSS 文章数目
-    rss = 10
-    # recently updated posts settings
-    # 最近更新文章设置
-    [params.section.recentlyUpdated]
-      enable = true
-      rss = true
-      days = 30
-      maxCount = 10
+[params.commentSystems.remark42]
+url = "https://remark42.reorx.com"
+site = "reorx.github.io"
 
-  # List (category or tag) page config
-  # List (目录或标签) 页面配置
-  [params.list]
-    # special amount of posts in each list page
-    # list 页面每页显示文章数量
-    paginate = 20
-    # date format (month and day)
-    # 日期格式 (月和日)
-    dateFormat = "01-02"
-    # amount of RSS pages
-    # RSS 文章数目
-    rss = 10
+[params.commentSystems.telegramWidget]
+channel = "reorx_share"
+accentColor = "9077e1"
+limit = 20
 
-  # Page config
-  # 文章页面配置
-  [params.page]
-    # whether to hide a page from home page
-    # 是否在主页隐藏一篇文章
-    hiddenFromHomePage = false
-    # whether to hide a page from search results
-    # 是否在搜索结果中隐藏一篇文章
-    hiddenFromSearch = false
-    # whether to enable twemoji
-    # 是否使用 twemoji
-    twemoji = false
-    # whether to enable lightgallery
-    # 是否使用 lightgallery
-    lightgallery = true
-    # whether to enable the ruby extended syntax
-    # 是否使用 ruby 扩展语法
-    ruby = true
-    # whether to enable the fraction extended syntax
-    # 是否使用 fraction 扩展语法
-    fraction = true
-    # whether to enable the fontawesome extended syntax
-    # 是否使用 fontawesome 扩展语法
-    fontawesome = true
-    # whether to show link to Raw Markdown content of the content
-    # 是否显示原始 Markdown 文档内容的链接
-    linkToMarkdown = true
-    # configure the link to edit the post
-    # 配置编辑文章的链接
-    linkToEdit = ""
-    # https://github.com/user/repo/edit/main/{path}
-    # https://gitlab.com/user/repo/-/edit/main/{path}
-    # https://bitbucket.org/user/repo/src/main/{path}?mode=edit
-    # whether to show the full text content in RSS
-    # 是否在 RSS 中显示全文内容
-    rssFullText = false
-    # Page style ("normal", "wide")
-    # 页面样式 ("normal", "wide")
-    pageStyle = "normal"
-    # whether to enable series navigation
-    # 是否使用系列导航
-    seriesNavigation = true
-    # Display a message at the beginning of an article to warn the reader that its content might be outdated.
-    # 在文章开头显示提示信息，提醒读者文章内容可能过时。
-    [params.page.outdatedArticleReminder]
-      enable = true
-      # Display the reminder if the last modified time is more than 90 days ago.
-      # 如果文章最后更新于这天数之前，显示提醒
-      reminder = 90
-      # Display warning if the last modified time is more than 180 days ago.
-      # 如果文章最后更新于这天数之前，显示警告
-      warning = 180
-    # Table of the contents config
-    # 目录配置
-    [params.page.toc]
-      # whether to enable the table of the contents
-      # 是否使用目录
-      enable = true
-      # whether to keep the static table of the contents in front of the post
-      # 是否保持使用文章前面的静态目录
-      keepStatic = false
-      # whether to make the table of the contents in the sidebar automatically collapsed
-      # 是否使侧边目录自动折叠展开
-      auto = true
-    # Code config
-    # 代码配置
-    [params.page.code]
-      # whether to show the copy button of the code block
-      # 是否显示代码块的复制按钮
-      copy = true
-      # the maximum number of lines of displayed code by default
-      # 默认展开显示的代码行数
-      maxShownLines = 10
-    # KaTeX mathematical formulas config (KaTeX https://katex.org/)
-    # KaTeX 数学公式配置 (KaTeX https://katex.org/)
-    [params.page.math]
-      enable = false
-      # default block delimiter is $$ ... $$ and \\[ ... \\]
-      # 默认块定界符是 $$ ... $$ 和 \\[ ... \\]
-      blockLeftDelimiter = ""
-      blockRightDelimiter = ""
-      # default inline delimiter is $ ... $ and \\( ... \\)
-      # 默认行内定界符是 $ ... $ 和 \\( ... \\)
-      inlineLeftDelimiter = ""
-      inlineRightDelimiter = ""
-      # KaTeX extension copy_tex
-      # KaTeX 插件 copy_tex
-      copyTex = true
-      # KaTeX extension mhchem
-      # KaTeX 插件 mhchem
-      mhchem = true
-    # Mapbox GL JS config (Mapbox GL JS https://docs.mapbox.com/mapbox-gl-js)
-    # Mapbox GL JS 配置 (Mapbox GL JS https://docs.mapbox.com/mapbox-gl-js)
-    [params.page.mapbox]
-      # access token of Mapbox GL JS
-      # Mapbox GL JS 的 access token
-      accessToken = ""
-      # style for the light theme
-      # 浅色主题的地图样式
-      lightStyle = ""
-      # style for the dark theme
-      # 深色主题的地图样式
-      darkStyle = ""
-      # whether to add NavigationControl (https://docs.mapbox.com/mapbox-gl-js/api/#navigationcontrol)
-      # 是否添加 NavigationControl (https://docs.mapbox.com/mapbox-gl-js/api/#navigationcontrol)
-      navigation = true
-      # whether to add GeolocateControl (https://docs.mapbox.com/mapbox-gl-js/api/#geolocatecontrol)
-      # 是否添加 GeolocateControl (https://docs.mapbox.com/mapbox-gl-js/api/#geolocatecontrol)
-      geolocate = true
-      # whether to add ScaleControl (https://docs.mapbox.com/mapbox-gl-js/api/#scalecontrol)
-      # 是否添加 ScaleControl (https://docs.mapbox.com/mapbox-gl-js/api/#scalecontrol)
-      scale = true
-      # whether to add FullscreenControl (https://docs.mapbox.com/mapbox-gl-js/api/#fullscreencontrol)
-      # 是否添加 FullscreenControl (https://docs.mapbox.com/mapbox-gl-js/api/#fullscreencontrol)
-      fullscreen = true
-    # Social share links in post page
-    # 文章页面的分享信息设置
-    [params.page.share]
-      enable = true
-      # 支持根据文章标题生成分享图片
-      # see https://ogp.me/
-      [params.page.share.ogimage]
-        enable = true
-        # og-image 服务地址
-        serverURL = "https://og-image-demo.humblex.top/"
-        # 文章分享时的默认图片，文章存在 featuredImage 时优先使用 featuredImage
-        defaultImage = "https://assets.vercel.com/image/upload/front/assets/design/vercel-triangle-black.svg"
-      Twitter = true
-      Facebook = true
-      Linkedin = false
-      Whatsapp = false
-      Pinterest = false
-      Tumblr = false
-      HackerNews = true
-      Reddit = false
-      VK = false
-      Buffer = false
-      Xing = false
-      Line = true
-      Instapaper = false
-      Pocket = false
-      Digg = false
-      Stumbleupon = false
-      Flipboard = false
-      Weibo = true
-      Renren = false
-      Myspace = false
-      Blogger = false
-      Baidu = false
-      Odnoklassniki = false
-      Evernote = false
-      Skype = false
-      Trello = false
-      Mix = false
-    # Comment config
-    # 评论系统设置
-    [params.page.comment]
-      enable = true
-      # Disqus comment config (https://disqus.com/)
-      # Disqus 评论系统设置 (https://disqus.com/)
-      [params.page.comment.disqus]
-        enable = false
-        # Disqus shortname to use Disqus in posts
-        # Disqus 的 shortname，用来在文章中启用 Disqus 评论系统
-        shortname = ""
-      # Gitalk comment config (https://github.com/gitalk/gitalk)
-      # Gitalk 评论系统设置 (https://github.com/gitalk/gitalk)
-      [params.page.comment.gitalk]
-        enable = false
-        owner = ""
-        repo = ""
-        clientId = ""
-        clientSecret = ""
-      # Valine comment config (https://github.com/xCss/Valine)
-      # Valine 评论系统设置 (https://github.com/xCss/Valine)
-      [params.page.comment.valine]
-        enable = false
-        appId = ""
-        appKey = ""
-        placeholder = ""
-        avatar = "mp"
-        meta= ""
-        pageSize = 10
-        lang = "en"
-        visitor = true
-        recordIP = false
-        highlight = true
-        enableQQ = false
-        serverURLs = ""
-        # emoji data file name, default is "google.yml"
-        # ("apple.yml", "google.yml", "facebook.yml", "twitter.yml")
-        # located in "themes/DoIt/assets/data/emoji/" directory
-        # you can store your own data files in the same path under your project:
-        # "assets/data/emoji/"
-        # emoji 数据文件名称, 默认是 "google.yml"
-        # ("apple.yml", "google.yml", "facebook.yml", "twitter.yml")
-        # 位于 "themes/DoIt/assets/data/emoji/" 目录
-        # 可以在你的项目下相同路径存放你自己的数据文件:
-        # "assets/data/emoji/"
-        emoji = ""
-      # Waline comment config (https://waline.js.org)
-      # Waline 评论系统设置 (https://waline.js.org)
-      [params.page.comment.waline]
-        enable = false
-        serverURL = ""
-        visitor = false
-        emoji = ['https://cdn.jsdelivr.net/gh/walinejs/emojis/weibo']
-        meta = ['nick', 'mail', 'link']
-        requiredMeta = []
-        login = 'enable'
-        wordLimit = 0
-        pageSize = 10
-        uploadImage = false
-        highlight = true
-        mathTagSupport = false
-        commentCount = false
-      # Facebook comment config (https://developers.facebook.com/docs/plugins/comments)
-      # Facebook 评论系统设置 (https://developers.facebook.com/docs/plugins/comments)
-      [params.page.comment.facebook]
-        enable = false
-        width = "100%"
-        numPosts = 10
-        appId = ""
-        languageCode = ""
-      # Telegram comments config (https://comments.app/)
-      # Telegram comments 评论系统设置 (https://comments.app/)
-      [params.page.comment.telegram]
-        enable = false
-        siteID = ""
-        limit = 5
-        height = ""
-        color = ""
-        colorful = true
-        dislikes = false
-        outlined = false
-        dark = false
-      # Commento comment config (https://commento.io/)
-      # Commento comment 评论系统设置 (https://commento.io/)
-      [params.page.comment.commento]
-        enable = false
-      # Utterances comment config (https://utteranc.es/)
-      # Utterances comment 评论系统设置 (https://utteranc.es/)
-      [params.page.comment.utterances]
-        enable = false
-        # owner/repo
-        repo = ""
-        issueTerm = "pathname"
-        label = ""
-        lightTheme = "github-light"
-        darkTheme = "github-dark"
-      # Twikoo comment config (https://twikoo.js.org/)
-      # Twikoo comment 评论系统设置 (https://twikoo.js.org/)
-      [params.page.comment.twikoo]
-        enable = false
-        envId = ""
-        region = ""
-        path = ""
-        visitor = true
-        commentCount = true
-      # Vssue comment config (https://vssue.js.org//)
-      # Vssue comment 评论系统设置 (https://vssue.js.org//)
-      [params.page.comment.vssue]
-        enable = false
-        platform = "" # ("bitbucket", "gitea", "gitee", "github", "gitlab")
-        owner = ""
-        repo = ""
-        clientId = ""
-        clientSecret = ""
-      # Remark42 comment config (https://remark42.com/)
-      # Remark42 comment 评论系统设置 (https://remark42.com/)
-      [params.page.comment.remark42]
-        enable = false
-        host = ""
-        site_id = ""
-        max_shown_comments = 15
-        show_email_subscription = true
-        simple_view = false
-      # giscus comment config (https://giscus.app/)
-      # giscus comment 评论系统设置 (https://giscus.app/)
-      [params.page.comment.giscus]
-        enable = false
-        # owner/repo
-        dataRepo = ""
-        dataRepoId = ""
-        dataCategory = ""
-        dataCategoryId = ""
-        dataMapping = "pathname"
-        dataReactionsEnabled = "1"
-        dataEmitMetadata = "0"
-        lightTheme = "light"
-        darkTheme = "dark"
-    # Third-party library config
-    # 第三方库配置
-    [params.page.library]
-      [params.page.library.css]
-        # someCSS = "some.css"
-        # located in "assets/" 位于 "assets/"
-        # Or 或者
-        # someCSS = "https://cdn.example.com/some.css"
-      [params.page.library.js]
-        websiteCardEmbedJavaScript = "https://website-card-embed-demo.humblex.top/website-card-embed-loveit.js"
-        # someJavascript = "some.js"
-        # located in "assets/" 位于 "assets/"
-        # Or 或者
-        # someJavascript = "https://cdn.example.com/some.js"
-      # 卡片引用配置
-      # see https://github.com/Humble-Xiang/website-card-embed
-      [params.page.library.card]
-        serverURL = 'https://website-card-embed-demo.humblex.top/'
-      # Page SEO config
-    # 页面 SEO 配置
-    [params.page.seo]
-      # image URL
-      # 图片 URL
-      images = []
-      # Publisher info
-      # 出版者信息
-      [params.page.seo.publisher]
-        name = ""
-        logoUrl = "/images/avatar.webp"
-  # Sponsor config
-  # 赞助设置
-  [params.sponsor]
-    enable = false
-    bio = "If you find this post helpful, please consider sponsoring."
-    link = ""
-    # custom = "<a href=\"https://www.buymeacoffee.com/PCloud\" target=\"_blank\"><img src=\"https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png\" alt=\"Buy Me A Coffee\" style=\"height: 40px !important;width: 145 !important;\" ></a>"
+  [params.defaultCommentSystems]
+  remark42 = true
 
-  # TypeIt config
-  # TypeIt 配置
-  [params.typeit]
-    # typing speed between each step (measured in milliseconds)
-    # 每一步的打字速度 (单位是毫秒)
-    speed = 100
-    # blinking speed of the cursor (measured in milliseconds)
-    # 光标的闪烁速度 (单位是毫秒)
-    cursorSpeed = 1000
-    # character used for the cursor (HTML format is supported)
-    # 光标的字符 (支持 HTML 格式)
-    cursorChar = "|"
-    # cursor duration after typing finishing (measured in milliseconds, "-1" means unlimited)
-    # 打字结束之后光标的持续时间 (单位是毫秒, "-1" 代表无限大)
-    duration = -1
+  [params.profileMode]
+  enabled = false
+  title = "PaperModX"
+  imageUrl = "#"
+  imageTitle = "my image"
 
-  # Site verification code for Google/Bing/Yandex/Pinterest/Baidu
-  # 网站验证代码，用于 Google/Bing/Yandex/Pinterest/Baidu
-  [params.verification]
-    google = ""
-    bing = ""
-    yandex = ""
-    pinterest = ""
-    baidu = ""
-    so = ""
-    sogou = ""
+    [[params.profileMode.buttons]]
+    name = "Archives"
+    url = "/archives/"
 
-  # Site SEO config
-  # 网站 SEO 配置
-  [params.seo]
-    # image URL
-    # 图片 URL
-    image = "/images/Apple-Devices-Preview.png"
-    # thumbnail URL
-    # 缩略图 URL
-    thumbnailUrl = "/images/screenshot.png"
+    [[params.profileMode.buttons]]
+    name = "Tags"
+    url = "/tags/"
 
-  # Analytics config
-  # 网站分析配置
-  [params.analytics]
-    enable = false
-    # Google Analytics
-    [params.analytics.google]
-      id = ""
-      # whether to anonymize IP
-      # 是否匿名化用户 IP
-      anonymizeIP = true
-    # Fathom Analytics
-    [params.analytics.fathom]
-      id = ""
-      # server url for your tracker if you're self hosting
-      # 自行托管追踪器时的主机路径
-      server = ""
-    # Baidu Analytics
-    [params.analytics.baidu]
-      id = ""
-    # Umami Analytics
-    [params.analytics.umami]
-      data_website_id = ""
-      src = ""
-      data_domains = ""
-    # Plausible Analytics
-    [params.analytics.plausible]
-      data_domain = ""
-      src = ""
+  [params.homeInfoParams]
+  Title = "PaperModX"
+  Content = """
+Welcome to demo of hugo's theme PaperModX.
 
-  # Cookie consent config
-  # Cookie 许可配置
-  [params.cookieconsent]
-    enable = false
-    # text strings used for Cookie consent banner
-    # 用于 Cookie 许可横幅的文本字符串
-    [params.cookieconsent.content]
-      message = ""
-      dismiss = ""
-      link = ""
+- **PaperModX** is a simple but fast and responsive theme with useful feature-set that enhances UX.
 
-  # CDN config for third-party library files
-  # 第三方库文件的 CDN 设置
-  [params.cdn]
-    # CDN data file name, disabled by default
-    # ("jsdelivr.yml")
-    # located in "themes/DoIt/assets/data/cdn/" directory
-    # you can store your own data files in the same path under your project:
-    # "assets/data/cdn/"
-    # CDN 数据文件名称, 默认不启用
-    # ("jsdelivr.yml")
-    # 位于 "themes/DoIt/assets/data/cdn/" 目录
-    # 可以在你的项目下相同路径存放你自己的数据文件:
-    # "assets/data/cdn/"
-    data = ""
+- PaperModX is based on theme [PaperMod](https://github.com/adityatelange/hugo-PaperMod).
 
-  # Compatibility config
-  # 兼容性设置
-  [params.compatibility]
-    # whether to use Polyfill.io to be compatible with older browsers
-    # 是否使用 Polyfill.io 来兼容旧式浏览器
-    polyfill = false
-    # whether to use object-fit-images to be compatible with older browsers
-    # 是否使用 object-fit-images 来兼容旧式浏览器
-    objectFit = false
+To get started, please head to the [Docs](docs).
 
-# Markup related configuration in Hugo
-# Hugo 解析文档的配置
-[markup]
-  # Syntax Highlighting (https://gohugo.io/content-management/syntax-highlighting)
-  # 语法高亮设置 (https://gohugo.io/content-management/syntax-highlighting)
-  [markup.highlight]
-    codeFences = true
-    guessSyntax = true
-    lineNos = true
-    lineNumbersInTable = true
-    # false is a necessary configuration (https://github.com/dillonzq/LoveIt/issues/158)
-    # false 是必要的设置 (https://github.com/dillonzq/LoveIt/issues/158)
-    noClasses = false
-  # Goldmark is from Hugo 0.60 the default library used for Markdown
-  # Goldmark 是 Hugo 0.60 以来的默认 Markdown 解析库
-  [markup.goldmark]
-    [markup.goldmark.extensions]
-      definitionList = true
-      footnote = true
-      linkify = true
-      strikethrough = true
-      table = true
-      taskList = true
-      typographer = true
-    [markup.goldmark.renderer]
-      # whether to use HTML tags directly in the document
-      # 是否在文档中直接使用 HTML 标签
-      unsafe = true
-  # Table Of Contents settings
-  # 目录设置
-  [markup.tableOfContents]
-    startLevel = 2
-    endLevel = 6
+To see examples of different contents, head to [examples tag](tags/example).
+"""
 
-# Author config
-# 作者配置
-[author]
-  name = ""
-  email = ""
-  link = ""
-  avatar = "/images/avatar.webp"
-  gravatarEmail = ""
+  [[params.socialIcons]]
+  name = "github-simple"
+  url = "https://github.com/reorx/hugo-PaperModX"
 
-# Sitemap config
-# 网站地图配置
-[sitemap]
-  changefreq = "weekly"
-  filename = "sitemap.xml"
-  priority = 0.5
+  [[params.socialIcons]]
+  name = "rss-simple"
+  url = "index.xml"
 
-# Permalinks config (https://gohugo.io/content-management/urls/#permalinks)
-# Permalinks 配置 (https://gohugo.io/content-management/urls/#permalinks)
-[Permalinks]
-  # posts = ":year/:month/:filename"
-  posts = ":filename"
+  [params.editPost]
+  URL = "https://github.com/reorx/hugo-PaperModX/tree/exampleSite/content"
+  Text = "Suggest Changes"
+  appendFilePath = true
 
-# Privacy config (https://gohugo.io/about/hugo-and-gdpr/)
-# 隐私信息配置 (https://gohugo.io/about/hugo-and-gdpr/)
-[privacy]
-  # privacy of the Google Analytics (replaced by params.analytics.google)
-  # Google Analytics 相关隐私 (被 params.analytics.google 替代)
-  [privacy.googleAnalytics]
-    # ...
-  [privacy.twitter]
-    enableDNT = true
-  [privacy.youtube]
-    privacyEnhanced = true
+[minify]
+disableXML = true
 
-# Options to make output .md files
-# 用于输出 Markdown 格式文档的设置
-[mediaTypes]
-  [mediaTypes."text/plain"]
-    suffixes = ["md"]
+[languages.en]
+languageName = "English"
+weight = 1
 
-# Options to make output .md files
-# 用于输出 Markdown 格式文档的设置
-[outputFormats.MarkDown]
-  mediaType = "text/plain"
-  isPlainText = true
-  isHTML = false
+[[languages.en.menu.main]]
+name = "Docs"
+url = "/docs/"
+weight = 1
 
-# Options to make hugo output files
-# 用于 Hugo 输出文档的设置
+[[languages.en.menu.main]]
+name = "Newsletter"
+url = "/newsletter/"
+weight = 1
+
+[[languages.en.menu.main]]
+name = "Tags"
+url = "/tags/"
+weight = 4
+
+[[languages.en.menu.main]]
+name = "Archive"
+url = "/archives/"
+weight = 5
+
+[[languages.en.menu.main]]
+name = "Search"
+url = "/search/"
+weight = 10
+
+[[languages.en.menu.main]]
+name = "@Author"
+url = "https://reorx.com"
+
+  [languages.en.menu.main.params]
+  external = true
+
+[languages.zh]
+languageName = ":cn:"
+languageAltTitle = "中文"
+weight = 2
+title = "PaperModX"
+
+  [languages.zh.profileMode]
+  enabled = true
+  title = "PaperModX"
+  subtitle = """
+<p>Hugo 主题</p> ☄️ 快速 | ☁️ 流畅 | 📖 可读性 | 📱 响应式
+"""
+
+    [[languages.zh.profileMode.buttons]]
+    name = "文档"
+    url = "docs"
+
+    [[languages.zh.profileMode.buttons]]
+    name = "标签"
+    url = "tags"
+
+[[languages.zh.menu.main]]
+name = "文档"
+url = "docs"
+weight = 1
+
+[[languages.zh.menu.main]]
+name = "标签"
+url = "tags/"
+weight = 4
+
+[[languages.zh.menu.main]]
+name = "归档"
+url = "archives"
+weight = 5
+
+[[languages.zh.menu.main]]
+name = "搜索"
+url = "search/"
+weight = 10
+
+[[languages.zh.menu.main]]
+name = "@作者"
+url = "https://reorx.com"
+
+  [languages.zh.menu.main.params]
+  external = true
+
 [outputs]
-  home = ["HTML", "RSS", "JSON"]
-  page = ["HTML", "MarkDown"]
-  section = ["HTML", "RSS"]
-  taxonomy = ["HTML", "RSS"]
-  taxonomyTerm = ["HTML"]
+home = [ "HTML", "RSS", "JSON" ]
 
-# Options for taxonomies
-# 用于分类的设置
 [taxonomies]
 category = "categories"
 tag = "tags"
 series = "series"
+
+[markup.goldmark.renderer]
+unsafe = true
+
+[markup.highlight]
+style = "dracula"
+lineNos = false
+noClasses = false
+
+[privacy.vimeo]
+disabled = false
+simple = true
+
+[privacy.twitter]
+disabled = false
+enableDNT = true
+simple = true
+
+[privacy.instagram]
+disabled = false
+simple = true
+
+[privacy.youtube]
+disabled = false
+privacyEnhanced = true
+
+[services.instagram]
+disableInlineCSS = true
+
+[services.twitter]
+disableInlineCSS = true
