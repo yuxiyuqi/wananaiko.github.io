@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Installation | Update | PaperModX</title>
+<meta name="keywords" content="">
+<meta name="description" content="Read Install and Update instructions here">
+<meta name="author" content="Aditya Telange">
+<link rel="canonical" href="https://reorx.github.io/hugo-PaperModX/docs/installation/">
+<link crossorigin="anonymous" href="/hugo-PaperModX/assets/css/stylesheet.min.34f610da9fa2cd806ab9ff3f025f84f8f50c190cfbe3eb63b50b7d092bd7afdf.css" integrity="sha256-NPYQ2p&#43;izYBquf8/Al&#43;E&#43;PUMGQz74&#43;tjtQt9CSvXr98=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://reorx.github.io/hugo-PaperModX/favicon.ico">
+<link rel="apple-touch-icon" href="https://reorx.github.io/hugo-PaperModX/apple-touch-icon.png">
+<link rel="alternate" hreflang="en" href="https://reorx.github.io/hugo-PaperModX/docs/installation/">
+<script async defer data-website-id="f4e3ad0a-7fc1-4f18-b08c-9be77b60cdd5" src="https://oishii.reorx.com/oishii.js"></script>
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Installation | Update | PaperModX" />
+<meta name="twitter:description" content="Read Install and Update instructions here" />
+<meta property="og:title" content="Installation | Update | PaperModX" />
+<meta property="og:description" content="Read Install and Update instructions here" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://reorx.github.io/hugo-PaperModX/docs/installation/" />
+    <meta property="og:image" content="https://reorx.github.io/hugo-PaperModX/cover.png"/>
+<meta property="article:section" content="docs" />
+  <meta property="article:published_time" content="2021-01-20T00:00:00&#43;00:00" />
+  <meta property="article:modified_time" content="2021-01-20T00:00:00&#43;00:00" />
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "PaperModX Docs",
+      "item": "https://reorx.github.io/hugo-PaperModX/docs/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Installation | Update",
+      "item": "https://reorx.github.io/hugo-PaperModX/docs/installation/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Installation | Update | PaperModX",
+  "name": "Installation | Update",
+  "description": "Read Install and Update instructions here",
+  "keywords": [
+    
+  ],
+  "wordCount" : "739",
+  "inLanguage": "en",
+  "datePublished": "2021-01-20T00:00:00Z",
+  "dateModified": "2021-01-20T00:00:00Z",
+  "author":{
+    "@type": "Person",
+    "name": "Aditya Telange"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://reorx.github.io/hugo-PaperModX/docs/installation/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "PaperModX",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://reorx.github.io/hugo-PaperModX/favicon.ico"
+    }
+  }
+}
+</script><style>
+  #icons {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 2em;
+  }
+  #icons .item {
+    width: 80px;
+    height: 50px;
+    margin: 10px;
+  }
+  #icons .item .name {
+    font-size: 12px;
+    user-select: all;
+    text-align: center;
+  }
+  #icons .item .icon {
+    display: flex;
+    justify-content: center;
+  }
+  #icons .item svg {
+    width: 30px;
+    height: 30px;
+  }
+</style>
+
+
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary-bg: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list-page {
+                background: var(--theme);
+            }
+
+            .list-page:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list-page:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+
+</head>
+
+<body class=" type-docs kind-page layout-" id="top"><script data-no-instant>
+function switchTheme(theme) {
+  switch (theme) {
+    case 'light':
+      document.body.classList.remove('dark');
+      break;
+    case 'dark':
+      document.body.classList.add('dark');
+      break;
+    
+    default:
+      if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+      }
+  }
+}
+
+function isDarkTheme() {
+  return document.body.className.includes("dark");
+}
+
+function getPrefTheme() {
+  return localStorage.getItem("pref-theme");
+}
+
+function setPrefTheme(theme) {
+  switchTheme(theme)
+  localStorage.setItem("pref-theme", theme);
+}
+
+const toggleThemeCallbacks = {}
+toggleThemeCallbacks['main'] = (isDark) => {
+  
+  if (isDark) {
+    setPrefTheme('light');
+  } else {
+    setPrefTheme('dark');
+  }
+}
+
+
+
+
+window.addEventListener('toggle-theme', function() {
+  
+  const isDark = isDarkTheme()
+  for (const key in toggleThemeCallbacks) {
+    toggleThemeCallbacks[key](isDark)
+  }
+});
+
+
+function toggleThemeListener() {
+  
+  window.dispatchEvent(new CustomEvent('toggle-theme'));
+}
+
+</script>
+<script>
+  
+  (function() {
+    const defaultTheme = 'auto';
+    const prefTheme = getPrefTheme();
+    const theme = prefTheme ? prefTheme : defaultTheme;
+
+    switchTheme(theme);
+  })();
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://reorx.github.io/hugo-PaperModX/" accesskey="h" title="PaperModX (Alt + H)">PaperModX</a>
+            <span class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </span>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://reorx.github.io/hugo-PaperModX/docs/" title="Docs" class="active"
+                >Docs
+                </a>
+            </li>
+            <li>
+                <a href="https://reorx.github.io/hugo-PaperModX/newsletter/" title="Newsletter"
+                >Newsletter
+                </a>
+            </li>
+            <li>
+                <a href="https://reorx.github.io/hugo-PaperModX/tags/" title="Tags"
+                >Tags
+                </a>
+            </li>
+            <li>
+                <a href="https://reorx.github.io/hugo-PaperModX/archives/" title="Archive"
+                >Archive
+                </a>
+            </li>
+            <li>
+                <a href="https://reorx.github.io/hugo-PaperModX/search/" title="Search (Alt &#43; /)"data-no-instant accesskey=/
+                >Search
+                </a>
+            </li>
+            <li>
+                <a href="https://reorx.com/" title="@Author" target="_blank"
+                >@Author<span class="external-link"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-external-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M11 7h-5a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-5" />
+  <line x1="10" y1="14" x2="20" y2="4" />
+  <polyline points="15 4 20 4 20 9" />
+</svg>
+</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main post">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="https://reorx.github.io/hugo-PaperModX/">Home</a>&nbsp;»&nbsp;<a href="https://reorx.github.io/hugo-PaperModX/docs/">PaperModX Docs</a></div><h1 class="post-title">Installation | Update</h1>
+    <div class="post-meta"><span class="meta-item">
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar" style="user-select: text;"><rect x="3" y="4" width="18" height="18" rx="2" ry="2" style="user-select: text;"></rect><line x1="16" y1="2" x2="16" y2="6" style="user-select: text;"></line><line x1="8" y1="2" x2="8" y2="6" style="user-select: text;"></line><line x1="3" y1="10" x2="21" y2="10" style="user-select: text;"></line></svg>
+  <span>2021-01-20</span></span><span class="meta-item">
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text" style="user-select: text;"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" style="user-select: text;"></path><polyline points="14 2 14 8 20 8" style="user-select: text;"></polyline><line x1="16" y1="13" x2="8" y2="13" style="user-select: text;"></line><line x1="16" y1="17" x2="8" y2="17" style="user-select: text;"></line><polyline points="10 9 9 9 8 9" style="user-select: text;"></polyline></svg>
+  <span>739 words</span></span><span class="meta-item">
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><circle cx="12" cy="12" r="9"></circle><polyline points="12 7 12 12 15 15"></polyline></svg>
+  <span>4 min</span></span>
+
+      
+      
+    </div>
+  </header> <div class="toc side left">
+    <details  open>
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#intro" aria-label="Intro">Intro</a></li>
+                <li>
+                    <a href="#guide" aria-label="Guide">Guide</a><ul>
+                        
+                <li>
+                    <a href="#method-1" aria-label="Method 1">Method 1</a></li>
+                <li>
+                    <a href="#method-2" aria-label="Method 2">Method 2</a></li>
+                <li>
+                    <a href="#method-3" aria-label="Method 3">Method 3</a></li>
+                <li>
+                    <a href="#finally-" aria-label="Finally &amp;hellip;">Finally &hellip;</a></li>
+                <li>
+                    <a href="#method-4" aria-label="Method 4">Method 4</a></li></ul>
+                </li>
+                <li>
+                    <a href="#quick-links" aria-label="Quick Links">Quick Links</a><ul>
+                        
+                <li>
+                    <a href="#papermod---featuresfeatures" aria-label="Papermod - Features"><a href="../features">Papermod - Features</a></a></li>
+                <li>
+                    <a href="#papermod---faqsfaq" aria-label="Papermod - FAQs"><a href="../faq">Papermod - FAQs</a></a></li>
+                <li>
+                    <a href="#papermod---variablesvariables" aria-label="Papermod - Variables"><a href="../variables">Papermod - Variables</a></a></li>
+                <li>
+                    <a href="#papermod---iconsicons" aria-label="Papermod - Icons"><a href="../icons">Papermod - Icons</a></a></li>
+                <li>
+                    <a href="#changeloghttpsgithubcomreorxhugo-papermodxreleases" aria-label="ChangeLog"><a href="https://github.com/reorx/hugo-PaperModX/releases">ChangeLog</a></a></li></ul>
+                </li>
+                <li>
+                    <a href="#sample-configyml" aria-label="Sample config.yml">Sample <code>config.yml</code></a></li>
+                <li>
+                    <a href="#sample-pagemd" aria-label="Sample Page.md">Sample <code>Page.md</code></a>
+                </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><h2 id="intro">Intro</h2>
+<ul>
+<li><strong>We&rsquo;ll be using <code>yml/yaml</code> format for all examples down below, I recommend using <code>yml</code> over <code>toml</code> as it is easier to read.</strong></li>
+<li>You can find any <a href="https://www.google.com/search?q=yml+to+toml">YML to TOML</a> converters if necessary.</li>
+</ul>
+<hr>
+<h2 id="guide">Guide</h2>
+<p>Follow <a href="https://gohugo.io/getting-started/quick-start/">Quick Start</a> guide to setup hugo and create a new site.</p>
+<blockquote>
+<p>Note: Use -f to select yml format</p>
+<p><code>hugo new site &lt;name of site&gt; -f yml</code></p>
+</blockquote>
+<p>Make sure you install latest version of <strong><code>hugo(&gt;=0.83.0)</code></strong>.</p>
+<p>After you have created a new site, at <a href="https://gohugo.io/getting-started/quick-start/#step-3-add-a-theme">Step 3</a> follow the steps:</p>
+<h3 id="method-1">Method 1</h3>
+<p>Inside the folder of your Hugo site, run:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git clone https://github.com/reorx/hugo-PaperModX themes/PaperModX --depth<span class="o">=</span><span class="m">1</span>
+</span></span></code></pre></div><p><strong>Note</strong>: You may use <code> --branch v5.0</code> to end of above command if you want to stick to specific release.</p>
+<blockquote>
+<p>Updating theme :</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">cd</span> themes/PaperModX
+</span></span><span class="line"><span class="cl">git pull
+</span></span></code></pre></div></blockquote>
+<h3 id="method-2">Method 2</h3>
+<p>You can use as <a href="https://www.atlassian.com/git/tutorials/git-submodule">submodule</a> with</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git submodule add https://github.com/reorx/hugo-PaperModX.git themes/PaperModX --depth<span class="o">=</span><span class="m">1</span>
+</span></span><span class="line"><span class="cl">git submodule update --init --recursive <span class="c1"># needed when you reclone your repo (submodules may not get cloned automatically)</span>
+</span></span></code></pre></div><p><strong>Note</strong>: You may use <code> --branch v5.0</code> to end of above command if you want to stick to specific release.</p>
+<blockquote>
+<p>Updating theme :</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git submodule update --remote --merge
+</span></span></code></pre></div></blockquote>
+<h3 id="method-3">Method 3</h3>
+<p>Or you can Download as Zip from Github Page and extract in your themes directory</p>
+<p>Direct Links:</p>
+<ul>
+<li><a href="https://github.com/reorx/hugo-PaperModX/archive/master.zip">Master Branch (Latest)</a></li>
+<li><a href="https://github.com/reorx/hugo-PaperModX/archive/v5.0.zip">v5.0</a></li>
+<li><a href="https://github.com/reorx/hugo-PaperModX/archive/v4.0.zip">v4.0</a></li>
+<li><a href="https://github.com/reorx/hugo-PaperModX/archive/v3.0.zip">v3.0</a></li>
+<li><a href="https://github.com/reorx/hugo-PaperModX/archive/v2.0.zip">v2.0</a></li>
+<li><a href="https://github.com/reorx/hugo-PaperModX/archive/v1.0.zip">v1.0</a></li>
+</ul>
+<h3 id="finally-">Finally &hellip;</h3>
+<p>Add in <code>config.yml</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="line"><span class="cl"><span class="nt">theme</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;PaperModX&#34;</span><span class="w">
+</span></span></span></code></pre></div><h3 id="method-4">Method 4</h3>
+<ul>
+<li>
+<p>Install <a href="https://go.dev/doc/install">Go programming language</a> in your operating system.</p>
+</li>
+<li>
+<p>Intialize your own hugo mod</p>
+</li>
+</ul>
+<pre tabindex="0"><code>hugo mod init YOUR_OWN_GIT_REPOSITORY
+</code></pre><ul>
+<li>Add PaperModX in your <code>config.yml</code> file</li>
+</ul>
+<pre tabindex="0"><code>module:
+  imports:
+  - path: github.com/reorx/hugo-PaperModX
+</code></pre><ul>
+<li>Update theme</li>
+</ul>
+<pre tabindex="0"><code>hugo mod get -u
+</code></pre><hr>
+<h2 id="quick-links">Quick Links</h2>
+<ul>
+<li>
+<h3 id="papermod---featuresfeatures"><a href="../features">Papermod - Features</a></h3>
+</li>
+<li>
+<h3 id="papermod---faqsfaq"><a href="../faq">Papermod - FAQs</a></h3>
+</li>
+<li>
+<h3 id="papermod---variablesvariables"><a href="../variables">Papermod - Variables</a></h3>
+</li>
+<li>
+<h3 id="papermod---iconsicons"><a href="../icons">Papermod - Icons</a></h3>
+</li>
+<li>
+<h3 id="changeloghttpsgithubcomreorxhugo-papermodxreleases"><a href="https://github.com/reorx/hugo-PaperModX/releases">ChangeLog</a></h3>
+</li>
+</ul>
+<hr>
+<h2 id="sample-configyml">Sample <code>config.yml</code></h2>
+<blockquote>
+<p><strong>Example Site Structure is present here</strong>: <a href="https://github.com/reorx/hugo-PaperModX/tree/exampleSite/">exampleSite</a></p>
+</blockquote>
+<p><strong>Use appropriately</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="line"><span class="cl"><span class="nt">baseURL</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;https://examplesite.com/&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l">ExampleSite</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">paginate</span><span class="p">:</span><span class="w"> </span><span class="m">5</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">theme</span><span class="p">:</span><span class="w"> </span><span class="l">PaperModX</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">enableRobotsTXT</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">buildDrafts</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">buildFuture</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">buildExpired</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">pygmentsUseClasses</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">googleAnalytics</span><span class="p">:</span><span class="w"> </span><span class="l">UA-123-45</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">minify</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">disableXML</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">minifyOutput</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">params</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">env</span><span class="p">:</span><span class="w"> </span><span class="l">production</span><span class="w"> </span><span class="c"># to enable google analytics, opengraph, twitter-cards and schema.</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l">ExampleSite</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;ExampleSite description&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">keywords</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="l">Blog, Portfolio, PaperModX]</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">author</span><span class="p">:</span><span class="w"> </span><span class="l">Me</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c"># author: [&#34;Me&#34;, &#34;You&#34;] # multiple authors</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">images</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&#34;&lt;link or path of image for opengraph, twitter-cards&gt;&#34;</span><span class="p">]</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">DateFormat</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;January 2, 2006&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">defaultTheme</span><span class="p">:</span><span class="w"> </span><span class="l">auto</span><span class="w"> </span><span class="c"># dark, light</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">disableThemeToggle</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">ShowReadingTime</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">ShowShareButtons</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">ShowPostNavLinks</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">ShowBreadCrumbs</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">ShowCodeCopyButtons</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">disableSpecial1stPost</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">disableScrollToTop</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">comments</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">hidemeta</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">hideSummary</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">showtoc</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">tocopen</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">assets</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c"># disableFingerprinting: true</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">favicon</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;&lt;link / abs url&gt;&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">favicon16x16</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;&lt;link / abs url&gt;&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">favicon32x32</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;&lt;link / abs url&gt;&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">apple_touch_icon</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;&lt;link / abs url&gt;&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">safari_pinned_tab</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;&lt;link / abs url&gt;&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">label</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;Home&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">icon</span><span class="p">:</span><span class="w"> </span><span class="l">/apple-touch-icon.png</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">iconHeight</span><span class="p">:</span><span class="w"> </span><span class="m">35</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c"># profile-mode</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">profileMode</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">enabled</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w"> </span><span class="c"># needs to be explicitly set</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l">ExampleSite</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">subtitle</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;This is subtitle&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">imageUrl</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;&lt;img location&gt;&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">imageWidth</span><span class="p">:</span><span class="w"> </span><span class="m">120</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">imageHeight</span><span class="p">:</span><span class="w"> </span><span class="m">120</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">imageTitle</span><span class="p">:</span><span class="w"> </span><span class="l">my image</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">buttons</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Posts</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">              </span><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="l">posts</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Tags</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">              </span><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="l">tags</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c"># home-info mode</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">homeInfoParams</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">Title</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;Hi there \U0001F44B&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">Content</span><span class="p">:</span><span class="w"> </span><span class="l">Welcome to my blog</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">socialIcons</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">twitter</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;https://twitter.com/&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">stackoverflow</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;https://stackoverflow.com&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">github</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;https://github.com/&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">analytics</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">google</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="nt">SiteVerificationTag</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;XYZabc&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">bing</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="nt">SiteVerificationTag</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;XYZabc&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">yandex</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="nt">SiteVerificationTag</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;XYZabc&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">cover</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">hidden</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="c"># hide everywhere but not in structured data</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">hiddenInList</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="c"># hide on list pages and home</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">hiddenInSingle</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="c"># hide on single page</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">editPost</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">URL</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;https://github.com/&lt;path_to_repo&gt;/content&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">Text</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;Suggest Changes&#34;</span><span class="w"> </span><span class="c"># edit text</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">appendFilePath</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="c"># to append file path to Edit link</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c"># for search</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c"># https://fusejs.io/api/options.html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">fuseOpts</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">isCaseSensitive</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">shouldSort</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">location</span><span class="p">:</span><span class="w"> </span><span class="m">0</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">distance</span><span class="p">:</span><span class="w"> </span><span class="m">1000</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">threshold</span><span class="p">:</span><span class="w"> </span><span class="m">0.4</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">minMatchCharLength</span><span class="p">:</span><span class="w"> </span><span class="m">0</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">keys</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&#34;title&#34;</span><span class="p">,</span><span class="w"> </span><span class="s2">&#34;permalink&#34;</span><span class="p">,</span><span class="w"> </span><span class="s2">&#34;summary&#34;</span><span class="p">,</span><span class="w"> </span><span class="s2">&#34;content&#34;</span><span class="p">]</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">menu</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">main</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span>- <span class="nt">identifier</span><span class="p">:</span><span class="w"> </span><span class="l">categories</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">categories</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="l">/categories/</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">weight</span><span class="p">:</span><span class="w"> </span><span class="m">10</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span>- <span class="nt">identifier</span><span class="p">:</span><span class="w"> </span><span class="l">tags</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">tags</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="l">/tags/</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">weight</span><span class="p">:</span><span class="w"> </span><span class="m">20</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span>- <span class="nt">identifier</span><span class="p">:</span><span class="w"> </span><span class="l">example</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">example.org</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="l">https://example.org</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">weight</span><span class="p">:</span><span class="w"> </span><span class="m">30</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c"># Read: https://github.com/reorx/hugo-PaperModX/wiki/FAQs#using-hugos-syntax-highlighter-chroma</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c"># pygmentsUseClasses: true</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c"># markup:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c">#     highlight:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c">#         # anchorLineNos: true</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c">#         codeFences: true</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c">#         guessSyntax: true</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c">#         lineNos: true</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c">#         style: monokai</span><span class="w">
+</span></span></span></code></pre></div><hr>
+<h2 id="sample-pagemd">Sample <code>Page.md</code></h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="line"><span class="cl"><span class="nn">---</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;My 1st post&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">date</span><span class="p">:</span><span class="w"> </span><span class="ld">2020-09-15T11:30:03</span><span class="m">+00</span><span class="p">:</span><span class="m">00</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c"># weight: 1</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c"># aliases: [&#34;/first&#34;]</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&#34;first&#34;</span><span class="p">]</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">author</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;Me&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c"># author: [&#34;Me&#34;, &#34;You&#34;] # multiple authors</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">showToc</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">TocOpen</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">draft</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">hidemeta</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">comments</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;Desc Text.&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">canonicalURL</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;https://canonical.url/to/page&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">disableShare</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">hideSummary</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">searchHidden</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">ShowReadingTime</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">ShowBreadCrumbs</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">ShowPostNavLinks</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">cover</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;&lt;image path/url&gt;&#34;</span><span class="w"> </span><span class="c"># image path/url</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">alt</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;&lt;alt text&gt;&#34;</span><span class="w"> </span><span class="c"># alt text</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">caption</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;&lt;text&gt;&#34;</span><span class="w"> </span><span class="c"># display caption under cover</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">relative</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w"> </span><span class="c"># when using page bundles set this to true</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">hidden</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="c"># only hide on current single page</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">editPost</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">URL</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;https://github.com/&lt;path_to_repo&gt;/content&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">Text</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;Suggest Changes&#34;</span><span class="w"> </span><span class="c"># edit text</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">appendFilePath</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="c"># to append file path to Edit link</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nn">---</span><span class="w">
+</span></span></span></code></pre></div><p>You can use it by creating <code>archetypes/post.md</code></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">hugo new --kind post &lt;name&gt;
+</span></span></code></pre></div><hr>
+
+  </div>
+
+  <footer class="post-footer">
+<nav class="paginav">
+  <a class="prev" href="https://reorx.github.io/hugo-PaperModX/docs/icons/">
+    <span class="title">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left" style="user-select: text;"><line x1="19" y1="12" x2="5" y2="12" style="user-select: text;"></line><polyline points="12 19 5 12 12 5" style="user-select: text;"></polyline></svg>&nbsp;Prev Page</span>
+    <br>
+    <span>Icons</span>
+  </a>
+  <a class="next" href="https://reorx.github.io/hugo-PaperModX/docs/features/">
+    <span class="title">Next Page&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right" style="user-select: text;"><line x1="5" y1="12" x2="19" y2="12" style="user-select: text;"></line><polyline points="12 5 19 12 12 19" style="user-select: text;"></polyline></svg>
+    </span>
+    <br>
+    <span>PaperMod Features</span>
+  </a>
+</nav>
+
+  </footer><div class="comments">
+  <div class="title">
+    <span>Comments</span>
+    <span class="counter"><span class="remark42__counter" data-url="https://reorx.github.io/hugo-PaperModX/docs/installation/"></span></span>
+  </div>
+  <div id="remark42">
+  </div>
+</div>
+
+<script>
+  var remark_config = {
+    host: 'https:\/\/remark42.reorx.com',
+    site_id: 'reorx.github.io',
+    components: ['embed', 'counter'],
+    max_shown_comments: 20,
+    theme: 'light',
+    simple_view: true,
+    admonition: JSON.stringify(['Please subscribe by email to receive reply notifications.']),
+  };
+  if (isDarkTheme()) {
+    remark_config.theme = 'dark'
+  }
+
+  (function() {
+    
+    const key = 'remark42'
+    if (!toggleThemeCallbacks.hasOwnProperty(key)) {
+      toggleThemeCallbacks[key] = (isDark) => {
+        const remark42 = window.REMARK42
+        if (!remark42 || !document.querySelector('#remark42')) {
+          return;
+        }
+        if (isDark) {
+          remark42.changeTheme('light');
+        } else {
+          remark42.changeTheme('dark');
+        }
+      }
+    }
+
+    
+    const remark42 = window.REMARK42
+    if (remark42) {
+      remark42.destroy()
+      remark42.createInstance(remark_config)
+    } else {
+      for (const component of remark_config.components) {
+        var d = document, s = d.createElement('script');
+        s.src = `${remark_config.host}/web/${component}.mjs`;
+        s.type = 'module';
+        s.defer = true;
+        
+        s.setAttribute('data-no-instant', '')
+        d.head.appendChild(s);
+      }
+    }
+  })();
+</script>
+
+</article>
+    </main>
+    
+<footer class="footer">
+  <span>&copy; 2022 <a href="https://reorx.github.io/hugo-PaperModX/">PaperModX</a></span><span style="display: inline-block; margin-left: 1em;">
+    <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA</a>
+  </span>
+  <span style="display: inline-block; margin-left: 1em;">
+    Powered by
+    <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+    <a href="https://github.com/reorx/hugo-PaperModX/" rel="noopener" target="_blank">PaperModX</a>
+  </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+    <path d="M12 6H0l6-6z" />
+  </svg>
+</a>
+
+<script>
+  (function() {
+     
+    const disableThemeToggle = '' == '1';
+    if (disableThemeToggle) {
+      return;
+    }
+
+    let button = document.getElementById("theme-toggle")
+    
+    button.removeEventListener('click', toggleThemeListener)
+    
+    button.addEventListener('click', toggleThemeListener)
+  })();
+</script>
+
+<script>
+  (function () {
+    let menu = document.getElementById('menu')
+    if (menu) {
+      menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+      menu.onscroll = function () {
+        localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+      }
+    }
+
+    const disableSmoothScroll = '' == '1';
+    const enableInstantClick = '1' == '1';
+    
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches || disableSmoothScroll || enableInstantClick) {
+      return;
+    }
+    
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener("click", function (e) {
+        e.preventDefault();
+        var id = this.getAttribute("href").substr(1);
+        document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+          behavior: "smooth"
+        });
+        if (id === "top") {
+          history.replaceState(null, null, " ");
+        } else {
+          history.pushState(null, null, `#${id}`);
+        }
+      });
+    });
+  })();
+</script>
+<script>
+  var mybutton = document.getElementById("top-link");
+  window.onscroll = function () {
+    if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+      mybutton.style.visibility = "visible";
+      mybutton.style.opacity = "1";
+    } else {
+      mybutton.style.visibility = "hidden";
+      mybutton.style.opacity = "0";
+    }
+  };
+</script>
+<script>
+  if (window.scrollListeners) {
+    
+    for (const listener of scrollListeners) {
+      window.removeEventListener('scroll', listener)
+    }
+  }
+  window.scrollListeners = []
+</script>
+
+
+
+<script src="/hugo-PaperModX/js/medium-zoom.min.js" data-no-instant
+></script>
+<script>
+  document.querySelectorAll('pre > code').forEach((codeblock) => {
+    const container = codeblock.parentNode.parentNode;
+
+    const copybutton = document.createElement('button');
+    copybutton.classList.add('copy-code');
+    copybutton.innerText = 'copy';
+
+    function copyingDone() {
+      copybutton.innerText = 'copied!';
+      setTimeout(() => {
+        copybutton.innerText = 'copy';
+      }, 2000);
+    }
+
+    copybutton.addEventListener('click', (cb) => {
+      if ('clipboard' in navigator) {
+        navigator.clipboard.writeText(codeblock.textContent);
+        copyingDone();
+        return;
+      }
+
+      const range = document.createRange();
+      range.selectNodeContents(codeblock);
+      const selection = window.getSelection();
+      selection.removeAllRanges();
+      selection.addRange(range);
+      try {
+        document.execCommand('copy');
+        copyingDone();
+      } catch (e) { };
+      selection.removeRange(range);
+    });
+
+    if (container.classList.contains("highlight")) {
+      container.appendChild(copybutton);
+    } else if (container.parentNode.firstChild == container) {
+      
+    } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+      
+      codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+    } else {
+      
+      codeblock.parentNode.appendChild(copybutton);
+    }
+  });
+</script>
+
+
+
+
+<script>
+  
+  
+  (function() {
+    const enableTocScroll = '1' == '1'
+    if (!enableTocScroll) {
+      return
+    }
+    if (!document.querySelector('.toc')) {
+      console.log('no toc found, ignore toc scroll')
+      return
+    }
+    
+
+    
+    const scrollListeners = window.scrollListeners
+    const headings = document.querySelectorAll('h1[id],h2[id],h3[id],h4[id],h5[id]');
+    const activeClass = 'active';
+
+    
+    let activeHeading = headings[0];
+    getLinkByHeading(activeHeading).classList.add(activeClass);
+
+    const onScroll = () => {
+      const passedHeadings = [];
+      for (const h of headings) {
+        
+        if (getOffsetTop(h) < 5) {
+          passedHeadings.push(h)
+        } else {
+          break;
+        }
+      }
+      if (passedHeadings.length > 0) {
+        newActiveHeading = passedHeadings[passedHeadings.length - 1];
+      } else {
+        newActiveHeading = headings[0];
+      }
+      if (activeHeading != newActiveHeading) {
+        getLinkByHeading(activeHeading).classList.remove(activeClass);
+        activeHeading = newActiveHeading;
+        getLinkByHeading(activeHeading).classList.add(activeClass);
+      }
+    }
+
+    let timer = null;
+    const scrollListener = () => {
+      if (timer !== null) {
+        clearTimeout(timer)
+      }
+      timer = setTimeout(onScroll, 50)
+    }
+    window.addEventListener('scroll', scrollListener, false);
+    scrollListeners.push(scrollListener)
+
+    function getLinkByHeading(heading) {
+      const id = encodeURI(heading.getAttribute('id')).toLowerCase();
+      return document.querySelector(`.toc ul li a[href="#${id}"]`);
+    }
+
+    function getOffsetTop(heading) {
+      if (!heading.getClientRects().length) {
+        return 0;
+      }
+      let rect = heading.getBoundingClientRect();
+      return rect.top
+    }
+  })();
+  </script>
+<script>
+  mediumZoom('.entry-cover img');
+  mediumZoom('.post-content img:not([no-zoom])');
+</script>
+
+<script src="/hugo-PaperModX/js/instantclick.min.js" data-no-instant
+></script>
+<script data-no-instant>
+  
+  
+  
+  
+  
+  
+  InstantClick.init();
+</script>
+</body>
+
+</html>
