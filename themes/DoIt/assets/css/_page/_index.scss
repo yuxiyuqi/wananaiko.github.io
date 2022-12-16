@@ -1,0 +1,36 @@
+.page {
+  position: relative;
+  max-width: initial;
+  width: 60%;
+  margin: 0 auto;
+  [pageStyle=wide][autoTOC=true] & {
+    margin-left: 10%;
+    margin-right: auto;
+    width: 70%;
+  }
+  [pageStyle=wide][autoTOC=false] & {
+      width: 70%;
+      margin-left: 15%;
+      margin-right: 15%;
+  }
+  [header-desktop] & {
+    padding-top: $header-height;
+  }
+
+  [header-desktop=normal] & {
+    padding-top: 0;
+  }
+
+  @include blur;
+}
+
+.headerLink {
+  scroll-margin-top: 3.5rem;
+}
+
+@import "_single";
+@import "_special";
+@import "_archive";
+@import "_home";
+@import "_404";
+@import "_taxonomy";
