@@ -98,12 +98,12 @@ weight = 1
 [[languages.en.menu.main]]
 name = "Docs"
 url = "/docs/"
-weight = 1
+weight = 2
 
 [[languages.en.menu.main]]
 name = "Newsletter"
 url = "/newsletter/"
-weight = 1
+weight = 3
 
 [[languages.en.menu.main]]
 name = "Tags"
@@ -178,10 +178,7 @@ url = "https://reorx.com"
 [outputs]
 home = [ "HTML", "RSS", "JSON" ]
 
-[taxonomies]
-category = "categories"
-tag = "tags"
-series = "series"
+
 
 [markup.goldmark.renderer]
 unsafe = true
