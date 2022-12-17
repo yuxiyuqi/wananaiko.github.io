@@ -3,7 +3,7 @@ title: "memos"
 layout: "memos"
 markup: HTML
 ---
-<head>
+
 <link href="/memos/assets/css/style.css" rel="stylesheet" type="text/css">
 <link href="/memos/assets/css/APlayer.min.css" rel="stylesheet" type="text/css">
 <link href="/memos/assets/css/highlight.github.min.css" rel="stylesheet" type="text/css">
@@ -20,17 +20,7 @@ markup: HTML
 <script type="text/javascript" src="/memos/assets/js/highlight.min.js"></script>
 <script type="text/javascript" src="/memos/assets/js/main.js"></script>
 <script type="text/javascript" src="/memos/assets/js/custom.js"></script>
-</head>
 
-<body> 
-<header class="page-header">
-    <h1>{{ .Title }}</h1>
-    {{- if .Description }}
-    <div class="post-description">
-      {{ .Description }}
-    </div>
-    {{- end }}
-  </header>
  
 <section id="main" class="container">
     <div class="total">累计 <span id="total">0</span> 条 Memos 🎉</div> 
@@ -56,4 +46,3 @@ markup: HTML
 <script>
     window.ViewImage && ViewImage.init('.content img');
 </script>
-</body>
