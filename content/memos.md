@@ -4,6 +4,11 @@ layout: "memos"
 markup: HTML
 ---
 <!DOCTYPE html>
+<link href="/memos/assets/css/style.css" rel="stylesheet" type="text/css">
+<link href="/memos/assets/css/APlayer.min.css" rel="stylesheet" type="text/css">
+<link href="/memos/assets/css/highlight.github.min.css" rel="stylesheet" type="text/css">
+<link href="/memos/assets/css/custom.css" rel="stylesheet" type="text/css">
+
 <div id="memos" class=""></div>
 
 <div class="container">
