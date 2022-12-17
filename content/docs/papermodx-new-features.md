@@ -1,5 +1,5 @@
 ---
-title: "Test PaperModX New Features"
+title: "PaperModX New Features"
 date: 2022-04-12T23:37:00+08:00
 summary: This page explains the new features and changes of PaperModX comparing to the original PaperMod.
 weight: 1
