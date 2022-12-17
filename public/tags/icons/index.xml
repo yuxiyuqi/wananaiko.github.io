@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>icons on PaperModX</title>
+    <link>https://wananaiko.vercel.app/tags/icons/</link>
+    <description>Recent content in icons on PaperModX</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 20 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://wananaiko.vercel.app/tags/icons/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Icons</title>
+      <link>https://wananaiko.vercel.app/docs/icons/</link>
+      <pubDate>Wed, 20 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://wananaiko.vercel.app/docs/icons/</guid>
+      <description>Explain how to use icons in PaperModX</description>
+      <content:encoded><![CDATA[<h2 id="social-icons">Social Icons</h2>
+<p>Go to <a href="icons_preview">Icons Preview</a> to see a complete list of icons</p>
+<p>Usage :</p>
+<pre tabindex="0"><code>socialIcons:
+    - name: &#34;kofi&#34;
+        url: &#34;https://kofi.com&#34;
+    - name: &#34;twitter&#34;
+        url: &#34;https://twitter.com&#34;
+</code></pre><hr>
+<h2 id="share-icons">Share Icons</h2>
+<table>
+<thead>
+<tr>
+<th>No.</th>
+<th>Platform</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><code>twitter</code> (also generates hash tags from tags linked with post)</td>
+</tr>
+<tr>
+<td>2</td>
+<td><code>linkedin</code></td>
+</tr>
+<tr>
+<td>3</td>
+<td><code>reddit</code></td>
+</tr>
+<tr>
+<td>4</td>
+<td><code>facebook</code></td>
+</tr>
+<tr>
+<td>5</td>
+<td><code>whatsapp</code></td>
+</tr>
+<tr>
+<td>6</td>
+<td><code>telegram</code></td>
+</tr>
+</tbody>
+</table>
+<p>Usage:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="line"><span class="cl"><span class="nt">params</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">ShowShareButtons</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></span></span></code></pre></div>]]></content:encoded>
+    </item>
+    
+  </channel>
+</rss>
