@@ -3,12 +3,15 @@ title: "memos"
 layout: "memos"
 markup: HTML
 ---
-
+<!DOCTYPE html>
+<head>
 <link href="/memos/assets/css/style.css" rel="stylesheet" type="text/css">
 <link href="/memos/assets/css/APlayer.min.css" rel="stylesheet" type="text/css">
 <link href="/memos/assets/css/highlight.github.min.css" rel="stylesheet" type="text/css">
 <link href="/memos/assets/css/custom.css" rel="stylesheet" type="text/css">
+</head>
 
+<body>
 <script type="text/javascript" src="/memos/assets/js/lazyload.min.js?v=17.8.3"></script>
 <script type="text/javascript" src="/memos/assets/js/marked.min.js?v=4.2.2"></script>
 <script type="text/javascript" src="/memos/assets/js/view-image.min.js"></script>
@@ -38,3 +41,4 @@ markup: HTML
 <script>
     window.ViewImage && ViewImage.init('.content img');
 </script>
+</body>
