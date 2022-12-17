@@ -292,14 +292,14 @@ function getTotal() {
 window.onload = getTotal();
 // Memos Total End
 
-// Toggle Darkmode
-const localTheme = window.localStorage && window.localStorage.getItem("theme");
-const themeToggle = document.querySelector(".theme-toggle");
+// // Toggle Darkmode
+// const localTheme = window.localStorage && window.localStorage.getItem("theme");
+// const themeToggle = document.querySelector(".theme-toggle");
 
-if (localTheme) {
-    document.body.classList.remove("light-theme", "dark-theme");
-    document.body.classList.add(localTheme);
-}
+// if (localTheme) {
+//     document.body.classList.remove("light-theme", "dark-theme");
+//     document.body.classList.add(localTheme);
+// }
 
 window.οnlοad=function(){
     themeToggle.addEventListener("click", () => {
