@@ -1,6 +1,6 @@
 ---
 title: "memos"
-layout: "memos"
+layout: "false"
 markup: HTML
 ---
 <!DOCTYPE html>
