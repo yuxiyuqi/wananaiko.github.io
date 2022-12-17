@@ -31,7 +31,6 @@ markup: HTML
     };
 </script>
 
-<script src="/memos/assets/js/view-image.min.js"></script>
 <script>
     window.ViewImage && ViewImage.init('.content img');
 </script>
