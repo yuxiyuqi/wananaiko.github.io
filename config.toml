@@ -53,14 +53,6 @@ limit = 20
   imageUrl = "#"
   imageTitle = "my image"
 
-    [[params.profileMode.buttons]]
-    name = "Archives"
-    url = "/archives/"
-
-    [[params.profileMode.buttons]]
-    name = "Tags"
-    url = "/tags/"
-
   [params.homeInfoParams]
   Title = "PaperModX"
   Content = """
