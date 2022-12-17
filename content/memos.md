@@ -1,7 +1,8 @@
--- -title: "memos"
+---
+title: "memos"
 layout: "memos"
 markup: HTML
--- - 
+--- 
 
 <!DOCTYPE html>
 <body>
@@ -9,32 +10,7 @@ markup: HTML
         <div class="menu">
             <div class="title">Memos</a>
         </div>
-
-    <div class='theme-toggle'>🌓</div>
-
-</header>
-
-<section id="main" class="container">
-    <h1>Memos Top</h1>
-
-    <blockquote>
-        <p>Je
-            <del>memos</del>, donc je suis -
-            <em>René Descartes fans</em>
-        </p>
-    </blockquote>
-
-    <div class="total">Total
-        <span id="total">0</span>
-        Memos 🎉
-    </div>
-
-    <div id="memos" class="memos">
-        <!-- Memos Container -->
-    </div>
-
-</section>
-
+    </header>
 <!-- 修改自己的 Memos 设置 -->
 <script type="text/javascript">
     var memos = {
