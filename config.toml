@@ -12,13 +12,13 @@ enableEmoji = true
 [params]
 env = "production"
 description = "Theme PaperModX - https://github.com/reorx/hugo-PaperModX"
-author = [ "wananaiko" ]
+author = [ "Reorx" ]
 mainSections = [ "docs", "posts" ]
 disableAnchoredHeadings = true
 images = [ "cover.png" ]
 DateFormat = "2006-01-02"
 useCustomAnalytics = true
-defaultTheme = "light"
+defaultTheme = "auto"
 ShowShareButtons = true
 ShowReadingTime = true
 ShowWordCount = true
@@ -98,12 +98,12 @@ weight = 1
 [[languages.en.menu.main]]
 name = "Docs"
 url = "/docs/"
-weight = 2
+weight = 1
 
 [[languages.en.menu.main]]
 name = "Newsletter"
 url = "/newsletter/"
-weight = 3
+weight = 1
 
 [[languages.en.menu.main]]
 name = "Tags"
@@ -213,35 +213,3 @@ disableInlineCSS = true
 
 [services.twitter]
 disableInlineCSS = true
-
-tags = [
-  "responsive",
-  "simple",
-  "clean",
-  "light",
-  "dark",
-  "blog",
-  "minimalist",
-  "highlight.js",
-  "search"
-]
-features = [
-  "responsive",
-  "single-column",
-  "blog",
-  "cover-image",
-  "table-of-contents",
-  "opengraph",
-  "highlight.js",
-  "favicon",
-  "archive",
-  "share-icons",
-  "cover",
-  "multilingual",
-  "social-icons",
-  "minified-assets",
-  "theme-toggle",
-  "menu-location-indicator",
-  "scroll-to-top",
-  "search"
-]
