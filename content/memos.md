@@ -44,9 +44,9 @@ markup: HTML
 <script type="text/javascript" src="/memos/assets/js/moment.min.js?v=2.29.4"></script>
 <script type="text/javascript" src="/memos/assets/js/moment.twitter.js"></script>
 <script type="text/javascript" src="/memos/assets/js/APlayer.min.js"></script>
-<script type="text/javascript" src="/memos/assets/js/Meting.min.js"></script>
+<!-- <script type="text/javascript" src="/memos/assets/js/Meting.min.js"></script> -->
 <script type="text/javascript" src="/memos/assets/js/highlight.min.js"></script>
-<script type="text/javascript" src="/memos/assets/js/main.js"></script>
+<!-- <script type="text/javascript" src="/memos/assets/js/main.js"></script> -->
 <script type="text/javascript" src="/memos/assets/js/custom.js"></script>
 
 </html>
