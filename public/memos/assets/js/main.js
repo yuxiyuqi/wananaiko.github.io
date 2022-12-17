@@ -48,7 +48,7 @@
 
 // Memos Start
 var memo = {
-    host: 'https://memos.wananaiko.com/',
+    host: 'https://memo.wananaiko.com/',
     limit: '20',
     creatorId: '1',
     domId: '#memos',
