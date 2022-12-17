@@ -15,8 +15,6 @@ markup: HTML
 <div id="memos" class=""></div>
 
 <div class="container">
-    <h2 class="title">Memos</h2>
-    <p>共嘀咕了 <span id="memosCount">0</span> 条 Memos 🎉</p>
     <div id="memos">
         <!-- 嘀咕加载在这里 -->
     </div>
