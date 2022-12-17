@@ -88,24 +88,24 @@ languageName = "English"
 weight = 1
 
 [[languages.en.menu.main]]
-name = "Docs"
+name = "Blog"
 url = "/docs/"
 weight = 1
 
 [[languages.en.menu.main]]
 name = "Newsletter"
 url = "/newsletter/"
-weight = 1
+weight = 4
 
 [[languages.en.menu.main]]
-name = "Tags"
-url = "/tags/"
-weight = 4
+name = "Memos"
+url = "/memos/"
+weight = 2
 
 [[languages.en.menu.main]]
 name = "Archive"
 url = "/archives/"
-weight = 5
+weight = 3
 
 [[languages.en.menu.main]]
 name = "Search"
