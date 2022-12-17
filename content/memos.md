@@ -29,14 +29,14 @@ markup: HTML
     };
 </script>
 
-<script>
+<!-- <script>
     window.ViewImage && ViewImage.init('.content img');
-</script>
+</script> -->
 
 <!-- 注意替换 JS 资源文件的路径 -->
 <script type="text/javascript" src="/memos/assets/js/lazyload.min.js?v=17.8.3"></script>
 <script type="text/javascript" src="/memos/assets/js/marked.min.js?v=4.2.2"></script>
-<script type="text/javascript" src="/memos/assets/js/view-image.min.js"></script>
+<!-- <script type="text/javascript" src="/memos/assets/js/view-image.min.js"></script> -->
 <script type="text/javascript" src="/memos/assets/js/pangu.min.js?v=4.0.7"></script>
 <script type="text/javascript" src="/memos/assets/js/moment.min.js?v=2.29.4"></script>
 <script type="text/javascript" src="/memos/assets/js/moment.twitter.js"></script>
