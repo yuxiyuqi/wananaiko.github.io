@@ -4,25 +4,36 @@ layout: "memos"
 markup: HTML
 ---
 <!DOCTYPE html>
-<head>
-<link href="/memos/assets/css/style.css" rel="stylesheet" type="text/css">
-<link href="/memos/assets/css/APlayer.min.css" rel="stylesheet" type="text/css">
-<link href="/memos/assets/css/highlight.github.min.css" rel="stylesheet" type="text/css">
-<link href="/memos/assets/css/custom.css" rel="stylesheet" type="text/css">
-</head>
-
 <body>
-<script type="text/javascript" src="/memos/assets/js/lazyload.min.js?v=17.8.3"></script>
-<script type="text/javascript" src="/memos/assets/js/marked.min.js?v=4.2.2"></script>
-<script type="text/javascript" src="/memos/assets/js/view-image.min.js"></script>
-<!-- <script type="text/javascript" src="assets/js/pangu.min.js?v=4.0.7"></script> -->
-<script type="text/javascript" src="/memos/assets/js/moment.min.js?v=2.29.4"></script>
-<script type="text/javascript" src="/memos/assets/js/moment.twitter.js"></script>
-<script type="text/javascript" src="/memos/assets/js/APlayer.min.js"></script>
-<script type="text/javascript" src="/memos/assets/js/Meting.min.js"></script>
-<script type="text/javascript" src="/memos/assets/js/highlight.min.js"></script>
-<script type="text/javascript" src="/memos/assets/js/main.js"></script>
-<script type="text/javascript" src="/memos/assets/js/custom.js"></script>
+    <header>
+        <div class="menu">
+            <div class="title">Memos</a></div>
+
+            <div class="pages">
+                    <a href="https://github.com/eallion/memos.top" target="_blank" rel="noopener noreferrer" class="">GitHub</a>
+                    <a href="https://eallion.com/memos" target="_blank" rel="noopener noreferrer" class="">I'm Feeling Lucky</a>
+            </div>
+
+        </div>
+        
+        <div class='theme-toggle'>🌓</div>
+
+    </header>
+
+    <section id="main" class="container">
+        <h1>Memos Top</h1>
+
+        <blockquote>
+            <p>Je <del>memos</del>, donc je suis - <em>René Descartes fans</em></p>
+        </blockquote>
+
+        <div class="total">Total <span id="total">0</span> Memos 🎉</div>
+
+        <div id="memos" class="memos">
+            <!-- Memos Container -->
+        </div>
+
+    </section>
 
 <!-- 修改自己的 Memos 设置 -->
 <script type="text/javascript">
