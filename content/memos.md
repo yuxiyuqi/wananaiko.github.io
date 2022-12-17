@@ -40,13 +40,13 @@ markup: HTML
 <script type="text/javascript" src="/memos/assets/js/lazyload.min.js?v=17.8.3"></script>
 <script type="text/javascript" src="/memos/assets/js/marked.min.js?v=4.2.2"></script>
 <script type="text/javascript" src="/memos/assets/js/view-image.min.js"></script>
-<!-- <script type="text/javascript" src="assets/js/pangu.min.js?v=4.0.7"></script> -->
+<script type="text/javascript" src="/memos/assets/js/pangu.min.js?v=4.0.7"></script>
 <script type="text/javascript" src="/memos/assets/js/moment.min.js?v=2.29.4"></script>
 <script type="text/javascript" src="/memos/assets/js/moment.twitter.js"></script>
 <script type="text/javascript" src="/memos/assets/js/APlayer.min.js"></script>
-<!-- <script type="text/javascript" src="/memos/assets/js/Meting.min.js"></script> -->
+<script type="text/javascript" src="/memos/assets/js/Meting.min.js"></script>
 <script type="text/javascript" src="/memos/assets/js/highlight.min.js"></script>
-<!-- <script type="text/javascript" src="/memos/assets/js/main.js"></script> -->
+<script type="text/javascript" src="/memos/assets/js/main.js"></script>
 <script type="text/javascript" src="/memos/assets/js/custom.js"></script>
 
 </html>
