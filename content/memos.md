@@ -9,7 +9,7 @@ aliases:
 ---
 
 <meta name="referrer" content="no-referrer">
-<link rel="stylesheet" href="/memos/assets/js/APlayer.min.css?v=1.10.1">
+<link rel="stylesheet" href="/memos/assets/css/APlayer.min.css?v=1.10.1">
 <div class="count">
     <blockquote>共嘀咕了 <span id="memosCount"><i class="fas fa-spinner fa-pulse"></i></span> 条 Memos <span class="emoji">🎉</span></blockquote>
 </div>
