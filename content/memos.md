@@ -1,22 +1,23 @@
 ---
 title: "memos"
 layout: "memos"
-type: 'memos'
 markup: HTML
 ---
-
-<meta name="referrer" content="no-referrer">
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <link href="/memos/assets/css/style.css" rel="stylesheet" type="text/css">
 <link href="/memos/assets/css/APlayer.min.css" rel="stylesheet" type="text/css">
 <link href="/memos/assets/css/highlight.github.min.css" rel="stylesheet" type="text/css">
 <link href="/memos/assets/css/custom.css" rel="stylesheet" type="text/css">
 
 <div id="memos" class=""></div>
-<div class="count">
-    <blockquote>共嘀咕了 <span id="memosCount"><i class="fas fa-spinner fa-pulse"></i></span> 条 Memos <span class="emoji">🎉</span></blockquote>
-</div>
-<div id="memos">
-    <!-- 嘀咕加载在这里 -->
+
+<div class="container">
+    <div id="memos">
+        <!-- 嘀咕加载在这里 -->
+    </div>
 </div>
 
 <script type="text/javascript">
@@ -26,6 +27,10 @@ markup: HTML
         creatorId: "1", //默认为 101用户 https://demo.usememos.com/u/101
         domId: "#memos", //默认为 #memos
     };
+</script>
+
+<script>
+    window.ViewImage && ViewImage.init('.content img');
 </script>
 
 <!-- 注意替换 JS 资源文件的路径 -->
@@ -41,6 +46,4 @@ markup: HTML
 <script type="text/javascript" src="/memos/assets/js/main.js"></script>
 <script type="text/javascript" src="/memos/assets/js/custom.js"></script>
 
-<script>
-    window.ViewImage && ViewImage.init('.content img');
-</script>
+</html>
