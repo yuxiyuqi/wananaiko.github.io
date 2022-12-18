@@ -9,7 +9,7 @@ aliases:
 ---
 
 <meta name="referrer" content="no-referrer">
-<link rel="stylesheet" href="/assets/APlayer.min.css?v=1.10.1">
+<link rel="stylesheet" href="/memos/assets/APlayer.min.css?v=1.10.1">
 <div class="count">
     <blockquote>共嘀咕了 <span id="memosCount"><i class="fas fa-spinner fa-pulse"></i></span> 条 Memos <span class="emoji">🎉</span></blockquote>
 </div>
@@ -26,15 +26,15 @@ aliases:
     }
 </script>
 
-<script type="text/javascript" src="/assets/marked.min.js?v=4.2.2"></script>
-<script type="text/javascript" src="/assets/pangu.min.js?v=4.0.7"></script>
-<script type="text/javascript" src="/assets/moment.min.js?v=2.29.4"></script>
-<script type="text/javascript" src="/assets/moment.twitter.min.js"></script>
-<script type="text/javascript" src="/assets/APlayer.min.js?v=1.10.1"></script>
-<script type="text/javascript" src="/assets/Meting.min.js?v=1.2"></script>
-<script type="text/javascript" src="/assets/memos.min.js"></script>
-<script type="text/javascript" src="/assets/highlight.min.js?v=11.7.0"></script>
-<script type="text/javascript" src="/assets/view-image.min.js?v=2.0.2"></script>
+<script type="text/javascript" src="/memos/assets/marked.min.js?v=4.2.2"></script>
+<script type="text/javascript" src="/memos/assets/pangu.min.js?v=4.0.7"></script>
+<script type="text/javascript" src="/memos/assets/moment.min.js?v=2.29.4"></script>
+<script type="text/javascript" src="/memos/assets/moment.twitter.min.js"></script>
+<script type="text/javascript" src="/memos/assets/APlayer.min.js?v=1.10.1"></script>
+<script type="text/javascript" src="/memos/assets/Meting.min.js?v=1.2"></script>
+<script type="text/javascript" src="/memos/assets/memos.min.js"></script>
+<script type="text/javascript" src="/memos/assets/highlight.min.js?v=11.7.0"></script>
+<script type="text/javascript" src="/memos/assets/view-image.min.js?v=2.0.2"></script>
 <script>
     window.ViewImage && ViewImage.init('.content img');
 </script>
