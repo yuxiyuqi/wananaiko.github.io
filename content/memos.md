@@ -1,6 +1,7 @@
 ---
 title: "memos"
 layout: "memos"
+type: 'memos'
 markup: HTML
 ---
 
@@ -42,8 +43,4 @@ markup: HTML
 
 <script>
     window.ViewImage && ViewImage.init('.content img');
-</script>
-<script>
-    // Meting API self-hosted
-    var meting_api='https://api.eallion.com/meting/?server=:server&type=:type&id=:id&auth=:auth&r=:r';
 </script>
