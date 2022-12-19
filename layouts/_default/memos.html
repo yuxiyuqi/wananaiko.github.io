@@ -7,7 +7,15 @@
       {{ .Description }}
     </div>
     {{- end }}
-  </header>
+</header>
+
+{{/* get pages from the current page's section */}}
+{{/* in this way, archives.html could be used for section archives other than the only one archives of the whole site */}}
+{{- $sections := site.Params.mainSections }}
+{{- if .Section }}
+  {{- $sections = slice .Section }}
+{{- end }}
+{{- $pages := where (where site.RegularPages "Section" "in" $sections) "Params.hidden" "!=" true }}
  
 <section>
   {{ .Content }}
@@ -16,4 +24,4 @@
 <!-- 页面下雪效果 -->
 <script src="https://app.embed.im/snow.js" defer></script>
  
-{{- end }}
+{{- end }}{{/* end main */}}
