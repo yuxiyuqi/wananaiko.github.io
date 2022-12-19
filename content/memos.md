@@ -36,6 +36,7 @@ markup: HTML
     window.ViewImage && ViewImage.init('.content img');
 </script>
 
+
 <!-- 注意替换 JS 资源文件的路径 -->
 <script type="text/javascript" src="/memos/assets/js/lazyload.min.js?v=17.8.3"></script>
 <script type="text/javascript" src="/memos/assets/js/marked.min.js?v=4.2.2"></script>
