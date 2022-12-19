@@ -292,20 +292,6 @@ function getTotal() {
 window.onload = getTotal();
 // Memos Total End
 
-// Toggle Darkmode
-const localTheme = window.localStorage && window.localStorage.getItem("theme");
-const themeToggle = document.querySelector(".theme-toggle");
 
-if (localTheme) {
-    document.body.classList.remove("light-theme", "dark-theme");
-    document.body.classList.add(localTheme);
-}
-
-themeToggle.addEventListener("click", () => {
-    localTheme = document.body.classList.contains("dark-theme")? "light-theme" : "dark-theme";
-    window.localStorage.setItem("theme", localTheme);
-    document.body.classList.remove("dark-theme", "light-theme");
-    document.body.classList.add(localTheme);
-});
 
 // Darkmode End
