@@ -1,8 +1,6 @@
 ---
-title: "最近在折腾的一些工具"
+title: "Dec20"
 date: 2022-12-20T23:37:00+08:00
-summary: This page explains the new features and changes of PaperModX comparing to the original PaperMod.
-weight: 1
 ---
 
 ## Hugo部署到Vercel
