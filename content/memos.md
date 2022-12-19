@@ -25,7 +25,7 @@ markup: HTML
     var memos = {
         host: "https://memo.wananaiko.com/", //修改为自己部署 Memos 的网址，末尾有 / 斜杠
         limit: "10", //默认每次显示 10条
-        creatorId: "1", //默认为 101用户 https://demo.usememos.com/u/101
+        creatorId: "101", //默认为 101用户 https://demo.usememos.com/u/101
         domId: "#memos", //默认为 #memos
     };
 </script>
