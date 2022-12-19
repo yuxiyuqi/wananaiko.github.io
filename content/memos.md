@@ -4,14 +4,16 @@ layout: "memos"
 markup: HTML
 ---
 <!DOCTYPE html>
-<html lang="en" dir="auto">
-<head><meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<link href="/memos/assets/css/style.css" rel="stylesheet" type="text/css">
-<link href="/memos/assets/css/APlayer.min.css" rel="stylesheet" type="text/css">
-<link href="/memos/assets/css/highlight.github.min.css" rel="stylesheet" type="text/css">
-<link href="/memos/assets/css/custom.css" rel="stylesheet" type="text/css">
-
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="/memos/assets/css/style.css" rel="stylesheet" type="text/css">
+    <link href="/memos/assets/css/APlayer.min.css" rel="stylesheet" type="text/css">
+    <link href="/memos/assets/css/highlight.github.min.css" rel="stylesheet" type="text/css">
+    <link href="/memos/assets/css/custom.css" rel="stylesheet" type="text/css">
+</head>
+<body>
 <div id="memos" class=""></div>
 
 <div class="container">
@@ -45,5 +47,5 @@ markup: HTML
 <script type="text/javascript" src="/memos/assets/js/highlight.min.js"></script>
 <script type="text/javascript" src="/memos/assets/js/main.js"></script>
 <script type="text/javascript" src="/memos/assets/js/custom.js"></script>
-
+</body>
 </html>
