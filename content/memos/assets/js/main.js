@@ -50,7 +50,7 @@
 var memo = {
     host: 'https://memo.wananaiko.com/',
     limit: '10',
-    creatorId: '101',
+    creatorId: '1',
     domId: '#memos',
     username: 'wananaiko',
     name: 'Aiko'
