@@ -14,11 +14,11 @@ markup: HTML
     <link href="/memos/assets/css/custom.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-<div class="count">
-    <blockquote>共发布了 <span id="memosCount"><i class="fas fa-spinner fa-pulse"></i></span> 条 Memos <span class="emoji">🎉</span></blockquote>
-</div>
-<div id="memos">
-    <!-- 嘀咕加载在这里 -->
+
+<div class="container">
+    <div id="memos">
+        <!-- 嘀咕加载在这里 -->
+    </div>
 </div>
 
 <script type="text/javascript">
@@ -33,7 +33,6 @@ markup: HTML
 <script>
     window.ViewImage && ViewImage.init('.content img');
 </script>
-
 
 <!-- 注意替换 JS 资源文件的路径 -->
 <script type="text/javascript" src="/memos/assets/js/lazyload.min.js?v=17.8.3"></script>
