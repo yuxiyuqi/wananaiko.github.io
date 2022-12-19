@@ -3,7 +3,6 @@ title: "FAQs"
 summary: Frequently Asked Questions
 date: 2021-01-20
 author: "Aditya Telange"
-draft: true
 ---
 
 ## Intro
