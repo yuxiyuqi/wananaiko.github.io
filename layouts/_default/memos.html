@@ -1,6 +1,5 @@
-
 {{- define "main" }}
- 
+
 <header class="page-header">
     <h1>{{ .Title }}</h1>
     {{- if .Description }}
@@ -10,8 +9,9 @@
     {{- end }}
   </header>
  
-<section>
-  {{ .Content }}
-</section>
+
+
+<!-- 页面下雪效果 -->
+<script src="https://app.embed.im/snow.js" defer></script>
  
-{{- end }}{{/* end main */}}
+{{- end }}
