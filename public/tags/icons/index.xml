@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>icons on PaperModX</title>
-    <link>https://wananaiko.vercel.app/tags/icons/</link>
+    <link>https://wananaiko.design/tags/icons/</link>
     <description>Recent content in icons on PaperModX</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 20 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://wananaiko.vercel.app/tags/icons/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 20 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://wananaiko.design/tags/icons/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Icons</title>
-      <link>https://wananaiko.vercel.app/docs/icons/</link>
+      <link>https://wananaiko.design/docs/icons/</link>
       <pubDate>Wed, 20 Jan 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://wananaiko.vercel.app/docs/icons/</guid>
+      <guid>https://wananaiko.design/docs/icons/</guid>
       <description>Explain how to use icons in PaperModX</description>
       <content:encoded><![CDATA[<h2 id="social-icons">Social Icons</h2>
 <p>Go to <a href="icons_preview">Icons Preview</a> to see a complete list of icons</p>

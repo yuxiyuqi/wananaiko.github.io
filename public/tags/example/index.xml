@@ -2,26 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>example on PaperModX</title>
-    <link>https://wananaiko.vercel.app/tags/example/</link>
+    <link>https://wananaiko.design/tags/example/</link>
     <description>Recent content in example on PaperModX</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 13 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://wananaiko.vercel.app/tags/example/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 13 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://wananaiko.design/tags/example/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Icons Preview</title>
-      <link>https://wananaiko.vercel.app/docs/icons_preview/</link>
+      <link>https://wananaiko.design/docs/icons_preview/</link>
       <pubDate>Wed, 13 Apr 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://wananaiko.vercel.app/docs/icons_preview/</guid>
+      <guid>https://wananaiko.design/docs/icons_preview/</guid>
       <description>Index of all icons in PaperModeX</description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
     
     <item>
       <title>Markdown Syntax Guide</title>
-      <link>https://wananaiko.vercel.app/posts/markdown-syntax/</link>
+      <link>https://wananaiko.design/posts/markdown-syntax/</link>
       <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://wananaiko.vercel.app/posts/markdown-syntax/</guid>
+      <guid>https://wananaiko.design/posts/markdown-syntax/</guid>
       <description>Sample article showcasing basic Markdown syntax and formatting for HTML elements.</description>
       <content:encoded><![CDATA[<p>This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.</p>
 <h2 id="headings">Headings</h2>
@@ -204,10 +204,10 @@ This is pre text
     
     <item>
       <title>Placeholder Text</title>
-      <link>https://wananaiko.vercel.app/posts/placeholder-text/</link>
+      <link>https://wananaiko.design/posts/placeholder-text/</link>
       <pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://wananaiko.vercel.app/posts/placeholder-text/</guid>
+      <guid>https://wananaiko.design/posts/placeholder-text/</guid>
       <description>Lorem Ipsum Dolor Si Amet</description>
       <content:encoded><![CDATA[<p>Lorem est tota propiore conpellat pectoribus de pectora summo.</p>
 <p>Redit teque digerit hominumque toris verebor lumina non cervice subde tollit usus habet Arctonque, furores quas nec ferunt. Quoque montibus nunc caluere tempus inhospita parcite confusaque translucet patri vestro qui optatis lumine cognoscere flos nubis! Fronde ipsamque patulos Dryopen deorum.</p>
@@ -241,10 +241,10 @@ This is pre text
     
     <item>
       <title>Math Typesetting</title>
-      <link>https://wananaiko.vercel.app/docs/math-typesetting/</link>
+      <link>https://wananaiko.design/docs/math-typesetting/</link>
       <pubDate>Fri, 08 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://wananaiko.vercel.app/docs/math-typesetting/</guid>
+      <guid>https://wananaiko.design/docs/math-typesetting/</guid>
       <description>A brief guide to setup KaTeX</description>
       <content:encoded><![CDATA[<p>Mathematical notation in a Hugo project can be enabled by using third party JavaScript libraries.</p>
 <p>In this example we will be using <a href="https://katex.org/">KaTeX</a></p>
@@ -286,10 +286,10 @@ $$</p>]]></content:encoded>
     
     <item>
       <title>Emoji Support</title>
-      <link>https://wananaiko.vercel.app/docs/emoji-support/</link>
+      <link>https://wananaiko.design/docs/emoji-support/</link>
       <pubDate>Tue, 05 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://wananaiko.vercel.app/docs/emoji-support/</guid>
+      <guid>https://wananaiko.design/docs/emoji-support/</guid>
       <description>Guide to emoji usage in Hugo</description>
       <content:encoded><![CDATA[<p>Emoji can be enabled in a Hugo project in a number of ways.</p>
 <p>The <a href="https://gohugo.io/functions/emojify/"><code>emojify</code></a> function can be called directly in templates or <a href="https://gohugo.io/templates/shortcode-templates/#inline-shortcodes">Inline Shortcodes</a>.</p>

@@ -2,211 +2,214 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://wananaiko.vercel.app/docs/papermodx-new-features/</loc>
+    <loc>https://wananaiko.design/newsletter/</loc>
+    <lastmod>2022-09-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wananaiko.design/newsletter/001-hello-world/</loc>
+    <lastmod>2022-09-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wananaiko.design/</loc>
+    <lastmod>2022-09-07T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://wananaiko.design/zh/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://wananaiko.design/"
+                />
+  </url><url>
+    <loc>https://wananaiko.design/tags/example/</loc>
+    <lastmod>2022-04-13T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://wananaiko.design/zh/tags/example/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://wananaiko.design/tags/example/"
+                />
+  </url><url>
+    <loc>https://wananaiko.design/docs/icons_preview/</loc>
+    <lastmod>2022-04-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wananaiko.design/docs/</loc>
+    <lastmod>2022-04-13T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://wananaiko.design/zh/docs/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://wananaiko.design/docs/"
+                />
+  </url><url>
+    <loc>https://wananaiko.design/tags/</loc>
+    <lastmod>2022-04-13T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://wananaiko.design/zh/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://wananaiko.design/tags/"
+                />
+  </url><url>
+    <loc>https://wananaiko.design/docs/papermodx-new-features/</loc>
     <lastmod>2022-04-12T23:37:00+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="https://wananaiko.vercel.app/zh/docs/papermodx-new-features/"
+                href="https://wananaiko.design/zh/docs/papermodx-new-features/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://wananaiko.vercel.app/docs/papermodx-new-features/"
+                href="https://wananaiko.design/docs/papermodx-new-features/"
                 />
   </url><url>
-    <loc>https://wananaiko.vercel.app/docs/icons_preview/</loc>
-    <lastmod>2022-04-13T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wananaiko.vercel.app/newsletter/</loc>
-    <lastmod>2022-09-07T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wananaiko.vercel.app/newsletter/001-hello-world/</loc>
-    <lastmod>2022-09-07T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wananaiko.vercel.app/</loc>
-    <lastmod>2022-09-07T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://wananaiko.vercel.app/zh/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://wananaiko.vercel.app/"
-                />
-  </url><url>
-    <loc>https://wananaiko.vercel.app/tags/example/</loc>
-    <lastmod>2022-04-13T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://wananaiko.vercel.app/zh/tags/example/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://wananaiko.vercel.app/tags/example/"
-                />
-  </url><url>
-    <loc>https://wananaiko.vercel.app/docs/</loc>
-    <lastmod>2022-04-13T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://wananaiko.vercel.app/zh/docs/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://wananaiko.vercel.app/docs/"
-                />
-  </url><url>
-    <loc>https://wananaiko.vercel.app/tags/</loc>
-    <lastmod>2022-04-13T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://wananaiko.vercel.app/zh/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://wananaiko.vercel.app/tags/"
-                />
-  </url><url>
-    <loc>https://wananaiko.vercel.app/tags/icons/</loc>
+    <loc>https://wananaiko.design/docs/faq/</loc>
     <lastmod>2021-01-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://wananaiko.vercel.app/docs/icons/</loc>
+    <loc>https://wananaiko.design/tags/icons/</loc>
     <lastmod>2021-01-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://wananaiko.vercel.app/docs/installation/</loc>
+    <loc>https://wananaiko.design/docs/icons/</loc>
     <lastmod>2021-01-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://wananaiko.vercel.app/docs/features/</loc>
+    <loc>https://wananaiko.design/docs/installation/</loc>
     <lastmod>2021-01-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://wananaiko.vercel.app/posts/my-first-post/</loc>
+    <loc>https://wananaiko.design/docs/features/</loc>
+    <lastmod>2021-01-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wananaiko.design/posts/my-first-post/</loc>
     <lastmod>2019-07-18T17:18:05+01:00</lastmod>
   </url><url>
-    <loc>https://wananaiko.vercel.app/posts/</loc>
+    <loc>https://wananaiko.design/posts/</loc>
     <lastmod>2019-07-18T17:18:05+01:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="https://wananaiko.vercel.app/zh/posts/"
+                href="https://wananaiko.design/zh/posts/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://wananaiko.vercel.app/posts/"
+                href="https://wananaiko.design/posts/"
                 />
   </url><url>
-    <loc>https://wananaiko.vercel.app/tags/markdown/</loc>
+    <loc>https://wananaiko.design/tags/markdown/</loc>
     <lastmod>2019-03-11T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="https://wananaiko.vercel.app/zh/tags/markdown/"
+                href="https://wananaiko.design/zh/tags/markdown/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://wananaiko.vercel.app/tags/markdown/"
+                href="https://wananaiko.design/tags/markdown/"
                 />
   </url><url>
-    <loc>https://wananaiko.vercel.app/posts/markdown-syntax/</loc>
+    <loc>https://wananaiko.design/posts/markdown-syntax/</loc>
     <lastmod>2019-03-11T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="https://wananaiko.vercel.app/zh/posts/markdown-syntax/"
+                href="https://wananaiko.design/zh/posts/markdown-syntax/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://wananaiko.vercel.app/posts/markdown-syntax/"
+                href="https://wananaiko.design/posts/markdown-syntax/"
                 />
   </url><url>
-    <loc>https://wananaiko.vercel.app/tags/syntax/</loc>
+    <loc>https://wananaiko.design/tags/syntax/</loc>
     <lastmod>2019-03-11T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="https://wananaiko.vercel.app/zh/tags/syntax/"
+                href="https://wananaiko.design/zh/tags/syntax/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://wananaiko.vercel.app/tags/syntax/"
+                href="https://wananaiko.design/tags/syntax/"
                 />
   </url><url>
-    <loc>https://wananaiko.vercel.app/posts/placeholder-text/</loc>
+    <loc>https://wananaiko.design/posts/placeholder-text/</loc>
     <lastmod>2019-03-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://wananaiko.vercel.app/tags/math/</loc>
+    <loc>https://wananaiko.design/tags/math/</loc>
     <lastmod>2019-03-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://wananaiko.vercel.app/docs/math-typesetting/</loc>
+    <loc>https://wananaiko.design/docs/math-typesetting/</loc>
     <lastmod>2019-03-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://wananaiko.vercel.app/docs/emoji-support/</loc>
+    <loc>https://wananaiko.design/docs/emoji-support/</loc>
     <lastmod>2019-03-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://wananaiko.vercel.app/archives/</loc>
+    <loc>https://wananaiko.design/archives/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="https://wananaiko.vercel.app/zh/archives/"
+                href="https://wananaiko.design/zh/archives/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://wananaiko.vercel.app/archives/"
+                href="https://wananaiko.design/archives/"
                 />
   </url><url>
-    <loc>https://wananaiko.vercel.app/categories/</loc>
+    <loc>https://wananaiko.design/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="https://wananaiko.vercel.app/zh/categories/"
+                href="https://wananaiko.design/zh/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://wananaiko.vercel.app/categories/"
+                href="https://wananaiko.design/categories/"
                 />
   </url><url>
-    <loc>https://wananaiko.vercel.app/docs/archives/</loc>
+    <loc>https://wananaiko.design/docs/archives/</loc>
   </url><url>
-    <loc>https://wananaiko.vercel.app/memos/</loc>
+    <loc>https://wananaiko.design/memos/</loc>
   </url><url>
-    <loc>https://wananaiko.vercel.app/newsletter/archives/</loc>
+    <loc>https://wananaiko.design/newsletter/archives/</loc>
   </url><url>
-    <loc>https://wananaiko.vercel.app/search/</loc>
+    <loc>https://wananaiko.design/search/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="https://wananaiko.vercel.app/zh/search/"
+                href="https://wananaiko.design/zh/search/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://wananaiko.vercel.app/search/"
+                href="https://wananaiko.design/search/"
                 />
   </url><url>
-    <loc>https://wananaiko.vercel.app/series/</loc>
+    <loc>https://wananaiko.design/series/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="https://wananaiko.vercel.app/zh/series/"
+                href="https://wananaiko.design/zh/series/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://wananaiko.vercel.app/series/"
+                href="https://wananaiko.design/series/"
                 />
   </url>
 </urlset>

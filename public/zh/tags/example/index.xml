@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>example on PaperModX</title>
-    <link>https://wananaiko.vercel.app/zh/tags/example/</link>
+    <link>https://wananaiko.design/zh/tags/example/</link>
     <description>Recent content in example on PaperModX</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 12 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://wananaiko.vercel.app/zh/tags/example/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 12 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://wananaiko.design/zh/tags/example/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Markdown 入门指南</title>
-      <link>https://wananaiko.vercel.app/zh/posts/markdown-syntax/</link>
+      <link>https://wananaiko.design/zh/posts/markdown-syntax/</link>
       <pubDate>Tue, 12 Apr 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://wananaiko.vercel.app/zh/posts/markdown-syntax/</guid>
+      <guid>https://wananaiko.design/zh/posts/markdown-syntax/</guid>
       <description>Markdown 概述、工作原理以及用途。</description>
       <content:encoded><![CDATA[<h1 id="markdown-入门">Markdown 入门</h1>
 <blockquote>

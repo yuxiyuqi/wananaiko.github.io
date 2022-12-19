@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>math on PaperModX</title>
-    <link>https://wananaiko.vercel.app/tags/math/</link>
+    <link>https://wananaiko.design/tags/math/</link>
     <description>Recent content in math on PaperModX</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 08 Mar 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://wananaiko.vercel.app/tags/math/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 08 Mar 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://wananaiko.design/tags/math/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Math Typesetting</title>
-      <link>https://wananaiko.vercel.app/docs/math-typesetting/</link>
+      <link>https://wananaiko.design/docs/math-typesetting/</link>
       <pubDate>Fri, 08 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://wananaiko.vercel.app/docs/math-typesetting/</guid>
+      <guid>https://wananaiko.design/docs/math-typesetting/</guid>
       <description>A brief guide to setup KaTeX</description>
       <content:encoded><![CDATA[<p>Mathematical notation in a Hugo project can be enabled by using third party JavaScript libraries.</p>
 <p>In this example we will be using <a href="https://katex.org/">KaTeX</a></p>
