@@ -17,10 +17,8 @@ markup: HTML
 <div class="count">
     <blockquote>共发布了 <span id="memosCount"><i class="fas fa-spinner fa-pulse"></i></span> 条 Memos <span class="emoji">🎉</span></blockquote>
 </div>
-<div class="container">
-    <div id="memos">
-        <!-- 嘀咕加载在这里 -->
-    </div>
+<div id="memos">
+    <!-- 嘀咕加载在这里 -->
 </div>
 
 <script type="text/javascript">
