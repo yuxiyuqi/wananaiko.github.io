@@ -52,8 +52,8 @@ var memo = {
     limit: '10',
     creatorId: '101',
     domId: '#memos',
-    username: 'Admin',
-    name: 'Administrator'
+    username: 'wananaiko',
+    name: 'Aiko'
 }
 if (typeof (memos) !== "undefined") {
     for (var key in memos) {
