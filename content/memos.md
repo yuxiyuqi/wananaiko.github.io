@@ -2,7 +2,6 @@
 title: "memos"
 layout: "memos"
 type: 'memos'
-markup: HTML
 ---
 
 <meta name="referrer" content="no-referrer">
