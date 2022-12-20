@@ -4,16 +4,13 @@ layout: "memos"
 type: 'memos'
 markup: HTML
 ---
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta name="referrer" content="no-referrer">
-    <link href="/memos/assets/css/style.css" rel="stylesheet" type="text/css">
-    <link href="/memos/assets/css/APlayer.min.css" rel="stylesheet" type="text/css">
-    <link href="/memos/assets/css/highlight.github.min.css" rel="stylesheet" type="text/css">
-    <link href="/memos/assets/css/custom.css" rel="stylesheet" type="text/css">
-</head>
-<body>
+
+<meta name="referrer" content="no-referrer">
+<link href="/memos/assets/css/style.css" rel="stylesheet" type="text/css">
+<link href="/memos/assets/css/APlayer.min.css" rel="stylesheet" type="text/css">
+<link href="/memos/assets/css/highlight.github.min.css" rel="stylesheet" type="text/css">
+<link href="/memos/assets/css/custom.css" rel="stylesheet" type="text/css">
+
 
 <div class="container">
     <div id="memos">
@@ -46,5 +43,3 @@ markup: HTML
 <script type="text/javascript" src="/memos/assets/js/highlight.min.js"></script>
 <script type="text/javascript" src="/memos/assets/js/main.js"></script>
 <script type="text/javascript" src="/memos/assets/js/custom.js"></script>
-</body>
-</html>
