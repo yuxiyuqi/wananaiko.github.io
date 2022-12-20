@@ -542,7 +542,7 @@ blockquote {
     }
 
     ul  {
-        padding-inline-start: 8px; !important;
+        padding-inline-start: 0px; !important;
     }
 }
 
