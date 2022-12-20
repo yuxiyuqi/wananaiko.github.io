@@ -569,5 +569,5 @@ footer {
 }
 
 ul (max-width: 683px) {
-    padding-inline-start: 0px; !important;
+    padding-inline-start: 8px; !important;
 }
