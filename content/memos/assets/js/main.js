@@ -1,7 +1,4 @@
 // Lazyload Start
-{{ $moment := resources.Get "moment.min.js" }}
-{{ $moment.Permalink }}
-
 (function () {
     function logElementEvent(eventName, element) {
         console.log(Date.now(), eventName, element.getAttribute("data-src"));
