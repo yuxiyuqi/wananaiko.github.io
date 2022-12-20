@@ -44,7 +44,7 @@ markup: HTML
 <script type="text/javascript" src="/memos/assets/js/APlayer.min.js"></script>
 <!-- <script type="text/javascript" src="/memos/assets/js/Meting.min.js"></script> -->
 <script type="text/javascript" src="/memos/assets/js/highlight.min.js"></script>
-<script type="text/javascript" src="/memos/assets/js/main.js"></script>
+<!-- <script type="text/javascript" src="/memos/assets/js/main.js"></script> -->
 <script type="text/javascript" src="/memos/assets/js/custom.js"></script>
 </body>
 </html>
