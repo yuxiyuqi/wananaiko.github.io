@@ -1,4 +1,6 @@
 {{- define "main" }}
+{{ $moment := resources.Get "moment.min.js" }}
+{{ $moment.Permalink }}
 
 <header class="page-header">
     <h1>{{ .Title }}</h1>
