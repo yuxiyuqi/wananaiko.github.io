@@ -29,7 +29,7 @@ ShowCodeCopyButtons = true
 ShowToc = true
 TocOpen = true
 TocSide = "right"
-EnableInstantClick = true
+EnableInstantClick = false
 EnableImageZoom = true
 
 [params.commentSystems.disqus]
