@@ -56,7 +56,7 @@ limit = 20
   [params.homeInfoParams]
   Title = "exPM, now UI designer, currently learning front-end knowledge."
   Content = """
-<mark>Welcome to my blog!></mark>
+<mark>Welcome to my blog!</mark>
  This is a platform for sharing knowledge about design, front-end, practical tools, daily learning and research. 
  Here you can find the latest trend information, technical articles, as well as experiences and skills shared by me and other industry experts. 
  We also provide the latest tutorials and practical tools to help you learn and improve your skills. 
