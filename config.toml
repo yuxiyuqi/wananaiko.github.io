@@ -54,7 +54,7 @@ limit = 20
   imageTitle = "my image"
 
   [params.homeInfoParams]
-  Title = "exPM, now UI designer, currently learning front-end knowledge."
+  Title = "exPM, now UI/UX, currently learning FED."
   Content = """
 <mark>Welcome to my blog!</mark>
  This is a platform for sharing knowledge about design, front-end, practical tools, daily learning and research. 
