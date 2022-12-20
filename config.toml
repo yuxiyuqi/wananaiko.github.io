@@ -65,7 +65,7 @@ limit = 20
 
   [[params.socialIcons]]
   name = "github-simple"
-  url = "https://github.com/reorx/hugo-PaperModX"
+  url = "https://github.com/wananaiko"
 
   [[params.socialIcons]]
   name = "rss-simple"
