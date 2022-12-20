@@ -540,6 +540,10 @@ blockquote {
     .load-btn {
         margin-left: 0;
     }
+
+    ul  {
+        padding-inline-start: 8px; !important;
+    }
 }
 
 .video-wrapper {
@@ -566,8 +570,4 @@ footer {
 
 .hidden {
     display: none !important;
-}
-
-ul (max-width: 683px) {
-    padding-inline-start: 8px; !important;
 }
