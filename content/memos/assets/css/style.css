@@ -547,7 +547,6 @@ blockquote {
 
     a:hover {
         color: var(--link-hover-color);
-        box-shadow: var(--link-hover-underline-shadow);
     }
 }
 
