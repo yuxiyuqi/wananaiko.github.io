@@ -544,6 +544,11 @@ blockquote {
     ul  {
         padding-inline-start: 0px; !important;
     }
+
+    a:hover {
+        color: var(--link-hover-color);
+        box-shadow: var(--link-hover-underline-shadow);
+    }
 }
 
 .video-wrapper {
