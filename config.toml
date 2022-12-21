@@ -88,7 +88,7 @@ languageName = "English"
 weight = 1
 
 [[languages.en.menu.main]]
-name = "Blog"
+name = "Article"
 url = "/docs/"
 weight = 1
 

@@ -1,6 +1,6 @@
 ---
-title: PaperModX Docs
-summary: Contains documentations of PaperModX
-description: Contains documentations of PaperModX
+title: Article
+summary: About design, front-end, practical tools
+description: About design, front-end, practical tools
 paginate: 10
 ---
