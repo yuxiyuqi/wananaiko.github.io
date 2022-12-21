@@ -25,11 +25,11 @@ body.dark-theme {
     --color-main: #adbac7;
     --color-background: #1c2128;
     --color-text-bg: #22272e;
-    --color-text-hover: #272c32;
+    --color-text-hover: #573eaa;
     --color-memos-id: #71767b;
     --color-img-border: #292a2d;
-    --color-tag: #539bf5;
-    --color-link: #539bf5;
+    --color-tag: #573eaa;
+    --color-link: #573eaa;
     --color-border-muted: #2d333b;
     --color-post-preview: #4a4b50;
     --color-memos-pre-bg: #2d333b;
@@ -543,10 +543,6 @@ blockquote {
 
     ul  {
         padding-inline-start: 0px; !important;
-    }
-
-    a:hover {
-        color: #573eaa; !important;
     }
 }
 
