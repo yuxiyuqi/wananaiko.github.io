@@ -20,20 +20,6 @@ body.light-theme,
     --tabletWidth: (max-width: 900px);
 }
 
-body.dark-theme {
-    /* dark theme colors */
-    --color-main: #adbac7;
-    --color-background: #1c2128;
-    --color-text-bg: #22272e;
-    --color-text-hover: #272c32;
-    --color-memos-id: #71767b;
-    --color-img-border: #292a2d;
-    --color-tag: #539bf5;
-    --color-link: #539bf5;
-    --color-border-muted: #2d333b;
-    --color-post-preview: #4a4b50;
-    --color-memos-pre-bg: #2d333b;
-}
 
 @media (prefers-color-scheme: light) {
     body:not(.dark-theme) {
@@ -54,22 +40,7 @@ body.dark-theme {
     }
 }
 
-@media (prefers-color-scheme: dark) {
-    body:not(.light-theme) {
-        /* dark theme colors */
-        --color-main: #adbac7;
-        --color-background: #1c2128;
-        --color-text-bg: #22272e;
-        --color-text-hover: #272c32;
-        --color-memos-id: #71767b;
-        --color-img-border: #292a2d;
-        --color-tag: #539bf5;
-        --color-link: #539bf5;
-        --color-border-muted: #2d333b;
-        --color-post-preview: #4a4b50;
-        --color-memos-pre-bg: #2d333b;
-    }
-}
+
 blockquote, dl, dd, h1, h2, h3, h4, h5, h6, hr, figure, p, pre {
     margin: 0;
 }
