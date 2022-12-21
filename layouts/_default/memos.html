@@ -16,5 +16,15 @@
 
 <!-- 页面下雪效果 -->
 <script src="https://app.embed.im/snow.js" defer></script>
+
+<script>
+(function() {
+    const defaultTheme = 'auto';
+    const prefTheme = getPrefTheme();
+    const theme = prefTheme ? prefTheme : defaultTheme;
+
+    switchTheme(theme);
+  })();
+</script>
  
 {{- end }}{{/* end main */}}
