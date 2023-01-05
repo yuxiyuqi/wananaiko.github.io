@@ -18,12 +18,9 @@ type: 'memos'
             limit: "",
             creatorId: "1",
             domId: ""
-        }
+        };
+        window.ViewImage && ViewImage.init('.content img');
     </script>
-
-<script type="text/javascript">
-    window.ViewImage && ViewImage.init('.content img');
-</script>
 
 <script src="https://wananaiko.design/memos/assets/js/bibi.js"></script>
 <script src="https://wananaiko.design/memos/assets/js/marked.min.js"></script>
