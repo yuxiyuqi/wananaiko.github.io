@@ -249,12 +249,3 @@ bbDom && (
 );
 // Images lightbox
 window.ViewImage && ViewImage.init('.container img');
-
-//设置所有链接在新标签页中打开
-window.onload = function() {
-    var links = document.getElementsByTagName("a");
-    for (var i = 0; i < links.length; i++) {
-      links[i].target = "_blank";
-    }
-  };
-  
