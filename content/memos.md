@@ -11,7 +11,7 @@ type: 'memos'
         <p class="note note-info memo-nums-text">
             <hanla></hanla>共有
             <span id="memonums">「条等待加载」</span>
-            条说说<hanla></hanla>
+            条memos<hanla></hanla>
         </p>
     </div>
     <div id="bber"></div>
