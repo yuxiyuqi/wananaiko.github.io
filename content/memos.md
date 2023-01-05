@@ -25,15 +25,15 @@ type: 'memos'
 
 <script type="text/javascript">
     window.ViewImage && ViewImage.init('.content img');
+</script>
 
-    //设置所有链接在新标签页中打开
+<script type="text/javascript">
     window.onload = function() {
-    var links = document.getElementsByTagName("a");
-    for (var i = 0; i < links.length; i++) {
-      links[i].target = "_blank";
-    }
+  var links = document.getElementsByTagName("a");
+  for (var i = 0; i < links.length; i++) {
+    links[i].target = "_blank";
+  }
   };
-  
 </script>
 
 <script type="text/javascript" src="/memos/assets/js/view-image.min.js"></script>
