@@ -35,7 +35,6 @@ type: 'memos'
     links[i].target = "_blank";
   }
 };
-
 </script>
 
 <script type="text/javascript" src="/memos/assets/js/view-image.min.js"></script>
