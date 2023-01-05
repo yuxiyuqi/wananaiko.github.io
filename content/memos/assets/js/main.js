@@ -274,7 +274,7 @@ function bookShow(fetch_href, fetch_item) {
 // 解析豆瓣 End
 
 // Images lightbox
-window.ViewImage && ViewImage.init('.container img');
+// window.ViewImage && ViewImage.init('.container img');
 
 // Memos Total Start
 // Get Memos total count
