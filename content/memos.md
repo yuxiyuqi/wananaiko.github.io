@@ -38,7 +38,7 @@ type: 'memos'
 };
 </script>
 
-<script type="text/javascript">hljs.highlightAll();</script>
+<script type="text/javascript">hljs.initHighlightingOnLoad();</script>
 
 <script type="text/javascript" src="/memos/assets/js/view-image.min.js"></script>
 <script type="text/javascript" src="/memos/assets/js/bibi.js"></script>
