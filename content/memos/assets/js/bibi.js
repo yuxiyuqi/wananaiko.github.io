@@ -249,3 +249,7 @@ bbDom && (
 );
 // Images lightbox
 window.ViewImage && ViewImage.init('.container img');
+
+window.onload = function() {
+    hljs.initHighlightingOnLoad();
+  };
