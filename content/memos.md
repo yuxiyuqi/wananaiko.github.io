@@ -7,9 +7,9 @@ type: 'memos'
 <section id="main" class="container">
     <div class="memo-nums">
         <p class="note note-info memo-nums-text">
-            <hanla></hanla>共有
+            共有
             <span id="memonums">「条等待加载」</span>
-            条 memos<hanla></hanla>
+            条 memos
         </p>
     </div>
     <div id="bber"></div>
