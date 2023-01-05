@@ -17,7 +17,7 @@ function loadCssCode(e) {
         .appendChild(t)
 }
 var btn,
-    allCSS = ".memo-container{margin-top:0.5rem;display:flex;width:100%;flex-direction:colum" +
+    allCSS = ".memo-container{margin-top:1.5rem;display:flex;width:100%;flex-direction:colum" +
             "n;align-items:flex-start;justify-content:flex-start;border-radius:0.5rem;borde" +
             "r-width:1px;--tw-border-opacity:1;border-color:rgb(255 255 255 / var(--tw-bord" +
             "er-opacity));--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-" +
@@ -33,7 +33,7 @@ var btn,
             "{margin-bottom:0.25rem;height:auto;min-height:24px;width:100%;white-space:pre-" +
             "wrap;overflow-wrap:break-word;font-size:1rem;line-height:1.5rem;}.memo-content" +
             "-text a.link{color:var(--post-link-color);}.memo-content-text a.link:hover{col" +
-            "or:var(--link-hover-color);}.memo-content-text .img{display:block;max-width:10" +
+            "or:var(--link-hover-color);}.memo-content-text .img{padding-top: 1rem;display:block;max-width:10" +
             "0%;cursor:pointer;border-radius:0.25rem;height:auto;vertical-align:middle;webk" +
             "it-user-select:none;-moz-user-select:none;user-select:none;background-color:tr" +
             "ansparent;outline:2px solid transparent;outline-offset:2px;-webkit-tap-highlig" +
