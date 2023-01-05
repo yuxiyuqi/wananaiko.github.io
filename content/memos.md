@@ -40,7 +40,9 @@ type: 'memos'
 
 <!-- 检测页面代码并自动高亮 -->
 <script type="text/javascript">
-hljs.initHighlightingOnLoad();
+  window.onload = function() {
+    hljs.initHighlightingOnLoad();
+  };
 </script>
 
 
