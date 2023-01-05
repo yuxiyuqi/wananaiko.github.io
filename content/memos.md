@@ -25,10 +25,10 @@ type: 'memos'
     </script>
 
 <script src="https://fastly.jsdelivr.net/gh/Tokinx/ViewImage/view-image.min.js"></script>
-<script type="text/javascript">
+<script>
     window.ViewImage && ViewImage.init('.content img');
 </script>
-
-<script src="https://wananaiko.design/memos/assets/js/bibi.js"></script>
-<script src="https://wananaiko.design/memos/assets/js/marked.min.js"></script>
-<script src="https://fastly.jsdelivr.net/gh/Tokinx/Lately/lately.min.js"></script>
+<script type="text/javascript" src="/memos/assets/js/view-image.min.js"></script>
+<script type="text/javascript" src="/memos/assets/js/bibi.js"></script>
+<script type="text/javascript" src="/memos/assets/js/marked.min.js"></script>
+<script type="text/javascript" src="https://fastly.jsdelivr.net/gh/Tokinx/Lately/lately.min.js"></script>
