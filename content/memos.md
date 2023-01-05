@@ -4,6 +4,7 @@ layout: "memos"
 type: 'memos'
 --- 
 <meta name="referrer" content="no-referrer">
+<link href="/memos/assets/css/highlight.github.min.css" rel="stylesheet" type="text/css">
 <section id="main" class="container">
     <div class="memo-nums">
         <p class="note note-info memo-nums-text">
