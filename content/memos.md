@@ -28,7 +28,7 @@ type: 'memos'
 </script> -->
 
 <script>
-  mediumZoom('.content img');
+  mediumZoom('img');
 </script>
 
 <!-- <script type="text/javascript" src="/memos/assets/js/view-image.min.js"></script> -->
