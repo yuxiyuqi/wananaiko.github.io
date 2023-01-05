@@ -27,6 +27,7 @@ type: 'memos'
     window.ViewImage && ViewImage.init('.content img');
 </script>
 
+<!-- 设置页面中的所有链接在新标签页打开 -->
 <script type="text/javascript">
     window.onload = function() {
   var links = document.getElementsByTagName("a");
