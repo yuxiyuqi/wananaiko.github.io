@@ -256,3 +256,5 @@ bbDom && (
             : getNextList()
     })
 );
+// Images lightbox
+window.ViewImage && ViewImage.init('.container img');
