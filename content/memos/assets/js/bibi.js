@@ -17,36 +17,113 @@ function loadCssCode(e) {
         .appendChild(t)
 }
 var btn,
-    allCSS = ".memo-container{margin-top:0.5rem;display:flex;width:100%;flex-direction:colum" +
-            "n;align-items:flex-start;justify-content:flex-start;border-radius:0.5rem;borde" +
-            "r-width:1px;--tw-border-opacity:1;border-color:rgb(255 255 255 / var(--tw-bord" +
-            "er-opacity));--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-" +
-            "opacity));border:1px solid #f0f0f0;padding:1rem;-webkit-transform:perspective(" +
-            "1px) translateZ(0);transform:perspective(1px) translateZ(0);-webkit-transition" +
-            "-duration:0.3s;transition-duration:0.3s;-webkit-transition-property:box-shadow" +
-            ",transform;transition-property:box-shadow,transform;}.memo-container:hover,.me" +
-            "mo-container:focus,.memo-container:active{-webkit-transform:scale(1.01);transf" +
-            "orm:scale(1.01);}.memo-container>.memo-header{margin-bottom:0.5rem;display:fle" +
-            "x;width:100%;flex-direction:row;align-items:center;justify-content:flex-start;" +
-            "font-size:.875rem;--tw-text-opacity:1;color:rgb(156 163 175 / var(--tw-text-op" +
-            "acity));}.memo-content-text>p:last-child{margin-bottom:0;}.memo-content-text>p" +
-            "{margin-bottom:0.25rem;height:auto;min-height:24px;width:100%;white-space:pre-" +
-            "wrap;overflow-wrap:break-word;font-size:1rem;line-height:1.5rem;}.memo-content" +
-            "-text a.link{color:var(--post-link-color);}.memo-content-text a.link:hover{col" +
-            "or:var(--link-hover-color);}.memo-content-text .img{display:block;max-width:10" +
-            "0%;cursor:pointer;border-radius:0.25rem;height:auto;vertical-align:middle;webk" +
-            "it-user-select:none;-moz-user-select:none;user-select:none;background-color:tr" +
-            "ansparent;outline:2px solid transparent;outline-offset:2px;-webkit-tap-highlig" +
-            "ht-color:transparent;}code{color:rgb(170,170,170);}.memo-content-text pre p{di" +
-            "splay:inline-block;}.memo-content-text pre p:empty{display:none;}button.load-b" +
-            "tn.button-load{background-color:#ffffff;color:rgb(150,150,150);border:1px soli" +
-            "d #f0f0f0;border-radius:10px;-webkit-transform:perspective(1px) translateZ(0);" +
-            "transform:perspective(1px) translateZ(0);-webkit-transition-duration:0.3s;tran" +
-            "sition-duration:0.3s;-webkit-transition-property:box-shadow,transform;transiti" +
-            "on-property:box-shadow,transform;padding:10px 24px;}button.load-btn.button-loa" +
-            "d:hover,button.load-btn.button-load:focus,button.load-btn.button-load:active{-" +
-            "webkit-transform:scale(1.01);transform:scale(1.01);}.memo-content-text a {colo" +
-            "r: #007bff;}",
+    allCSS = ".memo-container {
+        margin-top: 0.5rem;
+        display: flex;
+        width: 100%;
+        flex-direction: colum" + "n;
+        align-items: flex-start;
+        justify-content: flex-start;
+        border-radius: 0.5rem;
+        borde" + "r-width: 1px;
+        --tw-border-opacity: 1;
+        border-color: rgb(255 255 255 / var(--tw-bord" + "er-opacity));
+        --tw-bg-opacity: 1;
+        background-color: rgb(255 255 255 / var(--tw-bg-" + "opacity));
+        border: 1px solid #f0f0f0;
+        padding: 1rem;
+        -webkit-transform: perspective(" + "1px) translateZ(0);
+        transform: perspective(1px) translateZ(0);
+        -webkit-transition" + "-duration: 0.3s;
+        transition-duration: 0.3s;
+        -webkit-transition-property: box-shadow" + ",transform;
+        transition-property: box-shadow,transform;
+    }
+    .me" + "mo-container:focus,
+    .memo-container:active,
+    .memo-container:hover {
+        -webkit-transform: scale(1.01);
+        transf" + "orm: scale(1.01);
+    }
+    .memo-container > .memo-header {
+        margin-bottom: 0.5rem;
+        display: fle" + "x;
+        width: 100%;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        " + "font-size: 0.875rem;
+        --tw-text-opacity: 1;
+        color: rgb(156 163 175 / var(--tw-text-op" + "acity));
+    }
+    .memo-content-text > p:last-child {
+        margin-bottom: 0;
+    }
+    .memo-content-text > p" + " {
+        margin-bottom: 0.25rem;
+        height: auto;
+        min-height: 24px;
+        width: 100%;
+        white-space: pre-" + "wrap;
+        overflow-wrap: break-word;
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+    .memo-content" + "-text a.link {
+        color: var(--post-link-color);
+    }
+    .memo-content-text a.link:hover {
+        col" + "or: var(--link-hover-color);
+    }
+    .memo-content-text .img {
+        display: block;
+        max-width: 10" + "0%;
+        cursor: pointer;
+        border-radius: 0.25rem;
+        height: auto;
+        vertical-align: middle;
+        webk" + "it-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+        background-color: tr" + "ansparent;
+        outline: 2px solid transparent;
+        outline-offset: 2px;
+        -webkit-tap-highlig" + "ht-color: transparent;
+    }
+    code {
+        color: rgb(170,170,170);
+    }
+    .memo-content-text pre p {
+        di" + "splay: inline-block;
+    }
+    .memo-content-text pre p:empty {
+        display: none;
+    }
+    button.load-b" + "tn.button-load {
+        background-color: #ffffff;
+        color: rgb(150,150,150);
+        border: 1px soli" + "d #f0f0f0;
+        border-radius: 10px;
+        -webkit-transform: perspective(1px) translateZ(0);
+        " + "transform: perspective(1px) translateZ(0);
+        -webkit-transition-duration: 0.3s;
+        tran" + "sition-duration: 0.3s;
+        -webkit-transition-property: box-shadow,transform;
+        transiti" + "on-property: box-shadow,transform;
+        padding: 10px 24px;
+    }
+    button.load-btn.button-loa" + "d:hover,
+    button.load-btn.button-load:focus,
+    button.load-btn.button-load:active {
+        -" + "webkit-transform: scale(1.01);
+        transform: scale(1.01);
+    }
+    .memo-content-text a {
+        colo" + "r: #007bff;
+    }
+    ul.bb-list-ul {
+        padding-left: 0px;
+    }",
     limit = (loadCssCode(allCSS), bbMemo.limit),
     memos = bbMemo.memos,
     page = 1,
