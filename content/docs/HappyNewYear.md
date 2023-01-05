@@ -7,3 +7,14 @@ cover:
 ---
 
 2022年，感觉比以前任何一年过去的都要快，1/4的时间是在封控中度过。
+
+`<!-- 设置memos部分的所有链接在新标签页打开 -->
+
+<script type="text/javascript">
+    window.onload = function() {
+  var links = document.querySelectorAll("#bber a");
+  for (var i = 0; i < links.length; i++) {
+    links[i].target = "_blank";
+  }
+};
+</script>
