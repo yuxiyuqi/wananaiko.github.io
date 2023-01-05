@@ -5,6 +5,13 @@ type: 'memos'
 --- 
 <meta name="referrer" content="no-referrer">
 <link href="/memos/assets/css/highlight.github.min.css" rel="stylesheet" type="text/css">
+<!-- 检测页面代码并自动高亮 -->
+<script type="text/javascript">
+  window.onload = function() {
+    hljs.initHighlightingOnLoad();
+  };
+</script>
+
 <section id="main" class="container">
     <div class="memo-nums">
         <p class="note note-info memo-nums-text">
@@ -37,14 +44,6 @@ type: 'memos'
   }
 };
 </script>
-
-<!-- 检测页面代码并自动高亮 -->
-<script type="text/javascript">
-  window.onload = function() {
-    hljs.initHighlightingOnLoad();
-  };
-</script>
-
 
 <script type="text/javascript" src="/memos/assets/js/view-image.min.js"></script>
 <script type="text/javascript" src="/memos/assets/js/bibi.js"></script>
