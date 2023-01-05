@@ -2,19 +2,25 @@
 title: "memos"
 layout: "memos"
 type: 'memos'
----
+--- 
 
-<div id="bber"></div>
-<script type="text/javascript">
-    var memos = {
-        host: "https://memo.wananaiko.com/", //修改为自己部署 Memos 的网址，末尾有 / 斜杠
-        limit: "10", //默认每次显示 10条
-        creatorId: "1", //默认为 101用户 https://demo.usememos.com/u/101
-        domId: "#memos", //默认为 #memos
-    };
-</script>
-<!-- <link rel="stylesheet" type="text/css" href="https://wananaiko.design/memos/assets/css/style.mini.css"> -->
-<script src="https://wananaiko.design/memos/assets/js/bb-lmm-mk.js"></script>
-<script src="https://fastly.jsdelivr.net/npm/marked/marked.min.js"></script>
+<div class="memo-nums">
+        <p class="note note-info memo-nums-text">
+            <hanla></hanla>共有
+            <span id="memonums">「条等待加载」</span>
+            条说说<hanla></hanla>
+        </p>
+    </div>
+    <div id="bber"></div>
+    <script type="text/javascript">
+        var bbMemos = {
+            memos: "https://memo.wananaiko.com/",
+            limit: "",
+            creatorId: "1",
+            domId: ""
+        }
+    </script>
+<script src="https://wananaiko.design/memos/assets/js/bibi.js"></script>
+<script src="https://wananaiko.design/memos/assets/js/marked.min.js"></script>
 <script src="https://fastly.jsdelivr.net/gh/Tokinx/ViewImage/view-image.min.js"></script>
 <script src="https://fastly.jsdelivr.net/gh/Tokinx/Lately/lately.min.js"></script>
