@@ -25,7 +25,7 @@ type: 'memos'
     </script>
 
 <script src="https://fastly.jsdelivr.net/gh/Tokinx/ViewImage/view-image.min.js"></script>
-<script>
+<script type="text/javascript">
     window.ViewImage && ViewImage.init('.content img');
 </script>
 
