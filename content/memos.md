@@ -9,8 +9,8 @@ type: 'memos'
         <p class="note note-info memo-nums-text">
             共有
             <span id="memonums">「条等待加载」</span>
-            条 memos
-        </p> <a href="https://memo.wananaiko.com/u/1" target="_blank">查看全部memos</a>
+            条 memos <a href="https://memo.wananaiko.com/u/1" target="_blank">查看全部memos</a>
+        </p>
     </div>
     <div id="bber"></div>
     <script type="text/javascript">
