@@ -3,6 +3,7 @@ title: "memos"
 layout: "memos"
 type: 'memos'
 --- 
+<meta name="referrer" content="no-referrer">
 <script type="text/javascript">
     window.ViewImage && ViewImage.init('.content img');
 </script>
