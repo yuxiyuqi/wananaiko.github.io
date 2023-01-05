@@ -3,6 +3,9 @@ title: "memos"
 layout: "memos"
 type: 'memos'
 --- 
+<script type="text/javascript">
+    window.ViewImage && ViewImage.init('.content img');
+</script>
 
 <div class="memo-nums">
         <p class="note note-info memo-nums-text">
@@ -15,15 +18,11 @@ type: 'memos'
     <script type="text/javascript">
         var bbMemos = {
             memos: "https://memo.wananaiko.com/",
-            limit: "",
+            limit: "15",
             creatorId: "1",
-            domId: ""
+            domId: "#bber"
         }
     </script>
-
-<script type="text/javascript">
-    window.ViewImage && ViewImage.init('.content img');
-</script>
 
 <script src="https://wananaiko.design/memos/assets/js/bibi.js"></script>
 <script src="https://wananaiko.design/memos/assets/js/marked.min.js"></script>
