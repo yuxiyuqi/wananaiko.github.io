@@ -249,14 +249,3 @@ bbDom && (
 );
 // Images lightbox
 window.ViewImage && ViewImage.init('.container img');
-
-// Marked Options
-    marked.setOptions({
-        breaks: true,
-        smartypants: true,
-        langPrefix: 'language-',
-        highlight: function(code, lang) {
-            const language = hljs.getLanguage(lang) ? lang : 'plaintext';
-            return hljs.highlight(code, { language }).value;
-        },
-    });
