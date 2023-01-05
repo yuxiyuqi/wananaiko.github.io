@@ -38,7 +38,23 @@ type: 'memos'
 };
 </script>
 
-<script type="text/javascript">hljs.initHighlightingOnLoad();</script>
+
+<script type="text/javascript">
+  // Custom parser function
+  function parseCode(code) {
+    // Do something with the code
+    return code;
+  }
+
+  var preElements = document.getElementsByTagName("pre");
+  for (var i = 0; i < preElements.length; i++) {
+    var code = preElements[i].textContent;
+    var parsedCode = parseCode(code);
+    preElements[i].innerHTML = parsedCode;
+    highlightElement(preElements[i]);
+  }
+</script>
+
 
 <script type="text/javascript" src="/memos/assets/js/view-image.min.js"></script>
 <script type="text/javascript" src="/memos/assets/js/bibi.js"></script>
