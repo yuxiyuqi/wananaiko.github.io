@@ -31,7 +31,7 @@ type: 'memos'
   mediumZoom('.content img');
 </script>
 
-<script type="text/javascript" src="/memos/assets/js/view-image.min.js"></script>
+<!-- <script type="text/javascript" src="/memos/assets/js/view-image.min.js"></script> -->
 <script type="text/javascript" src="/memos/assets/js/bibi.js"></script>
 <script type="text/javascript" src="/memos/assets/js/marked.min.js"></script>
 <script type="text/javascript" src="https://fastly.jsdelivr.net/gh/Tokinx/Lately/lately.min.js"></script>
