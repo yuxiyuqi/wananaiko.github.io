@@ -18,9 +18,22 @@ type: 'memos'
             limit: "",
             creatorId: "1",
             domId: ""
-        };
-        window.ViewImage && ViewImage.init('.content img');
+        }
     </script>
+
+<script type="text/javascript">
+  //图片灯箱
+  // baguetteBox 灯箱 Issue: #190 先销毁再初始化
+  baguetteBox.destroy()
+  baguetteBox.run('.gallery', {
+    // Custom options
+    buttons: false,
+    noScrollbars: true,
+    fullScreen: false,
+    filter: /.*/i
+  });
+    window.ViewImage && ViewImage.init('.content img');
+</script>
 
 <script src="https://wananaiko.design/memos/assets/js/bibi.js"></script>
 <script src="https://wananaiko.design/memos/assets/js/marked.min.js"></script>
