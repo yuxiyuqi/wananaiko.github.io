@@ -46,7 +46,7 @@ var btn,
             "on-property:box-shadow,transform;padding:10px 24px;}button.load-btn.button-loa" +
             "d:hover,button.load-btn.button-load:focus,button.load-btn.button-load:active{-" +
             "webkit-transform:scale(1.01);transform:scale(1.01);}.memo-content-text a {colo" +
-            "r: #573EA7;}ul.bb-list-ul{padding-left: 0px;}span.tag-span {background-color: #573ea726;padding: 2px 5px;border-radius: 3px;font-size: small;line-height: 1.5;color: #573EA7;}",
+            "r: #573EA7;}ul.bb-list-ul{padding-left: 0px;}span.tag-span {background-color: #573ea726;padding: 2.5px 5px;border-radius: 3px;font-size: small;line-height: 1.5;color: #573EA7;}",
     limit = (loadCssCode(allCSS), bbMemo.limit),
     memos = bbMemo.memos,
     page = 1,
@@ -256,3 +256,6 @@ bbDom && (
             : getNextList()
     })
 );
+
+// Images lightbox
+window.ViewImage && ViewImage.init('.container img');
