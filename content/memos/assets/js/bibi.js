@@ -31,7 +31,7 @@ var btn,
             "font-size:.875rem;--tw-text-opacity:1;color:rgb(156 163 175 / var(--tw-text-op" +
             "acity));}.memo-content-text>p:last-child{margin-bottom:0;}.memo-content-text>p" +
             "{margin-bottom:0.25rem;height:auto;min-height:24px;width:100%;white-space:pre-" +
-            "wrap;overflow-wrap:break-word;font-size:1rem;line-height:1.5rem;}.memo-content" +
+            "wrap;overflow-wrap:break-word;font-size:1rem;line-height:1.8rem;}.memo-content" +
             "-text a.link{color:var(--post-link-color);}.memo-content-text a.link:hover{col" +
             "or:var(--link-hover-color);}.memo-content-text .img{padding-top: 1rem;display:block;max-width:10" +
             "0%;cursor:pointer;border-radius:0.25rem;height:auto;vertical-align:middle;webk" +
