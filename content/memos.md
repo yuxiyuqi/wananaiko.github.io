@@ -38,21 +38,9 @@ type: 'memos'
 };
 </script>
 
-
+<!-- 检测页面代码并自动高亮 -->
 <script type="text/javascript">
-  // Custom parser function
-  function parseCode(code) {
-    // Do something with the code
-    return code;
-  }
-
-  var preElements = document.getElementsByTagName("pre");
-  for (var i = 0; i < preElements.length; i++) {
-    var code = preElements[i].textContent;
-    var parsedCode = parseCode(code);
-    preElements[i].innerHTML = parsedCode;
-    highlightElement(preElements[i]);
-  }
+hljs.initHighlightingOnLoad();
 </script>
 
 
