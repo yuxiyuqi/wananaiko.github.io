@@ -47,19 +47,19 @@ if(bbDom){
     getNextList()
   });
 }
-function getFirstList(){
+function getFirstList() {
   bbDom.insertAdjacentHTML('afterend', load);
-  var bbUrl = memos+"api/memo?creatorId="+bbMemo.creatorId+"&rowStatus=NORMAL&limit="+limit;
-  fetch(bbUrl).then(res => res.json()).then( resdata =>{
-    updateHTMl(resdata.data)
-    var nowLength = resdata.data.length
-    if(nowLength < limit){ //è¿”å›žæ•°æ®æ¡æ•°å°äºŽ limit åˆ™ç›´æŽ¥ç§»é™¤â€œåŠ è½½æ›´å¤šâ€æŒ‰é’®ï¼Œä¸­æ–­é¢„åŠ è½½
-      document.querySelector("button.button-load").remove()
-      return
+  var bbUrl = memos + "api/memo?creatorId=" + bbMemo.creatorId + "&rowStatus=NORMAL&limit=" + limit;
+  fetch(bbUrl).then(res => res.json()).then(resdata => {
+    updateHTMl(resdata.data);
+    var nowLength = resdata.data.length;
+    if (nowLength < limit) { // If the number of returned data is less than the limit, remove the "Load More" button and stop preloading
+      document.querySelector("button.button-load").remove();
+      return;
     }
-    page++
-    offset = limit*(page-1)
-    getNextList()
+    page++;
+    offset = limit * (page - 1);
+    getNextList();
   });
 }
 //é¢„åŠ è½½ä¸‹ä¸€é¡µæ•°æ®
@@ -81,10 +81,10 @@ function meNums(){
   var bbLoad = document.querySelector('.bb-load')
   var bbUrl = memos+"api/memo/amount?userId="+bbMemo.creatorId
   fetch(bbUrl).then(res => res.json()).then( resdata =>{
-    if(resdata.data){
-      var allnums = '<div id="bb-footer"><p class="bb-allnums">å…± '+resdata.data+' æ¡</p></div>'
+    if (resdata.data) {
+      var allnums = '<div id="bb-footer"><p class="bb-allnums">总 ' + resdata.data + ' 条</p></div>';
       bbLoad.insertAdjacentHTML('afterend', allnums);
-    }
+    }    
   })
 }
 
@@ -146,7 +146,7 @@ function updateHTMl(data){
   resultAll = bbBefore + result + bbAfter
   bbDom.insertAdjacentHTML('beforeend', resultAll);
   fetchDB()
-  document.querySelector('button.button-load').textContent= 'åŠ è½½æ›´å¤š';
+  document.querySelector('button.button-load').textContent = '加载更多';
   //å›¾ç‰‡ç¯ç®±
   window.ViewImage && ViewImage.init('.datacont img')
   //ç›¸å¯¹æ—¶é—´
