@@ -24,7 +24,7 @@ var btn,
             "{margin-bottom:0.25rem;height:auto;min-height:24px;width:100%;white-space:pre-" +
             "wrap;overflow-wrap:break-word;font-size:1rem;line-height:1.8rem;}.memo-content" +
             "-text a.link{color:var(--post-link-color);}.memo-content-text a.link:hover{col" +
-            "or:var(--link-hover-color);}.memo-content-text .img{padding-top: 1rem !important;display:block;max-width:10" +
+            "or:var(--link-hover-color);}.img{padding-top:1rem !important;display:block;max-width:10" +
             "0%;cursor:pointer;border-radius:0.25rem;height:auto;vertical-align:middle;webk" +
             "it-user-select:none;-moz-user-select:none;user-select:none;background-color:tr" +
             "ansparent;outline:2px solid transparent;outline-offset:2px;-webkit-tap-highlig" +
