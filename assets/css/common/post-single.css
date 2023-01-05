@@ -244,7 +244,8 @@ h6:hover .anchor {
     margin: 0 3px;
     padding: 4px 5px;
     border-radius: 3px;
-    font-size: .95em;
+    font-size: .85em;
+    white-space: pre-wrap;
     font-family: var(--monospace);
 }
 .post-content pre code {
