@@ -4,11 +4,8 @@ layout: "memos"
 type: 'memos'
 --- 
 <meta name="referrer" content="no-referrer">
-<script type="text/javascript">
-    window.ViewImage && ViewImage.init('.content img');
-</script>
-
-<div class="memo-nums">
+<section id="main" class="container">
+    <div class="memo-nums">
         <p class="note note-info memo-nums-text">
             <hanla></hanla>共有
             <span id="memonums">「条等待加载」</span>
@@ -24,6 +21,7 @@ type: 'memos'
             domId: "#bber"
         }
     </script>
+</section>
 
 <script type="text/javascript">
     window.ViewImage && ViewImage.init('.content img');
@@ -31,4 +29,5 @@ type: 'memos'
 <script type="text/javascript" src="/memos/assets/js/view-image.min.js"></script>
 <script type="text/javascript" src="/memos/assets/js/bibi.js"></script>
 <script type="text/javascript" src="/memos/assets/js/marked.min.js"></script>
+<script type="text/javascript" src="/memos/assets/js/moment.twitter.js"></script>
 <script type="text/javascript" src="https://fastly.jsdelivr.net/gh/Tokinx/Lately/lately.min.js"></script>
