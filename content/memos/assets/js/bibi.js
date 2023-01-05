@@ -17,14 +17,14 @@ function loadCssCode(e) {
         .appendChild(t)
 }
 var btn,
-    allCSS = ".memo-container {position: relative;margin-bottom: var(--gap);padding: var(--gap);display: flex;width: 100%;flex-direction: column;align-items: flex-start;justify-content: flex-start;border-radius: var(--radius);border: 1px solid var(--border);background: var(--entry);-webkit-transform: perspective(1px) translateZ(0);transform: perspective(1px) translateZ(0);-webkit-transition-duration: 0.3s;transition-duration: 0.3s;-webkit-transition-property: box-shadow,transform;transition-property: box-shadow,transform;}.memo-container>.memo-header{margin-bottom:0.5rem;display:fle" +
+    allCSS = "img{padding-top:1rem;}.memo-container {position: relative;margin-bottom: var(--gap);padding: var(--gap);display: flex;width: 100%;flex-direction: column;align-items: flex-start;justify-content: flex-start;border-radius: var(--radius);border: 1px solid var(--border);background: var(--entry);-webkit-transform: perspective(1px) translateZ(0);transform: perspective(1px) translateZ(0);-webkit-transition-duration: 0.3s;transition-duration: 0.3s;-webkit-transition-property: box-shadow,transform;transition-property: box-shadow,transform;}.memo-container>.memo-header{margin-bottom:0.5rem;display:fle" +
             "x;width:100%;flex-direction:row;align-items:center;justify-content:flex-start;" +
             "font-size:.875rem;--tw-text-opacity:1;color:rgb(156 163 175 / var(--tw-text-op" +
             "acity));}.memo-content-text>p:last-child{margin-bottom:0;}.memo-content-text>p" +
             "{margin-bottom:0.25rem;height:auto;min-height:24px;width:100%;white-space:pre-" +
             "wrap;overflow-wrap:break-word;font-size:1rem;line-height:1.8rem;}.memo-content" +
             "-text a.link{color:var(--post-link-color);}.memo-content-text a.link:hover{col" +
-            "or:var(--link-hover-color);}.img{padding-top:1rem !important;display:block;max-width:10" +
+            "or:var(--link-hover-color);}.memo-content-text .img{padding-top:1rem !important;display:block;max-width:10" +
             "0%;cursor:pointer;border-radius:0.25rem;height:auto;vertical-align:middle;webk" +
             "it-user-select:none;-moz-user-select:none;user-select:none;background-color:tr" +
             "ansparent;outline:2px solid transparent;outline-offset:2px;-webkit-tap-highlig" +
