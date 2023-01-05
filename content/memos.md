@@ -5,12 +5,6 @@ type: 'memos'
 --- 
 <meta name="referrer" content="no-referrer">
 <link href="/memos/assets/css/highlight.github.min.css" rel="stylesheet" type="text/css">
-<!-- 检测页面代码并自动高亮 -->
-<script type="text/javascript">
-  window.onload = function() {
-    hljs.initHighlightingOnLoad();
-  };
-</script>
 
 <section id="main" class="container">
     <div class="memo-nums">
