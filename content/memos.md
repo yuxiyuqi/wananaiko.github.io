@@ -13,7 +13,7 @@ type: 'memos'
         domId: "#memos", //默认为 #memos
     };
 </script>
-<script src="https://wanaiko.design/content/memos/assets/js/bb-lmm-mk.js"></script>
+<script src="https://wananiko.design/content/memos/assets/js/bb-lmm-mk.js"></script>
 <script src="https://fastly.jsdelivr.net/npm/marked/marked.min.js"></script>
 <script src="https://fastly.jsdelivr.net/gh/Tokinx/ViewImage/view-image.min.js"></script>
 <script src="https://fastly.jsdelivr.net/gh/Tokinx/Lately/lately.min.js"></script>
