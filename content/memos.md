@@ -21,7 +21,7 @@ type: 'memos'
         }
     </script>
 
-<script>
+<script type="text/javascript">
     window.ViewImage && ViewImage.init('.content img');
 </script>
 
