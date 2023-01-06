@@ -24,7 +24,7 @@ ShowReadingTime = true
 ShowWordCount = true
 displayFullLangName = true
 ShowPostNavLinks = true
-ShowBreadCrumbs = true
+ShowBreadCrumbs = false
 ShowCodeCopyButtons = true
 ShowToc = true
 TocOpen = true
@@ -114,7 +114,7 @@ weight = 10
 
 [[languages.en.menu.main]]
 name = "@Author"
-url = "https://reorx.com"
+url = "https://wananaiko.com"
 
   [languages.en.menu.main.params]
   external = true
@@ -162,7 +162,7 @@ weight = 10
 
 [[languages.zh.menu.main]]
 name = "@作者"
-url = "https://reorx.com"
+url = "https://wananaiko.com"
 
   [languages.zh.menu.main.params]
   external = true
