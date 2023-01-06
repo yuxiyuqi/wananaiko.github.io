@@ -73,10 +73,12 @@
     color: var(--primary);
     box-shadow: var(--link-underline-shadow);
     transition: var(--link-transition);
+    padding-bottom: 2px;
 }
 .post-content a:hover {
     color: var(--link-hover-color);
     box-shadow: var(--link-hover-underline-shadow);
+    padding-bottom: 2px;
 }
 .post-content a.anchor:hover {
     color: var(--primary);
