@@ -73,11 +73,7 @@ const locale = {
     });
     
   </script>
-
-  <script type="text/javascript">
-    const reactionVotes = document.querySelector('.reaction-votes');
-if (reactionVotes.textContent === '0') {
-  reactionVotes.style.display = 'none';
-}
-  </script> 
+  
+  <div class="reaction-votes" ng-if="reactionVotes !== 0">{{ reactionVotes }}</div>
+  
 </body>
