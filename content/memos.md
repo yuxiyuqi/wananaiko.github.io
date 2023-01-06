@@ -5,6 +5,7 @@ type: 'memos'
 --- 
 <meta name="referrer" content="no-referrer">
 <link href="/memos/assets/css/highlight.github.min.css" rel="stylesheet" type="text/css">
+<link href="/memos/assets/css/APlayer.min.css" rel="stylesheet" type="text/css">
 
 <section id="main" class="container">
     <div class="memo-nums">
@@ -41,6 +42,7 @@ type: 'memos'
 
 <script type="text/javascript" src="/memos/assets/js/view-image.min.js"></script>
 <script type="text/javascript" src="/memos/assets/js/bibi.js"></script>
+<script type="text/javascript" src="/memos/assets/js/APlayer.min.js"></script>
 <script type="text/javascript" src="/memos/assets/js/marked.min.js"></script>
 <script type="text/javascript" src="/memos/assets/js/highlight.min.js"></script>
 <script type="text/javascript" src="https://fastly.jsdelivr.net/gh/Tokinx/Lately/lately.min.js"></script>
