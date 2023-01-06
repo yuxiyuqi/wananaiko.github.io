@@ -31,7 +31,21 @@ TocOpen = true
 TocSide = "right"
 EnableInstantClick = false
 EnableImageZoom = true
-comments = true
+
+[params.commentSystems.disqus]
+shortname = "reorx"
+
+[params.commentSystems.remark42]
+url = "https://remark42.reorx.com"
+site = "reorx.github.io"
+
+[params.commentSystems.telegramWidget]
+channel = "reorx_share"
+accentColor = "9077e1"
+limit = 20
+
+  [params.defaultCommentSystems]
+  remark42 = true
 
   [params.profileMode]
   enabled = false
@@ -191,3 +205,17 @@ disableInlineCSS = true
 
 [services.twitter]
 disableInlineCSS = true
+
+[waline]
+serverURL = "https://chat.wananaiko.design/"
+lang = "zh-CN"
+visitor = true
+emoji = [
+  "https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/tieba",
+  "https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/weibo"
+]
+requiredMeta = [ "name", "email", "url" ]
+
+  [waline.locale]
+  admin = "博主"
+
