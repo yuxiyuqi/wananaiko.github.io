@@ -249,6 +249,3 @@ bbDom && (
 );
 // Images lightbox
 window.ViewImage && ViewImage.init('.container img');
-
-//相对时间
-  window.Lately && Lately.init({ target: '.datatime' });
