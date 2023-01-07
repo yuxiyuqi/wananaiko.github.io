@@ -49,7 +49,7 @@ draft: false
 
 **~~IconChamp~~**：macOS 上换图标和主题的工具，因为喜欢软件图标风格统一，把所有图标都换成了方形的，有点强迫症了。建议购买授权，软件升级后，图标可以自动更新为之前已经替换过的。
 
-**IconChanger**：现在改用这个图标替换工具，在软件里直接拉取 https://macosicons.com/ 站点的图标并直接替换，效率更高了，并且 IconChamp 有一些 Bug，图标经常会无法替换。
+**IconChanger**：现在改用这个图标替换工具，在软件里直接拉取 https://macosicons.com/ 站点的图标并直接替换，效率更高了，并且 IconChamp 有一些 Bug，图标经常会无法替换。[下载软件](https://github.com/underthestars-zhy/IconChanger)
 
 **Dynamischer Wallpaper – Kontur**：只是一套非常喜欢的动态壁纸，会随着时间变化而变化，共 8 张，[这里购买](https://kram.store/products/dynamischer-wallpaper-kontur)。
 
