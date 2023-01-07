@@ -40,11 +40,11 @@ comments = true
   imageTitle = "my image"
 
   [params.homeInfoParams]
-  Title = "exPM, now UI/UX, currently learning FED."
+  Title = "exPM, now UI/UX, currently learning Frontend."
   Content = """
 <mark>Welcome to my blog!</mark>
 
- This is a platform for sharing knowledge about design, front-end, practical tools, daily learning and research. 
+ This is a platform for sharing knowledge about design, frontend, practical tools, daily learning and research. 
 
  Here you can find the latest trend information, technical articles, as well as experiences and skills shared by me and other industry experts. 
 
