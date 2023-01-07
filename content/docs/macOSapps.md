@@ -1,6 +1,7 @@
 ---
 title: "常用的macOS应用整理"
 date: 2023-01-07T20:14:36+08:00
+author: wananaiko
 draft: false
 ---
 
