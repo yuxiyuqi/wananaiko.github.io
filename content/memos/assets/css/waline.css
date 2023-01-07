@@ -23,7 +23,7 @@
 	--waline-info-font-size: 0.625em;
 	--waline-border: 1px solid var(--waline-border-color);
 	--waline-avatar-radius: 50%;
-	--waline-theme-color-alpha: 0.15;
+	--waline-tag-color: #876fd615;
 	--waline-box-shadow: none
 	
 }[data-waline] {
@@ -693,7 +693,7 @@
     border-radius: 4px;
     color: var( --waline-theme-color);
     font-size: var(--waline-badge-font-size);
-    background-color: rgba(var(--waline-theme-color), var(--waline-theme-color-alpha));
+    background-color: var(--waline-tag-color);
 }
 
 .wl-card .wl-time {
