@@ -35,21 +35,27 @@ draft: false
 
 **Rime 输入法**：一直在用的输入法工具，定制化输入法，我自己是觉得很好用的。推荐结合 1 个设置和 1 个词库，一起使用。主要配置文件推荐这个：[ssnhd 的配置](https://github.com/ssnhd/rime)，再结合这里的 [Dict 词库文件](https://github.com/wongdean/rime-settings)。[官网下载](https://rime.im/)。
 
-------
-
-## 看的舒心
-
 **Bartender**：菜单栏图标管理工具，只把最重要的工具性图标放在主视图。Setapp 内下载。
 
 **柠檬清理**，卸载 App 和查找大型文件比较省心。
 
-**IconChamp**：macOS 上换图标和主题的工具，因为喜欢软件图标风格统一，把所有图标都换成了方形的，有点强迫症了。建议购买授权，软件升级后，图标可以自动更新为之前已经替换过的。
+**uPic**：目前正在使用的图床工具。
+
+**Typora**：目前正在使用的Markdown编辑器。
+
+------
+
+## 系统美化
+
+**~~IconChamp~~**：macOS 上换图标和主题的工具，因为喜欢软件图标风格统一，把所有图标都换成了方形的，有点强迫症了。建议购买授权，软件升级后，图标可以自动更新为之前已经替换过的。
+
+**IconChanger**：现在改用这个图标替换工具，在软件里直接拉取 https://macosicons.com/ 站点的图标并直接替换，效率更高了，并且 IconChamp 有一些 Bug，图标经常会无法替换。
 
 **Dynamischer Wallpaper – Kontur**：只是一套非常喜欢的动态壁纸，会随着时间变化而变化，共 8 张，[这里购买](https://kram.store/products/dynamischer-wallpaper-kontur)。
 
 ------
 
-## 个人规划
+## 工作规划
 
 **Noteplan**：目前主要用来作为知识管理工具，也可以结合日程制定一些计划。Setapp 内下载。
 
