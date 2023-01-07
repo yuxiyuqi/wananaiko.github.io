@@ -13,13 +13,26 @@
       serverURL: 'https://chat.wananaiko.design',
       dark: 'body.dark',
       copyright: false,
-      reactionTitle: '你觉得这篇文章怎么样？',
+      
     // 设置 emoji 为微博与哔哩哔哩
     emoji: [
       '//cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/tieba',
       '//cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/bilibili',
     ],
     });
+
+    Waline.init({
+  locale: {
+    anonymous: '匿名',
+    level0: '潜水',
+    level1: '冒泡',
+    level2: '吐槽',
+    level3: '活跃',
+    level4: '话痨',
+    level5: '传说',
+    reactionTitle: '你觉得这篇文章怎么样？',
+  },
+});
     
   </script>
   
