@@ -23,7 +23,9 @@
 	--waline-info-font-size: 0.625em;
 	--waline-border: 1px solid var(--waline-border-color);
 	--waline-avatar-radius: 50%;
+	--waline-theme-color-alpha: 0.15;
 	--waline-box-shadow: none
+	
 }[data-waline] {
 	font-size: var(--waline-font-size);
 	text-align: start
@@ -687,11 +689,11 @@
     display: inline-block;
     margin-inline-end: 1em;
     padding: 0 .3em;
-    border: 1px solid var(--waline-badge-color);
+    /* border: 1px solid var(--waline-badge-color); */
     border-radius: 4px;
     color: var( --waline-theme-color);
     font-size: var(--waline-badge-font-size);
-    background-color: rgba(var(--waline-theme-color), 0.15);
+    background-color: rgba(var(--waline-theme-color), var(--waline-theme-color-alpha));
 }
 
 .wl-card .wl-time {
