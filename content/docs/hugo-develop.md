@@ -14,7 +14,7 @@ draft: false
 
 在 Hugo的 /layouts/_default/baseof.html 内增加以下代码：
 
-```javascript
+```html
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pangu/4.0.7/pangu.min.js"></script>
 <script>
   pangu.spacingPage();
