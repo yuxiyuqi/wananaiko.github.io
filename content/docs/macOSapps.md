@@ -2,6 +2,7 @@
 title: "常用的macOS软件整理"
 date: 2023-01-07T20:14:36+08:00
 author: "wananaiko"
+Tag: 
   - macOS
 draft: false
 ---
