@@ -1,6 +1,6 @@
 baseURL = "https://wananaiko.design/"
 title = "wananaiko"
-paginate = 5
+paginate = 10
 theme = "PaperModX"
 enableInlineShortcodes = true
 enableRobotsTXT = true
