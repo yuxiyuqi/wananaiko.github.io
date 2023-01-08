@@ -35,6 +35,8 @@ draft: false
 
 没有什么意义的效果，纯属好玩，不代表 LGBT。
 
+在 Hugo 的 /layouts/_default/baseof.html 内增加以下代码：
+
 ```html
 <!-- 增加鼠标滑动时的彩虹效果 -->
 <script async src="/memos/assets/js/browser.js"></script>
