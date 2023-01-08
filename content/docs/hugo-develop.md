@@ -33,6 +33,8 @@ draft: false
 
 **增加鼠标滑动时的彩虹效果**
 
+没有什么意义的效果，纯属好玩，不代表 LGBT。
+
 ```html
 <!-- 增加鼠标滑动时的彩虹效果 -->
 <script async src="/memos/assets/js/browser.js"></script>
