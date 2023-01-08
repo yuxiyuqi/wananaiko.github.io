@@ -32,6 +32,8 @@ TocSide = "right"
 EnableInstantClick = false
 EnableImageZoom = true
 comments = true
+languageCode = "zh"
+defaultContentLanguage = "zh"
 
   [params.profileMode]
   enabled = false
