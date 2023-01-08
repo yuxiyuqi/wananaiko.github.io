@@ -16,12 +16,6 @@ type: 'memos'
 };
 </script>
 
-<!-- 中文排版优化增加空格之神 -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/pangu/4.0.7/pangu.min.js"></script>
-<script>
-  pangu.spacingPage();
-</script>
-
 <!-- memos内容区域 -->
 <section id="main" class="container">
     <div class="memo-nums">
@@ -40,6 +34,13 @@ type: 'memos'
             domId: "#bber"
         }
     </script>
+
+    <!-- 中文排版优化增加空格之神 -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pangu/4.0.7/pangu.min.js"></script>
+<script>
+  pangu.spacingPage();
+</script>
+
 </section>
 
 <script type="text/javascript">
