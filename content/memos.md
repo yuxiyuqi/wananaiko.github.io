@@ -5,6 +5,24 @@ type: 'memos'
 --- 
 <meta name="referrer" content="no-referrer">
 <script type="text/javascript" src="/memos/assets/js/marked.min.js"></script>
+
+<!-- 设置memos部分的所有链接在新标签页打开 -->
+<script type="text/javascript">
+    window.onload = function() {
+  var links = document.querySelectorAll("#bber a");
+  for (var i = 0; i < links.length; i++) {
+    links[i].target = "_blank";
+  }
+};
+</script>
+
+<!-- 中文排版优化增加空格之神 -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pangu/4.0.7/pangu.min.js"></script>
+<script>
+  pangu.spacingPage();
+</script>
+
+<!-- memos内容区域 -->
 <section id="main" class="container">
     <div class="memo-nums">
         <p class="note note-info memo-nums-text">
@@ -26,16 +44,6 @@ type: 'memos'
 
 <script type="text/javascript">
     window.ViewImage && ViewImage.init('.content img');
-</script>
-
-<!-- 设置memos部分的所有链接在新标签页打开 -->
-<script type="text/javascript">
-    window.onload = function() {
-  var links = document.querySelectorAll("#bber a");
-  for (var i = 0; i < links.length; i++) {
-    links[i].target = "_blank";
-  }
-};
 </script>
 
 <script type="text/javascript" src="/memos/assets/js/view-image.min.js"></script>
