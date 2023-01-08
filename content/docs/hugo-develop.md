@@ -8,7 +8,7 @@ tags:
 draft: false
 ---
 
-**增加空格之神**
+## 增加空格之神
 
 使用空格之神的浏览器插件很久了，真的是阅读强迫症患者的福音，[空格之神项目地址](https://github.com/vinta/pangu.js)
 
@@ -25,13 +25,13 @@ draft: false
 
 ---
 
-**使用 Waline 评论系统**
+## 使用 Waline 评论系统
 
 依照官网的教程，[部署到 Vercel上](https://waline.js.org/guide/deploy/vercel.html)，适配了 Hugo 的暗黑模式。
 
 ---
 
-**增加鼠标滑动时的彩虹效果**
+## 增加鼠标滑动时的彩虹效果
 
 没有什么意义的效果，纯属好玩，不代表 LGBT。
 
