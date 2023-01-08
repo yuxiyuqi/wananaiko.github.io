@@ -36,7 +36,7 @@ draft: false
 ```html
 <!-- 增加鼠标滑动时的彩虹效果 -->
 <script async src="/memos/assets/js/browser.js"></script>
-<script>window.addEventListener('load',(event)=>{new cursoreffects.rainbowCursor();});</script><style>:root{--waline-tag-color}</style>
+<script>window.addEventListener('load',(event)=>{new cursoreffects.rainbowCursor();});</script>
 ```
 
 
