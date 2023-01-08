@@ -12,7 +12,7 @@ enableEmoji = true
 [params]
 env = "production"
 description = "Theme PaperModX - https://github.com/reorx/hugo-PaperModX"
-author = [ "Reorx" ]
+author = [ "wananaiko" ]
 mainSections = [ "docs", "posts" ]
 disableAnchoredHeadings = true
 images = [ "cover.png" ]
