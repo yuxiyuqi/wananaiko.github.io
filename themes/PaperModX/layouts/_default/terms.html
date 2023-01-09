@@ -1,18 +1,27 @@
-{{ define "main" }}
+{{- define "main" }}
 
-<div class="terms">
+{{- if .Title }}
+<header class="page-header">
     <h1>{{ .Title }}</h1>
-    <ul class="terms__list">
-        {{ $type := .Type }} {{ range $key, $value := .Data.Terms.Alphabetical
-        }} {{ $name := .Name }} {{ $count := .Count }} {{ with $.Site.GetPage
-        (printf "/%s/%s" $type $name) }}
-        <li class="terms__term">
-            <a href="{{ .Permalink }}"
-                >#{{ .Name }}
-                <span class="terms__term-count">{{ $count }}</span></a
-            >
-        </li>
-        {{ end }} {{ end }}
-    </ul>
-</div>
-{{ end }}
+    {{- if .Description }}
+    <div class="post-description">
+        {{ .Description }}
+    </div>
+    {{- end }}
+</header>
+{{- end }}
+
+<ul class="terms-tags">
+    {{- $type := .Type }}
+    {{- range $key, $value := .Data.Terms.Alphabetical }}
+    {{- $name := .Name }}
+    {{- $count := .Count }}
+    {{- with site.GetPage (printf "/%s" $type $name) }}
+    <li>
+        <a href="{{ .Permalink }}">{{ .Name }} <sup><strong><sup>{{ $count }}</sup></strong></sup> </a>
+    </li>
+    {{- end }}
+    {{- end }}
+</ul>
+
+{{- end }}{{/* end main */ -}}
