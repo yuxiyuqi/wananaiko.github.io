@@ -8,6 +8,18 @@ type: 'memos'
 
 <!-- 增加卡片滑动时的放大效果 -->
 <style>
+.timeline img {
+    display: block;
+    max-height: 40vh;
+    max-width: 100%;
+    margin: 10px 0;
+    border-radius: 16px;
+    border: 1px solid var(--color-img-border);
+}
+.memo-container img {
+    padding-top: 1rem;
+    max-height: 40vh !important;
+}
 .memo-container{
     transition: .4s !important;
 }
