@@ -50,3 +50,11 @@ draft: false
 - [ ] 给Hugo增加相册功能和单页
 
 参考：[添加相册功能](https://baohengtao.com/tech/add-gallery-to-hugo/)
+
+---
+
+{{< gallery >}}
+  {{< figure src="https://images.wananaiko.com/2023/01/blqBjF.png" thumb="-small" >}}
+  {{< figure src="https://images.wananaiko.com/2023/01/yC0zvP.jpg" thumb="-small" >}}
+  {{< figure src="https://images.wananaiko.com/2023/01/aPysTC.jpg" thumb="-small" >}}
+{{< /gallery >}}
