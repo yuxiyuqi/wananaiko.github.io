@@ -3,7 +3,7 @@ title: "tags"
 layout: "terms"
 type: 'tags'
 --- 
-{{- define "tags" -}}
+{{- define "main" -}}
 
 {{- if .Title }}
 <header class="page-header">
