@@ -73,12 +73,10 @@
     color: var(--primary);
     box-shadow: var(--link-underline-shadow);
     transition: var(--link-transition);
-    padding-bottom: 2px;
 }
 .post-content a:hover {
     color: var(--link-hover-color);
     box-shadow: var(--link-hover-underline-shadow);
-    padding-bottom: 2px;
 }
 .post-content a.anchor:hover {
     color: var(--primary);
@@ -246,8 +244,7 @@ h6:hover .anchor {
     margin: 0 3px;
     padding: 4px 5px;
     border-radius: 3px;
-    font-size: .85em;
-    white-space: pre-wrap;
+    font-size: .95em;
     font-family: var(--monospace);
 }
 .post-content pre code {
@@ -408,7 +405,7 @@ h6:hover .anchor {
 .post-footer {
     margin-top: calc(var(--content-gap) * 1.5);
     padding-bottom: calc(var(--content-gap) * 2);
-    border-bottom: 1px solid var(--border);
+    border-bottom: 3px solid var(--tertiary);
 }
 
 .share-buttons {
