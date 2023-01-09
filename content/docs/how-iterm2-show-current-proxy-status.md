@@ -13,7 +13,7 @@ Tag:
 
 ```hljs
 export proxy_host=127.0.0.1
-export proxy_port=1080//自定义梯子端口
+export proxy_port=8888//自定义梯子端口
 export switch_proxy=0
 export cdc_in=0
  

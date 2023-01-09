@@ -8,6 +8,7 @@ buildDrafts = false
 buildFuture = false
 buildExpired = false
 enableEmoji = true
+languageCode = 'zh'
 
 [params]
 env = "production"
@@ -79,8 +80,8 @@ url = "/docs/"
 weight = 1
 
 [[languages.en.menu.main]]
-name = "Newsletter"
-url = "/newsletter/"
+name = "Tags"
+url = "/tags/"
 weight = 4
 
 [[languages.en.menu.main]]
