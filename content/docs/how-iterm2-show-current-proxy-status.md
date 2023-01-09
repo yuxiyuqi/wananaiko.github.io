@@ -1,6 +1,6 @@
 ---
 title: "让 ITERM2 实时显示梯子状态"
-date: 2023-01-08T23:04:09+08:00
+date: 2023-01-08
 draft: false
 author: "wananaiko"
 Tag: 
