@@ -1,3 +1,8 @@
+---
+title: "tags"
+layout: "terms"
+type: 'tags'
+--- 
 {{- define "tags" -}}
 
 {{- if .Title }}
