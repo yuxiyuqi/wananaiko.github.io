@@ -20,7 +20,7 @@
 	--waline-badge-font-size: 0.75em;
 	--waline-info-bgcolor: #f8f8f8;
 	--waline-info-color: #999;
-	--waline-info-font-size: 0.625em;
+	--waline-info-font-size: 0.85em;
 	--waline-border: 1px solid var(--waline-border-color);
 	--waline-avatar-radius: 50%;
 	--waline-tag-color: #876fd625;
@@ -259,7 +259,7 @@
 	width: 0;
 	padding: .5em;
 	background: rgba(0,0,0,0);
-	font-size: .625em;
+	font-size: .85em !important;
 	resize: none
 }
 
