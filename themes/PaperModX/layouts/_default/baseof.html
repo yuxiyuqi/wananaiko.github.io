@@ -20,6 +20,16 @@
     </main>
     {{ partial "footer.html" . -}}
     {{- block "body_end" . }}{{ end }}
+
+<!-- 中文排版优化增加空格之神 -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pangu/4.0.7/pangu.min.js"></script>
+<script>
+  pangu.spacingPage();
+</script>
+<!-- 增加鼠标滑动时的彩虹效果 -->
+<script async src="/memos/assets/js/browser.js"></script>
+<script>window.addEventListener('load',(event)=>{new cursoreffects.rainbowCursor();});</script>
+
 </body>
 
 </html>
