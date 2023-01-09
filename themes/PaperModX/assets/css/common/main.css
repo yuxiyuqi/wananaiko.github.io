@@ -160,8 +160,6 @@ mark {
 
 code {
     direction: ltr;
-    font-size: 1rem;
-    white-space: pre-wrap;
 }
 
 div.highlight,
