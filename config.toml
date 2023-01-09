@@ -9,6 +9,10 @@ buildFuture = false
 buildExpired = false
 enableEmoji = true
 
+[permalinks]
+  posts = "/:slug/" # Don't miss the last slash: "/"
+  tags = "/tags/:slug/" # Don't miss the last slash: "/"
+  
 [params]
 env = "production"
 description = "Theme PaperModX - https://github.com/reorx/hugo-PaperModX"
