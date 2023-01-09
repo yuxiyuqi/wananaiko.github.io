@@ -177,6 +177,11 @@ blockquote {
     width: 100%;
 }
 
+.memo-container:hover {
+    /* opacity: 1; */
+    transform: scale(1.02) !important;
+}
+
 .memos__content:before {
     content: '';
     position: absolute;
