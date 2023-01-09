@@ -9,15 +9,7 @@
     background: var(--entry);
     border-radius: var(--radius);
     border: 1px solid var(--border);
-    transition: .4s;
 }
-
-.post-entry:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 4px 12px #0c1f500a;
-    transition: .4s;
-}
-
 .post-entry:hover .entry-header h2 {
     color: var(--link-hover-color);
     box-shadow: var(--link-hover-underline-shadow);

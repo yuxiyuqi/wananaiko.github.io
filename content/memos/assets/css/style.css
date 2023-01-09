@@ -169,16 +169,6 @@ blockquote {
     padding-left: 0 !important;
 }
 
-/* .memo-container{
-    transition: .4s !important;
-}
-
-.memo-container:hover{
-    transform: translateY(-4px) !important;
-    box-shadow: 0 4px 12px #0c1f500a !important;
-    transition: .4s !important;
-} */
-
 .memos__content {
     flex-grow: 1;
     /* margin-left: 50px; */
@@ -286,11 +276,6 @@ blockquote {
     font-size: 0.8rem;
     font-weight: 500;
     color: #8186a2;
-}
-
-.memo-container img {
-    padding-top: 1rem;
-    max-height: 40vh !important;
 }
 
 .memos__userinfo {
