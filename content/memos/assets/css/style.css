@@ -169,17 +169,22 @@ blockquote {
     padding-left: 0 !important;
 }
 
+.memo-container{
+    transition: .4s !important;
+}
+
+.memo-container:hover{
+    transform: translateY(-4px) !important;
+    box-shadow: 0 4px 12px #0c1f500a !important;
+    transition: .4s !important;
+}
+
 .memos__content {
     flex-grow: 1;
     /* margin-left: 50px; */
     position: relative;
     max-width: 100%;
     width: 100%;
-}
-
-.memo-container:hover {
-    /* opacity: 1; */
-    transform: scale(1.02) !important;
 }
 
 .memos__content:before {
