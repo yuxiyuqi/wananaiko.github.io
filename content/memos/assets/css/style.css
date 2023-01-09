@@ -169,7 +169,7 @@ blockquote {
     padding-left: 0 !important;
 }
 
-.memo-container{
+/* .memo-container{
     transition: .4s !important;
 }
 
@@ -177,7 +177,7 @@ blockquote {
     transform: translateY(-4px) !important;
     box-shadow: 0 4px 12px #0c1f500a !important;
     transition: .4s !important;
-}
+} */
 
 .memos__content {
     flex-grow: 1;

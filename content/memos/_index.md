@@ -20,14 +20,14 @@ type: 'memos'
     padding-top: 1rem;
     max-height: 40vh !important;
 }
-.memo-container{
+/* .memo-container{
     transition: .4s !important;
 }
 .memo-container:hover{
     transform: translateY(-4px) !important;
     box-shadow: 0 4px 12px #0c1f500a !important;
     transition: .4s !important;
-}
+} */
 </style>
 
 <!-- 设置memos部分的所有链接在新标签页打开 -->
