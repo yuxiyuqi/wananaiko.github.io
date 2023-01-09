@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="{{ .Params.language | default .Language.Lang }}" dir="{{ .Language.LanguageDirection | default "auto" }}">
+
+<head>
+    {{- partial "head.html" . }}
+    {{- block "head" . }}{{ end }}
+</head>
+
+<body class="
+{{- if (or (ne .Kind `page` ) (eq .Layout `memos`) (eq .Layout `archives`) (eq .Layout `search`)) -}}
+{{- print "list-page" -}}
+{{- end -}}
+{{- if eq site.Params.defaultTheme `dark` -}}
+{{- print " dark" }}
+{{- end }} type-{{ .Type }} kind-{{ .Kind }} layout-{{ .Layout -}}
+" id="top">
+    {{- partialCached "header.html" . .Page -}}
+    <main class="main {{- if (eq .Kind `page`) -}}{{- print " post" -}}{{- end -}}">
+        {{- block "main" . }}{{ end }}
+    </main>
+    {{ partial "footer.html" . -}}
+    {{- block "body_end" . }}{{ end }}
+
+<!-- 中文排版优化增加空格之神 -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pangu/4.0.7/pangu.min.js"></script>
+<script>
+  pangu.spacingPage();
+</script>
+
+<!-- 增加鼠标滑动时的彩虹效果 -->
+<script async src="/memos/assets/js/browser.js"></script>
+<script>window.addEventListener('load',(event)=>{new cursoreffects.rainbowCursor();});</script>
+
+</body>
+</html>
