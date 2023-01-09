@@ -5,12 +5,12 @@
   <!-- ... -->
   <div id="waline"></div>
   <script type="module">
-    import { init } from 'https://unpkg.com/@waline/client@v2/dist/waline.mjs';
+    import { init } from '/memos/assets/js/waline.mjs';
 
     init({
       el: '#waline',
       lang: 'zh-CN',
-      reaction: true, // 开启反应
+      reaction: false, // 开启反应
       serverURL: 'https://chat.wananaiko.design',
       dark: 'body.dark',
       copyright: false,
