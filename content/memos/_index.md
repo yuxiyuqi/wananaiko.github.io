@@ -6,6 +6,18 @@ type: 'memos'
 <meta name="referrer" content="no-referrer">
 <script type="text/javascript" src="/memos/assets/js/marked.min.js"></script>
 
+<!-- 增加卡片滑动时的放大效果 -->
+<style>
+.memo-container{
+    transition: .4s !important;
+}
+.memo-container:hover{
+    transform: translateY(-4px) !important;
+    box-shadow: 0 4px 12px #0c1f500a !important;
+    transition: .4s !important;
+}
+</style>
+
 <!-- 设置memos部分的所有链接在新标签页打开 -->
 <script type="text/javascript">
     window.onload = function() {
