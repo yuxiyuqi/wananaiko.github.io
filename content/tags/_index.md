@@ -3,7 +3,7 @@ title: "tags"
 layout: "terms"
 type: 'tags'
 --- 
-{{- define "main" -}}
+{{- define "main" }}
 
 {{- if .Title }}
 <header class="page-header">
@@ -16,4 +16,17 @@ type: 'tags'
 </header>
 {{- end }}
 
-{{- end }}
+<ul class="terms-tags">
+    {{- $type := .Type }}
+    {{- range $key, $value := .Data.Terms.Alphabetical }}
+    {{- $name := .Name }}
+    {{- $count := .Count }}
+    {{- with site.GetPage (printf "/%s/%s" $type $name) }}
+    <li>
+        <a href="{{ .Permalink }}">{{ .Name }} <sup><strong><sup>{{ $count }}</sup></strong></sup> </a>
+    </li>
+    {{- end }}
+    {{- end }}
+</ul>
+
+{{- end }}{{/* end main */ -}}
