@@ -288,6 +288,11 @@ blockquote {
     color: #8186a2;
 }
 
+.memo-container img {
+    padding-top: 1rem;
+    max-height: 30vh !important;
+}
+
 .memos__userinfo {
     display: flex;
     font-weight: 700;
