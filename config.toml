@@ -8,8 +8,6 @@ buildDrafts = false
 buildFuture = false
 buildExpired = false
 enableEmoji = true
-defaultContentLanguage = "zh"
-defaultContentLanguageInSubdir = true
 
 [params]
 env = "production"
