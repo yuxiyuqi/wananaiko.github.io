@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  <url>
-    <loc>https://examplesite.com/categories/</loc>
-  </url><url>
-    <loc>https://examplesite.com/</loc>
-  </url><url>
-    <loc>https://examplesite.com/tags/</loc>
-  </url>
-</urlset>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <sitemap>
+    <loc>https://wananaiko.design/en/sitemap.xml</loc>
+    
+      <lastmod>2023-01-09T00:24:18+08:00</lastmod>
+    
+  </sitemap>
+  
+  <sitemap>
+    <loc>https://wananaiko.design/zh/sitemap.xml</loc>
+    
+      <lastmod>2022-04-12T23:37:00+08:00</lastmod>
+    
+  </sitemap>
+  
+</sitemapindex>

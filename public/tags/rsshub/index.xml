@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>RSSHub on wananaiko</title>
+    <link>https://wananaiko.design/tags/rsshub/</link>
+    <description>Recent content in RSSHub on wananaiko</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Tue, 20 Dec 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://wananaiko.design/tags/rsshub/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>基于 Vercel 和 Fly.io 免费部署的应用</title>
+      <link>https://wananaiko.design/docs/dec1220/</link>
+      <pubDate>Tue, 20 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://wananaiko.design/docs/dec1220/</guid>
+      <description>Hugo 部署到 Vercel 最近考虑把 Wordpress 博客换到 Hugo，一番折腾之后，通过 Github+Vercel 的方式实现了自动部署，还挺方便的，以后只需要在本地编写 Markdown 文件并发布到 Github 就可以了。以 macOS 下为例：
+登陆 GitHub，新建一个 GitHub pages，名为 username.github.io。
+使用 GitHub 登陆 Vercel，Import 刚才新建的 pages。
+Vercel 里的 Project Name 随便写，Build &amp;amp; Development Settings 选择 Hugo，Hugo 的 Version 填写最新的版本号，其他默认，最后提交。
+把 Github pages 仓库克隆到本地，比如我这里为：/Users/aiko/wananaiko.github.io，终端里打开该目录后。输入 Hugo server 验证是否可以正常启动。
+如果你想要安装和本站一样的主题，可以参考这篇文章：Installation | Update | PaperModX 其他参考文章：
+hugo自动部署到vercel
+如何使用 Hugo 进行个人博客搭建
+将 Memos 作为单页添加到 Hugo 中 方法参考了文章 向Hugo中添加静态单页面Static-Single
+建议将 config.toml 里的 EnableInstantClick设置为 false，避免 memos 内容偶尔出现不加载的情况。</description>
+      <content:encoded><![CDATA[<h2 id="hugo-部署到-vercel">Hugo 部署到 Vercel</h2>
+<p>最近考虑把 Wordpress 博客换到 Hugo，一番折腾之后，通过 Github+Vercel 的方式实现了自动部署，还挺方便的，以后只需要在本地编写 Markdown 文件并发布到 Github 就可以了。以 macOS 下为例：</p>
+<ol>
+<li>
+<p>登陆 GitHub，新建一个 GitHub pages，名为 username.github.io。</p>
+</li>
+<li>
+<p>使用 GitHub 登陆 Vercel，Import 刚才新建的 pages。</p>
+</li>
+<li>
+<p>Vercel 里的 Project Name 随便写，Build &amp; Development Settings 选择 Hugo，Hugo 的 Version 填写最新的版本号，其他默认，最后提交。</p>
+</li>
+<li>
+<p>把 Github pages 仓库克隆到本地，比如我这里为：/Users/aiko/wananaiko.github.io，终端里打开该目录后。输入 <code>Hugo server</code> 验证是否可以正常启动。</p>
+</li>
+<li>
+<p>如果你想要安装和本站一样的主题，可以参考这篇文章：<a href="https://reorx.github.io/hugo-PaperModX/docs/installation/">Installation | Update | PaperModX </a></p>
+</li>
+</ol>
+<p>其他参考文章：</p>
+<p><a href="https://www.leftpocket.cn/post/hugo/hugo_vercel/">hugo自动部署到vercel</a></p>
+<p><a href="https://humble-blog.vercel.app/hugo/#comments">如何使用 Hugo 进行个人博客搭建</a></p>
+<h3 id="将-memos-作为单页添加到-hugo-中">将 Memos 作为单页添加到 Hugo 中</h3>
+<p>方法参考了文章 <a href="https://blog.csdn.net/qq_29102545/article/details/121454974">向Hugo中添加静态单页面Static-Single</a></p>
+<p>建议将 config.toml 里的 EnableInstantClick设置为 false，避免 memos 内容偶尔出现不加载的情况。</p>
+<pre tabindex="0"><code>params:
+  EnableInstantClick: false
+</code></pre><p><a href="https://wananaiko.design/memos/">memos | wananaiko</a> 页面样式来自 <a href="https://github.com/eallion/memos.top">eallion/memos.top</a></p>
+<p>在折腾的过程中，你需要用到 <a href="https://transform.tools/yaml-to-toml">YAML to TOML 在线转换</a></p>
+<hr>
+<h2 id="umami-部署到-vercel">Umami 部署到 Vercel</h2>
+<p>将网站统计分析工具 Umami 部署到 Vercel 上。之前体验过 <a href="https://plausible.io/">Plausible Analytics</a>，试用结束之后就放弃了，个人小站，暂时觉得还没有必要为统计工具付费。缺点是查看面板数据感觉加载有点慢，不过数据还算可靠，又不是不能用。</p>
+<p>参考文章：<a href="https://digu.plus/post/8034746f42b3495fbb19926e3fb8ec4f/">部署独立统计分析服务Umami</a></p>
+<hr>
+<h2 id="rsshub-部署到-vercel">RSSHub 部署到 Vercel</h2>
+<p><a href="https://docs.rsshub.app/install/#bu-shu-dao-vercel-zeit-now">可以一键部署到 Vercel</a>，也是为了配合 Reeder 使用。</p>
+<hr>
+<h2 id="memos-部署到-flyio">memos 部署到 fly.io</h2>
+<p>参考文章：<a href="https://github.com/hu3rror/memos-on-fly/">hu3rror/memos-on-fly: ✍️</a></p>
+<p>感谢  <mark>hu3rror</mark>   帮忙检测了错误。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 新建 Bucket，type 改成 Private，另外2个设置都是 Disabled 。需要将下面代码中 &lt;keyId&gt; 和 &lt; applicationKey &gt; 替换为 Backblaze 平台上 App Keys 里生成的。</span>
+</span></span><span class="line"><span class="cl">flyctl secrets <span class="nb">set</span> <span class="nv">LITESTREAM_ACCESS_KEY_ID</span><span class="o">=</span><span class="s2">&#34;&lt;keyId&gt;&#34;</span> <span class="nv">LITESTREAM_SECRET_ACCESS_KEY</span><span class="o">=</span><span class="s2">&#34;&lt;applicationKey&gt;&#34;</span>
+</span></span></code></pre></div><p>Backblaze 里的数据库 本质上是调用了 sqlite 的 wal mode，所以是以 &ldquo;WAL&rdquo;（预写日志）形式存在的。上传备份的数据库替换方法，参考文章：<a href="https://royli.dev/blog/2022/use-litestream-to-duplicate-sqlite-databases">借由 Litestream 方便备份你的 SQLite 数据库 - Roy Li&rsquo;s Blog</a> 还要在 macOS 上通过虚拟机安装 Linux 操作，还挺麻烦的，我也正在研究……</p>
+<p>memos提示更新的时候，使用以下命令重新部署：<code>flyctl deploy --no-cache</code></p>
+<hr>
+<h2 id="感谢-chatgpt-的帮助">感谢 ChatGPT 的帮助</h2>
+<p>在折腾的过程中，遇到的一些问题也通过向 ChatGPT 提问获得了帮助。</p>
+<hr>
+<h2 id="等待继续研究折腾的">等待继续研究折腾的</h2>
+<ul>
+<li><input disabled="" type="checkbox"> remark42 评论系统</li>
+<li><input disabled="" type="checkbox"> 将旧服务器中的 memos 数据迁移到 Backblaze</li>
+</ul>
+]]></content:encoded>
+    </item>
+    
+  </channel>
+</rss>
