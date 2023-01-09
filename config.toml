@@ -8,7 +8,6 @@ buildDrafts = false
 buildFuture = false
 buildExpired = false
 enableEmoji = true
-languageCode = 'zh'
 
 [params]
 env = "production"
@@ -33,6 +32,8 @@ TocSide = "right"
 EnableInstantClick = false
 EnableImageZoom = true
 comments = true
+defaultContentLanguage = "zh"
+defaultContentLanguageInSubdir = true
 
   [params.profileMode]
   enabled = false
@@ -69,6 +70,7 @@ comments = true
 
 [minify]
 disableXML = true
+
 
 [languages.en]
 languageName = "English"
