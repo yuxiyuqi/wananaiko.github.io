@@ -43,3 +43,11 @@ function pp(){
 参考：[让 iTerm2 实时显示梯子状态 ](https://tin6.com/post/how-iterm2-show-current-proxy-status/)，还有另外两种方法。
 
 ![WLh4ok](https://images.wananaiko.com/2023/01/WLh4ok.png)
+
+---
+
+{{< gallery >}}
+  {{< figure src="https://images.wananaiko.com/2023/01/blqBjF.png" thumb="-small" >}}
+  {{< figure src="https://images.wananaiko.com/2023/01/yC0zvP.jpg" thumb="-small" >}}
+  {{< figure src="https://images.wananaiko.com/2023/01/aPysTC.jpg" thumb="-small" >}}
+{{< /gallery >}}
