@@ -166,6 +166,17 @@
   // });
   InstantClick.init();
 </script>
+
+<script src="https://cdn.jsdelivr.net/npm/medium-zoom@latest/dist/medium-zoom.min.js"></script>
+<script>
+    let imgNodes = document.querySelectorAll('div.post-body img');
+    imgNodes = Array.from(imgNodes).filter(node => node.parentNode.tagName !== "A");
+
+    mediumZoom(imgNodes, {
+        background: 'hsla(var(--color-bg-h), var(--color-bg-s), var(--color-bg-l), 0.95)'
+    })
+</script>
+<script src="https://cdn.jsdelivr.net/npm/instant.page@5.1.0/instantpage.min.js" type="module" defer></script>
 {{- end }}
 
 {{- end -}}
