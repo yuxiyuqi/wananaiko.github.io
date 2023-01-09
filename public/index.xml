@@ -1,222 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>wananaiko</title>
+    <title>PaperModX</title>
     <link>https://wananaiko.design/</link>
-    <description>Recent content on wananaiko</description>
+    <description>Recent content on PaperModX</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh</language>
-    <lastBuildDate>Mon, 09 Jan 2023 00:24:18 +0800</lastBuildDate><atom:link href="https://wananaiko.design/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Hugo 的一些配置记录</title>
-      <link>https://wananaiko.design/docs/hugo-develop/</link>
-      <pubDate>Mon, 09 Jan 2023 00:24:18 +0800</pubDate>
-      
-      <guid>https://wananaiko.design/docs/hugo-develop/</guid>
-      <description>增加空格之神 使用空格之神的浏览器插件很久了，真的是阅读强迫症患者的福音，空格之神项目地址
-在 Hugo的 /layouts/_default/baseof.html 内增加以下代码：
-&amp;lt;script src=&amp;#34;https://cdnjs.cloudflare.com/ajax/libs/pangu/4.0.7/pangu.min.js&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;script&amp;gt; pangu.spacingPage(); &amp;lt;/script&amp;gt; 用完后感觉整个世界都清爽了 🤣
-使用 Waline 评论系统 依照官网的教程，部署到 Vercel上，适配了 Hugo 的暗黑模式。
-增加鼠标滑动时的彩虹效果 没有什么意义的效果，纯属好玩，不代表 LGBT。
-在 Hugo 的 /layouts/_default/baseof.html 内增加以下代码：
-&amp;lt;!-- 增加鼠标滑动时的彩虹效果 --&amp;gt; &amp;lt;script async src=&amp;#34;/memos/assets/js/browser.js&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;script&amp;gt;window.addEventListener(&amp;#39;load&amp;#39;,(event)=&amp;gt;{new cursoreffects.rainbowCursor();});&amp;lt;/script&amp;gt; 计划：
-给Hugo增加相册功能和单页 参考：添加相册功能</description>
-      <content:encoded><![CDATA[<h3 id="增加空格之神">增加空格之神</h3>
-<p>使用空格之神的浏览器插件很久了，真的是阅读强迫症患者的福音，<a href="https://github.com/vinta/pangu.js">空格之神项目地址</a></p>
-<p>在 Hugo的 /layouts/_default/baseof.html 内增加以下代码：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://cdnjs.cloudflare.com/ajax/libs/pangu/4.0.7/pangu.min.js&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">pangu</span><span class="p">.</span><span class="nx">spacingPage</span><span class="p">();</span>
-</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-</span></span></code></pre></div><p>用完后感觉整个世界都清爽了 🤣</p>
-<hr>
-<h3 id="使用-waline-评论系统">使用 Waline 评论系统</h3>
-<p>依照官网的教程，<a href="https://waline.js.org/guide/deploy/vercel.html">部署到 Vercel上</a>，适配了 Hugo 的暗黑模式。</p>
-<hr>
-<h3 id="增加鼠标滑动时的彩虹效果">增加鼠标滑动时的彩虹效果</h3>
-<p>没有什么意义的效果，纯属好玩，不代表 LGBT。</p>
-<p>在 Hugo 的 /layouts/_default/baseof.html 内增加以下代码：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="c">&lt;!-- 增加鼠标滑动时的彩虹效果 --&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span> <span class="na">async</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;/memos/assets/js/browser.js&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span><span class="nb">window</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;load&#39;</span><span class="p">,(</span><span class="nx">event</span><span class="p">)=&gt;{</span><span class="k">new</span> <span class="nx">cursoreffects</span><span class="p">.</span><span class="nx">rainbowCursor</span><span class="p">();});&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-</span></span></code></pre></div><hr>
-<p>计划：</p>
-<ul>
-<li><input disabled="" type="checkbox"> 给Hugo增加相册功能和单页</li>
-</ul>
-<p>参考：<a href="https://baohengtao.com/tech/add-gallery-to-hugo/">添加相册功能</a></p>
-]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>让 ITERM2 实时显示梯子状态</title>
-      <link>https://wananaiko.design/docs/how-iterm2-show-current-proxy-status/</link>
-      <pubDate>Sun, 08 Jan 2023 23:04:09 +0800</pubDate>
-      
-      <guid>https://wananaiko.design/docs/how-iterm2-show-current-proxy-status/</guid>
-      <description>最近在 iterm2 里使用 curl、wget、brew、git 等命令时，经常会遇到相应很慢的情况，只能慢慢的等待，网上查了查资料，可以通过以下方法实现。
-修改 ~/.zshrc，并加入以下内容：
-export proxy_host=127.0.0.1 export proxy_port=8888//自定义梯子端口 export switch_proxy=0 export cdc_in=0 function pp(){ if [ $switch_proxy = 0 ]; then export http_proxy=&amp;#34;$proxy_host:$proxy_port&amp;#34; export https_proxy=&amp;#34;$proxy_host:$proxy_port&amp;#34; export ftp_proxy=&amp;#34;$proxy_host:$proxy_port&amp;#34; export GOPROXY=&amp;#34;$proxy_host:$Proxy_port&amp;#34; switch_proxy=l echo -e &amp;#34;梯子模式&amp;#34; else unset http_proxy unset https_proxy unset ftp_proxy unset GOPROXY switch_proxy=0 echo -e &amp;#34;和谐模式&amp;#34; fi } 保存后退出，打开 iterm2，输入pp即可在梯子模式和和谐模式之间切换。
-参考：让 iTerm2 实时显示梯子状态 ，还有另外两种方法。</description>
-      <content:encoded><![CDATA[<p>最近在 iterm2 里使用 curl、wget、brew、git 等命令时，经常会遇到相应很慢的情况，只能慢慢的等待，网上查了查资料，可以通过以下方法实现。</p>
-<p>修改 <code>~/.zshrc</code>，并加入以下内容：</p>
-<pre tabindex="0"><code class="language-hljs" data-lang="hljs">export proxy_host=127.0.0.1
-export proxy_port=8888//自定义梯子端口
-export switch_proxy=0
-export cdc_in=0
- 
-function pp(){
-	if [ $switch_proxy = 0 ]; then
-    export http_proxy=&#34;$proxy_host:$proxy_port&#34;
-    export https_proxy=&#34;$proxy_host:$proxy_port&#34;
-    export ftp_proxy=&#34;$proxy_host:$proxy_port&#34;
-    export GOPROXY=&#34;$proxy_host:$Proxy_port&#34;
-    switch_proxy=l
-    echo -e &#34;梯子模式&#34;
-  else
- 
-    unset http_proxy
-    unset https_proxy
-    unset ftp_proxy
-    unset GOPROXY
-    switch_proxy=0
- 
-    echo -e &#34;和谐模式&#34;
-  fi
-}
-</code></pre><p>保存后退出，打开 iterm2，输入<code>pp</code>即可在梯子模式和和谐模式之间切换。</p>
-<p>参考：<a href="https://tin6.com/post/how-iterm2-show-current-proxy-status/">让 iTerm2 实时显示梯子状态 </a>，还有另外两种方法。</p>
-<p>
-  <img loading="lazy" src="https://images.wananaiko.com/2023/01/WLh4ok.png" alt="WLh4ok"  /></p>
-]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>常用的macOS软件整理</title>
-      <link>https://wananaiko.design/docs/macosapps/</link>
-      <pubDate>Sat, 07 Jan 2023 20:14:36 +0800</pubDate>
-      
-      <guid>https://wananaiko.design/docs/macosapps/</guid>
-      <description>聊一聊 macOS 的一些软件使用心得，希望能够对其他人有所帮助。
-提升效率 Setapp：参加了别人的家庭计划，属于团购车，年费 285。感觉还是很划算的，可以省去你单独买一些软件授权的费用，减少折腾。
-BetterZip：解压工具。Setapp 内下载。
-One Switch：菜单栏快捷工具，主要用来防止电脑休眠。Setapp 内下载。
-Raycast：快捷启动工具，提供了一些多应用拓展支持，对开发比较友好。目前已经代替 utools 使用，类似的还有 Alfred，本地化不如 utools，不过历史剪切板、清理垃圾箱，快捷启动等常用功能已经基本满足使用了。
-Mosaic：窗口管理工具。Setapp 内下载。
-Dropzone：主要用来自动整理文件，大部分文件的存储都是保存在了 Download 目录下，有公司文件、素材文件、安装软件等等乱七八糟的，时间一长就会导致下载目录很混乱，用这个来移动整理文件很方便。Setapp 内下载。
-PixelSnap 和 CleanShot X：前者用标尺来大概量个尺寸，后者是截图工具，有联动。Cleanshot X 真的好用，可以云端上传截图后自动获取链接，还支持 OCR 识别，图片编辑等。Setapp 内下载。
-NetNewsWire：RSS 阅读器，我把它定义为效率工具，最大的痛点是可以订阅 Twitter 用户的内容，结合 RSSHub 使用有奇效，除了订阅常见的新闻资讯网站、博客，还能订阅 Bilibili、Telegram 频道等。作为我日常主要的信息输入入口之一，不需要频繁打开很多网站去查阅。已放弃 NetNewsWire 改用 Reeder，配合 iOS 端的 Reeder，更方便好用。
-Popclip：划词扩展工具，可以划词快捷复制粘贴、打开链接、搜索、翻译等。Setapp 内下载。
-ARC 浏览器：交互很酷又很实用的先进浏览器，我也将它定义为效率工具，通过 Space 空间划分了工作、生活、设计、摄影几个空间，每个空间浏览不同的页面。可以看看少数派网站上关于它的介绍。目前需要邀请注册，可联系我邀请，被邀请后需要等待一段时间才能收到官方邀请。
-Canary Mail：邮箱管理工具，因为经常会用 Gmail 去注册一些网站，Gmail 也是我的主要邮箱，可以用起来一键打开大部分网站的退订邮件网页，方便退订邮件。Setapp 内下载。
-MenubarX：菜单栏网页拓展，结合在线翻译网页，可以当成一个简单的菜单栏翻译工具，比如火山翻译和 DeepL 翻译。Setapp 内下载。
-Rime 输入法：一直在用的输入法工具，定制化输入法，我自己是觉得很好用的。推荐结合 1 个设置和 1 个词库，一起使用。主要配置文件推荐这个：ssnhd 的配置，再结合这里的 Dict 词库文件。官网下载。</description>
-      <content:encoded><![CDATA[<p>聊一聊 macOS 的一些软件使用心得，希望能够对其他人有所帮助。</p>
-<h2 id="提升效率">提升效率</h2>
-<p><strong>Setapp</strong>：参加了别人的家庭计划，属于团购车，年费 285。感觉还是很划算的，可以省去你单独买一些软件授权的费用，减少折腾。</p>
-<p><strong>BetterZip</strong>：解压工具。Setapp 内下载。</p>
-<p><strong>One Switch</strong>：菜单栏快捷工具，主要用来防止电脑休眠。Setapp 内下载。</p>
-<p><strong>Raycast</strong>：快捷启动工具，提供了一些多应用拓展支持，对开发比较友好。目前已经代替 utools 使用，类似的还有 Alfred，本地化不如 utools，不过历史剪切板、清理垃圾箱，快捷启动等常用功能已经基本满足使用了。</p>
-<p><strong>Mosaic</strong>：窗口管理工具。Setapp 内下载。</p>
-<p><strong>Dropzone</strong>：主要用来自动整理文件，大部分文件的存储都是保存在了 Download 目录下，有公司文件、素材文件、安装软件等等乱七八糟的，时间一长就会导致下载目录很混乱，用这个来移动整理文件很方便。Setapp 内下载。</p>
-<p><strong>PixelSnap</strong> 和 <strong>CleanShot X</strong>：前者用标尺来大概量个尺寸，后者是截图工具，有联动。Cleanshot X 真的好用，可以云端上传截图后自动获取链接，还支持 OCR 识别，图片编辑等。Setapp 内下载。</p>
-<p><strong>NetNewsWire</strong>：RSS 阅读器，我把它定义为效率工具，最大的痛点是可以订阅 Twitter 用户的内容，结合 <a href="https://docs.rsshub.app/">RSSHub</a> 使用有奇效，除了订阅常见的新闻资讯网站、博客，还能订阅 Bilibili、Telegram 频道等。作为我日常主要的信息输入入口之一，不需要频繁打开很多网站去查阅。已放弃 NetNewsWire 改用 <strong>Reeder</strong>，配合 iOS 端的 Reeder，更方便好用。</p>
-<p><strong>Popclip</strong>：划词扩展工具，可以划词快捷复制粘贴、打开链接、搜索、翻译等。Setapp 内下载。</p>
-<p><strong>ARC 浏览器</strong>：交互很酷又很实用的先进浏览器，我也将它定义为效率工具，通过 Space 空间划分了工作、生活、设计、摄影几个空间，每个空间浏览不同的页面。可以看看少数派网站上<a href="https://sspai.com/post/75216">关于它的介绍</a>。目前需要邀请注册，可联系我邀请，被邀请后需要等待一段时间才能收到官方邀请。</p>
-<p><strong>Canary Mail</strong>：邮箱管理工具，因为经常会用 Gmail 去注册一些网站，Gmail 也是我的主要邮箱，可以用起来一键打开大部分网站的退订邮件网页，方便退订邮件。Setapp 内下载。</p>
-<p><strong>MenubarX</strong>：菜单栏网页拓展，结合在线翻译网页，可以当成一个简单的菜单栏翻译工具，比如<a href="https://translate.volcengine.com/">火山翻译</a>和 <a href="https://www.deepl.com/zh/translator-mobile">DeepL 翻译</a>。Setapp 内下载。</p>
-<p><strong>Rime 输入法</strong>：一直在用的输入法工具，定制化输入法，我自己是觉得很好用的。推荐结合 1 个设置和 1 个词库，一起使用。主要配置文件推荐这个：<a href="https://github.com/ssnhd/rime">ssnhd 的配置</a>，再结合这里的 <a href="https://github.com/wongdean/rime-settings">Dict 词库文件</a>。<a href="https://rime.im/">官网下载</a>。</p>
-<p><strong>Bartender</strong>：菜单栏图标管理工具，只把最重要的工具性图标放在主视图。Setapp 内下载。</p>
-<p><strong><del>柠檬清理</del></strong>：卸载 App 和查找大型文件比较省心。已使用 <strong>App Cleaner &amp; Uninstaller</strong> 代替。</p>
-<p><strong>uPic</strong>：目前正在使用的图床工具。</p>
-<p><strong>Typora</strong>：目前正在使用的Markdown编辑器。</p>
-<hr>
-<h2 id="系统美化">系统美化</h2>
-<p><strong><del>IconChamp</del></strong>：macOS 上换图标和主题的工具，因为喜欢软件图标风格统一，把所有图标都换成了方形的，有点强迫症了。建议购买授权，软件升级后，图标可以自动更新为之前已经替换过的。</p>
-<p><strong>IconChanger</strong>：现在改用这个图标替换工具，在软件里直接拉取 <a href="https://macosicons.com/">https://macosicons.com/</a> 站点的图标并直接替换，效率更高了，并且 IconChamp 有一些 Bug，图标经常会无法替换。<a href="https://github.com/underthestars-zhy/IconChanger">下载软件</a></p>
-<p><strong>Dynamischer Wallpaper – Kontur</strong>：只是一套非常喜欢的动态壁纸，会随着时间变化而变化，共 8 张，<a href="https://kram.store/products/dynamischer-wallpaper-kontur">这里购买</a>。</p>
-<hr>
-<h2 id="工作规划">工作规划</h2>
-<p><strong>Noteplan</strong>：目前主要用来作为知识管理工具，也可以结合日程制定一些计划。Setapp 内下载。</p>
-<p><strong>Cron</strong>：基于谷歌日历的日程管理软件，我用这个来管理日常的工作计划，界面很好看。目前邀请制。</p>
-<p><strong>EdrawProj</strong> ：亿图项目管理软件，主要用来制定中大型项目的计划排期和人工成本核算。就是界面很丑，功能很好用。</p>
-<hr>
-<p>update：2023-01-07</p>
-]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>基于 Vercel 和 Fly.io 免费部署的应用</title>
-      <link>https://wananaiko.design/docs/dec1220/</link>
-      <pubDate>Tue, 20 Dec 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://wananaiko.design/docs/dec1220/</guid>
-      <description>Hugo 部署到 Vercel 最近考虑把 Wordpress 博客换到 Hugo，一番折腾之后，通过 Github+Vercel 的方式实现了自动部署，还挺方便的，以后只需要在本地编写 Markdown 文件并发布到 Github 就可以了。以 macOS 下为例：
-登陆 GitHub，新建一个 GitHub pages，名为 username.github.io。
-使用 GitHub 登陆 Vercel，Import 刚才新建的 pages。
-Vercel 里的 Project Name 随便写，Build &amp;amp; Development Settings 选择 Hugo，Hugo 的 Version 填写最新的版本号，其他默认，最后提交。
-把 Github pages 仓库克隆到本地，比如我这里为：/Users/aiko/wananaiko.github.io，终端里打开该目录后。输入 Hugo server 验证是否可以正常启动。
-如果你想要安装和本站一样的主题，可以参考这篇文章：Installation | Update | PaperModX 其他参考文章：
-hugo自动部署到vercel
-如何使用 Hugo 进行个人博客搭建
-将 Memos 作为单页添加到 Hugo 中 方法参考了文章 向Hugo中添加静态单页面Static-Single
-建议将 config.toml 里的 EnableInstantClick设置为 false，避免 memos 内容偶尔出现不加载的情况。</description>
-      <content:encoded><![CDATA[<h2 id="hugo-部署到-vercel">Hugo 部署到 Vercel</h2>
-<p>最近考虑把 Wordpress 博客换到 Hugo，一番折腾之后，通过 Github+Vercel 的方式实现了自动部署，还挺方便的，以后只需要在本地编写 Markdown 文件并发布到 Github 就可以了。以 macOS 下为例：</p>
-<ol>
-<li>
-<p>登陆 GitHub，新建一个 GitHub pages，名为 username.github.io。</p>
-</li>
-<li>
-<p>使用 GitHub 登陆 Vercel，Import 刚才新建的 pages。</p>
-</li>
-<li>
-<p>Vercel 里的 Project Name 随便写，Build &amp; Development Settings 选择 Hugo，Hugo 的 Version 填写最新的版本号，其他默认，最后提交。</p>
-</li>
-<li>
-<p>把 Github pages 仓库克隆到本地，比如我这里为：/Users/aiko/wananaiko.github.io，终端里打开该目录后。输入 <code>Hugo server</code> 验证是否可以正常启动。</p>
-</li>
-<li>
-<p>如果你想要安装和本站一样的主题，可以参考这篇文章：<a href="https://reorx.github.io/hugo-PaperModX/docs/installation/">Installation | Update | PaperModX </a></p>
-</li>
-</ol>
-<p>其他参考文章：</p>
-<p><a href="https://www.leftpocket.cn/post/hugo/hugo_vercel/">hugo自动部署到vercel</a></p>
-<p><a href="https://humble-blog.vercel.app/hugo/#comments">如何使用 Hugo 进行个人博客搭建</a></p>
-<h3 id="将-memos-作为单页添加到-hugo-中">将 Memos 作为单页添加到 Hugo 中</h3>
-<p>方法参考了文章 <a href="https://blog.csdn.net/qq_29102545/article/details/121454974">向Hugo中添加静态单页面Static-Single</a></p>
-<p>建议将 config.toml 里的 EnableInstantClick设置为 false，避免 memos 内容偶尔出现不加载的情况。</p>
-<pre tabindex="0"><code>params:
-  EnableInstantClick: false
-</code></pre><p><a href="https://wananaiko.design/memos/">memos | wananaiko</a> 页面样式来自 <a href="https://github.com/eallion/memos.top">eallion/memos.top</a></p>
-<p>在折腾的过程中，你需要用到 <a href="https://transform.tools/yaml-to-toml">YAML to TOML 在线转换</a></p>
-<hr>
-<h2 id="umami-部署到-vercel">Umami 部署到 Vercel</h2>
-<p>将网站统计分析工具 Umami 部署到 Vercel 上。之前体验过 <a href="https://plausible.io/">Plausible Analytics</a>，试用结束之后就放弃了，个人小站，暂时觉得还没有必要为统计工具付费。缺点是查看面板数据感觉加载有点慢，不过数据还算可靠，又不是不能用。</p>
-<p>参考文章：<a href="https://digu.plus/post/8034746f42b3495fbb19926e3fb8ec4f/">部署独立统计分析服务Umami</a></p>
-<hr>
-<h2 id="rsshub-部署到-vercel">RSSHub 部署到 Vercel</h2>
-<p><a href="https://docs.rsshub.app/install/#bu-shu-dao-vercel-zeit-now">可以一键部署到 Vercel</a>，也是为了配合 Reeder 使用。</p>
-<hr>
-<h2 id="memos-部署到-flyio">memos 部署到 fly.io</h2>
-<p>参考文章：<a href="https://github.com/hu3rror/memos-on-fly/">hu3rror/memos-on-fly: ✍️</a></p>
-<p>感谢  <mark>hu3rror</mark>   帮忙检测了错误。</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 新建 Bucket，type 改成 Private，另外2个设置都是 Disabled 。需要将下面代码中 &lt;keyId&gt; 和 &lt; applicationKey &gt; 替换为 Backblaze 平台上 App Keys 里生成的。</span>
-</span></span><span class="line"><span class="cl">flyctl secrets <span class="nb">set</span> <span class="nv">LITESTREAM_ACCESS_KEY_ID</span><span class="o">=</span><span class="s2">&#34;&lt;keyId&gt;&#34;</span> <span class="nv">LITESTREAM_SECRET_ACCESS_KEY</span><span class="o">=</span><span class="s2">&#34;&lt;applicationKey&gt;&#34;</span>
-</span></span></code></pre></div><p>Backblaze 里的数据库 本质上是调用了 sqlite 的 wal mode，所以是以 &ldquo;WAL&rdquo;（预写日志）形式存在的。上传备份的数据库替换方法，参考文章：<a href="https://royli.dev/blog/2022/use-litestream-to-duplicate-sqlite-databases">借由 Litestream 方便备份你的 SQLite 数据库 - Roy Li&rsquo;s Blog</a> 还要在 macOS 上通过虚拟机安装 Linux 操作，还挺麻烦的，我也正在研究……</p>
-<p>memos提示更新的时候，使用以下命令重新部署：<code>flyctl deploy --no-cache</code></p>
-<hr>
-<h2 id="感谢-chatgpt-的帮助">感谢 ChatGPT 的帮助</h2>
-<p>在折腾的过程中，遇到的一些问题也通过向 ChatGPT 提问获得了帮助。</p>
-<hr>
-<h2 id="等待继续研究折腾的">等待继续研究折腾的</h2>
-<ul>
-<li><input disabled="" type="checkbox"> remark42 评论系统</li>
-<li><input disabled="" type="checkbox"> 将旧服务器中的 memos 数据迁移到 Backblaze</li>
-</ul>
-]]></content:encoded>
-    </item>
-    
+    <lastBuildDate>Wed, 07 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://wananaiko.design/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Icons Preview</title>
       <link>https://wananaiko.design/docs/icons_preview/</link>
@@ -313,6 +102,195 @@ to show all the icons, check it out at: <a href="https://reorx.github.io/hugo-Pa
 <li>Distinguish home page width and post page width, post page is wider
 (800px) for better readability, you can change it by <code>--post-width</code> in <code>theme-vars.css</code>.</li>
 <li>Menu links are always bold, this feels more consistent when clicking around. Active links have deeper color.</li>
+</ul>
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>FAQs</title>
+      <link>https://wananaiko.design/docs/faq/</link>
+      <pubDate>Wed, 20 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://wananaiko.design/docs/faq/</guid>
+      <description>Frequently Asked Questions</description>
+      <content:encoded><![CDATA[<h2 id="intro">Intro</h2>
+<ul>
+<li>
+<p><strong>We&rsquo;ll be using <code>yml/yaml</code> format for all examples down below, I recommend using <code>yml</code> over <code>toml</code> as it is easier to read.</strong></p>
+</li>
+<li>
+<p>You can find any <a href="https://www.google.com/search?q=yml+to+toml">YML to TOML</a> converters if necessary.</p>
+</li>
+</ul>
+<hr>
+<h2 id="override-theme-template">Override theme template</h2>
+<p>By Hugo&rsquo;s Lookup Order, you can override any part of a theme that you want. The following is a quick example.</p>
+<p>Let&rsquo;s say you wish the <code>list</code> was different. All you have to do is copy the <code>list</code> template:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">your-site/themes/papermod/layouts/_defaults/list.html
+</span></span></code></pre></div><p>And paste it under your own <code>layouts</code> folder:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">your-site/layouts/_defaults/list.html
+</span></span></code></pre></div><p>Then you&rsquo;re free to make any changes you want to the <code>list</code>.
+When Hugo builds your site, your copy of <code>list.html</code> will be used instead of the theme&rsquo;s <code>list.html</code>.</p>
+<hr>
+<h2 id="enable-social-metadata-and-seo">Enable Social-Metadata and SEO</h2>
+<p>These include OpenGraph, Twitter Cards and Schema.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="line"><span class="cl"><span class="nt">params</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">env</span><span class="p">:</span><span class="w"> </span><span class="l">production</span><span class="w">
+</span></span></span></code></pre></div><p>or set <code>HUGO_ENV</code> as &ldquo;production&rdquo; in system env-vars</p>
+<hr>
+<h2 id="failed-to-find-a-valid-digest-in-the-integrity-attribute-for-resource--">Failed to find a valid digest in the &lsquo;integrity&rsquo; attribute for resource &hellip; ?</h2>
+<p>Read about How Subresource Integrity helps: <a href="https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity">Subresource_Integrity</a></p>
+<p>Why was the <code>asset</code> not loading ? : <a href="https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity#How_browsers_handle_Subresource_Integrity">How_browsers_handle_Subresource_Integrity</a></p>
+<p><strong>Solution:</strong></p>
+<p>Set the following in <code>config.yml</code></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="line"><span class="cl"><span class="nt">params</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">assets</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">disableFingerprinting</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></span></span></code></pre></div><p>Linked Issues:</p>
+<ul>
+<li><a href="https://stackoverflow.com/questions/65056585/hugo-theme-not-loading">https://stackoverflow.com/questions/65056585/hugo-theme-not-loading</a></li>
+<li><a href="https://stackoverflow.com/questions/65040931/hugo-failed-to-find-a-valid-digest-in-the-integrity-attribute-for-resource">https://stackoverflow.com/questions/65040931/hugo-failed-to-find-a-valid-digest-in-the-integrity-attribute-for-resource</a></li>
+<li><a href="https://blog.gerardbeckerleg.com/posts/hugo-failed-to-find-a-valid-digest-in-the-integrity-attribute-for-resource/">https://blog.gerardbeckerleg.com/posts/hugo-failed-to-find-a-valid-digest-in-the-integrity-attribute-for-resource/</a></li>
+</ul>
+<hr>
+<h2 id="bundling-custom-css-with-themes-assets">Bundling Custom css with theme&rsquo;s assets</h2>
+<ul>
+<li>For adding custom css to be bundled inside one minimized css</li>
+</ul>
+<p>Create folder in yout project directory as</p>
+<pre tabindex="0"><code>.(site root)
+├── config.yml
+├── content/
+├── theme/hugo-PaperMod/
+└── assets/
+    └── css/
+        └── extended/  &lt;---
+            ├── custom_css1.css &lt;---
+            └── any_name.css   &lt;---
+</code></pre><p>All <code>css</code> files inside <code>assets/css/extended</code> will be bundled !</p>
+<p><strong>Note</strong>: blank.css is just the placeholder so that it doesn&rsquo;t break the theme when no files are present under <code>assets/css/extended</code></p>
+<p>Linked Issues:</p>
+<ul>
+<li><a href="https://discourse.gohugo.io/t/papermod-theme-how-to-add-custom-css/30165">Papermod Theme: How to add custom CSS?</a></li>
+</ul>
+<hr>
+<h2 id="custom-head--footer">Custom Head / Footer</h2>
+<p>Custom css/js can be added by way mentioned below.</p>
+<pre tabindex="0"><code>.(site root)
+├── config.yml
+├── content/
+├── theme/hugo-PaperMod/
+└── layouts
+    ├── partials
+    │   ├── comments.html
+    │   ├── extend_footer.html &lt;---
+    │   └── extend_head.html   &lt;---
+    └── robots.txt
+</code></pre><p>Create a html page in directory structure as shown above.</p>
+<p>Contents of <code>extend_head.html</code> will be added to <code>head</code> of page.</p>
+<p>and contents of <code>extend_footer.html</code> will be added to bottom of page.</p>
+<hr>
+<h2 id="add-menu-to-site">Add menu to site</h2>
+<p>You can add menu entries which will appear in the header of every page.</p>
+<p>To do so, add a <code>menu</code> section to your site&rsquo;s <code>config.yml</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="line"><span class="cl"><span class="nt">menu</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">main</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span>- <span class="nt">identifier</span><span class="p">:</span><span class="w"> </span><span class="l">categories</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">categories</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="l">/categories/</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">weight</span><span class="p">:</span><span class="w"> </span><span class="m">10</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span>- <span class="nt">identifier</span><span class="p">:</span><span class="w"> </span><span class="l">tags</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">tags</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="l">/tags/</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">weight</span><span class="p">:</span><span class="w"> </span><span class="m">20</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span>- <span class="nt">identifier</span><span class="p">:</span><span class="w"> </span><span class="l">example</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">example.org</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="l">https://example.org</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">weight</span><span class="p">:</span><span class="w"> </span><span class="m">30</span><span class="w">
+</span></span></span></code></pre></div><p><code>name</code> controls what will be displayed for the menu entry.
+<code>url</code> sets the URL that the entry points to.
+<code>weight</code> is used to control the positioning of entries.</p>
+<p>For more information on menus, see the <a href="https://gohugo.io/content-management/menus/">Hugo wiki page</a>.</p>
+<hr>
+<h2 id="pin-a-post">Pin a Post</h2>
+<p>Post can be pinned/ displayed top on the list by adding a <code>weight=&lt;num&gt;</code> var to page-variables</p>
+<p>example:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="line"><span class="cl"><span class="nn">---</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;My Important post&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">date</span><span class="p">:</span><span class="w"> </span><span class="ld">2020-09-15T11:30:03</span><span class="m">+00</span><span class="p">:</span><span class="m">00</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">weight</span><span class="p">:</span><span class="w"> </span><span class="m">1</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nn">---</span><span class="w">
+</span></span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="line"><span class="cl"><span class="nn">---</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;My 2nd Important post&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">date</span><span class="p">:</span><span class="w"> </span><span class="ld">2020-09-15T11:30:03</span><span class="m">+00</span><span class="p">:</span><span class="m">00</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">weight</span><span class="p">:</span><span class="w"> </span><span class="m">2</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nn">---</span><span class="w">
+</span></span></span></code></pre></div><hr>
+<h2 id="adding-custom-favicons">Adding Custom Favicon(s)</h2>
+<p>We support the following paths under <code>/static</code> directory
+and can be added accordingly.</p>
+<ul>
+<li><code>favicon.ico</code></li>
+<li><code>favicon-16x16.png</code></li>
+<li><code>favicon-32x32.png</code></li>
+<li><code>apple-touch-icon.png</code></li>
+<li><code>safari-pinned-tab.svg</code></li>
+</ul>
+<ol>
+<li>
+<p>Favicon(s) can be generated by <a href="https://favicon.io">Favicon.io</a></p>
+<p>and can be simply put in <code>/static</code> folder.</p>
+</li>
+<li>
+<p>Other way is to add favicon(s) NOT located in <code>/static</code> folder.</p>
+<p>In site config add the following:</p>
+<pre tabindex="0"><code>params:
+assets:
+    favicon: &#34;&lt;link / absolute url&gt;&#34;
+    favicon16x16:  &#34;&lt;link / absolute url&gt;&#34;
+    favicon32x32:  &#34;&lt;link / absolute url&gt;&#34;
+    apple_touch_icon:  &#34;&lt;link / absolute url&gt;&#34;
+    safari_pinned_tab:  &#34;&lt;link / absolute url&gt;&#34;
+</code></pre><ul>
+<li><code>absolute url</code> means direct links to external resource: ex. <a href="https://web.site/someimage.png">https://web.site/someimage.png</a></li>
+</ul>
+<p>example:</p>
+<pre tabindex="0"><code>params:
+assets:
+    favicon: &#34;/favicon.ico&#34;
+    favicon16x16:  &#34;/favicon-16x16.png&#34;
+    favicon32x32:  &#34;/favicon-32x32.png&#34;
+    apple_touch_icon:  &#34;/apple-touch-icon.png&#34;
+    safari_pinned_tab:  &#34;/safari-pinned-tab.svg&#34;
+</code></pre></li>
+</ol>
+<hr>
+<h2 id="centering-image-in-markdown">Centering image in markdown</h2>
+<p>Add <code>#center</code> after image to center align an image</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-md" data-lang="md"><span class="line"><span class="cl">![<span class="nt">name</span>](<span class="na">path/to/image.png#center</span>)
+</span></span></code></pre></div><p><strong>When using <a href="https://gohugo.io/content-management/shortcodes/"><code>figure</code></a> shortcode</strong></p>
+<p>use <code>align=center</code> to center image with captions</p>
+<p>ex.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-md" data-lang="md"><span class="line"><span class="cl">{{<span class="p">&lt;</span> <span class="nt">figure</span> <span class="na">align</span><span class="o">=</span><span class="s">center</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;image.jpg&#34;</span> <span class="p">&gt;</span>}}
+</span></span></code></pre></div><hr>
+<h2 id="using-hugos-syntax-highlighter-chroma">Using Hugo&rsquo;s Syntax highlighter &ldquo;chroma&rdquo;</h2>
+<p>Set hugo&rsquo;s markdown styling in site <code>config.yml</code></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="line"><span class="cl"><span class="nt">markup</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">highlight</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">noClasses</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span></span></span></code></pre></div><p><code>noClasses</code> has to be <code>false</code> to make highlight color follows the theme.</p>
+<hr>
+<h2 id="search-not-working-">Search not working ?</h2>
+<p>If you are using a CDN to server assets from a different domain, search would break</p>
+<p>Why? Take a look at <a href="https://github.com/adityatelange/hugo-PaperMod/blob/fb4988cfb6d0d6e4e489f17d89f0fa618def3396/assets/js/fastsearch.js#L35">fastsearch.js#L35</a>.</p>
+<p>We fetch the <code>index.json</code> (where the search function looks for the keywords typed) one level up of the website <code>search.min.js</code> is hosted on.</p>
+<p>We have used this insted of assigning <code>baseURL</code> so as to work with multilingual websites ex. <code>example.com/fr/</code> and websites being placed under a subdirectory ex. <code>example.com/blog/</code>.</p>
+<p>To fix for <em>single</em> language websites hosting assets from CDN, this you may <a href="#override-theme-template">override</a> <a href="https://github.com/adityatelange/hugo-PaperMod/blob/fb4988cfb6d0d6e4e489f17d89f0fa618def3396/assets/js/fastsearch.js#L35">fastsearch.js#L35</a> and placing appropriate URL as in</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">xhr</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="s2">&#34;GET&#34;</span><span class="p">,</span> <span class="s2">&#34;https://example.com/index.json&#34;</span><span class="p">);</span>
+</span></span></code></pre></div><hr>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://zwbetz.com/override-a-hugo-theme/">Override a Hugo theme</a></li>
 </ul>
 ]]></content:encoded>
     </item>
@@ -1029,6 +1007,23 @@ videos.
 </span></span></code></pre></div><h4 id="google-analytics-integration">Google Analytics integration</h4>
 <h4 id="syntax-highlighting">Syntax highlighting</h4>
 <h4 id="rss-feeds">RSS feeds</h4>
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>My First Post</title>
+      <link>https://wananaiko.design/posts/my-first-post/</link>
+      <pubDate>Thu, 18 Jul 2019 17:18:05 +0100</pubDate>
+      
+      <guid>https://wananaiko.design/posts/my-first-post/</guid>
+      <description>Hugo on Vercel </description>
+      <content:encoded><![CDATA[<h1 id="hugo-on-vercel">Hugo on Vercel</h1>
+<iframe
+  class="website-card-embed"
+  data-src="/?url=https%3a%2f%2fgithub.com%2fHumble-Xiang%2fwebsite-card-embed"
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe>
 ]]></content:encoded>
     </item>
     

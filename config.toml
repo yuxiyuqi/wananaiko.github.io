@@ -8,6 +8,7 @@ buildDrafts = false
 buildFuture = false
 buildExpired = false
 enableEmoji = true
+languageCode = 'zh'
 
 [params]
 env = "production"
@@ -69,7 +70,6 @@ comments = true
 [minify]
 disableXML = true
 
-
 [languages.en]
 languageName = "English"
 weight = 1
@@ -100,7 +100,7 @@ url = "/search/"
 weight = 10
 
 [[languages.en.menu.main]]
-name = "Other"
+name = "@Author"
 url = "https://wananaiko.com"
 
   [languages.en.menu.main.params]
@@ -134,7 +134,7 @@ weight = 1
 
 [[languages.zh.menu.main]]
 name = "标签"
-url = "/tags/"
+url = "tags/"
 weight = 4
 
 [[languages.zh.menu.main]]

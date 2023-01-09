@@ -45,9 +45,8 @@ draft: false
 
 ---
 
-计划：
+下一步：
 
 - [ ] 给Hugo增加相册功能和单页
 
 参考：[添加相册功能](https://baohengtao.com/tech/add-gallery-to-hugo/)
-

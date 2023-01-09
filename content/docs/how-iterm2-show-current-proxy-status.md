@@ -1,10 +1,10 @@
 ---
 title: "让 ITERM2 实时显示梯子状态"
-date: 2023-01-08
+date: 2023-01-08T23:04:09+08:00
 draft: false
 author: "wananaiko"
 Tag: 
-  - iterm
+  - iterm2
 ---
 
 最近在 iterm2 里使用 curl、wget、brew、git 等命令时，经常会遇到相应很慢的情况，只能慢慢的等待，网上查了查资料，可以通过以下方法实现。
@@ -43,11 +43,3 @@ function pp(){
 参考：[让 iTerm2 实时显示梯子状态 ](https://tin6.com/post/how-iterm2-show-current-proxy-status/)，还有另外两种方法。
 
 ![WLh4ok](https://images.wananaiko.com/2023/01/WLh4ok.png)
-
----
-
-{{< gallery >}}
-  {{< figure src="https://images.wananaiko.com/2023/01/blqBjF.png" thumb="-small" >}}
-  {{< figure src="https://images.wananaiko.com/2023/01/yC0zvP.jpg" thumb="-small" >}}
-  {{< figure src="https://images.wananaiko.com/2023/01/aPysTC.jpg" thumb="-small" >}}
-{{< /gallery >}}

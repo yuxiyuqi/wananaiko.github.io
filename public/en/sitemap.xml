@@ -2,43 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://wananaiko.design/docs/</loc>
-    <lastmod>2023-01-09T00:24:18+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://wananaiko.design/zh/docs/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://wananaiko.design/docs/"
-                />
+    <loc>https://wananaiko.design/newsletter/</loc>
+    <lastmod>2022-09-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://wananaiko.design/tags/hugo/</loc>
-    <lastmod>2023-01-09T00:24:18+08:00</lastmod>
-  </url><url>
-    <loc>https://wananaiko.design/docs/hugo-develop/</loc>
-    <lastmod>2023-01-09T00:24:18+08:00</lastmod>
-  </url><url>
-    <loc>https://wananaiko.design/tags/</loc>
-    <lastmod>2023-01-09T00:24:18+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://wananaiko.design/zh/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://wananaiko.design/tags/"
-                />
-  </url><url>
-    <loc>https://wananaiko.design/tags/waline/</loc>
-    <lastmod>2023-01-09T00:24:18+08:00</lastmod>
+    <loc>https://wananaiko.design/newsletter/001-hello-world/</loc>
+    <lastmod>2022-09-07T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://wananaiko.design/</loc>
-    <lastmod>2023-01-09T00:24:18+08:00</lastmod>
+    <lastmod>2022-09-07T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
@@ -49,30 +20,6 @@
                 hreflang="en"
                 href="https://wananaiko.design/"
                 />
-  </url><url>
-    <loc>https://wananaiko.design/docs/how-iterm2-show-current-proxy-status/</loc>
-    <lastmod>2023-01-08T23:04:09+08:00</lastmod>
-  </url><url>
-    <loc>https://wananaiko.design/docs/macosapps/</loc>
-    <lastmod>2023-01-07T20:14:36+08:00</lastmod>
-  </url><url>
-    <loc>https://wananaiko.design/tags/rsshub/</loc>
-    <lastmod>2022-12-20T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wananaiko.design/tags/umami/</loc>
-    <lastmod>2022-12-20T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wananaiko.design/tags/vercel/</loc>
-    <lastmod>2022-12-20T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wananaiko.design/docs/dec1220/</loc>
-    <lastmod>2022-12-20T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wananaiko.design/newsletter/</loc>
-    <lastmod>2022-09-07T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wananaiko.design/newsletter/001-hello-world/</loc>
-    <lastmod>2022-09-07T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://wananaiko.design/tags/example/</loc>
     <lastmod>2022-04-13T00:00:00+00:00</lastmod>
@@ -90,6 +37,32 @@
     <loc>https://wananaiko.design/docs/icons_preview/</loc>
     <lastmod>2022-04-13T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://wananaiko.design/docs/</loc>
+    <lastmod>2022-04-13T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://wananaiko.design/zh/docs/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://wananaiko.design/docs/"
+                />
+  </url><url>
+    <loc>https://wananaiko.design/tags/</loc>
+    <lastmod>2022-04-13T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://wananaiko.design/zh/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://wananaiko.design/tags/"
+                />
+  </url><url>
     <loc>https://wananaiko.design/docs/papermodx-new-features/</loc>
     <lastmod>2022-04-12T23:37:00+08:00</lastmod>
     <xhtml:link
@@ -103,6 +76,9 @@
                 href="https://wananaiko.design/docs/papermodx-new-features/"
                 />
   </url><url>
+    <loc>https://wananaiko.design/docs/faq/</loc>
+    <lastmod>2021-01-20T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://wananaiko.design/tags/icons/</loc>
     <lastmod>2021-01-20T00:00:00+00:00</lastmod>
   </url><url>
@@ -114,6 +90,22 @@
   </url><url>
     <loc>https://wananaiko.design/docs/features/</loc>
     <lastmod>2021-01-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wananaiko.design/posts/my-first-post/</loc>
+    <lastmod>2019-07-18T17:18:05+01:00</lastmod>
+  </url><url>
+    <loc>https://wananaiko.design/posts/</loc>
+    <lastmod>2019-07-18T17:18:05+01:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://wananaiko.design/zh/posts/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://wananaiko.design/posts/"
+                />
   </url><url>
     <loc>https://wananaiko.design/tags/markdown/</loc>
     <lastmod>2019-03-11T00:00:00+00:00</lastmod>
@@ -139,19 +131,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://wananaiko.design/posts/markdown-syntax/"
-                />
-  </url><url>
-    <loc>https://wananaiko.design/posts/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://wananaiko.design/zh/posts/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://wananaiko.design/posts/"
                 />
   </url><url>
     <loc>https://wananaiko.design/tags/syntax/</loc>

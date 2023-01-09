@@ -1,0 +1,27 @@
+<head>
+  <link rel="stylesheet" type="text/css" href="/memos/assets/css/waline.css">
+</head>
+<body>
+  <!-- ... -->
+  <div id="waline"></div>
+  <script type="module">
+    import { init } from 'https://unpkg.com/@waline/client@v2/dist/waline.mjs';
+
+    init({
+      el: '#waline',
+      lang: 'zh-CN',
+      reaction: true, // 开启反应
+      serverURL: 'https://chat.wananaiko.design',
+      dark: 'body.dark',
+      copyright: false,
+      
+    // 设置 emoji 为微博与哔哩哔哩
+    emoji: [
+      '//cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/tieba',
+      '//cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/bilibili',
+    ],
+    });
+    
+  </script>
+  
+</body>

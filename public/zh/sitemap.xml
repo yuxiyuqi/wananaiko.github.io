@@ -2,6 +2,19 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://wananaiko.design/zh/docs/papermodx-new-features/</loc>
+    <lastmod>2022-04-12T23:37:00+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://wananaiko.design/docs/papermodx-new-features/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://wananaiko.design/zh/docs/papermodx-new-features/"
+                />
+  </url><url>
     <loc>https://wananaiko.design/zh/</loc>
     <lastmod>2022-04-12T23:37:00+08:00</lastmod>
     <xhtml:link
@@ -26,19 +39,6 @@
                 rel="alternate"
                 hreflang="zh"
                 href="https://wananaiko.design/zh/docs/"
-                />
-  </url><url>
-    <loc>https://wananaiko.design/zh/docs/papermodx-new-features/</loc>
-    <lastmod>2022-04-12T23:37:00+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://wananaiko.design/docs/papermodx-new-features/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://wananaiko.design/zh/docs/papermodx-new-features/"
                 />
   </url><url>
     <loc>https://wananaiko.design/zh/tags/example/</loc>

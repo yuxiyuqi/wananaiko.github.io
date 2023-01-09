@@ -1,12 +1,28 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Posts on wananaiko</title>
+    <title>Posts on PaperModX</title>
     <link>https://wananaiko.design/posts/</link>
-    <description>Recent content in Posts on wananaiko</description>
+    <description>Recent content in Posts on PaperModX</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh</language>
-    <lastBuildDate>Mon, 11 Mar 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://wananaiko.design/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 18 Jul 2019 17:18:05 +0100</lastBuildDate><atom:link href="https://wananaiko.design/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My First Post</title>
+      <link>https://wananaiko.design/posts/my-first-post/</link>
+      <pubDate>Thu, 18 Jul 2019 17:18:05 +0100</pubDate>
+      
+      <guid>https://wananaiko.design/posts/my-first-post/</guid>
+      <description>Hugo on Vercel </description>
+      <content:encoded><![CDATA[<h1 id="hugo-on-vercel">Hugo on Vercel</h1>
+<iframe
+  class="website-card-embed"
+  data-src="/?url=https%3a%2f%2fgithub.com%2fHumble-Xiang%2fwebsite-card-embed"
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe>
+]]></content:encoded>
+    </item>
+    
     <item>
       <title>Markdown Syntax Guide</title>
       <link>https://wananaiko.design/posts/markdown-syntax/</link>
