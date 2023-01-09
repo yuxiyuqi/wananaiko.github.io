@@ -1,4 +1,4 @@
-{{- define "main" }}
+{{- define "tags" }}
 
 {{- if .Title }}
 <header class="page-header">
