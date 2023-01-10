@@ -12,7 +12,7 @@ enableEmoji = true
 [params]
 env = "production"
 description = "Theme PaperModX - https://github.com/reorx/hugo-PaperModX"
-author = [ "wananaiko" ]
+author = "wananaiko"
 mainSections = [ "docs", "posts" ]
 disableAnchoredHeadings = true
 images = [ "cover.png" ]
@@ -191,32 +191,4 @@ disableInlineCSS = true
 
 [services.twitter]
 disableInlineCSS = true
-
-[[links]]
-name = "wzyboy’s blog"
-url = "https://wzyboy.im/"
-
-[[links]]
-name = "某高老师 - 人间观察"
-url = "https://someonegao.com/"
-description = "Blogger / Podcaster / Father of 2 sons"
-favicon = "https://cdn.hashnode.com/res/hashnode/image/upload/v1650687751798/psTFDHSfP.png"
-
-[[links]]
-name = "Shyrism"
-url = "https://shyrz.me/"
-description = "Smile in cry, write in bytes."
-
-[[links]]
-name = "My Life @wsdjeg"
-url = "https://wsdjeg.spacevim.org/"
-
-[[links]]
-name = "程序员的喵"
-description = "Coding and writing, don't Panic"
-url = "https://catcoding.me/"
-favicon = "https://catcoding.me//css/images/favicon.ico"
-
-[permalinks]
-essays = "/:section/:year/:month/:slugorfilename"
 
