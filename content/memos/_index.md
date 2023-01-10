@@ -6,7 +6,7 @@ type: 'memos'
 <meta name="referrer" content="no-referrer">
 <script type="text/javascript" src="/memos/assets/js/marked.min.js"></script>
 
-<!-- 增加卡片滑动时的放大效果 -->
+<!-- 增加卡片hover的效果 -->
 <style>
 .timeline img {
     display: block;
