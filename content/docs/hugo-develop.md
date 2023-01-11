@@ -91,14 +91,14 @@ draft: false
 [[blogroll]]
   name = "wananaiko"
   url = "https://wananaiko.com"
-  avatar = "https://images.wananaiko.com/2023/01/Ug1QAR.png"
+  favicon = "https://images.wananaiko.com/2023/01/Ug1QAR.png"
   description = "Design loser,slack off champion."
   weight = 1
 
 [[blogroll]]
   name = "wananaiko"
   url = "https://wananaiko.com"
-  avatar = "https://images.wananaiko.com/2023/01/Ug1QAR.png"
+  favicon = "https://images.wananaiko.com/2023/01/Ug1QAR.png"
   description = "Design loser,slack off champion."
   weight = 2
 ```
