@@ -116,6 +116,8 @@ type: 'blogroll'
 
 接着运行 `Hugo server -D` 检查友链是否显示出来。
 
+---
+
 ### 增加页面下雪效果
 
 可为雪花自定义配置：[Falling snowflakes](https://hcodes.github.io/demo-snowflakes/)，修改 `/themes/PaperModX/layouts/_default/baseof.html`，加入以下代码：
@@ -130,5 +132,60 @@ type: 'blogroll'
     speed: 0.8
   })
 </script>
+```
+
+---
+
+### 搜索页展示标签列表
+
+编辑搜索页面模板 `./layouts/_default/search.html`，修改代码为：
+
+```html
+{{- define "main" }}
+
+<header class="page-header">
+    <h1>{{- (printf "%s&nbsp;" .Title ) | htmlUnescape -}}
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+    </h1>
+    {{- if .Description }}
+    <div class="post-description">
+        {{ .Description }}
+    </div>
+    {{- end }}
+    {{- if not (.Param "hideMeta") }}
+    <div class="post-meta">
+        
+    </div>
+    {{- end }}
+</header>
+
+<div id="searchbox">
+    <input id="searchInput" autofocus placeholder="{{ .Params.placeholder | default (printf "%s ↵" .Title) }}"
+        aria-label="search" type="search" autocomplete="off">
+    <ul id="searchResults" aria-label="search results"></ul>
+</div>
+
+{{- if not (.Param "hideTags") }}
+{{- $taxonomies := .Site.Taxonomies.tags }}
+{{- if gt (len $taxonomies) 0 }}
+<h2 style="margin-top: 32px">{{- (.Param "tagsTitle") | default "tags" }}</h2>
+<ul class="terms-tags">
+    {{- range $name, $value := $taxonomies }}
+    {{- $count := .Count }}
+    {{- with site.GetPage (printf "/tags/%s" $name) }}
+    <li>
+        <a href="{{ .Permalink }}">{{ .Name }} <sup><strong><sup>{{ $count }}</sup></strong></sup> </a>
+    </li>
+    {{- end }}
+    {{- end }}
+</ul>
+{{- end }}
+{{- end }}
+
+{{- end }}{{/* end main */}}
 ```
 
