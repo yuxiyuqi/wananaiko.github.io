@@ -94,13 +94,11 @@ url = "/archives/"
 weight = 3
 
 [[languages.en.menu.main]]
-name = "Search"
-url = "/search/"
-weight = 10
+name = "Links"
+url = "/blogroll/"
+weight = 5
 
-[[languages.en.menu.main]]
-name = "Other"
-url = "https://wananaiko.com"
+
 
   [languages.en.menu.main.params]
   external = true
@@ -190,5 +188,5 @@ privacyEnhanced = true
 disableInlineCSS = true
 
 [services.twitter]
-disableInlineCSS = true
+disableInlineCSS = true 
 
