@@ -32,6 +32,7 @@ TocOpen = true
 TocSide = "right"
 EnableInstantClick = false
 EnableImageZoom = true
+hideMeta = false
 comments = true
 
   [params.profileMode]

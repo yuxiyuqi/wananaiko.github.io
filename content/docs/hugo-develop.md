@@ -25,7 +25,7 @@ draft: false
 
 ---
 
-### 增加 Waline 评论系统
+### 增加 Waline 评论
 
 依照官网的教程，[部署到 Vercel上](https://waline.js.org/guide/deploy/vercel.html)，适配了 Hugo 的暗黑模式。
 
@@ -58,14 +58,11 @@ draft: false
         '//cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/bilibili',
       ],
       });
-      
     </script>
-    
   </body>
-  
 ```
 
-
+另外，在 `config.toml` 中的 params 下设置 `comments = true`
 
 ---
 
@@ -120,7 +117,6 @@ draft: false
 </article>
 
 {{- end }}
-
 ```
 
 在博客根目录或者themes目录下的`data文件夹下`新建 `blogroll.toml` 文件，然后在该文件中添加友链的各项基本信息，比如：
