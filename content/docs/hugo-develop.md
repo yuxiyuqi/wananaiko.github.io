@@ -7,6 +7,8 @@ tags:
   - waline
   - PaperModX
 draft: false
+hidemeta: false
+ShowLastMod: true
 ---
 
 ### 增加空格之神

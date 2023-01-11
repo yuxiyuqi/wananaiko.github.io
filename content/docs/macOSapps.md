@@ -1,10 +1,13 @@
 ---
 title: "常用的macOS软件整理"
 date: 2023-01-07T20:14:36+08:00
-author: "wananaiko"
-Tag: 
+author: ["wananaiko"]
+tags:
   - macOS
 draft: false
+draft: false
+hidemeta: false
+ShowLastMod: true
 ---
 
 聊一聊 macOS 的一些软件使用心得，希望能够对其他人有所帮助。

@@ -16,7 +16,7 @@ author = "wananaiko"
 mainSections = [ "docs", "posts" ]
 disableAnchoredHeadings = true
 images = [ "cover.png" ]
-favicon = "favicon.ico"
+favicon = "https://images.wananaiko.com/favicon.ico"
 DateFormat = "2006-01-02"
 useCustomAnalytics = true
 defaultTheme = "auto"
@@ -99,13 +99,6 @@ weight = 3
 name = "Links"
 url = "/links/"
 weight = 15
-
-[[languages.en.menu.main]]
-name = "Other"
-url = "https://wananaiko.com"
-
-  [languages.en.menu.main.params]
-  external = false
 
 [languages.zh]
 languageName = ":cn:"
