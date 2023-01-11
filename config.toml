@@ -16,6 +16,7 @@ author = "wananaiko"
 mainSections = [ "docs", "posts" ]
 disableAnchoredHeadings = true
 images = [ "cover.png" ]
+favicon = "favicon.ico"
 DateFormat = "2006-01-02"
 useCustomAnalytics = true
 defaultTheme = "auto"
