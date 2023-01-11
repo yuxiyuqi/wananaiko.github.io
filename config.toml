@@ -20,6 +20,7 @@ favicon = "https://images.wananaiko.com/favicon.ico"
 DateFormat = "2006-01-02"
 useCustomAnalytics = true
 defaultTheme = "auto"
+ShowAuthor = true
 ShowShareButtons = true
 ShowReadingTime = true
 ShowWordCount = false
