@@ -45,8 +45,73 @@ draft: false
 
 ---
 
-下一步：
+### 增加友情链接页面
 
-- [ ] 给Hugo增加相册功能和单页
+打开 `/themes/PaperModX/layouts/blogroll/section.html`，修改为以下代码：
 
-参考：[添加相册功能](https://baohengtao.com/tech/add-gallery-to-hugo/)
+```html
+{{/* section is AKA list */}}
+
+{{- define "main" }}
+<header class="page-header">
+  <h1>{{ .Title }}</h1>
+</header>
+
+<article class="links-container">
+  <blockquote>
+    <p>{{ .Description }}</p>
+  </blockquote>
+
+  <div class="links">
+    {{ range .Site.Data.blogroll }}
+    {{ range sort . "weight" }}
+    <div class="item">
+        <div class="title">
+          {{- $url := urls.Parse .url }}
+          <span class="favicon" style="background-image: url({{ .favicon | default (printf "%s/favicon.ico" .url ) }});"></span
+            ><a href="{{ .url }}" target="_blank">{{ .name }}</a>
+        </div>
+        <div class="description">
+          {{- .domain | default $url.Host }}
+          {{- with .description }}<span class="delimiter"></span>{{ . }}{{- end }}
+        </div>
+      </div>
+    {{ end }}
+{{ end }}
+  </div>
+</article>
+
+{{- end }}
+
+```
+
+在博客根目录或者themes目录下的`data文件夹下`新建 `blogroll.toml` 文件，然后在该文件中添加友链的各项基本信息，比如：
+
+```toml
+[[blogroll]]
+  name = "wananaiko"
+  url = "https://wananaiko.com"
+  avatar = "https://images.wananaiko.com/2023/01/Ug1QAR.png"
+  description = "Design loser,slack off champion."
+  weight = 1
+
+[[blogroll]]
+  name = "wananaiko"
+  url = "https://wananaiko.com"
+  avatar = "https://images.wananaiko.com/2023/01/Ug1QAR.png"
+  description = "Design loser,slack off champion."
+  weight = 2
+```
+
+其中，`weight` 表示该友链的权重，用来排序。然后当然是需要新建一个友链页面，运行命令 `hugo new links/_index.md`。修改 `_index.md` 中的代码为：
+
+```markdown
+---
+title: Blog Roll
+description: Links to the other blogs I recommend.
+layout: "blogroll"
+type: 'blogroll'
+---
+```
+
+接着运行 `Hugo server -D` 检查友链是否显示出来。

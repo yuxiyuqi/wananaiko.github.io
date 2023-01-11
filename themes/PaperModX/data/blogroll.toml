@@ -1,13 +1,21 @@
 [[blogroll]]
-  name = "荷戟独彷徨"
-  url = "https://guanqr.com"
-  avatar = "https://guanqr.com/icons/android-chrome-512x512.png"
-  description = "爱光学，爱生活，爱创造"
+  name = "wananaiko"
+  url = "https://wananaiko.com"
+  avatar = "https://images.wananaiko.com/2023/01/Ug1QAR.png"
+  description = "Design loser,slack off champion."
   weight = 1
 
 [[blogroll]]
-  name = "荷戟独彷徨"
-  url = "https://guanqr.com"
-  avatar = "https://guanqr.com/icons/android-chrome-512x512.png"
-  description = "爱光学，爱生活，爱创造"
+  name = "木木木木木"
+  url = "https://immmmm.com"
+  avatar = "https://images.wananaiko.com/2023/01/o3wqCp.jpg"
+  description = "专业全栈开发工程师，生活化语言的技术博客."
+  weight = 2
+
+
+[[blogroll]]
+  name = "大大的小蜗牛"
+  url = "https://eallion.com"
+  avatar = "https://cdn.jsdelivr.net/gh/eallion/eallion/avatar/eallion.png"
+  description = "机会总是垂青于有准备的人."
   weight = 2
