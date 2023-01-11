@@ -1,7 +1,7 @@
 ---
 title: "Hugo 的一些配置记录"
 date: 2023-01-09T00:24:18+08:00
-author: "wananaiko"
+author: ["wananaiko"]
 tags:
   - hugo
   - waline
