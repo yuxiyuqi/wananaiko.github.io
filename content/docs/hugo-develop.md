@@ -25,13 +25,13 @@ draft: false
 
 ---
 
-### 使用 Waline 评论系统
+### 增加 Waline 评论系统
 
 依照官网的教程，[部署到 Vercel上](https://waline.js.org/guide/deploy/vercel.html)，适配了 Hugo 的暗黑模式。
 
 ---
 
-### 增加鼠标滑动时的彩虹效果
+### 增加鼠标彩虹效果
 
 没有什么意义的效果，纯属好玩，不代表 LGBT。
 
@@ -115,3 +115,18 @@ type: 'blogroll'
 ```
 
 接着运行 `Hugo server -D` 检查友链是否显示出来。
+
+### 增加页面下雪效果
+
+来自 [SeerSu](https://seersu.me/)，修改 `/themes/PaperModX/layouts/_default/baseof.html`，加入以下代码：
+
+```html
+<!-- 增加页面下雪效果 -->
+<script src="/memos/assets/js/snowflakes.min.js"></script>
+<script>
+  var sf = new Snowflakes({
+    color: "#cccccc"
+  })
+</script>
+```
+
