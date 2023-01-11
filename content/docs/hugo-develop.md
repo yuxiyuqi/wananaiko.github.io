@@ -118,14 +118,16 @@ type: 'blogroll'
 
 ### 增加页面下雪效果
 
-来自 [SeerSu](https://seersu.me/)，修改 `/themes/PaperModX/layouts/_default/baseof.html`，加入以下代码：
+可为雪花自定义配置：[Falling snowflakes](https://hcodes.github.io/demo-snowflakes/)，修改 `/themes/PaperModX/layouts/_default/baseof.html`，加入以下代码：
 
 ```html
 <!-- 增加页面下雪效果 -->
-<script src="/memos/assets/js/snowflakes.min.js"></script>
+<script src="https://unpkg.com/magic-snowflakes/dist/snowflakes.min.js"></script>
 <script>
   var sf = new Snowflakes({
-    color: "#cccccc"
+    color: "#cccccc",
+    count: 30,
+    speed: 0.8
   })
 </script>
 ```
