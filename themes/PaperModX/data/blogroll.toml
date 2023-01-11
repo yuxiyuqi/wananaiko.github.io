@@ -18,4 +18,11 @@
   url = "https://eallion.com"
   avatar = "https://cdn.jsdelivr.net/gh/eallion/eallion/avatar/eallion.png"
   description = "机会总是垂青于有准备的人."
-  weight = 2
+  weight = 3
+
+  [[blogroll]]
+  name = "logoReorx’s Forge"
+  url = "https://reorx.com"
+  avatar = "https://reorx.com/images/forge-v2-compat.svg"
+  description = "专业全栈开发工程师，活跃在各个主流互联网平台."
+  weight = 4
