@@ -79,8 +79,8 @@ url = "/docs/"
 weight = 1
 
 [[languages.en.menu.main]]
-name = "Tags"
-url = "/tags/"
+name = "Search"
+url = "/search/"
 weight = 4
 
 [[languages.en.menu.main]]
@@ -103,7 +103,7 @@ name = "Other"
 url = "https://wananaiko.com"
 
   [languages.en.menu.main.params]
-  external = true
+  external = false
 
 [languages.zh]
 languageName = ":cn:"
