@@ -189,6 +189,7 @@ pre:hover .copy-code {
 
 .meta-item {
     display: inline-block;
+    color: var(--secondary);
 }
 .meta-item * {
     color: var(--secondary);
