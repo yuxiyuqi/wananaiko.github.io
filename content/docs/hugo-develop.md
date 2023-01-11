@@ -29,6 +29,44 @@ draft: false
 
 依照官网的教程，[部署到 Vercel上](https://waline.js.org/guide/deploy/vercel.html)，适配了 Hugo 的暗黑模式。
 
+最新的配置文件在：[UNPKG - @waline/client](https://unpkg.com/browse/@waline/client@2.14.6/dist/)
+
+在 `themes/your-hugo-theme/layouts/partials/comments.html` 里添加以下代码：
+
+```html
+<head>
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/@waline/client@2.14.6/dist/waline.css">
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/@waline/client@2.14.6/dist/waline-meta.css">
+  </head>
+  <body>
+    <!-- ... -->
+    <div id="waline"></div>
+    <script type="module">
+      import { init } from 'https://unpkg.com/@waline/client@v2.14.6/dist/waline.mjs';
+  
+      init({
+        el: '#waline',
+        lang: 'zh-CN',
+        reaction: true, // 开启反应
+        serverURL: 'https://chat.wananaiko.design',
+        dark: 'body.dark',
+        copyright: false,
+        
+      // 设置 emoji 为贴吧与哔哩哔哩
+      emoji: [
+        '//cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/tieba',
+        '//cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/bilibili',
+      ],
+      });
+      
+    </script>
+    
+  </body>
+  
+```
+
+
+
 ---
 
 ### 增加鼠标彩虹效果
