@@ -1,5 +1,6 @@
 ---
 title: Blog Roll
 description: Links to the other blogs I recommend.
-type: blogroll
+layout: "blogroll"
+type: 'blogroll'
 ---

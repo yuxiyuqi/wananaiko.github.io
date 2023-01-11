@@ -95,10 +95,12 @@ weight = 3
 
 [[languages.en.menu.main]]
 name = "Links"
-url = "/blogroll/"
-weight = 5
+url = "/links/"
+weight = 15
 
-
+[[languages.en.menu.main]]
+name = "Other"
+url = "https://wananaiko.com"
 
   [languages.en.menu.main.params]
   external = true
