@@ -755,7 +755,8 @@
     background: var(--waline-info-bgcolor);
     color: var(--waline-info-color);
     font-size: var(--waline-info-font-size);
-    line-height: 1.5
+    line-height: 1.5;
+	margin-right: 4px;
   }
   
   .wl-card .wl-meta>span:empty {
