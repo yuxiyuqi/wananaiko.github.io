@@ -19,14 +19,14 @@
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">params</span><span class="p">:</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">TocSide</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;left&#39;</span><span class="w">  </span><span class="c"># or &#39;right&#39;</span><span class="w">
 </span></span></span></code></pre></div><p>ToC will float on the left/right side of the page.
-You can take a look at how <code>'right'</code> feels like in <a href="https://reorx.github.io/hugo-PaperModX/docs/installation/">Installation | Update</a>.</p>
+You can take a look at how <code>'right'</code> feels like in <a href="https://reorx.github.io/hugo-PaperModX/docs/installation/" target="_blank" rel="noopener">Installation | Update</a>.</p>
 <p>The ToC box is responsive, it only shows on the side when minimum screen size is 1440px.</p>
 <p>This feature is enabled on this site.</p>
 <h2 id="instantclick-integration">InstantClick integration</h2>
 <p>By adding config:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">params</span><span class="p">:</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">EnableInstantClick</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
-</span></span></span></code></pre></div><p><a href="http://instantclick.io/">InstantClick</a> will be enabled,
+</span></span></span></code></pre></div><p><a href="http://instantclick.io/" target="_blank" rel="noopener">InstantClick</a> will be enabled,
 making navigation behaves like Single Page Application.</p>
 <p>Note that <code>/search</code> pages are omitted from InstantClick
 to prevent conflicts from search&rsquo;s JavaScript,
@@ -51,7 +51,7 @@ by override the following css variables in <code>assets/css/extended/custom.css<
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></div><h2 id="customize-pagniator-size">Customize pagniator size</h2>
 <p>In section pages, if you want the paginator size be different from the
-<a href="https://gohugo.io/templates/pagination/#configure-pagination">global config</a>,
+<a href="https://gohugo.io/templates/pagination/#configure-pagination" target="_blank" rel="noopener">global config</a>,
 you can add <code>paginate</code> in the frontmatter to customize.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nn">---</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">paginate</span><span class="p">:</span><span class="w"> </span><span class="m">10</span><span class="w">
@@ -66,7 +66,7 @@ this will add a small icon to the end, and make the link open in new tab when cl
 </span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">params</span><span class="p">:</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">external</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
 </span></span></span></code></pre></div><h2 id="social-icons-from-simple-icons">Social icons from Simple Icons</h2>
-<p>Add social icons with <code>-simple</code> suffix from <a href="https://simpleicons.org/">Simple Icons</a>.</p>
+<p>Add social icons with <code>-simple</code> suffix from <a href="https://simpleicons.org/" target="_blank" rel="noopener">Simple Icons</a>.</p>
 <p>Available icons:</p>
 <ul>
 <li>github-simple</li>
@@ -77,7 +77,7 @@ this will add a small icon to the end, and make the link open in new tab when cl
 </ul>
 <p>The icons are moved from <code>layouts/partials/svg.html</code> to <code>data/svg.toml</code>,
 makes it easier to maintain, it&rsquo;s now possible to have an index page
-to show all the icons, check it out at: <a href="https://reorx.github.io/hugo-PaperModX/docs/icons_preview/">Icons Preview</a></p>
+to show all the icons, check it out at: <a href="https://reorx.github.io/hugo-PaperModX/docs/icons_preview/" target="_blank" rel="noopener">Icons Preview</a></p>
 <h2 id="opinionated-ui-enhancements">Opinionated UI enhancements</h2>
 <ul>
 <li>Distinguish home page width and post page width, post page is wider

@@ -1,11 +1,333 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>PaperModX Docs on PaperModX</title>
+    <title>Article on wananaiko</title>
     <link>https://wananaiko.design/docs/</link>
-    <description>Recent content in PaperModX Docs on PaperModX</description>
+    <description>Recent content in Article on wananaiko</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 13 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://wananaiko.design/docs/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 09 Jan 2023 00:24:18 +0800</lastBuildDate><atom:link href="https://wananaiko.design/docs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugo 的一些配置记录</title>
+      <link>https://wananaiko.design/docs/hugo-develop/</link>
+      <pubDate>Mon, 09 Jan 2023 00:24:18 +0800</pubDate>
+      
+      <guid>https://wananaiko.design/docs/hugo-develop/</guid>
+      <description>增加空格之神 使用空格之神的浏览器插件很久了，真的是阅读强迫症患者的福音，空格之神项目地址
+在 Hugo的 /layouts/_default/baseof.html 内增加以下代码：
+&amp;lt;script src=&amp;#34;https://cdnjs.cloudflare.com/ajax/libs/pangu/4.0.7/pangu.min.js&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;script&amp;gt; pangu.spacingPage(); &amp;lt;/script&amp;gt; 用完后感觉整个世界都清爽了 🤣
+增加 Waline 评论系统 依照官网的教程，部署到 Vercel上，适配了 Hugo 的暗黑模式。
+增加鼠标彩虹效果 没有什么意义的效果，纯属好玩，不代表 LGBT。
+在 Hugo 的 /layouts/_default/baseof.html 内增加以下代码：
+&amp;lt;!-- 增加鼠标滑动时的彩虹效果 --&amp;gt; &amp;lt;script async src=&amp;#34;/memos/assets/js/browser.js&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;script&amp;gt;window.addEventListener(&amp;#39;load&amp;#39;,(event)=&amp;gt;{new cursoreffects.rainbowCursor();});&amp;lt;/script&amp;gt; 增加友情链接页面 打开 /themes/PaperModX/layouts/blogroll/section.html，修改为以下代码：
+{{/* section is AKA list */}} {{- define &amp;#34;main&amp;#34; }} &amp;lt;header class=&amp;#34;page-header&amp;#34;&amp;gt; &amp;lt;h1&amp;gt;{{ .Title }}&amp;lt;/h1&amp;gt; &amp;lt;/header&amp;gt; &amp;lt;article class=&amp;#34;links-container&amp;#34;&amp;gt; &amp;lt;blockquote&amp;gt; &amp;lt;p&amp;gt;{{ .Description }}&amp;lt;/p&amp;gt; &amp;lt;/blockquote&amp;gt; &amp;lt;div class=&amp;#34;links&amp;#34;&amp;gt; {{ range .Site.Data.blogroll }} {{ range sort .</description>
+      <content:encoded><![CDATA[<h3 id="增加空格之神">增加空格之神</h3>
+<p>使用空格之神的浏览器插件很久了，真的是阅读强迫症患者的福音，<a href="https://github.com/vinta/pangu.js" target="_blank" rel="noopener">空格之神项目地址</a></p>
+<p>在 Hugo的 /layouts/_default/baseof.html 内增加以下代码：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://cdnjs.cloudflare.com/ajax/libs/pangu/4.0.7/pangu.min.js&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">pangu</span><span class="p">.</span><span class="nx">spacingPage</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span></code></pre></div><p>用完后感觉整个世界都清爽了 🤣</p>
+<hr>
+<h3 id="增加-waline-评论系统">增加 Waline 评论系统</h3>
+<p>依照官网的教程，<a href="https://waline.js.org/guide/deploy/vercel.html" target="_blank" rel="noopener">部署到 Vercel上</a>，适配了 Hugo 的暗黑模式。</p>
+<hr>
+<h3 id="增加鼠标彩虹效果">增加鼠标彩虹效果</h3>
+<p>没有什么意义的效果，纯属好玩，不代表 LGBT。</p>
+<p>在 Hugo 的 /layouts/_default/baseof.html 内增加以下代码：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="c">&lt;!-- 增加鼠标滑动时的彩虹效果 --&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span> <span class="na">async</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;/memos/assets/js/browser.js&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span><span class="nb">window</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;load&#39;</span><span class="p">,(</span><span class="nx">event</span><span class="p">)=&gt;{</span><span class="k">new</span> <span class="nx">cursoreffects</span><span class="p">.</span><span class="nx">rainbowCursor</span><span class="p">();});&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span></code></pre></div><hr>
+<h3 id="增加友情链接页面">增加友情链接页面</h3>
+<p>打开 <code>/themes/PaperModX/layouts/blogroll/section.html</code>，修改为以下代码：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">{{/* section is AKA list */}}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">{{- define &#34;main&#34; }}
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">header</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;page-header&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>{{ .Title }}<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">header</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">article</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;links-container&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">blockquote</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>{{ .Description }}<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">blockquote</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;links&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    {{ range .Site.Data.blogroll }}
+</span></span><span class="line"><span class="cl">    {{ range sort . &#34;weight&#34; }}
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;item&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;title&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">          {{- $url := urls.Parse .url }}
+</span></span><span class="line"><span class="cl">          <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;favicon&#34;</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;background-image: url({{ .favicon | default (printf &#34;</span><span class="err">%</span><span class="na">s</span><span class="err">/</span><span class="na">favicon</span><span class="err">.</span><span class="na">ico</span><span class="err">&#34;</span> <span class="err">.</span><span class="na">url</span> <span class="err">)</span> <span class="err">}});&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span>
+</span></span><span class="line"><span class="cl">            <span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;{{ .url }}&#34;</span> <span class="na">target</span><span class="o">=</span><span class="s">&#34;_blank&#34;</span><span class="p">&gt;</span>{{ .name }}<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;description&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">          {{- .domain | default $url.Host }}
+</span></span><span class="line"><span class="cl">          {{- with .description }}<span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;delimiter&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>{{ . }}{{- end }}
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    {{ end }}
+</span></span><span class="line"><span class="cl">{{ end }}
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">article</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">{{- end }}
+</span></span></code></pre></div><p>在博客根目录或者themes目录下的<code>data文件夹下</code>新建 <code>blogroll.toml</code> 文件，然后在该文件中添加友链的各项基本信息，比如：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="p">[[</span><span class="nx">blogroll</span><span class="p">]]</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;wananaiko&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">url</span> <span class="p">=</span> <span class="s2">&#34;https://wananaiko.com&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">favicon</span> <span class="p">=</span> <span class="s2">&#34;https://images.wananaiko.com/2023/01/Ug1QAR.png&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">description</span> <span class="p">=</span> <span class="s2">&#34;Design loser,slack off champion.&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">weight</span> <span class="p">=</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">[[</span><span class="nx">blogroll</span><span class="p">]]</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;wananaiko&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">url</span> <span class="p">=</span> <span class="s2">&#34;https://wananaiko.com&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">favicon</span> <span class="p">=</span> <span class="s2">&#34;https://images.wananaiko.com/2023/01/Ug1QAR.png&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">description</span> <span class="p">=</span> <span class="s2">&#34;Design loser,slack off champion.&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">weight</span> <span class="p">=</span> <span class="mi">2</span>
+</span></span></code></pre></div><p>其中，<code>weight</code> 表示该友链的权重，用来排序。然后当然是需要新建一个友链页面，运行命令 <code>hugo new links/_index.md</code>。修改 <code>_index.md</code> 中的代码为：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl">---
+</span></span><span class="line"><span class="cl">title: Blog Roll
+</span></span><span class="line"><span class="cl">description: Links to the other blogs I recommend.
+</span></span><span class="line"><span class="cl">layout: &#34;blogroll&#34;
+</span></span><span class="line"><span class="cl">type: &#39;blogroll&#39;
+</span></span><span class="line"><span class="cl">---
+</span></span></code></pre></div><p>接着运行 <code>Hugo server -D</code> 检查友链是否显示出来。</p>
+<hr>
+<h3 id="增加页面下雪效果">增加页面下雪效果</h3>
+<p>可为雪花自定义配置：<a href="https://hcodes.github.io/demo-snowflakes/" target="_blank" rel="noopener">Falling snowflakes</a>，修改 <code>/themes/PaperModX/layouts/_default/baseof.html</code>，加入以下代码：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="c">&lt;!-- 增加页面下雪效果 --&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://unpkg.com/magic-snowflakes/dist/snowflakes.min.js&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="kd">var</span> <span class="nx">sf</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Snowflakes</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">color</span><span class="o">:</span> <span class="s2">&#34;#cccccc&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">count</span><span class="o">:</span> <span class="mi">30</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">speed</span><span class="o">:</span> <span class="mf">0.8</span>
+</span></span><span class="line"><span class="cl">  <span class="p">})</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span></code></pre></div><hr>
+<h3 id="搜索页展示标签列表">搜索页展示标签列表</h3>
+<p>编辑搜索页面模板 <code>./layouts/_default/search.html</code>，修改代码为：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">{{- define &#34;main&#34; }}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">header</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;page-header&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>{{- (printf &#34;%s<span class="ni">&amp;nbsp;</span>&#34; .Title ) | htmlUnescape -}}
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">svg</span> <span class="na">xmlns</span><span class="o">=</span><span class="s">&#34;http://www.w3.org/2000/svg&#34;</span> <span class="na">width</span><span class="o">=</span><span class="s">&#34;28&#34;</span> <span class="na">height</span><span class="o">=</span><span class="s">&#34;28&#34;</span> <span class="na">viewBox</span><span class="o">=</span><span class="s">&#34;0 0 24 24&#34;</span> <span class="na">fill</span><span class="o">=</span><span class="s">&#34;none&#34;</span>
+</span></span><span class="line"><span class="cl">            <span class="na">stroke</span><span class="o">=</span><span class="s">&#34;currentColor&#34;</span> <span class="na">stroke-width</span><span class="o">=</span><span class="s">&#34;2&#34;</span> <span class="na">stroke-linecap</span><span class="o">=</span><span class="s">&#34;round&#34;</span> <span class="na">stroke-linejoin</span><span class="o">=</span><span class="s">&#34;round&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">&lt;</span><span class="nt">circle</span> <span class="na">cx</span><span class="o">=</span><span class="s">&#34;11&#34;</span> <span class="na">cy</span><span class="o">=</span><span class="s">&#34;11&#34;</span> <span class="na">r</span><span class="o">=</span><span class="s">&#34;8&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">circle</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">&lt;</span><span class="nt">line</span> <span class="na">x1</span><span class="o">=</span><span class="s">&#34;21&#34;</span> <span class="na">y1</span><span class="o">=</span><span class="s">&#34;21&#34;</span> <span class="na">x2</span><span class="o">=</span><span class="s">&#34;16.65&#34;</span> <span class="na">y2</span><span class="o">=</span><span class="s">&#34;16.65&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">line</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;/</span><span class="nt">svg</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    {{- if .Description }}
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;post-description&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        {{ .Description }}
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    {{- end }}
+</span></span><span class="line"><span class="cl">    {{- if not (.Param &#34;hideMeta&#34;) }}
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;post-meta&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    {{- end }}
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">header</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;searchbox&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;searchInput&#34;</span> <span class="na">autofocus</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">&#34;{{ .Params.placeholder | default (printf &#34;</span><span class="err">%</span><span class="na">s</span> <span class="err">↵&#34;</span> <span class="err">.</span><span class="na">Title</span><span class="err">)</span> <span class="err">}}&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="na">aria-label</span><span class="o">=</span><span class="s">&#34;search&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;search&#34;</span> <span class="na">autocomplete</span><span class="o">=</span><span class="s">&#34;off&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">ul</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;searchResults&#34;</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">&#34;search results&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">{{- if not (.Param &#34;hideTags&#34;) }}
+</span></span><span class="line"><span class="cl">{{- $taxonomies := .Site.Taxonomies.tags }}
+</span></span><span class="line"><span class="cl">{{- if gt (len $taxonomies) 0 }}
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">h2</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;margin-top: 32px&#34;</span><span class="p">&gt;</span>{{- (.Param &#34;tagsTitle&#34;) | default &#34;tags&#34; }}<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">ul</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;terms-tags&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    {{- range $name, $value := $taxonomies }}
+</span></span><span class="line"><span class="cl">    {{- $count := .Count }}
+</span></span><span class="line"><span class="cl">    {{- with site.GetPage (printf &#34;/tags/%s&#34; $name) }}
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;{{ .Permalink }}&#34;</span><span class="p">&gt;</span>{{ .Name }} <span class="p">&lt;</span><span class="nt">sup</span><span class="p">&gt;&lt;</span><span class="nt">strong</span><span class="p">&gt;&lt;</span><span class="nt">sup</span><span class="p">&gt;</span>{{ $count }}<span class="p">&lt;/</span><span class="nt">sup</span><span class="p">&gt;&lt;/</span><span class="nt">strong</span><span class="p">&gt;&lt;/</span><span class="nt">sup</span><span class="p">&gt;</span> <span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    {{- end }}
+</span></span><span class="line"><span class="cl">    {{- end }}
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">{{- end }}
+</span></span><span class="line"><span class="cl">{{- end }}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">{{- end }}{{/* end main */}}
+</span></span></code></pre></div>]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>让 ITERM2 实时显示梯子状态</title>
+      <link>https://wananaiko.design/docs/how-iterm2-show-current-proxy-status/</link>
+      <pubDate>Sun, 08 Jan 2023 23:04:09 +0800</pubDate>
+      
+      <guid>https://wananaiko.design/docs/how-iterm2-show-current-proxy-status/</guid>
+      <description>最近在 iterm2 里使用 curl、wget、brew、git 等命令时，经常会遇到相应很慢的情况，只能慢慢的等待，网上查了查资料，可以通过以下方法实现。
+修改 ~/.zshrc，并加入以下内容：
+export proxy_host=127.0.0.1 export proxy_port=8888//自定义梯子端口 export switch_proxy=0 export cdc_in=0 function pp(){ if [ $switch_proxy = 0 ]; then export http_proxy=&amp;#34;$proxy_host:$proxy_port&amp;#34; export https_proxy=&amp;#34;$proxy_host:$proxy_port&amp;#34; export ftp_proxy=&amp;#34;$proxy_host:$proxy_port&amp;#34; export GOPROXY=&amp;#34;$proxy_host:$Proxy_port&amp;#34; switch_proxy=l echo -e &amp;#34;梯子模式&amp;#34; else unset http_proxy unset https_proxy unset ftp_proxy unset GOPROXY switch_proxy=0 echo -e &amp;#34;和谐模式&amp;#34; fi } 保存后退出，打开 iterm2，输入pp即可在梯子模式和和谐模式之间切换。
+参考：让 iTerm2 实时显示梯子状态 ，还有另外两种方法。</description>
+      <content:encoded><![CDATA[<p>最近在 iterm2 里使用 curl、wget、brew、git 等命令时，经常会遇到相应很慢的情况，只能慢慢的等待，网上查了查资料，可以通过以下方法实现。</p>
+<p>修改 <code>~/.zshrc</code>，并加入以下内容：</p>
+<pre tabindex="0"><code class="language-hljs" data-lang="hljs">export proxy_host=127.0.0.1
+export proxy_port=8888//自定义梯子端口
+export switch_proxy=0
+export cdc_in=0
+ 
+function pp(){
+	if [ $switch_proxy = 0 ]; then
+    export http_proxy=&#34;$proxy_host:$proxy_port&#34;
+    export https_proxy=&#34;$proxy_host:$proxy_port&#34;
+    export ftp_proxy=&#34;$proxy_host:$proxy_port&#34;
+    export GOPROXY=&#34;$proxy_host:$Proxy_port&#34;
+    switch_proxy=l
+    echo -e &#34;梯子模式&#34;
+  else
+ 
+    unset http_proxy
+    unset https_proxy
+    unset ftp_proxy
+    unset GOPROXY
+    switch_proxy=0
+ 
+    echo -e &#34;和谐模式&#34;
+  fi
+}
+</code></pre><p>保存后退出，打开 iterm2，输入<code>pp</code>即可在梯子模式和和谐模式之间切换。</p>
+<p>参考：<a href="https://tin6.com/post/how-iterm2-show-current-proxy-status/" target="_blank" rel="noopener">让 iTerm2 实时显示梯子状态 </a>，还有另外两种方法。</p>
+<p>
+  <img loading="lazy" src="https://images.wananaiko.com/2023/01/WLh4ok.png" alt="WLh4ok"  /></p>
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>常用的macOS软件整理</title>
+      <link>https://wananaiko.design/docs/macosapps/</link>
+      <pubDate>Sat, 07 Jan 2023 20:14:36 +0800</pubDate>
+      
+      <guid>https://wananaiko.design/docs/macosapps/</guid>
+      <description>聊一聊 macOS 的一些软件使用心得，希望能够对其他人有所帮助。
+提升效率 Setapp：参加了别人的家庭计划，属于团购车，年费 285。感觉还是很划算的，可以省去你单独买一些软件授权的费用，减少折腾。
+BetterZip：解压工具。Setapp 内下载。
+One Switch：菜单栏快捷工具，主要用来防止电脑休眠。Setapp 内下载。
+Raycast：快捷启动工具，提供了一些多应用拓展支持，对开发比较友好。目前已经代替 utools 使用，类似的还有 Alfred，本地化不如 utools，不过历史剪切板、清理垃圾箱，快捷启动等常用功能已经基本满足使用了。
+Mosaic：窗口管理工具。Setapp 内下载。
+Dropzone：主要用来自动整理文件，大部分文件的存储都是保存在了 Download 目录下，有公司文件、素材文件、安装软件等等乱七八糟的，时间一长就会导致下载目录很混乱，用这个来移动整理文件很方便。Setapp 内下载。
+PixelSnap 和 CleanShot X：前者用标尺来大概量个尺寸，后者是截图工具，有联动。Cleanshot X 真的好用，可以云端上传截图后自动获取链接，还支持 OCR 识别，图片编辑等。Setapp 内下载。
+NetNewsWire：RSS 阅读器，我把它定义为效率工具，最大的痛点是可以订阅 Twitter 用户的内容，结合 RSSHub 使用有奇效，除了订阅常见的新闻资讯网站、博客，还能订阅 Bilibili、Telegram 频道等。作为我日常主要的信息输入入口之一，不需要频繁打开很多网站去查阅。已放弃 NetNewsWire 改用 Reeder，配合 iOS 端的 Reeder，更方便好用。
+Popclip：划词扩展工具，可以划词快捷复制粘贴、打开链接、搜索、翻译等。Setapp 内下载。
+ARC 浏览器：交互很酷又很实用的先进浏览器，我也将它定义为效率工具，通过 Space 空间划分了工作、生活、设计、摄影几个空间，每个空间浏览不同的页面。可以看看少数派网站上关于它的介绍。目前需要邀请注册，可联系我邀请，被邀请后需要等待一段时间才能收到官方邀请。
+Canary Mail：邮箱管理工具，因为经常会用 Gmail 去注册一些网站，Gmail 也是我的主要邮箱，可以用起来一键打开大部分网站的退订邮件网页，方便退订邮件。Setapp 内下载。
+MenubarX：菜单栏网页拓展，结合在线翻译网页，可以当成一个简单的菜单栏翻译工具，比如火山翻译和 DeepL 翻译。Setapp 内下载。
+Rime 输入法：一直在用的输入法工具，定制化输入法，我自己是觉得很好用的。推荐结合 1 个设置和 1 个词库，一起使用。主要配置文件推荐这个：ssnhd 的配置，再结合这里的 Dict 词库文件。官网下载。</description>
+      <content:encoded><![CDATA[<p>聊一聊 macOS 的一些软件使用心得，希望能够对其他人有所帮助。</p>
+<h2 id="提升效率">提升效率</h2>
+<p><strong>Setapp</strong>：参加了别人的家庭计划，属于团购车，年费 285。感觉还是很划算的，可以省去你单独买一些软件授权的费用，减少折腾。</p>
+<p><strong>BetterZip</strong>：解压工具。Setapp 内下载。</p>
+<p><strong>One Switch</strong>：菜单栏快捷工具，主要用来防止电脑休眠。Setapp 内下载。</p>
+<p><strong>Raycast</strong>：快捷启动工具，提供了一些多应用拓展支持，对开发比较友好。目前已经代替 utools 使用，类似的还有 Alfred，本地化不如 utools，不过历史剪切板、清理垃圾箱，快捷启动等常用功能已经基本满足使用了。</p>
+<p><strong>Mosaic</strong>：窗口管理工具。Setapp 内下载。</p>
+<p><strong>Dropzone</strong>：主要用来自动整理文件，大部分文件的存储都是保存在了 Download 目录下，有公司文件、素材文件、安装软件等等乱七八糟的，时间一长就会导致下载目录很混乱，用这个来移动整理文件很方便。Setapp 内下载。</p>
+<p><strong>PixelSnap</strong> 和 <strong>CleanShot X</strong>：前者用标尺来大概量个尺寸，后者是截图工具，有联动。Cleanshot X 真的好用，可以云端上传截图后自动获取链接，还支持 OCR 识别，图片编辑等。Setapp 内下载。</p>
+<p><strong>NetNewsWire</strong>：RSS 阅读器，我把它定义为效率工具，最大的痛点是可以订阅 Twitter 用户的内容，结合 <a href="https://docs.rsshub.app/" target="_blank" rel="noopener">RSSHub</a> 使用有奇效，除了订阅常见的新闻资讯网站、博客，还能订阅 Bilibili、Telegram 频道等。作为我日常主要的信息输入入口之一，不需要频繁打开很多网站去查阅。已放弃 NetNewsWire 改用 <strong>Reeder</strong>，配合 iOS 端的 Reeder，更方便好用。</p>
+<p><strong>Popclip</strong>：划词扩展工具，可以划词快捷复制粘贴、打开链接、搜索、翻译等。Setapp 内下载。</p>
+<p><strong>ARC 浏览器</strong>：交互很酷又很实用的先进浏览器，我也将它定义为效率工具，通过 Space 空间划分了工作、生活、设计、摄影几个空间，每个空间浏览不同的页面。可以看看少数派网站上<a href="https://sspai.com/post/75216" target="_blank" rel="noopener">关于它的介绍</a>。目前需要邀请注册，可联系我邀请，被邀请后需要等待一段时间才能收到官方邀请。</p>
+<p><strong>Canary Mail</strong>：邮箱管理工具，因为经常会用 Gmail 去注册一些网站，Gmail 也是我的主要邮箱，可以用起来一键打开大部分网站的退订邮件网页，方便退订邮件。Setapp 内下载。</p>
+<p><strong>MenubarX</strong>：菜单栏网页拓展，结合在线翻译网页，可以当成一个简单的菜单栏翻译工具，比如<a href="https://translate.volcengine.com/" target="_blank" rel="noopener">火山翻译</a>和 <a href="https://www.deepl.com/zh/translator-mobile" target="_blank" rel="noopener">DeepL 翻译</a>。Setapp 内下载。</p>
+<p><strong>Rime 输入法</strong>：一直在用的输入法工具，定制化输入法，我自己是觉得很好用的。推荐结合 1 个设置和 1 个词库，一起使用。主要配置文件推荐这个：<a href="https://github.com/ssnhd/rime" target="_blank" rel="noopener">ssnhd 的配置</a>，再结合这里的 <a href="https://github.com/wongdean/rime-settings" target="_blank" rel="noopener">Dict 词库文件</a>。<a href="https://rime.im/" target="_blank" rel="noopener">官网下载</a>。</p>
+<p><strong>Bartender</strong>：菜单栏图标管理工具，只把最重要的工具性图标放在主视图。Setapp 内下载。</p>
+<p><strong><del>柠檬清理</del></strong>：卸载 App 和查找大型文件比较省心。已使用 <strong>App Cleaner &amp; Uninstaller</strong> 代替。</p>
+<p><strong>uPic</strong>：目前正在使用的图床工具。</p>
+<p><strong>Typora</strong>：目前正在使用的Markdown编辑器。</p>
+<hr>
+<h2 id="系统美化">系统美化</h2>
+<p><strong><del>IconChamp</del></strong>：macOS 上换图标和主题的工具，因为喜欢软件图标风格统一，把所有图标都换成了方形的，有点强迫症了。建议购买授权，软件升级后，图标可以自动更新为之前已经替换过的。</p>
+<p><strong>IconChanger</strong>：现在改用这个图标替换工具，在软件里直接拉取 <a href="https://macosicons.com/" target="_blank" rel="noopener">https://macosicons.com/</a> 站点的图标并直接替换，效率更高了，并且 IconChamp 有一些 Bug，图标经常会无法替换。<a href="https://github.com/underthestars-zhy/IconChanger" target="_blank" rel="noopener">下载软件</a></p>
+<p><strong>Dynamischer Wallpaper – Kontur</strong>：只是一套非常喜欢的动态壁纸，会随着时间变化而变化，共 8 张，<a href="https://kram.store/products/dynamischer-wallpaper-kontur" target="_blank" rel="noopener">这里购买</a>。</p>
+<hr>
+<h2 id="工作规划">工作规划</h2>
+<p><strong>Noteplan</strong>：目前主要用来作为知识管理工具，也可以结合日程制定一些计划。Setapp 内下载。</p>
+<p><strong>Cron</strong>：基于谷歌日历的日程管理软件，我用这个来管理日常的工作计划，界面很好看。目前邀请制。</p>
+<p><strong>EdrawProj</strong> ：亿图项目管理软件，主要用来制定中大型项目的计划排期和人工成本核算。就是界面很丑，功能很好用。</p>
+<hr>
+<p>update：2023-01-07</p>
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>基于 Vercel 和 Fly.io 免费部署的应用</title>
+      <link>https://wananaiko.design/docs/dec1220/</link>
+      <pubDate>Tue, 20 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://wananaiko.design/docs/dec1220/</guid>
+      <description>Hugo 部署到 Vercel 最近考虑把 Wordpress 博客换到 Hugo，一番折腾之后，通过 Github+Vercel 的方式实现了自动部署，还挺方便的，以后只需要在本地编写 Markdown 文件并发布到 Github 就可以了。以 macOS 下为例：
+登陆 GitHub，新建一个 GitHub pages，名为 username.github.io。
+使用 GitHub 登陆 Vercel，Import 刚才新建的 pages。
+Vercel 里的 Project Name 随便写，Build &amp;amp; Development Settings 选择 Hugo，Hugo 的 Version 填写最新的版本号，其他默认，最后提交。
+把 Github pages 仓库克隆到本地，比如我这里为：/Users/aiko/wananaiko.github.io，终端里打开该目录后。输入 Hugo server 验证是否可以正常启动。
+如果你想要安装和本站一样的主题，可以参考这篇文章：Installation | Update | PaperModX 其他参考文章：
+hugo自动部署到vercel
+如何使用 Hugo 进行个人博客搭建
+将 Memos 作为单页添加到 Hugo 中 方法参考了文章 向Hugo中添加静态单页面Static-Single
+建议将 config.toml 里的 EnableInstantClick设置为 false，避免 memos 内容偶尔出现不加载的情况。</description>
+      <content:encoded><![CDATA[<h2 id="hugo-部署到-vercel">Hugo 部署到 Vercel</h2>
+<p>最近考虑把 Wordpress 博客换到 Hugo，一番折腾之后，通过 Github+Vercel 的方式实现了自动部署，还挺方便的，以后只需要在本地编写 Markdown 文件并发布到 Github 就可以了。以 macOS 下为例：</p>
+<ol>
+<li>
+<p>登陆 GitHub，新建一个 GitHub pages，名为 username.github.io。</p>
+</li>
+<li>
+<p>使用 GitHub 登陆 Vercel，Import 刚才新建的 pages。</p>
+</li>
+<li>
+<p>Vercel 里的 Project Name 随便写，Build &amp; Development Settings 选择 Hugo，Hugo 的 Version 填写最新的版本号，其他默认，最后提交。</p>
+</li>
+<li>
+<p>把 Github pages 仓库克隆到本地，比如我这里为：/Users/aiko/wananaiko.github.io，终端里打开该目录后。输入 <code>Hugo server</code> 验证是否可以正常启动。</p>
+</li>
+<li>
+<p>如果你想要安装和本站一样的主题，可以参考这篇文章：<a href="https://reorx.github.io/hugo-PaperModX/docs/installation/" target="_blank" rel="noopener">Installation | Update | PaperModX </a></p>
+</li>
+</ol>
+<p>其他参考文章：</p>
+<p><a href="https://www.leftpocket.cn/post/hugo/hugo_vercel/" target="_blank" rel="noopener">hugo自动部署到vercel</a></p>
+<p><a href="https://humble-blog.vercel.app/hugo/#comments" target="_blank" rel="noopener">如何使用 Hugo 进行个人博客搭建</a></p>
+<h3 id="将-memos-作为单页添加到-hugo-中">将 Memos 作为单页添加到 Hugo 中</h3>
+<p>方法参考了文章 <a href="https://blog.csdn.net/qq_29102545/article/details/121454974" target="_blank" rel="noopener">向Hugo中添加静态单页面Static-Single</a></p>
+<p>建议将 config.toml 里的 EnableInstantClick设置为 false，避免 memos 内容偶尔出现不加载的情况。</p>
+<pre tabindex="0"><code>params:
+  EnableInstantClick: false
+</code></pre><p><a href="https://wananaiko.design/memos/" target="_blank" rel="noopener">memos | wananaiko</a> 页面样式来自 <a href="https://github.com/eallion/memos.top" target="_blank" rel="noopener">eallion/memos.top</a></p>
+<p>在折腾的过程中，你需要用到 <a href="https://transform.tools/yaml-to-toml" target="_blank" rel="noopener">YAML to TOML 在线转换</a></p>
+<hr>
+<h2 id="umami-部署到-vercel">Umami 部署到 Vercel</h2>
+<p>将网站统计分析工具 Umami 部署到 Vercel 上。之前体验过 <a href="https://plausible.io/" target="_blank" rel="noopener">Plausible Analytics</a>，试用结束之后就放弃了，个人小站，暂时觉得还没有必要为统计工具付费。缺点是查看面板数据感觉加载有点慢，不过数据还算可靠，又不是不能用。</p>
+<p>参考文章：<a href="https://digu.plus/post/8034746f42b3495fbb19926e3fb8ec4f/" target="_blank" rel="noopener">部署独立统计分析服务Umami</a></p>
+<hr>
+<h2 id="rsshub-部署到-vercel">RSSHub 部署到 Vercel</h2>
+<p><a href="https://docs.rsshub.app/install/#bu-shu-dao-vercel-zeit-now" target="_blank" rel="noopener">可以一键部署到 Vercel</a>，也是为了配合 Reeder 使用。</p>
+<hr>
+<h2 id="memos-部署到-flyio">memos 部署到 fly.io</h2>
+<p>参考文章：<a href="https://github.com/hu3rror/memos-on-fly/" target="_blank" rel="noopener">hu3rror/memos-on-fly: ✍️</a></p>
+<p>感谢  <mark>hu3rror</mark>   帮忙检测了错误。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 新建 Bucket，type 改成 Private，另外2个设置都是 Disabled 。需要将下面代码中 &lt;keyId&gt; 和 &lt; applicationKey &gt; 替换为 Backblaze 平台上 App Keys 里生成的。</span>
+</span></span><span class="line"><span class="cl">flyctl secrets <span class="nb">set</span> <span class="nv">LITESTREAM_ACCESS_KEY_ID</span><span class="o">=</span><span class="s2">&#34;&lt;keyId&gt;&#34;</span> <span class="nv">LITESTREAM_SECRET_ACCESS_KEY</span><span class="o">=</span><span class="s2">&#34;&lt;applicationKey&gt;&#34;</span>
+</span></span></code></pre></div><p>Backblaze 里的数据库 本质上是调用了 sqlite 的 wal mode，所以是以 &ldquo;WAL&rdquo;（预写日志）形式存在的。上传备份的数据库替换方法，参考文章：<a href="https://royli.dev/blog/2022/use-litestream-to-duplicate-sqlite-databases" target="_blank" rel="noopener">借由 Litestream 方便备份你的 SQLite 数据库 - Roy Li&rsquo;s Blog</a> 还要在 macOS 上通过虚拟机安装 Linux 操作，还挺麻烦的，我也正在研究……</p>
+<p>memos提示更新的时候，使用以下命令重新部署：<code>flyctl deploy --no-cache</code></p>
+<hr>
+<h2 id="感谢-chatgpt-的帮助">感谢 ChatGPT 的帮助</h2>
+<p>在折腾的过程中，遇到的一些问题也通过向 ChatGPT 提问获得了帮助。</p>
+<hr>
+<h2 id="等待继续研究折腾的">等待继续研究折腾的</h2>
+<ul>
+<li><input disabled="" type="checkbox"> remark42 评论系统</li>
+<li><input disabled="" type="checkbox"> 将旧服务器中的 memos 数据迁移到 Backblaze</li>
+</ul>
+]]></content:encoded>
+    </item>
+    
     <item>
       <title>Icons Preview</title>
       <link>https://wananaiko.design/docs/icons_preview/</link>
@@ -30,14 +352,14 @@ comparing to the original PaperMod.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">params</span><span class="p">:</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">TocSide</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;left&#39;</span><span class="w">  </span><span class="c"># or &#39;right&#39;</span><span class="w">
 </span></span></span></code></pre></div><p>ToC will float on the left/right side of the page.
-You can take a look at how <code>'right'</code> feels like in <a href="https://reorx.github.io/hugo-PaperModX/docs/installation/">Installation | Update</a>.</p>
+You can take a look at how <code>'right'</code> feels like in <a href="https://reorx.github.io/hugo-PaperModX/docs/installation/" target="_blank" rel="noopener">Installation | Update</a>.</p>
 <p>The ToC box is responsive, it only shows on the side when minimum screen size is 1440px.</p>
 <p>This feature is enabled on this site.</p>
 <h2 id="instantclick-integration">InstantClick integration</h2>
 <p>By adding config:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">params</span><span class="p">:</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">EnableInstantClick</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
-</span></span></span></code></pre></div><p><a href="http://instantclick.io/">InstantClick</a> will be enabled,
+</span></span></span></code></pre></div><p><a href="http://instantclick.io/" target="_blank" rel="noopener">InstantClick</a> will be enabled,
 making navigation behaves like Single Page Application.</p>
 <p>Note that <code>/search</code> pages are omitted from InstantClick
 to prevent conflicts from search&rsquo;s JavaScript,
@@ -62,7 +384,7 @@ by override the following css variables in <code>assets/css/extended/custom.css<
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></div><h2 id="customize-pagniator-size">Customize pagniator size</h2>
 <p>In section pages, if you want the paginator size be different from the
-<a href="https://gohugo.io/templates/pagination/#configure-pagination">global config</a>,
+<a href="https://gohugo.io/templates/pagination/#configure-pagination" target="_blank" rel="noopener">global config</a>,
 you can add <code>paginate</code> in the frontmatter to customize.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nn">---</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">paginate</span><span class="p">:</span><span class="w"> </span><span class="m">10</span><span class="w">
@@ -79,13 +401,13 @@ this will add a small icon to the end, and make the link open in new tab when cl
 </span></span></span></code></pre></div><h2 id="highlight-code-with-chroma-no-bullshit">Highlight code with Chroma, no bullshit</h2>
 <p>PaperMod uses highlight.js to highlight code blocks.
 In PaperModX, we use Chroma which is the recommended way in Hugo&rsquo;s
-<a href="https://gohugo.io/content-management/syntax-highlighting/#:~:text=Hugo%20uses%20Chroma%20as%20its%20code%20highlighter%3B%20it%20is%20built%20in%20Go%20and%20is%20really%2C%20really%20fast">official docs</a>,
+<a href="https://gohugo.io/content-management/syntax-highlighting/#:~:text=Hugo%20uses%20Chroma%20as%20its%20code%20highlighter%3B%20it%20is%20built%20in%20Go%20and%20is%20really%2C%20really%20fast" target="_blank" rel="noopener">official docs</a>,
 thus changing theme is easily supported.</p>
 <p>By default the themes are <code>github</code> for light and <code>dracula</code> for dark,
 you can change it by adding <code>chroma-light.css</code> and <code>chroma-dark.css</code>
 in site&rsquo;s <code>assets/css/lib</code> directory.</p>
 <h2 id="social-icons-from-simple-icons">Social icons from Simple Icons</h2>
-<p>Add social icons with <code>-simple</code> suffix from <a href="https://simpleicons.org/">Simple Icons</a>.</p>
+<p>Add social icons with <code>-simple</code> suffix from <a href="https://simpleicons.org/" target="_blank" rel="noopener">Simple Icons</a>.</p>
 <p>Available icons:</p>
 <ul>
 <li>github-simple</li>
@@ -96,7 +418,7 @@ in site&rsquo;s <code>assets/css/lib</code> directory.</p>
 </ul>
 <p>The icons are moved from <code>layouts/partials/svg.html</code> to <code>data/svg.toml</code>,
 makes it easier to maintain, it&rsquo;s now possible to have an index page
-to show all the icons, check it out at: <a href="https://reorx.github.io/hugo-PaperModX/docs/icons_preview/">Icons Preview</a></p>
+to show all the icons, check it out at: <a href="https://reorx.github.io/hugo-PaperModX/docs/icons_preview/" target="_blank" rel="noopener">Icons Preview</a></p>
 <h2 id="opinionated-ui-enhancements">Opinionated UI enhancements</h2>
 <ul>
 <li>Distinguish home page width and post page width, post page is wider
@@ -119,7 +441,7 @@ to show all the icons, check it out at: <a href="https://reorx.github.io/hugo-Pa
 <p><strong>We&rsquo;ll be using <code>yml/yaml</code> format for all examples down below, I recommend using <code>yml</code> over <code>toml</code> as it is easier to read.</strong></p>
 </li>
 <li>
-<p>You can find any <a href="https://www.google.com/search?q=yml+to+toml">YML to TOML</a> converters if necessary.</p>
+<p>You can find any <a href="https://www.google.com/search?q=yml&#43;to&#43;toml" target="_blank" rel="noopener">YML to TOML</a> converters if necessary.</p>
 </li>
 </ul>
 <hr>
@@ -139,8 +461,8 @@ When Hugo builds your site, your copy of <code>list.html</code> will be used ins
 </span></span></span></code></pre></div><p>or set <code>HUGO_ENV</code> as &ldquo;production&rdquo; in system env-vars</p>
 <hr>
 <h2 id="failed-to-find-a-valid-digest-in-the-integrity-attribute-for-resource--">Failed to find a valid digest in the &lsquo;integrity&rsquo; attribute for resource &hellip; ?</h2>
-<p>Read about How Subresource Integrity helps: <a href="https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity">Subresource_Integrity</a></p>
-<p>Why was the <code>asset</code> not loading ? : <a href="https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity#How_browsers_handle_Subresource_Integrity">How_browsers_handle_Subresource_Integrity</a></p>
+<p>Read about How Subresource Integrity helps: <a href="https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity" target="_blank" rel="noopener">Subresource_Integrity</a></p>
+<p>Why was the <code>asset</code> not loading ? : <a href="https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity#How_browsers_handle_Subresource_Integrity" target="_blank" rel="noopener">How_browsers_handle_Subresource_Integrity</a></p>
 <p><strong>Solution:</strong></p>
 <p>Set the following in <code>config.yml</code></p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="line"><span class="cl"><span class="nt">params</span><span class="p">:</span><span class="w">
@@ -148,9 +470,9 @@ When Hugo builds your site, your copy of <code>list.html</code> will be used ins
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">disableFingerprinting</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
 </span></span></span></code></pre></div><p>Linked Issues:</p>
 <ul>
-<li><a href="https://stackoverflow.com/questions/65056585/hugo-theme-not-loading">https://stackoverflow.com/questions/65056585/hugo-theme-not-loading</a></li>
-<li><a href="https://stackoverflow.com/questions/65040931/hugo-failed-to-find-a-valid-digest-in-the-integrity-attribute-for-resource">https://stackoverflow.com/questions/65040931/hugo-failed-to-find-a-valid-digest-in-the-integrity-attribute-for-resource</a></li>
-<li><a href="https://blog.gerardbeckerleg.com/posts/hugo-failed-to-find-a-valid-digest-in-the-integrity-attribute-for-resource/">https://blog.gerardbeckerleg.com/posts/hugo-failed-to-find-a-valid-digest-in-the-integrity-attribute-for-resource/</a></li>
+<li><a href="https://stackoverflow.com/questions/65056585/hugo-theme-not-loading" target="_blank" rel="noopener">https://stackoverflow.com/questions/65056585/hugo-theme-not-loading</a></li>
+<li><a href="https://stackoverflow.com/questions/65040931/hugo-failed-to-find-a-valid-digest-in-the-integrity-attribute-for-resource" target="_blank" rel="noopener">https://stackoverflow.com/questions/65040931/hugo-failed-to-find-a-valid-digest-in-the-integrity-attribute-for-resource</a></li>
+<li><a href="https://blog.gerardbeckerleg.com/posts/hugo-failed-to-find-a-valid-digest-in-the-integrity-attribute-for-resource/" target="_blank" rel="noopener">https://blog.gerardbeckerleg.com/posts/hugo-failed-to-find-a-valid-digest-in-the-integrity-attribute-for-resource/</a></li>
 </ul>
 <hr>
 <h2 id="bundling-custom-css-with-themes-assets">Bundling Custom css with theme&rsquo;s assets</h2>
@@ -171,7 +493,7 @@ When Hugo builds your site, your copy of <code>list.html</code> will be used ins
 <p><strong>Note</strong>: blank.css is just the placeholder so that it doesn&rsquo;t break the theme when no files are present under <code>assets/css/extended</code></p>
 <p>Linked Issues:</p>
 <ul>
-<li><a href="https://discourse.gohugo.io/t/papermod-theme-how-to-add-custom-css/30165">Papermod Theme: How to add custom CSS?</a></li>
+<li><a href="https://discourse.gohugo.io/t/papermod-theme-how-to-add-custom-css/30165" target="_blank" rel="noopener">Papermod Theme: How to add custom CSS?</a></li>
 </ul>
 <hr>
 <h2 id="custom-head--footer">Custom Head / Footer</h2>
@@ -210,7 +532,7 @@ When Hugo builds your site, your copy of <code>list.html</code> will be used ins
 </span></span></span></code></pre></div><p><code>name</code> controls what will be displayed for the menu entry.
 <code>url</code> sets the URL that the entry points to.
 <code>weight</code> is used to control the positioning of entries.</p>
-<p>For more information on menus, see the <a href="https://gohugo.io/content-management/menus/">Hugo wiki page</a>.</p>
+<p>For more information on menus, see the <a href="https://gohugo.io/content-management/menus/" target="_blank" rel="noopener">Hugo wiki page</a>.</p>
 <hr>
 <h2 id="pin-a-post">Pin a Post</h2>
 <p>Post can be pinned/ displayed top on the list by adding a <code>weight=&lt;num&gt;</code> var to page-variables</p>
@@ -238,7 +560,7 @@ and can be added accordingly.</p>
 </ul>
 <ol>
 <li>
-<p>Favicon(s) can be generated by <a href="https://favicon.io">Favicon.io</a></p>
+<p>Favicon(s) can be generated by <a href="https://favicon.io" target="_blank" rel="noopener">Favicon.io</a></p>
 <p>and can be simply put in <code>/static</code> folder.</p>
 </li>
 <li>
@@ -252,7 +574,7 @@ assets:
     apple_touch_icon:  &#34;&lt;link / absolute url&gt;&#34;
     safari_pinned_tab:  &#34;&lt;link / absolute url&gt;&#34;
 </code></pre><ul>
-<li><code>absolute url</code> means direct links to external resource: ex. <a href="https://web.site/someimage.png">https://web.site/someimage.png</a></li>
+<li><code>absolute url</code> means direct links to external resource: ex. <a href="https://web.site/someimage.png" target="_blank" rel="noopener">https://web.site/someimage.png</a></li>
 </ul>
 <p>example:</p>
 <pre tabindex="0"><code>params:
@@ -268,7 +590,7 @@ assets:
 <h2 id="centering-image-in-markdown">Centering image in markdown</h2>
 <p>Add <code>#center</code> after image to center align an image</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-md" data-lang="md"><span class="line"><span class="cl">![<span class="nt">name</span>](<span class="na">path/to/image.png#center</span>)
-</span></span></code></pre></div><p><strong>When using <a href="https://gohugo.io/content-management/shortcodes/"><code>figure</code></a> shortcode</strong></p>
+</span></span></code></pre></div><p><strong>When using <a href="https://gohugo.io/content-management/shortcodes/" target="_blank" rel="noopener"><code>figure</code></a> shortcode</strong></p>
 <p>use <code>align=center</code> to center image with captions</p>
 <p>ex.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-md" data-lang="md"><span class="line"><span class="cl">{{<span class="p">&lt;</span> <span class="nt">figure</span> <span class="na">align</span><span class="o">=</span><span class="s">center</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;image.jpg&#34;</span> <span class="p">&gt;</span>}}
@@ -282,15 +604,15 @@ assets:
 <hr>
 <h2 id="search-not-working-">Search not working ?</h2>
 <p>If you are using a CDN to server assets from a different domain, search would break</p>
-<p>Why? Take a look at <a href="https://github.com/adityatelange/hugo-PaperMod/blob/fb4988cfb6d0d6e4e489f17d89f0fa618def3396/assets/js/fastsearch.js#L35">fastsearch.js#L35</a>.</p>
+<p>Why? Take a look at <a href="https://github.com/adityatelange/hugo-PaperMod/blob/fb4988cfb6d0d6e4e489f17d89f0fa618def3396/assets/js/fastsearch.js#L35" target="_blank" rel="noopener">fastsearch.js#L35</a>.</p>
 <p>We fetch the <code>index.json</code> (where the search function looks for the keywords typed) one level up of the website <code>search.min.js</code> is hosted on.</p>
 <p>We have used this insted of assigning <code>baseURL</code> so as to work with multilingual websites ex. <code>example.com/fr/</code> and websites being placed under a subdirectory ex. <code>example.com/blog/</code>.</p>
-<p>To fix for <em>single</em> language websites hosting assets from CDN, this you may <a href="#override-theme-template">override</a> <a href="https://github.com/adityatelange/hugo-PaperMod/blob/fb4988cfb6d0d6e4e489f17d89f0fa618def3396/assets/js/fastsearch.js#L35">fastsearch.js#L35</a> and placing appropriate URL as in</p>
+<p>To fix for <em>single</em> language websites hosting assets from CDN, this you may <a href="#override-theme-template">override</a> <a href="https://github.com/adityatelange/hugo-PaperMod/blob/fb4988cfb6d0d6e4e489f17d89f0fa618def3396/assets/js/fastsearch.js#L35" target="_blank" rel="noopener">fastsearch.js#L35</a> and placing appropriate URL as in</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">xhr</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="s2">&#34;GET&#34;</span><span class="p">,</span> <span class="s2">&#34;https://example.com/index.json&#34;</span><span class="p">);</span>
 </span></span></code></pre></div><hr>
 <h2 id="references">References</h2>
 <ul>
-<li><a href="https://zwbetz.com/override-a-hugo-theme/">Override a Hugo theme</a></li>
+<li><a href="https://zwbetz.com/override-a-hugo-theme/" target="_blank" rel="noopener">Override a Hugo theme</a></li>
 </ul>
 ]]></content:encoded>
     </item>
@@ -362,17 +684,17 @@ assets:
       <content:encoded><![CDATA[<h2 id="intro">Intro</h2>
 <ul>
 <li><strong>We&rsquo;ll be using <code>yml/yaml</code> format for all examples down below, I recommend using <code>yml</code> over <code>toml</code> as it is easier to read.</strong></li>
-<li>You can find any <a href="https://www.google.com/search?q=yml+to+toml">YML to TOML</a> converters if necessary.</li>
+<li>You can find any <a href="https://www.google.com/search?q=yml&#43;to&#43;toml" target="_blank" rel="noopener">YML to TOML</a> converters if necessary.</li>
 </ul>
 <hr>
 <h2 id="guide">Guide</h2>
-<p>Follow <a href="https://gohugo.io/getting-started/quick-start/">Quick Start</a> guide to setup hugo and create a new site.</p>
+<p>Follow <a href="https://gohugo.io/getting-started/quick-start/" target="_blank" rel="noopener">Quick Start</a> guide to setup hugo and create a new site.</p>
 <blockquote>
 <p>Note: Use -f to select yml format</p>
 <p><code>hugo new site &lt;name of site&gt; -f yml</code></p>
 </blockquote>
 <p>Make sure you install latest version of <strong><code>hugo(&gt;=0.83.0)</code></strong>.</p>
-<p>After you have created a new site, at <a href="https://gohugo.io/getting-started/quick-start/#step-3-add-a-theme">Step 3</a> follow the steps:</p>
+<p>After you have created a new site, at <a href="https://gohugo.io/getting-started/quick-start/#step-3-add-a-theme" target="_blank" rel="noopener">Step 3</a> follow the steps:</p>
 <h3 id="method-1">Method 1</h3>
 <p>Inside the folder of your Hugo site, run:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git clone https://github.com/reorx/hugo-PaperModX themes/PaperModX --depth<span class="o">=</span><span class="m">1</span>
@@ -383,7 +705,7 @@ assets:
 </span></span><span class="line"><span class="cl">git pull
 </span></span></code></pre></div></blockquote>
 <h3 id="method-2">Method 2</h3>
-<p>You can use as <a href="https://www.atlassian.com/git/tutorials/git-submodule">submodule</a> with</p>
+<p>You can use as <a href="https://www.atlassian.com/git/tutorials/git-submodule" target="_blank" rel="noopener">submodule</a> with</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git submodule add https://github.com/reorx/hugo-PaperModX.git themes/PaperModX --depth<span class="o">=</span><span class="m">1</span>
 </span></span><span class="line"><span class="cl">git submodule update --init --recursive <span class="c1"># needed when you reclone your repo (submodules may not get cloned automatically)</span>
 </span></span></code></pre></div><p><strong>Note</strong>: You may use <code> --branch v5.0</code> to end of above command if you want to stick to specific release.</p>
@@ -395,12 +717,12 @@ assets:
 <p>Or you can Download as Zip from Github Page and extract in your themes directory</p>
 <p>Direct Links:</p>
 <ul>
-<li><a href="https://github.com/reorx/hugo-PaperModX/archive/master.zip">Master Branch (Latest)</a></li>
-<li><a href="https://github.com/reorx/hugo-PaperModX/archive/v5.0.zip">v5.0</a></li>
-<li><a href="https://github.com/reorx/hugo-PaperModX/archive/v4.0.zip">v4.0</a></li>
-<li><a href="https://github.com/reorx/hugo-PaperModX/archive/v3.0.zip">v3.0</a></li>
-<li><a href="https://github.com/reorx/hugo-PaperModX/archive/v2.0.zip">v2.0</a></li>
-<li><a href="https://github.com/reorx/hugo-PaperModX/archive/v1.0.zip">v1.0</a></li>
+<li><a href="https://github.com/reorx/hugo-PaperModX/archive/master.zip" target="_blank" rel="noopener">Master Branch (Latest)</a></li>
+<li><a href="https://github.com/reorx/hugo-PaperModX/archive/v5.0.zip" target="_blank" rel="noopener">v5.0</a></li>
+<li><a href="https://github.com/reorx/hugo-PaperModX/archive/v4.0.zip" target="_blank" rel="noopener">v4.0</a></li>
+<li><a href="https://github.com/reorx/hugo-PaperModX/archive/v3.0.zip" target="_blank" rel="noopener">v3.0</a></li>
+<li><a href="https://github.com/reorx/hugo-PaperModX/archive/v2.0.zip" target="_blank" rel="noopener">v2.0</a></li>
+<li><a href="https://github.com/reorx/hugo-PaperModX/archive/v1.0.zip" target="_blank" rel="noopener">v1.0</a></li>
 </ul>
 <h3 id="finally-">Finally &hellip;</h3>
 <p>Add in <code>config.yml</code>:</p>
@@ -408,7 +730,7 @@ assets:
 </span></span></span></code></pre></div><h3 id="method-4">Method 4</h3>
 <ul>
 <li>
-<p>Install <a href="https://go.dev/doc/install">Go programming language</a> in your operating system.</p>
+<p>Install <a href="https://go.dev/doc/install" target="_blank" rel="noopener">Go programming language</a> in your operating system.</p>
 </li>
 <li>
 <p>Intialize your own hugo mod</p>
@@ -441,13 +763,13 @@ assets:
 <h3 id="papermod---iconsicons"><a href="../icons">Papermod - Icons</a></h3>
 </li>
 <li>
-<h3 id="changeloghttpsgithubcomreorxhugo-papermodxreleases"><a href="https://github.com/reorx/hugo-PaperModX/releases">ChangeLog</a></h3>
+<h3 id="changeloghttpsgithubcomreorxhugo-papermodxreleases"><a href="https://github.com/reorx/hugo-PaperModX/releases" target="_blank" rel="noopener">ChangeLog</a></h3>
 </li>
 </ul>
 <hr>
 <h2 id="sample-configyml">Sample <code>config.yml</code></h2>
 <blockquote>
-<p><strong>Example Site Structure is present here</strong>: <a href="https://github.com/reorx/hugo-PaperModX/tree/exampleSite/">exampleSite</a></p>
+<p><strong>Example Site Structure is present here</strong>: <a href="https://github.com/reorx/hugo-PaperModX/tree/exampleSite/" target="_blank" rel="noopener">exampleSite</a></p>
 </blockquote>
 <p><strong>Use appropriately</strong></p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="line"><span class="cl"><span class="nt">baseURL</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;https://examplesite.com/&#34;</span><span class="w">
@@ -632,7 +954,7 @@ assets:
       <guid>https://wananaiko.design/docs/features/</guid>
       <description>Learn About All Features in original PaperMod</description>
       <content:encoded><![CDATA[<blockquote>
-<p>source: <a href="https://adityatelange.github.io/hugo-PaperMod/posts/papermod/papermod-features/">https://adityatelange.github.io/hugo-PaperMod/posts/papermod/papermod-features/</a></p>
+<p>source: <a href="https://adityatelange.github.io/hugo-PaperMod/posts/papermod/papermod-features/" target="_blank" rel="noopener">https://adityatelange.github.io/hugo-PaperMod/posts/papermod/papermod-features/</a></p>
 </blockquote>
 <h3 id="intro">Intro</h3>
 <ul>
@@ -640,16 +962,16 @@ assets:
 <p><strong>We&rsquo;ll be using <code>yml/yaml</code> format for all examples down below, I recommend using <code>yml</code> over <code>toml</code> as it is easier to read.</strong></p>
 </li>
 <li>
-<p>You can find any <a href="https://www.google.com/search?q=yml+to+toml">YML to TOML</a> converters if necessary.</p>
+<p>You can find any <a href="https://www.google.com/search?q=yml&#43;to&#43;toml" target="_blank" rel="noopener">YML to TOML</a> converters if necessary.</p>
 </li>
 </ul>
 <hr>
 <h3 id="assets-jscss">Assets (js/css)</h3>
 <p>The following is enabled by default</p>
 <ul>
-<li><a href="https://gohugo.io/hugo-pipes/minification/">minification</a> - makes the assets size smallest as possible.</li>
-<li><a href="https://gohugo.io/hugo-pipes/bundling/">bundling</a> - bundles all the styles in one single asset</li>
-<li><a href="https://gohugo.io/hugo-pipes/fingerprint/">fingerprint/integrity</a> check.</li>
+<li><a href="https://gohugo.io/hugo-pipes/minification/" target="_blank" rel="noopener">minification</a> - makes the assets size smallest as possible.</li>
+<li><a href="https://gohugo.io/hugo-pipes/bundling/" target="_blank" rel="noopener">bundling</a> - bundles all the styles in one single asset</li>
+<li><a href="https://gohugo.io/hugo-pipes/fingerprint/" target="_blank" rel="noopener">fingerprint/integrity</a> check.</li>
 </ul>
 <hr>
 <h3 id="default-theme-lightdarkauto">Default Theme light/dark/auto</h3>
@@ -783,7 +1105,7 @@ assets:
 </span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;&lt;link2&gt;&#34;</span><span class="w">
 </span></span></span></code></pre></div><hr>
 <h3 id="search-page">Search Page</h3>
-<p>PaperModX uses <a href="https://fusejs.io/getting-started/different-builds.html#explanation-of-different-builds">Fuse.js Basic</a> for seach functionality</p>
+<p>PaperModX uses <a href="https://fusejs.io/getting-started/different-builds.html#explanation-of-different-builds" target="_blank" rel="noopener">Fuse.js Basic</a> for seach functionality</p>
 <p>Add the following to site config, <code>config.yml</code></p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="line"><span class="cl"><span class="nt">outputs</span><span class="p">:</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">home</span><span class="p">:</span><span class="w">
@@ -812,7 +1134,7 @@ assets:
 <p>For Multilingual use <code>search.&lt;lang&gt;.md</code> ex. <code>search.es.md</code>.</p>
 <p><strong>Note:</strong> Search will work only on current language, user is currently on !</p>
 <p><strong>Customizing Fusejs Options</strong></p>
-<p>Refer <a href="https://fusejs.io/api/options.html">https://fusejs.io/api/options.html</a> for Options, Add those as shown below.</p>
+<p>Refer <a href="https://fusejs.io/api/options.html" target="_blank" rel="noopener">https://fusejs.io/api/options.html</a> for Options, Add those as shown below.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="line"><span class="cl"><span class="nt">params</span><span class="p">:</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">fuseOpts</span><span class="p">:</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">isCaseSensitive</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
@@ -835,7 +1157,7 @@ assets:
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">alt</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;&lt;alt text&gt;&#34;</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">caption</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;&lt;text&gt;&#34;</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">relative</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w"> </span><span class="c"># To use relative path for cover image, used in hugo Page-bundles</span><span class="w">
-</span></span></span></code></pre></div><p>When you include images in the <a href="https://gohugo.io/content-management/page-bundles/">Page Bundle</a>, multiple sizes of the image will automatically be provided using the HTML5 <code>srcset</code> field.</p>
+</span></span></span></code></pre></div><p>When you include images in the <a href="https://gohugo.io/content-management/page-bundles/" target="_blank" rel="noopener">Page Bundle</a>, multiple sizes of the image will automatically be provided using the HTML5 <code>srcset</code> field.</p>
 <p>To reduce generation time and size of the site, you can disable this feature using</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="line"><span class="cl"><span class="nt">params</span><span class="p">:</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">cover</span><span class="p">:</span><span class="w">
@@ -889,7 +1211,7 @@ assets:
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">appendFilePath</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="c"># to append file path to Edit link</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nn">---</span><span class="w">
 </span></span></span></code></pre></div><p>The example above would yield the following link for the post file <code>posts/post-name.md</code>:
-<a href="https://github.com/">https://github.com/</a>&lt;path_to_repo&gt;/content/posts/post-name.md</p>
+<a href="https://github.com/" target="_blank" rel="noopener">https://github.com/</a>&lt;path_to_repo&gt;/content/posts/post-name.md</p>
 <table>
 <thead>
 <tr>
@@ -941,7 +1263,7 @@ also use other URL schemas like <code>mailto://</code>, e.g.
 <p>also in config add this</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="line"><span class="cl"><span class="nt">params</span><span class="p">:</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">comments</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
-</span></span></span></code></pre></div><p>read more about this <a href="https://gohugo.io/content-management/comments/">hugo-comments</a></p>
+</span></span></span></code></pre></div><p>read more about this <a href="https://gohugo.io/content-management/comments/" target="_blank" rel="noopener">hugo-comments</a></p>
 <hr>
 <h3 id="accesskeys">AccessKeys</h3>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">c - ToC Open/Close
@@ -949,12 +1271,12 @@ also use other URL schemas like <code>mailto://</code>, e.g.
 </span></span><span class="line"><span class="cl">h - Home (according to current lang)
 </span></span><span class="line"><span class="cl">t - Theme toggle
 </span></span><span class="line"><span class="cl">/ - Jumps to search page if in menu
-</span></span></code></pre></div><p><a href="https://www.w3schools.com/tags/att_global_accesskey.asp">What&rsquo;s AccessKeys ?</a></p>
+</span></span></code></pre></div><p><a href="https://www.w3schools.com/tags/att_global_accesskey.asp" target="_blank" rel="noopener">What&rsquo;s AccessKeys ?</a></p>
 <hr>
 <h3 id="enhanced-seo">Enhanced SEO</h3>
 <p><strong>Enabled only when <code>env: production</code></strong></p>
 <ul>
-<li><a href="https://support.google.com/webmasters/answer/7506797?hl=en">Rich Results/Snippets Support</a></li>
+<li><a href="https://support.google.com/webmasters/answer/7506797?hl=en" target="_blank" rel="noopener">Rich Results/Snippets Support</a></li>
 </ul>
 <h4 id="twitter-cards-support">Twitter Cards Support</h4>
 <ul>
@@ -969,7 +1291,7 @@ frontmatter (a list) is used.
 </span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="l">image_02.png</span><span class="w">
 </span></span></span></code></pre></div></li>
 <li>Finally, if neither of those are provided, <code>twitter:image</code> comes from the first
-<a href="https://gohugo.io/content-management/page-bundles/">Page Bundle</a>
+<a href="https://gohugo.io/content-management/page-bundles/" target="_blank" rel="noopener">Page Bundle</a>
 image with <code>feature</code> in the name, with a fallback to the first image with
 <code>cover</code> or <code>thumbnail</code> in the name.</li>
 </ul>
@@ -986,7 +1308,7 @@ frontmatter (a list) is used.
 </span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="l">image_02.png</span><span class="w">
 </span></span></span></code></pre></div></li>
 <li>Finally, if neither of those are provided, <code>og:image</code> comes from the first
-<a href="https://gohugo.io/content-management/page-bundles/">Page Bundle</a>
+<a href="https://gohugo.io/content-management/page-bundles/" target="_blank" rel="noopener">Page Bundle</a>
 image with <code>feature</code> in the name, with a fallback to the first image with
 <code>cover</code> or <code>thumbnail</code> in the name.</li>
 <li>For pages, you can also add audio (using frontmatter <code>audio: filename.ext</code>) and/or
@@ -1018,12 +1340,12 @@ videos.
       <guid>https://wananaiko.design/docs/math-typesetting/</guid>
       <description>A brief guide to setup KaTeX</description>
       <content:encoded><![CDATA[<p>Mathematical notation in a Hugo project can be enabled by using third party JavaScript libraries.</p>
-<p>In this example we will be using <a href="https://katex.org/">KaTeX</a></p>
+<p>In this example we will be using <a href="https://katex.org/" target="_blank" rel="noopener">KaTeX</a></p>
 <ul>
 <li>Create a partial under <code>/layouts/partials/math.html</code></li>
-<li>Within this partial reference the <a href="https://katex.org/docs/autorender.html">Auto-render Extension</a> or host these scripts locally.</li>
+<li>Within this partial reference the <a href="https://katex.org/docs/autorender.html" target="_blank" rel="noopener">Auto-render Extension</a> or host these scripts locally.</li>
 <li>Include the partial in your templates (<a href="../faq/#custom-head--footer"><code>extend_head.html</code></a>) like so:</li>
-<li>refer <a href="https://github.com/adityatelange/hugo-PaperMod/issues/236">ISSUE #236</a></li>
+<li>refer <a href="https://github.com/adityatelange/hugo-PaperMod/issues/236" target="_blank" rel="noopener">ISSUE #236</a></li>
 </ul>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="o">{{</span> <span class="k">if</span> or .Params.math .Site.Params.math <span class="o">}}</span>
 </span></span><span class="line"><span class="cl"><span class="o">{{</span> partial <span class="s2">&#34;math.html&#34;</span> . <span class="o">}}</span>
@@ -1032,7 +1354,7 @@ videos.
 <li>To enable KaTex globally set the parameter <code>math</code> to <code>true</code> in a project&rsquo;s configuration</li>
 <li>To enable KaTex on a per page basis include the parameter <code>math: true</code> in content files</li>
 </ul>
-<p><strong>Note:</strong> Use the online reference of <a href="https://katex.org/docs/supported.html">Supported TeX Functions</a></p>
+<p><strong>Note:</strong> Use the online reference of <a href="https://katex.org/docs/supported.html" target="_blank" rel="noopener">Supported TeX Functions</a></p>
 
 
 
@@ -1063,11 +1385,11 @@ $$</p>]]></content:encoded>
       <guid>https://wananaiko.design/docs/emoji-support/</guid>
       <description>Guide to emoji usage in Hugo</description>
       <content:encoded><![CDATA[<p>Emoji can be enabled in a Hugo project in a number of ways.</p>
-<p>The <a href="https://gohugo.io/functions/emojify/"><code>emojify</code></a> function can be called directly in templates or <a href="https://gohugo.io/templates/shortcode-templates/#inline-shortcodes">Inline Shortcodes</a>.</p>
-<p>To enable emoji globally, set <code>enableEmoji</code> to <code>true</code> in your site&rsquo;s <a href="https://gohugo.io/getting-started/configuration/">configuration</a> and then you can type emoji shorthand codes directly in content files; e.g.</p>
+<p>The <a href="https://gohugo.io/functions/emojify/" target="_blank" rel="noopener"><code>emojify</code></a> function can be called directly in templates or <a href="https://gohugo.io/templates/shortcode-templates/#inline-shortcodes" target="_blank" rel="noopener">Inline Shortcodes</a>.</p>
+<p>To enable emoji globally, set <code>enableEmoji</code> to <code>true</code> in your site&rsquo;s <a href="https://gohugo.io/getting-started/configuration/" target="_blank" rel="noopener">configuration</a> and then you can type emoji shorthand codes directly in content files; e.g.</p>
 <p><span class="nowrap"><span class="emojify">🙈</span> <code>🙈</code></span>  <span class="nowrap"><span class="emojify">🙉</span> <code>🙉</code></span>  <span class="nowrap"><span class="emojify">🙊</span> <code>🙊</code></span></p>
 <br>
-<p>The <a href="http://www.emoji-cheat-sheet.com/">Emoji cheat sheet</a> is a useful reference for emoji shorthand codes.</p>
+<p>The <a href="http://www.emoji-cheat-sheet.com/" target="_blank" rel="noopener">Emoji cheat sheet</a> is a useful reference for emoji shorthand codes.</p>
 <hr>
 <p><strong>N.B.</strong> The above steps enable Unicode Standard emoji characters and sequences in Hugo, however the rendering of these glyphs depends on the browser and the platform. To style the emoji you can either use a third party emoji font or a font stack; e.g.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">.emoji {

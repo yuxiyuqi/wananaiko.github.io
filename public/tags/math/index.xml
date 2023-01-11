@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>math on PaperModX</title>
+    <title>math on wananaiko</title>
     <link>https://wananaiko.design/tags/math/</link>
-    <description>Recent content in math on PaperModX</description>
+    <description>Recent content in math on wananaiko</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Fri, 08 Mar 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://wananaiko.design/tags/math/index.xml" rel="self" type="application/rss+xml" />
     <item>
@@ -14,12 +14,12 @@
       <guid>https://wananaiko.design/docs/math-typesetting/</guid>
       <description>A brief guide to setup KaTeX</description>
       <content:encoded><![CDATA[<p>Mathematical notation in a Hugo project can be enabled by using third party JavaScript libraries.</p>
-<p>In this example we will be using <a href="https://katex.org/">KaTeX</a></p>
+<p>In this example we will be using <a href="https://katex.org/" target="_blank" rel="noopener">KaTeX</a></p>
 <ul>
 <li>Create a partial under <code>/layouts/partials/math.html</code></li>
-<li>Within this partial reference the <a href="https://katex.org/docs/autorender.html">Auto-render Extension</a> or host these scripts locally.</li>
+<li>Within this partial reference the <a href="https://katex.org/docs/autorender.html" target="_blank" rel="noopener">Auto-render Extension</a> or host these scripts locally.</li>
 <li>Include the partial in your templates (<a href="../faq/#custom-head--footer"><code>extend_head.html</code></a>) like so:</li>
-<li>refer <a href="https://github.com/adityatelange/hugo-PaperMod/issues/236">ISSUE #236</a></li>
+<li>refer <a href="https://github.com/adityatelange/hugo-PaperMod/issues/236" target="_blank" rel="noopener">ISSUE #236</a></li>
 </ul>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="o">{{</span> <span class="k">if</span> or .Params.math .Site.Params.math <span class="o">}}</span>
 </span></span><span class="line"><span class="cl"><span class="o">{{</span> partial <span class="s2">&#34;math.html&#34;</span> . <span class="o">}}</span>
@@ -28,7 +28,7 @@
 <li>To enable KaTex globally set the parameter <code>math</code> to <code>true</code> in a project&rsquo;s configuration</li>
 <li>To enable KaTex on a per page basis include the parameter <code>math: true</code> in content files</li>
 </ul>
-<p><strong>Note:</strong> Use the online reference of <a href="https://katex.org/docs/supported.html">Supported TeX Functions</a></p>
+<p><strong>Note:</strong> Use the online reference of <a href="https://katex.org/docs/supported.html" target="_blank" rel="noopener">Supported TeX Functions</a></p>
 
 
 

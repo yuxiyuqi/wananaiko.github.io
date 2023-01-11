@@ -19,14 +19,14 @@
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">params</span><span class="p">:</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">TocSide</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;left&#39;</span><span class="w">  </span><span class="c"># or &#39;right&#39;</span><span class="w">
 </span></span></span></code></pre></div><p>ToC will float on the left/right side of the page.
-You can take a look at how <code>'right'</code> feels like in <a href="https://reorx.github.io/hugo-PaperModX/docs/installation/">Installation | Update</a>.</p>
+You can take a look at how <code>'right'</code> feels like in <a href="https://reorx.github.io/hugo-PaperModX/docs/installation/" target="_blank" rel="noopener">Installation | Update</a>.</p>
 <p>The ToC box is responsive, it only shows on the side when minimum screen size is 1440px.</p>
 <p>This feature is enabled on this site.</p>
 <h2 id="instantclick-integration">InstantClick integration</h2>
 <p>By adding config:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">params</span><span class="p">:</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">EnableInstantClick</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
-</span></span></span></code></pre></div><p><a href="http://instantclick.io/">InstantClick</a> will be enabled,
+</span></span></span></code></pre></div><p><a href="http://instantclick.io/" target="_blank" rel="noopener">InstantClick</a> will be enabled,
 making navigation behaves like Single Page Application.</p>
 <p>Note that <code>/search</code> pages are omitted from InstantClick
 to prevent conflicts from search&rsquo;s JavaScript,
@@ -51,7 +51,7 @@ by override the following css variables in <code>assets/css/extended/custom.css<
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></div><h2 id="customize-pagniator-size">Customize pagniator size</h2>
 <p>In section pages, if you want the paginator size be different from the
-<a href="https://gohugo.io/templates/pagination/#configure-pagination">global config</a>,
+<a href="https://gohugo.io/templates/pagination/#configure-pagination" target="_blank" rel="noopener">global config</a>,
 you can add <code>paginate</code> in the frontmatter to customize.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nn">---</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">paginate</span><span class="p">:</span><span class="w"> </span><span class="m">10</span><span class="w">
@@ -66,7 +66,7 @@ this will add a small icon to the end, and make the link open in new tab when cl
 </span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">params</span><span class="p">:</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">external</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
 </span></span></span></code></pre></div><h2 id="social-icons-from-simple-icons">Social icons from Simple Icons</h2>
-<p>Add social icons with <code>-simple</code> suffix from <a href="https://simpleicons.org/">Simple Icons</a>.</p>
+<p>Add social icons with <code>-simple</code> suffix from <a href="https://simpleicons.org/" target="_blank" rel="noopener">Simple Icons</a>.</p>
 <p>Available icons:</p>
 <ul>
 <li>github-simple</li>
@@ -77,7 +77,7 @@ this will add a small icon to the end, and make the link open in new tab when cl
 </ul>
 <p>The icons are moved from <code>layouts/partials/svg.html</code> to <code>data/svg.toml</code>,
 makes it easier to maintain, it&rsquo;s now possible to have an index page
-to show all the icons, check it out at: <a href="https://reorx.github.io/hugo-PaperModX/docs/icons_preview/">Icons Preview</a></p>
+to show all the icons, check it out at: <a href="https://reorx.github.io/hugo-PaperModX/docs/icons_preview/" target="_blank" rel="noopener">Icons Preview</a></p>
 <h2 id="opinionated-ui-enhancements">Opinionated UI enhancements</h2>
 <ul>
 <li>Distinguish home page width and post page width, post page is wider
@@ -96,16 +96,16 @@ to show all the icons, check it out at: <a href="https://reorx.github.io/hugo-Pa
       <description>Markdown 概述、工作原理以及用途。</description>
       <content:encoded><![CDATA[<h1 id="markdown-入门">Markdown 入门</h1>
 <blockquote>
-<p>原文链接: <a href="https://www.markdown.xyz/getting-started/">Markdown 入门指南 | Markdown 指南中文版</a></p>
+<p>原文链接: <a href="https://www.markdown.xyz/getting-started/" target="_blank" rel="noopener">Markdown 入门指南 | Markdown 指南中文版</a></p>
 </blockquote>
 <p><em>Markdown 的概述、工作原理，以及用途。</em></p>
 <!--TOC-->
 <h2 id="markdown-是什么">Markdown 是什么？</h2>
 <p>Markdown
 是一种轻量级的标记语言，可用于在纯文本文档中添加格式化元素。Markdown 由
-<a href="https://daringfireball.net/projects/markdown/">John Gruber</a> 于 2004
+<a href="https://daringfireball.net/projects/markdown/" target="_blank" rel="noopener">John Gruber</a> 于 2004
 年创建，如今已成为世界上最受欢迎的标记语言之一。</p>
-<p>使用 Markdown 与使用 <a href="https://en.wikipedia.org/wiki/WYSIWYG">WYSIWYG</a>
+<p>使用 Markdown 与使用 <a href="https://en.wikipedia.org/wiki/WYSIWYG" target="_blank" rel="noopener">WYSIWYG</a>
 编辑器不同。在 Microsoft Word
 之类的应用程序中，单击按钮以设置单词和短语的格式，并且，更改立即可见。而
 Markdown 与此不同，当你创建 Markdown 格式的文件时，可以在文本中添加
@@ -114,13 +114,13 @@ Markdown 语法，以指示哪些单词和短语看起来应该有所不同。</
 <code># Heading One</code>）。或者要加粗一个短语，只须在短语前后各加两个星号即可（例如，<code>**this text is bold**</code>）。可能需要一段时间才能习惯在文本中看到
 Markdown
 语法，尤其是如果你已习惯了所见即所得的应用程序。以下屏幕截展示了
-Markdown 文件在 <a href="https://code.visualstudio.com/">VSCode</a> 中显示的效果。</p>
+Markdown 文件在 <a href="https://code.visualstudio.com/" target="_blank" rel="noopener">VSCode</a> 中显示的效果。</p>
 <p></p>
 <p>你可以使用文本编辑器为纯文本文件添加 Markdown
 格式的元素。或者，你也可以安装针对 macOS、Windows、Linux、iOS 和 Android
 操作系统的 Markdown 应用程序。或者还可以使用一些基于 Web 的应用程序用于
 Markdown 编写。</p>
-<p>依赖于你所使用的应用程序，你可能无法实时预览格式化的文档。但是没关系。<a href="https://daringfireball.net/projects/markdown/">根据
+<p>依赖于你所使用的应用程序，你可能无法实时预览格式化的文档。但是没关系。<a href="https://daringfireball.net/projects/markdown/" target="_blank" rel="noopener">根据
 Gruber 的说法</a>，Markdown
 的语法被设计为可读性强且不显眼，因此即使 Markdown
 文件中的文本未经过渲染也易于阅读。</p>
@@ -166,7 +166,7 @@ Markdown。</p>
 <p>Markdown
 入门的最佳方式就是多使用它。由于有大量免费工具的存在，这比以前任何时候都更容易开始上手了。</p>
 <p>你甚至都不需要下载任何程序，就可以使用几种在线的 Markdown 编辑器来编写
-Markdown。<a href="https://www.zybuluo.com/mdeditor">MDEditor</a> 是最好的在线 Markdown
+Markdown。<a href="https://www.zybuluo.com/mdeditor" target="_blank" rel="noopener">MDEditor</a> 是最好的在线 Markdown
 编辑器之一。进入其站点就可以开始在左侧窗格中书写了。渲染后的文档在右侧窗格预览。</p>
 <p></p>
 <p>阅读本指南时，你可以打开 MDEditor 网站。这样，你就可以一边学习 Markdown
@@ -216,7 +216,7 @@ Markdown 也可以很好地格式化从电子邮件到购物清单的所有内�
 <p>Markdown 是为 web
 而设计的，因此，市面上有很多专门用于创建网站内容的应用程序就不足为奇了。</p>
 <p>如果你您正在寻找利用 Markdown 文件创建网站的最简单方法，请参考
-<a href="https://blot.im">blot.im</a> 和 <a href="https://smallvictori.es">smallvictori.es</a>
+<a href="https://blot.im" target="_blank" rel="noopener">blot.im</a> 和 <a href="https://smallvictori.es" target="_blank" rel="noopener">smallvictori.es</a>
 两个站点。在你注册某个服务之后，它们将在你的计算机上创建一个 Dropbox
 文件夹。你只需将 Markdown
 文件拖放到该文件夹​​中，然后嗖的一声，这些文件就在你的网站上了。再简单不过了。</p>
@@ -225,7 +225,7 @@ Markdown 也可以很好地格式化从电子邮件到购物清单的所有内�
 Markdown 文件并构建为 HTML 网站。这种方法的优势之一是 <a href="/tools/github-pages/">GitHub
 Pages</a> 为 Jekyll 生成的网站提供免费托管服务。如果
 Jekyll 不是你的理想之选，你可以在
-<a href="https://www.staticgen.com/">其它大量可用的静态站点生成器</a> 中选择一个。</p>
+<a href="https://www.staticgen.com/" target="_blank" rel="noopener">其它大量可用的静态站点生成器</a> 中选择一个。</p>
 <div class="alert alert-info">
 注意： 此 <b>Markdown指南</b> 就是用 Jekyll 创建的。你可以在
 GitHub 上查看其源码。
@@ -233,9 +233,9 @@ GitHub 上查看其源码。
 <p>如果你想使用内容管理系统（CMS）来支撑你的网站，请试试
 <a href="/tools/ghost/">Ghost</a>。这是一个免费的开源博客平台，具有出色的 Markdown
 编辑器。如果你是 WordPress 用户，你将很高兴地知道 WordPress.com
-上托管的网站都 <a href="https://en.support.wordpress.com/markdown/">支持
+上托管的网站都 <a href="https://en.support.wordpress.com/markdown/" target="_blank" rel="noopener">支持
 Markdown</a>。自托管的
-WordPress 网站可以使用 <a href="https://jetpack.com/support/markdown/">Jetpack
+WordPress 网站可以使用 <a href="https://jetpack.com/support/markdown/" target="_blank" rel="noopener">Jetpack
 插件</a>实现对 Markdown 的支持。</p>
 <h3 id="文件资料">文件资料</h3>
 <p>Markdown 并不具备像 Microsoft Word
@@ -256,42 +256,42 @@ Markdown 文档创作工具来创建 Markdown 格式的文档并将其导出为 
 <tr>
 <td>Mac</td>
 <td>MacDown</td>
-<td><a href="https://macdown.uranusjr.com/">https://macdown.uranusjr.com/</a></td>
+<td><a href="https://macdown.uranusjr.com/" target="_blank" rel="noopener">https://macdown.uranusjr.com/</a></td>
 </tr>
 <tr>
 <td>Mac</td>
 <td>Marked</td>
-<td><a href="https://marked2app.com/">https://marked2app.com/</a></td>
+<td><a href="https://marked2app.com/" target="_blank" rel="noopener">https://marked2app.com/</a></td>
 </tr>
 <tr>
 <td>Mac / iOS / Android</td>
 <td>iA Writer</td>
-<td><a href="https://ia.net/writer">https://ia.net/writer</a></td>
+<td><a href="https://ia.net/writer" target="_blank" rel="noopener">https://ia.net/writer</a></td>
 </tr>
 <tr>
 <td>Windows</td>
 <td>ghostwriter</td>
-<td><a href="https://wereturtle.github.io/ghostwriter/">https://wereturtle.github.io/ghostwriter/</a></td>
+<td><a href="https://wereturtle.github.io/ghostwriter/" target="_blank" rel="noopener">https://wereturtle.github.io/ghostwriter/</a></td>
 </tr>
 <tr>
 <td>Windows</td>
 <td>Markdown Monster</td>
-<td><a href="https://markdownmonster.west-wind.com/">https://markdownmonster.west-wind.com/</a></td>
+<td><a href="https://markdownmonster.west-wind.com/" target="_blank" rel="noopener">https://markdownmonster.west-wind.com/</a></td>
 </tr>
 <tr>
 <td>Linux</td>
 <td>ReText</td>
-<td><a href="https://github.com/retext-project/retext">https://github.com/retext-project/retext</a></td>
+<td><a href="https://github.com/retext-project/retext" target="_blank" rel="noopener">https://github.com/retext-project/retext</a></td>
 </tr>
 <tr>
 <td>Linux</td>
 <td>ghostwriter</td>
-<td><a href="https://wereturtle.github.io/ghostwriter/">https://wereturtle.github.io/ghostwriter/</a></td>
+<td><a href="https://wereturtle.github.io/ghostwriter/" target="_blank" rel="noopener">https://wereturtle.github.io/ghostwriter/</a></td>
 </tr>
 <tr>
 <td>Web</td>
 <td>MDEditor</td>
-<td><a href="https://www.zybuluo.com/mdeditor">https://www.zybuluo.com/mdeditor</a></td>
+<td><a href="https://www.zybuluo.com/mdeditor" target="_blank" rel="noopener">https://www.zybuluo.com/mdeditor</a></td>
 </tr>
 </tbody>
 </table>
@@ -303,7 +303,7 @@ MLA 样式”的模板会缩进段落并添加双句间距。
 <h3 id="笔记">笔记</h3>
 <p>在几乎所有方面，Markdown
 都是记笔记的理想语法。不幸的是，两个最受欢迎的笔记应用程序
-<a href="https://evernote.com/">Evernote</a> 和 <a href="https://www.onenote.com/">OneNote</a>
+<a href="https://evernote.com/" target="_blank" rel="noopener">Evernote</a> 和 <a href="https://www.onenote.com/" target="_blank" rel="noopener">OneNote</a>
 目前都不支持 Markdown。好消息是，其他一些笔记应用程序 <em>是</em> 支持 Markdown
 的：</p>
 <ul>
@@ -317,29 +317,29 @@ Markdown 兼容模式。</li>
 自称是“专为程序员设计的开源笔记应用程序”。</li>
 </ul>
 <p>如果你无法放弃 Evernote，可以试试
-<a href="https://marxi.co/">Marxico</a>，一个专门针对 Evernote 的基于订阅付费的
+<a href="https://marxi.co/" target="_blank" rel="noopener">Marxico</a>，一个专门针对 Evernote 的基于订阅付费的
 Markdown编辑器，或在 Evernote 网站上使用 <a href="/tools/markdown-here/">Markdown
 Here</a> 插件。</p>
 <h3 id="书籍">书籍</h3>
-<p>想要自行出版小说？请试试 <a href="https://leanpub.com/">Leanpub</a>，该服务可将你的
+<p>想要自行出版小说？请试试 <a href="https://leanpub.com/" target="_blank" rel="noopener">Leanpub</a>，该服务可将你的
 Markdown 格式的文件转换为电子书。Leanpub 以 PDF、EPUB 和 MOBI
 文件格式输出你的图书。如果你要创建纸版书籍，可以将 PDF 文件上传到类似
-<a href="https://kdp.amazon.com">Kindle Direct Publishing</a>
+<a href="https://kdp.amazon.com" target="_blank" rel="noopener">Kindle Direct Publishing</a>
 之类的服务提供商处。要了解有关使用 Markdown
 编写和自行出版书籍的更多信息，请阅读
-<a href="https://medium.com/techspiration-ideas-making-it-happen/how-i-wrote-and-published-my-novel-using-only-open-source-tools-5cdfbd7c00ca">此博文</a>。</p>
+<a href="https://medium.com/techspiration-ideas-making-it-happen/how-i-wrote-and-published-my-novel-using-only-open-source-tools-5cdfbd7c00ca" target="_blank" rel="noopener">此博文</a>。</p>
 <h3 id="演示文稿">演示文稿</h3>
 <p>信不信由你，你可以将 Markdown 格式的文件转换成演示文稿。在 Markdown
 中创建演示文稿需要一点时间来适应，但是一旦你掌握了它，你就能体会到比使用
 PowerPoint 或 Keynote
-之类的应用程序更快、更容易。<a href="https://remarkjs.com">Remark</a>（<a href="https://github.com/gnab/remark">GitHub
+之类的应用程序更快、更容易。<a href="https://remarkjs.com" target="_blank" rel="noopener">Remark</a>（<a href="https://github.com/gnab/remark" target="_blank" rel="noopener">GitHub
 仓库</a>）和
-<a href="https://jdan.github.io/cleaver/">Cleaver</a>（<a href="https://github.com/jdan/cleaver">GitHub
+<a href="https://jdan.github.io/cleaver/" target="_blank" rel="noopener">Cleaver</a>（<a href="https://github.com/jdan/cleaver" target="_blank" rel="noopener">GitHub
 仓库</a>）一样，是一种基于浏览器的、流行的
 Markdown 幻灯片工具。如果你使用的是
 Mac，并且希望安装一个应用程序来使用的话，请试试
-<a href="https://www.decksetapp.com/">Deckset</a> 或
-<a href="https://marked2app.com/">Marked</a>。</p>
+<a href="https://www.decksetapp.com/" target="_blank" rel="noopener">Deckset</a> 或
+<a href="https://marked2app.com/" target="_blank" rel="noopener">Marked</a>。</p>
 <h3 id="邮件">邮件</h3>
 <p>如果你需要发送大量电子邮件，并且对大多数电子邮件提供商网站上可用的格式设置控件感到厌倦，那么你将很高兴地发现有一种使用
 Markdown 编写电子邮件的简便方法：<a href="/tools/markdown-here/">Markdown Here</a>
@@ -348,30 +348,30 @@ Markdown 编写电子邮件的简便方法：<a href="/tools/markdown-here/">Mar
 <h3 id="文档">文档</h3>
 <p>Markdown 非常适合技术文档。像 GitHub 这样的公司越来越多地转向使用
 Markdown 来创建其文档了，请查看此
-<a href="https://github.com/blog/1939-how-github-uses-github-to-document-github">博文</a>
+<a href="https://github.com/blog/1939-how-github-uses-github-to-document-github" target="_blank" rel="noopener">博文</a>
 以了解如何将 Markdown 格式的文档迁移到
 <a href="/tools/jekyll/">Jekyll</a>。如果你是为产品或服务编写文档，请试试以下的便捷工具：</p>
 <ul>
-<li><a href="https://readthedocs.org">Read the Docs</a> 可以将你所开源的 Markdown
+<li><a href="https://readthedocs.org" target="_blank" rel="noopener">Read the Docs</a> 可以将你所开源的 Markdown
 文件生成文档网站。只需将你的 GitHub
 仓库连接到他们的服务，然后你就可以将内容推送到该仓库中，Read the
 Docs 会完成其余的工作。他们还为
-<a href="https://readthedocs.com/">商业实体提供服务</a>。</li>
+<a href="https://readthedocs.com/" target="_blank" rel="noopener">商业实体提供服务</a>。</li>
 <li><a href="/tools/mkdocs/">MkDocs</a>
 是一个快速、简单的静态站点生成器，专门用于构建项目文档。文档源文件使用
 Markdown 编写，并使用一个 YAML 配置文件进行配置。MkDocs 有多个
-<a href="https://www.mkdocs.org/user-guide/styling-your-docs/">内置主题</a>，包括移植自
-<a href="https://readthedocs.org/">Read the Docs</a>
-的文档主题。最新的一个主题是 <a href="https://squidfunk.github.io/mkdocs-material/">MkDocs
+<a href="https://www.mkdocs.org/user-guide/styling-your-docs/" target="_blank" rel="noopener">内置主题</a>，包括移植自
+<a href="https://readthedocs.org/" target="_blank" rel="noopener">Read the Docs</a>
+的文档主题。最新的一个主题是 <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">MkDocs
 Material</a>。</li>
 <li><a href="/tools/docusaurus/">Docusaurus</a>
 是一个静态网站生成器，专门用于创建文档网站。它支持翻译、搜索和版本控制。</li>
-<li><a href="https://vuepress.vuejs.org/">VuePress</a> 是基于
-<a href="https://vuejs.org/">Vue</a>
+<li><a href="https://vuepress.vuejs.org/" target="_blank" rel="noopener">VuePress</a> 是基于
+<a href="https://vuejs.org/" target="_blank" rel="noopener">Vue</a>
 构建的静态站点生成器，并针对编写技术文档进行了优化。</li>
 <li><a href="/tools/jekyll/">Jekyll</a> 前面已经提到过它了，但它也是将 Markdown
 文件生成文档网站的一个不错的选择。如果你选择 Jekyll，请务必试试
-<a href="https://idratherbewriting.com/documentation-theme-jekyll/">Jekyll
+<a href="https://idratherbewriting.com/documentation-theme-jekyll/" target="_blank" rel="noopener">Jekyll
 文档主题</a>。</li>
 </ul>
 <h2 id="markdown-方言">Markdown 方言</h2>
@@ -398,17 +398,17 @@ Markdown 文件，要实现这一点，你应当从使用一个具有良好 Mark
 <h2 id="其它资源">其它资源</h2>
 <p>网上有很多资源用来学习 Markdown。以下列出一些：</p>
 <ul>
-<li><a href="https://daringfireball.net/projects/markdown/">John Gruber’s Markdown
+<li><a href="https://daringfireball.net/projects/markdown/" target="_blank" rel="noopener">John Gruber’s Markdown
 documentation</a>.
 Markdown 的创建者编写的原始指南。</li>
-<li><a href="https://www.markdowntutorial.com/">Markdown Tutorial</a>.
+<li><a href="https://www.markdowntutorial.com/" target="_blank" rel="noopener">Markdown Tutorial</a>.
 一个开源网站，你能用浏览器在这个网站上尝试 Markdown。</li>
-<li><a href="https://github.com/mundimark/awesome-markdown">Awesome Markdown</a>.
+<li><a href="https://github.com/mundimark/awesome-markdown" target="_blank" rel="noopener">Awesome Markdown</a>.
 Markdown 工具和学习资源列表。</li>
-<li><a href="https://dave.autonoma.ca/blog/2019/05/22/typesetting-markdown-part-1">Typesetting
+<li><a href="https://dave.autonoma.ca/blog/2019/05/22/typesetting-markdown-part-1" target="_blank" rel="noopener">Typesetting
 Markdown</a>.
-这是一个系列教程，介绍了使用 <a href="https://pandoc.org/">pandoc</a> 和
-<a href="https://www.contextgarden.net/">ConTeXt</a> 对 Markdown
+这是一个系列教程，介绍了使用 <a href="https://pandoc.org/" target="_blank" rel="noopener">pandoc</a> 和
+<a href="https://www.contextgarden.net/" target="_blank" rel="noopener">ConTeXt</a> 对 Markdown
 文档进行排版的系统。</li>
 </ul>
 ]]></content:encoded>
