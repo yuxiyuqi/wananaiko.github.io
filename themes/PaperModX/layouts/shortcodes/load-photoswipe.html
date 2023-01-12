@@ -25,6 +25,23 @@ Documentation and licence at https://github.com/liwenyip/hugo-easy-gallery/
 <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe-ui-default.min.js" integrity="sha256-PWHOlUzc96pMc8ThwRIXPn8yH4NOLu42RQ0b9SpnpFk=" crossorigin="anonymous"></script>
 -->
 
+<javascript type="text/javascript">
+  // 获取图片元素
+var img = document.getElementById("myImg");
+
+if(/mobile/i.test(navigator.userAgent)) {
+    // 移动端
+    img.addEventListener("click", function(){
+        history.go(-1);
+    });
+} else {
+    // PC端
+    img.addEventListener("click", function(){
+        window.close();
+    });
+}
+</javascript>
+
 <!-- Root element of PhotoSwipe. Must have class pswp. -->
 <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
 <!-- Background of PhotoSwipe.
