@@ -135,6 +135,7 @@ img {
     background: var(--secondary);
 }
 
+/* 相册点击图片后的弹窗样式 */
 .pswp__item {
     position: absolute;
     left: 0;
@@ -151,19 +152,39 @@ img {
 }
 
 .pswp__caption {
-    position: absolute;
+    position: unset;
     left: 0;
     bottom: 0;
     width: 100%;
     min-height: 80px !important;
 }
 
+.pswp__counter {
+    /* position: absolute; */
+    height: 44px;
+    font-size: 13px;
+    line-height: 44px;
+    color: #FFF;
+    opacity: .75;
+    padding: 0 10px;
+    float: left;
+    width: 33.33%;
+}
+
 .esc_window {
     text-align: center;
-    margin: 0 auto;
-    font-size: 13px;
-    padding: 10px;
-    line-height: 44px;
-    color: #CCC;
+    padding: 0 10px;
+    float: left;
+    width: 33.33%;
     height: 44px;
+    font-size: 13px;
+    line-height: 44px;
+    color: #FFF;
+    opacity: .75;
+}
+
+icon_right{
+    float: left;
+    width: 33.33%;
+    text-align: right;
 }
