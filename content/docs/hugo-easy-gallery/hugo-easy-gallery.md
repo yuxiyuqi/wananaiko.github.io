@@ -44,7 +44,25 @@ https://github.com/liwenyip/hugo-easy-gallery
     width: 100%;
     min-height: 80px !important;
 }
+
+.esc_window {
+    text-align: center;
+    margin: 0 auto;
+    font-size: 13px;
+    padding: 10px;
+    line-height: 44px;
+    color: #CCC;
+    height: 44px;
+}
 ```
+
+
+
+修改了 `/themes/PaperModX/layouts/shortcodes/load-photoswipe.html`，在`<div class="pswp__counter"></div>`这行代码下面加了一行按 ESC 关闭窗口的提示文字，对应的样式在上面写了。
+
+`<div class="esc_window">按ESC关闭窗口</div> `
+
+
 
 {{< load-photoswipe >}}
 {{< gallery >}}

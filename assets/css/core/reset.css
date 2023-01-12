@@ -157,3 +157,13 @@ img {
     width: 100%;
     min-height: 80px !important;
 }
+
+.esc_window {
+    text-align: center;
+    margin: 0 auto;
+    font-size: 13px;
+    padding: 10px;
+    line-height: 44px;
+    color: #CCC;
+    height: 44px;
+}
