@@ -7,6 +7,17 @@ tags:
   - 相册
 ---
 
+相册效果如下：
+
+{{< load-photoswipe >}}
+{{< gallery >}}
+  {{< figure src="https://images.wananaiko.com/2023/01/jaeYun.jpg" alt="法师桥">}}
+  {{< figure src="https://images.wananaiko.com/2023/01/OuL560.jpg" alt="龙美术馆" >}}
+  {{< figure src="https://images.wananaiko.com/2023/01/4cxcoH.jpg" alt="前滩太古里，Leica M10 + 50 2aa">}}
+{{< /gallery >}}
+
+
+
 Github仓库地址:
 https://github.com/liwenyip/hugo-easy-gallery
 
@@ -97,12 +108,3 @@ https://github.com/liwenyip/hugo-easy-gallery
    <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
 </div>
 ```
-
-
-
-{{< load-photoswipe >}}
-{{< gallery >}}
-  {{< figure src="https://images.wananaiko.com/2023/01/jaeYun.jpg" alt="法师桥">}}
-  {{< figure src="https://images.wananaiko.com/2023/01/OuL560.jpg" alt="龙美术馆" >}}
-  {{< figure src="https://images.wananaiko.com/2023/01/4cxcoH.jpg" alt="前滩太古里,Leica M10 + 50 2aa">}}
-{{< /gallery >}}
