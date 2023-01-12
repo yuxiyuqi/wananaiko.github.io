@@ -48,7 +48,7 @@ https://github.com/liwenyip/hugo-easy-gallery
 
 .pswp__counter {
     position: absolute;
-    left: 0;
+    left: 10px;
     top: 0;
     height: 44px;
     font-size: 13px;
@@ -59,10 +59,7 @@ https://github.com/liwenyip/hugo-easy-gallery
 }
 
 .esc_window {
-    text-align: center;
-    margin: 0 auto;
     float: left;
-    width: 33.33%;
     height: 44px;
     font-size: 13px;
     line-height: 44px;
