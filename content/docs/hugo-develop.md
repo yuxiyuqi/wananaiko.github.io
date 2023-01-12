@@ -12,7 +12,7 @@ tags:
 
 使用空格之神的浏览器插件很久了，真的是阅读强迫症患者的福音，[空格之神项目地址](https://github.com/vinta/pangu.js)
 
-在 Hugo的 /layouts/_default/baseof.html 内增加以下代码：
+在 Hugo的 `themes/PaperModX/layouts/_default/baseof.html` 内增加以下代码：
 
 ```html
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pangu/4.0.7/pangu.min.js"></script>
@@ -31,7 +31,7 @@ tags:
 
 最新的配置文件在：[UNPKG - @waline/client](https://unpkg.com/browse/@waline/client@2.14.6/dist/)
 
-在 `themes/your-hugo-theme/layouts/partials/comments.html` 里添加以下代码：
+在 `themes/PaperModX/layouts/partials/comments.html` 里添加以下代码：
 
 ```html
 <head>
@@ -70,7 +70,7 @@ tags:
 
 没有什么意义的效果，纯属好玩，不代表 LGBT。
 
-在 Hugo 的 /layouts/_default/baseof.html 内增加以下代码：
+在 Hugo 的 `themes/PaperModX/layouts/_default/baseof.html` 内增加以下代码：
 
 ```html
 <!-- 增加鼠标滑动时的彩虹效果 -->
@@ -172,7 +172,7 @@ type: 'blogroll'
 
 ### 搜索页展示标签列表
 
-编辑搜索页面模板 `./layouts/_default/search.html`，修改代码为：
+编辑搜索页面模板 `themes/PaperModX/layouts/_default/search.html`，修改代码为：
 
 ```html
 {{- define "main" }}

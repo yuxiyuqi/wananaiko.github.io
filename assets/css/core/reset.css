@@ -134,3 +134,26 @@ img {
 ::-webkit-scrollbar-thumb:hover {
     background: var(--secondary);
 }
+
+.pswp__item {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    overflow: hidden;
+    background-color: #000000 !important;
+}
+
+.pswp img {
+    max-width: none;
+    max-height: 85vh;
+}
+
+.pswp__caption {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    min-height: 80px !important;
+}

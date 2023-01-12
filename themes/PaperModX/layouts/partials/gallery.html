@@ -1,0 +1,9 @@
+<link rel="stylesheet" href="{{ "css/gallery.css" | absURL }}">
+
+{{ range .Site.Data.gallery.images }}
+    <div>
+        <img src="{{ .image }}" alt="{{ .name }}">
+        <p>{{ .caption }}</p>
+    </div>
+{{ end }}
+
