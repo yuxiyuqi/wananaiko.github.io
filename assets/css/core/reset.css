@@ -136,6 +136,12 @@ img {
 }
 
 /* 相册弹窗中的样式调整 */
+.gallery {
+    overflow: hidden;
+    margin: 0 auto !important;
+    max-width: 790px !important;
+}
+
 .pswp__item {
     position: absolute;
     left: 0;
@@ -148,7 +154,7 @@ img {
 
 .pswp img {
     max-width: none;
-    max-height: 85vh;
+    /* max-height: 85vh; */
 }
 
 .pswp__caption {
@@ -156,7 +162,7 @@ img {
     left: 0;
     bottom: 0;
     width: 100%;
-    min-height: 80px !important;
+    min-height: 72px !important;
 }
 
 .pswp__counter {
@@ -169,6 +175,16 @@ img {
     color: #FFF;
     opacity: .75;
     padding: 0 20px;
+}
+
+.pswp__caption__center {
+    text-align: left;
+    max-width: 790px !important;
+    margin: 0 auto !important;
+    font-size: 13px;
+    padding: 10px;
+    line-height: 20px;
+    color: #CCC;
 }
 
 .esc_window {
@@ -187,4 +203,8 @@ img {
 
 .icon_right {
     padding-right: 10px;
+}
+
+.pswp__ui--fit .pswp__top-bar, .pswp__ui--fit .pswp__caption {
+    background-color: rgba(0,0,0) !important;
 }

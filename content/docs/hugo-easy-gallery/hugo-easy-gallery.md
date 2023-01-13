@@ -34,6 +34,12 @@ https://github.com/liwenyip/hugo-easy-gallery
 并对 CSS 样式进行了微调,修改根目录 `/assets/css/core/reset.css`,加入以下代码:
 ```css
 /* 相册弹窗中的样式调整 */
+.gallery {
+    overflow: hidden;
+    margin: 0 auto !important;
+    max-width: 790px !important;
+}
+
 .pswp__item {
     position: absolute;
     left: 0;
@@ -46,7 +52,7 @@ https://github.com/liwenyip/hugo-easy-gallery
 
 .pswp img {
     max-width: none;
-    max-height: 85vh;
+    /* max-height: 85vh; */
 }
 
 .pswp__caption {
@@ -54,7 +60,7 @@ https://github.com/liwenyip/hugo-easy-gallery
     left: 0;
     bottom: 0;
     width: 100%;
-    min-height: 80px !important;
+    min-height: 72px !important;
 }
 
 .pswp__counter {
@@ -67,6 +73,16 @@ https://github.com/liwenyip/hugo-easy-gallery
     color: #FFF;
     opacity: .75;
     padding: 0 20px;
+}
+
+.pswp__caption__center {
+    text-align: left;
+    max-width: 790px !important;
+    margin: 0 auto !important;
+    font-size: 13px;
+    padding: 10px;
+    line-height: 20px;
+    color: #CCC;
 }
 
 .esc_window {
@@ -85,6 +101,10 @@ https://github.com/liwenyip/hugo-easy-gallery
 
 .icon_right {
     padding-right: 10px;
+}
+
+.pswp__ui--fit .pswp__top-bar, .pswp__ui--fit .pswp__caption {
+    background-color: rgba(0,0,0) !important;
 }
 ```
 
