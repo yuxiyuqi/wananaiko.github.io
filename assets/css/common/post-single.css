@@ -638,7 +638,7 @@ h6:hover .anchor {
     vertical-align: top;
 }
 .footnotes ol li:target {
-    background-color: var(--link-background-color);
+    /* background-color: var(--link-background-color); */
 }
 .footnotes ol:before {
     content: "Footnotes";

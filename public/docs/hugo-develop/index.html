@@ -5,42 +5,38 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
-<title>Hugo 的一些配置记录 | wananaiko</title>
-<meta name="keywords" content="hugo, waline">
+<title>Hugo 和 PaperModX 的一些配置记录 | wananaiko</title>
+<meta name="keywords" content="hugo, waline, PaperModX">
 <meta name="description" content="增加空格之神 使用空格之神的浏览器插件很久了，真的是阅读强迫症患者的福音，空格之神项目地址
-在 Hugo的 /layouts/_default/baseof.html 内增加以下代码：
+在 Hugo的 themes/PaperModX/layouts/_default/baseof.html 内增加以下代码：
 &lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/pangu/4.0.7/pangu.min.js&#34;&gt;&lt;/script&gt; &lt;script&gt; pangu.spacingPage(); &lt;/script&gt; 用完后感觉整个世界都清爽了 🤣
-增加 Waline 评论系统 依照官网的教程，部署到 Vercel上，适配了 Hugo 的暗黑模式。
-增加鼠标彩虹效果 没有什么意义的效果，纯属好玩，不代表 LGBT。
-在 Hugo 的 /layouts/_default/baseof.html 内增加以下代码：
-&lt;!-- 增加鼠标滑动时的彩虹效果 --&gt; &lt;script async src=&#34;/memos/assets/js/browser.js&#34;&gt;&lt;/script&gt; &lt;script&gt;window.addEventListener(&#39;load&#39;,(event)=&gt;{new cursoreffects.rainbowCursor();});&lt;/script&gt; 增加友情链接页面 打开 /themes/PaperModX/layouts/blogroll/section.html，修改为以下代码：
-{{/* section is AKA list */}} {{- define &#34;main&#34; }} &lt;header class=&#34;page-header&#34;&gt; &lt;h1&gt;{{ .Title }}&lt;/h1&gt; &lt;/header&gt; &lt;article class=&#34;links-container&#34;&gt; &lt;blockquote&gt; &lt;p&gt;{{ .Description }}&lt;/p&gt; &lt;/blockquote&gt; &lt;div class=&#34;links&#34;&gt; {{ range .Site.Data.blogroll }} {{ range sort .">
+增加 Waline 评论 依照官网的教程，部署到 Vercel上，适配了 Hugo 的暗黑模式。
+最新的配置文件在：UNPKG - @waline/client
+在 themes/PaperModX/layouts/partials/comments.html 里添加以下代码：
+&lt;head&gt; &lt;link rel=&#34;stylesheet&#34; type=&#34;text/css&#34; href=&#34;https://unpkg.com/@waline/client@2.14.6/dist/waline.css&#34;&gt; &lt;link rel=&#34;stylesheet&#34; type=&#34;text/css&#34; href=&#34;https://unpkg.com/@waline/client@2.14.6/dist/waline-meta.css&#34;&gt; &lt;/head&gt; &lt;body&gt; &lt;!-- ... --&gt; &lt;div id=&#34;waline&#34;&gt;&lt;/div&gt; &lt;script type=&#34;module&#34;&gt; import { init } from &#39;https://unpkg.com/@waline/client@v2.14.6/dist/waline.mjs&#39;; init({ el: &#39;#waline&#39;, lang: &#39;zh-CN&#39;, reaction: true, // 开启反应 serverURL: &#39;https://chat.wananaiko.design&#39;, dark: &#39;body.dark&#39;, copyright: false, // 设置 emoji 为贴吧与哔哩哔哩 emoji: [ &#39;//cdn.">
 <meta name="author" content="wananaiko">
 <link rel="canonical" href="https://wananaiko.design/docs/hugo-develop/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.min.f393330c794c17cdf7d70bc3579c7cb231f6d1331851de712a859c5f1f7116b7.css" integrity="sha256-85MzDHlMF8331wvDV5x8sjH20TMYUd5xKoWcXx9xFrc=" rel="preload stylesheet" as="style">
-<link rel="icon" href="https://wananaiko.design/images/favicon.ico">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.min.4c645c0af8f0d54d4e53b1e47af70d15aa8fa0174f2872e5f3c4d96bb2fe5131.css" integrity="sha256-TGRcCvjw1U1OU7HkevcNFaqPoBdPKHLl88TZa7L&#43;UTE=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://images.wananaiko.com/favicon.ico">
 <link rel="apple-touch-icon" href="https://wananaiko.design/apple-touch-icon.png">
 <link rel="alternate" hreflang="en" href="https://wananaiko.design/docs/hugo-develop/">
-<script async defer data-website-id="f4e3ad0a-7fc1-4f18-b08c-9be77b60cdd5" src="https://oishii.reorx.com/oishii.js"></script>
-<meta name="twitter:card" content="summary" />
-<meta name="twitter:title" content="Hugo 的一些配置记录 | wananaiko" />
+<script async defer data-website-id="9b6e318c-31e1-4093-9f5c-97739e93f3a2" src="https://umami.wananaiko.design/947fd99c-f1db-f867-1e82-76673e69a900.js"></script><meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Hugo 和 PaperModX 的一些配置记录 | wananaiko" />
 <meta name="twitter:description" content="增加空格之神 使用空格之神的浏览器插件很久了，真的是阅读强迫症患者的福音，空格之神项目地址
-在 Hugo的 /layouts/_default/baseof.html 内增加以下代码：
+在 Hugo的 themes/PaperModX/layouts/_default/baseof.html 内增加以下代码：
 &lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/pangu/4.0.7/pangu.min.js&#34;&gt;&lt;/script&gt; &lt;script&gt; pangu.spacingPage(); &lt;/script&gt; 用完后感觉整个世界都清爽了 🤣
-增加 Waline 评论系统 依照官网的教程，部署到 Vercel上，适配了 Hugo 的暗黑模式。
-增加鼠标彩虹效果 没有什么意义的效果，纯属好玩，不代表 LGBT。
-在 Hugo 的 /layouts/_default/baseof.html 内增加以下代码：
-&lt;!-- 增加鼠标滑动时的彩虹效果 --&gt; &lt;script async src=&#34;/memos/assets/js/browser.js&#34;&gt;&lt;/script&gt; &lt;script&gt;window.addEventListener(&#39;load&#39;,(event)=&gt;{new cursoreffects.rainbowCursor();});&lt;/script&gt; 增加友情链接页面 打开 /themes/PaperModX/layouts/blogroll/section.html，修改为以下代码：
-{{/* section is AKA list */}} {{- define &#34;main&#34; }} &lt;header class=&#34;page-header&#34;&gt; &lt;h1&gt;{{ .Title }}&lt;/h1&gt; &lt;/header&gt; &lt;article class=&#34;links-container&#34;&gt; &lt;blockquote&gt; &lt;p&gt;{{ .Description }}&lt;/p&gt; &lt;/blockquote&gt; &lt;div class=&#34;links&#34;&gt; {{ range .Site.Data.blogroll }} {{ range sort ." />
-<meta property="og:title" content="Hugo 的一些配置记录 | wananaiko" />
+增加 Waline 评论 依照官网的教程，部署到 Vercel上，适配了 Hugo 的暗黑模式。
+最新的配置文件在：UNPKG - @waline/client
+在 themes/PaperModX/layouts/partials/comments.html 里添加以下代码：
+&lt;head&gt; &lt;link rel=&#34;stylesheet&#34; type=&#34;text/css&#34; href=&#34;https://unpkg.com/@waline/client@2.14.6/dist/waline.css&#34;&gt; &lt;link rel=&#34;stylesheet&#34; type=&#34;text/css&#34; href=&#34;https://unpkg.com/@waline/client@2.14.6/dist/waline-meta.css&#34;&gt; &lt;/head&gt; &lt;body&gt; &lt;!-- ... --&gt; &lt;div id=&#34;waline&#34;&gt;&lt;/div&gt; &lt;script type=&#34;module&#34;&gt; import { init } from &#39;https://unpkg.com/@waline/client@v2.14.6/dist/waline.mjs&#39;; init({ el: &#39;#waline&#39;, lang: &#39;zh-CN&#39;, reaction: true, // 开启反应 serverURL: &#39;https://chat.wananaiko.design&#39;, dark: &#39;body.dark&#39;, copyright: false, // 设置 emoji 为贴吧与哔哩哔哩 emoji: [ &#39;//cdn." />
+<meta property="og:title" content="Hugo 和 PaperModX 的一些配置记录 | wananaiko" />
 <meta property="og:description" content="增加空格之神 使用空格之神的浏览器插件很久了，真的是阅读强迫症患者的福音，空格之神项目地址
-在 Hugo的 /layouts/_default/baseof.html 内增加以下代码：
+在 Hugo的 themes/PaperModX/layouts/_default/baseof.html 内增加以下代码：
 &lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/pangu/4.0.7/pangu.min.js&#34;&gt;&lt;/script&gt; &lt;script&gt; pangu.spacingPage(); &lt;/script&gt; 用完后感觉整个世界都清爽了 🤣
-增加 Waline 评论系统 依照官网的教程，部署到 Vercel上，适配了 Hugo 的暗黑模式。
-增加鼠标彩虹效果 没有什么意义的效果，纯属好玩，不代表 LGBT。
-在 Hugo 的 /layouts/_default/baseof.html 内增加以下代码：
-&lt;!-- 增加鼠标滑动时的彩虹效果 --&gt; &lt;script async src=&#34;/memos/assets/js/browser.js&#34;&gt;&lt;/script&gt; &lt;script&gt;window.addEventListener(&#39;load&#39;,(event)=&gt;{new cursoreffects.rainbowCursor();});&lt;/script&gt; 增加友情链接页面 打开 /themes/PaperModX/layouts/blogroll/section.html，修改为以下代码：
-{{/* section is AKA list */}} {{- define &#34;main&#34; }} &lt;header class=&#34;page-header&#34;&gt; &lt;h1&gt;{{ .Title }}&lt;/h1&gt; &lt;/header&gt; &lt;article class=&#34;links-container&#34;&gt; &lt;blockquote&gt; &lt;p&gt;{{ .Description }}&lt;/p&gt; &lt;/blockquote&gt; &lt;div class=&#34;links&#34;&gt; {{ range .Site.Data.blogroll }} {{ range sort ." />
+增加 Waline 评论 依照官网的教程，部署到 Vercel上，适配了 Hugo 的暗黑模式。
+最新的配置文件在：UNPKG - @waline/client
+在 themes/PaperModX/layouts/partials/comments.html 里添加以下代码：
+&lt;head&gt; &lt;link rel=&#34;stylesheet&#34; type=&#34;text/css&#34; href=&#34;https://unpkg.com/@waline/client@2.14.6/dist/waline.css&#34;&gt; &lt;link rel=&#34;stylesheet&#34; type=&#34;text/css&#34; href=&#34;https://unpkg.com/@waline/client@2.14.6/dist/waline-meta.css&#34;&gt; &lt;/head&gt; &lt;body&gt; &lt;!-- ... --&gt; &lt;div id=&#34;waline&#34;&gt;&lt;/div&gt; &lt;script type=&#34;module&#34;&gt; import { init } from &#39;https://unpkg.com/@waline/client@v2.14.6/dist/waline.mjs&#39;; init({ el: &#39;#waline&#39;, lang: &#39;zh-CN&#39;, reaction: true, // 开启反应 serverURL: &#39;https://chat.wananaiko.design&#39;, dark: &#39;body.dark&#39;, copyright: false, // 设置 emoji 为贴吧与哔哩哔哩 emoji: [ &#39;//cdn." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://wananaiko.design/docs/hugo-develop/" />
     <meta property="og:image" content="https://wananaiko.design/cover.png"/>
@@ -63,7 +59,7 @@
     {
       "@type": "ListItem",
       "position":  2 ,
-      "name": "Hugo 的一些配置记录",
+      "name": "Hugo 和 PaperModX 的一些配置记录",
       "item": "https://wananaiko.design/docs/hugo-develop/"
     }
   ]
@@ -73,13 +69,13 @@
 {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "Hugo 的一些配置记录 | wananaiko",
-  "name": "Hugo 的一些配置记录",
-  "description": "增加空格之神 使用空格之神的浏览器插件很久了，真的是阅读强迫症患者的福音，空格之神项目地址\n在 Hugo的 /layouts/_default/baseof.html 内增加以下代码：\n\u0026lt;script src=\u0026#34;https://cdnjs.cloudflare.com/ajax/libs/pangu/4.0.7/pangu.min.js\u0026#34;\u0026gt;\u0026lt;/script\u0026gt; \u0026lt;script\u0026gt; pangu.spacingPage(); \u0026lt;/script\u0026gt; 用完后感觉整个世界都清爽了 🤣\n增加 Waline 评论系统 依照官网的教程，部署到 Vercel上，适配了 Hugo 的暗黑模式。\n增加鼠标彩虹效果 没有什么意义的效果，纯属好玩，不代表 LGBT。\n在 Hugo 的 /layouts/_default/baseof.html 内增加以下代码：\n\u0026lt;!-- 增加鼠标滑动时的彩虹效果 --\u0026gt; \u0026lt;script async src=\u0026#34;/memos/assets/js/browser.js\u0026#34;\u0026gt;\u0026lt;/script\u0026gt; \u0026lt;script\u0026gt;window.addEventListener(\u0026#39;load\u0026#39;,(event)=\u0026gt;{new cursoreffects.rainbowCursor();});\u0026lt;/script\u0026gt; 增加友情链接页面 打开 /themes/PaperModX/layouts/blogroll/section.html，修改为以下代码：\n{{/* section is AKA list */}} {{- define \u0026#34;main\u0026#34; }} \u0026lt;header class=\u0026#34;page-header\u0026#34;\u0026gt; \u0026lt;h1\u0026gt;{{ .Title }}\u0026lt;/h1\u0026gt; \u0026lt;/header\u0026gt; \u0026lt;article class=\u0026#34;links-container\u0026#34;\u0026gt; \u0026lt;blockquote\u0026gt; \u0026lt;p\u0026gt;{{ .Description }}\u0026lt;/p\u0026gt; \u0026lt;/blockquote\u0026gt; \u0026lt;div class=\u0026#34;links\u0026#34;\u0026gt; {{ range .Site.Data.blogroll }} {{ range sort .",
+  "headline": "Hugo 和 PaperModX 的一些配置记录 | wananaiko",
+  "name": "Hugo 和 PaperModX 的一些配置记录",
+  "description": "增加空格之神 使用空格之神的浏览器插件很久了，真的是阅读强迫症患者的福音，空格之神项目地址\n在 Hugo的 themes/PaperModX/layouts/_default/baseof.html 内增加以下代码：\n\u0026lt;script src=\u0026#34;https://cdnjs.cloudflare.com/ajax/libs/pangu/4.0.7/pangu.min.js\u0026#34;\u0026gt;\u0026lt;/script\u0026gt; \u0026lt;script\u0026gt; pangu.spacingPage(); \u0026lt;/script\u0026gt; 用完后感觉整个世界都清爽了 🤣\n增加 Waline 评论 依照官网的教程，部署到 Vercel上，适配了 Hugo 的暗黑模式。\n最新的配置文件在：UNPKG - @waline/client\n在 themes/PaperModX/layouts/partials/comments.html 里添加以下代码：\n\u0026lt;head\u0026gt; \u0026lt;link rel=\u0026#34;stylesheet\u0026#34; type=\u0026#34;text/css\u0026#34; href=\u0026#34;https://unpkg.com/@waline/client@2.14.6/dist/waline.css\u0026#34;\u0026gt; \u0026lt;link rel=\u0026#34;stylesheet\u0026#34; type=\u0026#34;text/css\u0026#34; href=\u0026#34;https://unpkg.com/@waline/client@2.14.6/dist/waline-meta.css\u0026#34;\u0026gt; \u0026lt;/head\u0026gt; \u0026lt;body\u0026gt; \u0026lt;!-- ... --\u0026gt; \u0026lt;div id=\u0026#34;waline\u0026#34;\u0026gt;\u0026lt;/div\u0026gt; \u0026lt;script type=\u0026#34;module\u0026#34;\u0026gt; import { init } from \u0026#39;https://unpkg.com/@waline/client@v2.14.6/dist/waline.mjs\u0026#39;; init({ el: \u0026#39;#waline\u0026#39;, lang: \u0026#39;zh-CN\u0026#39;, reaction: true, // 开启反应 serverURL: \u0026#39;https://chat.wananaiko.design\u0026#39;, dark: \u0026#39;body.dark\u0026#39;, copyright: false, // 设置 emoji 为贴吧与哔哩哔哩 emoji: [ \u0026#39;//cdn.",
   "keywords": [
-    "hugo", "waline"
+    "hugo", "waline", "PaperModX"
   ],
-  "wordCount" : "395",
+  "wordCount" : "1080",
   "inLanguage": "en",
   "datePublished": "2023-01-09T00:24:18+08:00",
   "dateModified": "2023-01-09T00:24:18+08:00",
@@ -96,7 +92,7 @@
     "name": "wananaiko",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://wananaiko.design/images/favicon.ico"
+      "url": "https://images.wananaiko.com/favicon.ico"
     }
   }
 }
@@ -288,11 +284,6 @@ function toggleThemeListener() {
                 >Links
                 </a>
             </li>
-            <li>
-                <a href="https://wananaiko.com/" title="Other"
-                >Other
-                </a>
-            </li>
         </ul>
     </nav>
 </header>
@@ -300,14 +291,14 @@ function toggleThemeListener() {
 
 <article class="post-single">
   <header class="post-header">
-    <h1 class="post-title">Hugo 的一些配置记录</h1>
+    <h1 class="post-title">Hugo 和 PaperModX 的一些配置记录</h1>
     <div class="post-meta"><span class="meta-item">
   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar" style="user-select: text;"><rect x="3" y="4" width="18" height="18" rx="2" ry="2" style="user-select: text;"></rect><line x1="16" y1="2" x2="16" y2="6" style="user-select: text;"></line><line x1="8" y1="2" x2="8" y2="6" style="user-select: text;"></line><line x1="3" y1="10" x2="21" y2="10" style="user-select: text;"></line></svg>
   <span>2023-01-09</span></span><span class="meta-item">
   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon" style="user-select: text;"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z" style="user-select: text;"></path><line x1="7" y1="7" x2="7" y2="7" style="user-select: text;"></line></svg>
-  <span class="post-tags"><a href="https://wananaiko.design/tags/hugo/">Hugo</a><a href="https://wananaiko.design/tags/waline/">waline</a></span></span><span class="meta-item">
+  <span class="post-tags"><a href="https://wananaiko.design/tags/hugo/">Hugo</a><a href="https://wananaiko.design/tags/waline/">waline</a><a href="https://wananaiko.design/tags/papermodx/">PaperModX</a></span></span><span class="meta-item">
   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><circle cx="12" cy="12" r="9"></circle><polyline points="12 7 12 12 15 15"></polyline></svg>
-  <span>2 min</span></span>
+  <span>6 min</span></span>
 
       
       
@@ -322,7 +313,7 @@ function toggleThemeListener() {
                 <li>
                     <a href="#%e5%a2%9e%e5%8a%a0%e7%a9%ba%e6%a0%bc%e4%b9%8b%e7%a5%9e" aria-label="增加空格之神">增加空格之神</a></li>
                 <li>
-                    <a href="#%e5%a2%9e%e5%8a%a0-waline-%e8%af%84%e8%ae%ba%e7%b3%bb%e7%bb%9f" aria-label="增加 Waline 评论系统">增加 Waline 评论系统</a></li>
+                    <a href="#%e5%a2%9e%e5%8a%a0-waline-%e8%af%84%e8%ae%ba" aria-label="增加 Waline 评论">增加 Waline 评论</a></li>
                 <li>
                     <a href="#%e5%a2%9e%e5%8a%a0%e9%bc%a0%e6%a0%87%e5%bd%a9%e8%99%b9%e6%95%88%e6%9e%9c" aria-label="增加鼠标彩虹效果">增加鼠标彩虹效果</a></li>
                 <li>
@@ -330,7 +321,9 @@ function toggleThemeListener() {
                 <li>
                     <a href="#%e5%a2%9e%e5%8a%a0%e9%a1%b5%e9%9d%a2%e4%b8%8b%e9%9b%aa%e6%95%88%e6%9e%9c" aria-label="增加页面下雪效果">增加页面下雪效果</a></li>
                 <li>
-                    <a href="#%e6%90%9c%e7%b4%a2%e9%a1%b5%e5%b1%95%e7%a4%ba%e6%a0%87%e7%ad%be%e5%88%97%e8%a1%a8" aria-label="搜索页展示标签列表">搜索页展示标签列表</a>
+                    <a href="#%e6%90%9c%e7%b4%a2%e9%a1%b5%e5%b1%95%e7%a4%ba%e6%a0%87%e7%ad%be%e5%88%97%e8%a1%a8" aria-label="搜索页展示标签列表">搜索页展示标签列表</a></li>
+                <li>
+                    <a href="#%e5%bc%95%e5%85%a5%e8%b1%86%e7%93%a3%e9%98%85%e8%af%bb%e5%92%8c%e7%94%b5%e5%bd%b1%e5%8d%a1%e7%89%87" aria-label="引入豆瓣阅读和电影卡片">引入豆瓣阅读和电影卡片</a>
                 </li>
             </ul>
         </div>
@@ -339,19 +332,48 @@ function toggleThemeListener() {
 
   <div class="post-content"><h3 id="增加空格之神">增加空格之神</h3>
 <p>使用空格之神的浏览器插件很久了，真的是阅读强迫症患者的福音，<a href="https://github.com/vinta/pangu.js" target="_blank" rel="noopener">空格之神项目地址</a></p>
-<p>在 Hugo的 /layouts/_default/baseof.html 内增加以下代码：</p>
+<p>在 Hugo的 <code>themes/PaperModX/layouts/_default/baseof.html</code> 内增加以下代码：</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://cdnjs.cloudflare.com/ajax/libs/pangu/4.0.7/pangu.min.js&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="nx">pangu</span><span class="p">.</span><span class="nx">spacingPage</span><span class="p">();</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </span></span></code></pre></div><p>用完后感觉整个世界都清爽了 🤣</p>
 <hr>
-<h3 id="增加-waline-评论系统">增加 Waline 评论系统</h3>
+<h3 id="增加-waline-评论">增加 Waline 评论</h3>
 <p>依照官网的教程，<a href="https://waline.js.org/guide/deploy/vercel.html" target="_blank" rel="noopener">部署到 Vercel上</a>，适配了 Hugo 的暗黑模式。</p>
+<p>最新的配置文件在：<a href="https://unpkg.com/browse/@waline/client@2.14.6/dist/" target="_blank" rel="noopener">UNPKG - @waline/client</a></p>
+<p>在 <code>themes/PaperModX/layouts/partials/comments.html</code> 里添加以下代码：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;stylesheet&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text/css&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://unpkg.com/@waline/client@2.14.6/dist/waline.css&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;stylesheet&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text/css&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://unpkg.com/@waline/client@2.14.6/dist/waline-meta.css&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="c">&lt;!-- ... --&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;waline&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;module&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="kr">import</span> <span class="p">{</span> <span class="nx">init</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;https://unpkg.com/@waline/client@v2.14.6/dist/waline.mjs&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">      <span class="nx">init</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">el</span><span class="o">:</span> <span class="s1">&#39;#waline&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">lang</span><span class="o">:</span> <span class="s1">&#39;zh-CN&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">reaction</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span> <span class="c1">// 开启反应
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="nx">serverURL</span><span class="o">:</span> <span class="s1">&#39;https://chat.wananaiko.design&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">dark</span><span class="o">:</span> <span class="s1">&#39;body.dark&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">copyright</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">      <span class="c1">// 设置 emoji 为贴吧与哔哩哔哩
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="nx">emoji</span><span class="o">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">        <span class="s1">&#39;//cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/tieba&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="s1">&#39;//cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/bilibili&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="p">],</span>
+</span></span><span class="line"><span class="cl">      <span class="p">});</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span></code></pre></div><p>另外，在 <code>config.toml</code> 中的 params 下设置 <code>comments = true</code></p>
 <hr>
 <h3 id="增加鼠标彩虹效果">增加鼠标彩虹效果</h3>
 <p>没有什么意义的效果，纯属好玩，不代表 LGBT。</p>
-<p>在 Hugo 的 /layouts/_default/baseof.html 内增加以下代码：</p>
+<p>在 Hugo 的 <code>themes/PaperModX/layouts/_default/baseof.html</code> 内增加以下代码：</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="c">&lt;!-- 增加鼠标滑动时的彩虹效果 --&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span> <span class="na">async</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;/memos/assets/js/browser.js&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span><span class="nb">window</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;load&#39;</span><span class="p">,(</span><span class="nx">event</span><span class="p">)=&gt;{</span><span class="k">new</span> <span class="nx">cursoreffects</span><span class="p">.</span><span class="nx">rainbowCursor</span><span class="p">();});&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
@@ -426,7 +448,7 @@ function toggleThemeListener() {
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </span></span></code></pre></div><hr>
 <h3 id="搜索页展示标签列表">搜索页展示标签列表</h3>
-<p>编辑搜索页面模板 <code>./layouts/_default/search.html</code>，修改代码为：</p>
+<p>编辑搜索页面模板 <code>themes/PaperModX/layouts/_default/search.html</code>，修改代码为：</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">{{- define &#34;main&#34; }}
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">header</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;page-header&#34;</span><span class="p">&gt;</span>
@@ -473,11 +495,474 @@ function toggleThemeListener() {
 </span></span><span class="line"><span class="cl">{{- end }}
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">{{- end }}{{/* end main */}}
+</span></span></code></pre></div><hr>
+<h3 id="引入豆瓣阅读和电影卡片">引入豆瓣阅读和电影卡片</h3>
+<p>参考：<a href="https://www.sulvblog.cn/posts/blog/shortcodes/" target="_blank" rel="noopener">Hugo博客自定义shortcodes</a>，对部分CSS进行了调整以适配主题。</p>
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <title></title>
+    <style>
+        .post-preview {
+            max-width: 100%;
+            height: 200px;
+            margin: 1.5em auto;
+            position: relative;
+            display: flex;
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+            background-color: #f6f8fa;
+        }
+
+        .dark .post-preview {
+             
+            background: var(--entry);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, .5), 0 0 2px rgba(0, 0, 0, .5);
+        }
+
+        .post-preview--meta {
+            width: 80%;
+            padding: 23px;
+            overflow: hidden;
+        }
+
+        .post-preview--middle {
+            line-height: 28px;
+        }
+
+        .post-preview--title {
+            font-size: 22px;
+            margin: 0 !important;
+            padding-bottom: 0.25em;
+        }
+
+        .post-preview--title a {
+            text-decoration: none;
+        }
+
+        .post-preview--date {
+            font-size: 14px;
+            color: #999;
+        }
+
+        .post-preview--excerpt {
+            font-size: 14px;
+            line-height: 1.825;
+        }
+
+        .post-preview--excerpt p {
+            display: inline;
+            margin: 0;
+        }
+
+        .post-preview--image {
+            height: 200px !important;
+            width: 25%;
+            float: right;
+            border-radius: 0 15px 15px 0;
+        }
+
+        .post-preview img {
+            margin: unset;
+            width: 20%;
+            border-radius: 0 8px 8px 0;
+        }
+
+        @media (max-width: 550px) {
+            .post-preview {
+                width: 95%;
+            }
+
+            .post-preview--excerpt {
+                 
+            }
+
+            .post-preview--middle {
+                line-height: 19px;
+            }
+
+            .post-preview--meta {
+                width: 60%;
+                padding: 23px;
+                overflow: hidden;
+            }
+
+            .post-preview img {
+                margin: unset;
+                width: 40%;
+                border-radius: 0 15px 15px 0;
+            }
+        }
+
+        .rating {
+            display: block;
+            line-height: 15px;
+        }
+
+        .rating-star {
+            display: inline-block;
+            width: 75px;
+            height: 15px;
+            background-repeat: no-repeat;
+            background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEsAAAClCAYAAAAUAAAYAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA5xJREFUeNrs3T9rFEEcxvG7qEQIglaCICKkin9AUEtBKxU7wS61VlYivgWj70TtNFj5BqzE7qxEWwsxKIoYn4UtluFmbm8nczvzm+/BjxyuDwNzu3uXD0+46f7LC5PA45Hm+WTYw1x2LRDc0jzTXB+wqMlsaLPutz8fDFjYZHYauAz3NBvt83XNnyUWNpn1nVm3OsHmsb3EomazzZnVXKMPNcc0xzUnNKc0Rzv/77fms+Z7O3vt9b1eU7bZrNN68l5zcolX4ofmsuZXTdnmMvyi2dR86Bmcac62P6vKrnVubpc0bxYE32nOab45N8YqsvPeDfcD4SOav4HjprPuu+H5BTt9LXDMfNbdLPfT678Fx6vKupt1o/O8+R3pkOaJ5/iktqx7z/qp+aq5q/nY+fczmheaK03Gs7D5rLtZdzSvA6/Ebc2u55j57HQB0TzW7AzkjiKzny6+2hlKNE8juMNcFqKBaIZndRlCNBBNgmx7ZkE0fbLtZkE0EA1EM17WuQwhGogGooFoss6296y52cNO+J6HLJoPaFdbsvA9zGerIxrPh85eWYgGooFoDiQbuAxp0UA0EVmdWbRo+ma1WbRoIBqIZtzsnHdDWjQQDUQD0WSbde5ZS2UhmtqJJtSEiVkXooFoIJre2VATJmZdiKZ2ogk1YSb8oVMvDeUPnSAaiCaPJkzMuhANRAPRQDQpsqEmTMy6EI11oolpwkA0EA1EcyDZmCYMRAPR+LMxTZjqiCamCQPRQDQQzehNGIgGooFoIJpVZ2OaMBBN7USTqgkD0UA0EE3vbKomDERTO9GkasKYJJpUTRiIBqKBaEZvwkA0EA1EA9GkyKZqwkA01olmrCYMRAPRQDR9LkO+0QmiKbAJUyTRjNWEgWggGohm9CYMRAPRQDQQzZDsWE0YiMYC0eTYhIFoIJrKiCbHJgxEY4FocmzCZEs0OTZhIBqIpjKiybEJA9FANBANROPL5tiEgWhKIJoSmzAQDURjjGhKbMJANCUQTYlNmNGIpsQmDEQD0RgjmhKbMBANRAPR1Es0JTZhIJpciMZaEwaigWgKJBprTRiIJheisdaESUo01powEA1EUyDRWGvCQDQQDURjm2isNWEgmlURzWw2q4pZIBqIJkOiCVyGJpkFolkV0ejMMvel28mIRptl7ku3IRqIpjCimfNuaJpZIBqIBqIpm2ice5Z5ZonJupvVkMRu4JW4qXnrOWY++1+AAQBw9BJSCTeN9wAAAABJRU5ErkJggg==);
+            overflow: hidden;
+        }
+
+        .allstar10 {
+            background-position: 0px 0px;
+        }
+
+        .allstar9 {
+            background-position: 0px -15px;
+        }
+
+        .allstar8 {
+            background-position: 0px -30px;
+        }
+
+        .allstar7 {
+            background-position: 0px -45px;
+        }
+
+        .allstar6 {
+            background-position: 0px -60px;
+        }
+
+        .allstar5 {
+            background-position: 0px -75px;
+        }
+
+        .allstar4 {
+            background-position: 0px -90px;
+        }
+
+        .allstar3 {
+            background-position: 0px -105px;
+        }
+
+        .allstar2 {
+            background-position: 0px -120px;
+        }
+
+        .allstar1 {
+            background-position: 0px -135px;
+        }
+
+        .allstar0 {
+            background-position: 0px -150px;
+        }
+
+
+        .rating-average {
+            color: #777;
+            display: inline-block;
+            font-size: 13px;
+            margin-left: 10px;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.douban_item').each(function () {
+                var _this = $(this);
+                var strs = _this.attr('urlstring').toString();
+                var db_reg = /^https\:\/\/(movie|book)\.douban\.com\/subject\/([0-9]+)\/?/;
+                if (db_reg.test(strs)) {
+                    var db_type = strs.replace(db_reg, "$1");
+                    var db_id = strs.replace(db_reg, "$2").toString();
+                    var db_api = "https://douban.edui.fun/";
+                    if (db_type === 'movie') {
+                        var ls_item = 'movie' + db_id;
+                        var url = db_api + "movies/" + db_id;
+                        if (localStorage.getItem(ls_item) == null || localStorage.getItem(ls_item) === 'undefined') {
+                            $.ajax({
+                                url: url, type: 'GET', dataType: "json", success: function (data) {
+                                    localStorage.setItem(ls_item, JSON.stringify(data));
+                                    movieShow(_this, ls_item, strs)
+                                }
+                            })
+                        } else {
+                            movieShow(_this, ls_item, strs)
+                        }
+                    } else if (db_type === 'book') {
+                        var ls_item = 'book' + db_id;
+                        var url = db_api + "v2/book/id/" + db_id;
+                        if (localStorage.getItem(ls_item) == null || localStorage.getItem(ls_item) === 'undefined') {
+                            $.ajax({
+                                url: url, type: 'GET', dataType: 'json', success: function (data) {
+                                    localStorage.setItem('book' + db_id, JSON.stringify(data));
+                                    bookShow(_this, ls_item, strs)
+                                }
+                            })
+                        } else {
+                            bookShow(_this, ls_item, strs)
+                        }
+                    }
+                }
+            });
+        });
+
+        function movieShow(_this, ls_item, str) {
+            var storage = localStorage.getItem(ls_item);
+            var data = JSON.parse(storage);
+            var db_star = Math.ceil(data.rating);
+            $("<div class='post-preview'><div class='post-preview--meta'><div class='post-preview--middle'><div class='post-preview--title'><a target='_blank' style='box-shadow: none; font-weight: bolder;' href='" + str + "'>" + data.name + "</a></div><div class='rating'><div class='rating-star allstar" + db_star + "'></div><div class='rating-average'>" + data.rating + "</div></div><time class='post-preview--date'>导演：" + data.director + " / 类型：" + data.genre + " / " + data.year + "</time><section style='max-height:75px;overflow:hidden;' class='post-preview--excerpt'>" + data.intro.replace(/\s*/g, "") + "</section></div></div><img referrerpolicy='no-referrer' loading='lazy' class='post-preview--image' src=" + data.img + "></div>").replaceAll(_this)
+        }
+
+        function bookShow(_this, ls_item, str) {
+            var storage = localStorage.getItem(ls_item);
+            var data = JSON.parse(storage);
+            var db_star = Math.ceil(data.rating.average);
+            $("<div class='post-preview'><div class='post-preview--meta'><div class='post-preview--middle'><div class='post-preview--title'><a target='_blank' style='box-shadow: none; font-weight: bolder;' href='" + str + "'>" + data.title + "</a></div><div class='rating'><div class='rating-star allstar" + db_star + "'></div><div class='rating-average'>" + data.rating.average + "</div></div><time class='post-preview--date'>作者：" + data.author + " / 出版："+ data.pubdate +" / "+ data.publisher +" </time><section style='max-height:75px;overflow:hidden;' class='post-preview--excerpt'>" + data.summary.replace(/\s*/g, "") + "</section></div></div><img referrerpolicy='no-referrer' loading='lazy' class='post-preview--image' src=" + data.images.medium + "></div>").replaceAll(_this)
+        }
+    </script>
+</head>
+<body>
+<div class="douban_show">
+    <div id="dbhttps://movie.douban.com/subject/4811774/" urlstring="https://movie.douban.com/subject/4811774/" class="douban_item post-preview"></div>
+</div>
+</body>
+</html>
+<p>引用方法：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl">{a{<span class="p">&lt;</span> <span class="nt">douban</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://movie.douban.com/subject/4811774/&#34;</span> <span class="p">&gt;</span>}}
+</span></span><span class="line"><span class="cl"><span class="gh"># 使用的时候把字母a去掉，我加上是为了防止被识别生效
+</span></span></span></code></pre></div><p>定位到主题下的 <code>layouts/shortcodes</code> 目录，新建一个文件叫 <code>douban.html</code>，放入如下代码：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="cp">&lt;!DOCTYPE HTML&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&#34;en&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">.</span><span class="nc">post-preview</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">max-width</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="k">height</span><span class="p">:</span> <span class="mi">200</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="k">margin</span><span class="p">:</span> <span class="mf">1.5</span><span class="kt">em</span> <span class="kc">auto</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="k">position</span><span class="p">:</span> <span class="kc">relative</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="k">display</span><span class="p">:</span> <span class="kc">flex</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="k">border-radius</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">radius</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="k">border</span><span class="p">:</span> <span class="mi">1</span><span class="kt">px</span> <span class="kc">solid</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">border</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="k">background-color</span><span class="p">:</span> <span class="mh">#f6f8fa</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="p">.</span><span class="nc">dark</span> <span class="p">.</span><span class="nc">post-preview</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="c">/*background: #383838;*/</span>
+</span></span><span class="line"><span class="cl">            <span class="k">background</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">entry</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="k">box-shadow</span><span class="p">:</span> <span class="mi">0</span> <span class="mi">2</span><span class="kt">px</span> <span class="mi">4</span><span class="kt">px</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">.5</span><span class="p">),</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">2</span><span class="kt">px</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">.5</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="p">.</span><span class="nc">post-preview--meta</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">width</span><span class="p">:</span> <span class="mi">80</span><span class="kt">%</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="k">padding</span><span class="p">:</span> <span class="mi">23</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="k">overflow</span><span class="p">:</span> <span class="kc">hidden</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="p">.</span><span class="nc">post-preview--middle</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">line-height</span><span class="p">:</span> <span class="mi">28</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="p">.</span><span class="nc">post-preview--title</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">font-size</span><span class="p">:</span> <span class="mi">22</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="k">margin</span><span class="p">:</span> <span class="mi">0</span> <span class="cp">!important</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="k">padding-bottom</span><span class="p">:</span> <span class="mf">0.25</span><span class="kt">em</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="p">.</span><span class="nc">post-preview--title</span> <span class="nt">a</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">text-decoration</span><span class="p">:</span> <span class="kc">none</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="p">.</span><span class="nc">post-preview--date</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">font-size</span><span class="p">:</span> <span class="mi">14</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="k">color</span><span class="p">:</span> <span class="mh">#999</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="p">.</span><span class="nc">post-preview--excerpt</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">font-size</span><span class="p">:</span> <span class="mi">14</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="k">line-height</span><span class="p">:</span> <span class="mf">1.825</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="p">.</span><span class="nc">post-preview--excerpt</span> <span class="nt">p</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">display</span><span class="p">:</span> <span class="kc">inline</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="k">margin</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="p">.</span><span class="nc">post-preview--image</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">height</span><span class="p">:</span> <span class="mi">200</span><span class="kt">px</span> <span class="cp">!important</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="k">width</span><span class="p">:</span> <span class="mi">25</span><span class="kt">%</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="k">float</span><span class="p">:</span> <span class="kc">right</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="k">border-radius</span><span class="p">:</span> <span class="mi">0</span> <span class="mi">15</span><span class="kt">px</span> <span class="mi">15</span><span class="kt">px</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="p">.</span><span class="nc">post-preview</span> <span class="nt">img</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">margin</span><span class="p">:</span> <span class="kc">unset</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="k">width</span><span class="p">:</span> <span class="mi">20</span><span class="kt">%</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="k">border-radius</span><span class="p">:</span> <span class="mi">0</span> <span class="mi">8</span><span class="kt">px</span> <span class="mi">8</span><span class="kt">px</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="p">@</span><span class="k">media</span> <span class="o">(</span><span class="nt">max-width</span><span class="o">:</span> <span class="nt">550px</span><span class="o">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="p">.</span><span class="nc">post-preview</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="k">width</span><span class="p">:</span> <span class="mi">95</span><span class="kt">%</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">            <span class="p">.</span><span class="nc">post-preview--excerpt</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="c">/*display: none;*/</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">            <span class="p">.</span><span class="nc">post-preview--middle</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="k">line-height</span><span class="p">:</span> <span class="mi">19</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">            <span class="p">.</span><span class="nc">post-preview--meta</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="k">width</span><span class="p">:</span> <span class="mi">60</span><span class="kt">%</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">                <span class="k">padding</span><span class="p">:</span> <span class="mi">23</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">                <span class="k">overflow</span><span class="p">:</span> <span class="kc">hidden</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">            <span class="p">.</span><span class="nc">post-preview</span> <span class="nt">img</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="k">margin</span><span class="p">:</span> <span class="kc">unset</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">                <span class="k">width</span><span class="p">:</span> <span class="mi">40</span><span class="kt">%</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">                <span class="k">border-radius</span><span class="p">:</span> <span class="mi">0</span> <span class="mi">15</span><span class="kt">px</span> <span class="mi">15</span><span class="kt">px</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="p">.</span><span class="nc">rating</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">display</span><span class="p">:</span> <span class="kc">block</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="k">line-height</span><span class="p">:</span> <span class="mi">15</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="p">.</span><span class="nc">rating-star</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">display</span><span class="p">:</span> <span class="kc">inline-block</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="k">width</span><span class="p">:</span> <span class="mi">75</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="k">height</span><span class="p">:</span> <span class="mi">15</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="k">background-repeat</span><span class="p">:</span> <span class="kc">no-repeat</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="k">background-image</span><span class="p">:</span> <span class="nb">url</span><span class="p">(</span><span class="sx">data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEsAAAClCAYAAAAUAAAYAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA5xJREFUeNrs3T9rFEEcxvG7qEQIglaCICKkin9AUEtBKxU7wS61VlYivgWj70TtNFj5BqzE7qxEWwsxKIoYn4UtluFmbm8nczvzm+/BjxyuDwNzu3uXD0+46f7LC5PA45Hm+WTYw1x2LRDc0jzTXB+wqMlsaLPutz8fDFjYZHYauAz3NBvt83XNnyUWNpn1nVm3OsHmsb3EomazzZnVXKMPNcc0xzUnNKc0Rzv/77fms+Z7O3vt9b1eU7bZrNN68l5zcolX4ofmsuZXTdnmMvyi2dR86Bmcac62P6vKrnVubpc0bxYE32nOab45N8YqsvPeDfcD4SOav4HjprPuu+H5BTt9LXDMfNbdLPfT678Fx6vKupt1o/O8+R3pkOaJ5/iktqx7z/qp+aq5q/nY+fczmheaK03Gs7D5rLtZdzSvA6/Ebc2u55j57HQB0TzW7AzkjiKzny6+2hlKNE8juMNcFqKBaIZndRlCNBBNgmx7ZkE0fbLtZkE0EA1EM17WuQwhGogGooFoss6296y52cNO+J6HLJoPaFdbsvA9zGerIxrPh85eWYgGooFoDiQbuAxp0UA0EVmdWbRo+ma1WbRoIBqIZtzsnHdDWjQQDUQD0WSbde5ZS2UhmtqJJtSEiVkXooFoIJre2VATJmZdiKZ2ogk1YSb8oVMvDeUPnSAaiCaPJkzMuhANRAPRQDQpsqEmTMy6EI11oolpwkA0EA1EcyDZmCYMRAPR+LMxTZjqiCamCQPRQDQQzehNGIgGooFoIJpVZ2OaMBBN7USTqgkD0UA0EE3vbKomDERTO9GkasKYJJpUTRiIBqKBaEZvwkA0EA1EA9GkyKZqwkA01olmrCYMRAPRQDR9LkO+0QmiKbAJUyTRjNWEgWggGohm9CYMRAPRQDQQzZDsWE0YiMYC0eTYhIFoIJrKiCbHJgxEY4FocmzCZEs0OTZhIBqIpjKiybEJA9FANBANROPL5tiEgWhKIJoSmzAQDURjjGhKbMJANCUQTYlNmNGIpsQmDEQD0RgjmhKbMBANRAPR1Es0JTZhIJpciMZaEwaigWgKJBprTRiIJheisdaESUo01powEA1EUyDRWGvCQDQQDURjm2isNWEgmlURzWw2q4pZIBqIJkOiCVyGJpkFolkV0ejMMvel28mIRptl7ku3IRqIpjCimfNuaJpZIBqIBqIpm2ice5Z5ZonJupvVkMRu4JW4qXnrOWY++1+AAQBw9BJSCTeN9wAAAABJRU5ErkJggg==</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="k">overflow</span><span class="p">:</span> <span class="kc">hidden</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="p">.</span><span class="nc">allstar10</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">background-position</span><span class="p">:</span> <span class="mi">0</span><span class="kt">px</span> <span class="mi">0</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="p">.</span><span class="nc">allstar9</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">background-position</span><span class="p">:</span> <span class="mi">0</span><span class="kt">px</span> <span class="mi">-15</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="p">.</span><span class="nc">allstar8</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">background-position</span><span class="p">:</span> <span class="mi">0</span><span class="kt">px</span> <span class="mi">-30</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="p">.</span><span class="nc">allstar7</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">background-position</span><span class="p">:</span> <span class="mi">0</span><span class="kt">px</span> <span class="mi">-45</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="p">.</span><span class="nc">allstar6</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">background-position</span><span class="p">:</span> <span class="mi">0</span><span class="kt">px</span> <span class="mi">-60</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="p">.</span><span class="nc">allstar5</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">background-position</span><span class="p">:</span> <span class="mi">0</span><span class="kt">px</span> <span class="mi">-75</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="p">.</span><span class="nc">allstar4</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">background-position</span><span class="p">:</span> <span class="mi">0</span><span class="kt">px</span> <span class="mi">-90</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="p">.</span><span class="nc">allstar3</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">background-position</span><span class="p">:</span> <span class="mi">0</span><span class="kt">px</span> <span class="mi">-105</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="p">.</span><span class="nc">allstar2</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">background-position</span><span class="p">:</span> <span class="mi">0</span><span class="kt">px</span> <span class="mi">-120</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="p">.</span><span class="nc">allstar1</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">background-position</span><span class="p">:</span> <span class="mi">0</span><span class="kt">px</span> <span class="mi">-135</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="p">.</span><span class="nc">allstar0</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">background-position</span><span class="p">:</span> <span class="mi">0</span><span class="kt">px</span> <span class="mi">-150</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="p">.</span><span class="nc">rating-average</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">color</span><span class="p">:</span> <span class="mh">#777</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="k">display</span><span class="p">:</span> <span class="kc">inline-block</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="k">font-size</span><span class="p">:</span> <span class="mi">13</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="k">margin-left</span><span class="p">:</span> <span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://code.jquery.com/jquery-1.12.4.min.js&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text/javascript&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.douban_item&#39;</span><span class="p">).</span><span class="nx">each</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="kd">var</span> <span class="nx">_this</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">                <span class="kd">var</span> <span class="nx">strs</span> <span class="o">=</span> <span class="nx">_this</span><span class="p">.</span><span class="nx">attr</span><span class="p">(</span><span class="s1">&#39;urlstring&#39;</span><span class="p">).</span><span class="nx">toString</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">                <span class="kd">var</span> <span class="nx">db_reg</span> <span class="o">=</span> <span class="sr">/^https\:\/\/(movie|book)\.douban\.com\/subject\/([0-9]+)\/?/</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">                <span class="k">if</span> <span class="p">(</span><span class="nx">db_reg</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="nx">strs</span><span class="p">))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                    <span class="kd">var</span> <span class="nx">db_type</span> <span class="o">=</span> <span class="nx">strs</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="nx">db_reg</span><span class="p">,</span> <span class="s2">&#34;$1&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">                    <span class="kd">var</span> <span class="nx">db_id</span> <span class="o">=</span> <span class="nx">strs</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="nx">db_reg</span><span class="p">,</span> <span class="s2">&#34;$2&#34;</span><span class="p">).</span><span class="nx">toString</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">                    <span class="kd">var</span> <span class="nx">db_api</span> <span class="o">=</span> <span class="s2">&#34;https://douban.edui.fun/&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">                    <span class="k">if</span> <span class="p">(</span><span class="nx">db_type</span> <span class="o">===</span> <span class="s1">&#39;movie&#39;</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                        <span class="kd">var</span> <span class="nx">ls_item</span> <span class="o">=</span> <span class="s1">&#39;movie&#39;</span> <span class="o">+</span> <span class="nx">db_id</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">                        <span class="kd">var</span> <span class="nx">url</span> <span class="o">=</span> <span class="nx">db_api</span> <span class="o">+</span> <span class="s2">&#34;movies/&#34;</span> <span class="o">+</span> <span class="nx">db_id</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">                        <span class="k">if</span> <span class="p">(</span><span class="nx">localStorage</span><span class="p">.</span><span class="nx">getItem</span><span class="p">(</span><span class="nx">ls_item</span><span class="p">)</span> <span class="o">==</span> <span class="kc">null</span> <span class="o">||</span> <span class="nx">localStorage</span><span class="p">.</span><span class="nx">getItem</span><span class="p">(</span><span class="nx">ls_item</span><span class="p">)</span> <span class="o">===</span> <span class="s1">&#39;undefined&#39;</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                            <span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">                                <span class="nx">url</span><span class="o">:</span> <span class="nx">url</span><span class="p">,</span> <span class="nx">type</span><span class="o">:</span> <span class="s1">&#39;GET&#39;</span><span class="p">,</span> <span class="nx">dataType</span><span class="o">:</span> <span class="s2">&#34;json&#34;</span><span class="p">,</span> <span class="nx">success</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                                    <span class="nx">localStorage</span><span class="p">.</span><span class="nx">setItem</span><span class="p">(</span><span class="nx">ls_item</span><span class="p">,</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">data</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">                                    <span class="nx">movieShow</span><span class="p">(</span><span class="nx">_this</span><span class="p">,</span> <span class="nx">ls_item</span><span class="p">,</span> <span class="nx">strs</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                                <span class="p">}</span>
+</span></span><span class="line"><span class="cl">                            <span class="p">})</span>
+</span></span><span class="line"><span class="cl">                        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                            <span class="nx">movieShow</span><span class="p">(</span><span class="nx">_this</span><span class="p">,</span> <span class="nx">ls_item</span><span class="p">,</span> <span class="nx">strs</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">                    <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">db_type</span> <span class="o">===</span> <span class="s1">&#39;book&#39;</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                        <span class="kd">var</span> <span class="nx">ls_item</span> <span class="o">=</span> <span class="s1">&#39;book&#39;</span> <span class="o">+</span> <span class="nx">db_id</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">                        <span class="kd">var</span> <span class="nx">url</span> <span class="o">=</span> <span class="nx">db_api</span> <span class="o">+</span> <span class="s2">&#34;v2/book/id/&#34;</span> <span class="o">+</span> <span class="nx">db_id</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">                        <span class="k">if</span> <span class="p">(</span><span class="nx">localStorage</span><span class="p">.</span><span class="nx">getItem</span><span class="p">(</span><span class="nx">ls_item</span><span class="p">)</span> <span class="o">==</span> <span class="kc">null</span> <span class="o">||</span> <span class="nx">localStorage</span><span class="p">.</span><span class="nx">getItem</span><span class="p">(</span><span class="nx">ls_item</span><span class="p">)</span> <span class="o">===</span> <span class="s1">&#39;undefined&#39;</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                            <span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">                                <span class="nx">url</span><span class="o">:</span> <span class="nx">url</span><span class="p">,</span> <span class="nx">type</span><span class="o">:</span> <span class="s1">&#39;GET&#39;</span><span class="p">,</span> <span class="nx">dataType</span><span class="o">:</span> <span class="s1">&#39;json&#39;</span><span class="p">,</span> <span class="nx">success</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                                    <span class="nx">localStorage</span><span class="p">.</span><span class="nx">setItem</span><span class="p">(</span><span class="s1">&#39;book&#39;</span> <span class="o">+</span> <span class="nx">db_id</span><span class="p">,</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">data</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">                                    <span class="nx">bookShow</span><span class="p">(</span><span class="nx">_this</span><span class="p">,</span> <span class="nx">ls_item</span><span class="p">,</span> <span class="nx">strs</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                                <span class="p">}</span>
+</span></span><span class="line"><span class="cl">                            <span class="p">})</span>
+</span></span><span class="line"><span class="cl">                        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                            <span class="nx">bookShow</span><span class="p">(</span><span class="nx">_this</span><span class="p">,</span> <span class="nx">ls_item</span><span class="p">,</span> <span class="nx">strs</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">                    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">                <span class="p">}</span>
+</span></span><span class="line"><span class="cl">            <span class="p">});</span>
+</span></span><span class="line"><span class="cl">        <span class="p">});</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="kd">function</span> <span class="nx">movieShow</span><span class="p">(</span><span class="nx">_this</span><span class="p">,</span> <span class="nx">ls_item</span><span class="p">,</span> <span class="nx">str</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="kd">var</span> <span class="nx">storage</span> <span class="o">=</span> <span class="nx">localStorage</span><span class="p">.</span><span class="nx">getItem</span><span class="p">(</span><span class="nx">ls_item</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="kd">var</span> <span class="nx">data</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">storage</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="kd">var</span> <span class="nx">db_star</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">ceil</span><span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">rating</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">$</span><span class="p">(</span><span class="s2">&#34;&lt;div class=&#39;post-preview&#39;&gt;&lt;div class=&#39;post-preview--meta&#39;&gt;&lt;div class=&#39;post-preview--middle&#39;&gt;&lt;div class=&#39;post-preview--title&#39;&gt;&lt;a target=&#39;_blank&#39; style=&#39;box-shadow: none; font-weight: bolder;&#39; href=&#39;&#34;</span> <span class="o">+</span> <span class="nx">str</span> <span class="o">+</span> <span class="s2">&#34;&#39;&gt;&#34;</span> <span class="o">+</span> <span class="nx">data</span><span class="p">.</span><span class="nx">name</span> <span class="o">+</span> <span class="s2">&#34;&lt;/a&gt;&lt;/div&gt;&lt;div class=&#39;rating&#39;&gt;&lt;div class=&#39;rating-star allstar&#34;</span> <span class="o">+</span> <span class="nx">db_star</span> <span class="o">+</span> <span class="s2">&#34;&#39;&gt;&lt;/div&gt;&lt;div class=&#39;rating-average&#39;&gt;&#34;</span> <span class="o">+</span> <span class="nx">data</span><span class="p">.</span><span class="nx">rating</span> <span class="o">+</span> <span class="s2">&#34;&lt;/div&gt;&lt;/div&gt;&lt;time class=&#39;post-preview--date&#39;&gt;导演：&#34;</span> <span class="o">+</span> <span class="nx">data</span><span class="p">.</span><span class="nx">director</span> <span class="o">+</span> <span class="s2">&#34; / 类型：&#34;</span> <span class="o">+</span> <span class="nx">data</span><span class="p">.</span><span class="nx">genre</span> <span class="o">+</span> <span class="s2">&#34; / &#34;</span> <span class="o">+</span> <span class="nx">data</span><span class="p">.</span><span class="nx">year</span> <span class="o">+</span> <span class="s2">&#34;&lt;/time&gt;&lt;section style=&#39;max-height:75px;overflow:hidden;&#39; class=&#39;post-preview--excerpt&#39;&gt;&#34;</span> <span class="o">+</span> <span class="nx">data</span><span class="p">.</span><span class="nx">intro</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/\s*/g</span><span class="p">,</span> <span class="s2">&#34;&#34;</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&#34;&lt;/section&gt;&lt;/div&gt;&lt;/div&gt;&lt;img referrerpolicy=&#39;no-referrer&#39; loading=&#39;lazy&#39; class=&#39;post-preview--image&#39; src=&#34;</span> <span class="o">+</span> <span class="nx">data</span><span class="p">.</span><span class="nx">img</span> <span class="o">+</span> <span class="s2">&#34;&gt;&lt;/div&gt;&#34;</span><span class="p">).</span><span class="nx">replaceAll</span><span class="p">(</span><span class="nx">_this</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="kd">function</span> <span class="nx">bookShow</span><span class="p">(</span><span class="nx">_this</span><span class="p">,</span> <span class="nx">ls_item</span><span class="p">,</span> <span class="nx">str</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="kd">var</span> <span class="nx">storage</span> <span class="o">=</span> <span class="nx">localStorage</span><span class="p">.</span><span class="nx">getItem</span><span class="p">(</span><span class="nx">ls_item</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="kd">var</span> <span class="nx">data</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">storage</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="kd">var</span> <span class="nx">db_star</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">ceil</span><span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">rating</span><span class="p">.</span><span class="nx">average</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">$</span><span class="p">(</span><span class="s2">&#34;&lt;div class=&#39;post-preview&#39;&gt;&lt;div class=&#39;post-preview--meta&#39;&gt;&lt;div class=&#39;post-preview--middle&#39;&gt;&lt;div class=&#39;post-preview--title&#39;&gt;&lt;a target=&#39;_blank&#39; style=&#39;box-shadow: none; font-weight: bolder;&#39; href=&#39;&#34;</span> <span class="o">+</span> <span class="nx">str</span> <span class="o">+</span> <span class="s2">&#34;&#39;&gt;&#34;</span> <span class="o">+</span> <span class="nx">data</span><span class="p">.</span><span class="nx">title</span> <span class="o">+</span> <span class="s2">&#34;&lt;/a&gt;&lt;/div&gt;&lt;div class=&#39;rating&#39;&gt;&lt;div class=&#39;rating-star allstar&#34;</span> <span class="o">+</span> <span class="nx">db_star</span> <span class="o">+</span> <span class="s2">&#34;&#39;&gt;&lt;/div&gt;&lt;div class=&#39;rating-average&#39;&gt;&#34;</span> <span class="o">+</span> <span class="nx">data</span><span class="p">.</span><span class="nx">rating</span><span class="p">.</span><span class="nx">average</span> <span class="o">+</span> <span class="s2">&#34;&lt;/div&gt;&lt;/div&gt;&lt;time class=&#39;post-preview--date&#39;&gt;作者：&#34;</span> <span class="o">+</span> <span class="nx">data</span><span class="p">.</span><span class="nx">author</span> <span class="o">+</span> <span class="s2">&#34; / 出版：&#34;</span><span class="o">+</span> <span class="nx">data</span><span class="p">.</span><span class="nx">pubdate</span> <span class="o">+</span><span class="s2">&#34; / &#34;</span><span class="o">+</span> <span class="nx">data</span><span class="p">.</span><span class="nx">publisher</span> <span class="o">+</span><span class="s2">&#34; &lt;/time&gt;&lt;section style=&#39;max-height:75px;overflow:hidden;&#39; class=&#39;post-preview--excerpt&#39;&gt;&#34;</span> <span class="o">+</span> <span class="nx">data</span><span class="p">.</span><span class="nx">summary</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/\s*/g</span><span class="p">,</span> <span class="s2">&#34;&#34;</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&#34;&lt;/section&gt;&lt;/div&gt;&lt;/div&gt;&lt;img referrerpolicy=&#39;no-referrer&#39; loading=&#39;lazy&#39; class=&#39;post-preview--image&#39; src=&#34;</span> <span class="o">+</span> <span class="nx">data</span><span class="p">.</span><span class="nx">images</span><span class="p">.</span><span class="nx">medium</span> <span class="o">+</span> <span class="s2">&#34;&gt;&lt;/div&gt;&#34;</span><span class="p">).</span><span class="nx">replaceAll</span><span class="p">(</span><span class="nx">_this</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;douban_show&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;db{{ .Get &#34;</span><span class="na">src</span><span class="err">&#34;</span> <span class="err">}}&#34;</span> <span class="na">urlstring</span><span class="o">=</span><span class="s">&#34;{{ .Get &#34;</span><span class="na">src</span><span class="err">&#34;</span> <span class="err">}}&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;douban_item post-preview&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </span></span></code></pre></div>
   </div>
 
   <footer class="post-footer">
 <nav class="paginav">
+  <a class="prev" href="https://wananaiko.design/docs/hugo-easy-gallery/hugo-easy-gallery/">
+    <span class="title">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left" style="user-select: text;"><line x1="19" y1="12" x2="5" y2="12" style="user-select: text;"></line><polyline points="12 19 5 12 12 5" style="user-select: text;"></polyline></svg>&nbsp;Prev Page</span>
+    <br>
+    <span>Hugo增加相册功能</span>
+  </a>
   <a class="next" href="https://wananaiko.design/docs/how-iterm2-show-current-proxy-status/">
     <span class="title">Next Page&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right" style="user-select: text;"><line x1="5" y1="12" x2="19" y2="12" style="user-select: text;"></line><polyline points="12 5 19 12 12 19" style="user-select: text;"></polyline></svg>
     </span>
@@ -527,6 +1012,10 @@ function toggleThemeListener() {
     <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
     <a href="https://github.com/reorx/hugo-PaperModX/" rel="noopener" target="_blank">PaperModX</a>
   </span>
+
+
+
+
 </footer>
 <a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">

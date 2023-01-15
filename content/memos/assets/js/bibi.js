@@ -150,6 +150,7 @@ function updateHTMl(e) {
         .querySelector("button.button-load")
         .textContent = "加载更多"
 }
+
 function fetchDB() {
     var e = "https://douban.edui.fun/",
         t = document.querySelectorAll(".bb-timeline a[href*='douban.com/subject/']") || "";
