@@ -24,12 +24,12 @@ https://github.com/liwenyip/hugo-easy-gallery
 按教程操作后,需要注意在文章中引用时,按下面的类似格式 (需去掉下方所有的 \ ):
 
 ```markdown
-{{\< load-photoswipe >\}}
+{{\< load-photoswipe >}}
 {{\< gallery >\}}
-  {{\< figure src="docs/hugo-easy-gallery/image1.jpg" >\}}
-  {{\< figure src="docs/hugo-easy-gallery/image2.jpg" >\}}
-  {{\< figure src="docs/hugo-easy-gallery/image3.jpg" >\}}
-{{\< /gallery >\}}
+  {{\< figure link="docs/hugo-easy-gallery/image1.jpg" >}}
+  {{\< figure link="docs/hugo-easy-gallery/image2.jpg" >}}
+  {{\< figure link="docs/hugo-easy-gallery/image3.jpg" >}}
+{{\< /gallery >}}
 ```
 并对 CSS 样式进行了微调,修改根目录 `/assets/css/core/reset.css`,加入以下代码:
 ```css
