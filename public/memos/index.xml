@@ -4,6 +4,10 @@
     <title>memos on wananaiko</title>
     <link>https://wananaiko.design/memos/</link>
     <description>Recent content in memos on wananaiko</description>
+    <image>
+      <url>https://wananaiko.design/images/forge-v2-compat.svg</url>
+      <link>https://wananaiko.design/images/forge-v2-compat.svg</link>
+    </image>
     <generator>Hugo -- gohugo.io</generator><atom:link href="https://wananaiko.design/memos/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
