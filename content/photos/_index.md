@@ -1,5 +1,5 @@
 ---
-title: "Photos"
+# title: "Photos"
 layout: "photos"
 type: "photos"
 ---
