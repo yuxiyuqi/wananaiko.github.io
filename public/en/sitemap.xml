@@ -2,8 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://wananaiko.design/docs/my2022/</loc>
+    <lastmod>2023-01-15T01:40:29+08:00</lastmod>
+  </url><url>
     <loc>https://wananaiko.design/docs/</loc>
-    <lastmod>2023-01-12T22:54:52+08:00</lastmod>
+    <lastmod>2023-01-15T01:40:29+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
@@ -15,14 +18,8 @@
                 href="https://wananaiko.design/docs/"
                 />
   </url><url>
-    <loc>https://wananaiko.design/tags/hugo/</loc>
-    <lastmod>2023-01-12T22:54:52+08:00</lastmod>
-  </url><url>
-    <loc>https://wananaiko.design/docs/hugo-easy-gallery/hugo-easy-gallery/</loc>
-    <lastmod>2023-01-12T22:54:52+08:00</lastmod>
-  </url><url>
     <loc>https://wananaiko.design/tags/</loc>
-    <lastmod>2023-01-12T22:54:52+08:00</lastmod>
+    <lastmod>2023-01-15T01:40:29+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
@@ -35,7 +32,7 @@
                 />
   </url><url>
     <loc>https://wananaiko.design/</loc>
-    <lastmod>2023-01-12T22:54:52+08:00</lastmod>
+    <lastmod>2023-01-15T01:40:29+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
@@ -46,6 +43,15 @@
                 hreflang="en"
                 href="https://wananaiko.design/"
                 />
+  </url><url>
+    <loc>https://wananaiko.design/tags/%E8%B7%A8%E5%B9%B4%E5%8D%9A%E5%AE%A2/</loc>
+    <lastmod>2023-01-15T01:40:29+08:00</lastmod>
+  </url><url>
+    <loc>https://wananaiko.design/tags/hugo/</loc>
+    <lastmod>2023-01-12T22:54:52+08:00</lastmod>
+  </url><url>
+    <loc>https://wananaiko.design/docs/hugo-easy-gallery/hugo-easy-gallery/</loc>
+    <lastmod>2023-01-12T22:54:52+08:00</lastmod>
   </url><url>
     <loc>https://wananaiko.design/tags/%E7%9B%B8%E5%86%8C/</loc>
     <lastmod>2023-01-12T22:54:52+08:00</lastmod>
@@ -70,6 +76,12 @@
   </url><url>
     <loc>https://wananaiko.design/docs/macosapps/</loc>
     <lastmod>2023-01-07T20:14:36+08:00</lastmod>
+  </url><url>
+    <loc>https://wananaiko.design/docs/howtobesuccessful/</loc>
+    <lastmod>2023-01-01T12:06:47+08:00</lastmod>
+  </url><url>
+    <loc>https://wananaiko.design/tags/%E6%91%98%E5%BD%95/</loc>
+    <lastmod>2023-01-01T12:06:47+08:00</lastmod>
   </url><url>
     <loc>https://wananaiko.design/tags/rsshub/</loc>
     <lastmod>2022-12-20T00:00:00+00:00</lastmod>

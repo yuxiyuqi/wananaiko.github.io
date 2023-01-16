@@ -6,23 +6,38 @@
   weight = 1
 
 [[blogroll]]
+  name = "旅行漫记"
+  url = "https://synyan.cn/"
+  favicon = "https://synyan.cn/wp-content/themes/Puma-child-2020/build/img/favicon-ss.png"
+  description = "器材党广角狗，博物馆爱好者，旅游点打卡员."
+  weight = 2
+
+[[blogroll]]
   name = "木木木木木"
   url = "https://immmmm.com"
   favicon = "https://images.wananaiko.com/2023/01/o3wqCp.jpg"
   description = "专业全栈开发工程师，生活化语言的技术博客."
-  weight = 2
+  weight = 3
 
+[[blogroll]]
+  name = "logoReorx’s Forge"
+  url = "https://reorx.com"
+  favicon = "https://reorx.com/images/forge-v2-compat.svg"
+  description = "专业全栈开发工程师，活跃在各个主流互联网平台."
+  weight = 4
 
 [[blogroll]]
   name = "大大的小蜗牛"
   url = "https://eallion.com"
   favicon = "https://cdn.jsdelivr.net/gh/eallion/eallion/avatar/eallion.png"
   description = "机会总是垂青于有准备的人."
-  weight = 3
+  weight = 5
 
-  [[blogroll]]
-  name = "logoReorx’s Forge"
-  url = "https://reorx.com"
-  favicon = "https://reorx.com/images/forge-v2-compat.svg"
-  description = "专业全栈开发工程师，活跃在各个主流互联网平台."
-  weight = 4
+[[blogroll]]
+  name = "Wayne Wu"
+  url = "https://wayne-wu.com/"
+  favicon = "https://wayne-wu.com/avatar.jpeg"
+  description = "热爱编程，喜欢探索,摄影爱好者."
+  weight = 5
+
+

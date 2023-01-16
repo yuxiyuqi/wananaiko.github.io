@@ -5,7 +5,384 @@
     <link>https://wananaiko.design/</link>
     <description>Recent content on wananaiko</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 12 Jan 2023 22:54:52 +0800</lastBuildDate><atom:link href="https://wananaiko.design/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 15 Jan 2023 01:40:29 +0800</lastBuildDate><atom:link href="https://wananaiko.design/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>2022 – 2023 跨年博客</title>
+      <link>https://wananaiko.design/docs/my2022/</link>
+      <pubDate>Sun, 15 Jan 2023 01:40:29 +0800</pubDate>
+      
+      <guid>https://wananaiko.design/docs/my2022/</guid>
+      <description>2022年 2022年其实我并没有“躺平”，也无法躺平。无论是工作还是生活，经常都是处于一种忙碌的状态。
+疫情 被疫情反复折腾的一年，上半年经历了上海严峻的封控措施，一个人艰难的度过了3个月，每天只能通过视频和老婆孩子聊天，每天都期盼着什么时候能够解封回家。
+解封后更折腾了，几乎每个星期的周五都会赶最后一班高铁回家，这导致我周五、周六、周日、周一必须连续做4天核酸。不是抱怨，只是为了能够回家和家人团聚，当然要做。
+疫情3年，今年终于结束了。虽然结束了，但还是受到了很大的影响。每天出门依然需要佩戴口罩，企业的经济效益也持续低迷，经常还会担心家人再次受到病毒的伤害，直到现在仍然能感受到身边很多人还没有完全恢复。
+家庭 虽然2022年过的很辛苦，但也是幸运的一年，庆幸自己和家人都平安的度过了这一年，身边的长辈还没有因为疫情离开的，挺好。
+今年和老婆的感情是升温向上的，相处和睦，彼此关心照顾。而我们家，也即将迎来一位新的成员，我们的兔宝宝预计将于 2023年7月和我们见面，充满了期待。
+消费 2022年的消费支出有点高，虽然我没有记账的习惯和时间，但是在整理下面的支出时，能感觉到花费了不少，有一些确实是非必要的 😂 最近已经开始消费降级了，尤其是身为2个孩子的爸爸后，感觉压力更大了，得把这种压力转化为动力。
+工作 今年忙了 7 个月 GOV 项目，最终竟然意外流标了。期间，甲方主要负责人一直在参与项目，从产品到设计到研发，几乎每个星期都一起开会讨论（疫情封控期间线上会议）。本以为可以顺利竞标的，毕竟甲方的负责人也是项目的核心人员，由他起草的项目方案书几百页，方案涉及的理论知识非常专业。可能中标的那家拿捏到了更大的 Leader 吧，很难说清楚。
+一个 GOV 的项目，经费、后期的维护以及人脉资源，其实都非常大。丢了一块大蛋糕就算了，还浪费了我们很大的人力成本，老板为此也很生气，但没办法，这个项目以后也只能以其他方式继续运作卖给他方。
+学习 年底这段时间，我经常督促自己抽时间学习 Javascript，期望能够通过学习提升自己的前端能力。2023年的重点也将放在学习前端的知识上，现在的计划是先看完 Codecademy 上的一些免费练习课程，然后再接着学习三木的 Javascript 收费课程，接着开始设计一套页面并尝试开发出来。
+躺平 今年其实有一处躺平的地方，在“Crypto”。今年几乎没有做什么操作，只是加了几次仓，目前还是处于亏损70%-80%左右的状态。只能躺平，等待这轮熊市慢慢的过去。近期行情稍微有那么一点点的起色，也不知道是不是假象，反正依然坚持躺平的策略。
+2023年 最大的希望是，家人能够健康平安。
+印象深刻的一些电影/电视 名称 类型 评价 短剧开始啦 电视剧 一部很感人的日剧，笑着笑着就哭了。看完这部剧，你会想谢谢身边的朋友，并更加珍惜友情。 风骚律师 电视剧 我最爱的美剧Top1，剧情、台词、摄影镜头、服装都堪称教科书级别的。看完这部剧像是阔别了一位老友，怅然若失的感觉，一个时代的落幕了。 怪奇物语 电视剧 怀着激动的心情迎来了第四季，孩子们都已经长大成人了，这一季多线剧情杀疯了，越看越爽。 黑暗荣耀 电视剧 上周刚刚看完，一部剧情紧凑的爽剧，乔妹依然颜值在线，演技也很不错。 阿凡达·水之道 电影 其实看之前已经听说剧情一般，不过在大银幕极质的视听享受下，潘多拉星球真的美翻了，每一帧都值得品味。 坠落 电影 评分虽然不是很高，但是，恐高的我心惊胆战的看完了，生理上的感受过于刺激。 看了些设计书 名称 打分 进度 Practical-UI ★★★★★ 已读完 Refactoring UI ★★★★★ 进行中 The UI Design Manual ★★★★☆ 进行中 Masteruibook ★★★★☆ 已读完 Web Interface Handbook ★★★☆☆ 进行中 UI/UX Design Money - 未读 The Ultimate Guide to Web Design - 未读 今年陆陆续续买了不少设计书籍，这些书籍其实大同小异，大部分围绕设计和用户体验提供一些合理的建议。推荐看看 Practical-UI 和 Refactoring UI。</description>
+      <content:encoded><![CDATA[<h3 id="2022年"><strong>2022年</strong></h3>
+<p>2022年其实我并没有“躺平”，也无法躺平。无论是工作还是生活，经常都是处于一种忙碌的状态。</p>
+<ul>
+<li><strong>疫情</strong></li>
+</ul>
+<p>被疫情反复折腾的一年，上半年经历了上海严峻的封控措施，一个人艰难的度过了3个月，每天只能通过视频和老婆孩子聊天，每天都期盼着什么时候能够解封回家。</p>
+<p>解封后更折腾了，几乎每个星期的周五都会赶最后一班高铁回家，这导致我周五、周六、周日、周一必须连续做4天核酸。不是抱怨，只是为了能够回家和家人团聚，当然要做。</p>
+<p>疫情3年，今年终于结束了。虽然结束了，但还是受到了很大的影响。每天出门依然需要佩戴口罩，企业的经济效益也持续低迷，经常还会担心家人再次受到病毒的伤害，直到现在仍然能感受到身边很多人还没有完全恢复。</p>
+<ul>
+<li><strong>家庭</strong></li>
+</ul>
+<p>虽然2022年过的很辛苦，但也是幸运的一年，庆幸自己和家人都平安的度过了这一年，身边的长辈还没有因为疫情离开的，挺好。</p>
+<p>今年和老婆的感情是升温向上的，相处和睦，彼此关心照顾。而我们家，也即将迎来一位新的成员，我们的兔宝宝预计将于 2023年7月和我们见面，充满了期待。</p>
+<ul>
+<li><strong>消费</strong></li>
+</ul>
+<p>2022年的消费支出有点高，虽然我没有记账的习惯和时间，但是在整理下面的支出时，能感觉到花费了不少，有一些确实是非必要的 😂 最近已经开始消费降级了，尤其是身为2个孩子的爸爸后，感觉压力更大了，得把这种压力转化为动力。</p>
+<ul>
+<li><strong>工作</strong></li>
+</ul>
+<p>今年忙了 7 个月 GOV 项目，最终竟然意外流标了。期间，甲方主要负责人一直在参与项目，从产品到设计到研发，几乎每个星期都一起开会讨论（疫情封控期间线上会议）。本以为可以顺利竞标的，毕竟甲方的负责人也是项目的核心人员，由他起草的项目方案书几百页，方案涉及的理论知识非常专业。可能中标的那家拿捏到了更大的 Leader 吧，很难说清楚。</p>
+<p>一个 GOV 的项目，经费、后期的维护以及人脉资源，其实都非常大。丢了一块大蛋糕就算了，还浪费了我们很大的人力成本，老板为此也很生气，但没办法，这个项目以后也只能以其他方式继续运作卖给他方。</p>
+<ul>
+<li><strong>学习</strong></li>
+</ul>
+<p>年底这段时间，我经常督促自己抽时间学习 Javascript，期望能够通过学习提升自己的前端能力。2023年的重点也将放在学习前端的知识上，现在的计划是先看完 Codecademy 上的一些免费练习课程，然后再接着学习三木的 Javascript 收费课程，接着开始设计一套页面并尝试开发出来。</p>
+<ul>
+<li><strong>躺平</strong></li>
+</ul>
+<p>今年其实有一处躺平的地方，在“Crypto”。今年几乎没有做什么操作，只是加了几次仓，目前还是处于亏损70%-80%左右的状态。只能躺平，等待这轮熊市慢慢的过去。近期行情稍微有那么一点点的起色，也不知道是不是假象，反正依然坚持躺平的策略。</p>
+<h3 id="2023年"><strong>2023年</strong></h3>
+<p><mark>最大的希望是，家人能够健康平安。</mark></p>
+<hr>
+<h3 id="印象深刻的一些电影电视">印象深刻的一些电影/电视</h3>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>类型</th>
+<th>评价</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>短剧开始啦</td>
+<td>电视剧</td>
+<td>一部很感人的日剧，笑着笑着就哭了。看完这部剧，你会想谢谢身边的朋友，并更加珍惜友情。</td>
+</tr>
+<tr>
+<td>风骚律师</td>
+<td>电视剧</td>
+<td>我最爱的美剧Top1，剧情、台词、摄影镜头、服装都堪称教科书级别的。看完这部剧像是阔别了一位老友，怅然若失的感觉，一个时代的落幕了。</td>
+</tr>
+<tr>
+<td>怪奇物语</td>
+<td>电视剧</td>
+<td>怀着激动的心情迎来了第四季，孩子们都已经长大成人了，这一季多线剧情杀疯了，越看越爽。</td>
+</tr>
+<tr>
+<td>黑暗荣耀</td>
+<td>电视剧</td>
+<td>上周刚刚看完，一部剧情紧凑的爽剧，乔妹依然颜值在线，演技也很不错。</td>
+</tr>
+<tr>
+<td>阿凡达·水之道</td>
+<td>电影</td>
+<td>其实看之前已经听说剧情一般，不过在大银幕极质的视听享受下，潘多拉星球真的美翻了，每一帧都值得品味。</td>
+</tr>
+<tr>
+<td>坠落</td>
+<td>电影</td>
+<td>评分虽然不是很高，但是，恐高的我心惊胆战的看完了，生理上的感受过于刺激。</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="看了些设计书">看了些设计书</h3>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>打分</th>
+<th style="text-align:left">进度</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://www.practical-ui.com/" target="_blank" rel="noopener">Practical-UI</a></td>
+<td>★★★★★</td>
+<td style="text-align:left">已读完</td>
+</tr>
+<tr>
+<td><a href="https://www.refactoringui.com/#get-refactoring-ui" target="_blank" rel="noopener">Refactoring UI</a></td>
+<td>★★★★★</td>
+<td style="text-align:left">进行中</td>
+</tr>
+<tr>
+<td><a href="https://uiadrian.gumroad.com/l/design-manual" target="_blank" rel="noopener">The UI Design Manual</a></td>
+<td>★★★★☆</td>
+<td style="text-align:left">进行中</td>
+</tr>
+<tr>
+<td>Masteruibook</td>
+<td>★★★★☆</td>
+<td style="text-align:left">已读完</td>
+</tr>
+<tr>
+<td><a href="https://imperavi.com/books/web-interface-handbook/" target="_blank" rel="noopener">Web Interface Handbook</a></td>
+<td>★★★☆☆</td>
+<td style="text-align:left">进行中</td>
+</tr>
+<tr>
+<td><a href="https://michaelfilipiuk.gumroad.com/l/uiuxmoney?layout=profile" target="_blank" rel="noopener">UI/UX Design Money</a></td>
+<td>-</td>
+<td style="text-align:left">未读</td>
+</tr>
+<tr>
+<td><a href="https://uiadrian.gumroad.com/l/web-design-guide/" target="_blank" rel="noopener">The Ultimate Guide to Web Design</a></td>
+<td>-</td>
+<td style="text-align:left">未读</td>
+</tr>
+</tbody>
+</table>
+<p>今年陆陆续续买了不少设计书籍，这些书籍其实大同小异，大部分围绕设计和用户体验提供一些合理的建议。推荐看看 Practical-UI 和 Refactoring UI。</p>
+<hr>
+<h3 id="买了些设计资源">买了些设计资源</h3>
+<p>今年还买了很少设计网站的素材，以备不时之需，大部分都是值得购买的。</p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>类型</th>
+<th>评价</th>
+<th>打分</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://craftwork.design/" target="_blank" rel="noopener">craftwork.design</a></td>
+<td>综合</td>
+<td>3D素材、插画、模型质量不错，定位综合性的设计素材网站。</td>
+<td>★★★★☆</td>
+</tr>
+<tr>
+<td><a href="https://www.ls.graphics/" target="_blank" rel="noopener">ls.graphic</a></td>
+<td>综合</td>
+<td>3D素材和模型质量不错，主打模型这块，质量非常高，很多模型还提供免费下载。</td>
+<td>★★★★☆</td>
+</tr>
+<tr>
+<td><a href="https://www.iconfinder.com/" target="_blank" rel="noopener">Iconfinder</a></td>
+<td>图标</td>
+<td>使用频率其实不是很高，而且价格很高，性价比不是很高，在图标素材站里算是质量最高的。</td>
+<td>★★★★☆</td>
+</tr>
+<tr>
+<td><a href="https://www.untitledui.com/" target="_blank" rel="noopener">Untitled UI &amp; Icons</a></td>
+<td>设计系统，图标</td>
+<td>这套设计系统质量很高了，但是只有设计系统，没有前端框架，落地依然麻烦。</td>
+<td>★★★★☆</td>
+</tr>
+<tr>
+<td><a href="https://www.figma.academy/" target="_blank" rel="noopener">Figma Academy</a></td>
+<td>教程</td>
+<td>Figma系统设计教程，质量很高。</td>
+<td>★★★★★</td>
+</tr>
+<tr>
+<td><a href="https://iconly.pro/" target="_blank" rel="noopener">Iconly Pro</a></td>
+<td>图标</td>
+<td>这套系列图标质量极高，在客户端里使用，包含6种基础的图标风格，还有即将推出的动态图标和3D图标，价格有点贵，但是质量非常高。官方Discord内可以获取折扣。</td>
+<td>★★★★★</td>
+</tr>
+<tr>
+<td><a href="https://myicons.co/" target="_blank" rel="noopener">Myicons</a></td>
+<td>图标</td>
+<td>只有一种风格，价格比Iconly还贵，但是图标非常全，质量也很高。如果只使用一种线性风格，这套性价比还是非常不错的。</td>
+<td>★★★★☆</td>
+</tr>
+<tr>
+<td><a href="https://dazzleui.pro/" target="_blank" rel="noopener">Dazzle</a></td>
+<td>图标</td>
+<td>有4种风格，线性风格的全部图标可以免费下载，很良心，质量不错。</td>
+<td>★★★★☆</td>
+</tr>
+<tr>
+<td><a href="https://www.anron.pro/" target="_blank" rel="noopener">Anron</a></td>
+<td>图标</td>
+<td>有6种风格，质量还不错，官网设计的很好看。</td>
+<td>★★★★☆</td>
+</tr>
+<tr>
+<td><a href="https://www.getillustrations.com/" target="_blank" rel="noopener">Getillustrations</a></td>
+<td>插画</td>
+<td>数量很多，整体风格也还可以。</td>
+<td>★★★☆☆</td>
+</tr>
+<tr>
+<td><a href="https://www.uiprep.com/" target="_blank" rel="noopener">UIPREP</a></td>
+<td>设计系统</td>
+<td>质量一般，不是很值得购买。</td>
+<td>★★☆☆☆</td>
+</tr>
+<tr>
+<td><a href="https://nucleus-ui.com/" target="_blank" rel="noopener">Nucleus UI Plus</a></td>
+<td>设计系统</td>
+<td>侧重于手机端的设计系统，质量非常高，带token，还有很多示例页面。</td>
+<td>★★★★☆</td>
+</tr>
+<tr>
+<td><a href="https://motiondesign.school/" target="_blank" rel="noopener">Motion Design School</a></td>
+<td>教程</td>
+<td>一套动效教程，还没有时间学。</td>
+<td>-</td>
+</tr>
+<tr>
+<td><a href="https://www.freepik.com/" target="_blank" rel="noopener">Freepik</a></td>
+<td>矢量素材</td>
+<td>主打矢量素材，很多质量还挺不错的，使用频率较高。</td>
+<td>★★★★★</td>
+</tr>
+<tr>
+<td><a href="https://www.clipartkorea.co.kr/main/index.php" target="_blank" rel="noopener">clipartkorea</a></td>
+<td>综合</td>
+<td>来自韩国的素材库，好不容易找到一个在韩国的朋友帮忙代购，虽然使用频率不高，但是质量真的很高，是平面设计灵感的来源地。</td>
+<td>★★★★☆</td>
+</tr>
+</tbody>
+</table>
+<p>还有其他一些零零散散的素材，价值不是很高，就不列入清单了。建议黑五前后的一段时间多留意国外的素材网站，通常会有一些不错的折扣，在黑五期间买还是很划算的。</p>
+<hr>
+<h3 id="最常用的软件">最常用的软件</h3>
+<ol>
+<li>
+<p>Figma</p>
+</li>
+<li>
+<p>Raycast</p>
+</li>
+<li>
+<p>Arc</p>
+</li>
+<li>
+<p>MenuBarX</p>
+</li>
+<li>
+<p>Cleanshout</p>
+</li>
+<li>
+<p>uPic</p>
+</li>
+<li>
+<p>Reeder</p>
+</li>
+<li>
+<p>Typora</p>
+</li>
+<li>
+<p>Visual Studio Code</p>
+</li>
+<li>
+<p>iTerm</p>
+</li>
+<li>
+<p>TickerPad</p>
+</li>
+<li>
+<p>Surge</p>
+</li>
+<li>
+<p>HazeOver</p>
+</li>
+<li>
+<p>PopClip</p>
+</li>
+<li>
+<p>Rime</p>
+</li>
+</ol>
+<hr>
+<h3 id="最常用的服务">最常用的服务</h3>
+<ol>
+<li><a href="https://github.com/usememos/memos" target="_blank" rel="noopener">Memos</a>：日常碎片化的内容和琐碎的生活记忆，都会发布在memos<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>。</li>
+<li><a href="https://vercel.com/" target="_blank" rel="noopener">Vercel</a>：很多服务都部署在了上面，包括Rsshub，本站Hugo博客，umami站点统计，waline评论。</li>
+<li><a href="https://github.com/" target="_blank" rel="noopener">Github</a>：很多服务的代码部署在上面。</li>
+<li><a href="https://mem.ai/" target="_blank" rel="noopener">Mem</a>：twitter上很多优质的内容都会通过 Mem 保存，便于后期整理。</li>
+<li><a href="https://read.readwise.io/" target="_blank" rel="noopener">Readwise</a>：提供不错的RSS阅读服务，可以完整的保存 twitter时间线内容，提供了很好的阅读体验。</li>
+<li><a href="https://chat.openai.com/" target="_blank" rel="noopener">ChatGPT</a>：很多不懂的代码问题，都通过在上面通过提问获得了解决方案或者灵感。</li>
+<li><a href="https://www.cloudflare.com/" target="_blank" rel="noopener">Cloudflare</a>：把域名接入到了cloudflare，加速Vercel、GitHub等国外服务的访问速度。</li>
+</ol>
+<hr>
+<h3 id="今年还买了什么">今年还买了什么</h3>
+<table>
+<thead>
+<tr>
+<th>物品名</th>
+<th>评价</th>
+<th>打分</th>
+<th>服役状态</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MacBook Pro 14</td>
+<td>今年买的最值的电子产品，使用频率极高。</td>
+<td>★★★★★</td>
+<td>使用中</td>
+</tr>
+<tr>
+<td>Apple Watch 黑色不锈钢</td>
+<td>使用频率极低，装饰大于实用。</td>
+<td>★★☆☆☆</td>
+<td>使用中</td>
+</tr>
+<tr>
+<td>一辆代步车</td>
+<td>真的提升不少幸福感，想去哪去哪。</td>
+<td>★★★★☆</td>
+<td>使用中</td>
+</tr>
+<tr>
+<td>Leica M10 和其他镜头</td>
+<td>挺喜欢徕卡色调的，使用频率太低已经二手出掉，以后再考虑回购。</td>
+<td>★★★★☆</td>
+<td>已出售</td>
+</tr>
+<tr>
+<td>家用洗拖一体机</td>
+<td>非常好用，拖地懒人的福音，拖完感觉地上很亮。</td>
+<td>★★★★★</td>
+<td>使用中</td>
+</tr>
+<tr>
+<td>配套家具</td>
+<td>今年还给新房买了N多家具，两张床和客厅三件套等，整体还算满意。</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>云米净水器</td>
+<td>还未投入使用，准备年后预约安装。</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>我的memos：<a href="https://memo.wananaiko.com/u/1" target="_blank" rel="noopener">https://memo.wananaiko.com/u/1</a>。也可以通过这里访问：<a href="https://wananaiko.design/memos/" target="_blank" rel="noopener">https://wananaiko.design/memos/</a>&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+]]></content:encoded>
+    </item>
+    
     <item>
       <title>Hugo增加相册功能</title>
       <link>https://wananaiko.design/docs/hugo-easy-gallery/hugo-easy-gallery/</link>
@@ -950,6 +1327,69 @@ Rime 输入法：一直在用的输入法工具，定制化输入法，我自己
 <p><strong>EdrawProj</strong> ：亿图项目管理软件，主要用来制定中大型项目的计划排期和人工成本核算。就是界面很丑，功能很好用。</p>
 <hr>
 <p>update：2023-01-07</p>
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>How To Be Successful → 30 条</title>
+      <link>https://wananaiko.design/docs/howtobesuccessful/</link>
+      <pubDate>Sun, 01 Jan 2023 12:06:47 +0800</pubDate>
+      
+      <guid>https://wananaiko.design/docs/howtobesuccessful/</guid>
+      <description>YC 前总裁、现 OpenAI CEO Sam Altman 的这篇标题简单粗暴的 How To Be Successful
+推荐去看全文，虽然标题很鸡血，但其中的一些观点也很有启发性。
+翻译整理：@南小北 1
+另外，这篇文章写的也挺不错，可以扩展阅读2。
+在一个几乎没有人采取真正长远眼光的世界里，市场会丰厚回报那些这样做的人。 自信心是非常强大的，我认识的最成功的人几乎相信自己到了错觉的地步。 自信必须与自我意识相平衡，我曾经讨厌任何形式的批评并积极避免，现在我总是试着假设它是真的，然后决定是否要采取行动。 找到简单、快速的方法，在现实世界中测试这些想法。 “我会失败很多次，但我会真正成功一次”，你必须给自己很多机会才能获得幸运。 我的另一个重要销售技巧是，在重要的时候亲自出现。 大多数人高估风险而低估回报，冒险很重要，因为不可能一直都是对的，你必须尝试很多事情，并随着了解的更多而迅速调整。 你可以跟随你的直觉，花时间做一些可能真的很有趣的事情。 尽可能长时间地保持廉价和灵活的生活是一种有效的方法，但显然需要权衡取舍。 做正确的事比工作好几个小时重要得多，大多数人将大部分时间浪费在无关紧要的事情上。 一旦你弄清楚了该做什么，就势不可挡地快速完成其中一小部分优先事项。 你必须弄清楚如何努力工作而不精疲力尽，几乎总能奏效的一个方法是，找到你喜欢花很多时间在一起的人一起做的工作。 事实上，工作耐力似乎是长期成功的最大因素之一。 如果你在一个重要问题上取得进展，就会有源源不断的人帮助你，让自己变得更有野心，不要害怕从事真正想从事的工作。 跟随你的好奇心，对你来说令人兴奋的事情，对其他人来说往往也会令人兴奋。 一个很大的秘密是，你可以以惊人的比例让世界屈服于你的意志 —— 大多数人甚至不去尝试，只是接受事情本来的样子。 人们拥有使事情发生的巨大能力，自我怀疑、过早放弃、不够努力的结合使大多数人无法发挥他们的潜力。 设法生存足够长的时间，好运将如愿以偿。 要任性，就必须乐观。这可通过实践提升，我从未见过一个非常成功的悲观者。 伟大的工作需要团队，建立一个有才华的网络（紧密或松散）是伟大事业的重要组成部分，建立网络的有效方法是尽可能多地帮助人们。 每个人在某件事情上都会比其他人做得更好，用你的长处定义自己，而不是你的弱点。 最简单的学习方法就是结识很多人，并记录谁给你留下了深刻印象，谁没有。请记住，不要高估经验或当前成就。 我小时候最大的误解是以为人们靠高薪致富，尽管有一些例外（例如艺人），但在福布斯榜单历史上，几乎没有人拿过薪水。 让事物快速增值的最佳方法是大规模生产人们想要的东西。 大多人靠外部驱动，他们做事是想给别人留下深刻印象，这很糟糕。 你会非常在意他人是否认为你在做正确的事，你会非常专注于跟上他人的脚步，这会阻止你做真正有趣的事。 我认识的最成功的人主要靠内部驱动，他们所做的事是为了给自己留下深刻印象，因为他们觉得有必要让世界发生一些事情。 这就是为何动机如此重要，这是我试图了解他人的第一件事，正确动机很难定义，但看到时你就会知道。 在你不痴迷的任何事情上都很难取得巨大成功。 机会分配如此不均，显然是令人难以置信的耻辱和浪费，但我亲眼目睹很多人一出生就面临糟糕筹码，却取得难以置信的成功，从而知道这是可能的。 How To Be Successful → 30 条&amp;#160;&amp;#x21a9;&amp;#xfe0e;
+YC前掌门人Sam Altman：观察成千上万创业者后，关于如何获得非凡成就的13条思考&amp;#160;&amp;#x21a9;&amp;#xfe0e;</description>
+      <content:encoded><![CDATA[<p>YC 前总裁、现 OpenAI CEO Sam Altman 的这篇标题简单粗暴的 <a href="https://blog.samaltman.com/how-to-be-successful" target="_blank" rel="noopener">How To Be Successful</a></p>
+<p>推荐去看全文，虽然标题很鸡血，但其中的一些观点也很有启发性。</p>
+<p>翻译整理：@南小北 <sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
+<p>另外，这篇文章写的也挺不错，可以扩展阅读<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>。</p>
+<hr>
+<ol>
+<li>在一个几乎没有人采取真正长远眼光的世界里，市场会丰厚回报那些这样做的人。</li>
+<li>自信心是非常强大的，我认识的最成功的人几乎相信自己到了错觉的地步。</li>
+<li>自信必须与自我意识相平衡，我曾经讨厌任何形式的批评并积极避免，现在我总是试着假设它是真的，然后决定是否要采取行动。</li>
+<li>找到简单、快速的方法，在现实世界中测试这些想法。</li>
+<li>“我会失败很多次，但我会真正成功一次”，你必须给自己很多机会才能获得幸运。</li>
+<li>我的另一个重要销售技巧是，在重要的时候亲自出现。</li>
+<li>大多数人高估风险而低估回报，冒险很重要，因为不可能一直都是对的，你必须尝试很多事情，并随着了解的更多而迅速调整。</li>
+<li>你可以跟随你的直觉，花时间做一些可能真的很有趣的事情。</li>
+<li>尽可能长时间地保持廉价和灵活的生活是一种有效的方法，但显然需要权衡取舍。</li>
+<li>做正确的事比工作好几个小时重要得多，大多数人将大部分时间浪费在无关紧要的事情上。</li>
+<li>一旦你弄清楚了该做什么，就势不可挡地快速完成其中一小部分优先事项。</li>
+<li>你必须弄清楚如何努力工作而不精疲力尽，几乎总能奏效的一个方法是，找到你喜欢花很多时间在一起的人一起做的工作。</li>
+<li>事实上，工作耐力似乎是长期成功的最大因素之一。</li>
+<li>如果你在一个重要问题上取得进展，就会有源源不断的人帮助你，让自己变得更有野心，不要害怕从事真正想从事的工作。</li>
+<li>跟随你的好奇心，对你来说令人兴奋的事情，对其他人来说往往也会令人兴奋。</li>
+<li>一个很大的秘密是，你可以以惊人的比例让世界屈服于你的意志 —— 大多数人甚至不去尝试，只是接受事情本来的样子。</li>
+<li>人们拥有使事情发生的巨大能力，自我怀疑、过早放弃、不够努力的结合使大多数人无法发挥他们的潜力。</li>
+<li>设法生存足够长的时间，好运将如愿以偿。</li>
+<li>要任性，就必须乐观。这可通过实践提升，我从未见过一个非常成功的悲观者。</li>
+<li>伟大的工作需要团队，建立一个有才华的网络（紧密或松散）是伟大事业的重要组成部分，建立网络的有效方法是尽可能多地帮助人们。</li>
+<li>每个人在某件事情上都会比其他人做得更好，用你的长处定义自己，而不是你的弱点。</li>
+<li>最简单的学习方法就是结识很多人，并记录谁给你留下了深刻印象，谁没有。请记住，不要高估经验或当前成就。</li>
+<li>我小时候最大的误解是以为人们靠高薪致富，尽管有一些例外（例如艺人），但在福布斯榜单历史上，几乎没有人拿过薪水。</li>
+<li>让事物快速增值的最佳方法是大规模生产人们想要的东西。</li>
+<li>大多人靠外部驱动，他们做事是想给别人留下深刻印象，这很糟糕。</li>
+<li>你会非常在意他人是否认为你在做正确的事，你会非常专注于跟上他人的脚步，这会阻止你做真正有趣的事。</li>
+<li>我认识的最成功的人主要靠内部驱动，他们所做的事是为了给自己留下深刻印象，因为他们觉得有必要让世界发生一些事情。</li>
+<li>这就是为何动机如此重要，这是我试图了解他人的第一件事，正确动机很难定义，但看到时你就会知道。</li>
+<li>在你不痴迷的任何事情上都很难取得巨大成功。</li>
+<li>机会分配如此不均，显然是令人难以置信的耻辱和浪费，但我亲眼目睹很多人一出生就面临糟糕筹码，却取得难以置信的成功，从而知道这是可能的。</li>
+</ol>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p><a href="https://www.v2ex.com/t/908948" target="_blank" rel="noopener">How To Be Successful → 30 条</a>&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2">
+<p><a href="https://mp.weixin.qq.com/s/pQYztNmmQ6W4fRxPIEsWYQ" target="_blank" rel="noopener">YC前掌门人Sam Altman：观察成千上万创业者后，关于如何获得非凡成就的13条思考</a>&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
 ]]></content:encoded>
     </item>
     
