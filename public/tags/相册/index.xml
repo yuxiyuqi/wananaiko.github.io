@@ -16,7 +16,7 @@
 按ESC关闭窗口
 Github仓库地址: https://github.com/liwenyip/hugo-easy-gallery
 按教程操作后,需要注意在文章中引用时,按下面的类似格式 (需去掉下方所有的 \ ):
-{{\&amp;lt; load-photoswipe &amp;gt;\}} {{\&amp;lt; gallery &amp;gt;\}} {{\&amp;lt; figure src=&amp;#34;docs/hugo-easy-gallery/image1.jpg&amp;#34; &amp;gt;\}} {{\&amp;lt; figure src=&amp;#34;docs/hugo-easy-gallery/image2.jpg&amp;#34; &amp;gt;\}} {{\&amp;lt; figure src=&amp;#34;docs/hugo-easy-gallery/image3.jpg&amp;#34; &amp;gt;\}} {{\&amp;lt; /gallery &amp;gt;\}} 并对 CSS 样式进行了微调,修改根目录 /assets/css/core/reset.css,加入以下代码:
+{{\&amp;lt; load-photoswipe &amp;gt;}} {{\&amp;lt; gallery &amp;gt;\}} {{\&amp;lt; figure link=&amp;#34;docs/hugo-easy-gallery/image1.jpg&amp;#34; &amp;gt;}} {{\&amp;lt; figure link=&amp;#34;docs/hugo-easy-gallery/image2.jpg&amp;#34; &amp;gt;}} {{\&amp;lt; figure link=&amp;#34;docs/hugo-easy-gallery/image3.jpg&amp;#34; &amp;gt;}} {{\&amp;lt; /gallery &amp;gt;}} 并对 CSS 样式进行了微调,修改根目录 /assets/css/core/reset.css,加入以下代码:
 /* 相册弹窗中的样式调整 */ .gallery { overflow: hidden; margin: 0 auto !important; max-width: 790px !important; } .pswp__item { position: absolute; left: 0; right: 0; top: 0; bottom: 0; overflow: hidden; background-color: #000000 !important; } .pswp img { max-width: none; /* max-height: 85vh; */ } .</description>
       <content:encoded><![CDATA[<p>相册效果如下：</p>
 <p>
@@ -126,12 +126,12 @@ Github仓库地址: https://github.com/liwenyip/hugo-easy-gallery
 <p>Github仓库地址:
 <a href="https://github.com/liwenyip/hugo-easy-gallery" target="_blank" rel="noopener">https://github.com/liwenyip/hugo-easy-gallery</a></p>
 <p>按教程操作后,需要注意在文章中引用时,按下面的类似格式 (需去掉下方所有的 \ ):</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl">{{\&lt; load-photoswipe &gt;\}}
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl">{{\&lt; load-photoswipe &gt;}}
 </span></span><span class="line"><span class="cl">{{\&lt; gallery &gt;\}}
-</span></span><span class="line"><span class="cl">  {{\&lt; figure src=&#34;docs/hugo-easy-gallery/image1.jpg&#34; &gt;\}}
-</span></span><span class="line"><span class="cl">  {{\&lt; figure src=&#34;docs/hugo-easy-gallery/image2.jpg&#34; &gt;\}}
-</span></span><span class="line"><span class="cl">  {{\&lt; figure src=&#34;docs/hugo-easy-gallery/image3.jpg&#34; &gt;\}}
-</span></span><span class="line"><span class="cl">{{\&lt; /gallery &gt;\}}
+</span></span><span class="line"><span class="cl">  {{\&lt; figure link=&#34;docs/hugo-easy-gallery/image1.jpg&#34; &gt;}}
+</span></span><span class="line"><span class="cl">  {{\&lt; figure link=&#34;docs/hugo-easy-gallery/image2.jpg&#34; &gt;}}
+</span></span><span class="line"><span class="cl">  {{\&lt; figure link=&#34;docs/hugo-easy-gallery/image3.jpg&#34; &gt;}}
+</span></span><span class="line"><span class="cl">{{\&lt; /gallery &gt;}}
 </span></span></code></pre></div><p>并对 CSS 样式进行了微调,修改根目录 <code>/assets/css/core/reset.css</code>,加入以下代码:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="c">/* 相册弹窗中的样式调整 */</span>
 </span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nc">gallery</span> <span class="p">{</span>

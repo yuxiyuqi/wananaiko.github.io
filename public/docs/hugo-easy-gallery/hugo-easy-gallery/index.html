@@ -11,7 +11,7 @@
 按ESC关闭窗口
 Github仓库地址: https://github.com/liwenyip/hugo-easy-gallery
 按教程操作后,需要注意在文章中引用时,按下面的类似格式 (需去掉下方所有的 \ ):
-{{\&lt; load-photoswipe &gt;\}} {{\&lt; gallery &gt;\}} {{\&lt; figure src=&#34;docs/hugo-easy-gallery/image1.jpg&#34; &gt;\}} {{\&lt; figure src=&#34;docs/hugo-easy-gallery/image2.jpg&#34; &gt;\}} {{\&lt; figure src=&#34;docs/hugo-easy-gallery/image3.jpg&#34; &gt;\}} {{\&lt; /gallery &gt;\}} 并对 CSS 样式进行了微调,修改根目录 /assets/css/core/reset.css,加入以下代码:
+{{\&lt; load-photoswipe &gt;}} {{\&lt; gallery &gt;\}} {{\&lt; figure link=&#34;docs/hugo-easy-gallery/image1.jpg&#34; &gt;}} {{\&lt; figure link=&#34;docs/hugo-easy-gallery/image2.jpg&#34; &gt;}} {{\&lt; figure link=&#34;docs/hugo-easy-gallery/image3.jpg&#34; &gt;}} {{\&lt; /gallery &gt;}} 并对 CSS 样式进行了微调,修改根目录 /assets/css/core/reset.css,加入以下代码:
 /* 相册弹窗中的样式调整 */ .gallery { overflow: hidden; margin: 0 auto !important; max-width: 790px !important; } .pswp__item { position: absolute; left: 0; right: 0; top: 0; bottom: 0; overflow: hidden; background-color: #000000 !important; } .pswp img { max-width: none; /* max-height: 85vh; */ } .">
 <meta name="author" content="wananaiko">
 <link rel="canonical" href="https://wananaiko.design/docs/hugo-easy-gallery/hugo-easy-gallery/">
@@ -25,14 +25,14 @@ Github仓库地址: https://github.com/liwenyip/hugo-easy-gallery
 按ESC关闭窗口
 Github仓库地址: https://github.com/liwenyip/hugo-easy-gallery
 按教程操作后,需要注意在文章中引用时,按下面的类似格式 (需去掉下方所有的 \ ):
-{{\&lt; load-photoswipe &gt;\}} {{\&lt; gallery &gt;\}} {{\&lt; figure src=&#34;docs/hugo-easy-gallery/image1.jpg&#34; &gt;\}} {{\&lt; figure src=&#34;docs/hugo-easy-gallery/image2.jpg&#34; &gt;\}} {{\&lt; figure src=&#34;docs/hugo-easy-gallery/image3.jpg&#34; &gt;\}} {{\&lt; /gallery &gt;\}} 并对 CSS 样式进行了微调,修改根目录 /assets/css/core/reset.css,加入以下代码:
+{{\&lt; load-photoswipe &gt;}} {{\&lt; gallery &gt;\}} {{\&lt; figure link=&#34;docs/hugo-easy-gallery/image1.jpg&#34; &gt;}} {{\&lt; figure link=&#34;docs/hugo-easy-gallery/image2.jpg&#34; &gt;}} {{\&lt; figure link=&#34;docs/hugo-easy-gallery/image3.jpg&#34; &gt;}} {{\&lt; /gallery &gt;}} 并对 CSS 样式进行了微调,修改根目录 /assets/css/core/reset.css,加入以下代码:
 /* 相册弹窗中的样式调整 */ .gallery { overflow: hidden; margin: 0 auto !important; max-width: 790px !important; } .pswp__item { position: absolute; left: 0; right: 0; top: 0; bottom: 0; overflow: hidden; background-color: #000000 !important; } .pswp img { max-width: none; /* max-height: 85vh; */ } ." />
 <meta property="og:title" content="Hugo增加相册功能 | wananaiko" />
 <meta property="og:description" content="相册效果如下：
 按ESC关闭窗口
 Github仓库地址: https://github.com/liwenyip/hugo-easy-gallery
 按教程操作后,需要注意在文章中引用时,按下面的类似格式 (需去掉下方所有的 \ ):
-{{\&lt; load-photoswipe &gt;\}} {{\&lt; gallery &gt;\}} {{\&lt; figure src=&#34;docs/hugo-easy-gallery/image1.jpg&#34; &gt;\}} {{\&lt; figure src=&#34;docs/hugo-easy-gallery/image2.jpg&#34; &gt;\}} {{\&lt; figure src=&#34;docs/hugo-easy-gallery/image3.jpg&#34; &gt;\}} {{\&lt; /gallery &gt;\}} 并对 CSS 样式进行了微调,修改根目录 /assets/css/core/reset.css,加入以下代码:
+{{\&lt; load-photoswipe &gt;}} {{\&lt; gallery &gt;\}} {{\&lt; figure link=&#34;docs/hugo-easy-gallery/image1.jpg&#34; &gt;}} {{\&lt; figure link=&#34;docs/hugo-easy-gallery/image2.jpg&#34; &gt;}} {{\&lt; figure link=&#34;docs/hugo-easy-gallery/image3.jpg&#34; &gt;}} {{\&lt; /gallery &gt;}} 并对 CSS 样式进行了微调,修改根目录 /assets/css/core/reset.css,加入以下代码:
 /* 相册弹窗中的样式调整 */ .gallery { overflow: hidden; margin: 0 auto !important; max-width: 790px !important; } .pswp__item { position: absolute; left: 0; right: 0; top: 0; bottom: 0; overflow: hidden; background-color: #000000 !important; } .pswp img { max-width: none; /* max-height: 85vh; */ } ." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://wananaiko.design/docs/hugo-easy-gallery/hugo-easy-gallery/" />
@@ -68,7 +68,7 @@ Github仓库地址: https://github.com/liwenyip/hugo-easy-gallery
   "@type": "BlogPosting",
   "headline": "Hugo增加相册功能 | wananaiko",
   "name": "Hugo增加相册功能",
-  "description": "相册效果如下：\n按ESC关闭窗口\nGithub仓库地址: https://github.com/liwenyip/hugo-easy-gallery\n按教程操作后,需要注意在文章中引用时,按下面的类似格式 (需去掉下方所有的 \\ ):\n{{\\\u0026lt; load-photoswipe \u0026gt;\\}} {{\\\u0026lt; gallery \u0026gt;\\}} {{\\\u0026lt; figure src=\u0026#34;docs/hugo-easy-gallery/image1.jpg\u0026#34; \u0026gt;\\}} {{\\\u0026lt; figure src=\u0026#34;docs/hugo-easy-gallery/image2.jpg\u0026#34; \u0026gt;\\}} {{\\\u0026lt; figure src=\u0026#34;docs/hugo-easy-gallery/image3.jpg\u0026#34; \u0026gt;\\}} {{\\\u0026lt; /gallery \u0026gt;\\}} 并对 CSS 样式进行了微调,修改根目录 /assets/css/core/reset.css,加入以下代码:\n/* 相册弹窗中的样式调整 */ .gallery { overflow: hidden; margin: 0 auto !important; max-width: 790px !important; } .pswp__item { position: absolute; left: 0; right: 0; top: 0; bottom: 0; overflow: hidden; background-color: #000000 !important; } .pswp img { max-width: none; /* max-height: 85vh; */ } .",
+  "description": "相册效果如下：\n按ESC关闭窗口\nGithub仓库地址: https://github.com/liwenyip/hugo-easy-gallery\n按教程操作后,需要注意在文章中引用时,按下面的类似格式 (需去掉下方所有的 \\ ):\n{{\\\u0026lt; load-photoswipe \u0026gt;}} {{\\\u0026lt; gallery \u0026gt;\\}} {{\\\u0026lt; figure link=\u0026#34;docs/hugo-easy-gallery/image1.jpg\u0026#34; \u0026gt;}} {{\\\u0026lt; figure link=\u0026#34;docs/hugo-easy-gallery/image2.jpg\u0026#34; \u0026gt;}} {{\\\u0026lt; figure link=\u0026#34;docs/hugo-easy-gallery/image3.jpg\u0026#34; \u0026gt;}} {{\\\u0026lt; /gallery \u0026gt;}} 并对 CSS 样式进行了微调,修改根目录 /assets/css/core/reset.css,加入以下代码:\n/* 相册弹窗中的样式调整 */ .gallery { overflow: hidden; margin: 0 auto !important; max-width: 790px !important; } .pswp__item { position: absolute; left: 0; right: 0; top: 0; bottom: 0; overflow: hidden; background-color: #000000 !important; } .pswp img { max-width: none; /* max-height: 85vh; */ } .",
   "keywords": [
     "Hugo", "相册"
   ],
@@ -410,12 +410,12 @@ function toggleThemeListener() {
 <p>Github仓库地址:
 <a href="https://github.com/liwenyip/hugo-easy-gallery" target="_blank" rel="noopener">https://github.com/liwenyip/hugo-easy-gallery</a></p>
 <p>按教程操作后,需要注意在文章中引用时,按下面的类似格式 (需去掉下方所有的 \ ):</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl">{{\&lt; load-photoswipe &gt;\}}
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl">{{\&lt; load-photoswipe &gt;}}
 </span></span><span class="line"><span class="cl">{{\&lt; gallery &gt;\}}
-</span></span><span class="line"><span class="cl">  {{\&lt; figure src=&#34;docs/hugo-easy-gallery/image1.jpg&#34; &gt;\}}
-</span></span><span class="line"><span class="cl">  {{\&lt; figure src=&#34;docs/hugo-easy-gallery/image2.jpg&#34; &gt;\}}
-</span></span><span class="line"><span class="cl">  {{\&lt; figure src=&#34;docs/hugo-easy-gallery/image3.jpg&#34; &gt;\}}
-</span></span><span class="line"><span class="cl">{{\&lt; /gallery &gt;\}}
+</span></span><span class="line"><span class="cl">  {{\&lt; figure link=&#34;docs/hugo-easy-gallery/image1.jpg&#34; &gt;}}
+</span></span><span class="line"><span class="cl">  {{\&lt; figure link=&#34;docs/hugo-easy-gallery/image2.jpg&#34; &gt;}}
+</span></span><span class="line"><span class="cl">  {{\&lt; figure link=&#34;docs/hugo-easy-gallery/image3.jpg&#34; &gt;}}
+</span></span><span class="line"><span class="cl">{{\&lt; /gallery &gt;}}
 </span></span></code></pre></div><p>并对 CSS 样式进行了微调,修改根目录 <code>/assets/css/core/reset.css</code>,加入以下代码:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="c">/* 相册弹窗中的样式调整 */</span>
 </span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nc">gallery</span> <span class="p">{</span>
@@ -504,7 +504,7 @@ function toggleThemeListener() {
 
   <footer class="post-footer">
 <nav class="paginav">
-  <a class="prev" href="https://wananaiko.design/docs/my2022/">
+  <a class="prev" href="https://wananaiko.design/docs/my2022/my2022/">
     <span class="title">
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left" style="user-select: text;"><line x1="19" y1="12" x2="5" y2="12" style="user-select: text;"></line><polyline points="12 19 5 12 12 5" style="user-select: text;"></polyline></svg>&nbsp;Prev Page</span>
     <br>

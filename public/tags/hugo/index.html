@@ -240,7 +240,7 @@ function toggleThemeListener() {
 按ESC关闭窗口
 Github仓库地址: https://github.com/liwenyip/hugo-easy-gallery
 按教程操作后,需要注意在文章中引用时,按下面的类似格式 (需去掉下方所有的 \ ):
-{{\&lt; load-photoswipe &gt;\}} {{\&lt; gallery &gt;\}} {{\&lt; figure src=&#34;docs/hugo-easy-gallery/image1.jpg&#34; &gt;\}} {{\&lt; figure src=&#34;docs/hugo-easy-gallery/image2.jpg&#34; &gt;\}} {{\&lt; figure src=&#34;docs/hugo-easy-gallery/image3.jpg&#34; &gt;\}} {{\&lt; /gallery &gt;\}} 并对 CSS 样式进行了微调,修改根目录 /assets/css/core/reset.css,加入以下代码:
+{{\&lt; load-photoswipe &gt;}} {{\&lt; gallery &gt;\}} {{\&lt; figure link=&#34;docs/hugo-easy-gallery/image1.jpg&#34; &gt;}} {{\&lt; figure link=&#34;docs/hugo-easy-gallery/image2.jpg&#34; &gt;}} {{\&lt; figure link=&#34;docs/hugo-easy-gallery/image3.jpg&#34; &gt;}} {{\&lt; /gallery &gt;}} 并对 CSS 样式进行了微调,修改根目录 /assets/css/core/reset.css,加入以下代码:
 /* 相册弹窗中的样式调整 */ .gallery { overflow: hidden; margin: 0 auto !important; max-width: 790px !important; } .pswp__item { position: absolute; left: 0; right: 0; top: 0; bottom: 0; overflow: hidden; background-color: #000000 !important; } .pswp img { max-width: none; /* max-height: 85vh; */ } ....</p>
     
   </section>
