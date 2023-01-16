@@ -6,3 +6,22 @@
     --link-hover-underline-shadow: 0 2px 0 var(--link-hover-underline-color);
   }
   
+  .dark .logo img {
+    filter: invert(90%);
+  }
+  
+  .telegram-channel a {
+    display: inline-block;
+    transition: var(--link-transition);
+    text-decoration: underline;
+    font-weight: bold;
+  }
+  .telegram-channel a:hover {
+    /* color: #2AABEE; */
+    color: #09a9fd;
+  }
+  .telegram-channel svg {
+    width: 25px;
+    height: auto;
+    vertical-align: text-bottom;
+  }
