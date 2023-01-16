@@ -209,3 +209,7 @@ img {
 .pswp__ui--fit .pswp__top-bar, .pswp__ui--fit .pswp__caption {
     background-color: rgba(0,0,0) !important;
 }
+
+.memo-content-text {
+    font-size: 1rem;
+}
