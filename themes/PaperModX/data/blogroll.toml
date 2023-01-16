@@ -27,10 +27,17 @@
   weight = 4
 
 [[blogroll]]
+  name = "大大的小蜗牛"
+  url = "https://eallion.com"
+  favicon = "https://cdn.jsdelivr.net/gh/eallion/eallion/avatar/eallion.png"
+  description = "机会总是垂青于有准备的人."
+  weight = 5
+
+[[blogroll]]
   name = "Wayne Wu"
   url = "https://wayne-wu.com/"
   favicon = "https://wayne-wu.com/avatar.jpeg"
   description = "热爱编程，喜欢探索,摄影爱好者."
-  weight = 5
+  weight = 6
 
 
