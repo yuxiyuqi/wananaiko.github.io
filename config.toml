@@ -36,6 +36,9 @@ EnableImageZoom = true
 hideMeta = false
 comments = true
 
+  [params.logo]
+  icon = "images/forge-v2-compat.svg"
+
   [params.profileMode]
   enabled = false
   title = "PaperModX"
@@ -63,6 +66,14 @@ comments = true
   [[params.socialIcons]]
   name = "rss-simple"
   url = "index.xml"
+
+  [[params.socialIcons]]
+  name = "gmail"
+  url = "zouyunpeng5152@gmail.com"
+
+  [[params.socialIcons]]
+  name = "telegram-simple"
+  url = "https://t.me/wananaiko"
 
   [params.editPost]
   URL = "https://github.com/reorx/hugo-PaperModX/tree/exampleSite/content"
