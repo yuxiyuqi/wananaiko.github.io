@@ -69,7 +69,7 @@ comments = true
 
   [[params.socialIcons]]
   name = "gmail"
-  url = "zouyunpeng5152@gmail.com"
+  url = "mailto:zouyunpeng5152@gmail.com"
 
   [[params.socialIcons]]
   name = "telegram-simple"
