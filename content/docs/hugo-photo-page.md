@@ -91,4 +91,6 @@ window.ViewImage && ViewImage.init('.page-photo img')
 
 如果要调整页面的宽度请修改 `.main {max-width: 1008px !important;}`样式。
 
+![xT4X11](https://images.wananaiko.com/2023/01/xT4X11.png)
+
 线上效果已经移除啦~
