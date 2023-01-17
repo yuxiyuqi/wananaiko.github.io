@@ -105,17 +105,12 @@ weight = 2
 [[languages.en.menu.main]]
 name = "Archive"
 url = "/archives/"
-weight = 4
-
-[[languages.en.menu.main]]
-name = "Photos"
-url = "/photos/"
 weight = 3
 
 [[languages.en.menu.main]]
 name = "Links"
 url = "/links/"
-weight = 5
+weight = 4
 
 [languages.zh]
 languageName = ":cn:"

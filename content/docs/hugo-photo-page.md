@@ -1,9 +1,29 @@
+---
+title: "Hugo 添加相册单页"
+date: 2023-01-10T15:08:47+08:00
+author: "wananaiko"
+tags:
+  - Hugo
+  - 相册
+draft: false
+---
+
+参考：[Hugo 添加相册页面：：木木木木木](https://immmmm.com/hugo-readdir-photos/)，本文仅用于备份折腾的记录。
+
+文件目录结构：
+
+<img src="https://images.wananaiko.com/2023/01/image-20230117151058386.png" alt="image-20230117151058386" style="zoom:50%;" />
+
+其中 `photos.html`代码如下，调整了部分CSS：
+
+```html
 {{- define "main" }}
 <header class="page-header">
   <h1>{{ .Title }}</h1>
 </header>
 <style>
   .main {max-width: 1008px !important;}
+  
   .page-photos{width:100% !important;overflow:hidden; position:relative;}
   .page-photo{width:24.9%;position: relative;visibility: hidden;}
   .page-photo.visible{visibility: visible;animation: fadeIn 2s;}
@@ -35,7 +55,7 @@
       <img class="photo-img" loading='lazy' decoding="async" src="/photos/{{ .Name }}" alt="{{ .Name }}" />
       <span class="photo-title">{{ .Name | replaceRE "^[0-9 -]+(.*)[.].*" "$1"}}</span>
       
-      <!-- 左上角时间暂时隐藏 -->
+      <!-- 左上角时间隐藏，可自主开启 -->
       <!-- <span class="photo-time">{{ .Name | replaceRE "^([0-9-]+).*[.].*" "$1" }}</span> -->
 
     </div>
@@ -67,3 +87,8 @@ window.ViewImage && ViewImage.init('.page-photo img')
 
 {{/* end main */}}
 {{- end }}
+```
+
+如果要调整页面的宽度请修改 `.main {max-width: 1008px !important;}`样式。
+
+线上效果已经移除啦~
