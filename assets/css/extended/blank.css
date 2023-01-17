@@ -3,8 +3,3 @@ This is just a placeholder blank stylesheet so as to support adding custom style
 
 Read https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#bundling-custom-css-with-themes-assets for more info
 */
-/* GitHub 样式的表格 */
-.post-content table tr:nth-child(2n),
-.post-content thead {
-    background-color: var(--code-bg);
-}
