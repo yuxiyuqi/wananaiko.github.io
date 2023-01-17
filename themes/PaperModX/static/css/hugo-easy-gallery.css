@@ -154,6 +154,5 @@ figcaption styles
     top: 100%;
 }
 figcaption p {
-    margin: auto; /* override style in theme */
+    margin: auto !important; /* override style in theme */
 }
-

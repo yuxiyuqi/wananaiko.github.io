@@ -183,8 +183,9 @@ img {
     text-align: left;
     max-width: 790px !important;
     margin: 0 auto !important;
-    font-size: 13px;
-    padding: 10px;
+    font-size: 14px !important;
+    padding-bottom: 12px;
+    padding-top: 12px;
     line-height: 20px;
     color: #CCC;
 }
@@ -213,4 +214,19 @@ img {
 
 .memo-content-text {
     font-size: 1rem;
+}
+
+.post-content figure>figcaption{
+    color: var(--theme) !important;  
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 0px !;
+}
+
+.post-content figure>figcaption>p {
+    color: var(--theme) !important;
+    font-size: 14px;
+    font-weight: 400;
+    padding-left: 4px;
+    text-align: left;
 }
