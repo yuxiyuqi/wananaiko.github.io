@@ -25,7 +25,7 @@ https://github.com/liwenyip/hugo-easy-gallery
 
 ```markdown
 {{\< load-photoswipe >}}
-{{\< gallery >\}}
+{{\< gallery >}}
   {{\< figure link="docs/hugo-easy-gallery/image1.jpg" >}}
   {{\< figure link="docs/hugo-easy-gallery/image2.jpg" >}}
   {{\< figure link="docs/hugo-easy-gallery/image3.jpg" >}}
