@@ -3,3 +3,6 @@
 .hugo_build.lock
 resources/
 .history/
+public/
+content/posts/Trash
+**/.DS_Store

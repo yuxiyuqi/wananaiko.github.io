@@ -3,7 +3,7 @@
   <h1>{{ .Title }}</h1>
 </header>
 <style>
-  .main {max-width: 100% !important;}
+  .main {max-width: 1008px !important;}
   .page-photos{width:100% !important;overflow:hidden; position:relative;}
   .page-photo{width:24.9%;position: relative;visibility: hidden;}
   .page-photo.visible{visibility: visible;animation: fadeIn 2s;}
@@ -33,7 +33,11 @@
     {{ if (findRE "^[0-9 -]+(.*)[.].*" .Name) }}
     <div class="page-photo">
       <img class="photo-img" loading='lazy' decoding="async" src="/photos/{{ .Name }}" alt="{{ .Name }}" />
-      <span class="photo-title">{{ .Name | replaceRE "^[0-9 -]+(.*)[.].*" "$1"}}</span><span class="photo-time">{{ .Name | replaceRE "^([0-9-]+).*[.].*" "$1" }}</span>
+      <span class="photo-title">{{ .Name | replaceRE "^[0-9 -]+(.*)[.].*" "$1"}}</span>
+      
+      <!-- 左上角时间暂时隐藏 -->
+      <!-- <span class="photo-time">{{ .Name | replaceRE "^([0-9-]+).*[.].*" "$1" }}</span> -->
+
     </div>
     {{ end }}
   {{ end }}
