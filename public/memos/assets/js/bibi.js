@@ -17,7 +17,7 @@ function loadCssCode(e) {
         .appendChild(t)
 }
 var btn,
-    allCSS = "img{max-height:70vh !important;}.memo-container {position: relative;margin-bottom: var(--gap);padding: var(--gap);display: flex;width: 100%;flex-direction: column;align-items: flex-start;justify-content: flex-start;border-radius: var(--radius);border: 1px solid var(--border);background: var(--entry);-webkit-transform: perspective(1px) translateZ(0);transform: perspective(1px) translateZ(0);-webkit-transition-duration: 0.3s;transition-duration: 0.3s;-webkit-transition-property: box-shadow,transform;transition-property: box-shadow,transform;}.memo-container>.memo-header{margin-bottom:0.5rem;display:fle" +
+    allCSS = "img{max-height:70vh !important;}.memo-container {position: relative;margin-bottom: var(--gap);padding-top: calc(var(--gap) * 0.9);padding-bottom: calc(var(--gap) * 0.7);padding-left: var(--gap);padding-right: var(--gap);display: flex;width: 100%;flex-direction: column;align-items: flex-start;justify-content: flex-start;border-radius: var(--radius);border: 1px solid var(--border);background: var(--entry);-webkit-transform: perspective(1px) translateZ(0);transform: perspective(1px) translateZ(0);-webkit-transition-duration: 0.3s;transition-duration: 0.3s;-webkit-transition-property: box-shadow,transform;transition-property: box-shadow,transform;}.memo-container img {padding-top: 1em;max-height: 40vh !important;padding-bottom: 0.5em;}.memo-container>.memo-header{margin-top: 0.5em;display:fle" +
             "x;width:100%;flex-direction:row;align-items:center;justify-content:flex-start;" +
             "font-size:.875rem;--tw-text-opacity:1;color:rgb(156 163 175 / var(--tw-text-op" +
             "acity));}.memo-content-text>p:last-child{margin-bottom:0;}.memo-content-text>p" +
@@ -135,11 +135,13 @@ function updateHTMl(e) {
             ) + '">' + s + "</div></div>"),
             l && (i += '<p class="datasource">' + l + "</p>")
         }
-        t += '<div class="memo-container"><div class="memo-header"><span class="date">' +
-                new Date(1e3 * e[a].updatedTs).toLocaleString() + '</span></div><div class="mem' +
-                'o-content-wrapper memo-content"><div class="memo-content-text">' + i + "</div>" +
-                "</div></div>"
+        t += '<div class="memo-container">'+
+                '<div class="memo-content-wrapper memo-content"><div class="memo-content-text">' + i + "</div>" +
+                "</div>"+
+                '<div class="memo-header"><span>Aiko&nbsp; 发布于&nbsp;</span><span class="date">' + Lately.format(1e3 * e[a].updatedTs) + '</span></div>'+
+                "</div>"
     }
+
     bbDom.insertAdjacentHTML(
         "beforeend",
         "<section class='bb-timeline'><ul class='bb-list-ul'>" + t +
@@ -149,6 +151,7 @@ function updateHTMl(e) {
     document
         .querySelector("button.button-load")
         .textContent = "加载更多"
+
 }
 
 function fetchDB() {
