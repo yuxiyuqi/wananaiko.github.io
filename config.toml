@@ -46,17 +46,14 @@ comments = true
   imageTitle = "my image"
 
   [params.homeInfoParams]
-  Title = "exPM, now UI/UX, currently learning Frontend."
+  Title = "Hi 👋"
   Content = """
-<mark>Welcome to my blog!</mark>
 
- This is a platform for sharing knowledge about design, frontend, practical tools, daily learning and research. 
+  Welcome to my Island.
+  
+  About me, exPM, now UI/UX, learning Frontend, living in Shanghai.
 
- Here you can find the latest trend information, technical articles, as well as experiences and skills shared by me and other industry experts. 
-
- I also provide the latest tutorials and practical tools to help you learn and improve your skills. 
- 
- Welcome to share your thoughts, experiences and knowledge here, so that we can progress together!
+  I’m writing here to share what I read and learned.
 """
 
   [[params.socialIcons]]
