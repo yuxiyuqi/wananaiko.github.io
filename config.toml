@@ -8,6 +8,7 @@ buildDrafts = false
 buildFuture = false
 buildExpired = false
 enableEmoji = true
+hasCJKLanguage = true
 
 [params]
 env = "production"
@@ -23,7 +24,7 @@ defaultTheme = "auto"
 ShowAuthor = false
 ShowShareButtons = true
 ShowReadingTime = true
-ShowWordCount = false
+ShowWordCount = true
 displayFullLangName = true
 ShowPostNavLinks = true
 ShowBreadCrumbs = false
