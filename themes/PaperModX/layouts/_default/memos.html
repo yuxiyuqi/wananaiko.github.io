@@ -16,6 +16,21 @@
 
 <!-- 增加卡片hover的效果 -->
 <style>
+.video-wrapper {
+    height: 0;
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+    width: 100%;
+}
+.video-wrapper iframe {
+    border: 0;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
 .timeline img {
     display: block;
     max-height: 40vh;
@@ -26,7 +41,7 @@
 }
 .memo-container img {
     padding-top: 1rem;
-    max-height: 40vh !important;
+    max-height: 50vh !important;
 }
 /* .memo-container{
     transition: .4s !important;
@@ -49,6 +64,7 @@
 </script>
 
 <!-- memos内容区域 -->
+
 <section id="main" class="container">
     <div class="memo-nums">
         <p class="note note-info memo-nums-text">
@@ -77,6 +93,13 @@
 <script type="text/javascript" src="/memos/assets/js/bibi.js"></script>
 <script type="text/javascript" src="/memos/assets/js/highlight.min.js"></script>
 <script type="text/javascript" src="https://fastly.jsdelivr.net/gh/Tokinx/Lately/lately.min.js"></script>
+<link href="/memos/assets/css/APlayer.min.css" rel="stylesheet" type="text/css">
+<link href="/memos/assets/css/highlight.github.min.css" rel="stylesheet" type="text/css">
+<script type="text/javascript">
+    window.addEventListener("load", function() {
+    hljs.highlightAll();
+    });
+</script>
 </section>
 
 <!-- 页面下雪效果 -->
