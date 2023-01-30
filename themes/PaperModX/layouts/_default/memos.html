@@ -23,6 +23,9 @@
     position: relative;
     width: 100%;
 }
+.memo-content-wrapper.memo-content {
+    width: 100%;
+}
 .video-wrapper iframe {
     border: 0;
     height: 100%;
@@ -41,7 +44,18 @@
 }
 .memo-container img {
     padding-top: 1rem;
-    max-height: 50vh !important;
+    max-height: 40vh !important;
+}
+
+.memo-content-wrapper > .memo-content-text blockquote::before {
+    line-height: 2rem !important;
+    content: "“" !important;
+    font-family: Georgia, serif !important;
+    font-size: 28px !important;
+    font-weight: bold !important;
+    position: absolute !important;
+    left: 10px !important;
+    top: 5px !important;
 }
 /* .memo-container{
     transition: .4s !important;
