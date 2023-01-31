@@ -46,7 +46,19 @@
     padding-top: 1rem;
     max-height: 40vh !important;
 }
-
+button.load-btn.button-load {
+    color: rgb(150,150,150);
+    border-radius: 10px;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: box-shadow,transform;
+    transition-property: box-shadow,transform;
+    padding: 10px 24px;
+    background: var(--entry);
+    border: 1px solid var(--border);
+}
 .memo-content-wrapper > .memo-content-text blockquote::before {
     line-height: 2rem !important;
     content: "“" !important;
