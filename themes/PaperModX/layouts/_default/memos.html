@@ -16,67 +16,71 @@
 
 <!-- 增加卡片hover的效果 -->
 <style>
-.video-wrapper {
-    height: 0;
-    overflow: hidden;
-    padding-bottom: 56.25%;
-    position: relative;
-    width: 100%;
-}
-.memo-content-wrapper.memo-content {
-    width: 100%;
-}
-.video-wrapper iframe {
-    border: 0;
-    height: 100%;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
-}
-.timeline img {
-    display: block;
-    max-height: 40vh;
-    max-width: 100%;
-    margin: 10px 0;
-    border-radius: 16px;
-    border: 1px solid var(--color-img-border);
-}
-.memo-container img {
-    padding-top: 1rem;
-    max-height: 40vh !important;
-}
-button.load-btn.button-load {
-    color: rgb(150,150,150);
-    border-radius: 10px;
-    -webkit-transform: perspective(1px) translateZ(0);
-    transform: perspective(1px) translateZ(0);
-    -webkit-transition-duration: 0.3s;
-    transition-duration: 0.3s;
-    -webkit-transition-property: box-shadow,transform;
-    transition-property: box-shadow,transform;
-    padding: 10px 24px;
-    background: var(--entry);
-    border: 1px solid var(--border);
-}
-.memo-content-wrapper > .memo-content-text blockquote::before {
-    line-height: 2rem !important;
-    content: "“" !important;
-    font-family: Georgia, serif !important;
-    font-size: 28px !important;
-    font-weight: bold !important;
-    position: absolute !important;
-    left: 10px !important;
-    top: 5px !important;
-}
-/* .memo-container{
-    transition: .4s !important;
-}
-.memo-container:hover{
-    transform: translateY(-4px) !important;
-    box-shadow: 0 4px 12px #0c1f500a !important;
-    transition: .4s !important;
-} */
+    ul ul {
+        list-style-type: none;
+        margin-left: -40px;
+    }
+    .video-wrapper {
+        height: 0;
+        overflow: hidden;
+        padding-bottom: 56.25%;
+        position: relative;
+        width: 100%;
+    }
+    .memo-content-wrapper.memo-content {
+        width: 100%;
+    }
+    .video-wrapper iframe {
+        border: 0;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+    .timeline img {
+        display: block;
+        max-height: 40vh;
+        max-width: 100%;
+        margin: 10px 0;
+        border-radius: 16px;
+        border: 1px solid var(--color-img-border);
+    }
+    .memo-container img {
+        padding-top: 1rem;
+        max-height: 40vh !important;
+    }
+    button.load-btn.button-load {
+        color: rgb(150,150,150);
+        border-radius: 10px;
+        -webkit-transform: perspective(1px) translateZ(0);
+        transform: perspective(1px) translateZ(0);
+        -webkit-transition-duration: 0.3s;
+        transition-duration: 0.3s;
+        -webkit-transition-property: box-shadow,transform;
+        transition-property: box-shadow,transform;
+        padding: 10px 24px;
+        background: var(--entry);
+        border: 1px solid var(--border);
+    }
+    .memo-content-wrapper > .memo-content-text blockquote::before {
+        line-height: 2rem !important;
+        content: "“" !important;
+        font-family: Georgia, serif !important;
+        font-size: 28px !important;
+        font-weight: bold !important;
+        position: absolute !important;
+        left: 10px !important;
+        top: 5px !important;
+    }
+    /* .memo-container{
+        transition: .4s !important;
+    }
+    .memo-container:hover{
+        transform: translateY(-4px) !important;
+        box-shadow: 0 4px 12px #0c1f500a !important;
+        transition: .4s !important;
+    } */
 </style>
 
 <!-- 设置memos部分的所有链接在新标签页打开 -->
