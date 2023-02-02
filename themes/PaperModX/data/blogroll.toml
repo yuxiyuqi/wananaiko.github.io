@@ -20,7 +20,7 @@
   weight = 3
 
 [[blogroll]]
-  name = "logoReorx’s Forge"
+  name = "Reorx’s Forge"
   url = "https://reorx.com"
   favicon = "https://reorx.com/images/forge-v2-compat.svg"
   description = "专业全栈开发工程师，活跃在各个主流互联网平台."
