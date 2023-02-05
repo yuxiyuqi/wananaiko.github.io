@@ -274,7 +274,7 @@
     display: flex;
     overflow: hidden;
     padding: 0 4px;
-    border-bottom: 2px dashed var(--waline-border-color);
+    border-bottom: 0.5px solid var(--waline-border-color);
     border-top-left-radius: .75em;
     border-top-right-radius: .75em
   }
@@ -356,6 +356,7 @@
     color: var(--waline-color);
     outline: none;
     transition: all .25s ease
+    padding: 0 8px;
   }
   
   .wl-editor:focus,
