@@ -356,7 +356,7 @@
     color: var(--waline-color);
     outline: none;
     transition: all .25s ease
-    padding: 0 8px;
+    padding: 0 8px !important;
   }
   
   .wl-editor:focus,
