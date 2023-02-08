@@ -1,5 +1,5 @@
 ---
-title: "ChatGPT：帮你做事更高效，但不会取代你的工作"
+title: "ChatGPT：帮你做事更高效，而不是取代你的工作"
 date: 2023-02-08T18:48:56+08:00
 author: "wananaiko"
 tags:
