@@ -13,7 +13,7 @@ draft: false
 
 AI 可以帮助专业人士更好地完成他们的工作，提高工作效率。它们可以用来执行重复的任务，从而让工作者有更多的时间来完成更复杂的任务。AI 也可以帮助工作者快速获取和理解大量的信息，并根据这些信息快速做出决定。此外，AI 也可以帮助工作者更好地与客户沟通，以及更加准确地满足客户的需求。AI 的使用更加实用，能够节省许多时间，并且更容易操作。
 
-从 ChatGPT 发布初期使用到现在，真的对我帮助真的很大，例举一些简单的使用场景：
+从 ChatGPT 发布初期使用到现在，对我的帮助真的很大，下面例举一些常见的使用场景：
 
 - **设计**
 
@@ -48,5 +48,4 @@ AI 可以帮助专业人士更好地完成他们的工作，提高工作效率�
 
 
 [^1]:🔮 [ChatGPT Desktop Application](https://github.com/lencx/ChatGPT) (Mac, Windows and Linux)
-
 [^2]: [chatgpt-on-wechat](https://github.com/zhayujie/chatgpt-on-wechat)：使用ChatGPT搭建微信聊天机器人，基于OpenAI API和itchat实现。Wechat robot based on ChatGPT, which using OpenAI api and itchat library.
