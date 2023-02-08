@@ -39,7 +39,7 @@ AI 可以帮助专业人士更好地完成他们的工作，提高工作效率�
 
 另外，使用 ChatGPT 搭建一个微信聊天机器人[^2]，也挺有意思。可以在服务器上的运行环境中，挂一个微信小号试试。
 
-关于 ChatGPT 更多的玩法介绍，可以看看这篇[《ChatGPT 中文调教指南。怎么让它听你的话》](https://github.com/PlexPt/awesome-chatgpt-prompts-zh) 。
+关于 ChatGPT 更多的玩法介绍，可以看看这篇[《ChatGPT 中文调教指南，怎么让它听你的话》](https://github.com/PlexPt/awesome-chatgpt-prompts-zh) 。
 
 同时，为了更好的使用 ChatGPT ，今天也申请了加入 Plus 计划，等待通过后会第一时间开通使用。
 
