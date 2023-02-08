@@ -28,7 +28,7 @@ AI 可以帮助专业人士更好地完成他们的工作，提高工作效率�
 
 - **生活**
 
-1. 生活指南：日常生活中的任何问题都可以问它，体验甚至要优于搜索引擎。因为 AI 的回答准确度普通较高，而且经常会对答案的内容进行总结，条理清晰，间接的节省了我的时间。
+1. 生活指南：日常生活中的任何问题都可以问它，体验甚至要优于搜索引擎。因为 AI 的回答准确度普遍较高，而且经常会对答案的内容进行总结，条理清晰，间接的节省了我的时间。
 2. 角色扮演：AI 可以给出角色对应的想法，提供独特的视角，帮助你站在另一种角度去看待和解决问题。
 
 3. 辅助写各种文档，比如年终总结、工作计划、各种方案书等。
@@ -46,4 +46,4 @@ AI 可以帮助专业人士更好地完成他们的工作，提高工作效率�
 
 
 [^1]:🔮 [ChatGPT Desktop Application](https://github.com/lencx/ChatGPT) (Mac, Windows and Linux)
-[^2]: [chatgpt-on-wechat](https://github.com/zhayujie/chatgpt-on-wechat)：使用ChatGPT搭建微信聊天机器人，基于OpenAI API和itchat实现。Wechat robot based on ChatGPT, which using OpenAI api and itchat library.
+[^2]: [chatgpt-on-wechat](https://github.com/zhayujie/chatgpt-on-wechat)：使用ChatGPT搭建微信聊天机器人，基于OpenAI API和itchat实现。Wechat robot based on ChatGPT, which using OpenAI api and itchat library.由于微信的审查，现在已经不能使用，会导致帐号被限制。
