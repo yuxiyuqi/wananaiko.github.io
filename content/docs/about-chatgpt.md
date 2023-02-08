@@ -37,4 +37,16 @@ AI 可以帮助专业人士更好地完成他们的工作，提高工作效率�
 
 3. 辅助写各种文档，比如年终总结、工作计划、各种方案书等。
 
-最近一两个月使用下来，ChatGPT 网页版遇到报错的概率越来越高，使用体验明显下降。个中原因，大家也明白，AI 算力本身就不便宜，能提供免费版给大家体验已经是莫大的仁慈了。为了增强 ChatGPT 的使用体验，今天也申请了加入 Plus 计划，等待通过后会第一时间开通使用。
+最近一两个月使用下来，ChatGPT 网页版遇到报错的概率越来越高，使用体验明显下降。个中原因，大家也明白，AI 算力本身就不便宜，能提供免费版给大家体验已经是莫大的仁慈了。
+
+可以通过使用第三方客户端[^1] 来改善这一体验。
+
+另外，使用 ChatGPT 搭建一个微信聊天机器人[^2]，也挺有意思。可以在服务器上的运行环境中，挂一个微信小号试试。
+
+同时，为了更好的使用 ChatGPT ，今天也申请了加入 Plus 计划，等待通过后会第一时间开通使用。
+
+
+
+[^1]:🔮 [ChatGPT Desktop Application](https://github.com/lencx/ChatGPT) (Mac, Windows and Linux)
+
+[^2]: [chatgpt-on-wechat](https://github.com/zhayujie/chatgpt-on-wechat)：使用ChatGPT搭建微信聊天机器人，基于OpenAI API和itchat实现。Wechat robot based on ChatGPT, which using OpenAI api and itchat library.
