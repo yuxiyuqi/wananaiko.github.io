@@ -296,16 +296,5 @@ bbDom && (
     })
 );
 
-// Images lazy load
-window.addEventListener('scroll', function() {
-  var images = document.querySelectorAll('.container img[data-src]');
-  for (var i = 0; i < images.length; i++) {
-    if (images[i].getBoundingClientRect().top <= window.innerHeight) {
-      images[i].src = images[i].getAttribute('data-src');
-      images[i].removeAttribute('data-src');
-    }
-  }
-});
-
 // Images lightbox
 window.ViewImage && ViewImage.init('.container img');
