@@ -93,7 +93,7 @@ img {
     -webkit-tap-highlight-color: transparent;
 }
 code {
-    background-color: #f0f0f0;
+    background-color: var(--code-bg);
     padding: 0.2em 0.4em;
     font-size: 85%;
     border-radius: 3px;
