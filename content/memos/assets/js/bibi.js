@@ -92,7 +92,14 @@ img {
     -webkit-tap-highlight-color: transparent;
 }
 code {
-    color: rgb(170,170,170);
+    background-color: #f0f0f0;
+    padding: 0.2em 0.4em;
+    font-size: 85%;
+    border-radius: 3px;
+    color: var(--secondary);
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+
 }
 .memo-content-text pre p {
     display: inline-block;
@@ -269,6 +276,7 @@ function updateHTMl(e) {
 
 }
 
+// 使用localStorage缓存豆瓣信息
 function fetchDB() {
     var e = "https://douban.edui.fun/",
         t = document.querySelectorAll(".bb-timeline a[href*='douban.com/subject/']") || "";
@@ -366,5 +374,16 @@ bbDom && (
             : getNextList()
     })
 );
+
+// Images lazy load
+window.addEventListener('scroll', function() {
+  var images = document.querySelectorAll('.container img[data-src]');
+  for (var i = 0; i < images.length; i++) {
+    if (images[i].getBoundingClientRect().top <= window.innerHeight) {
+      images[i].src = images[i].getAttribute('data-src');
+      images[i].removeAttribute('data-src');
+    }
+  }
+});
 // Images lightbox
 window.ViewImage && ViewImage.init('.container img');
