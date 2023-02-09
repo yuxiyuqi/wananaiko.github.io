@@ -252,4 +252,4 @@ bbDom && (
     })
 );
 // Images lightbox
-window.ViewImage && ViewImage.init('.container img');
+window.ViewImage && ViewImage.init('.container img'); 
