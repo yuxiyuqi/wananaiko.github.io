@@ -20,6 +20,7 @@ var btn,
 allCSS = `
 img {
     max-height: 70vh !important;
+    max-width: 100% !important;
 }
 .memo-container {
     position: relative;
@@ -260,7 +261,7 @@ function updateHTMl(e) {
         t += '<div class="memo-container">'+
                 '<div class="memo-content-wrapper memo-content"><div class="memo-content-text">' + i + "</div>" +
                 "</div>"+
-                '<div class="memo-header"><span>Aiko&nbsp; 发布于&nbsp;</span><span class="date">' + Lately.format(1e3 * e[a].updatedTs) + '</span></div>'+
+                '<div class="memo-header"><span>Aiko&nbsp;发布于&nbsp;</span><span class="date">' + Lately.format(1e3 * e[a].updatedTs) + '</span></div>'+
                 "</div>"
     }
 
@@ -276,91 +277,11 @@ function updateHTMl(e) {
 
 }
 
-// 使用localStorage缓存豆瓣信息
+
 function fetchDB() {
-    var e = "https://douban.edui.fun/",
-        t = document.querySelectorAll(".bb-timeline a[href*='douban.com/subject/']") || "";
-    if (t) 
-        for (var o = 0; o < t.length; o++) {
-            var r,
-                a,
-                i = (_this = t[o]).href,
-                n = /^https\:\/\/(movie|book)\.douban\.com\/subject\/([0-9]+)\/?/,
-                s = i.replace(n, "$1"),
-                n = i
-                    .replace(n, "$2")
-                    .toString();
-            "movie" == s
-                ? (
-                    r = "movie" + n,
-                    a = e + "movies/" + n,
-                    null == localStorage.getItem(r) || "undefined" == localStorage.getItem(r)
-                        ? fetch(a).then(e => e.json()).then(e => {
-                            var t = "movies" + e.sid,
-                                o = "https://movie.douban.com/subject/" + e.sid + "/";
-                            localStorage.setItem(t, JSON.stringify(e)),
-                            movieShow(o, t)
-                        })
-                        : movieShow(i, r)
-                )
-                : "book" == s && (
-                    r = "book" + n,
-                    a = e + "v2/book/id/" + n,
-                    null == localStorage.getItem(r) || "undefined" == localStorage.getItem(r)
-                        ? fetch(a).then(e => e.json()).then(e => {
-                            var t = "book" + e.id,
-                                o = "https://book.douban.com/subject/" + e.id + "/";
-                            localStorage.setItem(t, JSON.stringify(e)),
-                            bookShow(o, t)
-                        })
-                        : bookShow(i, r)
-                )
-        }
     }
-function movieShow(e, t) {
-    var t = localStorage.getItem(t),
-        t = JSON.parse(t),
-        o = Math.ceil(t.rating),
-        o = "<div class='post-preview'><div class='post-preview--meta'><div class='post-pre" +
-                "view--middle'><h4 class='post-preview--title'><a target='_blank' href='" + e +
-                "'>《" + t.name +
-                "》</a></h4><div class='rating'><div class='rating-star allstar" + o + "'></div>" +
-                "<div class='rating-average'>" + t.rating + "</div></div><time class='post-prev" +
-                "iew--date'>导演：" + t.director + " / 类型：" + t.genre + " / " + t.year + "</time><" +
-                "section style='max-height:75px;overflow:hidden;' class='post-preview--excerpt'" +
-                ">" + t
-            .intro
-            .replace(/\s*/g, "") + "</section></div></div><img referrer-policy='no-referrer" +
-                    "' loading='lazy' class='post-preview--image' src=" + t.img + "></div>",
-        t = document.createElement("div"),
-        e = document.querySelector(".bb-timeline a[href='" + e + "']");
-    e
-        .parentNode
-        .replaceChild(t, e),
-    t.innerHTML = o
-}
-function bookShow(e, t) {
-    var t = localStorage.getItem(t),
-        t = JSON.parse(t),
-        o = Math.ceil(t.rating.average),
-        o = "<div class='post-preview'><div class='post-preview--meta'><div class='post-pre" +
-                "view--middle'><h4 class='post-preview--title'><a target='_blank' href='" + e +
-                "'>《" + t.title +
-                "》</a></h4><div class='rating'><div class='rating-star allstar" + o + "'></div>" +
-                "<div class='rating-average'>" + t.rating.average + "</div></div><time class='p" +
-                "ost-preview--date'>作者：" + t.author + " </time><section style='max-height:75px;" +
-                "overflow:hidden;' class='post-preview--excerpt'>" + t
-            .summary
-            .replace(/\s*/g, "") + "</section></div></div><img referrer-policy='no-referrer" +
-                    "' loading='lazy' class='post-preview--image' src=" + t.images.medium +
-                    "></div>",
-        t = document.createElement("div"),
-        e = document.querySelector(".bb-timeline a[href='" + e + "']");
-    e
-        .parentNode
-        .replaceChild(t, e),
-    t.innerHTML = o
-}
+    
+
 bbDom && (
     getFirstList(),
     meNums(),
@@ -385,5 +306,6 @@ window.addEventListener('scroll', function() {
     }
   }
 });
+
 // Images lightbox
 window.ViewImage && ViewImage.init('.container img');
