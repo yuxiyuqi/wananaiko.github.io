@@ -277,11 +277,9 @@ function updateHTMl(e) {
 
 }
 
-
 function fetchDB() {
     }
     
-
 bbDom && (
     getFirstList(),
     meNums(),
@@ -295,6 +293,17 @@ bbDom && (
             : getNextList()
     })
 );
+
+// 自动加载更多的内容
+window.addEventListener('scroll', function () {
+    var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+    var scrollHeight = document.documentElement.scrollHeight || document.body.scrollHeight;
+    var clientHeight = document.documentElement.clientHeight || document.body.clientHeight;
+    if (scrollTop + clientHeight >= scrollHeight - 10) {
+        var btn = document.querySelector('button.button-load');
+        btn && btn.click();
+    }
+});
 
 // Images lightbox
 window.ViewImage && ViewImage.init('.container img');
