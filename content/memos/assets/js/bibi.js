@@ -92,7 +92,17 @@ img {
     outline-offset: 2px;
     -webkit-tap-highlight-color: transparent;
 }
-code {
+.memo-content-text pre {
+    background-color: var(--code-bg);
+    padding: 0.2em 0.4em;
+    font-size: 85%;
+    border-radius: 3px;
+    color: var(--secondary);
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+}
+
+.memo-content-text code {
     background-color: var(--code-bg);
     padding: 0.2em 0.4em;
     font-size: 85%;
@@ -144,10 +154,6 @@ span.tag-span {
     line-height: 1.5;
     color: #876fd6;
 }
-code {
-    direction: ltr;
-    font-size: 1rem;
-}
 .memo-nums {
     font-size: 1rem;
 }
@@ -184,6 +190,8 @@ function getFirstList() {
                 : (offset = limit * (++page - 1), getNextList())
         })
 }
+
+// 获取下一页
 function getNextList() {
     var e = memos + "api/memo?creatorId=" + bbMemo.creatorId + "&rowStatus=NORMAL&l" +
             "imit=" + limit + "&offset=" + offset;
@@ -198,6 +206,7 @@ function getNextList() {
                 .remove()
         })
 }
+// 加载下一页
 function meNums() {
     var e = memos + "api/memo/amount?creatorId=" + bbMemo.creatorId;
     fetch(e)
@@ -206,6 +215,8 @@ function meNums() {
             e.data && (document.getElementById("memonums").innerHTML = e.data)
         })
 }
+
+// 生成HTML
 function updateHTMl(e) {
     var t = "",
         o = /#([^\s#]+?) /g,
@@ -265,6 +276,7 @@ function updateHTMl(e) {
                 "</div>"
     }
 
+// 生成内容
     bbDom.insertAdjacentHTML(
         "beforeend",
         "<section class='bb-timeline'><ul class='bb-list-ul'>" + t +
@@ -277,6 +289,7 @@ function updateHTMl(e) {
 
 }
 
+// 从数据库中加载更多的内容
 function fetchDB() {
     }
     
@@ -304,6 +317,3 @@ window.addEventListener('scroll', function () {
         btn && btn.click();
     }
 });
-
-// Images lightbox
-window.ViewImage && ViewImage.init('.container img');

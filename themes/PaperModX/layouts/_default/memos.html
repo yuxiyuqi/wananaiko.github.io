@@ -125,30 +125,18 @@
 <script type="text/javascript" src="/memos/assets/js/marked.min.js"></script>
 <script type="text/javascript" src="https://fastly.jsdelivr.net/gh/Tokinx/Lately/lately.min.js"></script>
 <script type="text/javascript" src="/memos/assets/js/bibi.js"></script>
-<script type="text/javascript" src="/memos/assets/js/highlight.min.js"></script>
 <link rel="stylesheet" type="text/css" href="/memos/assets/css/highlight.github.min.css">
+<script type="text/javascript" src="/memos/assets/js/highlight.min.js"></script>
 <link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
 <script type="text/javascript" src="/memos/assets/js/view-image.min.js"></script>
-
-<!-- <script type="text/javascript">
-    window.addEventListener("load", function() {
-    hljs.highlightAll();
-    });
-</script> -->
-<!-- 渲染页面代码高亮-->
-<script type="text/javascript">
-    window.addEventListener("load", function() {
-        document.querySelectorAll('pre code').forEach((block) => {
-            hljs.highlightBlock(block);
-        });
-    });
-</script>
-
 
 <!-- 页面下雪效果 -->
 <!-- <script src="https://app.embed.im/snow.js" defer></script> -->
 <script>
     window.ViewImage && ViewImage.init('.container img');
 </script>
- 
+
+<!--修复页面代码高亮-->
+<script>hljs.highlightAll();</script>
+  
 {{- end }}{{/* end main */}}
