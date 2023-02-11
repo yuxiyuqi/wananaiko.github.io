@@ -1030,7 +1030,7 @@
   
   .wl-reaction-item:hover img,
   .wl-reaction-item.active img {
-    transform: scale(1.1)
+    transform: scale(1.08)
   }
   
   .wl-reaction-img {
