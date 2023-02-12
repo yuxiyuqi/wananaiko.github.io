@@ -138,6 +138,10 @@
 </script> 
 
 <!--修复页面代码高亮-->
-<script>hljs.highlightAll();</script>
-  
+<script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+    hljs.initHighlightingOnLoad();
+    });
+</script>
+
 {{- end }}{{/* end main */}}
