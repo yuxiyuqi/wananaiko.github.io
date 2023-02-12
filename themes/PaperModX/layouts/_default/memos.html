@@ -111,6 +111,7 @@
             domId: "#bber"
         }
     </script>
+    
     <!-- 设置memos部分的所有链接在新标签页打开 -->
     <script type="text/javascript">
         document.querySelector('#bber').addEventListener('click', function(e) {
@@ -125,8 +126,6 @@
 <script type="text/javascript" src="/memos/assets/js/marked.min.js"></script>
 <script type="text/javascript" src="https://fastly.jsdelivr.net/gh/Tokinx/Lately/lately.min.js"></script>
 <script type="text/javascript" src="/memos/assets/js/bibi.js"></script>
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/highlight.js@9.18.1/styles/github.css">
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/highlight.js@9.18.1/lib/highlight.js"></script>
 <link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
 <script type="text/javascript" src="/memos/assets/js/view-image.min.js"></script>
 
@@ -136,12 +135,6 @@
 <script>
     window.ViewImage && ViewImage.init('.container img');
 </script> 
-
-<!--修复页面代码高亮-->
-<script>
-    document.addEventListener('DOMContentLoaded', (event) => {
-    hljs.initHighlightingOnLoad();
-    });
-</script>
-
-{{- end }}{{/* end main */}}
+  
+{{- end }}
+{{/* end main */}}
