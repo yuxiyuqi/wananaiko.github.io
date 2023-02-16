@@ -154,6 +154,13 @@ span.tag-span {
 .memo-nums {
     font-size: 1rem;
 }
+.meta-item {
+    display: inline-block;
+    color: var(--tertiary);
+}
+.meta-item * {
+    color: var(--tertiary);
+}
 .memo-content-text a:hover {
     color: var(--link-hover-color);
     box-shadow: var(--link-hover-underline-shadow);
