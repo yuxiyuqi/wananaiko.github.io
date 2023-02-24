@@ -221,11 +221,11 @@ function getNextList() {
 }
 // 加载下一页
 function meNums() {
-  var e = memos + "api/memo/amount?creatorId=" + bbMemo.creatorId;
+  var e = memos + "api/memo/stats?creatorId=" + bbMemo.creatorId;
   fetch(e)
     .then((e) => e.json())
     .then((e) => {
-      e.data && (document.getElementById("memonums").innerHTML = e.data);
+      e.data && (document.getElementById("memonums").innerHTML = e.data.length);
     });
 }
 
