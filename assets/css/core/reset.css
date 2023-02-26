@@ -204,6 +204,12 @@ img {
     transform: translate(-50%, -50%);
 }
 
+@media only screen and (max-width: 767px) {
+  .esc_window {
+    display: none;
+  }
+}
+
 .icon_right {
     padding-right: 10px;
 }
