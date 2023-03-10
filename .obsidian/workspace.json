@@ -1,0 +1,156 @@
+{
+  "main": {
+    "id": "eec1481bc7ac07c8",
+    "type": "split",
+    "children": [
+      {
+        "id": "ae4b0f33867f1b13",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "0a07ea773194b3c2",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "4ee5a169887324d0",
+    "type": "split",
+    "children": [
+      {
+        "id": "83204afc7f229a86",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "98110a4cfba9e7de",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "257b4252ae844696",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "a4075681582b8eeb",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "2e383329c85c8ce7",
+    "type": "split",
+    "children": [
+      {
+        "id": "48b78f3128def5ef",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b0b92c593bdd68d0",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "3d1516d3875641d0",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "750caaa7a6094d61",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "8bb11fc816b6d4ba",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false
+    }
+  },
+  "active": "98110a4cfba9e7de",
+  "lastOpenFiles": [
+    "public/tags/chatgpt/page/1/index.html",
+    "public/tags/chatgpt/page/1",
+    "public/tags/chatgpt/page",
+    "public/tags/chatgpt/index.xml",
+    "public/tags/chatgpt/index.html",
+    "public/tags/chatgpt",
+    "public/docs/installing-requirements-for-web-ui-安装失败的时候记得关掉梯子试试/index.html",
+    "public/docs/installing-requirements-for-web-ui-安装失败的时候记得关掉梯子试试",
+    "public/docs/about-chatgpt/index.html",
+    "public/docs/about-chatgpt",
+    "public/assets/css/stylesheet.min.159545f9b9c7bce1bc9327c5867212d2f1ea0e52995d7efd97da66cd2e4d2cf3.css",
+    "未命名.canvas"
+  ]
+}

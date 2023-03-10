@@ -274,7 +274,7 @@
     display: flex;
     overflow: hidden;
     padding: 0 4px;
-    border-bottom: 2px dashed var(--waline-border-color);
+    border-bottom: 0.5px solid var(--waline-border-color);
     border-top-left-radius: .75em;
     border-top-right-radius: .75em
   }
@@ -355,7 +355,7 @@
     border: none;
     color: var(--waline-color);
     outline: none;
-    transition: all .25s ease
+    transition: all .25s ease;
   }
   
   .wl-editor:focus,
@@ -1004,7 +1004,7 @@
   .wl-reaction-list {
     display: flex;
     flex-direction: row;
-    gap: 16px;
+    gap: 24px;
     justify-content: center;
     margin: 0;
     padding: 8px;
@@ -1013,7 +1013,7 @@
   
   @media(max-width: 580px) {
     .wl-reaction-list {
-      gap: 12px
+      gap: 20px
     }
   }
   
@@ -1030,19 +1030,19 @@
   
   .wl-reaction-item:hover img,
   .wl-reaction-item.active img {
-    transform: scale(1.15)
+    transform: scale(1.08)
   }
   
   .wl-reaction-img {
     position: relative;
-    width: 42px;
-    height: 42px
+    width: 44px;
+    height: 44px
   }
   
   @media(max-width: 580px) {
     .wl-reaction-img {
-      width: 32px;
-      height: 32px
+      width: 36px;
+      height: 36px
     }
   }
   

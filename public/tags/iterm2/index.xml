@@ -16,10 +16,7 @@
       <pubDate>Sun, 08 Jan 2023 23:04:09 +0800</pubDate>
       
       <guid>https://wananaiko.design/docs/how-iterm2-show-current-proxy-status/</guid>
-      <description>最近在 iterm2 里使用 curl、wget、brew、git 等命令时，经常会遇到相应很慢的情况，只能慢慢的等待，网上查了查资料，可以通过以下方法实现。
-修改 ~/.zshrc，并加入以下内容：
-export proxy_host=127.0.0.1 export proxy_port=8888//自定义梯子端口 export switch_proxy=0 export cdc_in=0 function pp(){ if [ $switch_proxy = 0 ]; then export http_proxy=&amp;#34;$proxy_host:$proxy_port&amp;#34; export https_proxy=&amp;#34;$proxy_host:$proxy_port&amp;#34; export ftp_proxy=&amp;#34;$proxy_host:$proxy_port&amp;#34; export GOPROXY=&amp;#34;$proxy_host:$Proxy_port&amp;#34; switch_proxy=l echo -e &amp;#34;梯子模式&amp;#34; else unset http_proxy unset https_proxy unset ftp_proxy unset GOPROXY switch_proxy=0 echo -e &amp;#34;和谐模式&amp;#34; fi } 保存后退出，打开 iterm2，输入pp即可在梯子模式和和谐模式之间切换。
-参考：让 iTerm2 实时显示梯子状态 ，还有另外两种方法。</description>
+      <description>最近在 iterm2 里使用 curl、wget、brew、git 等命令时，经常会遇到相应很慢的情况，只能慢慢的等待，网上查了查资料，可以通过以下方法实现。</description>
       <content:encoded><![CDATA[<p>最近在 iterm2 里使用 curl、wget、brew、git 等命令时，经常会遇到相应很慢的情况，只能慢慢的等待，网上查了查资料，可以通过以下方法实现。</p>
 <p>修改 <code>~/.zshrc</code>，并加入以下内容：</p>
 <pre tabindex="0"><code class="language-hljs" data-lang="hljs">export proxy_host=127.0.0.1

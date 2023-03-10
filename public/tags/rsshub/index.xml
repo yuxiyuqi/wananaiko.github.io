@@ -16,16 +16,7 @@
       <pubDate>Tue, 20 Dec 2022 00:00:00 +0000</pubDate>
       
       <guid>https://wananaiko.design/docs/dec1220/</guid>
-      <description>Hugo 部署到 Vercel 最近考虑把 Wordpress 博客换到 Hugo，一番折腾之后，通过 Github+Vercel 的方式实现了自动部署，还挺方便的，以后只需要在本地编写 Markdown 文件并发布到 Github 就可以了。以 macOS 下为例：
-登陆 GitHub，新建一个 GitHub pages，名为 username.github.io。
-使用 GitHub 登陆 Vercel，Import 刚才新建的 pages。
-Vercel 里的 Project Name 随便写，Build &amp;amp; Development Settings 选择 Hugo，Hugo 的 Version 填写最新的版本号，其他默认，最后提交。
-把 Github pages 仓库克隆到本地，比如我这里为：/Users/aiko/wananaiko.github.io，终端里打开该目录后。输入 Hugo server 验证是否可以正常启动。
-如果你想要安装和本站一样的主题，可以参考这篇文章：Installation | Update | PaperModX 其他参考文章：
-hugo自动部署到vercel
-如何使用 Hugo 进行个人博客搭建
-将 Memos 作为单页添加到 Hugo 中 方法参考了文章 向Hugo中添加静态单页面Static-Single
-建议将 config.toml 里的 EnableInstantClick设置为 false，避免 memos 内容偶尔出现不加载的情况。</description>
+      <description>Hugo 部署到 Vercel 最近考虑把 Wordpress 博客换到 Hugo，一番折腾之后，通过 Github+Vercel 的方式实现了自动部署，还挺方便的，以后只需要在本地编写 Markdown 文件并发布到 Github 就可以了。</description>
       <content:encoded><![CDATA[<h2 id="hugo-部署到-vercel">Hugo 部署到 Vercel</h2>
 <p>最近考虑把 Wordpress 博客换到 Hugo，一番折腾之后，通过 Github+Vercel 的方式实现了自动部署，还挺方便的，以后只需要在本地编写 Markdown 文件并发布到 Github 就可以了。以 macOS 下为例：</p>
 <ol>

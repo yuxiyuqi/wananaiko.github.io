@@ -9,31 +9,81 @@
       <link>https://wananaiko.design/images/forge-v2-compat.svg</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 15 Jan 2023 01:40:29 +0800</lastBuildDate><atom:link href="https://wananaiko.design/docs/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 08 Feb 2023 18:48:56 +0800</lastBuildDate><atom:link href="https://wananaiko.design/docs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ChatGPT：帮你做事更高效，而不是取代你的工作</title>
+      <link>https://wananaiko.design/docs/about-chatgpt/</link>
+      <pubDate>Wed, 08 Feb 2023 18:48:56 +0800</pubDate>
+      
+      <guid>https://wananaiko.design/docs/about-chatgpt/</guid>
+      <description>最近，关于 ChatGPT 的讨论很激烈，在各种圈子中获得关注。然而，一些恐慌的声音出现了，暗示 ChatGPT 可以取代文案，开发、客服、销售甚至律师人员。这使得许多人思</description>
+      <content:encoded><![CDATA[<p>最近，关于 ChatGPT 的讨论很激烈，在各种圈子中获得关注。然而，一些恐慌的声音出现了，暗示 ChatGPT 可以取代文案，开发、客服、销售甚至律师人员。这使得许多人思考一个问题：自己的工作是否会被 AI 所取代？</p>
+<p>人们对于可能取代他们职业的新技术感到害怕是可以理解的。ChatGPT（以下部分使用 “AI” 代替） 仍处于早期发展阶段，尚不能完全取代这些领域的工作者。尽管 AI 可以把重复的工作减轻，但是它们仍然无法取代人类工作，因为人类的创造力是无法比拟的。人类拥有判断力，可以解决复杂的问题，而 AI 则无法做到这一点。AI 也无法替代人类的社交技能，比如沟通，解决矛盾，理解内容，以及更好的表达感受。AI 可以模仿人类的行为，但是它们却无法替代真正的人类。</p>
+<p>AI 可以帮助专业人士更好地完成他们的工作，提高工作效率。它们可以用来执行重复的任务，从而让工作者有更多的时间来完成更复杂的任务。AI 也可以帮助工作者快速获取和理解大量的信息，并根据这些信息快速做出决定。此外，AI 也可以帮助工作者更好地与客户沟通，以及更加准确地满足客户的需求。AI 的使用更加实用，能够节省许多时间，并且更容易操作。</p>
+<p>从 ChatGPT 发布初期使用到现在，对我的帮助真的很大，下面例举一些常见的使用场景：</p>
+<ul>
+<li><strong>设计</strong></li>
+</ul>
+<ol>
+<li>辅助生成文案：在界面设计中经常需要填充一些文案，为了让应用中的文案更接近真实性，我通常会通过 AI 来生成一些符合产品定位的文案。</li>
+<li>概述产品包含的功能点：比如问它，设计一个“社交App”需要包含哪些功能点。</li>
+</ol>
+<ul>
+<li><strong>开发</strong></li>
+</ul>
+<ol>
+<li>Bug修复：把控制台中的错误代码发送给它，并询问如何修复。</li>
+<li>写代码的能力：让它写一个小功能，直接使用或者在它提供的代码基础上进行修改。</li>
+<li>开发文档指南：询问不懂的指令，或者让它提供某个功能的指令。</li>
+</ol>
+<ul>
+<li><strong>生活</strong></li>
+</ul>
+<ol>
+<li>
+<p>生活指南：日常生活中的任何问题都可以问它，体验甚至要优于搜索引擎。因为 AI 的回答准确度普遍较高，而且经常会对答案的内容进行总结，条理清晰，间接的节省了我的时间。</p>
+</li>
+<li>
+<p>角色扮演：AI 可以给出角色对应的想法，提供独特的视角，帮助你站在另一种角度去看待和解决问题。</p>
+</li>
+<li>
+<p>辅助写各种文档，比如年终总结、工作计划、各种方案书等。</p>
+</li>
+</ol>
+<p>最近一两个月使用下来，ChatGPT 网页版遇到报错的概率越来越高，使用体验明显下降。个中原因，大家也明白，AI 算力本身就不便宜，能提供免费版给大家体验已经是莫大的仁慈了。</p>
+<p>可以通过使用第三方客户端<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> 来改善这一体验。</p>
+<p>另外，使用 ChatGPT 搭建一个微信聊天机器人<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>，也挺有意思。可以在服务器上的运行环境中，挂一个微信小号试试。</p>
+<p>关于 ChatGPT 更多的玩法介绍，可以看看这篇<a href="https://github.com/PlexPt/awesome-chatgpt-prompts-zh" target="_blank" rel="noopener">《ChatGPT 中文调教指南，怎么让它听你的话》</a> 。</p>
+<p>同时，为了更好的使用 ChatGPT ，今天也申请了加入 Plus 计划，等待通过后会第一时间开通使用。</p>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>🔮 <a href="https://github.com/lencx/ChatGPT" target="_blank" rel="noopener">ChatGPT Desktop Application</a> (Mac, Windows and Linux)&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2">
+<p><a href="https://github.com/zhayujie/chatgpt-on-wechat" target="_blank" rel="noopener">chatgpt-on-wechat</a>：使用ChatGPT搭建微信聊天机器人，基于OpenAI API和itchat实现。Wechat robot based on ChatGPT, which using OpenAI api and itchat library.由于微信的审查，现在已经不能使用，会导致帐号被限制。&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+]]></content:encoded>
+    </item>
+    
     <item>
       <title>2022 – 2023 跨年博客</title>
       <link>https://wananaiko.design/docs/my2022/my2022/</link>
       <pubDate>Sun, 15 Jan 2023 01:40:29 +0800</pubDate>
       
       <guid>https://wananaiko.design/docs/my2022/my2022/</guid>
-      <description>2022 年 2022年其实我并没有“躺平”，也无法躺平。无论是工作还是生活，经常都是处于一种忙碌的状态。
-疫情 被疫情反复折腾的一年，上半年经历了上海严峻的封控措施，一个人艰难的度过了 3 个月，每天只能通过视频和老婆孩子聊天，每天都期盼着什么时候能够解封回家。
-解封后更折腾了，几乎每个星期的周五都会赶最后一班高铁回家，这导致我周五、周六、周日、周一必须连续做 4 天核酸。不是抱怨，只是为了能够回家和家人团聚，当然要做。
-疫情 3 年，今年终于结束了。虽然结束了，但还是受到了很大的影响。每天出门依然需要佩戴口罩，企业的经济效益也持续低迷，经常还会担心家人再次受到病毒的伤害，直到现在仍然能感受到身边很多人还没有完全恢复。
-家庭 虽然 2022 年过的很辛苦，但也是幸运的一年，庆幸自己和家人都平安的度过了这一年，身边的长辈还没有因为疫情离开的，挺好。
-今年和老婆的感情是升温向上的，相处和睦，彼此关心照顾。而我们家，也即将迎来一位新的成员，我们的兔宝宝预计将于 2023 年 7 月和我们见面，充满了期待。
-消费 2022年的消费支出有点高，虽然我没有记账的习惯和时间，但是在整理下面的支出时，能感觉到花费了不少，有一些确实是非必要的 😂 最近已经开始消费降级了，尤其是身为 2 个孩子的爸爸后，感觉压力更大了，得把这种压力转化为动力。
-工作 今年忙了 7 个月 GOV 项目，最终竟然意外流标了。期间，甲方主要负责人一直在参与项目，从产品到设计到研发，几乎每个星期都一起开会讨论（疫情封控期间线上会议）。本以为可以顺利竞标的，毕竟甲方的负责人也是项目的核心人员，由他起草的项目方案书几百页，方案涉及的理论知识非常专业。可能中标的那家拿捏到了更大的 Leader 吧，很难说清楚。
-一个 GOV 的项目，经费、后期的维护以及人脉资源，其实都非常大。丢了一块大蛋糕就算了，还浪费了我们很大的人力成本，老板为此也很生气，但没办法，这个项目以后也只能以其他方式继续运作卖给他方。
-学习 年底这段时间，我经常督促自己抽时间学习 Javascript，期望能够通过学习提升自己的前端能力。2023 年的重点也将放在学习前端的知识上，现在的计划是先看完 Codecademy 上的一些免费练习课程，然后再接着学习三木的 Javascript 收费课程，接着开始设计一套页面并尝试开发出来。
-躺平 今年其实有一处躺平的地方，在 “Crypto” 。今年几乎没有做什么操作，只是加了几次仓，目前还是处于亏损 70% - 80% 左右的状态。只能躺平，等待这轮熊市慢慢的过去。近期行情稍微有那么一点点的起色，也不知道是不是假象，反正依然坚持躺平的策略。
-拍照 今年也曾在一个固定机位，拍摄了几十张美丽的晚霞。
-按ESC关闭窗口
-还给女儿拍了很多好玩的照片，节选几张：
-2023 年 希望家人能够健康平安。
-印象深刻的一些电影/电视 名称 类型 评价 短剧开始啦 电视剧 一部很感人的日剧，笑着笑着就哭了。看完这部剧，你会想谢谢身边的朋友，并更加珍惜友情。 风骚律师 电视剧 我最爱的美剧 Top1，剧情、台词、摄影镜头、服装都堪称教科书级别的。看完这部剧像是阔别了一位老友，怅然若失的感觉，一个时代的落幕了。 怪奇物语 电视剧 怀着激动的心情迎来了第四季，孩子们都已经长大成人了，这一季多线剧情杀疯了，越看越爽。 黑暗荣耀 电视剧 上周刚刚看完，一部剧情紧凑的爽剧，乔妹依然颜值在线，演技也很不错。 阿凡达·水之道 电影 其实看之前已经听说剧情一般，不过在大银幕极质的视听享受下，潘多拉星球真的美翻了，每一帧都值得品味。 坠落 电影 评分虽然不是很高，但是，恐高的我心惊胆战的看完了，生理上的感受过于刺激。 看了些设计书 名称 打分 进度 Practical-UI ★★★★★ 已读完 Refactoring UI ★★★★★ 进行中 The UI Design Manual ★★★★☆ 进行中 Masteruibook ★★★★☆ 已读完 Web Interface Handbook ★★★☆☆ 进行中 UI/UX Design Money - 未读 The Ultimate Guide to Web Design - 未读 今年陆陆续续买了不少设计书籍，这些书籍其实大同小异，大部分围绕设计和用户体验提供一些合理的建议。推荐看看 Practical-UI 和 Refactoring UI。</description>
-      <content:encoded><![CDATA[<h3 id="2022-年"><strong>2022 年</strong></h3>
-<p>2022年其实我并没有“躺平”，也无法躺平。无论是工作还是生活，经常都是处于一种忙碌的状态。</p>
+      <description>2022 年 这一年没有躺平，也无法躺平。无论是工作、生活还是家庭，经常都是处于一种忙碌的状态。 疫情 被疫情反复折腾的一年，上半年经历了上海严峻的封控措</description>
+      <content:encoded><![CDATA[
+<link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+<style type="text/css">.dark-theme .aplayer{background:#212121}.dark-theme .aplayer.aplayer-withlist .aplayer-info{border-bottom-color:#5c5c5c}.dark-theme .aplayer.aplayer-fixed .aplayer-list{border-color:#5c5c5c}.dark-theme .aplayer .aplayer-body{background-color:#212121}.dark-theme .aplayer .aplayer-info{border-top-color:#212121}.dark-theme .aplayer .aplayer-info .aplayer-music .aplayer-title{color:#fff}.dark-theme .aplayer .aplayer-info .aplayer-music .aplayer-author{color:#fff}.dark-theme .aplayer .aplayer-info .aplayer-controller .aplayer-time{color:#eee}.dark-theme .aplayer .aplayer-info .aplayer-controller .aplayer-time .aplayer-icon path{fill:#eee}.dark-theme .aplayer .aplayer-list{background-color:#212121}.dark-theme .aplayer .aplayer-list::-webkit-scrollbar-thumb{background-color:#999}.dark-theme .aplayer .aplayer-list::-webkit-scrollbar-thumb:hover{background-color:#bbb}.dark-theme .aplayer .aplayer-list li{color:#fff;border-top-color:#666}.dark-theme .aplayer .aplayer-list li:hover{background:#4e4e4e}.dark-theme .aplayer .aplayer-list li.aplayer-list-light{background:#6c6c6c}.dark-theme .aplayer .aplayer-list li .aplayer-list-index{color:#ddd}.dark-theme .aplayer .aplayer-list li .aplayer-list-author{color:#ddd}.dark-theme .aplayer .aplayer-lrc{text-shadow:-1px -1px 0 #666}.dark-theme .aplayer .aplayer-lrc:before{background:-moz-linear-gradient(top, #212121 0%, rgba(33,33,33,0) 100%);background:-webkit-linear-gradient(top, #212121 0%, rgba(33,33,33,0) 100%);background:linear-gradient(to bottom, #212121 0%, rgba(33,33,33,0) 100%);filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#212121', endColorstr='#00212121',GradientType=0 )}.dark-theme .aplayer .aplayer-lrc:after{background:-moz-linear-gradient(top, rgba(33,33,33,0) 0%, rgba(33,33,33,0.8) 100%);background:-webkit-linear-gradient(top, rgba(33,33,33,0) 0%, rgba(33,33,33,0.8) 100%);background:linear-gradient(to bottom, rgba(33,33,33,0) 0%, rgba(33,33,33,0.8) 100%);filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#00212121', endColorstr='#cc212121',GradientType=0 )}.dark-theme .aplayer .aplayer-lrc p{color:#fff}.dark-theme .aplayer .aplayer-miniswitcher{background:#484848}.dark-theme .aplayer .aplayer-miniswitcher .aplayer-icon path{fill:#eee}</style>
+<script src="https://fastly.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+
+<script src="https://fastly.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script><meting-js auto="https://music.163.com/#/song?id=496869422" theme="#2980b9"></meting-js>
+<h3 id="2022-年">2022 年</h3>
+<p>这一年没有躺平，也无法躺平。无论是工作、生活还是家庭，经常都是处于一种忙碌的状态。</p>
 <ul>
 <li><strong>疫情</strong></li>
 </ul>
@@ -48,16 +98,16 @@
 <ul>
 <li><strong>消费</strong></li>
 </ul>
-<p>2022年的消费支出有点高，虽然我没有记账的习惯和时间，但是在整理下面的支出时，能感觉到花费了不少，有一些确实是非必要的 😂 最近已经开始消费降级了，尤其是身为 2 个孩子的爸爸后，感觉压力更大了，得把这种压力转化为动力。</p>
+<p>2022 年的消费支出有点高，虽然我没有记账的习惯和时间，但是在整理下面的支出时，能感觉到花费了不少，有一些确实是非必要的，2023 年，要消费降级了。</p>
 <ul>
 <li><strong>工作</strong></li>
 </ul>
-<p>今年忙了 7 个月 GOV 项目，最终竟然意外流标了。期间，甲方主要负责人一直在参与项目，从产品到设计到研发，几乎每个星期都一起开会讨论（疫情封控期间线上会议）。本以为可以顺利竞标的，毕竟甲方的负责人也是项目的核心人员，由他起草的项目方案书几百页，方案涉及的理论知识非常专业。可能中标的那家拿捏到了更大的 Leader 吧，很难说清楚。</p>
+<p>今年忙了 7 个月 GOV 项目，最终竟然意外流标了。期间，甲方主要负责人一直在参与项目，从产品到设计到研发，几乎每个星期都一起开会讨论（疫情封控期间线上会议）。本以为可以顺利竞标的，毕竟甲方的负责人也是项目的核心人员，由他起草的项目方案书几百页，方案涉及的理论知识非常专业。可能中标的那家有更强大的背景关系吧，很难说清楚。</p>
 <p>一个 GOV 的项目，经费、后期的维护以及人脉资源，其实都非常大。丢了一块大蛋糕就算了，还浪费了我们很大的人力成本，老板为此也很生气，但没办法，这个项目以后也只能以其他方式继续运作卖给他方。</p>
 <ul>
 <li><strong>学习</strong></li>
 </ul>
-<p>年底这段时间，我经常督促自己抽时间学习 Javascript，期望能够通过学习提升自己的前端能力。2023 年的重点也将放在学习前端的知识上，现在的计划是先看完 Codecademy 上的一些免费练习课程，然后再接着学习三木的 Javascript 收费课程，接着开始设计一套页面并尝试开发出来。</p>
+<p>年底这段时间，我经常督促自己抽时间学习 Javascript，期望能够通过学习提升自己的前端能力。2023 年的重点也将放在学习前端的知识上，现在的计划是先学完 Codecademy 上的一些免费课程，然后再接着学习三木的 Javascript 收费课程，接着开始设计一套页面并尝试开发出来。</p>
 <ul>
 <li><strong>躺平</strong></li>
 </ul>
@@ -302,53 +352,7 @@
 
 </div>
 </p>
-<p>还给女儿拍了很多好玩的照片，节选几张：</p>
-<p>
-
-
-
-
-
-
-<div class="gallery caption-position-bottom caption-effect-slide hover-effect-zoom hover-transition" itemscope itemtype="http://schema.org/ImageGallery">
-	  
-
-
-<div class="box" >
-  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-    <div class="img" style="background-image: url('/docs/my2022/image/image1.jpg');">
-      <img itemprop="thumbnail" src="/docs/my2022/image/image1.jpg" />
-    </div>
-    <a href="/docs/my2022/image/image1.jpg" itemprop="contentUrl"></a>
-  </figure>
-</div>
-
-
-
-<div class="box" >
-  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-    <div class="img" style="background-image: url('/docs/my2022/image/image2.jpg');">
-      <img itemprop="thumbnail" src="/docs/my2022/image/image2.jpg" />
-    </div>
-    <a href="/docs/my2022/image/image2.jpg" itemprop="contentUrl"></a>
-  </figure>
-</div>
-
-
-
-<div class="box" >
-  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-    <div class="img" style="background-image: url('/docs/my2022/image/image3.jpg');">
-      <img itemprop="thumbnail" src="/docs/my2022/image/image3.jpg" />
-    </div>
-    <a href="/docs/my2022/image/image3.jpg" itemprop="contentUrl"></a>
-  </figure>
-</div>
-
-
-</div>
-</p>
-<h3 id="2023-年"><strong>2023 年</strong></h3>
+<h3 id="2023-年">2023 年</h3>
 <p><mark>希望家人能够健康平安。</mark></p>
 <hr>
 <h3 id="印象深刻的一些电影电视">印象深刻的一些电影/电视</h3>
@@ -357,37 +361,37 @@
 <tr>
 <th>名称</th>
 <th>类型</th>
-<th>评价</th>
+<th>短评</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>短剧开始啦</td>
+<td><strong>短剧开始啦</strong></td>
 <td>电视剧</td>
 <td>一部很感人的日剧，笑着笑着就哭了。看完这部剧，你会想谢谢身边的朋友，并更加珍惜友情。</td>
 </tr>
 <tr>
-<td>风骚律师</td>
+<td><strong>风骚律师</strong></td>
 <td>电视剧</td>
 <td>我最爱的美剧 Top1，剧情、台词、摄影镜头、服装都堪称教科书级别的。看完这部剧像是阔别了一位老友，怅然若失的感觉，一个时代的落幕了。</td>
 </tr>
 <tr>
-<td>怪奇物语</td>
+<td><strong>怪奇物语</strong></td>
 <td>电视剧</td>
 <td>怀着激动的心情迎来了第四季，孩子们都已经长大成人了，这一季多线剧情杀疯了，越看越爽。</td>
 </tr>
 <tr>
-<td>黑暗荣耀</td>
+<td><strong>黑暗荣耀</strong></td>
 <td>电视剧</td>
 <td>上周刚刚看完，一部剧情紧凑的爽剧，乔妹依然颜值在线，演技也很不错。</td>
 </tr>
 <tr>
-<td>阿凡达·水之道</td>
+<td><strong>阿凡达·水之道</strong></td>
 <td>电影</td>
 <td>其实看之前已经听说剧情一般，不过在大银幕极质的视听享受下，潘多拉星球真的美翻了，每一帧都值得品味。</td>
 </tr>
 <tr>
-<td>坠落</td>
+<td><strong>坠落</strong></td>
 <td>电影</td>
 <td>评分虽然不是很高，但是，恐高的我心惊胆战的看完了，生理上的感受过于刺激。</td>
 </tr>
@@ -450,7 +454,7 @@
 <tr>
 <th>名称</th>
 <th>类型</th>
-<th>评价</th>
+<th style="text-align:left">短评</th>
 <th>打分</th>
 </tr>
 </thead>
@@ -458,91 +462,91 @@
 <tr>
 <td><a href="https://craftwork.design/" target="_blank" rel="noopener">craftwork.design</a></td>
 <td>综合</td>
-<td>3D 素材、插画、模型质量不错，定位综合性的设计素材网站。</td>
+<td style="text-align:left">3D 素材、插画、模型质量不错，定位综合性的设计素材网站。</td>
 <td>★★★★☆</td>
 </tr>
 <tr>
 <td><a href="https://www.ls.graphics/" target="_blank" rel="noopener">ls.graphic</a></td>
 <td>综合</td>
-<td>3D 素材和模型质量不错，主打模型这块，质量非常高，很多模型还提供免费下载。</td>
+<td style="text-align:left">3D 素材和模型质量不错，主打模型这块，质量非常高，很多模型还提供免费下载。</td>
 <td>★★★★☆</td>
 </tr>
 <tr>
 <td><a href="https://www.iconfinder.com/" target="_blank" rel="noopener">Iconfinder</a></td>
 <td>图标</td>
-<td>使用频率其实不是很高，而且价格很高，性价比不是很高，在图标素材站里算是质量最高的。</td>
+<td style="text-align:left">使用频率其实不是很高，而且价格很高，性价比不是很高，在图标素材站里算是质量最高的。</td>
 <td>★★★★☆</td>
 </tr>
 <tr>
 <td><a href="https://www.untitledui.com/" target="_blank" rel="noopener">Untitled UI &amp; Icons</a></td>
 <td>设计系统，图标</td>
-<td>这套设计系统质量很高了，但是只有设计系统，没有前端框架，落地依然麻烦。</td>
+<td style="text-align:left">这套设计系统质量很高了，但是只有设计系统，没有前端框架，落地依然麻烦。</td>
 <td>★★★★☆</td>
 </tr>
 <tr>
 <td><a href="https://www.figma.academy/" target="_blank" rel="noopener">Figma Academy</a></td>
 <td>教程</td>
-<td>Figma 系统设计教程，质量很高。</td>
+<td style="text-align:left">Figma 系统设计教程，质量很高。</td>
 <td>★★★★★</td>
 </tr>
 <tr>
 <td><a href="https://iconly.pro/" target="_blank" rel="noopener">Iconly Pro</a></td>
 <td>图标</td>
-<td>这套系列图标质量极高，在客户端里使用，包含6种基础的图标风格，还有即将推出的动态图标和 3D 图标，价格有点贵，但是质量非常高。官方 Discord 内可以获取折扣。</td>
+<td style="text-align:left">这套系列图标质量极高，在客户端里使用，包含 6 种基础的图标风格，还有即将推出的动态图标和 3D 图标，价格有点贵，但是质量非常高。官方 Discord 内可以获取折扣。</td>
 <td>★★★★★</td>
 </tr>
 <tr>
 <td><a href="https://myicons.co/" target="_blank" rel="noopener">Myicons</a></td>
 <td>图标</td>
-<td>只有一种风格，价格比 Iconly 还贵，但是图标非常全，质量也很高。如果只使用一种线性风格，这套性价比还是非常不错的。</td>
+<td style="text-align:left">只有一种风格，价格比 Iconly 还贵，但是图标非常全，质量也很高。如果只使用一种线性风格，这套性价比还是非常不错的。</td>
 <td>★★★★☆</td>
 </tr>
 <tr>
 <td><a href="https://dazzleui.pro/" target="_blank" rel="noopener">Dazzle</a></td>
 <td>图标</td>
-<td>有 4 种风格，线性风格的全部图标可以免费下载，很良心，质量不错。</td>
+<td style="text-align:left">有 4 种风格，线性风格的全部图标可以免费下载，很良心，质量不错。</td>
 <td>★★★★☆</td>
 </tr>
 <tr>
 <td><a href="https://www.anron.pro/" target="_blank" rel="noopener">Anron</a></td>
 <td>图标</td>
-<td>有 6 种风格，质量还不错，官网设计的很好看。</td>
+<td style="text-align:left">有 6 种风格，质量还不错，官网设计的很好看。</td>
 <td>★★★★☆</td>
 </tr>
 <tr>
 <td><a href="https://www.getillustrations.com/" target="_blank" rel="noopener">Getillustrations</a></td>
 <td>插画</td>
-<td>数量很多，整体风格也还可以。</td>
+<td style="text-align:left">数量很多，整体风格也还可以。</td>
 <td>★★★☆☆</td>
 </tr>
 <tr>
 <td><a href="https://www.uiprep.com/" target="_blank" rel="noopener">UIPREP</a></td>
 <td>设计系统</td>
-<td>质量一般，不是很值得购买。</td>
+<td style="text-align:left">质量一般，不是很值得购买。</td>
 <td>★★☆☆☆</td>
 </tr>
 <tr>
 <td><a href="https://nucleus-ui.com/" target="_blank" rel="noopener">Nucleus UI Plus</a></td>
 <td>设计系统</td>
-<td>侧重于手机端的设计系统，质量非常高，带 token，还有很多示例页面。</td>
+<td style="text-align:left">侧重于手机端的设计系统，质量非常高，带 token，还有很多示例页面。</td>
 <td>★★★★☆</td>
 </tr>
 <tr>
 <td><a href="https://motiondesign.school/" target="_blank" rel="noopener">Motion Design School</a></td>
 <td>教程</td>
-<td>一套动效教程，还没有时间学。</td>
+<td style="text-align:left">一套动效教程，还没有时间学。</td>
 <td>-</td>
 </tr>
 <tr>
 <td><a href="https://www.freepik.com/" target="_blank" rel="noopener">Freepik</a></td>
 <td>矢量素材</td>
-<td>主打矢量素材，很多质量还挺不错的，使用频率较高。</td>
+<td style="text-align:left">主打矢量素材，很多质量还挺不错的，使用频率较高。</td>
 <td>★★★★★</td>
 </tr>
 <tr>
 <td><a href="https://www.clipartkorea.co.kr/main/index.php" target="_blank" rel="noopener">clipartkorea</a></td>
 <td>综合</td>
-<td>来自韩国的素材库，好不容易找到一个在韩国的朋友帮忙代购，虽然使用频率不高，但是质量真的很高，是平面设计灵感的来源地。</td>
+<td style="text-align:left">来自韩国的素材库，好不容易找到一个在韩国的朋友帮忙代购，虽然使用频率不高，但是质量真的很高，是平面设计灵感的来源地。</td>
 <td>★★★★☆</td>
 </tr>
 </tbody>
@@ -600,10 +604,10 @@
 <hr>
 <h3 id="最常用的服务">最常用的服务</h3>
 <ol>
-<li><a href="https://github.com/usememos/memos" target="_blank" rel="noopener">Memos</a>：日常碎片化的内容和琐碎的生活记忆，都会发布在 memos<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>。</li>
+<li><a href="https://github.com/usememos/memos" target="_blank" rel="noopener">Memos</a>：日常碎片化的内容和琐碎的生活记忆，都会发布在 memos。</li>
 <li><a href="https://vercel.com/" target="_blank" rel="noopener">Vercel</a>：很多服务都部署在了上面，包括 Rsshub ，本站 Hugo 博客，umami 站点统计，waline 评论。</li>
 <li><a href="https://github.com/" target="_blank" rel="noopener">Github</a>：很多服务的代码部署在上面。</li>
-<li><a href="https://mem.ai/" target="_blank" rel="noopener">Mem</a>：twitter上很多优质的内容都会通过 Mem 保存，便于后期整理。</li>
+<li><a href="https://mem.ai/" target="_blank" rel="noopener">Mem</a>：twitter 上很多优质的内容都会通过 Mem 保存，便于后期整理。</li>
 <li><a href="https://read.readwise.io/" target="_blank" rel="noopener">Readwise</a>：提供不错的 RSS 阅读服务，可以完整的保存 twitter 时间线内容，提供了很好的阅读体验。</li>
 <li><a href="https://chat.openai.com/" target="_blank" rel="noopener">ChatGPT</a>：很多不懂的代码问题，都通过在上面通过提问获得了解决方案或者灵感。</li>
 <li><a href="https://www.cloudflare.com/" target="_blank" rel="noopener">Cloudflare</a>：把域名接入到了 cloudflare，加速 Vercel、GitHub 等国外服务的访问速度。</li>
@@ -614,7 +618,7 @@
 <thead>
 <tr>
 <th>物品名</th>
-<th>评价</th>
+<th>短评</th>
 <th>打分</th>
 <th>服役状态</th>
 </tr>
@@ -665,14 +669,6 @@
 </tbody>
 </table>
 <hr>
-<div class="footnotes" role="doc-endnotes">
-<hr>
-<ol>
-<li id="fn:1">
-<p>我的memos：<a href="https://memo.wananaiko.com/u/1" target="_blank" rel="noopener">https://memo.wananaiko.com/u/1</a>。也可以通过这里访问：<a href="https://wananaiko.design/memos/" target="_blank" rel="noopener">https://wananaiko.design/memos/</a>&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
-</li>
-</ol>
-</div>
 ]]></content:encoded>
     </item>
     
@@ -682,12 +678,7 @@
       <pubDate>Thu, 12 Jan 2023 22:54:52 +0800</pubDate>
       
       <guid>https://wananaiko.design/docs/hugo-easy-gallery/hugo-easy-gallery/</guid>
-      <description>相册效果如下：
-按ESC关闭窗口
-Github仓库地址: https://github.com/liwenyip/hugo-easy-gallery
-按教程操作后,需要注意在文章中引用时,按下面的类似格式 (需去掉下方所有的 \ ):
-{{\&amp;lt; load-photoswipe &amp;gt;}} {{\&amp;lt; gallery &amp;gt;}} {{\&amp;lt; figure link=&amp;#34;docs/hugo-easy-gallery/image1.jpg&amp;#34; &amp;gt;}} {{\&amp;lt; figure link=&amp;#34;docs/hugo-easy-gallery/image2.jpg&amp;#34; &amp;gt;}} {{\&amp;lt; figure link=&amp;#34;docs/hugo-easy-gallery/image3.jpg&amp;#34; &amp;gt;}} {{\&amp;lt; /gallery &amp;gt;}} 并对 CSS 样式进行了微调,修改根目录 /assets/css/core/reset.css,加入以下代码:
-/* 相册弹窗中的样式调整 */ .gallery { overflow: hidden; margin: 0 auto !important; max-width: 790px !important; } .pswp__item { position: absolute; left: 0; right: 0; top: 0; bottom: 0; overflow: hidden; background-color: #000000 !important; } .pswp img { max-width: none; /* max-height: 85vh; */ } .</description>
+      <description>相册效果如下： 按ESC关闭窗口 Github仓库地址: https://github.com/liwenyip/hugo-easy-gallery 按教程操作后,需要注意在文章中引用时,按下面的类似格式 (需去掉下方所有的 \ ): {{\&amp;lt; load-photoswipe &amp;gt;}} {{\&amp;lt; gallery</description>
       <content:encoded><![CDATA[<p>相册效果如下：</p>
 <p>
 
@@ -894,10 +885,7 @@ Github仓库地址: https://github.com/liwenyip/hugo-easy-gallery
       <pubDate>Tue, 10 Jan 2023 15:08:47 +0800</pubDate>
       
       <guid>https://wananaiko.design/docs/hugo-photo-page/</guid>
-      <description>参考：Hugo 添加相册页面：：木木木木木，本文仅用于备份折腾的记录。
-文件目录结构：
-其中 photos.html代码如下，调整了部分CSS：
-{{- define &amp;#34;main&amp;#34; }} &amp;lt;header class=&amp;#34;page-header&amp;#34;&amp;gt; &amp;lt;h1&amp;gt;{{ .Title }}&amp;lt;/h1&amp;gt; &amp;lt;/header&amp;gt; &amp;lt;style&amp;gt; .main {max-width: 1008px !important;} .page-photos{width:100% !important;overflow:hidden; position:relative;} .page-photo{width:24.9%;position: relative;visibility: hidden;} .page-photo.visible{visibility: visible;animation: fadeIn 2s;} .page-photo img{display: block;width:100%;border-radius:0;padding:0px;} .page-photo span.photo-title,.page-photo span.photo-time{background: rgba(0, 0, 0, 0.3);padding:0px 8px;font-size:0.8rem;color: #ffffffb8;} .page-photo span.photo-title{position:absolute;bottom:0px;left:0px;} .page-photo span.photo-time{position:absolute;top:0px;left:0px;font-size:0.8rem;} @media screen and (max-width: 1280px) { .page-photo{width:33.3%;} } @media screen and (max-width: 860px) { .page-photo{width:49.9%;} } @media (max-width: 683px){ .photo-time{display: none;} .page-photos{margin-top:4px;} } @keyframes fadeIn{ 0% {opacity: 0;} 100% {opacity: 1;} } &amp;lt;/style&amp;gt; &amp;lt;section&amp;gt; &amp;lt;div class=&amp;#34;page-photos&amp;#34;&amp;gt; {{ range (sort (readDir &amp;#34;/static/photos/&amp;#34;) &amp;#34;Name&amp;#34; &amp;#34;desc&amp;#34;)}} {{ if (findRE &amp;#34;^[0-9 -]+(.</description>
+      <description>参考：Hugo 添加相册页面：：木木木木木，本文仅用于备份折腾的记录。 文件目录结构： 其中 photos.html代码如下，调整了部分CSS： {{- define</description>
       <content:encoded><![CDATA[<p>参考：<a href="https://immmmm.com/hugo-readdir-photos/" target="_blank" rel="noopener">Hugo 添加相册页面：：木木木木木</a>，本文仅用于备份折腾的记录。</p>
 <p>文件目录结构：</p>
 <img src="https://images.wananaiko.com/2023/01/image-20230117151058386.png" alt="image-20230117151058386" style="zoom:50%;" />
@@ -985,13 +973,7 @@ Github仓库地址: https://github.com/liwenyip/hugo-easy-gallery
       <pubDate>Mon, 09 Jan 2023 00:24:18 +0800</pubDate>
       
       <guid>https://wananaiko.design/docs/hugo-develop/</guid>
-      <description>增加空格之神 使用空格之神的浏览器插件很久了，真的是阅读强迫症患者的福音，空格之神项目地址
-在 Hugo的 themes/PaperModX/layouts/_default/baseof.html 内增加以下代码：
-&amp;lt;script src=&amp;#34;https://cdnjs.cloudflare.com/ajax/libs/pangu/4.0.7/pangu.min.js&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;script&amp;gt; pangu.spacingPage(); &amp;lt;/script&amp;gt; 用完后感觉整个世界都清爽了 🤣
-增加 Waline 评论 依照官网的教程，部署到 Vercel上，适配了 Hugo 的暗黑模式。
-最新的配置文件在：UNPKG - @waline/client
-在 themes/PaperModX/layouts/partials/comments.html 里添加以下代码：
-&amp;lt;head&amp;gt; &amp;lt;link rel=&amp;#34;stylesheet&amp;#34; type=&amp;#34;text/css&amp;#34; href=&amp;#34;https://unpkg.com/@waline/client@2.14.6/dist/waline.css&amp;#34;&amp;gt; &amp;lt;link rel=&amp;#34;stylesheet&amp;#34; type=&amp;#34;text/css&amp;#34; href=&amp;#34;https://unpkg.com/@waline/client@2.14.6/dist/waline-meta.css&amp;#34;&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;!-- ... --&amp;gt; &amp;lt;div id=&amp;#34;waline&amp;#34;&amp;gt;&amp;lt;/div&amp;gt; &amp;lt;script type=&amp;#34;module&amp;#34;&amp;gt; import { init } from &amp;#39;https://unpkg.com/@waline/client@v2.14.6/dist/waline.mjs&amp;#39;; init({ el: &amp;#39;#waline&amp;#39;, lang: &amp;#39;zh-CN&amp;#39;, reaction: true, // 开启反应 serverURL: &amp;#39;https://chat.wananaiko.design&amp;#39;, dark: &amp;#39;body.dark&amp;#39;, copyright: false, // 设置 emoji 为贴吧与哔哩哔哩 emoji: [ &amp;#39;//cdn.</description>
+      <description>增加空格之神 使用空格之神的浏览器插件很久了，真的是阅读强迫症患者的福音，空格之神项目地址 在 Hugo的 themes/PaperModX/layouts/_default/baseof.html 内增加以下代码： &amp;lt;script src=&amp;#34;https://cdnjs.cloudflare.com/ajax/libs/pangu/4.0.7/pangu.min.js&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;script&amp;gt; pangu.spacingPage(); &amp;lt;/script&amp;gt; 用完后感觉整</description>
       <content:encoded><![CDATA[<h3 id="增加空格之神">增加空格之神</h3>
 <p>使用空格之神的浏览器插件很久了，真的是阅读强迫症患者的福音，<a href="https://github.com/vinta/pangu.js" target="_blank" rel="noopener">空格之神项目地址</a></p>
 <p>在 Hugo的 <code>themes/PaperModX/layouts/_default/baseof.html</code> 内增加以下代码：</p>
@@ -1623,10 +1605,7 @@ Github仓库地址: https://github.com/liwenyip/hugo-easy-gallery
       <pubDate>Sun, 08 Jan 2023 23:04:09 +0800</pubDate>
       
       <guid>https://wananaiko.design/docs/how-iterm2-show-current-proxy-status/</guid>
-      <description>最近在 iterm2 里使用 curl、wget、brew、git 等命令时，经常会遇到相应很慢的情况，只能慢慢的等待，网上查了查资料，可以通过以下方法实现。
-修改 ~/.zshrc，并加入以下内容：
-export proxy_host=127.0.0.1 export proxy_port=8888//自定义梯子端口 export switch_proxy=0 export cdc_in=0 function pp(){ if [ $switch_proxy = 0 ]; then export http_proxy=&amp;#34;$proxy_host:$proxy_port&amp;#34; export https_proxy=&amp;#34;$proxy_host:$proxy_port&amp;#34; export ftp_proxy=&amp;#34;$proxy_host:$proxy_port&amp;#34; export GOPROXY=&amp;#34;$proxy_host:$Proxy_port&amp;#34; switch_proxy=l echo -e &amp;#34;梯子模式&amp;#34; else unset http_proxy unset https_proxy unset ftp_proxy unset GOPROXY switch_proxy=0 echo -e &amp;#34;和谐模式&amp;#34; fi } 保存后退出，打开 iterm2，输入pp即可在梯子模式和和谐模式之间切换。
-参考：让 iTerm2 实时显示梯子状态 ，还有另外两种方法。</description>
+      <description>最近在 iterm2 里使用 curl、wget、brew、git 等命令时，经常会遇到相应很慢的情况，只能慢慢的等待，网上查了查资料，可以通过以下方法实现。</description>
       <content:encoded><![CDATA[<p>最近在 iterm2 里使用 curl、wget、brew、git 等命令时，经常会遇到相应很慢的情况，只能慢慢的等待，网上查了查资料，可以通过以下方法实现。</p>
 <p>修改 <code>~/.zshrc</code>，并加入以下内容：</p>
 <pre tabindex="0"><code class="language-hljs" data-lang="hljs">export proxy_host=127.0.0.1
@@ -1666,20 +1645,7 @@ function pp(){
       <pubDate>Sat, 07 Jan 2023 20:14:36 +0800</pubDate>
       
       <guid>https://wananaiko.design/docs/macosapps/</guid>
-      <description>聊一聊 macOS 的一些软件使用心得，希望能够对其他人有所帮助。
-提升效率 Setapp：参加了别人的家庭计划，属于团购车，年费 285。感觉还是很划算的，可以省去你单独买一些软件授权的费用，减少折腾。
-BetterZip：解压工具。Setapp 内下载。
-One Switch：菜单栏快捷工具，主要用来防止电脑休眠。Setapp 内下载。
-Raycast：快捷启动工具，提供了一些多应用拓展支持，对开发比较友好。目前已经代替 utools 使用，类似的还有 Alfred，本地化不如 utools，不过历史剪切板、清理垃圾箱，快捷启动等常用功能已经基本满足使用了。
-Mosaic：窗口管理工具。Setapp 内下载。
-Dropzone：主要用来自动整理文件，大部分文件的存储都是保存在了 Download 目录下，有公司文件、素材文件、安装软件等等乱七八糟的，时间一长就会导致下载目录很混乱，用这个来移动整理文件很方便。Setapp 内下载。
-PixelSnap 和 CleanShot X：前者用标尺来大概量个尺寸，后者是截图工具，有联动。Cleanshot X 真的好用，可以云端上传截图后自动获取链接，还支持 OCR 识别，图片编辑等。Setapp 内下载。
-NetNewsWire：RSS 阅读器，我把它定义为效率工具，最大的痛点是可以订阅 Twitter 用户的内容，结合 RSSHub 使用有奇效，除了订阅常见的新闻资讯网站、博客，还能订阅 Bilibili、Telegram 频道等。作为我日常主要的信息输入入口之一，不需要频繁打开很多网站去查阅。已放弃 NetNewsWire 改用 Reeder，配合 iOS 端的 Reeder，更方便好用。
-Popclip：划词扩展工具，可以划词快捷复制粘贴、打开链接、搜索、翻译等。Setapp 内下载。
-ARC 浏览器：交互很酷又很实用的先进浏览器，我也将它定义为效率工具，通过 Space 空间划分了工作、生活、设计、摄影几个空间，每个空间浏览不同的页面。可以看看少数派网站上关于它的介绍。目前需要邀请注册，可联系我邀请，被邀请后需要等待一段时间才能收到官方邀请。
-Canary Mail：邮箱管理工具，因为经常会用 Gmail 去注册一些网站，Gmail 也是我的主要邮箱，可以用起来一键打开大部分网站的退订邮件网页，方便退订邮件。Setapp 内下载。
-MenubarX：菜单栏网页拓展，结合在线翻译网页，可以当成一个简单的菜单栏翻译工具，比如火山翻译和 DeepL 翻译。Setapp 内下载。
-Rime 输入法：一直在用的输入法工具，定制化输入法，我自己是觉得很好用的。推荐结合 1 个设置和 1 个词库，一起使用。主要配置文件推荐这个：ssnhd 的配置，再结合这里的 Dict 词库文件。官网下载。</description>
+      <description>聊一聊 macOS 的一些软件使用心得，希望能够对其他人有所帮助。 提升效率 Setapp：参加了别人的家庭计划，属于团购车，年费 285。感觉还是很划算的，</description>
       <content:encoded><![CDATA[<p>聊一聊 macOS 的一些软件使用心得，希望能够对其他人有所帮助。</p>
 <h2 id="提升效率">提升效率</h2>
 <p><strong>Setapp</strong>：参加了别人的家庭计划，属于团购车，年费 285。感觉还是很划算的，可以省去你单独买一些软件授权的费用，减少折腾。</p>
@@ -1720,12 +1686,7 @@ Rime 输入法：一直在用的输入法工具，定制化输入法，我自己
       <pubDate>Sun, 01 Jan 2023 12:06:47 +0800</pubDate>
       
       <guid>https://wananaiko.design/docs/howtobesuccessful/</guid>
-      <description>YC 前总裁、现 OpenAI CEO Sam Altman 的这篇标题简单粗暴的 How To Be Successful
-推荐去看全文，虽然标题很鸡血，但其中的一些观点也很有启发性。
-翻译整理：@南小北 1
-另外，这篇文章写的也挺不错，可以扩展阅读2。
-在一个几乎没有人采取真正长远眼光的世界里，市场会丰厚回报那些这样做的人。 自信心是非常强大的，我认识的最成功的人几乎相信自己到了错觉的地步。 自信必须与自我意识相平衡，我曾经讨厌任何形式的批评并积极避免，现在我总是试着假设它是真的，然后决定是否要采取行动。 找到简单、快速的方法，在现实世界中测试这些想法。 “我会失败很多次，但我会真正成功一次”，你必须给自己很多机会才能获得幸运。 我的另一个重要销售技巧是，在重要的时候亲自出现。 大多数人高估风险而低估回报，冒险很重要，因为不可能一直都是对的，你必须尝试很多事情，并随着了解的更多而迅速调整。 你可以跟随你的直觉，花时间做一些可能真的很有趣的事情。 尽可能长时间地保持廉价和灵活的生活是一种有效的方法，但显然需要权衡取舍。 做正确的事比工作好几个小时重要得多，大多数人将大部分时间浪费在无关紧要的事情上。 一旦你弄清楚了该做什么，就势不可挡地快速完成其中一小部分优先事项。 你必须弄清楚如何努力工作而不精疲力尽，几乎总能奏效的一个方法是，找到你喜欢花很多时间在一起的人一起做的工作。 事实上，工作耐力似乎是长期成功的最大因素之一。 如果你在一个重要问题上取得进展，就会有源源不断的人帮助你，让自己变得更有野心，不要害怕从事真正想从事的工作。 跟随你的好奇心，对你来说令人兴奋的事情，对其他人来说往往也会令人兴奋。 一个很大的秘密是，你可以以惊人的比例让世界屈服于你的意志 —— 大多数人甚至不去尝试，只是接受事情本来的样子。 人们拥有使事情发生的巨大能力，自我怀疑、过早放弃、不够努力的结合使大多数人无法发挥他们的潜力。 设法生存足够长的时间，好运将如愿以偿。 要任性，就必须乐观。这可通过实践提升，我从未见过一个非常成功的悲观者。 伟大的工作需要团队，建立一个有才华的网络（紧密或松散）是伟大事业的重要组成部分，建立网络的有效方法是尽可能多地帮助人们。 每个人在某件事情上都会比其他人做得更好，用你的长处定义自己，而不是你的弱点。 最简单的学习方法就是结识很多人，并记录谁给你留下了深刻印象，谁没有。请记住，不要高估经验或当前成就。 我小时候最大的误解是以为人们靠高薪致富，尽管有一些例外（例如艺人），但在福布斯榜单历史上，几乎没有人拿过薪水。 让事物快速增值的最佳方法是大规模生产人们想要的东西。 大多人靠外部驱动，他们做事是想给别人留下深刻印象，这很糟糕。 你会非常在意他人是否认为你在做正确的事，你会非常专注于跟上他人的脚步，这会阻止你做真正有趣的事。 我认识的最成功的人主要靠内部驱动，他们所做的事是为了给自己留下深刻印象，因为他们觉得有必要让世界发生一些事情。 这就是为何动机如此重要，这是我试图了解他人的第一件事，正确动机很难定义，但看到时你就会知道。 在你不痴迷的任何事情上都很难取得巨大成功。 机会分配如此不均，显然是令人难以置信的耻辱和浪费，但我亲眼目睹很多人一出生就面临糟糕筹码，却取得难以置信的成功，从而知道这是可能的。 How To Be Successful → 30 条&amp;#160;&amp;#x21a9;&amp;#xfe0e;
-YC前掌门人Sam Altman：观察成千上万创业者后，关于如何获得非凡成就的13条思考&amp;#160;&amp;#x21a9;&amp;#xfe0e;</description>
+      <description>YC 前总裁、现 OpenAI CEO Sam Altman 的这篇标题简单粗暴的 How To Be Successful 推荐去看全文，虽然标题很鸡血，但其中的一些观点也很有启发性。 翻译整理：@南小北 1 另外，这篇文</description>
       <content:encoded><![CDATA[<p>YC 前总裁、现 OpenAI CEO Sam Altman 的这篇标题简单粗暴的 <a href="https://blog.samaltman.com/how-to-be-successful" target="_blank" rel="noopener">How To Be Successful</a></p>
 <p>推荐去看全文，虽然标题很鸡血，但其中的一些观点也很有启发性。</p>
 <p>翻译整理：@南小北 <sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
@@ -1783,16 +1744,7 @@ YC前掌门人Sam Altman：观察成千上万创业者后，关于如何获得�
       <pubDate>Tue, 20 Dec 2022 00:00:00 +0000</pubDate>
       
       <guid>https://wananaiko.design/docs/dec1220/</guid>
-      <description>Hugo 部署到 Vercel 最近考虑把 Wordpress 博客换到 Hugo，一番折腾之后，通过 Github+Vercel 的方式实现了自动部署，还挺方便的，以后只需要在本地编写 Markdown 文件并发布到 Github 就可以了。以 macOS 下为例：
-登陆 GitHub，新建一个 GitHub pages，名为 username.github.io。
-使用 GitHub 登陆 Vercel，Import 刚才新建的 pages。
-Vercel 里的 Project Name 随便写，Build &amp;amp; Development Settings 选择 Hugo，Hugo 的 Version 填写最新的版本号，其他默认，最后提交。
-把 Github pages 仓库克隆到本地，比如我这里为：/Users/aiko/wananaiko.github.io，终端里打开该目录后。输入 Hugo server 验证是否可以正常启动。
-如果你想要安装和本站一样的主题，可以参考这篇文章：Installation | Update | PaperModX 其他参考文章：
-hugo自动部署到vercel
-如何使用 Hugo 进行个人博客搭建
-将 Memos 作为单页添加到 Hugo 中 方法参考了文章 向Hugo中添加静态单页面Static-Single
-建议将 config.toml 里的 EnableInstantClick设置为 false，避免 memos 内容偶尔出现不加载的情况。</description>
+      <description>Hugo 部署到 Vercel 最近考虑把 Wordpress 博客换到 Hugo，一番折腾之后，通过 Github+Vercel 的方式实现了自动部署，还挺方便的，以后只需要在本地编写 Markdown 文件并发布到 Github 就可以了。</description>
       <content:encoded><![CDATA[<h2 id="hugo-部署到-vercel">Hugo 部署到 Vercel</h2>
 <p>最近考虑把 Wordpress 博客换到 Hugo，一番折腾之后，通过 Github+Vercel 的方式实现了自动部署，还挺方便的，以后只需要在本地编写 Markdown 文件并发布到 Github 就可以了。以 macOS 下为例：</p>
 <ol>
@@ -2925,6 +2877,23 @@ $$</p>]]></content:encoded>
   }
 }
 </style>]]></content:encoded>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://wananaiko.design/docs/installing-requirements-for-web-ui-%E5%AE%89%E8%A3%85%E5%A4%B1%E8%B4%A5%E7%9A%84%E6%97%B6%E5%80%99%E8%AE%B0%E5%BE%97%E5%85%B3%E6%8E%89%E6%A2%AF%E5%AD%90%E8%AF%95%E8%AF%95/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://wananaiko.design/docs/installing-requirements-for-web-ui-%E5%AE%89%E8%A3%85%E5%A4%B1%E8%B4%A5%E7%9A%84%E6%97%B6%E5%80%99%E8%AE%B0%E5%BE%97%E5%85%B3%E6%8E%89%E6%A2%AF%E5%AD%90%E8%AF%95%E8%AF%95/</guid>
+      <description>Installing requirements for Web UI 安装失败的时候，记得关掉梯子试试。 Prompt：先将中文翻译为英文，再通过网站：https://clio.so/ 生成优化后的 pro</description>
+      <content:encoded><![CDATA[<p>Installing requirements for Web UI 安装失败的时候，记得关掉梯子试试。</p>
+<p>Prompt：先将中文翻译为英文，再通过网站：https://clio.so/ 生成优化后的 prompt。</p>
+<p>如果生成的照片风格比较喜欢，将照片通过 “图片信息” 查看对应的种子seed，后面再生成的时候可以尝试在该seed数字上逐步加1。</p>
+<p>尽量不开启 “高清修复”，开启后的生成速度会降慢。</p>
+<p>采样迭代步数(Steps) 建议设置 28 以上。</p>
+<p>可以同时使用多个模型，通过类似 <code>&lt;lora:koreanDollLikeness_v15:0.1&gt;,  &lt;lora:chilloutmixss_xss10:0.9&gt;,</code>的方式分配权重。</p>
+<p>根据不同的模型，多尝试调整一些参数以达到满意的效果。</p>
+]]></content:encoded>
     </item>
     
   </channel>

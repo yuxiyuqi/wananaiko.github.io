@@ -16,12 +16,7 @@
       <pubDate>Thu, 12 Jan 2023 22:54:52 +0800</pubDate>
       
       <guid>https://wananaiko.design/docs/hugo-easy-gallery/hugo-easy-gallery/</guid>
-      <description>相册效果如下：
-按ESC关闭窗口
-Github仓库地址: https://github.com/liwenyip/hugo-easy-gallery
-按教程操作后,需要注意在文章中引用时,按下面的类似格式 (需去掉下方所有的 \ ):
-{{\&amp;lt; load-photoswipe &amp;gt;}} {{\&amp;lt; gallery &amp;gt;}} {{\&amp;lt; figure link=&amp;#34;docs/hugo-easy-gallery/image1.jpg&amp;#34; &amp;gt;}} {{\&amp;lt; figure link=&amp;#34;docs/hugo-easy-gallery/image2.jpg&amp;#34; &amp;gt;}} {{\&amp;lt; figure link=&amp;#34;docs/hugo-easy-gallery/image3.jpg&amp;#34; &amp;gt;}} {{\&amp;lt; /gallery &amp;gt;}} 并对 CSS 样式进行了微调,修改根目录 /assets/css/core/reset.css,加入以下代码:
-/* 相册弹窗中的样式调整 */ .gallery { overflow: hidden; margin: 0 auto !important; max-width: 790px !important; } .pswp__item { position: absolute; left: 0; right: 0; top: 0; bottom: 0; overflow: hidden; background-color: #000000 !important; } .pswp img { max-width: none; /* max-height: 85vh; */ } .</description>
+      <description>相册效果如下： 按ESC关闭窗口 Github仓库地址: https://github.com/liwenyip/hugo-easy-gallery 按教程操作后,需要注意在文章中引用时,按下面的类似格式 (需去掉下方所有的 \ ): {{\&amp;lt; load-photoswipe &amp;gt;}} {{\&amp;lt; gallery</description>
       <content:encoded><![CDATA[<p>相册效果如下：</p>
 <p>
 
@@ -228,10 +223,7 @@ Github仓库地址: https://github.com/liwenyip/hugo-easy-gallery
       <pubDate>Tue, 10 Jan 2023 15:08:47 +0800</pubDate>
       
       <guid>https://wananaiko.design/docs/hugo-photo-page/</guid>
-      <description>参考：Hugo 添加相册页面：：木木木木木，本文仅用于备份折腾的记录。
-文件目录结构：
-其中 photos.html代码如下，调整了部分CSS：
-{{- define &amp;#34;main&amp;#34; }} &amp;lt;header class=&amp;#34;page-header&amp;#34;&amp;gt; &amp;lt;h1&amp;gt;{{ .Title }}&amp;lt;/h1&amp;gt; &amp;lt;/header&amp;gt; &amp;lt;style&amp;gt; .main {max-width: 1008px !important;} .page-photos{width:100% !important;overflow:hidden; position:relative;} .page-photo{width:24.9%;position: relative;visibility: hidden;} .page-photo.visible{visibility: visible;animation: fadeIn 2s;} .page-photo img{display: block;width:100%;border-radius:0;padding:0px;} .page-photo span.photo-title,.page-photo span.photo-time{background: rgba(0, 0, 0, 0.3);padding:0px 8px;font-size:0.8rem;color: #ffffffb8;} .page-photo span.photo-title{position:absolute;bottom:0px;left:0px;} .page-photo span.photo-time{position:absolute;top:0px;left:0px;font-size:0.8rem;} @media screen and (max-width: 1280px) { .page-photo{width:33.3%;} } @media screen and (max-width: 860px) { .page-photo{width:49.9%;} } @media (max-width: 683px){ .photo-time{display: none;} .page-photos{margin-top:4px;} } @keyframes fadeIn{ 0% {opacity: 0;} 100% {opacity: 1;} } &amp;lt;/style&amp;gt; &amp;lt;section&amp;gt; &amp;lt;div class=&amp;#34;page-photos&amp;#34;&amp;gt; {{ range (sort (readDir &amp;#34;/static/photos/&amp;#34;) &amp;#34;Name&amp;#34; &amp;#34;desc&amp;#34;)}} {{ if (findRE &amp;#34;^[0-9 -]+(.</description>
+      <description>参考：Hugo 添加相册页面：：木木木木木，本文仅用于备份折腾的记录。 文件目录结构： 其中 photos.html代码如下，调整了部分CSS： {{- define</description>
       <content:encoded><![CDATA[<p>参考：<a href="https://immmmm.com/hugo-readdir-photos/" target="_blank" rel="noopener">Hugo 添加相册页面：：木木木木木</a>，本文仅用于备份折腾的记录。</p>
 <p>文件目录结构：</p>
 <img src="https://images.wananaiko.com/2023/01/image-20230117151058386.png" alt="image-20230117151058386" style="zoom:50%;" />
