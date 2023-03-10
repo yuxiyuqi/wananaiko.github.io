@@ -1,5 +1,5 @@
 ---
-title: "Huntlyt 部署到宝塔"
+title: "Huntly 部署到宝塔"
 date: 2023-03-10T20:23:45+08:00
 author: "wananaiko"
 tags:
