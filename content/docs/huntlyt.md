@@ -128,3 +128,42 @@ journalctl -n 20 -u huntly
 建议在 ARC 浏览器里使用，置顶你的 huntly 站点，配合 ARC 的 Little Arc 小窗口，可以速度方便的查看内容。
 
 同步 Twitter 内容到 huntly 里需要去[官方的 GitHub](https://github.com/lcomplete/huntly/) 下载安装插件，并设置你的 huntly 地址。
+
+配合 “My Style” 浏览器插件，可以自定义一些样式：
+
+```
+.Tweet_mainColor__hOlrk, .Tweet_mainColor__hOlrk a {
+    color: #0f141965!important;
+}
+
+span.font-bold.Tweet_mainColor__hOlrk {
+    font-weight: 400;
+}
+
+.Tweet_secondaryColor__ubVWz a {
+    color: #0f141965!important;
+}
+
+pre.break-all.break-words.whitespace-pre-wrap.mt-0.mb-1 {
+font-family: -apple-system,BlinkMacSystemFont,Helvetica,helvetica neue,segoe ui,Roboto,Oxygen,Ubuntu,Cantarell,open sans,sans-serif;
+    font-size: 15px;
+    line-height: 1.5em;
+    word-break: break-word;
+    background: var(--theme);
+    letter-spacing: .01em;
+}
+
+/*Twitter头像透明度*/
+img.MuiCardMedia-root.MuiCardMedia-media.MuiCardMedia-img.css-1wh7jvw {
+    opacity: 0.5;
+}
+
+/*Twitter互动信息透明度*/
+.flex.items-center.justify-between.mt-1.text-\[15px\].MuiBox-root.css-0 {
+    opacity: 0.5;
+}
+
+.flex.items-center.font-bold.text-\[14px\].Tweet_secondaryColor__ubVWz.mb-1 {
+    font-weight: 400;
+}
+```
