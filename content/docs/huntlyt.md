@@ -131,7 +131,7 @@ journalctl -n 20 -u huntly
 
 配合 “My Style” 浏览器插件，可以自定义一些样式：
 
-```
+```css
 .Tweet_mainColor__hOlrk, .Tweet_mainColor__hOlrk a {
     color: #0f141965!important;
 }
