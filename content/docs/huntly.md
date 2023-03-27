@@ -174,6 +174,6 @@ img.MuiCardMedia-root.MuiCardMedia-media.MuiCardMedia-img.css-1wh7jvw {
 
 然后删除 Docker 容器和镜像，接着拉取最新的 huntly 代码。
 
-`docker run -d --name huntly -p 9090:80 -v /opt/huntly:/data lcomplete/huntly:0.1.0`
+`docker run -d --name huntly -p 9090:80 -v /opt/huntly:/data lcomplete/huntly:0.3.0`
 
 最后再重启 huntly 服务：`sudo systemctl restart huntly`
