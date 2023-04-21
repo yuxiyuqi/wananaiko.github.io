@@ -1,0 +1,46 @@
+---
+title: "关于提高效率，最近使用了一些很棒的产品"
+date: 2023-04-21T16:05:44+08:00
+author: "wananaiko"
+tags:
+  - design
+  - ChatGPT
+  - nicelydone
+draft: false
+---
+
+### 素材整理
+
+考虑到近期的网站项目有很多功能要优化设计，为了节省调研的时间，需要找一些设计图来参考功能设计。最近一直在关注的 nicelydone.club 刚好满足了这一需求，网站按应用、页面类型、组件类型、操作流程4大类划分，可以说是非常的细致了，参考的图片内容也非常多，完全符合我的需求。果断订阅了1年，$300 也不便宜，算是近期买的最值的东西。
+
+再加上免费的 [refero.design](https://refero.design/) 和 [practicedesign.io](https://practicedesign.io/)，完全够用了。
+
+一开始为了查找方便，甚至使用脚本来批量下载 nicelydone 和  refero.design 的图片到 Eagle 中。后来越下越觉得没有必要，nicelydone 的图片虽然多，但是很多界面图是类似的，都整理到 Eagle 中也没有必要，后期找图反而麻烦。但是在 Eagle 中设置好标签还是很有必要的。为此，我对标签按 “页面”、“组件”、“模块”分别整理了近100个标签。以后也只会将精选的图片保存到 Eagle 中。
+
+![GXNhni](https://images.wananaiko.com/2023/04/GXNhni.png)
+
+---
+
+### 录制视频
+
+在推上看到 [Screen Studio](https://www.screen.studio/) 录制的一些视频非常有趣，于是买了 1 年的 3 个授权，并赠送了 1 个授权给团队。实际工作中其实用到很少，只是觉得这个产品的创意很棒，偶尔需要录制一下演示视频。
+
+<video id="video" controls=""  controlslist="nodownload"   preload="none" allowfullscreen="true" position= "absolute" width="100%" poster="封面URL">       <source id="mp4" src="https://images.wananaiko.com/2023/04/nicelydone.mp4" type="video/mp4" >       </video>
+
+---
+
+### ChatGPT 的使用
+
+[🧠 cancelledMacGPT](https://goodsnooze.gumroad.com/l/menugpt?layout=profile&recommended_by=library) 目前为止用过的最好用的 ChatGPT 客户端，除了支持快捷键呼出窗口，最好用的是可以在任何地方使用 `/gpt` + `回车键`，直接生成 AI 内容。之前收费 ¥35，现在突然免费了。
+
+![NWq6dA](https://images.wananaiko.com/2023/04/NWq6dA.gif)
+
+![2M3CYm](https://images.wananaiko.com/2023/04/2M3CYm.gif)
+
+---
+
+### 翻译工具
+
+平时工作中使用翻译工具的频率真的蛮高的，有一段时间，单词和短语是使用 MenubarX + Deepl 和 火山翻译来使用的。接触了 Bob 后用了一段时间购买了 Pro 版。现在日常翻译主要使用 Bob 了，配合 Free DeepL 和 OpenAI 翻译，再加上 Popclip 划词来翻译，真的非常好用。
+
+而网页版，目前主要在使用 [沉浸式翻译](https://immersive-translate.owenyoung.com/) ，配合火山翻译的 API，已经足够使用，大部分时候还是浏览器自带翻译用的多。
