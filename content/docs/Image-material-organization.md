@@ -29,7 +29,7 @@ draft: false
 
 ---
 
-### ChatGPT 的使用
+### ChatGPT
 
 [🧠 cancelledMacGPT](https://goodsnooze.gumroad.com/l/menugpt?layout=profile&recommended_by=library) 目前为止用过的最好用的 ChatGPT 客户端，除了支持快捷键呼出窗口，最好用的是可以在任何地方使用 `/gpt` + `回车键`，直接生成 AI 内容。之前收费 ¥35，现在突然免费了。
 
