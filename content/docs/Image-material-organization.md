@@ -9,7 +9,7 @@ tags:
 draft: false
 ---
 
-### 素材整理
+### Nicelydone
 
 考虑到近期的网站项目有很多功能要优化设计，为了节省调研的时间，需要找一些设计图来参考功能设计。最近一直在关注的 nicelydone.club 刚好满足了这一需求，网站按应用、页面类型、组件类型、操作流程4大类划分，可以说是非常的细致了，参考的图片内容也非常多，完全符合我的需求。果断订阅了1年，$300 也不便宜，算是近期买的最值的东西。
 
@@ -17,7 +17,11 @@ draft: false
 
 一开始为了查找方便，甚至使用脚本来批量下载 nicelydone 和  refero.design 的图片到 Eagle 中。后来越下越觉得没有必要，nicelydone 的图片虽然多，但是很多界面图是类似的，都整理到 Eagle 中也没有必要，后期找图反而麻烦。但是在 Eagle 中设置好标签还是很有必要的。为此，我对标签按 “页面”、“组件”、“模块”分别整理了近100个标签。以后也只会将精选的图片保存到 Eagle 中。
 
-![GXNhni](https://images.wananaiko.com/2023/04/GXNhni.png)
+![使用脚本批量下载图片](https://images.wananaiko.com/2023/04/nSKPQT.png)
+使用脚本批量下载图片
+
+![Eagle里对标签作整理](https://images.wananaiko.com/2023/04/GXNhni.png)
+Eagle里对标签作整理
 
 ---
 
@@ -26,6 +30,8 @@ draft: false
 在推上看到 [Screen Studio](https://www.screen.studio/) 录制的一些视频非常有趣，于是买了 1 年的 3 个授权，并赠送了 1 个授权给团队。实际工作中其实用到很少，只是觉得这个产品的创意很棒，偶尔需要录制一下演示视频。
 
 <video id="video" controls=""  controlslist="nodownload"   preload="none" allowfullscreen="true" position= "absolute" width="100%" poster="封面URL">       <source id="mp4" src="https://images.wananaiko.com/2023/04/nicelydone.mp4" type="video/mp4" >       </video>
+
+Nicelydone 下午新出了 “Flows” 功能，一开始不支持使用键盘“←”和“→”快捷浏览，给官方反馈建议后，不到2个小时就加上了，不得不说这开发效率真的太高了 👍
 
 ---
 
@@ -44,3 +50,16 @@ draft: false
 平时工作中使用翻译工具的频率真的蛮高的，有一段时间，单词和短语是使用 MenubarX + Deepl 和 火山翻译来使用的。接触了 Bob 后用了一段时间购买了 Pro 版。现在日常翻译主要使用 Bob 了，配合 Free DeepL 和 OpenAI 翻译，再加上 Popclip 划词来翻译，真的非常好用。
 
 而网页版，目前主要在使用 [沉浸式翻译](https://immersive-translate.owenyoung.com/) ，配合火山翻译的 API，已经足够使用，大部分时候还是浏览器自带翻译用的多。
+
+---
+
+### Midjourney
+
+分享朋友整理的 2个 不错的 MJ 内容：
+
+[‬⁡⁣⁤﻿‌⁢⁤⁢⁡‍⁣⁤‍⁡‬⁡⁤﻿⁡‬‍﻿⁣⁡‌⁣⁤⁢‍﻿‍⁡‬⁡⁡Prompt全览](https://rnrjayevh1.feishu.cn/wiki/wikcnHF7TTmr35bOwydpW4D3vbh?table=tbl9uQQLonUuCClB&view=vewhjOF3qU)
+
+[‌‬⁢‌﻿‌⁣‍⁡‬‬⁡⁤‌‬﻿⁢⁤‍⁣⁡⁣‌﻿‬﻿﻿⁡‬⁣‍⁢⁣﻿‬⁣﻿⁢‌⁤⁣⁡Midjourney 关键词整理](https://ixytmi9pq4.feishu.cn/sheets/shtcnphfw6fyRjh3ZEirkv4iFOc)
+
+生成的图片质量很高，可以用在一些 slide project 中，也算是提高了一些出图的效率。
+
