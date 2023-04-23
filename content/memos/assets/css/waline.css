@@ -47,15 +47,18 @@
   [data-waline] a {
     position: relative;
     display: inline-block;
-    color: var(--waline-theme-color);
+    color: inherit;
     text-decoration: none;
     word-break: break-word;
-    cursor: pointer
+    cursor: pointer;
+    box-shadow: var(--link-underline-shadow);
   }
   
   [data-waline] a:hover {
-    color: var(--waline-active-color)
-  }
+    color: var(--link-hover-color);
+    box-shadow: var(--link-hover-underline-shadow);
+  
+}
   
   [data-waline] img {
     max-width: 100%;
@@ -713,7 +716,8 @@
     font-weight: bold;
     font-size: .875em;
     line-height: 1;
-    text-decoration: none
+    text-decoration: none;
+    color: var(--waline-dark-grey);
   }
   
   .wl-card .wl-nick svg {
@@ -727,13 +731,22 @@
   }
   
   .wl-card .wl-badge {
-    display: inline-block;
+    /* display: inline-block;
     margin-inline-end: 1em;
     padding: 0 .3em;
     border: 1px solid var(--waline-badge-color);
     border-radius: 4px;
     color: var(--waline-badge-color);
-    font-size: var(--waline-badge-font-size)
+    font-size: var(--waline-badge-font-size) */
+    display: inline-block;
+    margin-inline-end: .25em;
+    padding: 2px 4px;
+    border-radius: .2em;
+    background: var(--waline-info-bgcolor);
+    color: var(--waline-info-color);
+    font-size: var(--waline-info-font-size);
+    line-height: 1.5;
+    margin-right: 4px;
   }
   
   .wl-card .wl-time {
@@ -976,7 +989,7 @@
   }
   
   .wl-sort li.active {
-    color: var(--waline-theme-color)
+    color: var(--waline-color);
   }
   
   .wl-sort li+li {
