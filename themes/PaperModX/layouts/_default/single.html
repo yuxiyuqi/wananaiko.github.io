@@ -42,11 +42,10 @@
     </div>
     {{- end }}
   </footer>
+
   {{- if not (.Param "noComments") }}
   <div class="comments-separator"></div>
   {{- partial "comments.html" . }} {{- end }}
 </article>
 
-{{ if (and .Site.Params.remark42SiteID .Params.comments) }}
-<div id="remark42"></div>
-{{ end }} {{- end }}{{/* end main */}}
+{{- end }}{{/* end main */}}
