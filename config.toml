@@ -197,15 +197,9 @@ disableInlineCSS = true
 [services.twitter]
 disableInlineCSS = true 
 
-[commentSystems.disqus]
-
 [commentSystems.remark42]
 url = "https://remark42.wananaiko.com"
-site = "wwww.wananaiko.com"
-
-[commentSystems.telegramWidget]
-accentColor = "9077e1"
-limit = 20
+site = "wananaiko.com"
 
 [defaultCommentSystems]
 remark42 = true

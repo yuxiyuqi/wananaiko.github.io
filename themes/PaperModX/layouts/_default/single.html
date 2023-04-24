@@ -43,8 +43,9 @@
     {{- end }}
   </footer>
 
-  {{- if not (.Param "noComments") }} {{- partial "comments.html" . }} {{- end
-  }}
+  {{- if not (.Param "noComments") }}
+  <div class="comments-separator"></div>
+  {{- partial "comments.html" . }} {{- end }}
 </article>
 
 {{- end }}{{/* end main */}}
