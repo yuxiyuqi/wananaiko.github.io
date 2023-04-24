@@ -35,7 +35,7 @@ TocSide = "right"
 EnableInstantClick = false
 EnableImageZoom = true
 hideMeta = false
-comments = false
+comments = true
 
   [params.logo]
   icon = "images/forge-v2-compat.svg"
