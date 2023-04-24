@@ -1,22 +1,44 @@
-<div id="remark42"></div>
-<script>
-  var remark_config = {
-    host: "https://remark42.wananaiko.com",
-    site_id: "wananaiko",
-    locale: "zh",
-    page_title: "Comments",
-  };
-</script>
-<script>
-  !(function (e, n) {
-    for (var o = 0; o < e.length; o++) {
-      var r = n.createElement("script"),
-        c = ".js",
-        d = n.head || n.body;
-      "noModule" in r ? ((r.type = "module"), (c = ".mjs")) : (r.async = !0),
-        (r.defer = !0),
-        (r.src = remark_config.host + "/web/" + e[o] + c),
-        d.appendChild(r);
+<head>
+  <style>
+    .comment-title {
+      font-size: 24px;
+      font-weight: bold;
+      padding: 32px 6px 0px 6px;
     }
-  })(remark_config.components || ["embed"], document);
-</script>
+    .comment-description {
+      font-size: 14px;
+      color: #666;
+      padding: 4px 16px 16px 6px;
+    }
+    p.root__copyright {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="comment-title">欢迎留言</div>
+  <div class="comment-description">请通过电子邮件订阅以接收回复通知。</div>
+  <div id="remark42"></div>
+
+  <script>
+    var remark_config = {
+      host: "https://remark42.wananaiko.com",
+      site_id: "wananaiko",
+      locale: "zh",
+      page_title: "Comments",
+    };
+  </script>
+  <script>
+    !(function (e, n) {
+      for (var o = 0; o < e.length; o++) {
+        var r = n.createElement("script"),
+          c = ".js",
+          d = n.head || n.body;
+        "noModule" in r ? ((r.type = "module"), (c = ".mjs")) : (r.async = !0),
+          (r.defer = !0),
+          (r.src = remark_config.host + "/web/" + e[o] + c),
+          d.appendChild(r);
+      }
+    })(remark_config.components || ["embed"], document);
+  </script>
+</body>
