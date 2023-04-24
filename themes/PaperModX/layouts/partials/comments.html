@@ -1,28 +1,39 @@
-<head>
-    <link rel="stylesheet" type="text/css" href="/memos/assets/css/waline.css">
-    <link rel="stylesheet" type="text/css" href="https://unpkg.com/@waline/client@2.14.6/dist/waline-meta.css">
-  </head>
-  <body>
-    <!-- ... -->
-    <div id="waline"></div>
-    <script type="module">
-      import { init } from 'https://unpkg.com/@waline/client@v2.14.6/dist/waline.mjs';
-  
-      init({
-        el: '#waline',
-        lang: 'zh-CN',
-        reaction: true, // 开启反应
-        serverURL: 'https://chat.wananaiko.design',
-        dark: 'body.dark',
-        copyright: false,
-        
-      // 设置 emoji 为贴吧与哔哩哔哩
-      emoji: [
-        '//cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/tieba',
-      ],
-      });
-      
-    </script>
-    
-  </body>
-  
+<script>
+    //以下代码是为了自适应系统的深色模式
+        var body = document.querySelector('#remark42 body');
+    var theme = 'light';
+    if ('matchMedia' in window) {
+        var mq = window.matchMedia('(prefers-color-scheme: dark)');
+        if (mq.matches) {
+            body.classList.add('document_theme_dark');
+        }
+        function getTheme() {
+            return mq.matches ? 'dark' : 'light';
+        }
+        theme = getTheme();
+        mq.addListener(function () {
+            REMARK42.changeTheme(getTheme());
+        });
+    }
+    var remark_config = {
+        site_id: 'remark42.wananaiko.com', // 同docker环境变量的SITE
+        host: 'https://remark42.wananaiko.com', //指向remark42服务器的URL，同上docker配置文件
+        url: window.location.href,
+        components: ['embed'],
+        theme: theme, //自适应深色模式
+        locale: "zh" //设置中文
+        //show_email_subscription: false, 这个是显示订阅email通知的
+    };
+        //下面为默认配置
+    !(function (e, n) {
+        for (var o = 0; o < e.length; o++) {
+            var r = n.createElement('script'),
+                c = '.js',
+                d = n.head || n.body
+            'noModule' in r ? ((r.type = 'module'), (c = '.mjs')) : (r.async = !0),
+                (r.defer = !0),
+                (r.src = remark_config.host + '/web/' + e[o] + c),
+                d.appendChild(r)
+        }
+    })(remark_config.components || ['embed'], document)
+<script>
