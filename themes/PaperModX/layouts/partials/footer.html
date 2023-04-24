@@ -166,6 +166,26 @@
   // });
   InstantClick.init();
 </script>
+
+{{ if (and .Site.Params.remark42SiteID .Params.comments) }}
+<script>
+  var remark_config = {
+    host: {{ .Site.Params.remark42Url }},
+    site_id: {{ .Site.Params.remark42SiteID }},
+    url: {{ .Permalink }},
+    locale: { .Site.Language.Lang }
+  };
+
+  (function(c) {
+    for(var i = 0; i < c.length; i++){
+      var d = document, s = d.createElement('script');
+      s.src = remark_config.host + '/web/' + c[i] +'.js';
+      s.defer = true;
+      (d.head || d.body).appendChild(s);
+    }
+  })(remark_config.components || ['embed']);
+</script>
+{{ end }}
 {{- end }}
 
 {{- end -}}

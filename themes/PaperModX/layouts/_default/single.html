@@ -42,9 +42,10 @@
     </div>
     {{- end }}
   </footer>
-
-  {{- if not (.Param "noComments") }} {{- partial "comments.html" . }} {{- end
-  }}
+  {{ if (and .Site.Params.remark42SiteID .Params.comments) }}
+  <div id="remark42"></div>
+  {{ end }} {{- if not (.Param "noComments") }} {{- partial "comments.html" . }}
+  {{- end }}
 </article>
 
 {{- end }}{{/* end main */}}
