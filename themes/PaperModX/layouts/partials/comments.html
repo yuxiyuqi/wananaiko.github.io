@@ -16,7 +16,7 @@
   </style>
 </head>
 <body>
-  <div class="comment-title">欢迎留言</div>
+  <div class="comment-title">欢迎评论</div>
   <div class="comment-description">请通过电子邮件订阅以接收回复通知。</div>
   <div id="remark42"></div>
 
@@ -26,7 +26,24 @@
       site_id: "wananaiko",
       locale: "zh",
       page_title: "Comments",
+      theme: "auto",
     };
+    (function (c) {
+      /* Adjust the theme using the local-storage pref-theme if set */
+      if (localStorage.getItem("pref-theme") === "dark") {
+        remark_config.theme = "dark";
+      } else if (localStorage.getItem("pref-theme") === "light") {
+        remark_config.theme = "light";
+      }
+      /* Add remark42 widget */
+      for (var i = 0; i < c.length; i++) {
+        var d = document,
+          s = d.createElement("script");
+        s.src = remark_config.host + "/web/" + c[i] + ".js";
+        s.defer = true;
+        (d.head || d.body).appendChild(s);
+      }
+    })(remark_config.components || ["embed"]);
   </script>
   <script>
     !(function (e, n) {

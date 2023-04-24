@@ -1,3 +1,16 @@
-{{- /* Footer custom content area start */ -}}
-{{- /*     Insert any custom code web-analytics, resources, etc. here */ -}}
-{{- /* Footer custom content area end */ -}}
+{{- /* Footer custom content area start */ -}} {{- /* Insert any custom code
+web-analytics, resources, etc. here */ -}} {{- /* Footer custom content area end
+*/ -}} {{- if (not site.Params.disableThemeToggle) }}
+<script>
+  /* Function to change theme when the toggle button is pressed */
+  document.getElementById("theme-toggle").addEventListener("click", () => {
+    if (typeof window.REMARK42 != "undefined") {
+      if (document.body.className.includes("dark")) {
+        window.REMARK42.changeTheme("light");
+      } else {
+        window.REMARK42.changeTheme("dark");
+      }
+    }
+  });
+</script>
+{{- end }}
