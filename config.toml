@@ -36,6 +36,8 @@ EnableInstantClick = false
 EnableImageZoom = true
 hideMeta = false
 comments = true
+    remark42SiteID = "wananaiko"
+    remark42Url = "http://remark42.wananaiko.com"
 
   [params.logo]
   icon = "images/forge-v2-compat.svg"
@@ -196,18 +198,3 @@ disableInlineCSS = true
 
 [services.twitter]
 disableInlineCSS = true 
-
-[commentSystems.disqus]
-shortname = "reorx"
-
-[commentSystems.remark42]
-url = "https://remark42.wananaiko.com"
-site = "wananaiko"
-
-[commentSystems.telegramWidget]
-channel = "reorx_share"
-accentColor = "9077e1"
-limit = 20
-
-[defaultCommentSystems]
-remark42 = true

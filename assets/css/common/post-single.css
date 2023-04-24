@@ -1,3 +1,28 @@
+
+.comments-box.telegram-widget {
+    padding: .8em;
+}
+
+.comments {
+    border-top: 1px solid var(--tertiary);
+}
+.comments {
+    margin: 40px 0 20px;
+}
+.comments .title {
+    margin: 20px 0;
+    font-size: 1.5em;
+}
+.comments .title > span {
+    line-height: 1.5rem;
+}
+.comments .title .counter {
+    color: var(--link-hover-color);
+    font-size: 1rem;
+    font-weight: bold;
+    vertical-align: super;
+}
+
 .post-header {
     margin: var(--content-gap) 0 calc(var(--content-gap) * 1.5);
 }
