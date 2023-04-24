@@ -196,10 +196,3 @@ disableInlineCSS = true
 
 [services.twitter]
 disableInlineCSS = true 
-
-[commentSystems.remark42]
-url = "https://remark42.wananaiko.com"
-site = "wananaiko.com"
-
-[defaultCommentSystems]
-remark42 = true
