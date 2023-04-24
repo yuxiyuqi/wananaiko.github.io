@@ -35,9 +35,9 @@ TocSide = "right"
 EnableInstantClick = false
 EnableImageZoom = true
 hideMeta = false
-comments = true
-    remark42SiteID = "wananaiko"
-    remark42Url = "http://remark42.wananaiko.com"
+comments = ture
+remark42SiteID = "wananaiko"
+remark42Url = "http://remark42.wananaiko.com"
 
   [params.logo]
   icon = "images/forge-v2-compat.svg"

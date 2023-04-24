@@ -1,10 +1,28 @@
-{{- /* You can add your own layouts/comments.html to override this file */ -}}
-{{- $pageCommentSystems := .Param "pageCommentSystems"}} {{- if not
-$pageCommentSystems }} {{- $pageCommentSystems =
-site.Params.defaultCommentSystems }} {{- end }} {{- $page := . -}} {{- with
-site.Params.commentSystems -}} {{- if $pageCommentSystems.remark42 -}} {{- with
-.remark42 -}} {{- partial "remark42.html" (dict "page" $page "ctx" .) }} {{- end
--}} {{- end -}} {{- if $pageCommentSystems.telegramWidget -}} {{- with
-.telegramWidget -}} {{- partial "telegram_widget.html" . }} {{- end -}} {{- end
--}} {{- if $pageCommentSystems.disqus -}} {{- with .disqus -}} {{- partial
-"disqus.html" (dict "page" $page "ctx" .) }} {{- end -}} {{- end -}} {{- end -}}
+<div id="remark42"></div>
+<script>
+  var remark_config = {
+    host: 'https://remark42.wananaiko.com',
+    site_id: 'wananaiko',
+    components: ['embed', 'last-comments']
+    max_shown_comments: 100,
+    theme: 'dark',
+    page_title: 'My custom title for a page',
+    locale: 'es',
+    show_email_subscription: false,
+    simple_view: true,
+    no_footer: false
+  }
+</script>
+<script>
+  !(function (e, n) {
+    for (var o = 0; o < e.length; o++) {
+      var r = n.createElement("script"),
+        c = ".js",
+        d = n.head || n.body;
+      "noModule" in r ? ((r.type = "module"), (c = ".mjs")) : (r.async = !0),
+        (r.defer = !0),
+        (r.src = remark_config.host + "/web/" + e[o] + c),
+        d.appendChild(r);
+    }
+  })(remark_config.components || ["embed"], document);
+</script>
