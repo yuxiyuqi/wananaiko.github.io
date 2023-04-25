@@ -4,6 +4,7 @@ date: 2023-04-25T11:10:49+08:00
 author: "wananaiko"
 tags:
   - Remark42
+  - Hugo
 draft: false
 ---
 
