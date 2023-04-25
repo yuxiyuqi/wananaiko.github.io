@@ -1,11 +1,10 @@
----
 title: "Fly.io 部署 Remark42 评论系统"
 date: 2023-04-25T11:10:49+08:00
 author: "wananaiko"
 tags:
+
   - Remark42
 draft: false
----
 
 ### Remark42 是什么
 
@@ -25,7 +24,7 @@ Remark42 是一个开源、轻量化、自托管饿评论服务，支持使用 G
 
 计划详情：https://fly.io/docs/about/pricing/#free-allowances
 
-部分安装部分参考：[Fly.io 部署 Remark42 评论系统](https://www.weizhiwen.net/flyio-deploy-remark42)
+安装部分参考：[Fly.io 部署 Remark42 评论系统](https://www.weizhiwen.net/flyio-deploy-remark42)
 
 ---
 
