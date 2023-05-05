@@ -1,7 +1,7 @@
 ---
 title: "Goods"
 type: "goods"
-description: 用过的，值得一推的好东西
+description: 用过的，值得一推的好东西。
 ---
 
 {{<hardware img="https://images.wananaiko.com/2023/05/M2J3ZE.png" title="MacBook Pro M1 14" jiage="Apple" info="M系列处理器无比流畅,上了32G内存后从来没有感觉到卡过,现在上下班每天带着."url="/apple_tv">}}
