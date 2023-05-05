@@ -33,11 +33,10 @@
 }
 
 .post-description {
-    margin: var(--content-gap) 0;
-    color: var(--secondary);
-    opacity: .8;
-    padding-left: .5em;
-    border-left: 8px solid var(--signature);
+    font-size: 16px;
+    margin: var(--gap)0;
+    padding: 0 15px;
+    border-inline-start: 3px solid var(--primary);
 }
 
 .post-meta,
