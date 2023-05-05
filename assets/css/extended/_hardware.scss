@@ -1,4 +1,7 @@
 // hardware硬件页样式
+.description {
+  font-size: 14px;
+}
 
 .inline-links {
   display: none;
@@ -21,7 +24,7 @@
   align-items: center;
 }
 .duiqi img {
-  width: 90%;
+  width: 80%;
   margin: 0;
   transition: transform 0.2s ease-in-out;
   cursor: pointer;
@@ -34,11 +37,11 @@
   color: var(--text-highlight-color);
   font-family: var(--font-family-teshu);
   // letter-spacing: 0.5px;
-  font-size: 20px;
-  margin: 16px 0 0px 0;
+  font-size: 14px;
+  margin: 0px 0 0px 0;
 }
 .title a {
-  font-size: 16px;
+  font-size: 14px;
   // color: var(--text-highlight-color);
   text-decoration: none;
 }
@@ -107,7 +110,7 @@
     display: inline-block;
     vertical-align: top;
     width: calc(33.33% - 16px);
-    height: 360px;
+    height: 340px;
     margin: 12px 8px 0px 0;
   }
   .note {
@@ -126,6 +129,18 @@
 
   .bankuai.img-hide:hover img {
     transform: translateY(-4px);
+  }
+  .title {
+    color: var(--text-highlight-color);
+    font-family: var(--font-family-teshu);
+    // letter-spacing: 0.5px;
+    font-size: 16px;
+    margin: 0 auto;
+  }
+  .title a {
+    font-size: 16px;
+    // color: var(--text-highlight-color);
+    text-decoration: none;
   }
 }
 
