@@ -30,7 +30,7 @@ description: 用过的，值得一推的好东西
     }
   </style>
 
-  <div class="comment-title">欢迎评论</div>
+  <div class="comment-title">欢迎讨论</div>
   <div class="comment-description">请通过电子邮件订阅以接收回复通知。</div>
   <div id="remark42"></div>
 
