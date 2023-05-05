@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>macOS on wananaiko</title>
-    <link>https://wananaiko.design/tags/macos/</link>
+    <link>https://wananaiko.com/tags/macos/</link>
     <description>Recent content in macOS on wananaiko</description>
     <image>
-      <url>https://wananaiko.design/images/forge-v2-compat.svg</url>
-      <link>https://wananaiko.design/images/forge-v2-compat.svg</link>
+      <url>https://wananaiko.com/images/forge-v2-compat.svg</url>
+      <link>https://wananaiko.com/images/forge-v2-compat.svg</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 07 Jan 2023 20:14:36 +0800</lastBuildDate><atom:link href="https://wananaiko.design/tags/macos/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 07 Jan 2023 20:14:36 +0800</lastBuildDate><atom:link href="https://wananaiko.com/tags/macos/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>常用的macOS软件整理</title>
-      <link>https://wananaiko.design/docs/macosapps/</link>
+      <link>https://wananaiko.com/docs/macosapps/</link>
       <pubDate>Sat, 07 Jan 2023 20:14:36 +0800</pubDate>
       
-      <guid>https://wananaiko.design/docs/macosapps/</guid>
+      <guid>https://wananaiko.com/docs/macosapps/</guid>
       <description>聊一聊 macOS 的一些软件使用心得，希望能够对其他人有所帮助。 提升效率 Setapp：参加了别人的家庭计划，属于团购车，年费 285。感觉还是很划算的，</description>
       <content:encoded><![CDATA[<p>聊一聊 macOS 的一些软件使用心得，希望能够对其他人有所帮助。</p>
 <h2 id="提升效率">提升效率</h2>

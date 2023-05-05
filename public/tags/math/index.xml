@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>math on wananaiko</title>
-    <link>https://wananaiko.design/tags/math/</link>
+    <link>https://wananaiko.com/tags/math/</link>
     <description>Recent content in math on wananaiko</description>
     <image>
-      <url>https://wananaiko.design/images/forge-v2-compat.svg</url>
-      <link>https://wananaiko.design/images/forge-v2-compat.svg</link>
+      <url>https://wananaiko.com/images/forge-v2-compat.svg</url>
+      <link>https://wananaiko.com/images/forge-v2-compat.svg</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 08 Mar 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://wananaiko.design/tags/math/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 08 Mar 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://wananaiko.com/tags/math/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Math Typesetting</title>
-      <link>https://wananaiko.design/docs/math-typesetting/</link>
+      <link>https://wananaiko.com/docs/math-typesetting/</link>
       <pubDate>Fri, 08 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://wananaiko.design/docs/math-typesetting/</guid>
+      <guid>https://wananaiko.com/docs/math-typesetting/</guid>
       <description>A brief guide to setup KaTeX</description>
       <content:encoded><![CDATA[<p>Mathematical notation in a Hugo project can be enabled by using third party JavaScript libraries.</p>
 <p>In this example we will be using <a href="https://katex.org/" target="_blank" rel="noopener">KaTeX</a></p>

@@ -2,20 +2,273 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Hugo on wananaiko</title>
-    <link>https://wananaiko.design/tags/hugo/</link>
+    <link>https://wananaiko.com/tags/hugo/</link>
     <description>Recent content in Hugo on wananaiko</description>
     <image>
-      <url>https://wananaiko.design/images/forge-v2-compat.svg</url>
-      <link>https://wananaiko.design/images/forge-v2-compat.svg</link>
+      <url>https://wananaiko.com/images/forge-v2-compat.svg</url>
+      <link>https://wananaiko.com/images/forge-v2-compat.svg</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 12 Jan 2023 22:54:52 +0800</lastBuildDate><atom:link href="https://wananaiko.design/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 25 Apr 2023 11:10:49 +0800</lastBuildDate><atom:link href="https://wananaiko.com/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Fly.io 部署 Remark42 评论系统</title>
+      <link>https://wananaiko.com/docs/install-remark42/</link>
+      <pubDate>Tue, 25 Apr 2023 11:10:49 +0800</pubDate>
+      
+      <guid>https://wananaiko.com/docs/install-remark42/</guid>
+      <description>Remark42 是什么 Remark42 是一个开源、轻量化、自托管饿评论服务，支持使用 Google, Twitter, Facebook, Microsoft, GitHub, Yandex, Patreon, Telegram, Email 以及匿名方式进行评论。 之前使用的是 Waline 博客评论系统，部署在 Vercel 上。个人</description>
+      <content:encoded><![CDATA[<h3 id="remark42-是什么">Remark42 是什么</h3>
+<p>Remark42 是一个开源、轻量化、自托管饿评论服务，支持使用 Google, Twitter, Facebook, Microsoft, GitHub, Yandex, Patreon, Telegram, Email 以及匿名方式进行评论。</p>
+<p>之前使用的是 <a href="https://waline.js.org/" target="_blank" rel="noopener">Waline</a> 博客评论系统，部署在 Vercel 上。个人觉得不够简洁，于是就折腾起来换成了 Remark42。配置过程指数级增加，需要花一些时间调校测试。</p>
+<hr>
+<p><a href="http://fly.io/" target="_blank" rel="noopener">Fly.io</a> 免费计划包含：</p>
+<ul>
+<li>
+<p>共3个单核256兆内存的应用和机器</p>
+</li>
+<li>
+<p>共3GB的持久化卷</p>
+</li>
+<li>
+<p>160GB出站数据</p>
+</li>
+</ul>
+<p>计划详情：https://fly.io/docs/about/pricing/#free-allowances</p>
+<p>安装部分参考：<a href="https://www.weizhiwen.net/flyio-deploy-remark42" target="_blank" rel="noopener">Fly.io 部署 Remark42 评论系统</a></p>
+<hr>
+<h3 id="部署-remark42">部署 Remark42</h3>
+<p>在本地建个文件夹，例如 remark42-flyio，在终端中打开这个文件夹。</p>
+<ol>
+<li>
+<h4 id="安装-flyctl">安装 flyctl</h4>
+<p>根据自己的系统选择对应的安装方式。</p>
+<p><a href="https://fly.io/docs/hands-on/install-flyctl/" target="_blank" rel="noopener">Install flyctl · Fly Docs</a></p>
+<p>安装完，在终端里登录：<code>flyctl auth signup</code></p>
+<p>会弹出 fly.io 的网页窗口，授权登录即可。</p>
+</li>
+<li>
+<h4 id="创建-dockerfile">创建 Dockerfile</h4>
+<p>在文件夹中新建一个文件，名为 Dockerfile，无需文件名后缀。文本编辑器打开后输入以下内容并保存：</p>
+<pre tabindex="0"><code># Dockerfile
+FROM umputun/remark42
+</code></pre></li>
+<li>
+<h4 id="创建应用">创建应用</h4>
+<p>终端里执行: <code>flyctl launch</code></p>
+<p>填写应用名，这个名称不能更改，并且 fly.io 会分配一个域名 <application-name>.fly.dev，所以慎重，推荐：&lt;服务名称&gt;-&lt;个人名称&gt;，示例：remark42-aiko</p>
+<p>选择部署区域，推荐选日本，可以在这个网站测试 <a href="https://liveview-counter.fly.dev/" target="_blank" rel="noopener">liveview-counter.fly.dev</a> 你点加号看下边哪个地区数字有变化</p>
+<p>是否立即部署，否</p>
+<p>文件夹下会生成 fly.toml</p>
+</li>
+<li>
+<h4 id="设置-docker-环境变量">设置 Docker 环境变量</h4>
+<p>打开 fly.toml 在 env 下加入环境变量，参考 remark42 教程里给的 docker compose 环境变量。后面很多登录配置都是在 fly.toml 里设置的。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="p">[</span><span class="nx">env</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">REMARK_URL</span> <span class="p">=</span> <span class="s2">&#34;https://remark42-aiko.fly.dev&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">SECRET</span> <span class="p">=</span> <span class="s2">&#34;123456&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">TZ</span> <span class="p">=</span> <span class="s2">&#34;Asia/Shanghai&#34;</span>
+</span></span></code></pre></div></li>
+<li>
+<h4 id="增加持久卷">增加持久卷</h4>
+<p>终端里执行：<code>flyctl vol create remark42_data -s 1 -r nrt</code></p>
+<p>地区必须和上边的地区一样，flyctl regions list 可以看到。
+注意：删除应用时会一并删除持久卷。</p>
+<p>fly.toml 加入 mounts 部分的代码：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="p">[</span><span class="nx">env</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="p">...</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nx">mounts</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">destination</span> <span class="p">=</span> <span class="s2">&#34;/srv/var&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">source</span> <span class="p">=</span> <span class="s2">&#34;remark42_data&#34;</span>
+</span></span></code></pre></div><p>最终配置大概是这样的：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="c"># fly.toml file generated for remark42-aiko on 2023-04-24T14:24:20+08:00</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">app</span> <span class="p">=</span> <span class="s2">&#34;remark42-alamiao&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">kill_signal</span> <span class="p">=</span> <span class="s2">&#34;SIGINT&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">kill_timeout</span> <span class="p">=</span> <span class="mi">5</span>
+</span></span><span class="line"><span class="cl"><span class="nx">processes</span> <span class="p">=</span> <span class="p">[]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nx">env</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">REMARK_URL</span> <span class="p">=</span> <span class="s2">&#34;https://remark42-aiko.fly.dev&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">SECRET</span> <span class="p">=</span> <span class="s2">&#34;123456&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">TZ</span> <span class="p">=</span> <span class="s2">&#34;Asia/Shanghai&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nx">mounts</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">destination</span> <span class="p">=</span> <span class="s2">&#34;/srv/var&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">source</span> <span class="p">=</span> <span class="s2">&#34;remark42_data&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nx">experimental</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">auto_rollback</span> <span class="p">=</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">[[</span><span class="nx">services</span><span class="p">]]</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">http_checks</span> <span class="p">=</span> <span class="p">[]</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">internal_port</span> <span class="p">=</span> <span class="mi">8080</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">processes</span> <span class="p">=</span> <span class="p">[</span><span class="s2">&#34;app&#34;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">protocol</span> <span class="p">=</span> <span class="s2">&#34;tcp&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">script_checks</span> <span class="p">=</span> <span class="p">[]</span>
+</span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="nx">services</span><span class="p">.</span><span class="nx">concurrency</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">hard_limit</span> <span class="p">=</span> <span class="mi">25</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">soft_limit</span> <span class="p">=</span> <span class="mi">20</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">type</span> <span class="p">=</span> <span class="s2">&#34;connections&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="p">[[</span><span class="nx">services</span><span class="p">.</span><span class="nx">ports</span><span class="p">]]</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">force_https</span> <span class="p">=</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">handlers</span> <span class="p">=</span> <span class="p">[</span><span class="s2">&#34;http&#34;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">port</span> <span class="p">=</span> <span class="mi">80</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="p">[[</span><span class="nx">services</span><span class="p">.</span><span class="nx">ports</span><span class="p">]]</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">handlers</span> <span class="p">=</span> <span class="p">[</span><span class="s2">&#34;tls&#34;</span><span class="p">,</span> <span class="s2">&#34;http&#34;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">port</span> <span class="p">=</span> <span class="mi">443</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="p">[[</span><span class="nx">services</span><span class="p">.</span><span class="nx">tcp_checks</span><span class="p">]]</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">grace_period</span> <span class="p">=</span> <span class="s2">&#34;1s&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">interval</span> <span class="p">=</span> <span class="s2">&#34;15s&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">restart_limit</span> <span class="p">=</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">timeout</span> <span class="p">=</span> <span class="s2">&#34;2s&#34;</span>
+</span></span></code></pre></div></li>
+<li>
+<h4 id="部署到-flyio">部署到 fly.io</h4>
+<p>终端里输入：<code>flyctl deploy</code></p>
+<p>等命令执行结束，去 fly.io 的 dashboard 上就能看到了，访问地址: <a href="https://remark42-aiko.fly.dev/web/" target="_blank" rel="noopener">https://remark42-aiko.fly.dev/web/</a>
+到这里，你能打开页面但是不能登录评论系统，因为还没有配置 OAuth 授权登录。</p>
+</li>
+<li>
+<h4 id="自定义域名建议">自定义域名（建议）</h4>
+<p>打开 fly.io 的 <a href="https://fly.io/dashboard/personal" target="_blank" rel="noopener">dashboard</a>，在中间 App 一栏可以看到你刚才创建的应用，比如我这里是：remark42-aiko。</p>
+<p>点进去，在左侧 Certification 里 点击 “Add certification”。</p>
+<p>接着在 Hostname 中输入你要自定义的域名，比如我这里是：remark42.wananaiko.com。</p>
+<p>最后就是去你的域名服务商里设置解析了，我这里用的是 Cloudflare，如果解析后打开https://remark42-aiko.fly.dev/web/ 提示页面错误，可设置 Cloudflare 域名解析的 Proxy status 为 DNS only。</p>
+<p>解析完成后，建议将 fly.toml 文件中的 REMARK_UR修改为你解析后的域名，示例：</p>
+<pre tabindex="0"><code>REMARK_URL = &#34;https://remark42.wananaiko.com&#34;
+</code></pre><p>修改完后，在终端里执行  <code>flyctl deploy</code></p>
+</li>
+<li>
+<h4 id="邮箱登录和第三方应用登录">邮箱登录和第三方应用登录</h4>
+<p>可参考这篇文章 <a href="https://matteo.eu.org/2023/20230207024855.html#421-%E5%8C%BF%E5%90%8D%E7%99%BB%E5%BD%95" target="_blank" rel="noopener">史上最全Remark42评论系统安装教程 | 奥国天空</a></p>
+<p>将对应的参数添加到 fly.toml 中即可，需要注意符合 TOML 格式。</p>
+<p>参数示例，敏感信息部分使用了*号代替。</p>
+<pre tabindex="0"><code>AUTH_GITHUB_CID = &#34;5cc8*********910&#34;
+  AUTH_GITHUB_CSEC = &#34;eaa4bfe99e*********b256c0d03&#34;
+  ADMIN_SHARED_ID = &#34;github_433*********c9a7b8e87b&#34;
+  AUTH_GOOGLE_CID = &#34;4662*********-*********.apps.googleusercontent.com&#34;
+  AUTH_GOOGLE_CSEC = &#34;GOCSPX-*********LDwgp0FNCMOe&#34;
+  AUTH_TWITTER_CID = &#34;gBoJ141*********5macEsG&#34;
+  AUTH_TWITTER_CSEC = &#34;NqlaPpVYg*********jTrHWrXxw&#34;
+  SMTP_HOST = &#34;smtp.sendgrid.net&#34;
+  SMTP_PORT = &#34;465&#34;
+  SMTP_TLS = true
+  SMTP_USERNAME = &#34;apikey&#34;
+  SMTP_PASSWORD = &#34;SG.2A4mLx*********jnAIhw.xK-URxJc*********m7dY9_UTrOH*********Ubnprs&#34;
+  AUTH_EMAIL_ENABLE = true
+  AUTH_EMAIL_FROM = &#34;yourmail@gmail.com&#34;
+  AUTH_EMAIL_SUBJ= &#34;在 wananaiko.com 留言确认&#34;
+  AUTH_EMAIL_CONTENT_TYPE = &#34;text/html&#34;
+  NOTIFY_USERS = &#34;email&#34;
+  NOTIFY_EMAIL_FROM = &#34;yourmail@gmail.com&#34;
+  NOTIFY_EMAIL_VERIFICATION_SUBJ = &#34;邮件确认&#34;
+  NOTIFY_ADMINS = &#34;email&#34;
+  ADMIN_SHARED_EMAIL = &#34;yourmail@gmail.com&#34;
+</code></pre><p>添加完参数后需要执行 <code>flyctl deploy</code> 重新部署。TOML 格式错误会导致部署失败。建议每添加完一种登录授权后，就执行 flyctl deploy 部署测试一下。</p>
+</li>
+<li>
+<h4 id="在-hugo-中添加-remark42">在 Hugo 中添加 Remark42</h4>
+<p>不同的主题不同的安装方式，建议结合自己的主题添加评论功能。当然，你也可以安装 Hugo 官方的指南添加。我这里还将 Remark42 适配了 PaperModX 主题的暗黑模式切换。</p>
+<p>添加 Remark42 到 Hugo 可以参考 <a href="https://remark42.com/docs/configuration/frontend/" target="_blank" rel="noopener">Remark42 官方指南</a> 。或者参考这篇文章 <a href="https://blog.lasall.dev/post/hugo-and-comments-with-remark42/" target="_blank" rel="noopener">Hugo and comments with remark42 - La blog</a>，从 <code>9. Update Hugo’s single.html</code> 开始看。</p>
+<p>我这里在  layouts/partials/comments.html 加上了下面的代码，部分参数需要修改为自己的：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">.</span><span class="nc">comment-title</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="k">font-size</span><span class="p">:</span> <span class="mi">24</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="k">font-weight</span><span class="p">:</span> <span class="kc">bold</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="k">padding</span><span class="p">:</span> <span class="mi">32</span><span class="kt">px</span> <span class="mi">6</span><span class="kt">px</span> <span class="mi">0</span><span class="kt">px</span> <span class="mi">6</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">.</span><span class="nc">comment-description</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="k">font-size</span><span class="p">:</span> <span class="mi">14</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="k">color</span><span class="p">:</span> <span class="mh">#666</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="k">padding</span><span class="p">:</span> <span class="mi">4</span><span class="kt">px</span> <span class="mi">16</span><span class="kt">px</span> <span class="mi">16</span><span class="kt">px</span> <span class="mi">6</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">p</span><span class="p">.</span><span class="nc">root__copyright</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="k">display</span><span class="p">:</span> <span class="kc">none</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;comment-title&#34;</span><span class="p">&gt;</span>欢迎评论<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;comment-description&#34;</span><span class="p">&gt;</span>请通过电子邮件订阅以接收回复通知。<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;remark42&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">var</span> <span class="nx">remark_config</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">host</span><span class="o">:</span> <span class="s2">&#34;https://remark42.wananaiko.com&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">site_id</span><span class="o">:</span> <span class="s2">&#34;wananaiko&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">locale</span><span class="o">:</span> <span class="s2">&#34;zh&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">page_title</span><span class="o">:</span> <span class="s2">&#34;Comments&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">theme</span><span class="o">:</span> <span class="s2">&#34;auto&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="p">};</span>
+</span></span><span class="line"><span class="cl">    <span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">c</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="cm">/* 支持适配主题切换 */</span>
+</span></span><span class="line"><span class="cl">      <span class="k">if</span> <span class="p">(</span><span class="nx">localStorage</span><span class="p">.</span><span class="nx">getItem</span><span class="p">(</span><span class="s2">&#34;pref-theme&#34;</span><span class="p">)</span> <span class="o">===</span> <span class="s2">&#34;dark&#34;</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">remark_config</span><span class="p">.</span><span class="nx">theme</span> <span class="o">=</span> <span class="s2">&#34;dark&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">localStorage</span><span class="p">.</span><span class="nx">getItem</span><span class="p">(</span><span class="s2">&#34;pref-theme&#34;</span><span class="p">)</span> <span class="o">===</span> <span class="s2">&#34;light&#34;</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">remark_config</span><span class="p">.</span><span class="nx">theme</span> <span class="o">=</span> <span class="s2">&#34;light&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">}</span>
+</span></span><span class="line"><span class="cl">      <span class="cm">/* 添加 remark42 评论控件 */</span>
+</span></span><span class="line"><span class="cl">      <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">c</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kd">var</span> <span class="nx">d</span> <span class="o">=</span> <span class="nb">document</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">          <span class="nx">s</span> <span class="o">=</span> <span class="nx">d</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s2">&#34;script&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">s</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="nx">remark_config</span><span class="p">.</span><span class="nx">host</span> <span class="o">+</span> <span class="s2">&#34;/web/&#34;</span> <span class="o">+</span> <span class="nx">c</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">+</span> <span class="s2">&#34;.js&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">s</span><span class="p">.</span><span class="nx">defer</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">(</span><span class="nx">d</span><span class="p">.</span><span class="nx">head</span> <span class="o">||</span> <span class="nx">d</span><span class="p">.</span><span class="nx">body</span><span class="p">).</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">s</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">      <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">})(</span><span class="nx">remark_config</span><span class="p">.</span><span class="nx">components</span> <span class="o">||</span> <span class="p">[</span><span class="s2">&#34;embed&#34;</span><span class="p">]);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="o">!</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">e</span><span class="p">,</span> <span class="nx">n</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">o</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">o</span> <span class="o">&lt;</span> <span class="nx">e</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">o</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kd">var</span> <span class="nx">r</span> <span class="o">=</span> <span class="nx">n</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s2">&#34;script&#34;</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">          <span class="nx">c</span> <span class="o">=</span> <span class="s2">&#34;.js&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">          <span class="nx">d</span> <span class="o">=</span> <span class="nx">n</span><span class="p">.</span><span class="nx">head</span> <span class="o">||</span> <span class="nx">n</span><span class="p">.</span><span class="nx">body</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;noModule&#34;</span> <span class="k">in</span> <span class="nx">r</span> <span class="o">?</span> <span class="p">((</span><span class="nx">r</span><span class="p">.</span><span class="nx">type</span> <span class="o">=</span> <span class="s2">&#34;module&#34;</span><span class="p">),</span> <span class="p">(</span><span class="nx">c</span> <span class="o">=</span> <span class="s2">&#34;.mjs&#34;</span><span class="p">))</span> <span class="o">:</span> <span class="p">(</span><span class="nx">r</span><span class="p">.</span><span class="kr">async</span> <span class="o">=</span> <span class="o">!</span><span class="mi">0</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">          <span class="p">(</span><span class="nx">r</span><span class="p">.</span><span class="nx">defer</span> <span class="o">=</span> <span class="o">!</span><span class="mi">0</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">          <span class="p">(</span><span class="nx">r</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="nx">remark_config</span><span class="p">.</span><span class="nx">host</span> <span class="o">+</span> <span class="s2">&#34;/web/&#34;</span> <span class="o">+</span> <span class="nx">e</span><span class="p">[</span><span class="nx">o</span><span class="p">]</span> <span class="o">+</span> <span class="nx">c</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">          <span class="nx">d</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">r</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">      <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">})(</span><span class="nx">remark_config</span><span class="p">.</span><span class="nx">components</span> <span class="o">||</span> <span class="p">[</span><span class="s2">&#34;embed&#34;</span><span class="p">],</span> <span class="nb">document</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span></code></pre></div><p>为了支持主题切换，还需要在 layouts/partials/extend_footer.html  中添加以下代码：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">{{- if (not site.Params.disableThemeToggle) }}
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="cm">/* Function to change theme when the toggle button is pressed */</span>
+</span></span><span class="line"><span class="cl"><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&#34;theme-toggle&#34;</span><span class="p">).</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">&#34;click&#34;</span><span class="p">,</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="p">(</span><span class="k">typeof</span> <span class="nb">window</span><span class="p">.</span><span class="nx">REMARK42</span> <span class="o">!=</span> <span class="s2">&#34;undefined&#34;</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">className</span><span class="p">.</span><span class="nx">includes</span><span class="p">(</span><span class="s1">&#39;dark&#39;</span><span class="p">))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nb">window</span><span class="p">.</span><span class="nx">REMARK42</span><span class="p">.</span><span class="nx">changeTheme</span><span class="p">(</span><span class="s1">&#39;light&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nb">window</span><span class="p">.</span><span class="nx">REMARK42</span><span class="p">.</span><span class="nx">changeTheme</span><span class="p">(</span><span class="s1">&#39;dark&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">});</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">{{- end }}
+</span></span></code></pre></div><ol start="10">
+<li>
+<h4 id="其他说明">其他说明</h4>
+<p>以上是对本次折腾过程的整理。如果卡在某个地方失败了，建议检索相关的文档或者借助搜索引擎。部分地方写的可能有点乱，也可能漏了什么，希望多多理解，建议部署前先看一遍 <a href="https://remark42.com/docs/getting-started/installation/" target="_blank" rel="noopener">Remark42</a> 官方文档。</p>
+<p>关于 Remark42 控件颜色适配主题颜色，还没有折腾好。查找了部分方法，还是有点麻烦的。</p>
+</li>
+</ol>
+</li>
+</ol>
+]]></content:encoded>
+    </item>
+    
     <item>
       <title>Hugo增加相册功能</title>
-      <link>https://wananaiko.design/docs/hugo-easy-gallery/hugo-easy-gallery/</link>
+      <link>https://wananaiko.com/docs/hugo-easy-gallery/hugo-easy-gallery/</link>
       <pubDate>Thu, 12 Jan 2023 22:54:52 +0800</pubDate>
       
-      <guid>https://wananaiko.design/docs/hugo-easy-gallery/hugo-easy-gallery/</guid>
+      <guid>https://wananaiko.com/docs/hugo-easy-gallery/hugo-easy-gallery/</guid>
       <description>相册效果如下： 按ESC关闭窗口 Github仓库地址: https://github.com/liwenyip/hugo-easy-gallery 按教程操作后,需要注意在文章中引用时,按下面的类似格式 (需去掉下方所有的 \ ): {{\&amp;lt; load-photoswipe &amp;gt;}} {{\&amp;lt; gallery</description>
       <content:encoded><![CDATA[<p>相册效果如下：</p>
 <p>
@@ -87,7 +340,7 @@
 <div class="gallery caption-position-bottom caption-effect-slide hover-effect-zoom hover-transition" itemscope itemtype="http://schema.org/ImageGallery">
 	  
   
-  <link rel="stylesheet" href=https://wananaiko.design/css/hugo-easy-gallery.css />
+  <link rel="stylesheet" href=https://wananaiko.com/css/hugo-easy-gallery.css />
   <div class="box" >
     <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
       <div class="img" style="background-image: url('https://images.wananaiko.com/2023/01/jaeYun.jpg');">
@@ -219,10 +472,10 @@
     
     <item>
       <title>Hugo 添加相册单页</title>
-      <link>https://wananaiko.design/docs/hugo-photo-page/</link>
+      <link>https://wananaiko.com/docs/hugo-photo-page/</link>
       <pubDate>Tue, 10 Jan 2023 15:08:47 +0800</pubDate>
       
-      <guid>https://wananaiko.design/docs/hugo-photo-page/</guid>
+      <guid>https://wananaiko.com/docs/hugo-photo-page/</guid>
       <description>参考：Hugo 添加相册页面：：木木木木木，本文仅用于备份折腾的记录。 文件目录结构： 其中 photos.html代码如下，调整了部分CSS： {{- define</description>
       <content:encoded><![CDATA[<p>参考：<a href="https://immmmm.com/hugo-readdir-photos/" target="_blank" rel="noopener">Hugo 添加相册页面：：木木木木木</a>，本文仅用于备份折腾的记录。</p>
 <p>文件目录结构：</p>
@@ -307,10 +560,10 @@
     
     <item>
       <title>Hugo 和 PaperModX 的一些配置记录</title>
-      <link>https://wananaiko.design/docs/hugo-develop/</link>
+      <link>https://wananaiko.com/docs/hugo-develop/</link>
       <pubDate>Mon, 09 Jan 2023 00:24:18 +0800</pubDate>
       
-      <guid>https://wananaiko.design/docs/hugo-develop/</guid>
+      <guid>https://wananaiko.com/docs/hugo-develop/</guid>
       <description>增加空格之神 使用空格之神的浏览器插件很久了，真的是阅读强迫症患者的福音，空格之神项目地址 在 Hugo的 themes/PaperModX/layouts/_default/baseof.html 内增加以下代码： &amp;lt;script src=&amp;#34;https://cdnjs.cloudflare.com/ajax/libs/pangu/4.0.7/pangu.min.js&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;script&amp;gt; pangu.spacingPage(); &amp;lt;/script&amp;gt; 用完后感觉整</description>
       <content:encoded><![CDATA[<h3 id="增加空格之神">增加空格之神</h3>
 <p>使用空格之神的浏览器插件很久了，真的是阅读强迫症患者的福音，<a href="https://github.com/vinta/pangu.js" target="_blank" rel="noopener">空格之神项目地址</a></p>
@@ -939,10 +1192,10 @@
     
     <item>
       <title>基于 Vercel 和 Fly.io 免费部署的应用</title>
-      <link>https://wananaiko.design/docs/dec1220/</link>
+      <link>https://wananaiko.com/docs/dec1220/</link>
       <pubDate>Tue, 20 Dec 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://wananaiko.design/docs/dec1220/</guid>
+      <guid>https://wananaiko.com/docs/dec1220/</guid>
       <description>Hugo 部署到 Vercel 最近考虑把 Wordpress 博客换到 Hugo，一番折腾之后，通过 Github+Vercel 的方式实现了自动部署，还挺方便的，以后只需要在本地编写 Markdown 文件并发布到 Github 就可以了。</description>
       <content:encoded><![CDATA[<h2 id="hugo-部署到-vercel">Hugo 部署到 Vercel</h2>
 <p>最近考虑把 Wordpress 博客换到 Hugo，一番折腾之后，通过 Github+Vercel 的方式实现了自动部署，还挺方便的，以后只需要在本地编写 Markdown 文件并发布到 Github 就可以了。以 macOS 下为例：</p>

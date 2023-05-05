@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Vercel on wananaiko</title>
-    <link>https://wananaiko.design/tags/vercel/</link>
+    <link>https://wananaiko.com/tags/vercel/</link>
     <description>Recent content in Vercel on wananaiko</description>
     <image>
-      <url>https://wananaiko.design/images/forge-v2-compat.svg</url>
-      <link>https://wananaiko.design/images/forge-v2-compat.svg</link>
+      <url>https://wananaiko.com/images/forge-v2-compat.svg</url>
+      <link>https://wananaiko.com/images/forge-v2-compat.svg</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 20 Dec 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://wananaiko.design/tags/vercel/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 20 Dec 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://wananaiko.com/tags/vercel/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>基于 Vercel 和 Fly.io 免费部署的应用</title>
-      <link>https://wananaiko.design/docs/dec1220/</link>
+      <link>https://wananaiko.com/docs/dec1220/</link>
       <pubDate>Tue, 20 Dec 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://wananaiko.design/docs/dec1220/</guid>
+      <guid>https://wananaiko.com/docs/dec1220/</guid>
       <description>Hugo 部署到 Vercel 最近考虑把 Wordpress 博客换到 Hugo，一番折腾之后，通过 Github+Vercel 的方式实现了自动部署，还挺方便的，以后只需要在本地编写 Markdown 文件并发布到 Github 就可以了。</description>
       <content:encoded><![CDATA[<h2 id="hugo-部署到-vercel">Hugo 部署到 Vercel</h2>
 <p>最近考虑把 Wordpress 博客换到 Hugo，一番折腾之后，通过 Github+Vercel 的方式实现了自动部署，还挺方便的，以后只需要在本地编写 Markdown 文件并发布到 Github 就可以了。以 macOS 下为例：</p>

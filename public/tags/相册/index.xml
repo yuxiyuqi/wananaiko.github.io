@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>相册 on wananaiko</title>
-    <link>https://wananaiko.design/tags/%E7%9B%B8%E5%86%8C/</link>
+    <link>https://wananaiko.com/tags/%E7%9B%B8%E5%86%8C/</link>
     <description>Recent content in 相册 on wananaiko</description>
     <image>
-      <url>https://wananaiko.design/images/forge-v2-compat.svg</url>
-      <link>https://wananaiko.design/images/forge-v2-compat.svg</link>
+      <url>https://wananaiko.com/images/forge-v2-compat.svg</url>
+      <link>https://wananaiko.com/images/forge-v2-compat.svg</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 12 Jan 2023 22:54:52 +0800</lastBuildDate><atom:link href="https://wananaiko.design/tags/%E7%9B%B8%E5%86%8C/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 12 Jan 2023 22:54:52 +0800</lastBuildDate><atom:link href="https://wananaiko.com/tags/%E7%9B%B8%E5%86%8C/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hugo增加相册功能</title>
-      <link>https://wananaiko.design/docs/hugo-easy-gallery/hugo-easy-gallery/</link>
+      <link>https://wananaiko.com/docs/hugo-easy-gallery/hugo-easy-gallery/</link>
       <pubDate>Thu, 12 Jan 2023 22:54:52 +0800</pubDate>
       
-      <guid>https://wananaiko.design/docs/hugo-easy-gallery/hugo-easy-gallery/</guid>
+      <guid>https://wananaiko.com/docs/hugo-easy-gallery/hugo-easy-gallery/</guid>
       <description>相册效果如下： 按ESC关闭窗口 Github仓库地址: https://github.com/liwenyip/hugo-easy-gallery 按教程操作后,需要注意在文章中引用时,按下面的类似格式 (需去掉下方所有的 \ ): {{\&amp;lt; load-photoswipe &amp;gt;}} {{\&amp;lt; gallery</description>
       <content:encoded><![CDATA[<p>相册效果如下：</p>
 <p>
@@ -87,7 +87,7 @@
 <div class="gallery caption-position-bottom caption-effect-slide hover-effect-zoom hover-transition" itemscope itemtype="http://schema.org/ImageGallery">
 	  
   
-  <link rel="stylesheet" href=https://wananaiko.design/css/hugo-easy-gallery.css />
+  <link rel="stylesheet" href=https://wananaiko.com/css/hugo-easy-gallery.css />
   <div class="box" >
     <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
       <div class="img" style="background-image: url('https://images.wananaiko.com/2023/01/jaeYun.jpg');">
@@ -219,10 +219,10 @@
     
     <item>
       <title>Hugo 添加相册单页</title>
-      <link>https://wananaiko.design/docs/hugo-photo-page/</link>
+      <link>https://wananaiko.com/docs/hugo-photo-page/</link>
       <pubDate>Tue, 10 Jan 2023 15:08:47 +0800</pubDate>
       
-      <guid>https://wananaiko.design/docs/hugo-photo-page/</guid>
+      <guid>https://wananaiko.com/docs/hugo-photo-page/</guid>
       <description>参考：Hugo 添加相册页面：：木木木木木，本文仅用于备份折腾的记录。 文件目录结构： 其中 photos.html代码如下，调整了部分CSS： {{- define</description>
       <content:encoded><![CDATA[<p>参考：<a href="https://immmmm.com/hugo-readdir-photos/" target="_blank" rel="noopener">Hugo 添加相册页面：：木木木木木</a>，本文仅用于备份折腾的记录。</p>
 <p>文件目录结构：</p>

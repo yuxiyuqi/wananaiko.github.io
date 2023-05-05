@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>waline on wananaiko</title>
-    <link>https://wananaiko.design/tags/waline/</link>
+    <link>https://wananaiko.com/tags/waline/</link>
     <description>Recent content in waline on wananaiko</description>
     <image>
-      <url>https://wananaiko.design/images/forge-v2-compat.svg</url>
-      <link>https://wananaiko.design/images/forge-v2-compat.svg</link>
+      <url>https://wananaiko.com/images/forge-v2-compat.svg</url>
+      <link>https://wananaiko.com/images/forge-v2-compat.svg</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 09 Jan 2023 00:24:18 +0800</lastBuildDate><atom:link href="https://wananaiko.design/tags/waline/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 09 Jan 2023 00:24:18 +0800</lastBuildDate><atom:link href="https://wananaiko.com/tags/waline/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hugo 和 PaperModX 的一些配置记录</title>
-      <link>https://wananaiko.design/docs/hugo-develop/</link>
+      <link>https://wananaiko.com/docs/hugo-develop/</link>
       <pubDate>Mon, 09 Jan 2023 00:24:18 +0800</pubDate>
       
-      <guid>https://wananaiko.design/docs/hugo-develop/</guid>
+      <guid>https://wananaiko.com/docs/hugo-develop/</guid>
       <description>增加空格之神 使用空格之神的浏览器插件很久了，真的是阅读强迫症患者的福音，空格之神项目地址 在 Hugo的 themes/PaperModX/layouts/_default/baseof.html 内增加以下代码： &amp;lt;script src=&amp;#34;https://cdnjs.cloudflare.com/ajax/libs/pangu/4.0.7/pangu.min.js&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;script&amp;gt; pangu.spacingPage(); &amp;lt;/script&amp;gt; 用完后感觉整</description>
       <content:encoded><![CDATA[<h3 id="增加空格之神">增加空格之神</h3>
 <p>使用空格之神的浏览器插件很久了，真的是阅读强迫症患者的福音，<a href="https://github.com/vinta/pangu.js" target="_blank" rel="noopener">空格之神项目地址</a></p>

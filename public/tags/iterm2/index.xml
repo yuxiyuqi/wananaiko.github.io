@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>iterm2 on wananaiko</title>
-    <link>https://wananaiko.design/tags/iterm2/</link>
+    <link>https://wananaiko.com/tags/iterm2/</link>
     <description>Recent content in iterm2 on wananaiko</description>
     <image>
-      <url>https://wananaiko.design/images/forge-v2-compat.svg</url>
-      <link>https://wananaiko.design/images/forge-v2-compat.svg</link>
+      <url>https://wananaiko.com/images/forge-v2-compat.svg</url>
+      <link>https://wananaiko.com/images/forge-v2-compat.svg</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 08 Jan 2023 23:04:09 +0800</lastBuildDate><atom:link href="https://wananaiko.design/tags/iterm2/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 08 Jan 2023 23:04:09 +0800</lastBuildDate><atom:link href="https://wananaiko.com/tags/iterm2/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>让 ITERM2 实时显示梯子状态</title>
-      <link>https://wananaiko.design/docs/how-iterm2-show-current-proxy-status/</link>
+      <link>https://wananaiko.com/docs/how-iterm2-show-current-proxy-status/</link>
       <pubDate>Sun, 08 Jan 2023 23:04:09 +0800</pubDate>
       
-      <guid>https://wananaiko.design/docs/how-iterm2-show-current-proxy-status/</guid>
+      <guid>https://wananaiko.com/docs/how-iterm2-show-current-proxy-status/</guid>
       <description>最近在 iterm2 里使用 curl、wget、brew、git 等命令时，经常会遇到相应很慢的情况，只能慢慢的等待，网上查了查资料，可以通过以下方法实现。</description>
       <content:encoded><![CDATA[<p>最近在 iterm2 里使用 curl、wget、brew、git 等命令时，经常会遇到相应很慢的情况，只能慢慢的等待，网上查了查资料，可以通过以下方法实现。</p>
 <p>修改 <code>~/.zshrc</code>，并加入以下内容：</p>

@@ -2,180 +2,220 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Tags on wananaiko</title>
-    <link>https://wananaiko.design/tags/</link>
+    <link>https://wananaiko.com/tags/</link>
     <description>Recent content in Tags on wananaiko</description>
     <image>
-      <url>https://wananaiko.design/images/forge-v2-compat.svg</url>
-      <link>https://wananaiko.design/images/forge-v2-compat.svg</link>
+      <url>https://wananaiko.com/images/forge-v2-compat.svg</url>
+      <link>https://wananaiko.com/images/forge-v2-compat.svg</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 08 Feb 2023 18:48:56 +0800</lastBuildDate><atom:link href="https://wananaiko.design/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 25 Apr 2023 11:10:49 +0800</lastBuildDate><atom:link href="https://wananaiko.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugo</title>
+      <link>https://wananaiko.com/tags/hugo/</link>
+      <pubDate>Tue, 25 Apr 2023 11:10:49 +0800</pubDate>
+      
+      <guid>https://wananaiko.com/tags/hugo/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Remark42</title>
+      <link>https://wananaiko.com/tags/remark42/</link>
+      <pubDate>Tue, 25 Apr 2023 11:10:49 +0800</pubDate>
+      
+      <guid>https://wananaiko.com/tags/remark42/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
     <item>
       <title>ChatGPT</title>
-      <link>https://wananaiko.design/tags/chatgpt/</link>
-      <pubDate>Wed, 08 Feb 2023 18:48:56 +0800</pubDate>
+      <link>https://wananaiko.com/tags/chatgpt/</link>
+      <pubDate>Fri, 21 Apr 2023 16:05:44 +0800</pubDate>
       
-      <guid>https://wananaiko.design/tags/chatgpt/</guid>
+      <guid>https://wananaiko.com/tags/chatgpt/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>design</title>
+      <link>https://wananaiko.com/tags/design/</link>
+      <pubDate>Fri, 21 Apr 2023 16:05:44 +0800</pubDate>
+      
+      <guid>https://wananaiko.com/tags/design/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>nicelydone</title>
+      <link>https://wananaiko.com/tags/nicelydone/</link>
+      <pubDate>Fri, 21 Apr 2023 16:05:44 +0800</pubDate>
+      
+      <guid>https://wananaiko.com/tags/nicelydone/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>huntly</title>
+      <link>https://wananaiko.com/tags/huntly/</link>
+      <pubDate>Fri, 10 Mar 2023 20:23:45 +0800</pubDate>
+      
+      <guid>https://wananaiko.com/tags/huntly/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
     
     <item>
       <title>跨年博客</title>
-      <link>https://wananaiko.design/tags/%E8%B7%A8%E5%B9%B4%E5%8D%9A%E5%AE%A2/</link>
+      <link>https://wananaiko.com/tags/%E8%B7%A8%E5%B9%B4%E5%8D%9A%E5%AE%A2/</link>
       <pubDate>Sun, 15 Jan 2023 01:40:29 +0800</pubDate>
       
-      <guid>https://wananaiko.design/tags/%E8%B7%A8%E5%B9%B4%E5%8D%9A%E5%AE%A2/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>Hugo</title>
-      <link>https://wananaiko.design/tags/hugo/</link>
-      <pubDate>Thu, 12 Jan 2023 22:54:52 +0800</pubDate>
-      
-      <guid>https://wananaiko.design/tags/hugo/</guid>
+      <guid>https://wananaiko.com/tags/%E8%B7%A8%E5%B9%B4%E5%8D%9A%E5%AE%A2/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
     
     <item>
       <title>相册</title>
-      <link>https://wananaiko.design/tags/%E7%9B%B8%E5%86%8C/</link>
+      <link>https://wananaiko.com/tags/%E7%9B%B8%E5%86%8C/</link>
       <pubDate>Thu, 12 Jan 2023 22:54:52 +0800</pubDate>
       
-      <guid>https://wananaiko.design/tags/%E7%9B%B8%E5%86%8C/</guid>
+      <guid>https://wananaiko.com/tags/%E7%9B%B8%E5%86%8C/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
     
     <item>
       <title>PaperModX</title>
-      <link>https://wananaiko.design/tags/papermodx/</link>
+      <link>https://wananaiko.com/tags/papermodx/</link>
       <pubDate>Mon, 09 Jan 2023 00:24:18 +0800</pubDate>
       
-      <guid>https://wananaiko.design/tags/papermodx/</guid>
+      <guid>https://wananaiko.com/tags/papermodx/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
     
     <item>
       <title>waline</title>
-      <link>https://wananaiko.design/tags/waline/</link>
+      <link>https://wananaiko.com/tags/waline/</link>
       <pubDate>Mon, 09 Jan 2023 00:24:18 +0800</pubDate>
       
-      <guid>https://wananaiko.design/tags/waline/</guid>
+      <guid>https://wananaiko.com/tags/waline/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
     
     <item>
       <title>iterm2</title>
-      <link>https://wananaiko.design/tags/iterm2/</link>
+      <link>https://wananaiko.com/tags/iterm2/</link>
       <pubDate>Sun, 08 Jan 2023 23:04:09 +0800</pubDate>
       
-      <guid>https://wananaiko.design/tags/iterm2/</guid>
+      <guid>https://wananaiko.com/tags/iterm2/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
     
     <item>
       <title>macOS</title>
-      <link>https://wananaiko.design/tags/macos/</link>
+      <link>https://wananaiko.com/tags/macos/</link>
       <pubDate>Sat, 07 Jan 2023 20:14:36 +0800</pubDate>
       
-      <guid>https://wananaiko.design/tags/macos/</guid>
+      <guid>https://wananaiko.com/tags/macos/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
     
     <item>
       <title>摘录</title>
-      <link>https://wananaiko.design/tags/%E6%91%98%E5%BD%95/</link>
+      <link>https://wananaiko.com/tags/%E6%91%98%E5%BD%95/</link>
       <pubDate>Sun, 01 Jan 2023 12:06:47 +0800</pubDate>
       
-      <guid>https://wananaiko.design/tags/%E6%91%98%E5%BD%95/</guid>
+      <guid>https://wananaiko.com/tags/%E6%91%98%E5%BD%95/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
     
     <item>
       <title>RSSHub</title>
-      <link>https://wananaiko.design/tags/rsshub/</link>
+      <link>https://wananaiko.com/tags/rsshub/</link>
       <pubDate>Tue, 20 Dec 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://wananaiko.design/tags/rsshub/</guid>
+      <guid>https://wananaiko.com/tags/rsshub/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
     
     <item>
       <title>Umami</title>
-      <link>https://wananaiko.design/tags/umami/</link>
+      <link>https://wananaiko.com/tags/umami/</link>
       <pubDate>Tue, 20 Dec 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://wananaiko.design/tags/umami/</guid>
+      <guid>https://wananaiko.com/tags/umami/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
     
     <item>
       <title>Vercel</title>
-      <link>https://wananaiko.design/tags/vercel/</link>
+      <link>https://wananaiko.com/tags/vercel/</link>
       <pubDate>Tue, 20 Dec 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://wananaiko.design/tags/vercel/</guid>
+      <guid>https://wananaiko.com/tags/vercel/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
     
     <item>
       <title>example</title>
-      <link>https://wananaiko.design/tags/example/</link>
+      <link>https://wananaiko.com/tags/example/</link>
       <pubDate>Wed, 13 Apr 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://wananaiko.design/tags/example/</guid>
+      <guid>https://wananaiko.com/tags/example/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
     
     <item>
       <title>icons</title>
-      <link>https://wananaiko.design/tags/icons/</link>
+      <link>https://wananaiko.com/tags/icons/</link>
       <pubDate>Wed, 20 Jan 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://wananaiko.design/tags/icons/</guid>
+      <guid>https://wananaiko.com/tags/icons/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
     
     <item>
       <title>markdown</title>
-      <link>https://wananaiko.design/tags/markdown/</link>
+      <link>https://wananaiko.com/tags/markdown/</link>
       <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://wananaiko.design/tags/markdown/</guid>
+      <guid>https://wananaiko.com/tags/markdown/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
     
     <item>
       <title>syntax</title>
-      <link>https://wananaiko.design/tags/syntax/</link>
+      <link>https://wananaiko.com/tags/syntax/</link>
       <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://wananaiko.design/tags/syntax/</guid>
+      <guid>https://wananaiko.com/tags/syntax/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
     
     <item>
       <title>math</title>
-      <link>https://wananaiko.design/tags/math/</link>
+      <link>https://wananaiko.com/tags/math/</link>
       <pubDate>Fri, 08 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://wananaiko.design/tags/math/</guid>
+      <guid>https://wananaiko.com/tags/math/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>

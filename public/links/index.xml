@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Blog Roll on wananaiko</title>
-    <link>https://wananaiko.design/links/</link>
+    <link>https://wananaiko.com/links/</link>
     <description>Recent content in Blog Roll on wananaiko</description>
     <image>
-      <url>https://wananaiko.design/images/forge-v2-compat.svg</url>
-      <link>https://wananaiko.design/images/forge-v2-compat.svg</link>
+      <url>https://wananaiko.com/images/forge-v2-compat.svg</url>
+      <link>https://wananaiko.com/images/forge-v2-compat.svg</link>
     </image>
-    <generator>Hugo -- gohugo.io</generator><atom:link href="https://wananaiko.design/links/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://wananaiko.com/links/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

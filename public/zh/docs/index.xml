@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>PaperModX 文档 on PaperModX</title>
-    <link>https://wananaiko.design/zh/docs/</link>
+    <link>https://wananaiko.com/zh/docs/</link>
     <description>Recent content in PaperModX 文档 on PaperModX</description>
     <image>
-      <url>https://wananaiko.design/images/forge-v2-compat.svg</url>
-      <link>https://wananaiko.design/images/forge-v2-compat.svg</link>
+      <url>https://wananaiko.com/images/forge-v2-compat.svg</url>
+      <link>https://wananaiko.com/images/forge-v2-compat.svg</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 12 Apr 2022 23:37:00 +0800</lastBuildDate><atom:link href="https://wananaiko.design/zh/docs/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 12 Apr 2022 23:37:00 +0800</lastBuildDate><atom:link href="https://wananaiko.com/zh/docs/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>PaperModX 新功能说明</title>
-      <link>https://wananaiko.design/zh/docs/papermodx-new-features/</link>
+      <link>https://wananaiko.com/zh/docs/papermodx-new-features/</link>
       <pubDate>Tue, 12 Apr 2022 23:37:00 +0800</pubDate>
       
-      <guid>https://wananaiko.design/zh/docs/papermodx-new-features/</guid>
+      <guid>https://wananaiko.com/zh/docs/papermodx-new-features/</guid>
       <description>本文档描述 PaperModX 相比原版 PaperMod 增加的新功能和变化。</description>
       <content:encoded><![CDATA[<p>本文档描述 PaperModX 相比原版 PaperMod 增加的新功能和变化。</p>
 <h2 id="table-of-contents-toc-floating-on-the-side">Table of Contents (ToC) floating on the side</h2>
