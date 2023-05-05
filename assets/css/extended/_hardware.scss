@@ -1,0 +1,141 @@
+// hardware硬件页样式
+
+.inline-links {
+  display: none;
+}
+
+.bankuai {
+  background-color: var(--bankuai-color);
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  margin-top: 16px;
+  padding: 16px;
+  background: var(--entry);
+  // box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.08);
+  // transition: all 0.3s cubic-bezier(0, 0, 0.5, 1);
+}
+
+.duiqi {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.duiqi img {
+  width: 80%;
+  margin: 0;
+  transition: transform 0.2s ease-in-out;
+  cursor: pointer;
+}
+.duiqi:hover img {
+  transform: translateY(-4px);
+}
+
+.title {
+  color: var(--text-highlight-color);
+  font-family: var(--font-family-teshu);
+  // letter-spacing: 0.5px;
+  font-size: 20px;
+  margin: 16px 0 0px 0;
+}
+.title a {
+  font-size: 16px;
+  // color: var(--text-highlight-color);
+  text-decoration: none;
+}
+
+.jiage {
+  color: #999;
+  font-size: 14px;
+  margin: 0 0 6px 0;
+  font-family: var(--font-family-code);
+}
+
+.note {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.post-content a {
+  color: var(--primary);
+  box-shadow: none;
+  transition: var(--link-transition);
+  padding-bottom: 2px;
+}
+
+// 页面宽度小于700样式
+
+@media (max-width: 700px) {
+  .bankuai {
+    width: 95.5%;
+    padding: 0 2% 5% 2%;
+  }
+  .title {
+    font-size: 22px;
+    margin: 30px 10px 6px 10px;
+  }
+  .jiage {
+    margin: 0 10px 6px 10px;
+  }
+  .note {
+    margin: 0 10px 0 10px;
+  }
+}
+
+// 页面宽度大于700小于900样式
+
+@media screen and (min-width: 700px) and (max-width: 900px) {
+  .quanju {
+    font-size: 0;
+    width: 106%;
+  }
+  .bankuai {
+    display: inline-block;
+    vertical-align: top;
+    width: 40%;
+    margin-right: 15px;
+    height: 420px;
+  }
+}
+// 页面宽度大于900样式
+
+@media (min-width: 900px) {
+  .quanju {
+    font-size: 0;
+    width: 106%;
+  }
+  .bankuai {
+    display: inline-block;
+    vertical-align: top;
+    width: calc(33.33% - 16px);
+    height: 360px;
+    margin: 12px 8px 0px 0;
+  }
+  .note {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  .duiqi img {
+    width: 80%;
+    margin: 0;
+  }
+
+  .bankuai.img-hide img {
+    transition: transform 0.2s ease-in-out;
+    cursor: pointer;
+  }
+
+  .bankuai.img-hide:hover img {
+    transform: translateY(-4px);
+  }
+}
+
+// 夜间模式页面样式
+@media (prefers-color-scheme: dark) {
+  .bankuai {
+    background: var(--background-dark-color);
+    box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.2);
+  }
+  .bankuai:hover {
+    box-shadow: 2px 4px 16px rgba(0, 0, 0, 0.4);
+  }
+}

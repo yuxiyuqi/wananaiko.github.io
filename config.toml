@@ -94,7 +94,7 @@ weight = 1
 [[languages.en.menu.main]]
 name = "Search"
 url = "/search/"
-weight = 4
+weight = 5
 
 [[languages.en.menu.main]]
 name = "Memos"
@@ -102,14 +102,19 @@ url = "/memos/"
 weight = 2
 
 [[languages.en.menu.main]]
+name = "Goods"
+url = "/goods/"
+weight = 3
+
+[[languages.en.menu.main]]
 name = "Archive"
 url = "/archives/"
-weight = 3
+weight = 4
 
 [[languages.en.menu.main]]
 name = "Links"
 url = "/links/"
-weight = 5
+weight = 6
 
 [languages.zh]
 languageName = ":cn:"
