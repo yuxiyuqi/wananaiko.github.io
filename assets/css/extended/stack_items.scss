@@ -1,3 +1,7 @@
+.inline-links a {
+  display: none;
+}
+
 .stack-list {
   list-style: none;
   overflow: hidden;
@@ -95,10 +99,11 @@ span.stack-item-tag {
   font-size: 0.6rem;
   white-space: nowrap;
   color: var(--tertiary);
+  line-height: 1.4rem;
 }
 
 p.stack-item-description {
-  margin-bottom: 12px !important;
+  margin: 4px 0px 12px 0px;
 }
 
 a.stack-item-link {
