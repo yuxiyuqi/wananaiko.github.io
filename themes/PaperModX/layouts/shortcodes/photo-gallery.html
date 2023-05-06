@@ -3,8 +3,8 @@
   <div class="photo-grid">
     {{ range sort . "date" "desc" }}
     <div class="photo-grid-item">
-      <a href="{{ .url }}" data-lightbox="gallery" data-title="{{ .title }}">
-        <img src="{{ .url }}" alt="{{ .title }}" class="photo-single" />
+      <a href="{{ .url }}" data-title="{{ .title }}" class="photo-single">
+        <img data-src="{{ .url }}" alt="{{ .title }}" class="lazyload" />
       </a>
       <div class="photo-info">
         <div class="photo-description">{{ .description }}</div>
@@ -18,19 +18,10 @@
 </div>
 {{ end }}
 
+<script src="/js/medium-zoom.min.js"></script>
+<script src="/js/lazysizes.min.js"></script>
 <script src="/libs/masonry/masonry.pkgd.min.js"></script>
 <script src="/libs/imagesloaded/imagesloaded.pkgd.min.js"></script>
-<script src="/libs/lightbox2/js/lightbox.min.js"></script>
-<link rel="stylesheet" href="/libs/lightbox2/css/lightbox.min.css" />
-<script
-  src="https://www.wananaiko.com/js/medium-zoom.min.js"
-  data-no-instant
-></script>
-<script
-  type="text/javascript"
-  src="https://www.wananaiko.com/memos/assets/js/view-image.min.js"
-></script>
-
 <style>
   .photo-grid-item {
     width: calc(33.333% - 10px);
@@ -64,22 +55,6 @@
     margin: 0.5rem auto;
   }
 </style>
-
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    var grid = document.querySelector(".photo-grid");
-    var msnry = new Masonry(grid, {
-      itemSelector: ".photo-grid-item",
-      columnWidth: ".photo-grid-item",
-      gutter: 10,
-      percentPosition: true,
-    });
-
-    imagesLoaded(grid).on("progress", function () {
-      msnry.layout();
-    });
-  });
-</script>
 
 <script>
   document.addEventListener("DOMContentLoaded", function () {
