@@ -111,6 +111,9 @@
     width: 40%;
     margin-right: 15px;
     height: 420px;
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    background: var(--entry);
   }
   .title {
     color: var(--text-highlight-color);
