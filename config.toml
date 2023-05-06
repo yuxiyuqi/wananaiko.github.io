@@ -92,13 +92,13 @@ url = "/memos/"
 weight = 1
 
 [[languages.en.menu.main]]
-name = "Stack"
-url = "/stack/"
+name = "Goods"
+url = "/goods/"
 weight = 2
 
 [[languages.en.menu.main]]
-name = "Goods"
-url = "/goods/"
+name = "Stack"
+url = "/stack/"
 weight = 3
 
 [[languages.en.menu.main]]
