@@ -1,12 +1,3 @@
-.post-content hr {
-  margin: 0 16px;
-  height: 0.5px;
-  background: var(--tertiary-bg);
-  opacity: 0.8;
-  border-top: 0;
-  border-bottom: 0;
-}
-
 li.stack-item {
   margin-bottom: 0px;
 }
@@ -61,6 +52,7 @@ ul.stack-item-tags {
 .stack-item-content {
   padding: 8px 16px 0px 16px;
   flex: 1;
+  padding-inline-start: 0px !important;
 }
 
 .stack-item-header {
@@ -105,7 +97,10 @@ ul.stack-item-tags {
 }
 
 .stack-item-divider {
-  border: 0;
-  border-top: 1px solid #ccc;
-  margin: 1rem 0;
+  margin: 0 16px !important;
+  height: 0.5px !important;
+  background: var(--tertiary-bg) !important;
+  opacity: 0.8 !important;
+  border-top: 0 !important;
+  border-bottom: 0 !important;
 }
