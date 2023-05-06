@@ -1,11 +1,4 @@
 // hardware硬件页样式
-.description {
-  font-size: 14px;
-}
-
-.inline-links {
-  display: none;
-}
 
 .bankuai {
   background-color: var(--bankuai-color);
@@ -58,13 +51,6 @@
   line-height: 1.5;
 }
 
-.post-content a {
-  color: var(--primary);
-  box-shadow: none;
-  transition: var(--link-transition);
-  padding-bottom: 2px;
-}
-
 // 页面宽度小于700样式
 
 @media (max-width: 700px) {
@@ -82,18 +68,6 @@
   .note {
     margin: 0 10px 0 10px;
   }
-  .title {
-    color: var(--text-highlight-color);
-    font-family: var(--font-family-teshu);
-    // letter-spacing: 0.5px;
-    font-size: 14px;
-    margin: 0 auto;
-  }
-  .title a {
-    font-size: 14px;
-    // color: var(--text-highlight-color);
-    text-decoration: none;
-  }
 }
 
 // 页面宽度大于700小于900样式
@@ -109,18 +83,6 @@
     width: 40%;
     margin-right: 15px;
     height: 420px;
-  }
-  .title {
-    color: var(--text-highlight-color);
-    font-family: var(--font-family-teshu);
-    // letter-spacing: 0.5px;
-    font-size: 14px;
-    margin: 0 auto;
-  }
-  .title a {
-    font-size: 14px;
-    // color: var(--text-highlight-color);
-    text-decoration: none;
   }
 }
 // 页面宽度大于900样式
@@ -165,6 +127,7 @@
     font-size: 16px;
     // color: var(--text-highlight-color);
     text-decoration: none;
+    box-shadow: none;
   }
 }
 
