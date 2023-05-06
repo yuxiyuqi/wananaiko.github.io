@@ -275,6 +275,8 @@
   </url><url>
     <loc>https://wananaiko.com/newsletter/archives/</loc>
   </url><url>
+    <loc>https://wananaiko.com/photo/</loc>
+  </url><url>
     <loc>https://wananaiko.com/search/</loc>
     <xhtml:link
                 rel="alternate"
@@ -298,5 +300,9 @@
                 hreflang="en"
                 href="https://wananaiko.com/series/"
                 />
+  </url><url>
+    <loc>https://wananaiko.com/apps/</loc>
+  </url><url>
+    <loc>https://wananaiko.com/stack/</loc>
   </url>
 </urlset>
