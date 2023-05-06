@@ -97,11 +97,6 @@ url = "/stack/"
 weight = 2
 
 [[languages.en.menu.main]]
-name = "Search"
-url = "/search/"
-weight = 5
-
-[[languages.en.menu.main]]
 name = "Goods"
 url = "/goods/"
 weight = 3
