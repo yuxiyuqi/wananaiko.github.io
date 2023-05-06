@@ -108,7 +108,10 @@
     color: var(--primary);
     box-shadow: 0 2px 0 var(--secondary);
 }
-
+.description
+{
+    font-size: 14px;
+}
 .post-content a code {
     margin: auto 0;
     border-radius: 0;
