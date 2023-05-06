@@ -90,6 +90,9 @@ ul.stack-item-tags {
   opacity: 0.8 !important;
   border-top: 0 !important;
   border-bottom: 0 !important;
+  margin: 0 0 !important;
+  opacity: 0.65 !important;
+  border: 0.5px solid var(--border) !important;
 }
 
 span.stack-item-tag {
