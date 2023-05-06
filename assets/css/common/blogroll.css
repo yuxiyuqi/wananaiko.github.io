@@ -7,10 +7,10 @@
   border-inline-start: 3px solid var(--primary);
 }
 .links .item {
-  padding: 12px;
+  padding: 16px;
   background: var(--entry);
   border-radius: var(--radius);
-  margin-bottom: var(--gap);
+  margin-bottom: 16px;
   border: 1px solid var(--border);
 }
 

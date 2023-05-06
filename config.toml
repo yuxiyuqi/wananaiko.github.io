@@ -87,19 +87,19 @@ languageName = "English"
 weight = 1
 
 [[languages.en.menu.main]]
-name = "Article"
-url = "/docs/"
+name = "Memos"
+url = "/memos/"
 weight = 1
+
+[[languages.en.menu.main]]
+name = "Stack"
+url = "/stack/"
+weight = 2
 
 [[languages.en.menu.main]]
 name = "Search"
 url = "/search/"
 weight = 5
-
-[[languages.en.menu.main]]
-name = "Memos"
-url = "/memos/"
-weight = 2
 
 [[languages.en.menu.main]]
 name = "Goods"
