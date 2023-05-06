@@ -82,6 +82,18 @@
   .note {
     margin: 0 10px 0 10px;
   }
+  .title {
+    color: var(--text-highlight-color);
+    font-family: var(--font-family-teshu);
+    // letter-spacing: 0.5px;
+    font-size: 14px;
+    margin: 0 auto;
+  }
+  .title a {
+    font-size: 14px;
+    // color: var(--text-highlight-color);
+    text-decoration: none;
+  }
 }
 
 // 页面宽度大于700小于900样式
@@ -97,6 +109,18 @@
     width: 40%;
     margin-right: 15px;
     height: 420px;
+  }
+  .title {
+    color: var(--text-highlight-color);
+    font-family: var(--font-family-teshu);
+    // letter-spacing: 0.5px;
+    font-size: 14px;
+    margin: 0 auto;
+  }
+  .title a {
+    font-size: 14px;
+    // color: var(--text-highlight-color);
+    text-decoration: none;
   }
 }
 // 页面宽度大于900样式
