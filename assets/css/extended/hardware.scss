@@ -1,14 +1,17 @@
 // hardware硬件页样式
 
 .bankuai {
-  background-color: var(--bankuai-color);
-  border-radius: 4px;
+  display: inline-block;
+  vertical-align: top;
+  width: calc(33.33% - 16px);
+  height: 326px;
+  margin: 0 8px 12px 0;
+  list-style: none;
+  overflow: hidden;
+  border-radius: var(--radius);
   border: 1px solid var(--border);
-  margin-top: 16px;
-  padding: 16px;
   background: var(--entry);
-  // box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.08);
-  // transition: all 0.3s cubic-bezier(0, 0, 0.5, 1);
+  padding: 0 16px;
 }
 
 .duiqi {
