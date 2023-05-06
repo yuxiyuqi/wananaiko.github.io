@@ -1,7 +1,7 @@
 ---
 title: "Stack"
 type: "Stack"
-description: We live on tools, tools shape our tastes, and tools come and go frequently. This is a living document writing in Notion with everything that I'm using nowadays. Many engineers have a uses page, you should too.
+description: 我们依靠工具生活，工具塑造了我们的品味，而工具也经常出现和消失。
 ---
 
 {{< stack_items >}}
