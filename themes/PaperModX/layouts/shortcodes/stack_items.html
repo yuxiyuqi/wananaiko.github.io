@@ -1,10 +1,8 @@
-<!-- Save this content as 'stack_items.html' in your 'layouts/shortcodes' folder -->
-
 {{ $items := split (print .Inner) "\n" }}
-<ul class="stack-list">
+<div class="stack-list">
   {{ range $index, $item := $items }} {{- $item := split $item "|" }} {{- if ge
   (len $item) 5 }}
-  <li class="stack-item">
+  <div class="stack-item">
     <div class="stack-item-image-container">
       <img
         alt="{{ index $item 1 }}"
@@ -32,15 +30,17 @@
           </div>
           <p class="stack-item-description">{{ index $item 3 }}</p>
         </div>
-        <ul class="stack-item-tags">
-          {{ $tags := split (index $item 4) "," }} {{ range $tags }}
-          <li>{{ . }}</li>
+        {{- $tags := split (index $item 4) "," }} {{- if ge (len $tags) 1 }}
+        <div class="stack-item-tags">
+          {{ range $tags }}
+          <span class="stack-item-tag">{{ . }}</span>
           {{ end }}
-        </ul>
+        </div>
+        {{- end }}
       </div>
     </div>
-  </li>
+  </div>
   {{ if lt $index (sub (len $items) 1) }}
   <hr class="stack-item-divider" />
   {{ end }} {{- end }} {{- end }}
-</ul>
+</div>
