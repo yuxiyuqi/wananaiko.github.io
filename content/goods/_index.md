@@ -15,7 +15,7 @@ description: 用过的，值得一推的好东西。
 {{<hardware img="https://images.wananaiko.com/2023/05/rSy4Gr.png" title="周八枚" jiage="Light Lab Lens" info="价格便宜又好用的国产镜头，版本很多，建议买最新的，缩头的版本也不错。"url="/apple_tv">}}
 {{<hardware img="https://images.wananaiko.com/2023/05/yTIpjf.png" title="X-Pro3" jiage="FujiFlim" info="外观颜值很高，使用下来体验也还不错，可惜没有翻转屏。"url="https://fujifilm-x.com/zh-cn/products/cameras/x-pro3">}}
 {{<hardware img="https://images.wananaiko.com/2023/05/k3pmhk.png" title="DS920+" jiage="Synology" info="家用NAS存储设备比较好的选择，使用外网访问体验也很好，可玩性非常高。"url="https://www.suncan.com.cn/product/ds920plus">}}
-{{<hardware img="https://images.wananaiko.com/2023/05/5WjX1e.png" title="T7" jiage="Samsung" info="包里随身携带的存储，速度很快很稳定。"url="/apple_tv">}}
+{{<hardware img="https://images.wananaiko.com/2023/05/5WjX1e.png" title="T7" jiage="Samsung" info="包里随身携带的存储，小巧好看，速度很快很稳定。"url="/apple_tv">}}
 {{<hardware img="https://images.wananaiko.com/2023/05/NUAojl.png" title="UltraFine 5K" jiage="LG" info="色彩细腻，5K观感非常舒适。除了咸鱼买二手，现在更推荐买 Studio Display。"url="https://www.lg.com/tw/monitors/lg-27MD5KL-B">}}
 {{<hardware img="https://images.wananaiko.com/2023/05/qDMMEv.png" title="Switch" jiage="Nintendo" info="又便携又能外接，工作累了随时拿起来休闲一把。"url="https://www.nintendo.com">}}
 {{<hardware img="https://images.wananaiko.com/2023/05/r7RJde.png" title="绿珠洗发水" jiage="Rene Furterer" info="一直用一直用，从来没有换过其他家品牌的想法，男士去油洗发水首选。"url="https://www.renefurtererhk.com">}}
