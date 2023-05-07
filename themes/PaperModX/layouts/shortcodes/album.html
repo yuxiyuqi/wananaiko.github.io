@@ -1,7 +1,7 @@
 <style>
     .container {
         column-count: 3;
-        column-gap: 20px;
+        column-gap: 10px;
         /* padding: 20px; */
         box-sizing: border-box;
         max-width: 1200px;
@@ -14,7 +14,17 @@
         width: 100%;
         margin-bottom: 20px;
         break-inside: avoid;
+        transition: all .3s ease-in-out !important;
+        padding: 8px;
     }
+
+    .memos-photo:hover {
+    padding: 8px;
+    cursor: pointer;
+    transition: all .3s ease-in-out !important;
+    border-radius: var(--radius);
+    background: var(--entry);
+}
 
     .memos-photo > img {
         display: block;
