@@ -14,17 +14,11 @@
         width: 100%;
         margin-bottom: 20px;
         break-inside: avoid;
-        transition: all .3s ease-in-out !important;
         padding: 8px;
+        border-radius: var(--radius);
+        border: 1px solid var(--border);
+        background: var(--entry);
     }
-
-    .memos-photo:hover {
-    padding: 8px;
-    cursor: pointer;
-    transition: all .3s ease-in-out !important;
-    border-radius: var(--radius);
-    background: var(--entry);
-}
 
     .memos-photo > img {
         display: block;
@@ -60,7 +54,6 @@
             column-count: 2;
         }
     }
-
 </style>
 
 <div id="album" class="container"></div>
