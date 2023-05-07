@@ -18,4 +18,4 @@ description: 用过的，值得一推的好东西。
 {{<hardware img="https://images.wananaiko.com/2023/05/5WjX1e.png" title="T7" jiage="Samsung" info="包里随身携带的存储，速度很快很稳定。"url="/apple_tv">}}
 {{<hardware img="https://images.wananaiko.com/2023/05/NUAojl.png" title="UltraFine 5K" jiage="LG" info="色彩细腻，5K观感非常舒适。除了咸鱼买二手，现在更推荐买 Studio Display。"url="https://www.lg.com/tw/monitors/lg-27MD5KL-B">}}
 {{<hardware img="https://images.wananaiko.com/2023/05/qDMMEv.png" title="Switch" jiage="Nintendo" info="又便携又能外接，工作累了随时拿起来休闲一把。"url="https://www.nintendo.com">}}
-{{<hardware img="https://images.wananaiko.com/2023/05/r7RJde.png" title="绿珠洗发水" jiage="Rene Furterer" info="一直用一直用，从来没有换过其他家品牌的想法，男生去油洗发水首选。"url="https://www.renefurtererhk.com">}}
+{{<hardware img="https://images.wananaiko.com/2023/05/r7RJde.png" title="绿珠洗发水" jiage="Rene Furterer" info="一直用一直用，从来没有换过其他家品牌的想法，男士去油洗发水首选。"url="https://www.renefurtererhk.com">}}
