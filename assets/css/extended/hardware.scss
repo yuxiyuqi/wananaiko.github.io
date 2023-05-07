@@ -45,13 +45,15 @@
 .jiage {
   color: #999;
   font-size: 14px;
-  margin: 0 0 6px 0;
+  line-height: 1.4rem;
   font-family: var(--font-family-code);
 }
 
 .note {
   font-size: 14px;
   line-height: 1.5;
+  color: var(--secondary);
+  margin-top: 0.5rem;
 }
 
 // 页面宽度小于700样式
@@ -142,12 +144,13 @@
     display: inline-block;
     vertical-align: top;
     width: calc(33.33% - 16px);
-    height: 320px;
+    height: 312px;
     margin: 0px 8px 12px 0;
   }
   .note {
     font-size: 14px;
     line-height: 1.3rem;
+    margin-top: 0.5rem;
   }
   .duiqi img {
     width: 80%;
