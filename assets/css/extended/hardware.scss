@@ -73,7 +73,7 @@
     margin: 0 10px !important;
   }
   .jiage {
-    margin: 0 10px 0px 10px;
+    margin: 0 10px px 10px;
   }
 
   .duiqi img {
@@ -82,9 +82,8 @@
   }
 
   .note {
-    font-size: 14px;
     line-height: 1.3rem;
-    margin-top: 0.5rem;
+    margin: 0.5rem 10px 0 10px;
   }
   .title {
     color: var(--text-highlight-color);
