@@ -16,7 +16,7 @@
     --secondary: rgb(108, 108, 108);
     --tertiary: rgb(158, 158, 158);
     --tertiary-bg: rgb(214, 214, 214);
-    --content: rgb(0, 0, 0, 82);
+    --content: rgb(0, 0, 0, .82);
     --code-bg: rgb(245, 245, 245);
     --border: rgb(238, 238, 238);
     --link-background-color: #e8e3f7;
