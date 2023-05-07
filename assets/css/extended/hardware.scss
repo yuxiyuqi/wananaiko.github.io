@@ -51,9 +51,8 @@
 
 .note {
   font-size: 14px;
-  line-height: 1.5;
+  line-height: 1.3rem;
   color: var(--secondary);
-  margin-top: 0.5rem;
 }
 
 // 页面宽度小于700样式
@@ -74,7 +73,7 @@
     margin: 0 10px !important;
   }
   .jiage {
-    margin: 0 10px 6px 10px;
+    margin: 0 10px 0px 10px;
   }
 
   .duiqi img {
@@ -83,6 +82,7 @@
   }
 
   .note {
+    line-height: 1.3rem;
     margin: 0 10px 0 10px;
   }
   .title {
