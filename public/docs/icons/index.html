@@ -1,7 +1,33 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto">
 
-<head><meta charset="utf-8" />
+<head>
+  
+<style>
+  .cursor {
+    position: fixed;
+    z-index: 9999;
+    pointer-events: none;
+    mix-blend-mode: difference;
+    transition: opacity .4s ease, transform .4s ease;
+    will-change: transform, opacity;
+  }
+
+  .cursor--small {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #000;
+  }
+
+  .cursor--large {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid #000;
+    background-color: rgba(0, 0, 0, 0);
+  }
+</style><meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta
   name="viewport"
@@ -15,8 +41,8 @@
 /> <meta name="description" content="Explain how to use icons in PaperModX"> <meta name="author" content="wananaiko"> <link rel="canonical" href="https://wananaiko.com/docs/icons/">
 <link
   crossorigin="anonymous"
-  href="/assets/css/stylesheet.min.1ec9e0066aafe5e121d87918cc483d7438446a7792ea5fcbf9be4ce39ebf9724.css"
-  integrity="sha256-HsngBmqv5eEh2HkYzEg9dDhEaneS6l/L&#43;b5M456/lyQ="
+  href="/assets/css/stylesheet.min.2df70b80bddc6351e8ac91c440bf75274f9c7b7aaa4ca4473d734433472d7b60.css"
+  integrity="sha256-LfcLgL3cY1HorJHEQL91J0&#43;ce3qqTKRHPXNEM0cte2A="
   rel="preload stylesheet"
   as="style"
 /> <link rel="icon" href="https://images.wananaiko.com/favicon.ico"> <link rel="apple-touch-icon" href="https://wananaiko.com/apple-touch-icon.png"> <link rel="alternate" hreflang="en" href="https://wananaiko.com/docs/icons/" />
@@ -262,6 +288,11 @@ function toggleThemeListener() {
                 </a>
             </li>
             <li>
+                <a href="https://wananaiko.com/gallery/" title="Gallery"
+                >Gallery
+                </a>
+            </li>
+            <li>
                 <a href="https://wananaiko.com/goods/" title="Goods"
                 >Goods
                 </a>
@@ -283,16 +314,7 @@ function toggleThemeListener() {
             </li>
         </ul>
     </nav>
-</header>
-
-<script src="/js/medium-zoom.min.js"></script>
-<script src="/js/lazysizes.min.js"></script>
-
-
-<script>
-  window.ViewImage && ViewImage.init(".container img");
-</script>
-<main class="main post">
+</header><main class="main post">
 
 <article class="post-single">
   <header class="post-header">
@@ -704,6 +726,43 @@ function toggleThemeListener() {
 
 
 
+<div class="cursor cursor--small"></div>
+<div class="cursor cursor--large"></div>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    
+    const cursorSmall = document.querySelector('.cursor--small');
+    const cursorLarge = document.querySelector('.cursor--large');
+
+    
+    function updateCursorPosition(event) {
+      const x = event.clientX;
+      const y = event.clientY;
+
+      cursorSmall.style.transform = `translate(${x}px, ${y}px)`;
+      cursorLarge.style.transform = `translate(${x}px, ${y}px)`;
+    }
+
+    
+    document.addEventListener('mousemove', updateCursorPosition);
+
+    
+    function setCursorStyle(style) {
+      cursorSmall.style.opacity = style.smallOpacity || 1;
+      cursorLarge.style.opacity = style.largeOpacity || 1;
+      cursorLarge.style.transform = style.largeTransform || '';
+    }
+
+    
+    const links = document.querySelectorAll('a, button, input, textarea');
+    links.forEach(link => {
+      link.addEventListener('mouseover', () => setCursorStyle({ smallOpacity: 0, largeOpacity: 0.5 }));
+      link.addEventListener('mouseout', () => setCursorStyle({ smallOpacity: 1, largeOpacity: 1 }));
+    });
+  });
+</script>
 </body>
 
 </html>

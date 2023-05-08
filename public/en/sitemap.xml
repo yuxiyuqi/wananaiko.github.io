@@ -269,13 +269,13 @@
   </url><url>
     <loc>https://wananaiko.com/docs/archives/</loc>
   </url><url>
+    <loc>https://wananaiko.com/gallery/</loc>
+  </url><url>
     <loc>https://wananaiko.com/goods/</loc>
   </url><url>
     <loc>https://wananaiko.com/memos/</loc>
   </url><url>
     <loc>https://wananaiko.com/newsletter/archives/</loc>
-  </url><url>
-    <loc>https://wananaiko.com/photo/</loc>
   </url><url>
     <loc>https://wananaiko.com/search/</loc>
     <xhtml:link
@@ -300,8 +300,6 @@
                 hreflang="en"
                 href="https://wananaiko.com/series/"
                 />
-  </url><url>
-    <loc>https://wananaiko.com/apps/</loc>
   </url><url>
     <loc>https://wananaiko.com/stack/</loc>
   </url>
