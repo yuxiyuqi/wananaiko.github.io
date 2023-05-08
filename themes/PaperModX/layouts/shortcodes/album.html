@@ -1,142 +1,261 @@
 <style>
+  .container {
+    column-count: 3;
+    column-gap: 10px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .photo-cover {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    background: var(--entry);
+    padding: 8px;
+    margin-bottom: 1.5rem;
+  }
+
+  .photo-cover .photo-img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .photo-cover:hover .photo-img {
+    transform: scale(1.02);
+  }
+
+  .photo-title,
+  .photo-time {
+    display: block;
+    font-size: 14px;
+    margin-top: 5px;
+  }
+
+  .photo-title {
+    font-size: 14px;
+    line-height: 1.4rem;
+    margin-top: 0.8rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .photo-time {
+    color: var(--tertiary);
+    font-size: 12px;
+    line-height: 1.4rem;
+    font-family: var(--font-family-code);
+    margin-top: 0;
+  }
+
+  @media (max-width: 768px) {
     .container {
-        column-count: 3;
-        column-gap: 10px;
-        /* padding: 20px; */
-        box-sizing: border-box;
-        max-width: 1200px;
-        margin: 0 auto;
+      column-count: 2;
     }
+  }
 
-    .memos-photo {
-        box-sizing: border-box;
-        display: inline-block;
-        width: 100%;
-        margin-bottom: 20px;
-        break-inside: avoid;
-        padding: 8px;
-        border-radius: var(--radius);
-        border: 1px solid var(--border);
-        background: var(--entry);
-    }
+  .gallery-photo {
+    min-height: 5rem;
+    width: 24.97%;
+    padding: 4px;
+    position: relative;
+  }
 
-    .memos-photo > img {
-        display: block;
-        width: 100%;
-        height: auto;
-        margin: 0 0 0.6rem;
-    }
+  .gallery-photo a {
+    border-radius: 8px;
+    display: block;
+    overflow: hidden;
+  }
 
-    .memos-photo span.photo-time,
-    .memos-photo span.photo-title {
-        display: block;
-        font-size: 14px;
-        margin-top: 5px;
-    }
+  .gallery-photo img {
+    display: block;
+    width: 100%;
+    animation: fadeIn 1s;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out !important;
+  }
 
-    .memos-photo span.photo-title {
-        font-size: 14px;
-        line-height: 1.4rem;
-        margin-top: 0.8rem;
-        margin-bottom: 0.2rem;
-    }
+  .gallery-photo span.photo-title,
+  .gallery-photo span.photo-time {
+    max-width: calc(100% - 7px);
+    line-height: 1.8;
+    position: absolute;
+    left: 4px;
+    font-size: 14px;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 0px 8px;
+    color: #fff;
+    animation: fadeIn 1s;
+  }
 
-    .memos-photo span.photo-time {
-        color: var(--tertiary);
-        font-size: 12px;
-        line-height: 1.4rem;
-        font-family: var(--font-family-code);
-        margin-top: 0;
-    }
+  .gallery-photo span.photo-title {
+    bottom: 4px;
+    border-radius: 0 8px 0 8px;
+  }
 
-    @media (max-width: 768px) {
-        .container {
-            column-count: 2;
-        }
-    }
+  .gallery-photo span.photo-time {
+    top: 4px;
+    border-radius: 8px 0 8px 0;
+  }
+
+  .gallery-photo:hover img {
+    transform: scale(1.02);
+  }
+
+  .gallery-photo:hover .gallery-photo-overlay {
+    opacity: 1;
+  }
+
+  .gallery-photo-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: opacity 0.2s ease-in-out;
+  }
+
+  .gallery-photo-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 0.5rem;
+    color: white;
+    font-size: 1rem;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    transition: opacity 0.2s ease-in-out;
+  }
+
+  .gallery-photo:hover .gallery-photo-text {
+    opacity: 1;
+  }
+  .photo-img-container-wrap {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--radius);
+  }
+
+  .photo-img-container-wrap img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .photo-cover:hover .photo-img-container-wrap img {
+    transform: scale(1.05);
+  }
+
+  .photo-img-container-wrap img {
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .photo-cover:hover .photo-img-container-wrap img:hover {
+    transform: scale(1.05);
+  }
 </style>
 
 <div id="album" class="container"></div>
 
 <script>
-    document.addEventListener("DOMContentLoaded", () => {
-        memoAlbum();
-    });
-    function memoAlbum(numb) {
-        let limit = numb || 8;
-        var memoUrl = "https://memo.wananaiko.com/";
-        var galleryUrl = memoUrl + "api/memo/all?rowStatus=NORMAL&limit=" + limit + "&t" +
-                "ag=相册";
-        let nowNum = 1;
-        fetch(galleryUrl)
-            .then((res) => res.json())
-            .then((resdata) => {
-                var result = "",
-                    resultAll = "",
-                    data = resdata.data;
-                for (var i = 0; i < data.length; i++) {
-                    var galleryTitle = data[i]
-                        .content
-                        .replace("#相册 ", "");
-                    var imgs = galleryTitle.match(/\!\[(.*?)\s*(.*?)\]\((.*?)\)/g);
-                    //解析 content 内 md 格式图片
-                    if (imgs) {
-                        imgs.forEach((item) => {
-                            if (nowNum < limit) {
-                                nowNum++;
-                                let img = item.replace(/!\[.*?\]\((.*?)\)/g, "$1"),
-                                    time,
-                                    title,
-                                    tmp = item.replace(/!\[(.*?)\]\(.*?\)/g, "$1");
-                                if (tmp.indexOf(" ") != -1) {
-                                    time = tmp.split(" ")[0];
-                                    title = tmp.split(" ")[1];
-                                } else 
-                                    title = tmp;
-                                result += `<div class="memos-photo"><img class="photo-img" loading='lazy' decoding="async" src="${img}"></a>`;
-                                title
-                                    ? (result += `<span class="photo-title">${title}</span>`)
-                                    : "";
-                                time
-                                    ? (result += `<span class="photo-time">${time}</span>`)
-                                    : "";
-                                result += `</div>`;
-                            }
-                        });
-                    }
-                    //解析内置资源文件
-                    if (data[i].resourceList && data[i].resourceList.length > 0) {
-                        var resourceList = data[i].resourceList;
-                        for (var j = 0; j < resourceList.length; j++) {
-                            var galleryTime = new Date(resourceList[j].createdTs * 1000).toLocaleString();
-                            var restype = resourceList[j]
-                                .type
-                                .slice(0, 5);
-                            var resexlink = resourceList[j].externalLink;
-                            var resLink = "",
-                                fileId = "";
-                            if (resexlink) {
-                                resLink = resexlink;
-                            } else {
-                                fileId = resourceList[j].publicId || resourceList[j].filename;
-                                resLink = memoUrl + "o/r/" + resourceList[j].id + "/" + fileId;
-                            }
-                            if (restype == "image" && nowNum <= limit) {
-                                nowNum++;
-                                result += '<div class="memos-photo"><img class="photo-img" loading="lazy" decoding="async' +
-                                        '" src="' + resLink + '"/><span class="photo-title">' + galleryTitle + '</span>' +
-                                        '<span class="photo-time">' + galleryTime + "</span></div>";
-                            }
-                        }
-                    }
-                }
-                var galleryDom = document.querySelector("#album");
-                resultAll = result;
-                galleryDom.innerHTML = resultAll;
-                //相对时间
-                window.Lately && Lately.init({target: ".photo-time"});
+  document.addEventListener("DOMContentLoaded", () => {
+    memoAlbum();
+  });
+
+  function memoAlbum(numb) {
+    let limit = numb || 8;
+    var memoUrl = "https://memo.wananaiko.com/";
+    var galleryUrl =
+      memoUrl +
+      "api/memo/all?rowStatus=NORMAL&limit=" +
+      limit +
+      "&t" +
+      "ag=相册";
+    let nowNum = 1;
+    fetch(galleryUrl)
+      .then((res) => res.json())
+      .then((resdata) => {
+        var result = "",
+          resultAll = "",
+          data = resdata.data;
+        for (var i = 0; i < data.length; i++) {
+          var galleryTitle = data[i].content.replace("#相册 ", "");
+          var imgs = galleryTitle.match(/\!\[(.*?)\s*(.*?)\]\((.*?)\)/g);
+          //解析 content 内 md 格式图片
+          if (imgs) {
+            imgs.forEach((item) => {
+              if (nowNum < limit) {
+                nowNum++;
+                let img = item.replace(/!\[.*?\]\((.*?)\)/g, "$1"),
+                  time,
+                  title,
+                  tmp = item.replace(/!\[(.*?)\]\(.*?\)/g, "$1");
+                if (tmp.indexOf(" ") != -1) {
+                  time = tmp.split(" ")[0];
+                  title = tmp.split(" ")[1];
+                } else title = tmp;
+                result += `<div class="photo-cover"><div class="photo-img-container-wrap"><img class="photo-img" loading='lazy' decoding="async" src="${img}"></div>`;
+                title
+                  ? (result += `<span class="photo-title">${title}</span>`)
+                  : "";
+                time
+                  ? (result += `<span class="photo-time">${time}</span>`)
+                  : "";
+                result += `</div>`;
+              }
             });
-    }
+          }
+          //解析内置资源文件
+          if (data[i].resourceList && data[i].resourceList.length > 0) {
+            var resourceList = data[i].resourceList;
+            for (var j = 0; j < resourceList.length; j++) {
+              var galleryTime = new Date(
+                resourceList[j].createdTs * 1000
+              ).toLocaleString();
+              var restype = resourceList[j].type.slice(0, 5);
+              var resexlink = resourceList[j].externalLink;
+              var resLink = "",
+                fileId = "";
+              if (resexlink) {
+                resLink = resexlink;
+              } else {
+                fileId = resourceList[j].publicId || resourceList[j].filename;
+                resLink = memoUrl + "o/r/" + resourceList[j].id + "/" + fileId;
+              }
+              if (restype == "image" && nowNum <= limit) {
+                nowNum++;
+                result +=
+                  '<div class="photo-cover"><img class="photo-img" loading="lazy" decoding="async' +
+                  '" src="' +
+                  resLink +
+                  '"/><span class="photo-title">' +
+                  galleryTitle +
+                  "</span>" +
+                  '<span class="photo-time">' +
+                  galleryTime +
+                  "</span></div>";
+              }
+            }
+          }
+        }
+        var galleryDom = document.querySelector("#album");
+        resultAll = result;
+        galleryDom.innerHTML = resultAll;
+        //相对时间
+        window.Lately && Lately.init({ target: ".photo-time" });
+      });
+  }
 </script>
 
 <script defer="defer" src="https://immmmm.com/waterfall.min.js"></script>
@@ -146,6 +265,5 @@
 <script type="text/javascript" src="/js/view-image.min.js"></script>
 
 <script>
-    window.ViewImage && ViewImage.init(".container img");
+  window.ViewImage && ViewImage.init(".photo-cover img");
 </script>
-</head>
