@@ -17,7 +17,7 @@ https://bobtranslate.com|Bob|https://images.wananaiko.com/2023/05/nA4Pcn.png|一
 
 https://pilotmoon.com/popclip|Popclip|https://images.wananaiko.com/2023/05/p9fbaa.png|老牌鼠标划词工具，玩法很多，很方便，开机自启的应用之一。|macOS
 
-https://pilotmoon.com/popclip|MenubarX|https://images.wananaiko.com/2023/05/g21VNn.png|相当于在菜单栏上放一个 mini 浏览器，我把 memos 发布单页、小蓝鸟、火山翻译放了上去。|macOS
+https://menubarx.app|MenubarX|https://images.wananaiko.com/2023/05/g21VNn.png|相当于在菜单栏上放一个 mini 浏览器，我把 memos 发布单页、小蓝鸟、火山翻译放了上去。|macOS
 
 https://www.macgpt.com|MacGPT|https://images.wananaiko.com/2023/05/ojwuJD.png|目前为止用过的最好用的 ChatGPT 客户端，除了支持快捷键呼出窗口，最好用的是可以在任何地方使用。|macOS
 
