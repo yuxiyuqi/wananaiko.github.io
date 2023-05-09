@@ -37,7 +37,7 @@ https://eagle.cool|Eagle|https://images.wananaiko.com/2023/05/kzfVTA.png|很好�
 
 https://reederapp.com|Reeder|https://images.wananaiko.com/2023/05/zswSGY.png|好用的RSS阅读工具，还支持订阅小蓝鸟用户，界面很简洁美观。|macOS
 
-https://nssurge.com|Surge|https://images.wananaiko.com/2023/05/Qzuv1o.png|比较好用的网络调试工具。|macOS, iOS
-
 https://www.macbartender.com|Bartender|https://images.wananaiko.com/2023/05/i0Ug1D.png|必备的隐藏菜单应用，已经包含在Setapp中，也是开机自启动的应用之一。|macOS
+
+https://nssurge.com|Surge|https://images.wananaiko.com/2023/05/Qzuv1o.png|比较好用的网络调试工具。|macOS, iOS
 {{< /stack_items >}}
