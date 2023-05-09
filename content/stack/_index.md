@@ -28,4 +28,6 @@ https://nicelydone.club|Nicelydone|https://images.wananaiko.com/2023/05/Umzt45.p
 https://github.com/features/copilot|GitHub Copilot|https://images.wananaiko.com/2023/05/ambmo-f2tpi.png|在 VSCode 里使用起来丝滑流畅，AI 可以自动补全代码，还能上下文联想生成代码。|macOS
 
 https://omnivore.app|Omnivore|https://images.wananaiko.com/2023/05/We88qa.png|目前作为 Read it later 来用，iOS 端可以自动朗读内容，还挺方便的，只是中英混合的话读起来有点奇怪，偶尔也会跳过一些内容。|macOS, iOS
+
+https://rime.im|Rime 输入法|https://images.wananaiko.com/2023/05/Rime2.png|不用担心剪切板被监听，也不会偷偷上传用户数据，也没有广告，也没有卡顿过。|macOS, iOS
 {{< /stack_items >}}
