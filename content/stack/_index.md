@@ -30,4 +30,14 @@ https://github.com/features/copilot|GitHub Copilot|https://images.wananaiko.com/
 https://omnivore.app|Omnivore|https://images.wananaiko.com/2023/05/We88qa.png|目前作为 Read it later 来用，iOS 端可以自动朗读内容，还挺方便的，只是中英混合的话读起来有点奇怪，偶尔也会跳过一些内容。|macOS, iOS
 
 https://rime.im|Rime 输入法|https://images.wananaiko.com/2023/05/Rime2.png|不用担心剪切板被监听，也不会偷偷上传用户数据，也没有广告，也没有卡顿过。|macOS, iOS
+
+https://figma.com|Figma|https://images.wananaiko.com/2023/05/JKfJvg.png|主力设计工具，也是近几年热门的 UI 设计工具，开个网页就可以开始设计真的很方便。|macOS, iOS
+
+https://eagle.cool|Eagle|https://images.wananaiko.com/2023/05/kzfVTA.png|很好用的设计素材管理工具，通过收藏的图片来获取灵感。|macOS
+
+https://reederapp.com|Reeder|https://images.wananaiko.com/2023/05/zswSGY.png|好用的RSS阅读工具，还支持订阅小蓝鸟用户，界面很简洁美观。|macOS
+
+https://nssurge.com|Surge|https://images.wananaiko.com/2023/05/Qzuv1o.png|比较好用的网络调试工具。|macOS, iOS
+
+https://www.macbartender.com|Bartender|https://images.wananaiko.com/2023/05/i0Ug1D.png|必备的隐藏菜单应用，已经包含在Setapp中，也是开机自启动的应用之一。|macOS
 {{< /stack_items >}}
