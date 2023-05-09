@@ -59,10 +59,6 @@ comments = false
 """
 
   [[params.socialIcons]]
-  name = "github-simple"
-  url = "https://github.com/wananaiko"
-
-  [[params.socialIcons]]
   name = "rss-simple"
   url = "index.xml"
 
