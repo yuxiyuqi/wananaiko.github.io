@@ -1,68 +1,38 @@
 <style>
-  .container {
-    column-count: 3;
-    column-gap: 10px;
-    max-width: 1200px;
+  .post-content a {
+    color: var(--primary);
+    box-shadow: none !important;
+    transition: none !important;
+    padding-bottom: 0 !important;
+  }
+
+  .post-content img {
+    border-radius: 4px;
     margin: 0 auto;
   }
 
-  .photo-cover {
-    position: relative;
-    overflow: hidden;
-    border-radius: var(--radius);
-    border: 1px solid var(--border);
-    background: var(--entry);
-    padding: 8px;
-    margin-bottom: 1.5rem;
+  body {
+    max-width: 790px;
+    margin: 0 auto;
   }
 
-  .photo-cover .photo-img {
-    display: block;
-    width: 100%;
-    height: auto;
+  #article-container a img {
     margin: 0;
-    object-fit: cover;
-    object-position: center;
-    transition: transform 0.2s ease-in-out;
+    border-radius: 0;
   }
 
-  .photo-cover:hover .photo-img {
-    transform: scale(1.02);
-  }
-
-  .photo-title,
-  .photo-time {
-    display: block;
-    font-size: 14px;
-    margin-top: 5px;
-  }
-
-  .photo-title {
-    font-size: 14px;
-    line-height: 1.4rem;
-    margin-top: 0.8rem;
-    margin-bottom: 0.2rem;
-  }
-
-  .photo-time {
-    color: var(--tertiary);
-    font-size: 12px;
-    line-height: 1.4rem;
-    font-family: var(--font-family-code);
-    margin-top: 0;
-  }
-
-  @media (max-width: 768px) {
-    .container {
-      column-count: 2;
-    }
+  .gallery-photos {
+    width: 100%;
+    margin-top: 10px;
   }
 
   .gallery-photo {
     min-height: 5rem;
-    width: 24.97%;
+    width: calc(100% / 3 - 8px);
     padding: 4px;
     position: relative;
+    box-sizing: border-box;
+    margin-bottom: 8px;
   }
 
   .gallery-photo a {
@@ -103,167 +73,106 @@
   }
 
   .gallery-photo:hover img {
-    transform: scale(1.02);
+    transform: scale(1.1);
   }
 
-  .gallery-photo:hover .gallery-photo-overlay {
-    opacity: 1;
+  @media screen and (max-width: 1100px) {
+    .gallery-photo {
+      width: 33.3%;
+    }
   }
 
-  .gallery-photo-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    transition: opacity 0.2s ease-in-out;
+  @media screen and (max-width: 768px) {
+    .gallery-photo {
+      width: 49.9%;
+      padding: 3px;
+    }
+
+    .gallery-photo span.photo-time {
+      display: none;
+    }
+
+    .gallery-photo span.photo-title {
+      font-size: 12px;
+      line-height: 1.4rem;
+    }
+
+    .gallery-photo span.photo-title {
+      left: 3px;
+      bottom: 3px;
+    }
   }
 
-  .gallery-photo-text {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    padding: 0.5rem;
-    color: white;
-    font-size: 1rem;
-    text-align: center;
-    background-color: rgba(0, 0, 0, 0.7);
-    transition: opacity 0.2s ease-in-out;
-  }
-
-  .gallery-photo:hover .gallery-photo-text {
-    opacity: 1;
-  }
-  .photo-img-container-wrap {
-    position: relative;
-    overflow: hidden;
-    border-radius: var(--radius);
-  }
-
-  .photo-img-container-wrap img {
-    display: block;
-    width: 100%;
-    height: auto;
-    margin: 0;
-    object-fit: cover;
-    object-position: center;
-    transition: transform 0.2s ease-in-out;
-  }
-
-  .photo-cover:hover .photo-img-container-wrap img {
-    transform: scale(1.05);
-  }
-
-  .photo-img-container-wrap img {
-    transition: transform 0.2s ease-in-out;
-  }
-
-  .photo-cover:hover .photo-img-container-wrap img:hover {
-    transform: scale(1.05);
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
   }
 </style>
 
-<div id="album" class="container"></div>
+<div class="gallery-photos page">
+  <!-- <img src="/img/loading.svg" style="margin: auto" /> -->
+</div>
 
 <script>
-  document.addEventListener("DOMContentLoaded", () => {
-    memoAlbum();
-  });
-
-  function memoAlbum(numb) {
-    let limit = numb || 1000;
-    var memoUrl = "https://memo.wananaiko.com/";
-    var galleryUrl =
-      memoUrl +
-      "api/memo/all?rowStatus=NORMAL&limit=" +
-      limit +
-      "&t" +
-      "ag=相册";
-    let nowNum = 1;
-    fetch(galleryUrl)
+  photos();
+  function photos() {
+    fetch("https://memo.wananaiko.com/api/memo?creatorId=1&tag=相册")
       .then((res) => res.json())
-      .then((resdata) => {
-        var result = "",
-          resultAll = "",
-          data = resdata.data;
-        for (var i = 0; i < data.length; i++) {
-          var galleryTitle = data[i].content.replace("#相册 ", "");
-          var imgs = galleryTitle.match(/\!\[(.*?)\s*(.*?)\]\((.*?)\)/g);
-          //解析 content 内 md 格式图片
-          if (imgs) {
-            imgs.forEach((item) => {
-              if (nowNum < limit) {
-                nowNum++;
-                let img = item.replace(/!\[.*?\]\((.*?)\)/g, "$1"),
-                  time,
-                  title,
-                  tmp = item.replace(/!\[(.*?)\]\(.*?\)/g, "$1");
-                if (tmp.indexOf(" ") != -1) {
-                  time = tmp.split(" ")[0];
-                  title = tmp.split(" ")[1];
-                } else title = tmp;
-                result += `<div class="photo-cover"><div class="photo-img-container-wrap"><img class="photo-img" loading='lazy' decoding="async" src="${img}"></div>`;
-                title
-                  ? (result += `<span class="photo-title">${title}</span>`)
-                  : "";
-                time
-                  ? (result += `<span class="photo-time">${time}</span>`)
-                  : "";
-                result += `</div>`;
-              }
-            });
-          }
-          //解析内置资源文件
-          if (data[i].resourceList && data[i].resourceList.length > 0) {
-            var resourceList = data[i].resourceList;
-            for (var j = 0; j < resourceList.length; j++) {
-              var galleryTime = new Date(
-                resourceList[j].createdTs * 1000
-              ).toLocaleString();
-              var restype = resourceList[j].type.slice(0, 5);
-              var resexlink = resourceList[j].externalLink;
-              var resLink = "",
-                fileId = "";
-              if (resexlink) {
-                resLink = resexlink;
-              } else {
-                fileId = resourceList[j].publicId || resourceList[j].filename;
-                resLink = memoUrl + "o/r/" + resourceList[j].id + "/" + fileId;
-              }
-              if (restype == "image" && nowNum <= limit) {
-                nowNum++;
-                result +=
-                  '<div class="photo-cover"><img class="photo-img" loading="lazy" decoding="async' +
-                  '" src="' +
-                  resLink +
-                  '"/><span class="photo-title">' +
-                  galleryTitle +
-                  "</span>" +
-                  '<span class="photo-time">' +
-                  galleryTime +
-                  "</span></div>";
-              }
-            }
-          }
-        }
-        var galleryDom = document.querySelector("#album");
-        resultAll = result;
-        galleryDom.innerHTML = resultAll;
-        //相对时间
+      .then((data) => {
+        let html = "",
+          imgs = [];
+        data.data.forEach((item) => {
+          imgs = imgs.concat(item.content.match(/\!\[.*?\]\(.*?\)/g));
+        });
+        imgs.forEach((item) => {
+          let img = item.replace(/!\[.*?\]\((.*?)\)/g, "$1"),
+            time,
+            title,
+            tat = item.replace(/!\[(.*?)\]\(.*?\)/g, "$1");
+          if (tat.indexOf(" ") != -1) {
+            time = tat.split(" ")[0];
+            title = tat.split(" ")[1];
+          } else title = tat;
+
+          html += `<div class="gallery-photo"><a href="${img}" data-fancybox="gallery" class="fancybox" data-thumb="${img}"><img class="no-lazyload photo-img" loading='lazy' decoding="async" src="${img}"></a>`;
+          title ? (html += `<span class="photo-title">${title}</span>`) : "";
+          time ? (html += `<span class="photo-time">${time}</span>`) : "";
+          html += `</div>`;
+        });
+
+        document.querySelector(".gallery-photos.page").innerHTML = html;
+        imgStatus.watch(".photo-img", () => {
+          waterfall(".gallery-photos");
+        });
         window.Lately && Lately.init({ target: ".photo-time" });
-      });
+      })
+      .catch();
   }
+
+  // 适配pjax
+  function whenDOMReady() {
+    if (location.pathname == "/photos/") photos();
+  }
+  whenDOMReady();
+  document.addEventListener("pjax:complete", whenDOMReady);
+
+  // 自适应
+  window.onresize = () => {
+    if (location.pathname == "/photos/") waterfall(".gallery-photos");
+  };
 </script>
 
-<script defer="defer" src="https://immmmm.com/waterfall.min.js"></script>
-<script defer="defer" src="https://immmmm.com/imgStatus.min.js"></script>
-<script defer="defer" src="https://immmmm.com/lately.min.js"></script>
+<script defer src="https://immmmm.com/waterfall.min.js"></script>
+<!-- imgStatus -->
+<script defer src="https://immmmm.com/imgStatus.min.js"></script>
+<!-- lately -->
+<script defer src="https://immmmm.com/lately.min.js"></script>
 <!-- 图片灯箱 -->
 <script type="text/javascript" src="/js/view-image.min.js"></script>
-
 <script>
-  window.ViewImage && ViewImage.init(".photo-cover img");
+  window.ViewImage && ViewImage.init(".gallery-photo img");
 </script>
