@@ -14,7 +14,7 @@ layout: single
     async function fetchBookmarks(page = 0) {
       const raindropUrl = `https://api.raindrop.io/v1/raindrops/34199304?sort=-created&search=type:link&perpage=${PER_PAGE}&page=${page}`;
       const req = await fetch(
-        `https://crossorigin.me/${raindropUrl}`,
+        `https://cors.bridged.cc/${raindropUrl}`, // 使用新的代理服务
         {
           headers: {
             Authorization: `Bearer d7e078a0-3f49-4419-981a-8695c399b0d8`,
