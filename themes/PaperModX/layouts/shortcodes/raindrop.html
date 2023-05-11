@@ -9,6 +9,8 @@
     flex-wrap: wrap;
     justify-content: space-between;
     margin: 0 auto;
+    box-shadow: none;
+    transition: none;
   }
 
   .mk-raindrop-bookmark {
@@ -16,10 +18,21 @@
     margin: 1rem 0;
   }
 
+   .mk-raindrop-bookmark:hover{
+    text-decoration: none;
+    box-shadow: none;
+   }
+
   .mk-raindrop-bookmark a {
     text-decoration: none;
     color: inherit;
+    display: block;
+    box-shadow: none;
   }
+
+   .mk-raindrop-bookmark a:hover{
+    text-decoration: none;
+    box-shadow: none;}
 
   .mk-title-wrapper {
     display: flex;
@@ -28,16 +41,12 @@
 
   .mk-title {
     font-size: 16px;
-    font-weight: 500;
+    font-weight: bold;
+    padding-left: 2px;
     background-repeat: no-repeat;
     background-position: left center;
     background-size: 16px;
   }
-
-  .mk-title:hover {
-    color: var(--link-hover-color);
-    box-shadow: var(--link-hover-underline-shadow);
-}
 
   .mk-avatar {
     width: 16px;
@@ -91,16 +100,16 @@
           {{ $item.title }}
         </div>
       </div>
-    </a>
-    {{ with $item.excerpt }}
-    <div class="mk-excerpt">{{ . }}</div>
-    {{ end }} {{ with $item.tags }}
-    <div class="mk-raindrop-tags">
-      {{ range . }}
-      <div class="mk-tag">#{{ . }}</div>
+      {{ with $item.excerpt }}
+      <div class="mk-excerpt">{{ . }}</div>
+      {{ end }} {{ with $item.tags }}
+      <div class="mk-raindrop-tags">
+        {{ range . }}
+        <div class="mk-tag">#{{ . }}</div>
+        {{ end }}
+      </div>
       {{ end }}
-    </div>
-    {{ end }}
+    </a>
   </div>
   {{ if lt $i (sub (len (index $json "items")) 1) }}
   <div class="mk-divider"></div>
