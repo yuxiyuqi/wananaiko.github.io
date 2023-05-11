@@ -14,6 +14,8 @@ getJSON $apiUrl "?access_token=" $token }}
   .mk-raindrop-bookmark {
     width: 100%;
     margin: 1rem;
+    display: flex;
+    justify-content: space-between;
   }
 
   .mk-raindrop-bookmark a {
@@ -56,30 +58,45 @@ getJSON $apiUrl "?access_token=" $token }}
     background-color: var(--tertiary-bg);
     margin: 0 1rem;
   }
+
+  .mk-lastUpdate {
+    font-size: 0.8rem;
+    color: #666;
+  }
 </style>
 
 <div class="mk-raindrop-bookmarks">
   {{ range $i, $item := $json.items }}
   <div class="mk-raindrop-bookmark">
-    <a href="{{ $item.link }}" target="_blank" rel="noopener noreferrer">
-      <div
-        class="mk-title"
-        style="background-image: url('https://www.google.com/s2/favicons?domain={{ $item.link }}')"
-      >
-        {{ $item.title }}
+    <div>
+      <a href="{{ $item.link }}" target="_blank" rel="noopener noreferrer">
+        <div
+          class="mk-title"
+          style="background-image: url('https://unavatar.io/{{ $item.link }}')"
+        >
+          {{ $item.title }}
+        </div>
+      </a>
+      {{ with $item.excerpt }}
+      <div class="mk-excerpt">{{ . }}</div>
+      {{ end }} {{ with $item.tags }}
+      <div class="mk-raindrop-tags">
+        {{ range . }}
+        <div class="mk-tag">#{{ . }}</div>
+        {{ end }}
       </div>
-    </a>
-    {{ with $item.excerpt }}
-    <div class="mk-excerpt">{{ . }}</div>
-    {{ end }} {{ with $item.tags }}
-    <div class="mk-raindrop-tags">
-      {{ range . }}
-      <div class="mk-tag">{{ . }}</div>
       {{ end }}
     </div>
-    {{ end }}
+    <div class="mk-lastUpdate" data-lately="{{ time $item.lastUpdate }}"></div>
   </div>
   {{ if lt $i (sub (len $json.items) 1) }}
   <div class="mk-divider"></div>
   {{ end }} {{ end }}
 </div>
+
+<script defer src="https://immmmm.com/lately.min.js"></script>
+<script>
+  window.addEventListener("DOMContentLoaded", function () {
+    window.Lately && Lately.init({ target: ".mk-lastUpdate" });
+  });
+</script>
