@@ -14,8 +14,6 @@ getJSON $apiUrl "?access_token=" $token }}
   .mk-raindrop-bookmark {
     width: 100%;
     margin: 1rem;
-    display: flex;
-    justify-content: space-between;
   }
 
   .mk-raindrop-bookmark a {
@@ -58,45 +56,31 @@ getJSON $apiUrl "?access_token=" $token }}
     background-color: var(--tertiary-bg);
     margin: 0 1rem;
   }
-
-  .mk-lastUpdate {
-    font-size: 0.8rem;
-    color: #666;
-  }
 </style>
 
 <div class="mk-raindrop-bookmarks">
-  {{ range $i, $item := $json.items }}
+  {{ range $i, $item := $json.items }} {{ $domain := index (findRE
+  "[^.]+\\.[^.]+$" (index (findRE "//[^/]+" $item.link) 0)) 0 }}
   <div class="mk-raindrop-bookmark">
-    <div>
-      <a href="{{ $item.link }}" target="_blank" rel="noopener noreferrer">
-        <div
-          class="mk-title"
-          style="background-image: url('https://unavatar.io/{{ $item.link }}')"
-        >
-          {{ $item.title }}
-        </div>
-      </a>
-      {{ with $item.excerpt }}
-      <div class="mk-excerpt">{{ . }}</div>
-      {{ end }} {{ with $item.tags }}
-      <div class="mk-raindrop-tags">
-        {{ range . }}
-        <div class="mk-tag">#{{ . }}</div>
-        {{ end }}
+    <a href="{{ $item.link }}" target="_blank" rel="noopener noreferrer">
+      <div
+        class="mk-title"
+        style="background-image: url('https://unavatar.io/{{ $domain }}')"
+      >
+        {{ $item.title }}
       </div>
+    </a>
+    {{ with $item.excerpt }}
+    <div class="mk-excerpt">{{ . }}</div>
+    {{ end }} {{ with $item.tags }}
+    <div class="mk-raindrop-tags">
+      {{ range . }}
+      <div class="mk-tag">{{ . }}</div>
       {{ end }}
     </div>
-    <div class="mk-lastUpdate" data-lately="{{ time $item.lastUpdate }}"></div>
+    {{ end }}
   </div>
   {{ if lt $i (sub (len $json.items) 1) }}
   <div class="mk-divider"></div>
   {{ end }} {{ end }}
 </div>
-
-<script defer src="https://immmmm.com/lately.min.js"></script>
-<script>
-  window.addEventListener("DOMContentLoaded", function () {
-    window.Lately && Lately.init({ target: ".mk-lastUpdate" });
-  });
-</script>
