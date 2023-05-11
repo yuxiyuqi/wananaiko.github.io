@@ -65,7 +65,7 @@ getJSON $apiUrl "?access_token=" $token }}
     <a href="{{ $item.link }}" target="_blank" rel="noopener noreferrer">
       <div
         class="mk-title"
-        style="background-image: url('https://unavatar.io/{{ $domain }}')"
+        style="background-image: url('https://unavatar.io/{{ trim $domain "/" }}')"
       >
         {{ $item.title }}
       </div>
