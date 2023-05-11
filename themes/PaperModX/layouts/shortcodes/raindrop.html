@@ -41,24 +41,28 @@ getJSON $apiUrl "?access_token=" $token }}
   .mk-tag {
     display: inline-block;
     font-size: 0.8rem;
-    background-color: #f1f1f1;
-    color: #333;
-    border-radius: 2px;
-    padding: 2px 4px;
+    color: var(--tertiary);
     margin-right: 4px;
     margin-bottom: 4px;
+  }
+
+  .mk-divider {
+    width: 100%;
+    height: 1px;
+    background-color: #ccc;
+    margin: 1rem 0;
   }
 </style>
 
 <div class="mk-raindrop-bookmarks">
-  {{ range $json.items }}
+  {{ range $i, $item := $json.items }}
   <div class="mk-raindrop-bookmark">
-    <a href="{{ .link }}" target="_blank" rel="noopener noreferrer">
-      <div class="mk-title">{{ .title }}</div>
+    <a href="{{ $item.link }}" target="_blank" rel="noopener noreferrer">
+      <div class="mk-title">{{ $item.title }}</div>
     </a>
-    {{ with .excerpt }}
+    {{ with $item.excerpt }}
     <div class="mk-excerpt">{{ . }}</div>
-    {{ end }} {{ with .tags }}
+    {{ end }} {{ with $item.tags }}
     <div class="mk-raindrop-tags">
       {{ range . }}
       <div class="mk-tag">{{ . }}</div>
@@ -66,5 +70,7 @@ getJSON $apiUrl "?access_token=" $token }}
     </div>
     {{ end }}
   </div>
-  {{ end }}
+  {{ if lt $i (sub (len $json.items) 1) }}
+  <div class="mk-divider"></div>
+  {{ end }} {{ end }}
 </div>
