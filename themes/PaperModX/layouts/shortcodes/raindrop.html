@@ -75,7 +75,7 @@ getJSON $apiUrl "?access_token=" $token }}
     {{ end }} {{ with $item.tags }}
     <div class="mk-raindrop-tags">
       {{ range . }}
-      <div class="mk-tag">{{ . }}</div>
+      <div class="mk-tag">#{{ . }}</div>
       {{ end }}
     </div>
     {{ end }}
