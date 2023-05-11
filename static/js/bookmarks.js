@@ -29,7 +29,7 @@ async function fetchBookmarks(page = 0) {
 }
 
 async function displayBookmarks() {
-  const bookmarksContainer = document.getElementById("bookmarks-container");
+  const bookmarksContainer = document.getElementById("bookmarks_container");
   const bookmarks = await fetchBookmarks();
 
   bookmarks.forEach((bookmark) => {
