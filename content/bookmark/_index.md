@@ -12,10 +12,9 @@ layout: single
     const PER_PAGE = 50;
 
     async function fetchBookmarks(page = 0) {
+      const raindropUrl = `https://api.raindrop.io/v1/raindrops/34199304?sort=-created&search=type:link&perpage=${PER_PAGE}&page=${page}&Authorization=Bearer%20d7e078a0-3f49-4419-981a-8695c399b0d8`;
       const req = await fetch(
-        `https://api.allorigins.win/get?url=${encodeURIComponent(
-          `https://api.raindrop.io/v1/raindrops/34199304?sort=-created&search=type:link&perpage=${PER_PAGE}&page=${page}`
-        )}&Authorization=Bearer%20d7e078a0-3f49-4419-981a-8695c399b0d8`
+        `https://api.allorigins.win/get?url=${encodeURIComponent(raindropUrl)}`
       );
 
       if (!req.ok) {
