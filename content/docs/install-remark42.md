@@ -10,7 +10,7 @@ draft: false
 
 ### Remark42 是什么
 
-Remark42 是一个开源、轻量化、自托管饿评论服务，支持使用 Google, Twitter, Facebook, Microsoft, GitHub, Yandex, Patreon, Telegram, Email 以及匿名方式进行评论。
+Remark42 是一个开源、轻量化、自托管的评论服务，支持使用 Google, Twitter, Facebook, Microsoft, GitHub, Yandex, Patreon, Telegram, Email 以及匿名方式进行评论。
 
 之前使用的是 [Waline](https://waline.js.org/) 博客评论系统，部署在 Vercel 上。个人觉得不够简洁，于是就折腾起来换成了 Remark42。配置过程指数级增加，需要花一些时间调校测试。
 
