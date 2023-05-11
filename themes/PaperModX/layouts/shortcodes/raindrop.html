@@ -24,6 +24,10 @@ getJSON $apiUrl "?access_token=" $token }}
   .mk-title {
     font-size: 16px;
     font-weight: bold;
+    padding-left: 24px;
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 16px;
   }
 
   .mk-excerpt {
@@ -48,9 +52,9 @@ getJSON $apiUrl "?access_token=" $token }}
 
   .mk-divider {
     width: 100%;
-    height: 1px;
-    background-color: #ccc;
-    margin: 1rem 0;
+    height: 0.5px;
+    background-color: var(--tertiary-bg);
+    margin: 0 1rem;
   }
 </style>
 
@@ -58,7 +62,12 @@ getJSON $apiUrl "?access_token=" $token }}
   {{ range $i, $item := $json.items }}
   <div class="mk-raindrop-bookmark">
     <a href="{{ $item.link }}" target="_blank" rel="noopener noreferrer">
-      <div class="mk-title">{{ $item.title }}</div>
+      <div
+        class="mk-title"
+        style="background-image: url('https://www.google.com/s2/favicons?domain={{ $item.link }}')"
+      >
+        {{ $item.title }}
+      </div>
     </a>
     {{ with $item.excerpt }}
     <div class="mk-excerpt">{{ . }}</div>
