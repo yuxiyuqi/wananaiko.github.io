@@ -2,44 +2,43 @@
 <div class="stack-list">
   {{ range $index, $item := $items }} {{- $item := split $item "|" }} {{- if ge
   (len $item) 5 }}
-  <div class="stack-item">
-    <div class="stack-item-image-container">
-      <img
-        alt="{{ index $item 1 }}"
-        width="64"
-        height="64"
-        decoding="async"
-        data-nimg="1"
-        src="{{ (index $item 2) | safeURL }}"
-        style="color: transparent"
-      />
-    </div>
-    <div class="stack-item-content">
-      <div class="stack-item-header">
-        <div class="stack-item-title-container">
-          <div>
-            <div class="stack-item-title">
-              <a
-                href="{{ index $item 0 }}"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="stack-item-link"
-                >{{ index $item 1 }}</a
-              >
+  <a
+    href="{{ index $item 0 }}"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="stack-item-link"
+  >
+    <div class="stack-item">
+      <div class="stack-item-image-container">
+        <img
+          alt="{{ index $item 1 }}"
+          width="64"
+          height="64"
+          decoding="async"
+          data-nimg="1"
+          src="{{ (index $item 2) | safeURL }}"
+          style="color: transparent"
+        />
+      </div>
+      <div class="stack-item-content">
+        <div class="stack-item-header">
+          <div class="stack-item-title-container">
+            <div>
+              <div class="stack-item-title">{{ index $item 1 }}</div>
             </div>
+            <p class="stack-item-description">{{ index $item 3 }}</p>
           </div>
-          <p class="stack-item-description">{{ index $item 3 }}</p>
+          {{- $tags := split (index $item 4) "," }} {{- if ge (len $tags) 1 }}
+          <div class="stack-item-tags">
+            {{ range $tags }}
+            <span class="stack-item-tag">{{ . }}</span>
+            {{ end }}
+          </div>
+          {{- end }}
         </div>
-        {{- $tags := split (index $item 4) "," }} {{- if ge (len $tags) 1 }}
-        <div class="stack-item-tags">
-          {{ range $tags }}
-          <span class="stack-item-tag">{{ . }}</span>
-          {{ end }}
-        </div>
-        {{- end }}
       </div>
     </div>
-  </div>
+  </a>
   {{ if lt $index (sub (len $items) 1) }}
   <hr class="stack-item-divider" />
   {{ end }} {{- end }} {{- end }}

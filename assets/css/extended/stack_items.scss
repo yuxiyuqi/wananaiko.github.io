@@ -5,10 +5,6 @@
 .stack-list {
   list-style: none;
   overflow: hidden;
-  // border-radius: var(--radius);
-  // border: 1px solid var(--border);
-  // background: var(--entry);
-  // padding: 0 16px;
 }
 
 ul.stack-item-tags {
@@ -21,6 +17,11 @@ ul.stack-item-tags {
 .stack-item {
   display: flex;
   overflow: hidden;
+}
+
+.stack-item:hover .stack-item-title {
+  color: var(--link-hover-color);
+  box-shadow: var(--link-hover-underline-shadow);
 }
 
 .stack-item-link {
@@ -55,7 +56,7 @@ ul.stack-item-tags {
   color: var(--text-highlight-color);
   font-family: var(--font-family-teshu);
   font-size: 16px;
-  margin: 0 auto;
+  width: fit-content;
 }
 
 .stack-item-description {
@@ -87,6 +88,7 @@ ul.stack-item-tags {
   height: 0.5px;
   background-color: var(--tertiary-bg);
 }
+
 hr.stack-item-divider {
   margin: 8px 0px;
 }
@@ -106,5 +108,11 @@ p.stack-item-description {
 }
 
 a.stack-item-link {
+  color: unset;
+  box-shadow: none;
+}
+
+.post-content a:hover {
+  color: unset;
   box-shadow: none;
 }
