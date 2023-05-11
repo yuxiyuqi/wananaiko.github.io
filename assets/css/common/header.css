@@ -79,7 +79,7 @@ body:not(.dark) #sun {
     line-height: 1.5em;
 }
 #menu a:hover {
-    color: var(--primary);
+    color: var(--link-hover-color);
 }
 
 #menu a.active:hover {
