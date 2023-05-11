@@ -33,6 +33,9 @@ getJSON $apiUrl "?access_token=" $token }}
   .mk-excerpt {
     font-size: 0.9rem;
     color: #666;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   .mk-raindrop-tags {
@@ -59,7 +62,7 @@ getJSON $apiUrl "?access_token=" $token }}
 </style>
 
 <div class="mk-raindrop-bookmarks">
-  {{ range $i, $item := $json.items }} {{ $domain := index (findRE
+  {{ range $i, $item := index $json "items" }} {{ $domain := index (findRE
   "[^.]+\\.[^.]+$" (index (findRE "//[^/]+" $item.link) 0)) 0 }}
   <div class="mk-raindrop-bookmark">
     <a href="{{ $item.link }}" target="_blank" rel="noopener noreferrer">
@@ -80,7 +83,7 @@ getJSON $apiUrl "?access_token=" $token }}
     </div>
     {{ end }}
   </div>
-  {{ if lt $i (sub (len $json.items) 1) }}
+  {{ if lt $i (sub (len (index $json "items")) 1) }}
   <div class="mk-divider"></div>
   {{ end }} {{ end }}
 </div>
