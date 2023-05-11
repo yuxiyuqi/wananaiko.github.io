@@ -1,4 +1,4 @@
-(function () {
+document.addEventListener("DOMContentLoaded", function () {
   const PER_PAGE = 50;
 
   async function fetchBookmarks(page = 0) {
@@ -46,4 +46,4 @@
   }
 
   displayBookmarks();
-})();
+});
