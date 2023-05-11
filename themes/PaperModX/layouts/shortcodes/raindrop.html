@@ -1,0 +1,74 @@
+{{ $token := "d7e078a0-3f49-4419-981a-8695c399b0d8" }} {{ $collection :=
+"34199304" }} {{ $apiUrl := printf
+"https://api.raindrop.io/rest/v1/raindrops/%s" $collection }} {{ $json :=
+getJSON $apiUrl "?access_token=" $token }}
+
+<style>
+  .mk-raindrop-bookmarks {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .mk-raindrop-bookmark {
+    width: 32%;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border: 1px solid #eaeaea;
+    border-radius: 4px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .mk-raindrop-bookmark a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .mk-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+
+  .mk-excerpt {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+  }
+
+  .mk-raindrop-tags {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .mk-tag {
+    display: inline-block;
+    font-size: 0.8rem;
+    background-color: #f1f1f1;
+    color: #333;
+    border-radius: 2px;
+    padding: 2px 4px;
+    margin-right: 4px;
+    margin-bottom: 4px;
+  }
+</style>
+
+<div class="mk-raindrop-bookmarks">
+  {{ range $json.items }}
+  <div class="mk-raindrop-bookmark">
+    <a href="{{ .link }}" target="_blank" rel="noopener noreferrer">
+      <div class="mk-title">{{ .title }}</div>
+    </a>
+    {{ with .excerpt }}
+    <div class="mk-excerpt">{{ . }}</div>
+    {{ end }} {{ with .tags }}
+    <ul class="mk-raindrop-tags">
+      {{ range . }}
+      <li class="mk-tag">{{ . }}</li>
+      {{ end }}
+    </ul>
+    {{ end }}
+  </div>
+  {{ end }}
+</div>
