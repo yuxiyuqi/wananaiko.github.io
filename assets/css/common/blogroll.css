@@ -8,10 +8,9 @@
 }
 .links .item {
   padding: 16px;
-  background: var(--entry);
+  background: var(--code-bg);
   border-radius: var(--radius);
   margin-bottom: 16px;
-  border: 1px solid var(--border);
 }
 
 .links .favicon {

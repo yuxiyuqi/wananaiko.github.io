@@ -59,7 +59,7 @@
 }
 
 .list-page {
-    background: var(--code-bg);
+    background: var(--theme);
 }
 
 .dark.list-page {

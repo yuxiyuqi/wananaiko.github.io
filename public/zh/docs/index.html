@@ -1,33 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh" dir="auto">
 
-<head>
-  
-<style>
-  .cursor {
-    position: fixed;
-    z-index: 9999;
-    pointer-events: none;
-    mix-blend-mode: difference;
-    transition: opacity .4s ease, transform .4s ease;
-    will-change: transform, opacity;
-  }
-
-  .cursor--small {
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background-color: #000;
-  }
-
-  .cursor--large {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    border: 1px solid #000;
-    background-color: rgba(0, 0, 0, 0);
-  }
-</style><meta charset="utf-8" />
+<head><meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta
   name="viewport"
@@ -41,8 +15,8 @@
 /> <meta name="description" content="包含 PaperModX 的功能介绍和详细用法说明"> <meta name="author" content="wananaiko"> <link rel="canonical" href="https://wananaiko.com/zh/docs/">
 <link
   crossorigin="anonymous"
-  href="/assets/css/stylesheet.min.2df70b80bddc6351e8ac91c440bf75274f9c7b7aaa4ca4473d734433472d7b60.css"
-  integrity="sha256-LfcLgL3cY1HorJHEQL91J0&#43;ce3qqTKRHPXNEM0cte2A="
+  href="/assets/css/stylesheet.min.976ad0e12e35d377ab9e38fbe19c08a9051a644abdbbb084e0fd6b754a9db286.css"
+  integrity="sha256-l2rQ4S4103ernjj74ZwIqQUaZEq9u7CE4P1rdUqdsoY="
   rel="preload stylesheet"
   as="style"
 /> <link rel="icon" href="https://images.wananaiko.com/favicon.ico"> <link rel="apple-touch-icon" href="https://wananaiko.com/apple-touch-icon.png"> <link
@@ -52,12 +26,7 @@
 />
 <link rel="alternate" hreflang="en" href="https://wananaiko.com/docs/" />
 <link rel="alternate" hreflang="zh" href="https://wananaiko.com/zh/docs/" />
-<script
-  async
-  defer
-  data-website-id="ef292242-0205-4709-add3-a8e28210b5fe"
-  src="https://umami.wananaiko.com/aa4d6f84-a06a-8abc-540e-c793556d93a0.js"
-></script>
+
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="PaperModX 文档 | PaperModX" />
 <meta
@@ -445,43 +414,6 @@ function toggleThemeListener() {
 
 
 
-<div class="cursor cursor--small"></div>
-<div class="cursor cursor--large"></div>
-
-
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    
-    const cursorSmall = document.querySelector('.cursor--small');
-    const cursorLarge = document.querySelector('.cursor--large');
-
-    
-    function updateCursorPosition(event) {
-      const x = event.clientX;
-      const y = event.clientY;
-
-      cursorSmall.style.transform = `translate(${x}px, ${y}px)`;
-      cursorLarge.style.transform = `translate(${x}px, ${y}px)`;
-    }
-
-    
-    document.addEventListener('mousemove', updateCursorPosition);
-
-    
-    function setCursorStyle(style) {
-      cursorSmall.style.opacity = style.smallOpacity || 1;
-      cursorLarge.style.opacity = style.largeOpacity || 1;
-      cursorLarge.style.transform = style.largeTransform || '';
-    }
-
-    
-    const links = document.querySelectorAll('a, button, input, textarea');
-    links.forEach(link => {
-      link.addEventListener('mouseover', () => setCursorStyle({ smallOpacity: 0, largeOpacity: 0.5 }));
-      link.addEventListener('mouseout', () => setCursorStyle({ smallOpacity: 1, largeOpacity: 1 }));
-    });
-  });
-</script>
 </body>
 
 </html>

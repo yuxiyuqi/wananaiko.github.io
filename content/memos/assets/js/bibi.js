@@ -29,8 +29,7 @@ img {
     align-items: flex-start;
     justify-content: flex-start;
     border-radius: var(--radius);
-    border: 1px solid var(--border);
-    background: var(--entry);
+    background: var(--code-bg);
     -webkit-transform: perspective(1px) translateZ(0);
     transform: perspective(1px) translateZ(0);
     -webkit-transition-duration: 0.3s;

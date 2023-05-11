@@ -255,6 +255,8 @@
   </url><url>
     <loc>https://wananaiko.com/links/</loc>
   </url><url>
+    <loc>https://wananaiko.com/bookmark/</loc>
+  </url><url>
     <loc>https://wananaiko.com/categories/</loc>
     <xhtml:link
                 rel="alternate"
@@ -276,6 +278,8 @@
     <loc>https://wananaiko.com/memos/</loc>
   </url><url>
     <loc>https://wananaiko.com/newsletter/archives/</loc>
+  </url><url>
+    <loc>https://wananaiko.com/read/</loc>
   </url><url>
     <loc>https://wananaiko.com/search/</loc>
     <xhtml:link
