@@ -21,13 +21,30 @@
     color: inherit;
   }
 
+  .mk-title-wrapper {
+    display: flex;
+    align-items: center;
+  }
+
   .mk-title {
     font-size: 16px;
     font-weight: bold;
-    padding-left: 24px;
     background-repeat: no-repeat;
     background-position: left center;
     background-size: 16px;
+  }
+
+  .mk-title:hover {
+    color: var(--link-hover-color);
+    box-shadow: var(--link-hover-underline-shadow);
+}
+
+  .mk-avatar {
+    width: 16px;
+    height: 16px;
+    background-size: cover;
+    background-position: center;
+    margin-right: 8px;
   }
 
   .mk-excerpt {
@@ -65,11 +82,14 @@
   "[^.]+\\.[^.]+$" (index (findRE "//[^/]+" $item.link) 0)) 0 }}
   <div class="mk-raindrop-bookmark">
     <a href="{{ $item.link }}" target="_blank" rel="noopener noreferrer">
-      <div
-        class="mk-title"
-        style="background-image: url('https://unavatar.io/{{ trim $domain "/" }}')"
-      >
-        {{ $item.title }}
+      <div class="mk-title-wrapper">
+        <div
+          class="mk-avatar"
+          style="background-image: url('https://unavatar.io/{{ trim $domain "/" }}')"
+        ></div>
+        <div class="mk-title">
+          {{ $item.title }}
+        </div>
       </div>
     </a>
     {{ with $item.excerpt }}
