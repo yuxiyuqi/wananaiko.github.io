@@ -18,10 +18,10 @@
     margin: 1rem 0;
   }
 
-   .mk-raindrop-bookmark:hover{
+  .mk-raindrop-bookmark:hover{
     text-decoration: none;
     box-shadow: none;
-   }
+  }
 
   .mk-raindrop-bookmark a {
     text-decoration: none;
@@ -30,9 +30,10 @@
     box-shadow: none;
   }
 
-   .mk-raindrop-bookmark a:hover{
+  .mk-raindrop-bookmark a:hover{
     text-decoration: none;
-    box-shadow: none;}
+    box-shadow: none;
+  }
 
   .mk-title-wrapper {
     display: flex;
@@ -46,6 +47,11 @@
     background-repeat: no-repeat;
     background-position: left center;
     background-size: 16px;
+  }
+
+  .mk-raindrop-bookmark:hover .mk-title {
+    color: var(--link-hover-color);
+    box-shadow: var(--link-hover-underline-shadow);
   }
 
   .mk-avatar {
