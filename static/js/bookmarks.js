@@ -1,13 +1,11 @@
 const PER_PAGE = 50;
-const RAINDROP_TOKEN = "d7e078a0-3f49-4419-981a-8695c399b0d8"; // 替换为您的实际访问令牌
-const RAINDROP_COLLECTION = "34199304"; // 替换为您的实际集合 ID
 
 async function fetchBookmarks(page = 0) {
   const req = await fetch(
-    `https://api.raindrop.io/rest/v1/raindrops/${RAINDROP_COLLECTION}?sort=-created&search=type:link&perpage=${PER_PAGE}&page=${page}`,
+    `https://api.raindrop.io/rest/v1/raindrops/34199304?sort=-created&search=type:link&perpage=${PER_PAGE}&page=${page}`,
     {
       headers: {
-        Authorization: `Bearer ${RAINDROP_TOKEN}`,
+        Authorization: `Bearer d7e078a0-3f49-4419-981a-8695c399b0d8`,
       },
     }
   );
