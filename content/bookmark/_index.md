@@ -13,7 +13,9 @@ layout: single
 
     async function fetchBookmarks(page = 0) {
       const req = await fetch(
-        `https://cors.raindrop.io/v1/raindrops/34199304?sort=-created&search=type:link&perpage=${PER_PAGE}&page=${page}`,
+        `https://api.allorigins.win/get?url=${encodeURIComponent(
+          `https://api.raindrop.io/v1/raindrops/34199304?sort=-created&search=type:link&perpage=${PER_PAGE}&page=${page}`
+        )}`,
         {
           headers: {
             Authorization: `Bearer d7e078a0-3f49-4419-981a-8695c399b0d8`,
@@ -27,8 +29,9 @@ layout: single
       }
 
       const data = await req.json();
+      const parsedData = JSON.parse(data.contents);
 
-      return data?.items.map((item) => ({
+      return parsedData?.items.map((item) => ({
         _id: item._id,
         title: item.title,
         link: item.link,
