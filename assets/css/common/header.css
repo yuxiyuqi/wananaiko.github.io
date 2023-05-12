@@ -88,6 +88,7 @@ body:not(.dark) #sun {
 #menu .active {
     color: var(--link-hover-color);
     box-shadow: 0 2px 0 var(--link-hover-color);
+    padding-bottom: 16px;
 }
 
 #menu .external-link {
