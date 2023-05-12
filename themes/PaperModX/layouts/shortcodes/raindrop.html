@@ -1,3 +1,8 @@
+{{ $token := "d7e078a0-3f49-4419-981a-8695c399b0d8" }}
+{{ $collection := "34199304" }}
+{{ $apiUrl := printf "https://api.raindrop.io/rest/v1/raindrops/%s" $collection }}
+{{ $json := getJSON $apiUrl "?access_token=" $token "&perpage=50&sort=-created" }}
+
 <style>
   .mk-raindrop-bookmarks {
     display: flex;
@@ -13,7 +18,7 @@
     margin: 1rem 0;
   }
 
-  .mk-raindrop-bookmark:hover {
+  .mk-raindrop-bookmark:hover{
     text-decoration: none;
     box-shadow: none;
   }
@@ -25,7 +30,7 @@
     box-shadow: none;
   }
 
-  .mk-raindrop-bookmark a:hover {
+  .mk-raindrop-bookmark a:hover{
     text-decoration: none;
     box-shadow: none;
   }
@@ -89,7 +94,7 @@
   .mk-svg {
     margin-left: 4px;
     transition: transform 0.3s;
-    display: flex;
+        display: flex;
     justify-content: center;
   }
 
@@ -98,65 +103,35 @@
   }
 </style>
 
-<!-- 创建一个容器，用于存放动态生成的书签内容 -->
-<div id="bookmarks-container"></div>
-
-<!-- 在这里添加 JavaScript 代码 -->
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const token = "d7e078a0-3f49-4419-981a-8695c399b0d8";
-    const collection = "34199304";
-    const apiUrl = `https://api.raindrop.io/rest/v1/raindrops/${collection}?access_token=${token}&perpage=50&sort=-created`;
-
-    fetch(apiUrl)
-      .then((response) => response.json())
-      .then((data) => {
-        const bookmarksContainer = document.getElementById(
-          "bookmarks-container"
-        );
-        bookmarksContainer.innerHTML = "";
-
-        data.items.forEach((item, i) => {
-          const domain = item.link.match(/[^.]+(\.[^.]+){1}$/)[0];
-          const avatarUrl = `https://unavatar.io/${domain.replace("/", "")}`;
-
-          const bookmark = document.createElement("div");
-          bookmark.className = "mk-raindrop-bookmark";
-          bookmark.innerHTML = `
-            <a href="${item.link}" target="_blank" rel="noopener noreferrer">
-              <div class="mk-title-wrapper">
-                <div class="mk-avatar" style="background-image: url('${avatarUrl}')"></div>
-                <div class="mk-title">${item.title}</div>
-                <div class="mk-svg">
-                  <svg width="16px" height="16px" viewBox="0 0 24 24" stroke-width="1.5" fill="none" xmlns="http://www.w3.org/2000/svg" color="#099"><path d="M3 12h18m0 0l-8.5-8.5M21 12l-8.5 8.5" stroke="#099" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-                </div>
-              </div>
-              ${
-                item.excerpt
-                  ? `<div class="mk-excerpt">${item.excerpt}</div>`
-                  : ""
-              }
-              ${
-                item.tags
-                  ? `<div class="mk-raindrop-tags">${item.tags
-                      .map((tag) => `<div class="mk-tag">#${tag}</div>`)
-                      .join("")}</div>`
-                  : ""
-              }
-            </a>
-          `;
-
-          bookmarksContainer.appendChild(bookmark);
-
-          if (i < data.items.length - 1) {
-            const divider = document.createElement("div");
-            divider.className = "mk-divider";
-            bookmarksContainer.appendChild(divider);
-          }
-        });
-      })
-      .catch((error) => {
-        console.error("Error fetching data:", error);
-      });
-  });
-</script>
+<div class="mk-raindrop-bookmarks">
+  {{ range $i, $item := index $json "items" }} {{ $domain := index (findRE
+  "[^.]+\\.[^.]+$" (index (findRE "//[^/]+" $item.link) 0)) 0 }}
+  <div class="mk-raindrop-bookmark">
+    <a href="{{ $item.link }}" target="_blank" rel="noopener noreferrer">
+      <div class="mk-title-wrapper">
+        <div
+          class="mk-avatar"
+          style="background-image: url('https://unavatar.io/{{ trim $domain "/" }}')"
+        ></div>
+        <div class="mk-title">
+          {{ $item.title }}
+        </div>
+        <div class="mk-svg">
+          <svg width="16px" height="16px" viewBox="0 0 24 24" stroke-width="1.5" fill="none" xmlns="http://www.w3.org/2000/svg" color="#099"><path d="M3 12h18m0 0l-8.5-8.5M21 12l-8.5 8.5" stroke="#099" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+        </div>
+      </div>
+      {{ with $item.excerpt }}
+      <div class="mk-excerpt">{{ . }}</div>
+      {{ end }} {{ with $item.tags }}
+      <div class="mk-raindrop-tags">
+        {{ range . }}
+        <div class="mk-tag">#{{ . }}</div>
+        {{ end }}
+      </div>
+      {{ end }}
+    </a>
+  </div>
+  {{ if lt $i (sub (len (index $json "items")) 1) }}
+  <div class="mk-divider"></div>
+  {{ end }} {{ end }}
+</div>

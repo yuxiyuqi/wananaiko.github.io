@@ -143,12 +143,3 @@ https://developer.twitter.com/en/docs/twitter-for-websites/cards/guides/getting-
   </style>
   {{- end }}
 </noscript>
-<script>
-  if ("serviceWorker" in navigator) {
-    navigator.serviceWorker.getRegistrations().then(function (registrations) {
-      for (let registration of registrations) {
-        registration.unregister();
-      }
-    });
-  }
-</script>
