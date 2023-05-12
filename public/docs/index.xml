@@ -16,9 +16,9 @@
       <pubDate>Tue, 25 Apr 2023 11:10:49 +0800</pubDate>
       
       <guid>https://wananaiko.com/docs/install-remark42/</guid>
-      <description>Remark42 是什么 Remark42 是一个开源、轻量化、自托管饿评论服务，支持使用 Google, Twitter, Facebook, Microsoft, GitHub, Yandex, Patreon, Telegram, Email 以及匿名方式进行评论。 之前使用的是 Waline 博客评论系统，部署在 Vercel 上。个人</description>
+      <description>Remark42 是什么 Remark42 是一个开源、轻量化、自托管的评论服务，支持使用 Google, Twitter, Facebook, Microsoft, GitHub, Yandex, Patreon, Telegram, Email 以及匿名方式进行评论。 之前使用的是 Waline 博客评论系统，部署在 Vercel 上。个人</description>
       <content:encoded><![CDATA[<h3 id="remark42-是什么">Remark42 是什么</h3>
-<p>Remark42 是一个开源、轻量化、自托管饿评论服务，支持使用 Google, Twitter, Facebook, Microsoft, GitHub, Yandex, Patreon, Telegram, Email 以及匿名方式进行评论。</p>
+<p>Remark42 是一个开源、轻量化、自托管的评论服务，支持使用 Google, Twitter, Facebook, Microsoft, GitHub, Yandex, Patreon, Telegram, Email 以及匿名方式进行评论。</p>
 <p>之前使用的是 <a href="https://waline.js.org/" target="_blank" rel="noopener">Waline</a> 博客评论系统，部署在 Vercel 上。个人觉得不够简洁，于是就折腾起来换成了 Remark42。配置过程指数级增加，需要花一些时间调校测试。</p>
 <hr>
 <p><a href="http://fly.io/" target="_blank" rel="noopener">Fly.io</a> 免费计划包含：</p>
@@ -518,7 +518,7 @@ WantedBy=multi-user.target
 <ul>
 <li><strong>躺平</strong></li>
 </ul>
-<p>今年其实有一处躺平的地方，在 “Crypto” 。今年几乎没有做什么操作，只是加了几次仓，目前还是处于亏损 70% - 80% 左右的状态。只能躺平，等待这轮熊市慢慢的过去。近期行情稍微有那么一点点的起色，也不知道是不是假象，反正依然坚持躺平的策略。</p>
+<p>今年在币圈今年几乎没有做什么操作，只是加了几次仓，目前还是处于亏损 70% - 80% 左右的状态。只能躺平，等待这轮熊市慢慢的过去。近期行情稍微有那么一点点的起色，也不知道是不是假象，反正依然坚持躺平的策略。</p>
 <ul>
 <li><strong>拍照</strong></li>
 </ul>
@@ -1027,7 +1027,6 @@ WantedBy=multi-user.target
 <th>物品名</th>
 <th>短评</th>
 <th>打分</th>
-<th>服役状态</th>
 </tr>
 </thead>
 <tbody>
@@ -1035,42 +1034,35 @@ WantedBy=multi-user.target
 <td>MacBook Pro 14</td>
 <td>今年买的最值的电子产品，使用频率极高。</td>
 <td>★★★★★</td>
-<td>使用中</td>
 </tr>
 <tr>
 <td>Apple Watch 黑色不锈钢</td>
 <td>使用频率极低，装饰大于实用。</td>
 <td>★★☆☆☆</td>
-<td>使用中</td>
 </tr>
 <tr>
 <td>一辆代步车</td>
 <td>真的提升不少幸福感，想去哪去哪。</td>
 <td>★★★★☆</td>
-<td>使用中</td>
 </tr>
 <tr>
 <td>Leica M10 和其他镜头</td>
 <td>挺喜欢徕卡色调的，使用频率太低已经二手出掉，以后再考虑回购。</td>
 <td>★★★★☆</td>
-<td>已出售</td>
 </tr>
 <tr>
 <td>家用洗拖一体机</td>
 <td>非常好用，拖地懒人的福音，拖完感觉地上很亮。</td>
 <td>★★★★★</td>
-<td>使用中</td>
 </tr>
 <tr>
 <td>配套家具</td>
 <td>今年还给新房买了 N 多家具，两张床和客厅三件套等，整体还算满意。</td>
 <td>-</td>
-<td>-</td>
 </tr>
 <tr>
 <td>云米净水器</td>
 <td>还未投入使用，准备年后预约安装。</td>
-<td>-</td>
 <td>-</td>
 </tr>
 </tbody>

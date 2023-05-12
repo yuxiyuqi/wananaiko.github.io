@@ -29,7 +29,7 @@ img {
     align-items: flex-start;
     justify-content: flex-start;
     border-radius: var(--radius);
-    background: ar(--code-bg);
+    background: var(--code-bg);
     -webkit-transform: perspective(1px) translateZ(0);
     transform: perspective(1px) translateZ(0);
     -webkit-transition-duration: 0.3s;
@@ -143,12 +143,12 @@ ul.bb-list-ul {
     padding-left: 0;
 }
 span.tag-span {
-    background-color: #876fd626;
+    background-color: rgb(198 239 239 / 90%);
     padding: 2.5px 5px;
     border-radius: 3px;
     font-size: small;
     line-height: 1.5;
-    color: #876fd6;
+    color: #0e7e9d;
 }
 .memo-nums {
     font-size: 1rem;
