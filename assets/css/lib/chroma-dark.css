@@ -40,10 +40,10 @@
   color: #ff7b72;
 }
 .chroma .kc {
-  color: #79c0ff;
+  color: #099;
 }
 .chroma .kp {
-  color: #79c0ff;
+  color: #099;
 }
 .chroma .kd {
   color: #ff7b72;
@@ -64,7 +64,7 @@
   color: #f0883e;
 }
 .chroma .no {
-  color: #79c0ff;
+  color: #099;
   font-weight: bold;
 }
 .chroma .nd {
@@ -87,101 +87,101 @@
   font-weight: bold;
 }
 .chroma .nl {
-  color: #79c0ff;
+  color: #099;
   font-weight: bold;
 }
 .chroma .nn {
   color: #ff7b72;
 }
 .chroma .py {
-  color: #79c0ff;
+  color: #099;
 }
 .chroma .nt {
   color: #7ee787;
 }
 .chroma .nv {
-  color: #79c0ff;
+  color: #099;
 }
 .chroma .vc {
-  color: #79c0ff;
+  color: #099;
 }
 .chroma .vg {
-  color: #79c0ff;
+  color: #099;
 }
 .chroma .vi {
-  color: #79c0ff;
+  color: #099;
 }
 .chroma .vm {
-  color: #79c0ff;
+  color: #099;
 }
 .chroma .l {
-  color: #a5d6ff;
+  color: #099;
 }
 .chroma .ld {
-  color: #79c0ff;
+  color: #099;
 }
 .chroma .sa {
-  color: #79c0ff;
+  color: #099;
 }
 .chroma .dl {
-  color: #79c0ff;
+  color: #099;
 }
 .chroma .se {
-  color: #79c0ff;
+  color: #099;
 }
 .chroma .sh {
-  color: #79c0ff;
+  color: #099;
 }
 .chroma .sr {
-  color: #79c0ff;
+  color: #099;
 }
 .chroma .s {
-  color: #a5d6ff;
+  color: #099;
 }
 .chroma .s2 {
-  color: #a5d6ff;
+  color: #099;
 }
 .chroma .s1 {
-  color: #a5d6ff;
+  color: #099;
 }
 .chroma .sb {
-  color: #a5d6ff;
+  color: #099;
 }
 .chroma .sc {
-  color: #a5d6ff;
+  color: #099;
 }
 .chroma .sd {
-  color: #a5d6ff;
+  color: #099;
 }
 .chroma .si {
-  color: #a5d6ff;
+  color: #099;
 }
 .chroma .sx {
-  color: #a5d6ff;
+  color: #099;
 }
 .chroma .ss {
-  color: #a5d6ff;
+  color: #099;
 }
 .chroma .m {
-  color: #a5d6ff;
+  color: #099;
 }
 .chroma .mb {
-  color: #a5d6ff;
+  color: #099;
 }
 .chroma .mf {
-  color: #a5d6ff;
+  color: #099;
 }
 .chroma .mh {
-  color: #a5d6ff;
+  color: #099;
 }
 .chroma .mi {
-  color: #a5d6ff;
+  color: #099;
 }
 .chroma .il {
-  color: #a5d6ff;
+  color: #099;
 }
 .chroma .mo {
-  color: #a5d6ff;
+  color: #099;
 }
 .chroma .o {
   color: #ff7b72;
@@ -230,7 +230,7 @@
   color: #ffa198;
 }
 .chroma .gh {
-  color: #79c0ff;
+  color: #099;
   font-weight: bold;
 }
 .chroma .gi {
@@ -247,7 +247,7 @@
   font-weight: bold;
 }
 .chroma .gu {
-  color: #79c0ff;
+  color: #099;
 }
 .chroma .gt {
   color: #ff7b72;
