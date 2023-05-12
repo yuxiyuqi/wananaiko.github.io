@@ -1,7 +1,7 @@
 {{ $token := "d7e078a0-3f49-4419-981a-8695c399b0d8" }}
 {{ $collection := "34199304" }}
 {{ $apiUrl := printf "https://api.raindrop.io/rest/v1/raindrops/%s" $collection }}
-{{ $json := getJSON $apiUrl "?access_token=" $token }}
+{{ $json := getJSON $apiUrl "?access_token=" $token "&perpage=50&sort=-created" }}
 
 <style>
   .mk-raindrop-bookmarks {
