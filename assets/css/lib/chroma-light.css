@@ -36,19 +36,19 @@
 /* NameVariableMagic */ .chroma .vm {  }
 /* Literal */ .chroma .l {  }
 /* LiteralDate */ .chroma .ld {  }
-/* LiteralString */ .chroma .s { color: #dd1144 }
-/* LiteralStringAffix */ .chroma .sa { color: #dd1144 }
-/* LiteralStringBacktick */ .chroma .sb { color: #dd1144 }
-/* LiteralStringChar */ .chroma .sc { color: #dd1144 }
-/* LiteralStringDelimiter */ .chroma .dl { color: #dd1144 }
-/* LiteralStringDoc */ .chroma .sd { color: #dd1144 }
-/* LiteralStringDouble */ .chroma .s2 { color: #dd1144 }
-/* LiteralStringEscape */ .chroma .se { color: #dd1144 }
-/* LiteralStringHeredoc */ .chroma .sh { color: #dd1144 }
-/* LiteralStringInterpol */ .chroma .si { color: #dd1144 }
-/* LiteralStringOther */ .chroma .sx { color: #dd1144 }
+/* LiteralString */ .chroma .s { color: #099 }
+/* LiteralStringAffix */ .chroma .sa { color: #099 }
+/* LiteralStringBacktick */ .chroma .sb { color: #099 }
+/* LiteralStringChar */ .chroma .sc { color: #099 }
+/* LiteralStringDelimiter */ .chroma .dl { color: #099 }
+/* LiteralStringDoc */ .chroma .sd { color: #099 }
+/* LiteralStringDouble */ .chroma .s2 { color: #099 }
+/* LiteralStringEscape */ .chroma .se { color: #099 }
+/* LiteralStringHeredoc */ .chroma .sh { color: #099 }
+/* LiteralStringInterpol */ .chroma .si { color: #099 }
+/* LiteralStringOther */ .chroma .sx { color: #099 }
 /* LiteralStringRegex */ .chroma .sr { color: #009926 }
-/* LiteralStringSingle */ .chroma .s1 { color: #dd1144 }
+/* LiteralStringSingle */ .chroma .s1 { color: #099 }
 /* LiteralStringSymbol */ .chroma .ss { color: #990073 }
 /* LiteralNumber */ .chroma .m { color: #009999 }
 /* LiteralNumberBin */ .chroma .mb { color: #009999 }
