@@ -149,6 +149,7 @@ span.tag-span {
     font-size: small;
     line-height: 1.5;
     color: #0e7e9d;
+    margin-right: 4px;
 }
 .memo-nums {
     font-size: 1rem;
