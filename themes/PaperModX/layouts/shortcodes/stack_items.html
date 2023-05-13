@@ -1,45 +1,161 @@
 {{ $items := split (print .Inner) "\n" }}
+<style>
+  .inline-links a {
+    display: none;
+  }
+
+  .stack-list {
+    list-style: none;
+    overflow: hidden;
+  }
+
+  ul.stack-item-tags {
+    color: var(--tertiary);
+    font-size: 10px;
+    margin: 0 16px 12px 0;
+    font-family: var(--code-bg);
+  }
+
+  .stack-item {
+    display: flex;
+    overflow: hidden;
+  }
+
+  .stack-item:hover .stack-item-title {
+    color: var(--link-hover-color);
+    box-shadow: var(--link-hover-underline-shadow);
+  }
+
+  .stack-item-link {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .stack-item-image-container {
+    width: 64px;
+    height: 64px;
+    float: left;
+    margin-right: 16px;
+  }
+
+  .stack-item-content {
+    padding: 8px 8px 12px 16px;
+    flex: 1;
+    padding-inline-start: 0px !important;
+  }
+
+  .stack-item-header {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .stack-item-title-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .stack-item-title {
+    color: var(--text-highlight-color);
+    font-family: var(--font-family-teshu);
+    font-size: 16px;
+    font-weight: 500;
+    width: fit-content;
+  }
+
+  .stack-item-description {
+    font-size: 14px;
+    margin: 0 0 4px 0;
+    line-height: 1.6;
+    color: var(--secondary);
+  }
+
+  .stack-item-tags {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding: 0;
+    margin: 0;
+  }
+
+  .stack-item-tags li {
+    background-color: var(--code-bg);
+    border-radius: 3px;
+    padding: 0rem 0.5rem;
+    font-size: 0.6rem;
+    white-space: nowrap;
+  }
+
+  .stack-item-divider {
+    border-bottom: 0.5px solid var(--tertiary-bg);
+    margin: 8px 0;
+  }
+
+  span.stack-item-tag {
+    background-color: var(--code-bg);
+    border-radius: 3px;
+    padding: 0rem 0.5rem;
+    font-size: 0.6rem;
+    white-space: nowrap;
+    color: var(--tertiary);
+    line-height: 1.4rem;
+  }
+
+  p.stack-item-description {
+    margin: 4px 0px 12px 0px;
+  }
+
+  a.stack-item-link {
+    color: unset;
+    box-shadow: none;
+  }
+</style>
+
 <div class="stack-list">
   {{ range $index, $item := $items }} {{- $item := split $item "|" }} {{- if ge
   (len $item) 5 }}
-  <a
-    href="{{ index $item 0 }}"
-    target="_blank"
-    rel="noopener noreferrer"
-    class="stack-item-link"
-  >
-    <div class="stack-item">
-      <div class="stack-item-image-container">
-        <img
-          alt="{{ index $item 1 }}"
-          width="64"
-          height="64"
-          decoding="async"
-          data-nimg="1"
-          src="{{ (index $item 2) | safeURL }}"
-          style="color: transparent"
-        />
-      </div>
-      <div class="stack-item-content">
-        <div class="stack-item-header">
-          <div class="stack-item-title-container">
-            <div>
-              <div class="stack-item-title">{{ index $item 1 }}</div>
+  <div>
+    <a
+      href="{{ index $item 0 }}"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="stack-item-link"
+    >
+      <div class="stack-item">
+        <div class="stack-item-image-container">
+          <img
+            alt="{{ index $item 1 }}"
+            width="64"
+            height="64"
+            decoding="async"
+            data-nimg="1"
+            src="{{ (index $item 2) | safeURL }}"
+            style="color: transparent"
+          />
+        </div>
+        <div class="stack-item-content">
+          <div class="stack-item-header">
+            <div class="stack-item-title-container">
+              <div>
+                <div class="stack-item-title">{{ index $item 1 }}</div>
+              </div>
+              <p class="stack-item-description">{{ index $item 3 }}</p>
             </div>
-            <p class="stack-item-description">{{ index $item 3 }}</p>
+            {{- $tags := split (index $item 4) "," }} {{- if ge (len $tags) 1 }}
+            <div class="stack-item-tags">
+              {{ range $tags }}
+              <span class="stack-item-tag">{{ . }}</span>
+              {{ end }}
+            </div>
+            {{- end }}
           </div>
-          {{- $tags := split (index $item 4) "," }} {{- if ge (len $tags) 1 }}
-          <div class="stack-item-tags">
-            {{ range $tags }}
-            <span class="stack-item-tag">{{ . }}</span>
-            {{ end }}
-          </div>
-          {{- end }}
         </div>
       </div>
-    </div>
-  </a>
-  {{ if lt $index (sub (len $items) 1) }}
-  <hr class="stack-item-divider" />
-  {{ end }} {{- end }} {{- end }}
+    </a>
+    <!-- 在最后一个 stack-item 之后不显示横线 -->
+    {{ if lt $index (sub (len $items) 1) }}
+    <div class="stack-item-divider"></div>
+    {{ end }}
+  </div>
+  {{- end }} {{- end }}
 </div>
