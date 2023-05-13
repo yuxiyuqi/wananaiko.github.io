@@ -4,6 +4,10 @@
 {{ $json := getJSON $apiUrl "?access_token=" $token "&perpage=50&sort=-created" }}
 
 <style>
+  .inline-links {
+    display: none;
+}
+
   .mk-raindrop-bookmarks {
     display: flex;
     flex-wrap: wrap;
