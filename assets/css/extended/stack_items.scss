@@ -88,7 +88,7 @@ ul.stack-item-tags {
   width: 100%;
   height: 0.5px;
   background-color: var(--tertiary-bg);
-  border: 0.5px;
+  border-bottom: 0.5px solid var(--tertiary-bg);
 }
 
 hr.stack-item-divider {
