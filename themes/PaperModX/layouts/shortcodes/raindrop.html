@@ -113,6 +113,24 @@
     opacity: 1;
     transform: translateX(0);
   }
+  
+  @media (max-width: 768px) {
+  .mk-title-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .mk-avatar {
+    align-self: flex-start;
+    margin-top: 0;
+    margin-bottom: -22px; /* 可根据需要调整 */
+  }
+  .mk-title{
+    margin-left: 22px;
+  }
+}
+
 </style>
 
 <div class="mk-raindrop-bookmarks">
