@@ -1,5 +1,5 @@
 .chroma {
-  color: #e6edf3;
+  /* color: #e6edf3; */
   background-color: #292a30;
 }
 .chroma .err {
@@ -97,7 +97,7 @@
   color: #099;
 }
 .chroma .nt {
-  color: #7ee787;
+  color: #5ba862;
 }
 .chroma .nv {
   color: #099;
