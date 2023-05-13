@@ -690,3 +690,7 @@ h6:hover .anchor {
 .tweet-ref blockquote a {
     text-decoration: none;
 }
+
+.inline-links {
+    display: none;
+}
