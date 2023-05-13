@@ -45,13 +45,14 @@
   }
 
   .stack-item-header {
-    display: flex;
+    width: 100%;
     flex-direction: column;
   }
 
   .stack-item-title-container {
-    display: flex;
-    flex-direction: column;
+    display: inline-flex;
+    align-items: center;
+    position: relative;
   }
 
   .stack-item-title {
@@ -60,6 +61,22 @@
     font-size: 16px;
     font-weight: 500;
     width: fit-content;
+  }
+
+  .stack-item-svg {
+    margin-left: 2px;
+    opacity: 0;
+    position: absolute;
+    right: -20px;
+    transform: translateX(20px);
+    transition: all 0.2s ease;
+    display: flex;
+    justify-content: center;
+  }
+
+  .stack-item:hover .stack-item-svg {
+    opacity: 1;
+    transform: translateX(0);
   }
 
   .stack-item-description {
@@ -136,11 +153,28 @@
         <div class="stack-item-content">
           <div class="stack-item-header">
             <div class="stack-item-title-container">
-              <div>
-                <div class="stack-item-title">{{ index $item 1 }}</div>
+              <div class="stack-item-title">{{ index $item 1 }}</div>
+              <div class="stack-item-svg">
+                <svg
+                  width="16px"
+                  height="16px"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  color="#099"
+                >
+                  <path
+                    d="M3 12h18m0 0l-8.5-8.5M21 12l-8.5 8.5"
+                    stroke="#099"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                </svg>
               </div>
-              <p class="stack-item-description">{{ index $item 3 }}</p>
             </div>
+            <p class="stack-item-description">{{ index $item 3 }}</p>
             {{- $tags := split (index $item 4) "," }} {{- if ge (len $tags) 1 }}
             <div class="stack-item-tags">
               {{ range $tags }}
