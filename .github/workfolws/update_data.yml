@@ -1,0 +1,32 @@
+name: Update Data
+
+on:
+  schedule:
+    - cron: '0 */6 * * *' # 每3小时运行一次
+
+jobs:
+  update_data:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: 14
+
+    - name: Install dependencies
+      run: npm ci
+
+    - name: Fetch and update data
+      run: node update-data.js
+
+    - name: Commit and push changes
+      run: |
+        git config user.name "GitHub Actions Bot"
+        git config user.email "<your-email@example.com>"
+        git add -A
+        git commit -m "Update data from API" || echo "No changes to commit"
+        git push
