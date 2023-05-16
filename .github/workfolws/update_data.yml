@@ -1,18 +1,17 @@
-name: Update Data
-
+name: Build and Deploy
 on:
-  schedule:
-    - cron: '0 */6 * * *' # 每3小时运行一次
+  push:
+    branches:
+      - main # Replace with your default branch name
 
 jobs:
-  update_data:
+  build-and-deploy:
     runs-on: ubuntu-latest
-
     steps:
-    - name: Checkout repository
+    - name: Checkout
       uses: actions/checkout@v2
 
-    - name: Set up Node.js
+    - name: Setup Node.js
       uses: actions/setup-node@v2
       with:
         node-version: 14
@@ -20,13 +19,19 @@ jobs:
     - name: Install dependencies
       run: npm ci
 
-    - name: Fetch and update data
+    - name: Update Raindrop.io data
       run: node update-data.js
 
-    - name: Commit and push changes
-      run: |
-        git config user.name "GitHub Actions Bot"
-        git config user.email "<your-email@example.com>"
-        git add -A
-        git commit -m "Update data from API" || echo "No changes to commit"
-        git push
+    - name: Setup Hugo
+      uses: peaceiris/actions-hugo@v2
+      with:
+        hugo-version: '0.89.4' # Replace with your desired Hugo version
+
+    - name: Build
+      run: hugo --minify
+
+    - name: Deploy
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./public
