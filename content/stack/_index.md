@@ -21,7 +21,7 @@ https://menubarx.app|MenubarX|https://images.wananaiko.com/2023/05/g21VNn.png|�
 
 https://www.macgpt.com|MacGPT|https://images.wananaiko.com/2023/05/ojwuJD.png|目前为止用过的最好用的 ChatGPT 客户端，除了支持快捷键呼出窗口，最好用的是可以在任何地方使用。|macOS
 
-https://qspace.awehunt.com/zh-cn/index.html|QSpace Pro|https://images.wananaiko.com/2023/05/www.alltoall.net_jerry_miwu8nhXsv.png|可以完美代替 Finder，支持多窗口管理文件，自定义功能非常多。|macOS
+https://qspace.awehunt.com/zh-cn/index.html|QSpace Pro|https://images.wananaiko.com/2023/05/www.alltoall.net_jerry_miwu8nhXsv.png|可以完美代替 Finder，支持多窗口管理文件，自定义功能非常多。使用邀请码【5K8LXK】购买可以优惠10元。|macOS
 
 https://nicelydone.club|Nicelydone|https://images.wananaiko.com/2023/05/Umzt45.png|当你要构建一个项目或者功能时，Nicelydone会带给你灵感，网站的分类非常细致，单个产品的截图也非常完整。|Web
 
