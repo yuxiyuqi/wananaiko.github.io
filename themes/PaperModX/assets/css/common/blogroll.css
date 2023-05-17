@@ -27,7 +27,9 @@
 }
 
 .links .item .title a:hover {
-  text-decoration: underline;
+  color: var(--link-hover-color);
+  box-shadow: var(--link-hover-underline-shadow);
+  padding-bottom: 2px;
 }
 
 .links .item .description {
