@@ -81,6 +81,27 @@
     max-height: 100%;
   }
 
+  .gallery-photo span.photo-title,
+  .gallery-photo span.photo-time {
+    display: none;
+    opacity: 0;
+    animation: fadeIn 0.5s ease-in-out forwards;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .gallery-photo:hover span.photo-title,
+  .gallery-photo:hover span.photo-time {
+    display: inline-block;
+  }
+
   @media screen and (max-width: 1100px) {
     .gallery-photo {
       width: 33.3%;
