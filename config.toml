@@ -36,7 +36,6 @@ EnableInstantClick = false
 EnableImageZoom = true
 hideMeta = false
 comments = false
-customCSS = ["custom.css"]
 
 
   [params.logo]

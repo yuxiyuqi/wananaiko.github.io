@@ -24,6 +24,11 @@
       );
     }
 
+    /* 添加一个类名 .animation-disabled 用于禁用动画 */
+  .animation-disabled {
+     animation: none !important;
+    }
+
     .slide-enter-content > *:nth-child(1) {
       --enter-stage: 1;
     }
