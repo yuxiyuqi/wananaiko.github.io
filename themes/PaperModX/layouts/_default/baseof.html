@@ -15,9 +15,9 @@
 {{- end }} type-{{ .Type }} kind-{{ .Kind }} layout-{{ .Layout }} slide-enter
 " id="top">
     {{- partialCached "header.html" . .Page -}}
-    <main class="main {{- if (eq .Kind `page`) -}}{{- print " post" -}}{{- end -}}">
-        {{- block "main" . }}{{ end }}
-    </main>
+    <main class="main {{- if (eq .Kind `page`) -}}{{- print " post" -}}{{- end -}} {{- print " slide-enter-content" -}}">
+    {{- block "main" . }}{{ end }}
+</main>
     {{ partial "footer.html" . -}}
     {{- block "body_end" . }}{{ end }}
 

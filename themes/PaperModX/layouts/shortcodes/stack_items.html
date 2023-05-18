@@ -128,7 +128,7 @@
   }
 </style>
 
-<div class="stack-list slide-enter">
+<div class="stack-list slide-enter slide-enter-content">
   {{ range $index, $item := $items }} {{- $item := split $item "|" }} {{- if ge
   (len $item) 5 }}
   <div>

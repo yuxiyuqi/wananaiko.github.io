@@ -21,7 +21,7 @@
 
   .mk-raindrop-bookmark {
     width: 100%;
-    margin: 1rem 0;
+    margin: 0 0 1.5rem 0;
   }
 
   .mk-raindrop-bookmark:hover{
@@ -95,10 +95,10 @@
   }
 
   .mk-divider {
-    all:unset;
     width: 100%;
     background-color: var(--tertiary-bg);
     border-bottom: 0.5px solid var(--tertiary-bg); 
+    margin-top: 1.5rem;
   }
 
   .mk-svg {
@@ -136,7 +136,7 @@
 
 </style>
 
-<div class="mk-raindrop-bookmarks">
+<div class="mk-raindrop-bookmarks slide-enter-content">
   {{ range $i, $item := index $json "items" }} {{ $domain := index (findRE
   "[^.]+\\.[^.]+$" (index (findRE "//[^/]+" $item.link) 0)) 0 }}
   <div class="mk-raindrop-bookmark">
@@ -163,8 +163,8 @@
       </div>
       {{ end }}
     </a>
-  </div>
-  {{ if lt $i (sub (len (index $json "items")) 1) }}
+      {{ if lt $i (sub (len (index $json "items")) 1) }}
   <div class="mk-divider"></div>
+  </div>
   {{ end }} {{ end }}
 </div>

@@ -289,9 +289,9 @@ function toggleThemeListener() {
             </li>
         </ul>
     </nav>
-</header><main class="main post">
+</header><main class="main post slide-enter-content">
 
-<article class="post-single">
+<article class="post-single slide-enter-content">
   <header class="post-header">
     <h1 class="post-title">基于 Vercel 和 Fly.io 免费部署的应用</h1>
     <div class="post-meta"><span class="meta-item">
@@ -303,33 +303,7 @@ function toggleThemeListener() {
   <span>2 min</span></span>
   
     </div>
-  </header> <div class="toc side right">
-    <details  open>
-        <summary accesskey="c" title="(Alt + C)">
-            <span class="details">Table of Contents</span>
-        </summary>
-
-        <div class="inner"><ul>
-                <li>
-                    <a href="#hugo-%e9%83%a8%e7%bd%b2%e5%88%b0-vercel" aria-label="Hugo 部署到 Vercel">Hugo 部署到 Vercel</a><ul>
-                        
-                <li>
-                    <a href="#%e5%b0%86-memos-%e4%bd%9c%e4%b8%ba%e5%8d%95%e9%a1%b5%e6%b7%bb%e5%8a%a0%e5%88%b0-hugo-%e4%b8%ad" aria-label="将 Memos 作为单页添加到 Hugo 中">将 Memos 作为单页添加到 Hugo 中</a></li></ul>
-                </li>
-                <li>
-                    <a href="#umami-%e9%83%a8%e7%bd%b2%e5%88%b0-vercel" aria-label="Umami 部署到 Vercel">Umami 部署到 Vercel</a></li>
-                <li>
-                    <a href="#rsshub-%e9%83%a8%e7%bd%b2%e5%88%b0-vercel" aria-label="RSSHub 部署到 Vercel">RSSHub 部署到 Vercel</a></li>
-                <li>
-                    <a href="#memos-%e9%83%a8%e7%bd%b2%e5%88%b0-flyio" aria-label="memos 部署到 fly.io">memos 部署到 fly.io</a></li>
-                <li>
-                    <a href="#%e6%84%9f%e8%b0%a2-chatgpt-%e7%9a%84%e5%b8%ae%e5%8a%a9" aria-label="感谢 ChatGPT 的帮助">感谢 ChatGPT 的帮助</a>
-                </li>
-            </ul>
-        </div>
-    </details>
-</div>
-
+  </header> 
   <div class="post-content"><h2 id="hugo-部署到-vercel">Hugo 部署到 Vercel</h2>
 <p>最近考虑把 Wordpress 博客换到 Hugo，一番折腾之后，通过 Github+Vercel 的方式实现了自动部署，还挺方便的，以后只需要在本地编写 Markdown 文件并发布到 Github 就可以了。以 macOS 下为例：</p>
 <ol>
@@ -461,7 +435,7 @@ function toggleThemeListener() {
 </body>
 
 </article>
-    </main>
+</main>
     
 <footer class="footer">
   <span>&copy; 2023 <a href="https://wananaiko.com/">wananaiko</a></span><span style="display: inline-block; margin-left: 1em;">
@@ -626,7 +600,7 @@ function toggleThemeListener() {
   
   
   (function() {
-    const enableTocScroll = '1' == '1'
+    const enableTocScroll = '' == '1'
     if (!enableTocScroll) {
       return
     }

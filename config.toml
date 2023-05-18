@@ -29,13 +29,14 @@ displayFullLangName = true
 ShowPostNavLinks = true
 ShowBreadCrumbs = false
 ShowCodeCopyButtons = true
-ShowToc = true
+ShowToc = false
 TocOpen = true
 TocSide = "right"
 EnableInstantClick = false
 EnableImageZoom = true
 hideMeta = false
 comments = false
+customCSS = ["custom.css"]
 
 
   [params.logo]

@@ -1,6 +1,6 @@
 {{- define "main" }} {{- $isNewsletter := eq .Type "newsletter" }}
 
-<article class="post-single">
+<article class="post-single slide-enter-content">
   <header class="post-header">
     {{ partial "breadcrumbs.html" . }} {{- if $isNewsletter -}} {{- partial
     "newsletter_brand.html" . }} {{- end -}}

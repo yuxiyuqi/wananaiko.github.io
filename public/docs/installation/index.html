@@ -289,9 +289,9 @@ function toggleThemeListener() {
             </li>
         </ul>
     </nav>
-</header><main class="main post">
+</header><main class="main post slide-enter-content">
 
-<article class="post-single">
+<article class="post-single slide-enter-content">
   <header class="post-header">
     <h1 class="post-title">Installation | Update</h1>
     <div class="post-meta"><span class="meta-item">
@@ -301,53 +301,7 @@ function toggleThemeListener() {
   <span>4 min</span></span>
   
     </div>
-  </header> <div class="toc side left">
-    <details  open>
-        <summary accesskey="c" title="(Alt + C)">
-            <span class="details">Table of Contents</span>
-        </summary>
-
-        <div class="inner"><ul>
-                <li>
-                    <a href="#intro" aria-label="Intro">Intro</a></li>
-                <li>
-                    <a href="#guide" aria-label="Guide">Guide</a><ul>
-                        
-                <li>
-                    <a href="#method-1" aria-label="Method 1">Method 1</a></li>
-                <li>
-                    <a href="#method-2" aria-label="Method 2">Method 2</a></li>
-                <li>
-                    <a href="#method-3" aria-label="Method 3">Method 3</a></li>
-                <li>
-                    <a href="#finally-" aria-label="Finally &amp;hellip;">Finally &hellip;</a></li>
-                <li>
-                    <a href="#method-4" aria-label="Method 4">Method 4</a></li></ul>
-                </li>
-                <li>
-                    <a href="#quick-links" aria-label="Quick Links">Quick Links</a><ul>
-                        
-                <li>
-                    <a href="#papermod---featuresfeatures" aria-label="Papermod - Features"><a href="../features">Papermod - Features</a></a></li>
-                <li>
-                    <a href="#papermod---faqsfaq" aria-label="Papermod - FAQs"><a href="../faq">Papermod - FAQs</a></a></li>
-                <li>
-                    <a href="#papermod---variablesvariables" aria-label="Papermod - Variables"><a href="../variables">Papermod - Variables</a></a></li>
-                <li>
-                    <a href="#papermod---iconsicons" aria-label="Papermod - Icons"><a href="../icons">Papermod - Icons</a></a></li>
-                <li>
-                    <a href="#changeloghttpsgithubcomreorxhugo-papermodxreleases" aria-label="ChangeLog"><a href="https://github.com/reorx/hugo-PaperModX/releases" target="_blank" rel="noopener">ChangeLog</a></a></li></ul>
-                </li>
-                <li>
-                    <a href="#sample-configyml" aria-label="Sample config.yml">Sample <code>config.yml</code></a></li>
-                <li>
-                    <a href="#sample-pagemd" aria-label="Sample Page.md">Sample <code>Page.md</code></a>
-                </li>
-            </ul>
-        </div>
-    </details>
-</div>
-
+  </header> 
   <div class="post-content"><h2 id="intro">Intro</h2>
 <ul>
 <li><strong>We&rsquo;ll be using <code>yml/yaml</code> format for all examples down below, I recommend using <code>yml</code> over <code>toml</code> as it is easier to read.</strong></li>
@@ -694,7 +648,7 @@ function toggleThemeListener() {
 </body>
 
 </article>
-    </main>
+</main>
     
 <footer class="footer">
   <span>&copy; 2023 <a href="https://wananaiko.com/">wananaiko</a></span><span style="display: inline-block; margin-left: 1em;">
@@ -859,7 +813,7 @@ function toggleThemeListener() {
   
   
   (function() {
-    const enableTocScroll = '1' == '1'
+    const enableTocScroll = '' == '1'
     if (!enableTocScroll) {
       return
     }

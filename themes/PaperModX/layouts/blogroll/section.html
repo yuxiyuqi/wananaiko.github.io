@@ -10,7 +10,7 @@
     <p>{{ .Description }}</p>
   </blockquote>
 
-  <div class="links">
+  <div class="links slide-enter-content">
     {{ range .Site.Data.blogroll }}
     {{ range sort . "weight" }}
     <div class="item">
