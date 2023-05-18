@@ -221,5 +221,35 @@ img {
     .slide-enter-content > *:nth-child(20) {
       --enter-stage: 20;
     }
+    .slide-enter-content > *:nth-child(21) {
+      --enter-stage: 21;
+    }
+    .slide-enter-content > *:nth-child(22) {
+      --enter-stage: 22;
+    }
+    .slide-enter-content > *:nth-child(23) {
+      --enter-stage: 23;
+    }
+    .slide-enter-content > *:nth-child(24) {
+      --enter-stage: 24;
+    }
+    .slide-enter-content > *:nth-child(25) {
+      --enter-stage: 25;
+    }
+    .slide-enter-content > *:nth-child(26) {
+      --enter-stage: 26;
+    }
+    .slide-enter-content > *:nth-child(27) {
+      --enter-stage: 27;
+    }
+    .slide-enter-content > *:nth-child(28) {
+      --enter-stage: 28;
+    }
+    .slide-enter-content > *:nth-child(29) {
+      --enter-stage: 29;
+    }
+    .slide-enter-content > *:nth-child(30) {
+      --enter-stage: 30;
+    }
   }
   /* 滑动进入动画结束*/
