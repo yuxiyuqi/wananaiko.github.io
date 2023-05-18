@@ -41,7 +41,7 @@ https://www.macbartender.com|Bartender|https://images.wananaiko.com/2023/05/i0Ug
 
 https://nssurge.com|Surge|https://images.wananaiko.com/2023/05/Qzuv1o.png|比较好用的网络调试工具。|macOS, iOS
 
-https://linear.app|Linear|https://images.wananaiko.com/2023/05/JelJO6.png|好用的团队任务管理工具。|macOS, web
+https://linear.app|Linear|https://images.wananaiko.com/2023/05/JelJO6.png|很好用的团队任务管理工具。|macOS, web
 
 https://vercel.com|Vercel|https://images.wananaiko.com/2023/05/Oj7T92.png|很多自托管的网站服务部署在了上面。|web
 
