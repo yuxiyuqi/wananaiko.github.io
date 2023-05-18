@@ -1,6 +1,6 @@
 {{- define "main" }} {{- $isNewsletter := eq .Type "newsletter" }}
 
-<article class="post-single slide-enter-content">
+<article class="post-single">
   <header class="post-header">
     {{ partial "breadcrumbs.html" . }} {{- if $isNewsletter -}} {{- partial
     "newsletter_brand.html" . }} {{- end -}}
@@ -24,7 +24,7 @@
   partial "cover.html" (dict "cxt" . "IsHome" false "isHidden" $isHidden) }} {{-
   if (.Param "ShowToc") }} {{- partial "toc.html" . }} {{- end }} {{- if
   .Content }}
-  <div class="post-content">
+  <div class="post-content slide-enter-content">
     {{- if not (.Param "disableAnchoredHeadings") }} {{- partial
     "anchored_headings.html" .Content -}} {{- else }}{{ .Content }}{{ end }}
   </div>
