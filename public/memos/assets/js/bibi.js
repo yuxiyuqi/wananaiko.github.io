@@ -328,7 +328,6 @@ bbDom &&
           : getNextList();
     }
   ));
-
 // 自动加载更多的内容
 window.addEventListener("scroll", function () {
   var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
