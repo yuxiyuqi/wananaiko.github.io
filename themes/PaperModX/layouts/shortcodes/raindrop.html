@@ -21,7 +21,7 @@
 
   .mk-raindrop-bookmark {
     width: 100%;
-    margin: 0 0 1.5rem 0;
+    margin: 0 0 1.4rem 0;
   }
 
   .mk-raindrop-bookmark:hover{
@@ -68,7 +68,7 @@
     height: 16px;
     background-size: cover;
     background-position: center;
-    margin-right: 8px;
+    margin-right: 10px;
     border-radius: 2px;
   }
 
@@ -77,7 +77,8 @@
     color: #666;
     overflow: hidden;
     text-overflow: ellipsis;
-    padding-left: 24px;
+    padding-left: 26px;
+    margin-top: 0.1rem;
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
@@ -89,7 +90,7 @@
     flex-wrap: wrap;
     padding: 0;
     margin: 0;
-    padding-left: 24px;
+    padding-left: 26px;
     align-items: center;
   }
 
@@ -97,7 +98,11 @@
     display: inline-block;
     font-size: 0.8rem;
     color: var(--tertiary);
-    margin-right: 12px;
+    border: 1px solid var(--border);
+    padding: 0.2rem 0.4rem;
+    line-height: 0.8rem;
+    border-radius: 999px;
+    margin: 0.5rem 0.6rem 0.4rem 0;
   }
 
   .mk-divider {
@@ -128,6 +133,7 @@
     background-color:var(--tertiary);
     border-radius: 99px;
     margin-right: .3rem;
+    display: none;
 }
 
   @media (max-width: 768px) {
