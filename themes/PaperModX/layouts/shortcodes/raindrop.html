@@ -75,11 +75,14 @@
   .mk-excerpt {
     font-size: 0.9rem;
     color: #666;
-    white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     padding-left: 24px;
-  }
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
 
   .mk-raindrop-tags {
     display: flex;
