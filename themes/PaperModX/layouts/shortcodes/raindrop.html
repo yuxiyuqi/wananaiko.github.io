@@ -69,6 +69,7 @@
     background-size: cover;
     background-position: center;
     margin-right: 8px;
+    border-radius: 2px;
   }
 
   .mk-excerpt {
@@ -86,6 +87,7 @@
     padding: 0;
     margin: 0;
     padding-left: 24px;
+    align-items: center;
   }
 
   .mk-tag {
@@ -117,7 +119,14 @@
     opacity: 1;
     transform: translateX(0);
   }
-  
+  .mk-radio {
+    width: 4px;
+    height: 4px;
+    background-color: {{ index $json "color" }};
+    border-radius: 99px;
+    margin-right: .3rem;
+}
+
   @media (max-width: 768px) {
   .mk-title-wrapper {
     display: flex;
@@ -159,7 +168,8 @@
       {{ end }} {{ with $item.tags }}
       <div class="mk-raindrop-tags">
         {{ range . }}
-        <div class="mk-tag">#{{ . }}</div>
+        <div class="mk-radio"></div>
+        <div class="mk-tag">{{ . }}</div>
         {{ end }}
       </div>
       {{ end }}
