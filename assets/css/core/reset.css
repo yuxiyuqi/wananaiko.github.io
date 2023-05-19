@@ -70,6 +70,7 @@ p {
 
 a {
     text-decoration: none;
+    transition: .5s;
 }
 
 body,
@@ -254,4 +255,10 @@ img {
 body {
     scrollbar-face-color: transparent;
     scrollbar-track-color: transparent;
+}
+
+.links .item .title a{
+    text-decoration: none;
+    transition: .5s;
+    padding-bottom: 2px;
 }
