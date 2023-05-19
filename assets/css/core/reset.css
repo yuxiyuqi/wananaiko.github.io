@@ -70,7 +70,7 @@ p {
 
 a {
     text-decoration: none;
-    transition: .5s;
+    transition: .5s ease-in-out;
 }
 
 body,
