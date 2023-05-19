@@ -73,12 +73,12 @@
   }
 
   .mk-excerpt {
-    font-size: 0.9rem;
+    font-size: 14px;
     color: var(--secondary);
     overflow: hidden;
     text-overflow: ellipsis;
     padding-left: 26px;
-    margin-top: 0.1rem;
+    margin: 2px 0px 4px 0px;
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
@@ -89,20 +89,21 @@
     display: flex;
     flex-wrap: wrap;
     padding: 0;
-    margin: 0;
+    margin: 0.65rem 0 0.2rem 0;
     padding-left: 26px;
     align-items: center;
+    gap: 0.5rem;
   }
 
   .mk-tag {
     display: inline-block;
-    font-size: 0.8rem;
     color: var(--tertiary);
-    border: 1px solid var(--tertiary-bg);
-    padding: 0.2rem 0.4rem;
-    line-height: 0.8rem;
-    border-radius: 999px;
-    margin: 0.5rem 0.5rem 0.25rem 0;
+    background-color: var(--code-bg);
+    border-radius: 3px;
+    padding: 0rem 0.5rem;
+    font-size: 0.6rem;
+    white-space: nowrap;
+    line-height: 1.4rem;
 }
 
   .mk-divider {
