@@ -68,6 +68,7 @@ img {
 }
 .memo-content-text a.link {
     color: var(--post-link-color);
+    transition: .5s;
 }
 .memo-content-text a.link:hover {
     color: var(--link-hover-color);
@@ -137,7 +138,7 @@ button.load-btn.button-load:hover {
     color: var(--primary);
     padding-bottom: 2px;
     box-shadow: var(--link-underline-shadow);
-    transition: var(--link-transition);
+    transition: .5s !important;
 }
 ul.bb-list-ul {
     padding-left: 0;

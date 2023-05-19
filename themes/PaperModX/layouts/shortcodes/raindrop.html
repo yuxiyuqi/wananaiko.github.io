@@ -6,7 +6,7 @@
 <style>
   .inline-links {
     display: none;
-}
+  }
 
   .mk-raindrop-bookmarks {
     display: flex;
@@ -119,31 +119,43 @@
     opacity: 1;
     transform: translateX(0);
   }
+
   .mk-radio {
     width: 4px;
     height: 4px;
-    background-color: {{ index $json "color" }};
+    background-color: var(--raindrop-color);
     border-radius: 99px;
     margin-right: .3rem;
-}
+  }
 
   @media (max-width: 768px) {
-  .mk-title-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    .mk-title-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .mk-avatar {
+      align-self: flex-start;
+      margin-top: 0;
+      margin-bottom: -21px; /* 可根据需要调整 */
+    }
+
+    .mk-title {
+      margin-left: 24px;
+    }
   }
 
-  .mk-avatar {
-    align-self: flex-start;
-    margin-top: 0;
-    margin-bottom: -21px; /* 可根据需要调整 */
-  }
-  .mk-title{
-    margin-left: 24px;
-  }
-}
+  /* JavaScript to set CSS variables */
+  <script>
+    const raindropColor = '{{ index $json "color" }}';
+    document.documentElement.style.setProperty('--raindrop-color', raindropColor);
 
+    const radioButtons = document.querySelectorAll('.mk-radio');
+    radioButtons.forEach(radioButton => {
+      radioButton.style.backgroundColor = raindropColor;
+    });
+  </script>
 </style>
 
 <div class="mk-raindrop-bookmarks slide-enter-content">
@@ -174,8 +186,9 @@
       </div>
       {{ end }}
     </a>
-      {{ if lt $i (sub (len (index $json "items")) 1) }}
-  <div class="mk-divider"></div>
+    {{ if lt $i (sub (len (index $json "items")) 1) }}
+    <div class="mk-divider"></div>
+    {{ end }}
   </div>
-  {{ end }} {{ end }}
+  {{ end }}
 </div>
