@@ -89,17 +89,17 @@ img {
     -webkit-tap-highlight-color: transparent;
 }
 .memo-content-text pre {
-    background-color: var(--code-bg);
-    padding: 0.2em 0.4em;
+    background-color: var(--border)!important;
+    padding: 1em 1em;
     font-size: 85%;
-    border-radius: 3px;
+    border-radius: 6px;
     color: var(--secondary);
     white-space: pre-wrap;
     overflow-wrap: break-word;
 }
 
 .memo-content-text code {
-    background-color: var(--code-bg);
+    // background-color: var(--code-bg);
     padding: 0.2em 0.4em;
     font-size: 85%;
     border-radius: 3px;
