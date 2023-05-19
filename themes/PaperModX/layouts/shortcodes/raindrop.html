@@ -3,7 +3,54 @@
 {{ $apiUrl := printf "https://api.raindrop.io/rest/v1/raindrops/%s" $collection }}
 {{ $json := getJSON $apiUrl "?access_token=" $token "&perpage=50&sort=-created" }}
 
+<div class="mk-raindrop-bookmarks slide-enter-content">
+  {{ range $i, $item := index $json "items" }} {{ $domain := index (findRE
+  "[^.]+\\.[^.]+$" (index (findRE "//[^/]+" $item.link) 0)) 0 }}
+  <div class="mk-raindrop-bookmark">
+    <a href="{{ $item.link }}" target="_blank" rel="noopener noreferrer">
+      <div class="mk-title-wrapper">
+        <div
+          class="mk-avatar"
+          style="background-image: url('https://unavatar.io/{{ trim $domain "/" }}')"
+        ></div>
+        <div class="mk-title">
+          {{ $item.title }}
+        </div>
+        <div class="mk-svg">
+          <svg width="16px" height="16px" viewBox="0 0 24 24" stroke-width="1.5" fill="none" xmlns="http://www.w3.org/2000/svg" color="#099"><path d="M3 12h18m0 0l-8.5-8.5M21 12l-8.5 8.5" stroke="#099" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+        </div>
+      </div>
+      {{ with $item.excerpt }}
+      <div class="mk-excerpt">{{ . }}</div>
+      {{ end }} {{ with $item.tags }}
+      <div class="mk-raindrop-tags">
+        {{ range . }}
+        <div class="mk-radio"></div>
+        <div class="mk-tag">{{ . }}</div>
+        {{ end }}
+      </div>
+      {{ end }}
+    </a>
+    {{ if lt $i (sub (len (index $json "items")) 1) }}
+    <div class="mk-divider"></div>
+    {{ end }}
+  </div>
+  {{ end }}
+</div>
+
 <style>
+  :root {
+    --raindrop-color: #FF0000; /* 默认颜色 */
+  }
+
+  .mk-radio {
+    width: 4px;
+    height: 4px;
+    background-color: var(--raindrop-color);
+    border-radius: 99px;
+    margin-right: .3rem;
+  }
+
   .inline-links {
     display: none;
   }
@@ -120,14 +167,6 @@
     transform: translateX(0);
   }
 
-  .mk-radio {
-    width: 4px;
-    height: 4px;
-    background-color: var(--raindrop-color);
-    border-radius: 99px;
-    margin-right: .3rem;
-  }
-
   @media (max-width: 768px) {
     .mk-title-wrapper {
       display: flex;
@@ -145,50 +184,14 @@
       margin-left: 24px;
     }
   }
-
-  /* JavaScript to set CSS variables */
-  <script>
-    const raindropColor = '{{ index $json "color" }}';
-    document.documentElement.style.setProperty('--raindrop-color', raindropColor);
-
-    const radioButtons = document.querySelectorAll('.mk-radio');
-    radioButtons.forEach(radioButton => {
-      radioButton.style.backgroundColor = raindropColor;
-    });
-  </script>
 </style>
 
-<div class="mk-raindrop-bookmarks slide-enter-content">
-  {{ range $i, $item := index $json "items" }} {{ $domain := index (findRE
-  "[^.]+\\.[^.]+$" (index (findRE "//[^/]+" $item.link) 0)) 0 }}
-  <div class="mk-raindrop-bookmark">
-    <a href="{{ $item.link }}" target="_blank" rel="noopener noreferrer">
-      <div class="mk-title-wrapper">
-        <div
-          class="mk-avatar"
-          style="background-image: url('https://unavatar.io/{{ trim $domain "/" }}')"
-        ></div>
-        <div class="mk-title">
-          {{ $item.title }}
-        </div>
-        <div class="mk-svg">
-          <svg width="16px" height="16px" viewBox="0 0 24 24" stroke-width="1.5" fill="none" xmlns="http://www.w3.org/2000/svg" color="#099"><path d="M3 12h18m0 0l-8.5-8.5M21 12l-8.5 8.5" stroke="#099" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-        </div>
-      </div>
-      {{ with $item.excerpt }}
-      <div class="mk-excerpt">{{ . }}</div>
-      {{ end }} {{ with $item.tags }}
-      <div class="mk-raindrop-tags">
-        {{ range . }}
-        <div class="mk-radio"></div>
-        <div class="mk-tag">{{ . }}</div>
-        {{ end }}
-      </div>
-      {{ end }}
-    </a>
-    {{ if lt $i (sub (len (index $json "items")) 1) }}
-    <div class="mk-divider"></div>
-    {{ end }}
-  </div>
-  {{ end }}
-</div>
+<script>
+  const raindropColor = '{{ index $json "color" }}';
+  document.documentElement.style.setProperty('--raindrop-color', raindropColor);
+
+  const radioButtons = document.querySelectorAll('.mk-radio');
+  radioButtons.forEach(radioButton => {
+    radioButton.style.backgroundColor = raindropColor;
+  });
+</script>
