@@ -128,14 +128,6 @@
     opacity: 1;
     transform: translateX(0);
   }
-  .mk-radio {
-    width: 4px;
-    height: 4px;
-    background-color:var(--tertiary);
-    border-radius: 99px;
-    margin-right: .3rem;
-    display: none;
-}
 
   @media (max-width: 768px) {
   .mk-title-wrapper {
@@ -178,7 +170,6 @@
       {{ end }} {{ with $item.tags }}
       <div class="mk-raindrop-tags">
         {{ range . }}
-        <div class="mk-radio"></div>
         <div class="mk-tag">{{ . }}</div>
         {{ end }}
       </div>
