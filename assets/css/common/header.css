@@ -46,6 +46,41 @@
     height: 18px;
 }
 
+/* 点击button id="theme-toggle"后,为svg id="sun"和svg id="moon"添加动画效果,sun和moon出现之前:缩小并且带有一些旋转角度,出现之后恢复默认大小和默认角度,带有旋转动画.加载网页默认是没有动画效果*/#sun,
+#sun,
+#moon {
+    transform-origin: center center;
+    animation: scaleDown 0.3s ease-out;
+    transition-duration: .3s;
+    transition-timing-function: cubic-bezier(.4,0,.2,1);
+}
+
+#sun {
+    animation-name: scaleUp;
+}
+
+@keyframes scaleDown {
+    0% {
+        transform: scale(0.5) rotate(30deg);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1) rotate(0deg);
+        opacity: 1;
+    }
+}
+
+@keyframes scaleUp {
+    0% {
+        transform: scale(0.5) rotate(-30deg);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1) rotate(0deg);
+        opacity: 1;
+    }
+}
+
 button#theme-toggle {
     font-size: 26px;
     margin: auto 4px;

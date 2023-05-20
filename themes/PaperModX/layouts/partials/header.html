@@ -67,6 +67,47 @@ function toggleThemeListener() {
   })();
 </script>
 
+<style>
+  #sun,
+#moon {
+    transform-origin: center center;
+    animation: scaleDown 0.3s ease-out;
+    transition-duration: .3s;
+    transition-timing-function: cubic-bezier(.4,0,.2,1);
+}
+
+#sun {
+    animation-name: scaleUp;
+}
+
+@keyframes scaleDown {
+    0% {
+        transform: scale(0.5) rotate(30deg);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1) rotate(0deg);
+        opacity: 1;
+    }
+}
+
+@keyframes scaleUp {
+    0% {
+        transform: scale(0.5) rotate(-30deg);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1) rotate(0deg);
+        opacity: 1;
+    }
+}
+
+button#theme-toggle {
+    font-size: 26px;
+    margin: auto 4px;
+}
+</style>
+
 <header class="header">
     <nav class="nav">
         <div class="logo">
@@ -101,12 +142,12 @@ function toggleThemeListener() {
             <span class="logo-switches">
                 {{- if (not site.Params.disableThemeToggle) }}
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)">
-                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round">
                         <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
                     </svg>
-                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round">
                         <circle cx="12" cy="12" r="5"></circle>
@@ -123,6 +164,18 @@ function toggleThemeListener() {
                 {{- end }}
             </span>
         </div>
+
+        <!-- 加载网页时,不显示sun和moon的style中的动画效果,点击theme-toggle的button后显示sun和moon的动画,不要让sun和moon动画在加载网页时一闪而过. -->
+        <script>
+            document.getElementById("sun").style.animationName = "none";
+            document.getElementById("moon").style.animationName = "none";
+
+            document.getElementById("theme-toggle").onclick = function () {
+                document.getElementById("sun").style.animationName = "scaleDown";
+                document.getElementById("moon").style.animationName = "scaleUp";
+            }
+        </script>
+
         {{- $currentPage := . }}
         <ul id="menu">
             {{- range site.Menus.main }}
