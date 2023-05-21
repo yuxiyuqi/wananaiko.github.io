@@ -7,7 +7,7 @@ tags:
 draft: false
 ---
 
-最近又折腾了一下博客，起因是上周和 [空白生活](https://koobai.com/) 要了他的 [好物](https://koobai.com/hardware/) 页面源码，后来研究了一番，发现用 shortcode 来实现一个页面真的太方便了。
+最近又折腾了一下博客，起因是上周和 [空白生活](https://koobai.com/) 要了他的 [好物](https://koobai.com/hardware/) 页面源码，后来研究了一番，发现用 shortcode 来实现一个页面真的太方便了。这里，再次表达一下感谢。
 
 于是一顿操作，增加了 Gallery，Goods，Stack，Bookmark 页面，都是基于 Hugo shortcode 开发的。CSS样式也比较简单，基本都写在了 shortcode 页面中。
 
