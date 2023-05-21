@@ -265,3 +265,11 @@ body {
     transition: .5s;
     padding-bottom: 2px;
 }
+
+.mk-divider{
+    opacity: .65;
+}
+
+.stack-item-divider{
+    opacity: .65;
+}
