@@ -265,3 +265,8 @@ body {
     transition: .5s;
     padding-bottom: 2px;
 }
+
+.links .item {
+  all:unset;
+  max-width: 100%
+}
