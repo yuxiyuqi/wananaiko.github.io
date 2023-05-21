@@ -209,16 +209,6 @@ img {
   .esc_window {
     display: none;
   }
-
-  .header {
-    border-bottom: 1px solid var(--border);
-    position: sticky;
-    z-index: 400;
-    top: 0;
-    backdrop-filter: blur(6px);
-    background-color: var(--blur-bg);
-}
-
 }
 
 .icon_right {
