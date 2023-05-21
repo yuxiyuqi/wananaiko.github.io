@@ -23,6 +23,7 @@
     --link-color: var(--primary);
     --link-hover-color: #099;
     --link-underline-shadow: 0 1px 0 var(--link-color);
+    --blur-bg:rgba(255, 255, 255, 0.9);
     --link-hover-underline-color: #099;
     --link-hover-underline-shadow: 0 1px 0 var(--link-hover-underline-color);
     --link-transition: all 0.3s ease;
@@ -56,6 +57,7 @@
     --link-underline-shadow: 0 1px 0 var(--link-color);
     --link-hover-underline-color: var(--link-hover-color);
     --link-hover-underline-shadow: 0 1px 0 var(--link-hover-underline-color);
+    --blur-bg:rgba(29, 30, 32,0.9);
 }
 
 .list-page {
