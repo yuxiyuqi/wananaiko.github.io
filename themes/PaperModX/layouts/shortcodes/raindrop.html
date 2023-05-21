@@ -165,7 +165,7 @@
 
   .mk-update-time {
     margin-left: auto;
-    color: var(--tertiary);
+    color: var(--tertiary-bg);
     font-size: 12px;
     white-space: nowrap;
     line-height: 1.4rem;
@@ -260,15 +260,40 @@
         <div class="mk-tag mk-update-time">{{ $item.lastUpdate }}</div>
       </div>
 
+      <!-- 先将lastUpdate的时间格式化,再显示为相对时间,参考lately.mini.js -->
       <script>
-  // 根据lastUpdate的实际时间,使用Lately.format格式化lastUpdate的时间
-  var lastUpdate = document.getElementsByClassName("mk-update-time");
-  for (var i = 0; i < lastUpdate.length; i++) {
-    var time = lastUpdate[i].innerHTML;
-    var timeFormat = Lately.format(time);
-    lastUpdate[i].innerHTML = timeFormat;
-  }
-</script>
+        var lastUpdate = document.getElementsByClassName("mk-update-time");
+        for (var i = 0; i < lastUpdate.length; i++) {
+          var time = lastUpdate[i].innerHTML;
+          var date = new Date(time);
+          var now = new Date();
+          var diff = now.getTime() - date.getTime();
+          var days = Math.floor(diff / (24 * 3600 * 1000));
+          var leave1 = diff % (24 * 3600 * 1000);
+          var hours = Math.floor(leave1 / (3600 * 1000));
+          var leave2 = leave1 % (3600 * 1000);
+          var minutes = Math.floor(leave2 / (60 * 1000));
+          var leave3 = leave2 % (60 * 1000);
+          var seconds = Math.round(leave3 / 1000);
+          if (days > 0) {
+            lastUpdate[i].innerHTML = days + " 天前";
+          } else if (hours > 0) {
+            lastUpdate[i].innerHTML = hours + " 小时前";
+          } else if (minutes > 0) {
+            lastUpdate[i].innerHTML = minutes + " 分钟前";
+          } else if (seconds > 0) {
+            lastUpdate[i].innerHTML = seconds + " 秒前";
+          }
+          // 增加月前和年前的定义
+          var months = Math.floor(days / 30);
+          var years = Math.floor(days / 365);
+          if (months > 0) {
+            lastUpdate[i].innerHTML = months + " 月前";
+          } else if (years > 0) {
+            lastUpdate[i].innerHTML = years + " 年前";
+          }
+        }
+      </script>         
 
       {{ end }}
     </a>
