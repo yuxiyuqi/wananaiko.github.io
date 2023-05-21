@@ -108,11 +108,6 @@ url = "/bookmark/"
 weight = 5
 
 [[languages.en.menu.main]]
-name = "Archive"
-url = "/archives/"
-weight = 6
-
-[[languages.en.menu.main]]
 name = "Links"
 url = "/links/"
 weight = 7
