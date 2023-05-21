@@ -1,5 +1,5 @@
 ---
-title: "PaperModX 的折腾记录"
+title: "Hugo PaperModX 的折腾记录"
 date: 2023-05-21T21:06:57+08:00
 author: "wananaiko"
 tags:
