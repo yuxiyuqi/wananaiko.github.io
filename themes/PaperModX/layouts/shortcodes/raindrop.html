@@ -153,9 +153,14 @@
     line-height: 1.4rem;
     cursor: pointer;
   }
-  .mk-tab-tag:hover {
-    color: var(--blur-bg);
+
+  .mk-tab-tag.mk-tab-tag-active:hover {
     background-color: var(--link-hover-color);
+    color: var(--blur-bg);
+}
+  .mk-tab-tag:hover {
+    color: var(--secondary);
+    background-color: var(--border);
   }
 
   .mk-tab-tag-active { 
