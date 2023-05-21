@@ -52,7 +52,7 @@
     --code-bg: rgb(41,42,48);
     --border: rgb(51, 51, 51);
     --link-background-color: rgba(37,156,154,.6);
-    --link-color: var(--primary);
+    --link-color: rgb(218, 218, 219, .5);
     --link-hover-color: #099;
     --link-underline-shadow: 0 1px 0 var(--link-color);
     --link-hover-underline-color: var(--link-hover-color);
