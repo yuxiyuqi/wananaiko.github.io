@@ -2,49 +2,49 @@
   name = "木木木木木"
   url = "https://immmmm.com"
   favicon = "https://images.wananaiko.com/2023/01/o3wqCp.jpg"
-  description = "专业全栈开发工程师，生活化语言的技术博客."
+  description = "专业全栈开发工程师，生活化语言的技术博客。"
   weight = 1
 
 [[blogroll]]
   name = "旅行漫记"
   url = "https://synyan.cn/"
   favicon = "https://images.wananaiko.com/2023/04/synyan.png"
-  description = "器材党广角狗，博物馆爱好者，旅游点打卡员."
+  description = "器材党广角狗，博物馆爱好者，旅游点打卡员。"
   weight = 2
 
 [[blogroll]]
   name = "空白生活"
   url = "https://koobai.com"
   favicon = "https://images.wananaiko.com/2023/05/bN5Uy6.jpg"
-  description = "老一辈设计师前辈,15 年以上设计相关工作经验."
+  description = "老一辈设计师前辈,15 年以上设计相关工作经验。"
   weight = 3
 
 [[blogroll]]
   name = "Reorx’s Forge"
   url = "https://reorx.com"
   favicon = "https://reorx.com/images/forge-v2-compat.svg"
-  description = "专业全栈开发工程师，活跃在各个主流互联网平台."
+  description = "专业全栈开发工程师，活跃在各个主流互联网平台。"
   weight = 4
 
 [[blogroll]]
   name = "大大的小蜗牛"
   url = "https://eallion.com"
   favicon = "https://cdn.jsdelivr.net/gh/eallion/eallion/avatar/eallion.png"
-  description = "机会总是垂青于有准备的人."
+  description = "机会总是垂青于有准备的人。"
   weight = 5
 
 [[blogroll]]
   name = "Wayne Wu"
   url = "https://wayne-wu.com"
   favicon = "https://wayne-wu.com/avatar.jpeg"
-  description = "热爱编程，喜欢探索,摄影爱好者."
+  description = "热爱编程，喜欢探索,摄影爱好者。"
   weight = 6
 
 [[blogroll]]
   name = "Bigfa"
   url = "https://fatesinger.com"
   favicon = "https://images.wananaiko.com/2023/05/7yWTFi.jpg"
-  description = "computer loser / generalist"
+  description = "computer loser / generalist，远古 WordPress 玩家。"
   weight = 6
 
 
