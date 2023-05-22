@@ -19,6 +19,20 @@ Bookmark 页面基于 Raindrop.io 官方的 API[^2]，调用了最近收藏的�
 
 目前这个版本基本上已经可以养老了 😅 后面有时间再继续折腾。
 
+&nbsp;
+
+这不隔天我又写了一个 timeline 的 shortcode，来记录折腾的记录……
+
+{{< timeline time="2022-05-22" title="增加顶部菜单栏像素风格，timeline 短代码" tags="美化,shortcode" >}}
+调整了顶部菜单栏样式，增加了像素模糊效果，灵感来自 Framer Motion 介绍页面。
+{{< /timeline >}}
+{{< timeline time="2022-05-21" title="Gally, Goods, Stacks, Bookmark 页面上线"  tags="shortcode">}}
+基于 shortcode 实现的页面，初步上线。
+{{< /timeline >}}
+
+&nbsp;
+
+
 [^1]: usememos 官方介绍：https://github.com/usememos/memos
 [^2]: Raindrop API 官方文档：https://developer.raindrop.io/
 [^3]: Runavatar.io 官方介绍：https://unavatar.io/
