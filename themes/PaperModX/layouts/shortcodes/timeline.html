@@ -26,7 +26,7 @@
 
   .timeline__split-line {
     position: absolute;
-    top: 12%;
+    top: 0.5rem;
     right: -20px;
     height: 100%;
     width: 1px;
@@ -37,7 +37,7 @@
   .timeline__split-line:before {
     content: "";
     position: absolute;
-    top: 12%;
+    top: 1.5rem;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 8px;
@@ -89,28 +89,6 @@
     overflow: hidden;
     text-overflow: ellipsis;
     margin: 0.5rem 0 0.4rem 0;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-  }
-
-  /* 调整手机端样式 */
-  @media (max-width: 768px) {
-    .timeline__title {
-      display: -webkit-box;
-      -webkit-line-clamp: 1;
-      -webkit-box-orient: vertical;
-      text-overflow: ellipsis;
-      overflow: hidden;
-    }
-    .timeline__description {
-      display: -webkit-box;
-      -webkit-line-clamp: 1;
-      -webkit-box-orient: vertical;
-      text-overflow: ellipsis;
-      overflow: hidden;
-    }
   }
 </style>
 
@@ -131,3 +109,5 @@
     </div>
   </div>
 </div>
+
+<!-- 优化上面的div布局,并补充CSS,使布局和样式参考:https://column.com/changelog/#apr-27-2023 -->
