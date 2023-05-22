@@ -33,14 +33,13 @@ Bookmark 页面基于 Raindrop.io 官方的 API[^2]，调用了最近收藏的�
 {/{< /timeline >}/}
 ```
 
-{{< timeline time="2022-05-22" title="修改顶部菜单栏为像素风格，增加timeline 短代码" tags="美化,shortcode" >}}
-调整了顶部菜单栏的样式，增加了像素模糊效果，灵感来自 Framer Motion 介绍页面。调整了顶部菜单栏的样式，增加了像素模糊效果，灵感来自 Framer Motion 介绍页面。
+{{< timeline time="2022-05-22" title="增加timeline 短代码" tags="shortcode" >}}
+使用 timeline来简单记录本站的折腾的过程。
 {{< /timeline >}}
 {{< timeline time="2022-05-21" title="Gally, Goods, Stacks, Bookmark 页面上线" >}}
 基于 shortcode 实现的页面，初步上线。
-{{< /timeline >}}
+{{< /timeline >}}&nbsp;
 
-&nbsp;
 
 
 [^1]: usememos 官方介绍：https://github.com/usememos/memos
