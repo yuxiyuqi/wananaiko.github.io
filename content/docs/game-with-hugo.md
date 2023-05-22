@@ -19,8 +19,6 @@ Bookmark 页面基于 Raindrop.io 官方的 API[^2]，调用了最近收藏的�
 
 目前这个版本基本上已经可以养老了 😅 后面有时间再继续折腾。
 
-&nbsp;
-
 ### Timeline
 
 这不隔天我又写了一个 timeline 的 shortcode，来记录折腾的记录…以后也可以用在别的地方…
