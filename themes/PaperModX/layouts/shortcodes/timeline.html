@@ -94,6 +94,24 @@
     -webkit-box-orient: vertical;
     overflow: hidden;
   }
+
+  /* 调整手机端样式 */
+  @media (max-width: 768px) {
+    .timeline__title {
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+    .timeline__description {
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+  }
 </style>
 
 <div class="timeline">

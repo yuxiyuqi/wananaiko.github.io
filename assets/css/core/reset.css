@@ -248,6 +248,10 @@ img {
     background-size: 4px 4px;
 }
 
+.header::before {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
 /* 去掉滚动条背景色,针对 WebKit 内核的浏览器（如 Chrome、Safari） */
 ::-webkit-scrollbar {
     background-color: transparent;
