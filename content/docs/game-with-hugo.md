@@ -23,8 +23,8 @@ Bookmark 页面基于 Raindrop.io 官方的 API[^2]，调用了最近收藏的�
 
 这不隔天我又写了一个 timeline 的 shortcode，来记录折腾的记录……
 
-{{< timeline time="2022-05-22" title="增加顶部菜单栏像素风格，timeline 短代码" tags="美化,shortcode" >}}
-调整了顶部菜单栏样式，增加了像素模糊效果，灵感来自 Framer Motion 介绍页面。
+{{< timeline time="2022-05-22" title="修改顶部菜单栏为像素风格，增加timeline 短代码" tags="美化,shortcode" >}}
+调整了顶部菜单栏的样式，增加了像素模糊效果，灵感来自 Framer Motion 介绍页面。
 {{< /timeline >}}
 {{< timeline time="2022-05-21" title="Gally, Goods, Stacks, Bookmark 页面上线"  tags="shortcode">}}
 基于 shortcode 实现的页面，初步上线。
