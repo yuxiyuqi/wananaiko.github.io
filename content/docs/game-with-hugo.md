@@ -45,7 +45,7 @@ Bookmark 页面基于 Raindrop.io 官方的 API[^2]，调用了最近收藏的�
 
 ### Todolist 清单
 
-根据 [《基于Memos实现说说和清单功能》](https://blog.leonus.cn/2023/memeos.html) 这篇文章完成了清单功能，简单修改了一系下样式。
+根据 [《基于Memos实现说说和清单功能》](https://blog.leonus.cn/2023/memeos.html) 这篇文章完成了清单功能，简单修改了一下样式。
 
 {{< todolist >}}
 
