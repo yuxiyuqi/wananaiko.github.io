@@ -33,14 +33,23 @@ Bookmark 页面基于 Raindrop.io 官方的 API[^2]，调用了最近收藏的�
 {/{< /timeline >}/}
 ```
 
-{{< timeline time="2022-05-22" title="增加timeline 短代码" tags="shortcode" >}}
+{{< timeline time="2022-05-23" title="增加 todolist 短代码" tags="shortcode" >}}
+使用 timeline来简单记录本站的折腾的过程。
+{{< /timeline >}}
+{{< timeline time="2022-05-22" title="增加 timeline 短代码" tags="shortcode" >}}
 使用 timeline来简单记录本站的折腾的过程。
 {{< /timeline >}}
 {{< timeline time="2022-05-21" title="Gally, Goods, Stacks, Bookmark 页面上线" >}}
 基于 shortcode 实现的页面，初步上线。
-{{< /timeline >}}&nbsp;
+{{< /timeline >}}
 
+### Todolist 清单
 
+根据 [《基于Memos实现说说和清单功能》](https://blog.leonus.cn/2023/memeos.html) 这篇文章完成了清单功能，简单修改了一系下样式。
+
+{{< todolist >}}
+
+&nbsp;
 
 [^1]: usememos 官方介绍：https://github.com/usememos/memos
 [^2]: Raindrop API 官方文档：https://developer.raindrop.io/
