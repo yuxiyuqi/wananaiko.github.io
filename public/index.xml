@@ -9,7 +9,280 @@
       <link>https://wananaiko.com/images/forge-v2-compat.svg</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 25 Apr 2023 11:10:49 +0800</lastBuildDate><atom:link href="https://wananaiko.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 21 May 2023 21:06:57 +0800</lastBuildDate><atom:link href="https://wananaiko.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugo 和 PaperModX 的折腾记录</title>
+      <link>https://wananaiko.com/docs/game-with-hugo/</link>
+      <pubDate>Sun, 21 May 2023 21:06:57 +0800</pubDate>
+      
+      <guid>https://wananaiko.com/docs/game-with-hugo/</guid>
+      <description>最近又折腾了一下博客，起因是上周和 空白生活 要了他的好物页面源码，后来研究了一番，发现用 shortcode 来实现一个页面真的太方便了。这里，再次表达一下感谢。</description>
+      <content:encoded><![CDATA[<p>最近又折腾了一下博客，起因是上周和 <a href="https://koobai.com/" target="_blank" rel="noopener">空白生活</a> 要了他的好物页面源码，后来研究了一番，发现用 shortcode 来实现一个页面真的太方便了。这里，再次表达一下感谢。</p>
+<p>于是一顿操作，增加了 Gallery，Goods，Stack，Bookmark 页面，都是基于 Hugo shortcode 开发的。CSS样式也比较简单，基本都写在了 shortcode 页面中。</p>
+<p>还修改了 PaperModX 主题自带的一些样式，比如切换暗黑/日间模式时的微弱动态效果，顶部菜单的模糊和固定，全站页面滑动进入的效果，代码高亮颜色等等。</p>
+<p>Gallery 的实现方法来自文章 <a href="https://blog.leonus.cn/2023/photos.html" target="_blank" rel="noopener">《基于memos实现动态相册》</a>，和当前站点中的 Memos 页面一样，都是基于开源程序 usememos<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> 实现的，发布更新内容非常方便，小程序和 App 都有。</p>
+<p>Bookmark 页面基于 Raindrop.io 官方的 API<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>，调用了最近收藏的书签，并且增了标签筛选，方便查看对应的内容。书签图标使用了 unavatar.io <sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup>的免费服务。目前只加载最新的50条书签，加载更多没写…</p>
+<p>目前这个版本基本上已经可以养老了 😅 后面有时间再继续折腾。</p>
+<h3 id="timeline">Timeline</h3>
+<p>这不隔天我又写了一个 timeline 的 shortcode，来记录折腾的记录…以后也可以用在别的地方…
+内容发布格式：</p>
+<pre tabindex="0"><code>{/{&lt; timeline time=&#34;2022-05-22&#34; title=&#34;修改顶部菜单栏为像素风格，增加timeline 短代码&#34; tags=&#34;美化,shortcode&#34; &gt;}/}
+调整了顶部菜单栏的样式，增加了像素模糊效果，灵感来自 Framer Motion 介绍页面。调整了顶部菜单栏的样式，增加了像素模糊效果，灵感来自 Framer Motion 介绍页面。
+{/{&lt; /timeline &gt;}/}
+{/{&lt; timeline time=&#34;2022-05-21&#34; title=&#34;Gally, Goods, Stacks, Bookmark 页面上线&#34; &gt;}/}
+基于 shortcode 实现的页面，初步上线。
+{/{&lt; /timeline &gt;}/}
+</code></pre><p><style>
+  .timeline {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .timeline__row {
+    display: flex;
+  }
+
+  .timeline__time {
+    flex: 0 0 100px;
+    color: var(--secondary);
+    font-size: 14px;
+    text-transform: uppercase;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.65rem 0;
+  }
+
+  .timeline__time-text {
+    margin: 0;
+  }
+
+  .timeline__split-line {
+    position: absolute;
+    top: 0.5rem;
+    right: -20px;
+    height: 100%;
+    width: 1px;
+    background-color: var(--border);
+    z-index: -1;
+  }
+
+  .timeline__split-line:before {
+    content: "";
+    position: absolute;
+    top: 1rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 8px;
+    height: 8px;
+    background-color: var(--border);
+    box-shadow: 0 0 0 4px var(--theme);
+    border-radius: 50%;
+  }
+
+  .timeline__content {
+    flex: 1;
+    margin-left: 3rem;
+    padding: 0.5rem 0 1.2rem 0;
+  }
+
+  .timeline__title {
+    margin: 0;
+    margin-bottom: 5px;
+    color: var(--content);
+    font-family: var(--font-family-teshu);
+    font-size: 16px;
+    font-weight: 500;
+    width: fit-content;
+  }
+
+  .timeline__tags {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0.6rem 0 0.2rem 0;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .timeline__tag {
+    display: inline-block;
+    color: var(--tertiary);
+    background-color: var(--code-bg);
+    border-radius: 3px;
+    padding: 0rem 0.5rem;
+    font-size: 12px;
+    white-space: nowrap;
+    line-height: 1.4rem;
+  }
+
+  .timeline__description {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--secondary);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0.5rem 0 0.4rem 0;
+  }
+</style>
+
+<div class="timeline">
+  <div class="timeline__row">
+    <div class="timeline__time">
+      <div class="timeline__time-text">2022-05-22</div>
+      <div class="timeline__split-line"></div>
+    </div>
+    <div class="timeline__content">
+      <div class="timeline__title">增加timeline 短代码</div>
+      <div class="timeline__description">
+使用 timeline来简单记录本站的折腾的过程。
+</div>
+      <div class="timeline__tags">
+         
+        <span class="timeline__tag">shortcode</span>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<style>
+  .timeline {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .timeline__row {
+    display: flex;
+  }
+
+  .timeline__time {
+    flex: 0 0 100px;
+    color: var(--secondary);
+    font-size: 14px;
+    text-transform: uppercase;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.65rem 0;
+  }
+
+  .timeline__time-text {
+    margin: 0;
+  }
+
+  .timeline__split-line {
+    position: absolute;
+    top: 0.5rem;
+    right: -20px;
+    height: 100%;
+    width: 1px;
+    background-color: var(--border);
+    z-index: -1;
+  }
+
+  .timeline__split-line:before {
+    content: "";
+    position: absolute;
+    top: 1rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 8px;
+    height: 8px;
+    background-color: var(--border);
+    box-shadow: 0 0 0 4px var(--theme);
+    border-radius: 50%;
+  }
+
+  .timeline__content {
+    flex: 1;
+    margin-left: 3rem;
+    padding: 0.5rem 0 1.2rem 0;
+  }
+
+  .timeline__title {
+    margin: 0;
+    margin-bottom: 5px;
+    color: var(--content);
+    font-family: var(--font-family-teshu);
+    font-size: 16px;
+    font-weight: 500;
+    width: fit-content;
+  }
+
+  .timeline__tags {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0.6rem 0 0.2rem 0;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .timeline__tag {
+    display: inline-block;
+    color: var(--tertiary);
+    background-color: var(--code-bg);
+    border-radius: 3px;
+    padding: 0rem 0.5rem;
+    font-size: 12px;
+    white-space: nowrap;
+    line-height: 1.4rem;
+  }
+
+  .timeline__description {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--secondary);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0.5rem 0 0.4rem 0;
+  }
+</style>
+
+<div class="timeline">
+  <div class="timeline__row">
+    <div class="timeline__time">
+      <div class="timeline__time-text">2022-05-21</div>
+      <div class="timeline__split-line"></div>
+    </div>
+    <div class="timeline__content">
+      <div class="timeline__title">Gally, Goods, Stacks, Bookmark 页面上线</div>
+      <div class="timeline__description">
+基于 shortcode 实现的页面，初步上线。
+</div>
+      <div class="timeline__tags">
+         
+        <span class="timeline__tag"></span>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+
+ </p>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>usememos 官方介绍：https://github.com/usememos/memos&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2">
+<p>Raindrop API 官方文档：https://developer.raindrop.io/&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:3">
+<p>Runavatar.io 官方介绍：https://unavatar.io/&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+]]></content:encoded>
+    </item>
+    
     <item>
       <title>Fly.io 部署 Remark42 评论系统</title>
       <link>https://wananaiko.com/docs/install-remark42/</link>

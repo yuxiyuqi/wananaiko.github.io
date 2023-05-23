@@ -130,9 +130,10 @@
   }
 </style>
 
-<div class="gallery-photos page slide-enter-content">
-  <!-- <img src="/img/loading.svg" style="margin: auto" /> -->
-</div>
+<script defer src="https://immmmm.com/waterfall.min.js"></script>
+<script defer src="https://immmmm.com/imgStatus.min.js"></script>
+<script defer src="https://immmmm.com/lately.min.js"></script>
+<script type="text/javascript" src="/js/view-image.min.js"></script>
 
 <script>
   photos();
@@ -194,13 +195,10 @@
   });
 </script>
 
-<script defer src="https://immmmm.com/waterfall.min.js"></script>
-<!-- imgStatus -->
-<script defer src="https://immmmm.com/imgStatus.min.js"></script>
-<!-- lately -->
-<script defer src="https://immmmm.com/lately.min.js"></script>
-<!-- 图片灯箱 -->
-<script type="text/javascript" src="/js/view-image.min.js"></script>
+<div class="gallery-photos page slide-enter-content">
+  <!-- <img src="/img/loading.svg" style="margin: auto" /> -->
+</div>
+
 <script>
   window.ViewImage && ViewImage.init(".gallery-photo img");
 </script>
