@@ -239,7 +239,10 @@
   
 </script>
 
+
+
 <div class="mk-raindrop-bookmarks">
+  
   {{ range $i, $item := index $json "items" }} {{ $domain := index (findRE
   "[^.]+\\.[^.]+$" (index (findRE "//[^/]+" $item.link) 0)) 0 }}
   <div class="mk-raindrop-bookmark">
@@ -264,10 +267,18 @@
         <div class="mk-tag">{{ . }}</div>
         {{ end }}
         <div class="mk-tag mk-update-time">{{ $item.lastUpdate }}</div>
-      </div>
+      </div>        
 
-      <!-- 先将lastUpdate的时间格式化,再显示为相对时间,参考lately.mini.js -->
-      <script>
+      {{ end }}
+    </a>
+      {{ if lt $i (sub (len (index $json "items")) 1) }}
+  <div class="mk-divider"></div>
+  </div>
+  {{ end }} {{ end }}
+</div>
+
+<!-- 先将lastUpdate的时间格式化,再显示为相对时间,参考lately.mini.js -->
+<script>
         var lastUpdate = document.getElementsByClassName("mk-update-time");
         for (var i = 0; i < lastUpdate.length; i++) {
           var time = lastUpdate[i].innerHTML;
@@ -299,12 +310,4 @@
             lastUpdate[i].innerHTML = years + " 年前";
           }
         }
-      </script>         
-
-      {{ end }}
-    </a>
-      {{ if lt $i (sub (len (index $json "items")) 1) }}
-  <div class="mk-divider"></div>
-  </div>
-  {{ end }} {{ end }}
-</div>
+</script> 
