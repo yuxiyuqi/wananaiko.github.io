@@ -133,7 +133,8 @@
   .done-content {
     font-size: 14px;
     line-height: 1.6;
-    color: var(--content);
+    color: var(--secondary);
+    text-decoration-line: line-through;
   }
 </style>
 
@@ -240,7 +241,7 @@
             .replace(
               /(-\s\[x\]\s)(.*)/g,
               `<li class="done">
-                  <div class="icon-done"><?xml version="1.0" encoding="UTF-8"?><svg width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="var(--content)"><path d="M7 12.5l3 3 7-7" stroke="var(--content)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" stroke="var(--content)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                  <div class="icon-done"><?xml version="1.0" encoding="UTF-8"?><svg width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="var(--secondary)"><path d="M7 12.5l3 3 7-7" stroke="var(--secondary)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" stroke="var(--secondary)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
                   </div><div class="done-content">$2</div>
                 </li>`
             );
