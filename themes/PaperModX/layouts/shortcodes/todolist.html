@@ -43,20 +43,11 @@
     display: inline-block;
     width: calc(50% - 0.4rem);
     background: var(--code-bg);
-    border-radius: 12px;
+    border-radius: var(--radius);
     padding: 10px 1rem 1.2rem;
     border: 1px solid var(--border);
     margin-right: 1rem;
     margin-bottom: 1rem;
-  }
-  .list_item h3 {
-    margin: 0;
-    border-bottom: var(--todo-border);
-  }
-  .list_item ul {
-    font-size: 17px;
-    padding: 0 !important;
-    margin: 0;
   }
   .list_item li {
     margin: 0 !important;
@@ -64,10 +55,6 @@
   }
   .list_item li::marker {
     content: none;
-  }
-  li.done {
-    opacity: 0.8;
-    text-decoration: line-through;
   }
   @media screen and (max-width: 900px) {
     div#todolist {
@@ -99,10 +86,11 @@
     align-items: center;
     justify-content: flex-start;
     padding: 0.5rem 0;
+    opacity: 0.8;
+    text-decoration: line-through;
   }
 
   li.undo {
-    text-decoration: line-through;
     display: flex;
     align-items: center;
     justify-content: flex-start;
