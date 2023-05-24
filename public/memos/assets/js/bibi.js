@@ -67,11 +67,12 @@ img {
     line-height: 1.8rem;
 }
 .memo-content-text a.link {
-    color: var(--post-link-color);
+    color: var(--content);
     transition: .5s;
 }
 .memo-content-text a.link:hover {
-    color: var(--link-hover-color);
+    color: var(--content);
+    box-shadow: 0 1px 0 var(--content);
 }
 .memo-content-text .img {
     padding-top: 1rem !important;
@@ -135,7 +136,7 @@ button.load-btn.button-load:hover {
     transform: scale(1.01);
 }
 .memo-content-text a {
-    color: var(--primary);
+    color: var(--content);
     padding-bottom: 2px;
     box-shadow: var(--link-underline-shadow);
     transition: .5s !important;
@@ -163,8 +164,8 @@ span.tag-span {
     color: var(--tertiary);
 }
 .memo-content-text a:hover {
-    color: var(--link-hover-color);
-    box-shadow: var(--link-hover-underline-shadow);
+    color: var(--content);
+    box-shadow: 0 1px 0 var(--content);
     padding-bottom: 2px;
 }
 .bb-load {

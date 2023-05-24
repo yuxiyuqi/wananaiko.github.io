@@ -26,9 +26,9 @@
 }
 
 .links .item .title a:hover {
-  color: var(--link-hover-color);
-  box-shadow: var(--link-hover-underline-shadow);
-  padding-bottom: 2px;
+    color: var(--content);
+    box-shadow: 0 1px 0 var(--content);
+    padding-bottom: 2px;
 }
 
 .links .item .description {
@@ -51,6 +51,25 @@
     grid-template-columns: repeat(2,minmax(0,1fr));
     display: grid;
     gap: 16px;
+}
+
+span.open-link {
+    margin-left: 0.3rem;
+    opacity: 0;
+    position: absolute;
+    transform: translateX(20px);
+    transition: all .2s ease;
+}
+
+.links .item:hover span.open-link {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.links .item:hover a {
+    color: var(--content);
+    box-shadow: 0 1px 0 var(--content);
+    padding-bottom: 2px;
 }
 
 @media screen and (max-width: 767px) {

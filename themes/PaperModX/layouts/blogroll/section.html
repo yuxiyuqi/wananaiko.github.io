@@ -17,7 +17,7 @@
         <div class="title">
           {{- $url := urls.Parse .url }}
           <span class="favicon" style="background-image: url({{ .favicon | default (printf "%s/favicon.ico" .url ) }});"></span
-            ><a href="{{ .url }}" target="_blank">{{ .name }}</a>
+            ><a href="{{ .url }}" target="_blank">{{ .name }}</a><span style="margin-left:.2rem" class="open-link">→</span>
         </div>
         <div class="description">
           {{- .domain | default $url.Host }}

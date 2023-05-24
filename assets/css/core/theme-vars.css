@@ -23,6 +23,7 @@
     --light-image-bg: radial-gradient( rgba(0, 0, 0, 0) 1px, #fdfdfd 1px );
     --link-color: var(--primary);
     --link-hover-color: #099;
+    --box-shadow:0 1px rgba(125,125,125,.5);
     --link-underline-shadow: 0 1px 0 var(--link-color);
     --blur-bg:rgba(255, 255, 255, 0.9);
     --link-hover-underline-color: #099;
@@ -56,6 +57,7 @@
     --light-image-bg: radial-gradient( rgb(255 255 255 / 0%) 1px, rgb(29 30 32) 1px );
     --link-color: rgb(218, 218, 219, .5);
     --link-hover-color: #099;
+    --box-shadow:0 1px var(--content);
     --link-underline-shadow: 0 1px 0 var(--link-color);
     --link-hover-underline-color: var(--link-hover-color);
     --link-hover-underline-shadow: 0 1px 0 var(--link-hover-underline-color);

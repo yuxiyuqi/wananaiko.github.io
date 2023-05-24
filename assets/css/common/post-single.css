@@ -94,15 +94,14 @@
 }
 
 .post-content a {
-    /* font-weight: 500; */
-    color: var(--primary);
-    box-shadow: var(--link-underline-shadow);
+    color: var(--content);
     transition: var(--link-transition);
     padding-bottom: 2px;
+    box-shadow: 0 1px 0 rgba(125,125,125,.5);
 }
 .post-content a:hover {
-    color: var(--link-hover-color);
-    box-shadow: var(--link-hover-underline-shadow);
+    color: var(--content);
+    box-shadow: 0 1px 0 var(--content);
     padding-bottom: 2px;
 }
 .post-content a.anchor:hover {

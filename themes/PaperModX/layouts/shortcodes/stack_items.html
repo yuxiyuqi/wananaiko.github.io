@@ -22,8 +22,8 @@
   }
 
   .stack-item:hover .stack-item-title {
-    color: var(--link-hover-color);
-    box-shadow: var(--link-hover-underline-shadow);
+    color: var(--content);
+    box-shadow: 0 1px 0 var(--content);
   }
 
   .stack-item-link {
@@ -156,25 +156,7 @@
           <div class="stack-item-header">
             <div class="stack-item-title-container">
               <div class="stack-item-title">{{ index $item 1 }}</div>
-              <div class="stack-item-svg">
-                <svg
-                  width="16px"
-                  height="16px"
-                  viewBox="0 0 24 24"
-                  stroke-width="1.5"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  color="#099"
-                >
-                  <path
-                    d="M3 12h18m0 0l-8.5-8.5M21 12l-8.5 8.5"
-                    stroke="#099"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ></path>
-                </svg>
-              </div>
+              <div class="stack-item-svg">→</div>
             </div>
             <p class="stack-item-description">{{ index $item 3 }}</p>
             {{- $tags := split (index $item 4) "," }} {{- if ge (len $tags) 1 }}

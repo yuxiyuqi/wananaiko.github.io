@@ -64,8 +64,8 @@
   }
 
   .mk-raindrop-bookmark:hover .mk-title {
-    color: var(--link-hover-color);
-    box-shadow: var(--link-hover-underline-shadow);
+    color: var(--content);
+    box-shadow: 0 1px 0 var(--content);
   }
 
   .mk-avatar {
@@ -148,8 +148,8 @@
     color: var(--secondary);
     background-color: var(--code-bg);
     border-radius: 3px;
-    padding: 0rem 0.5rem;
-    font-size: 12px;
+    padding: 0.05rem 0.5rem;
+    font-size: 13px;
     white-space: nowrap;
     line-height: 1.4rem;
     cursor: pointer;
@@ -256,7 +256,7 @@
           {{ $item.title }}
         </div>
         <div class="mk-svg">
-          <svg width="16px" height="16px" viewBox="0 0 24 24" stroke-width="1.5" fill="none" xmlns="http://www.w3.org/2000/svg" color="#099"><path d="M3 12h18m0 0l-8.5-8.5M21 12l-8.5 8.5" stroke="#099" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+          →
         </div>
       </div>
       {{ with $item.excerpt }}
@@ -266,6 +266,23 @@
         {{ range . }}
         <div class="mk-tag">{{ . }}</div>
         {{ end }}
+
+        <!-- 增加一个div class="mk-important",从Raindrop API中获取important的值,如果是Boolean增显示<span>favorite</span> -->
+
+        <div class="mk-important">
+        {{ if eq $item.important true }}
+        <span class="mk-important-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M20 13.6C18.7925 17.4 15.4245 20 11.5 20C7.47484 20.1 4 16.9 4 12.9C4 12.4 4 12 4.10063 11.5L6.11321 12.1C5.71069 15.3 8.27987 18.1 11.5 18C14.6195 17.9 17.283 15.8 18.1887 12.9L20 13.6ZM8.72956 11C9.83648 11 11.1447 9.2 11.5472 7C12.0503 4.8 11.5472 3 10.4403 3C9.33333 3 8.12579 4.8 7.62264 7C7.1195 9.2 7.62264 11 8.72956 11ZM15.2704 11.5C16.3774 11.5 17.6855 9.7 18.1887 7.5C18.6918 5.3 18.1887 3.5 17.0818 3.5C15.9748 3.5 14.6667 5.3 14.1635 7.5C13.6604 9.7 14.1635 11.5 15.2704 11.5Z" fill="var(--content)"/>
+</svg>
+</span>
+        {{ end }}
+        {{ if eq $item.important false }}
+        <div></div>
+        {{ end }}
+        </div>
+
+
+
         <div class="mk-tag mk-update-time">{{ $item.lastUpdate }}</div>
       </div>        
 
