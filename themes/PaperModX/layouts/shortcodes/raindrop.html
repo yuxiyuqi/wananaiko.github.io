@@ -293,13 +293,13 @@
 
   <!-- 使用JavaScript来判断,如果某个mk-raindrop-tags里 $item.important变量的值为true,则 mk-raindrop-tags的 background-color颜色修改为: var(--link-background-color). 如果$item.important false,则不做任何修改.-->  
 <script>
-        var important = document.getElementsByClassName("mk-important");
-        for (var i = 0; i < important.length; i++) {
-          var importantValue = important[i].innerHTML;
-          if (importantValue.indexOf("true") != -1) {
-            important[i].style.backgroundColor = "var(--link-background-color)";
-          }
-        }
+  var tags = document.getElementsByClassName("mk-raindrop-tags");
+  for (var i = 0; i < tags.length; i++) {
+    var importantValue = tags[i].getAttribute("data-important");
+    if (importantValue === "true") {
+      tags[i].style.backgroundColor = "var(--link-background-color)";
+    }
+  }
 </script>
 
 <!-- 先将lastUpdate的时间格式化,再显示为相对时间,参考lately.mini.js -->
