@@ -293,12 +293,9 @@
 
   <!-- 使用JavaScript来判断,如果某个mk-raindrop-tags里 $item.important变量的值为true,则 mk-raindrop-tags的 background-color颜色修改为: var(--link-background-color). 如果$item.important false,则不做任何修改.-->  
 <script>
-  var tags = document.getElementsByClassName("mk-raindrop-tags");
+  var tags = document.querySelectorAll(".mk-raindrop-tags[data-important='true']");
   for (var i = 0; i < tags.length; i++) {
-    var importantValue = tags[i].getAttribute("data-important");
-    if (importantValue === "true") {
-      tags[i].style.backgroundColor = "var(--link-background-color)";
-    }
+    tags[i].style.backgroundColor = "var(--link-background-color)";
   }
 </script>
 
