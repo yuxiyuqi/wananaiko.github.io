@@ -293,6 +293,13 @@
 
 <script>
   // 使用JavaScript判断,如果mk-raindrop-bookmark里存在mk-important-description元素,则mk-raindrop-bookmark的background-color修改为var(--link-background-color);
+    const bookmarks = document.querySelectorAll('.mk-raindrop-bookmark');
+  bookmarks.forEach(bookmark => {
+    const important = bookmark.querySelector('.mk-important-description');
+    if (important) {
+      bookmark.classList.add('important');
+    }
+  });
   
 </script>
 
