@@ -268,7 +268,7 @@
         {{ range . }}
         <div class="mk-tag">{{ . }}</div>
         {{ end }}
-        <spacer>
+        <spacer></spacer>
         <!-- 增加一个div class="mk-important",从Raindrop API中获取important的值,如果是Boolean增显示<span>favorite</span> -->
         <div class="mk-important">
         {{ if eq $item.important true }}
@@ -280,9 +280,7 @@
         <div></div>
         {{ end }}
         </div>
-        </spacer>
-
-
+        
         <div class="mk-tag mk-update-time">{{ $item.lastUpdate }}</div>
       </div>        
 
