@@ -86,7 +86,7 @@
     overflow: hidden;
     text-overflow: ellipsis;
     padding-left: 26px;
-    margin: 0.1rem 0 0.4rem 0;
+    margin: 0.2rem 0 0.2rem 0;
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
@@ -97,7 +97,7 @@
     display: flex;
     flex-wrap: wrap;
     padding: 0;
-    margin: 0.65rem 0 0.2rem 0;
+    margin: 0.5rem 0 0 0;
     padding-left: 26px;
     align-items: center;
     gap: 0.5rem;
@@ -106,9 +106,6 @@
   .mk-tag {
     display: inline-block;
     color: var(--tertiary);
-    background-color: var(--code-bg);
-    border-radius: 3px;
-    padding: 0rem 0.5rem;
     font-size: 12px;
     white-space: nowrap;
     line-height: 1.4rem;
@@ -173,7 +170,7 @@
 
   .mk-update-time {
     margin-left: auto;
-    opacity: .65;
+    opacity: .7;
     color: var(--tertiary);
     font-size: 12px;
     white-space: nowrap;
@@ -281,8 +278,10 @@
       {{ end }} {{ with $item.tags }}
       <div class="mk-raindrop-tags">
         {{ range . }}
-        <div class="mk-tag">{{ . }}</div>
+        <div class="mk-tag">#{{ . }}</div>
         {{ end }}
+        <divider></divider>
+        <div class="mk-tag mk-update-time">{{ $item.lastUpdate }}</div>
         <spacer></spacer>
         <!-- 增加一个div class="mk-important",从Raindrop API中获取important的值,如果是Boolean增显示<span>favorite</span> -->
         <div class="mk-important">
@@ -297,7 +296,7 @@
         {{ end }}
         </div>
 
-        <div class="mk-tag mk-update-time">{{ $item.lastUpdate }}</div>
+        
       </div>        
 
       {{ end }}
