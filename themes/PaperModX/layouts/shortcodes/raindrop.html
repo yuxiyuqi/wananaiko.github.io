@@ -268,19 +268,19 @@
         {{ range . }}
         <div class="mk-tag">{{ . }}</div>
         {{ end }}
-        <vstack stretch align-x=center> <spacer>
+        <spacer>
         <!-- 增加一个div class="mk-important",从Raindrop API中获取important的值,如果是Boolean增显示<span>favorite</span> -->
         <div class="mk-important">
         {{ if eq $item.important true }}
         <span class="mk-important-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M20 13.6C18.7925 17.4 15.4245 20 11.5 20C7.47484 20.1 4 16.9 4 12.9C4 12.4 4 12 4.10063 11.5L6.11321 12.1C5.71069 15.3 8.27987 18.1 11.5 18C14.6195 17.9 17.283 15.8 18.1887 12.9L20 13.6ZM8.72956 11C9.83648 11 11.1447 9.2 11.5472 7C12.0503 4.8 11.5472 3 10.4403 3C9.33333 3 8.12579 4.8 7.62264 7C7.1195 9.2 7.62264 11 8.72956 11ZM15.2704 11.5C16.3774 11.5 17.6855 9.7 18.1887 7.5C18.6918 5.3 18.1887 3.5 17.0818 3.5C15.9748 3.5 14.6667 5.3 14.1635 7.5C13.6604 9.7 14.1635 11.5 15.2704 11.5Z" fill="var(--content)"/>
-</svg> 很赞</span>
+</svg></span> <span class="mk-important-description">很赞</span>
         {{ end }}
         {{ if eq $item.important false }}
         <div></div>
         {{ end }}
         </div>
-        </spacer></vstack>
+        </spacer>
 
 
         <div class="mk-tag mk-update-time">{{ $item.lastUpdate }}</div>
