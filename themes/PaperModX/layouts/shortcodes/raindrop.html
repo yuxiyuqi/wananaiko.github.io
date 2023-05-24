@@ -109,7 +109,7 @@
 
   .mk-tag {
     display: inline-block;
-    color: var(--tertiary);
+    color: var(--secondary);
     font-size: 12px;
     white-space: nowrap;
     line-height: 1.4rem;
@@ -282,7 +282,7 @@
       {{ end }} {{ with $item.tags }}
       <div class="mk-raindrop-tags">
         {{ range . }}
-        <div class="mk-tag">#{{ . }}</div>
+        <div class="mk-tag">{{ . }}</div>
         {{ end }}
         <divider></divider>
         <div class="mk-tag mk-update-time">{{ $item.lastUpdate }}</div>
