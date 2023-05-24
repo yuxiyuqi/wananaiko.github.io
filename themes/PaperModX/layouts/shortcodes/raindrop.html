@@ -291,13 +291,20 @@
 
 </div>
 
-  <!-- 使用JavaScript来判断,如果某个mk-raindrop-tags里 $item.important变量的值为true,则 mk-raindrop-tags的 background-color颜色修改为: var(--link-background-color). 如果$item.important false,则不做任何修改.-->  
 <script>
-  var tags = document.querySelectorAll(".mk-raindrop-tags[data-important='true']");
-  for (var i = 0; i < tags.length; i++) {
-    tags[i].style.backgroundColor = "var(--link-background-color)";
+  // 使用JavaScript判断,如果mk-raindrop-bookmark里存在mk-important-description元素,则mk-raindrop-bookmark的background-color修改为var(--link-background-color);
+
+  var important = document.getElementsByClassName("mk-important-description");
+  for (var i = 0; i < important.length; i++) {
+    var importantDescription = important[i].innerHTML;
+    if (importantDescription == "很赞") {
+      var importantParent = important[i].parentNode.parentNode.parentNode.parentNode.parentNode;
+      importantParent.style.backgroundColor = "var(--link-background-color)";
+    }
   }
 </script>
+
+
 
 <!-- 先将lastUpdate的时间格式化,再显示为相对时间,参考lately.mini.js -->
 <script>
