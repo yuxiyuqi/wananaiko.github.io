@@ -198,7 +198,9 @@
     align-items: center;
     gap: 2px;
 }
-
+.mk-raindrop-bookmark.important {
+  background-color: var(--link-background-color);
+}
 
 </style>
 
@@ -256,6 +258,7 @@
       {{ with $item.excerpt }}
       <div class="mk-excerpt">{{ . }}</div>
       {{ end }} {{ with $item.tags }}
+      
       <div class="mk-raindrop-tags">
         {{ range . }}
         <div class="mk-tag">{{ . }}</div>
@@ -264,6 +267,7 @@
         <div class="mk-tag mk-update-time">{{ $item.lastUpdate }}</div>
         <spacer></spacer>
         <!-- 增加一个div class="mk-important",从Raindrop API中获取important的值,如果是Boolean增显示<span>favorite</span> -->
+
         <div class="mk-important">
         {{ if eq $item.important true }}
         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -275,7 +279,6 @@
         <div></div>
         {{ end }}
         </div>
-
         
       </div>        
 
@@ -286,6 +289,7 @@
   </div>
   {{ end }} {{ end }}
 </div>
+
 
 <!-- 先将lastUpdate的时间格式化,再显示为相对时间,参考lately.mini.js -->
 <script>
@@ -321,3 +325,14 @@
           }
         }
 </script> 
+
+  <!-- 使用JavaScript判断如果$item.important ==true,则mk-raindrop-tags的background-color: var(--link-background-color) -->
+  <script>
+  var important = document.getElementsByClassName("mk-important");
+  for (var i = 0; i < important.length; i++) {
+    var important = important[i].innerHTML;
+    if (important == true) {
+      important[i].style.backgroundColor = "var(--link-background-color)";
+    }
+  }
+</script>
