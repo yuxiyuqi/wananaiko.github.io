@@ -3,78 +3,101 @@
   {{- if site.Copyright }}
   <span>{{ site.Copyright | markdownify }}</span>
   {{- else }}
-  <span>&copy; {{ now.Year }} <a href="{{ "" | absURL }}">{{ site.Title }}</a></span>
+  <span>&copy; {{ now.Year }}</span>
   {{- end -}}
-  <span style="display: inline-block; margin-left: 1em;">
-    <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA</a>
-  </span>
-  <span style="display: inline-block; margin-left: 1em;">
-    Powered by
-    <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
-    <a href="https://github.com/reorx/hugo-PaperModX/" rel="noopener" target="_blank">PaperModX</a>
+  <span style="display: inline-block; margin-left: 1em"> Made with love </span>
+  <span style="display: inline-block; margin-left: 1em">
+    Powered by Hugo & PaperMod Ultra
   </span>
 
-<!-- 添加图片相册功能 -->
-{{ if ($.Scratch.Get "photoswipeloaded") }}
-<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
-<script src="/js/load-photoswipe.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe.min.js" integrity="sha256-UplRCs9v4KXVJvVY+p+RSo5Q4ilAUXh7kpjyIP5odyc=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe-ui-default.min.js" integrity="sha256-PWHOlUzc96pMc8ThwRIXPn8yH4NOLu42RQ0b9SpnpFk=" crossorigin="anonymous"></script>
-{{ end }}
-
+  <!-- 添加图片相册功能 -->
+  {{ if ($.Scratch.Get "photoswipeloaded") }}
+  <script
+    src="https://code.jquery.com/jquery-1.12.4.min.js"
+    integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+    crossorigin="anonymous"
+  ></script>
+  <script src="/js/load-photoswipe.js"></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe.min.js"
+    integrity="sha256-UplRCs9v4KXVJvVY+p+RSo5Q4ilAUXh7kpjyIP5odyc="
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe-ui-default.min.js"
+    integrity="sha256-PWHOlUzc96pMc8ThwRIXPn8yH4NOLu42RQ0b9SpnpFk="
+    crossorigin="anonymous"
+  ></script>
+  {{ end }}
 </footer>
-{{- end }}
-
-{{- if (not site.Params.disableScrollToTop) }}
-<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+{{- end }} {{- if (not site.Params.disableScrollToTop) }}
+<a
+  href="#top"
+  aria-label="go to top"
+  title="Go to Top (Alt + G)"
+  class="top-link"
+  id="top-link"
+  accesskey="g"
+>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 12 6"
+    fill="currentColor"
+  >
     <path d="M12 6H0l6-6z" />
   </svg>
 </a>
-{{- end }}
-
-{{- partial "extend_footer.html" . }}
+{{- end }} {{- partial "extend_footer.html" . }}
 
 <script>
-  (function() {
+  (function () {
     /* theme toggle */
-    const disableThemeToggle = '{{ if site.Params.disableThemeToggle }}1{{ end }}' == '1';
+    const disableThemeToggle =
+      "{{ if site.Params.disableThemeToggle }}1{{ end }}" == "1";
     if (disableThemeToggle) {
       return;
     }
 
-    let button = document.getElementById("theme-toggle")
+    let button = document.getElementById("theme-toggle");
     // remove the listeners first to prevent adding duplicated listener when history goes back and forth
-    button.removeEventListener('click', toggleThemeListener)
+    button.removeEventListener("click", toggleThemeListener);
     // listen to toggle button
-    button.addEventListener('click', toggleThemeListener)
+    button.addEventListener("click", toggleThemeListener);
   })();
 </script>
 
 <script>
   (function () {
-    let menu = document.getElementById('menu')
+    let menu = document.getElementById("menu");
     if (menu) {
       menu.scrollLeft = localStorage.getItem("menu-scroll-position");
       menu.onscroll = function () {
         localStorage.setItem("menu-scroll-position", menu.scrollLeft);
-      }
+      };
     }
 
-    const disableSmoothScroll = '{{- if (.Param "DisableSmoothScroll") -}}1{{- end -}}' == '1';
-    const enableInstantClick = '{{- if (.Param "EnableInstantClick") -}}1{{- end -}}' == '1';
+    const disableSmoothScroll =
+      '{{- if (.Param "DisableSmoothScroll") -}}1{{- end -}}' == "1";
+    const enableInstantClick =
+      '{{- if (.Param "EnableInstantClick") -}}1{{- end -}}' == "1";
     // instant click and smooth scroll are mutually exclusive
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches || disableSmoothScroll || enableInstantClick) {
+    if (
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches ||
+      disableSmoothScroll ||
+      enableInstantClick
+    ) {
       return;
     }
     // only run this code if smooth scroll should be enabled
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
       anchor.addEventListener("click", function (e) {
         e.preventDefault();
         var id = this.getAttribute("href").substr(1);
-        document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
-          behavior: "smooth"
-        });
+        document
+          .querySelector(`[id='${decodeURIComponent(id)}']`)
+          .scrollIntoView({
+            behavior: "smooth",
+          });
         if (id === "top") {
           history.replaceState(null, null, " ");
         } else {
@@ -89,7 +112,10 @@
 <script>
   var mybutton = document.getElementById("top-link");
   window.onscroll = function () {
-    if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+    if (
+      document.body.scrollTop > 800 ||
+      document.documentElement.scrollTop > 800
+    ) {
       mybutton.style.visibility = "visible";
       mybutton.style.opacity = "1";
     } else {
@@ -98,64 +124,70 @@
     }
   };
 </script>
-{{- end }}
-
-{{- /* Base64Email */}}
-{{- if (.Param "MaskedEmail") }}
+{{- end }} {{- /* Base64Email */}} {{- if (.Param "MaskedEmail") }}
 <script>
-  document.querySelectorAll('.masked-email').forEach((el) => {
+  document.querySelectorAll(".masked-email").forEach((el) => {
     el.innerText = atob(el.innerText);
-    el.classList.remove('masked-email')
-  })
+    el.classList.remove("masked-email");
+  });
 </script>
-{{- end -}}
-
-
-{{/* Clear ToC Scroll */}}
+{{- end -}} {{/* Clear ToC Scroll */}}
 <script>
   if (window.scrollListeners) {
     // console.log('disable toc scroll', scrollListeners)
     for (const listener of scrollListeners) {
-      window.removeEventListener('scroll', listener)
+      window.removeEventListener("scroll", listener);
     }
   }
-  window.scrollListeners = []
+  window.scrollListeners = [];
 </script>
 
-{{/* Load mediumZoom script */}}
-{{/* It has to be loaded here because of the data-no-instant attribute */}}
-{{- $imagezoom := resources.Get "js/medium-zoom.min.js" }}
-<script src="{{ $imagezoom.RelPermalink }}" data-no-instant
-  {{- if site.Params.assets.disableFingerprinting }}integrity="{{ $imagezoom.Data.Integrity }}"{{- end }}
+{{/* Load mediumZoom script */}} {{/* It has to be loaded here because of the
+data-no-instant attribute */}} {{- $imagezoom := resources.Get
+"js/medium-zoom.min.js" }}
+<script
+  src="{{ $imagezoom.RelPermalink }}"
+  data-no-instant
+  {{-
+  if
+  site.Params.assets.disableFingerprinting
+  }}integrity="{{ $imagezoom.Data.Integrity }}"
+  {{-
+  end
+  }}
 ></script>
 
-{{- if .IsPage }}
-  {{- partial "page_footer.html" . }}
-{{- end}}
-
-{{- /* Search */}}
-{{- if (eq .Layout `search`) -}}
-<link crossorigin="anonymous" rel="preload" as="fetch" href="../index.json">
-{{- $fastsearch := resources.Get "js/fastsearch.js" | js.Build (dict "params" (dict "fuseOpts" site.Params.fuseOpts)) }}
-{{- $fusejs := resources.Get "js/fuse.basic.min.js" }}
-{{- if not site.Params.assets.disableFingerprinting }}
-{{- $search := (slice $fusejs $fastsearch ) | resources.Concat "assets/js/search.js" | minify | fingerprint }}
-<script defer crossorigin="anonymous" src="{{ $search.RelPermalink }}" integrity="{{ $search.Data.Integrity }}"></script>
-{{- else }}
-{{- $search := (slice $fusejs $fastsearch ) | resources.Concat "assets/js/search.js" | minify }}
+{{- if .IsPage }} {{- partial "page_footer.html" . }} {{- end}} {{- /* Search
+*/}} {{- if (eq .Layout `search`) -}}
+<link crossorigin="anonymous" rel="preload" as="fetch" href="../index.json" />
+{{- $fastsearch := resources.Get "js/fastsearch.js" | js.Build (dict "params"
+(dict "fuseOpts" site.Params.fuseOpts)) }} {{- $fusejs := resources.Get
+"js/fuse.basic.min.js" }} {{- if not site.Params.assets.disableFingerprinting }}
+{{- $search := (slice $fusejs $fastsearch ) | resources.Concat
+"assets/js/search.js" | minify | fingerprint }}
+<script
+  defer
+  crossorigin="anonymous"
+  src="{{ $search.RelPermalink }}"
+  integrity="{{ $search.Data.Integrity }}"
+></script>
+{{- else }} {{- $search := (slice $fusejs $fastsearch ) | resources.Concat
+"assets/js/search.js" | minify }}
 <script defer crossorigin="anonymous" src="{{ $search.RelPermalink }}"></script>
-{{- end }}
-
-{{- else }}
-
-{{- /* InstantClick.js */}}
-{{- if (.Param "EnableInstantClick") }}
-{{- $instantclick := resources.Get "js/instantclick.js" }}
-{{- if hugo.IsProduction }}
-  {{- $instantclick = minify $instantclick }}
-{{- end }}
-<script src="{{ $instantclick.RelPermalink }}" data-no-instant
-  {{- if site.Params.assets.disableFingerprinting }}integrity="{{ $instantclick.Data.Integrity }}"{{- end }}
+{{- end }} {{- else }} {{- /* InstantClick.js */}} {{- if (.Param
+"EnableInstantClick") }} {{- $instantclick := resources.Get "js/instantclick.js"
+}} {{- if hugo.IsProduction }} {{- $instantclick = minify $instantclick }} {{-
+end }}
+<script
+  src="{{ $instantclick.RelPermalink }}"
+  data-no-instant
+  {{-
+  if
+  site.Params.assets.disableFingerprinting
+  }}integrity="{{ $instantclick.Data.Integrity }}"
+  {{-
+  end
+  }}
 ></script>
 <script data-no-instant>
   // http://instantclick.io/scripts
@@ -166,7 +198,6 @@
   // });
   InstantClick.init();
 </script>
-
 
 {{ if (and .Site.Params.remark42SiteID .Params.comments) }}
 <script>
@@ -187,7 +218,4 @@
   })(remark_config.components || ['embed']);
 </script>
 
-{{ end }}
-{{- end }}
-
-{{- end -}}
+{{ end }} {{- end }} {{- end -}}
