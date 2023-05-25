@@ -240,7 +240,7 @@ img {
 
 .header {
     border-bottom: 1px solid var(--border);
-    position: sticky;
+    /* position: sticky; */
     z-index: 400;
     top: 0;
     opacity: .98;
