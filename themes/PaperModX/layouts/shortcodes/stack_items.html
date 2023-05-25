@@ -19,6 +19,7 @@
   .stack-item {
     display: flex;
     overflow: hidden;
+    padding-left: 0.5rem;
   }
 
   .stack-item:hover .stack-item-title {
@@ -108,6 +109,29 @@
     border-bottom: 0.5px solid var(--tertiary-bg);
     margin: 8px 0;
     opacity: 0.65;
+    display: none;
+  }
+
+  .stack-single {
+    width: 100%;
+    margin: 0 auto;
+    border-top: var(--border-top);
+    padding: 0.5rem 0rem;
+  }
+  .stack-single:hover {
+    text-decoration: none;
+    box-shadow: none;
+    background-color: var(--code-bg);
+    border-top: 0.5px solid var(--code-bg); /* Add this line */
+    border-radius: var(--radius);
+  }
+
+  .stack-single:hover .stack-item-tag {
+    background-color: var(--border);
+  }
+
+  .stack-single:hover + .stack-single {
+    border-top: 0.5px solid var(--code-bg); /* Add this line */
   }
 
   span.stack-item-tag {
@@ -133,7 +157,7 @@
 <div class="stack-list slide-enter slide-enter-content">
   {{ range $index, $item := $items }} {{- $item := split $item "|" }} {{- if ge
   (len $item) 5 }}
-  <div>
+  <div class="stack-single">
     <a
       href="{{ index $item 0 }}"
       target="_blank"
