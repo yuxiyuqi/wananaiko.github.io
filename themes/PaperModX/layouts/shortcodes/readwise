@@ -1,0 +1,81 @@
+{{ $url := "https://readwise.io/api/v2/highlights/?page_size=1000" }}
+{{ $token := "OFdpVRraBbux9PoY6HVTLxKAiKholS5r5UBOyJPcXpZItbi8S5" }}
+{{ $response := getJSON $url (dict "Authorization" (printf "Token %s" $token)) }}
+
+<style>
+  .readwise {
+    padding: 30px 0;
+  }
+
+  .readwise-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 -15px;
+  }
+
+  .readwise-card {
+    width: calc(33.33% - 30px);
+    margin: 0 15px 30px;
+    padding: 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+
+  .readwise-card-link {
+    display: block;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.3s ease-in-out;
+    position: relative;
+  }
+
+  .readwise-card:hover .readwise-card-link {
+    transform: scale(1.1);
+  }
+
+  .readwise-card-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    color: #fff;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+  }
+
+  .readwise-card-title {
+    margin: 0 0 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+
+  .readwise-card-author,
+  .readwise-card-highlighted-at {
+    margin: 0 0 5px;
+    font-size: 0.9rem;
+  }
+</style>
+
+<div class="readwise">
+  <div class="readwise-row">
+    {{ range $response.results }}
+    <div class="readwise-card">
+      <div
+        class="readwise-card-link"
+        style="background-image: url('{{ .image_url }}')"
+      >
+        <div class="readwise-card-overlay">
+          <div class="readwise-card-title">{{ .title }}</div>
+          <div class="readwise-card-author">{{ .author }}</div>
+          <div class="readwise-card-highlighted-at">
+            {{ dateFormat "2006-01-02" .highlighted_at }}
+          </div>
+        </div>
+      </div>
+    </div>
+    {{ end }}
+  </div>
+</div>
