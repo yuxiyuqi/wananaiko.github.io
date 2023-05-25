@@ -1,6 +1,69 @@
-{{ $url := "https://readwise.io/api/v2/highlights/?page_size=1000" }}
+{{ $url := "https://readwise.io/api/v2/highlights/" }}
 {{ $token := "OFdpVRraBbux9PoY6HVTLxKAiKholS5r5UBOyJPcXpZItbi8S5" }}
-{{ $response := getJSON $url (dict "Authorization" (printf "Token %s" $token)) }}
+{{ $params := dict "page_size" 10 }}
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<div class="readwise">
+  <div class="readwise-row"></div>
+</div>
+
+<script>
+  $.ajax({
+    url: '{{ $url }}',
+    type: 'GET',
+    contentType: 'application/json',
+    beforeSend: function (xhr) {
+      xhr.setRequestHeader('Authorization', 'Token {{ $token }}');
+    },
+    data: {{ jsonify $params }},
+    success: function (result) {
+      const highlights = result.results.slice(0, 60);
+      const row = document.querySelector('.readwise-row');
+      highlights.forEach(highlight => {
+        const card = document.createElement('div');
+        card.classList.add('readwise-card');
+        const link = document.createElement('div');
+        link.classList.add('readwise-card-link');
+        link.style.backgroundImage = `url('${highlight.image_url}')`;
+        link.dataset.src = highlight.image_url;
+        const overlay = document.createElement('div');
+        overlay.classList.add('readwise-card-overlay');
+        const title = document.createElement('div');
+        title.classList.add('readwise-card-title');
+        title.textContent = highlight.title;
+        const author = document.createElement('div');
+        author.classList.add('readwise-card-author');
+        author.textContent = highlight.author;
+        const highlightedAt = document.createElement('div');
+        highlightedAt.classList.add('readwise-card-highlighted-at');
+        highlightedAt.textContent = moment(highlight.highlighted_at).format('YYYY-MM-DD');
+        overlay.appendChild(title);
+        overlay.appendChild(author);
+        overlay.appendChild(highlightedAt);
+        link.appendChild(overlay);
+        card.appendChild(link);
+        row.appendChild(card);
+      });
+      const lazyCards = document.querySelectorAll('.readwise-card-link[data-src]');
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const link = entry.target;
+            link.style.backgroundImage = `url('${link.dataset.src}')`;
+            link.removeAttribute('data-src');
+            link.parentElement.parentElement.classList.remove('readwise-card-lazy');
+            observer.unobserve(link);
+          }
+        });
+      });
+      lazyCards.forEach(link => observer.observe(link));
+    },
+    error: function (error) {
+      console.log(error)
+    },
+  });
+</script>
 
 <style>
   .readwise {
@@ -58,24 +121,3 @@
     font-size: 0.9rem;
   }
 </style>
-
-<div class="readwise">
-  <div class="readwise-row">
-    {{ range $response.results }}
-    <div class="readwise-card">
-      <div
-        class="readwise-card-link"
-        style="background-image: url('{{ .image_url }}')"
-      >
-        <div class="readwise-card-overlay">
-          <div class="readwise-card-title">{{ .title }}</div>
-          <div class="readwise-card-author">{{ .author }}</div>
-          <div class="readwise-card-highlighted-at">
-            {{ dateFormat "2006-01-02" .highlighted_at }}
-          </div>
-        </div>
-      </div>
-    </div>
-    {{ end }}
-  </div>
-</div>
