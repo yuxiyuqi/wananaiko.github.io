@@ -1,124 +1,89 @@
-{{ $url := "https://readwise.io/api/v2/highlights/" }}
 {{ $token := "OFdpVRraBbux9PoY6HVTLxKAiKholS5r5UBOyJPcXpZItbi8S5" }}
-{{ $params := dict "page_size" 10 }}
+{{ $apiUrl := "https://readwise.io/api/v2/highlights" }}
 
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
-
-<div class="readwise">
-  <div class="readwise-row"></div>
+{{ $headers := dict "Authorization" (print "Token " $token) }}
+{{ with getJSON (printf $apiUrl) $headers }}
+<div class="row">
+  {{ range $index, $highlight := .results }}
+  {{ if modBool $index 3 }}
+  {{ if gt $index 0 }}
 </div>
-
-<script>
-  $.ajax({
-    url: '{{ $url }}',
-    type: 'GET',
-    contentType: 'application/json',
-    beforeSend: function (xhr) {
-      xhr.setRequestHeader('Authorization', 'Token {{ $token }}');
-    },
-    data: {{ jsonify $params }},
-    success: function (result) {
-      const highlights = result.results.slice(0, 60);
-      const row = document.querySelector('.readwise-row');
-      highlights.forEach(highlight => {
-        const card = document.createElement('div');
-        card.classList.add('readwise-card');
-        const link = document.createElement('div');
-        link.classList.add('readwise-card-link');
-        link.style.backgroundImage = `url('${highlight.image_url}')`;
-        link.dataset.src = highlight.image_url;
-        const overlay = document.createElement('div');
-        overlay.classList.add('readwise-card-overlay');
-        const title = document.createElement('div');
-        title.classList.add('readwise-card-title');
-        title.textContent = highlight.title;
-        const author = document.createElement('div');
-        author.classList.add('readwise-card-author');
-        author.textContent = highlight.author;
-        const highlightedAt = document.createElement('div');
-        highlightedAt.classList.add('readwise-card-highlighted-at');
-        highlightedAt.textContent = moment(highlight.highlighted_at).format('YYYY-MM-DD');
-        overlay.appendChild(title);
-        overlay.appendChild(author);
-        overlay.appendChild(highlightedAt);
-        link.appendChild(overlay);
-        card.appendChild(link);
-        row.appendChild(card);
-      });
-      const lazyCards = document.querySelectorAll('.readwise-card-link[data-src]');
-      const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            const link = entry.target;
-            link.style.backgroundImage = `url('${link.dataset.src}')`;
-            link.removeAttribute('data-src');
-            link.parentElement.parentElement.classList.remove('readwise-card-lazy');
-            observer.unobserve(link);
-          }
-        });
-      });
-      lazyCards.forEach(link => observer.observe(link));
-    },
-    error: function (error) {
-      console.log(error)
-    },
-  });
-</script>
+{{ end }}
+<div class="row">
+  {{ end }}
+  <div class="col-md-4">
+    <div class="card">
+      <img
+        src="{{ $highlight.image_url }}"
+        alt="{{ $highlight.title }}"
+        class="card-image"
+      />
+      <div class="card-body">
+        <h5 class="card-title">{{ $highlight.title }}</h5>
+        <p class="card-text">{{ $highlight.text }}</p>
+      </div>
+      <div class="card-footer">
+        <span>{{ $highlight.author }}</span>
+        <br />
+        <span>{{ dateFormat "2006-01-02" $highlight.highlighted_at }}</span>
+        <br />
+        <a
+          href="{{ $highlight.source_url }}"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="card-link"
+          >Source</a
+        >
+      </div>
+    </div>
+  </div>
+  {{ end }}
+</div>
+{{ end }}
 
 <style>
-  .readwise {
-    padding: 30px 0;
-  }
-
-  .readwise-row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 0 -15px;
-  }
-
-  .readwise-card {
-    width: calc(33.33% - 30px);
-    margin: 0 15px 30px;
-    padding: 0;
+  .card {
+    border: 1px solid #e0e0e0;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
     overflow: hidden;
   }
 
-  .readwise-card-link {
-    display: block;
-    height: 200px;
-    background-size: cover;
-    background-position: center;
-    transition: transform 0.3s ease-in-out;
-    position: relative;
+  .card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
   }
 
-  .readwise-card:hover .readwise-card-link {
-    transform: scale(1.1);
+  .card-title {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
   }
 
-  .readwise-card-overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
+  .card-text {
+    font-size: 0.875rem;
+    line-height: 1.5;
+  }
+
+  .text-muted {
+    color: #6c757d;
+  }
+
+  .card-image {
     width: 100%;
-    padding: 20px;
-    color: #fff;
-    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+    height: auto;
+    display: block;
   }
 
-  .readwise-card-title {
-    margin: 0 0 10px;
-    font-size: 1.2rem;
-    font-weight: bold;
+  .card-body {
+    padding: 1rem;
   }
 
-  .readwise-card-author,
-  .readwise-card-highlighted-at {
-    margin: 0 0 5px;
-    font-size: 0.9rem;
+  .card-footer {
+    background-color: transparent;
+    border-top: none;
+    padding: 0 1rem 1rem 1rem;
+    font-size: 0.75rem;
+    color: #6c757d;
   }
 </style>
