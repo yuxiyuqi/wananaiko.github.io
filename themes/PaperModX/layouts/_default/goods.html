@@ -1,15 +1,5 @@
 {{ define "main" }} {{ $goods := getJSON "data/goods.json" }}
 <style>
-  .main.post {
-    position: relative !important;
-    min-height: calc(
-      100vh - var(--header-height) - var(--footer-height)
-    ) !important;
-    max-width: calc(var(--main-width) + var(--gap) * 2) !important;
-    margin: auto !important;
-    padding-top: 0 !important;
-  }
-
   .goods-bankuai {
     display: inline-block;
     vertical-align: top;
@@ -69,6 +59,15 @@
   /* 页面宽度小于700样式 */
 
   @media (max-width: 700px) {
+    .main.post {
+      position: relative !important;
+      min-height: calc(
+        100vh - var(--header-height) - var(--footer-height)
+      ) !important;
+      max-width: calc(var(--main-width) + var(--gap) * 2) !important;
+      margin: auto !important;
+      padding-top: 0 !important;
+    }
     .goods-bankuai {
       width: 100%;
       height: 100%;
@@ -117,6 +116,15 @@
   /* 页面宽度大于700小于900样式 */
 
   @media screen and (min-width: 700px) and (max-width: 900px) {
+    .main.post {
+      position: relative !important;
+      min-height: calc(
+        100vh - var(--header-height) - var(--footer-height)
+      ) !important;
+      max-width: calc(var(--main-width) + var(--gap) * 2) !important;
+      margin: auto !important;
+      padding-top: 0 !important;
+    }
     .goods-quanju {
       font-size: 0;
       width: 106%;
@@ -151,7 +159,7 @@
 
   /* 页面宽度大于900样式 */
 
-  @media (min-width: 900px) {
+  @media (min-width: 900px) { 
     .goods-quanju {
       font-size: 0;
       width: 106%;
