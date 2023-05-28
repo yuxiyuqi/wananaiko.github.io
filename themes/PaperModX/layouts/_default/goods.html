@@ -1,11 +1,13 @@
 {{ define "main" }} {{ $goods := getJSON "data/goods.json" }}
 <style>
-  .main.post{
-    position: relative;
-    min-height: calc(100vh - var(--header-height) - var(--footer-height));
+  .main.post {
+    position: relative !important;
+    min-height: calc(
+      100vh - var(--header-height) - var(--footer-height)
+    ) !important;
     max-width: calc(var(--main-width) + var(--gap) * 2) !important;
-    margin: auto;
-    padding: var(--content-gap)var(--gap)0;
+    margin: auto !important;
+    /* padding: var(--content-gap) var(--gap) 0 !important; */
   }
 
   .goods-bankuai {
@@ -218,7 +220,6 @@
     </div>
     {{ end }}
   </div>
-</div>
-  {{ if not (eq .Params.Comments "false") }} {{ partial "comments.html" . }} {{
-  end }}
-{{ end }}
+</section>
+{{ if not (eq .Params.Comments "false") }} {{ partial "comments.html" . }} {{
+end }} {{ end }}
