@@ -45,7 +45,7 @@
 #theme-toggle svg {
     height: 20px;
     width: 20px;
-    margin-left: 2px;
+    /* margin-left: 2px; */
 }
 
 /* 点击button id="theme-toggle"后,为svg id="sun"和svg id="moon"添加动画效果,sun和moon出现之前:缩小并且带有一些旋转角度,出现之后恢复默认大小和默认角度,带有旋转动画.加载网页默认是没有动画效果*/#sun,
