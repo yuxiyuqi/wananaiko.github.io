@@ -8,7 +8,6 @@
     max-width: calc(var(--main-width) + var(--gap) * 2) !important;
     margin: auto !important;
     padding-top: 0 !important;
-    /* padding: var(--content-gap) var(--gap) 0 !important; */
   }
 
   .goods-bankuai {
@@ -222,5 +221,13 @@
     {{ end }}
   </div>
 </section>
-{{ if not (eq .Params.Comments "false") }} {{ partial "comments.html" . }} {{
-end }} {{ end }}
+
+<script>
+  // 禁用图片弹窗
+  document.querySelectorAll(".goods img").forEach(function (img) {
+    img.style.pointerEvents = "none";
+  });
+</script>
+<!-- {{ if not (eq .Params.Comments "false") }} {{ partial "comments.html" . }} {{
+end }}  -->
+{{ end }}
