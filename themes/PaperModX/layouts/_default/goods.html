@@ -1,5 +1,13 @@
 {{ define "main" }} {{ $goods := getJSON "data/goods.json" }}
 <style>
+  .main.post{
+    position: relative;
+    min-height: calc(100vh - var(--header-height) - var(--footer-height));
+    max-width: calc(var(--main-width) + var(--gap) * 2);
+    margin: auto;
+    padding: var(--content-gap)var(--gap)0;
+  }
+
   .goods-bankuai {
     display: inline-block;
     vertical-align: top;
@@ -197,7 +205,7 @@
   {{- end }}
 </header>
 
-<div class="post">
+<section id="main" class="container slide-enter-content">
   <div class="post-content goods">
     {{ .Content }} {{ range $goods.good}}
     <div class="goods-bankuai img-hide">
@@ -210,8 +218,7 @@
     </div>
     {{ end }}
   </div>
-
+</div>
   {{ if not (eq .Params.Comments "false") }} {{ partial "comments.html" . }} {{
   end }}
-</div>
 {{ end }}
