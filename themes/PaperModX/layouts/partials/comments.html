@@ -58,23 +58,9 @@
       }
     })(remark_config.components || ["embed"], document);
 
-    // 修复Comments count: 0,文章中不显示remark42评论的问题.
+    // 修复域名迁移到 Cloudflare后,文章中remark42评论内容不显示的问题.
 
-    var remark42 = window.REMARK42;
-    if (remark42) {
-      remark42.destroy();
-      remark42.createInstance(remark_config);
-    } else {
-      for (const component of remark_config.components) {
-        var d = document,
-          s = d.createElement("script");
-        s.src = `${remark_config.host}/web/${component}.mjs`;
-        s.type = "module";
-        s.defer = true;
-        // prevent the <script> from loading mutiple times by InstantClick
-        s.setAttribute("data-no-instant", "");
-        d.head.appendChild(s);
-      }
-    }
+    
   </script>
+
 </body>
