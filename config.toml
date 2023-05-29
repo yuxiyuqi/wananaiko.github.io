@@ -209,10 +209,6 @@ disableInlineCSS = true
 [commentSystems.disqus]
 shortname = "reorx"
 
-[commentSystems.remark42]
-url = "https://remark42.wananaiko.com"
-site = "wananaiko"
-
 [commentSystems.telegramWidget]
 channel = "reorx_share"
 accentColor = "9077e1"
