@@ -9,6 +9,7 @@
       <link>https://wananaiko.com/images/forge-v2-compat.svg</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
     <lastBuildDate>Sun, 08 Jan 2023 23:04:09 +0800</lastBuildDate><atom:link href="https://wananaiko.com/tags/iterm2/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>让 ITERM2 实时显示梯子状态</title>

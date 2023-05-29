@@ -9,6 +9,7 @@
       <link>https://wananaiko.com/images/forge-v2-compat.svg</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
     <lastBuildDate>Mon, 09 Jan 2023 00:24:18 +0800</lastBuildDate><atom:link href="https://wananaiko.com/tags/papermodx/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hugo 和 PaperModX 的一些配置记录</title>

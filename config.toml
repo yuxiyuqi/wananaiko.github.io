@@ -119,22 +119,24 @@ weight = 7
 
 [languages.zh]
 languageName = ":cn:"
-languageAltTitle = "中文"
 weight = 2
 title = "PaperModX"
 
-  [languages.zh.profileMode]
+  [languages.zh.params]
+  languagealttitle = "中文"
+
+  [languages.zh.params.profileMode]
   enabled = true
   title = "PaperModX"
   subtitle = """
 <p>Hugo 主题</p> ☄️ 快速 | ☁️ 流畅 | 📖 可读性 | 📱 响应式
 """
 
-    [[languages.zh.profileMode.buttons]]
+    [[languages.zh.params.profileMode.buttons]]
     name = "文档"
     url = "docs"
 
-    [[languages.zh.profileMode.buttons]]
+    [[languages.zh.params.profileMode.buttons]]
     name = "标签"
     url = "tags"
 
