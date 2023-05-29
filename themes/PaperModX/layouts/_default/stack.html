@@ -30,6 +30,7 @@
     display: flex;
     overflow: hidden;
     padding-left: 0.5rem;
+    padding-top: 0.4rem;
   }
 
   .stack-item:hover .stack-item-title {
@@ -181,7 +182,7 @@
   {{- end }}
 </header>
 
-<div class="stack-list slide-enter slide-enter-content">
+<div class="stack-list slide-enter-content">
   {{ range $index, $item := $stack.items }} {{- if ge (len $item) 5 }}
   <div class="stack-single">
     <a
