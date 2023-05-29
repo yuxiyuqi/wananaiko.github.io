@@ -211,7 +211,6 @@ shortname = "reorx"
 
 [commentSystems.remark42]
 url = "https://remark42.wananaiko.com"
-SECRET = "123456"
 site = "wananaiko"
 
 [commentSystems.telegramWidget]
