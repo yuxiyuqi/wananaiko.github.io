@@ -1,19 +1,7 @@
-{{ $token := "d7e078a0-3f49-4419-981a-8695c399b0d8" }}
-{{ $collection := "34199304" }}
-{{ $apiUrl := printf "https://api.raindrop.io/rest/v1/raindrops/%s" $collection }}
-{{ $json := getJSON $apiUrl "?access_token=" $token "&perpage=100&sort=-created" }}
-
-<script
-  type="text/javascript"
-  src="https://fastly.jsdelivr.net/gh/Tokinx/Lately/lately.min.js"
-></script>
-
-<link rel="stylesheet" href="https://unpkg.com/pyloncss@latest/css/pylon.css"/>
-
 <style>
   .inline-links {
     display: none;
-}
+  }
 
   .mk-raindrop-bookmarks {
     display: flex;
@@ -32,12 +20,12 @@
     border-top: var(--border-top);
   }
 
-  .mk-raindrop-bookmark:hover{
+  .mk-raindrop-bookmark:hover {
     text-decoration: none;
     box-shadow: none;
     border-top: 0.5px solid var(--code-bg);
     --bookmark-list-opacity: 1;
-    background-color: rgb(250 250 250/var(--bookmark-list-opacity));
+    background-color: rgb(250 250 250 / var(--bookmark-list-opacity));
     border-radius: var(--radius);
   }
 
@@ -46,9 +34,9 @@
     box-shadow: none;
     border-top: 0.5px solid var(--code-bg);
     border-radius: var(--radius);
-    --bookmark-list-opacity: .1;
-    background-color: rgb(0 0 0/var(--bookmark-list-opacity));
-}
+    --bookmark-list-opacity: 0.1;
+    background-color: rgb(0 0 0 / var(--bookmark-list-opacity));
+  }
 
   .mk-raindrop-bookmark:hover + .mk-raindrop-bookmark {
     border-top: 0.5px solid var(--code-bg);
@@ -59,13 +47,13 @@
     color: inherit;
     display: block;
     box-shadow: none;
-    padding: 1rem .5rem;
+    padding: 1rem 0.5rem;
   }
 
-  .mk-raindrop-bookmark a:hover{
+  .mk-raindrop-bookmark a:hover {
     text-decoration: none;
     box-shadow: none;
-    padding: 1rem .5rem;
+    padding: 1rem 0.5rem;
   }
 
   .mk-title-wrapper {
@@ -83,7 +71,7 @@
     background-size: 16px;
     line-height: 1.5rem;
     color: var(--content);
-    transition: .5s;
+    transition: 0.5s;
     margin-left: 26px;
   }
 
@@ -115,7 +103,7 @@
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
-}
+  }
 
   .mk-raindrop-tags {
     display: flex;
@@ -133,7 +121,7 @@
     font-size: 12px;
     white-space: nowrap;
     line-height: 1.4rem;
-}
+  }
 
   .mk-divider {
     /* width: 100%;
@@ -149,7 +137,7 @@
     position: absolute;
     right: -20px;
     transform: translateX(20px);
-    transition: all .2s ease;
+    transition: all 0.2s ease;
     display: flex;
     justify-content: center;
   }
@@ -169,8 +157,14 @@
   .mk-tab-tag {
     display: inline-block;
     color: var(--secondary);
-    background: linear-gradient(180deg, rgba(223, 225, 231, 0) 0%, rgba(223, 225, 231, 0.05) 100%), var(--entry);
-    box-shadow: 0px 1px 2px rgba(42, 59, 81, 0.12), 0px 0px 0px 1px rgba(18, 55, 105, 0.08);
+    background: linear-gradient(
+        180deg,
+        rgba(223, 225, 231, 0) 0%,
+        rgba(223, 225, 231, 0.05) 100%
+      ),
+      var(--entry);
+    box-shadow: 0px 1px 2px rgba(42, 59, 81, 0.12),
+      0px 0px 0px 1px rgba(18, 55, 105, 0.08);
     border-radius: 6px;
     padding: 0.05rem 0.5rem;
     font-size: 13px;
@@ -182,27 +176,33 @@
   .mk-tab-tag.mk-tab-tag-active:hover {
     color: rgba(255, 255, 255, 0.9);
     background-color: var(--link-hover-color);
-}
+  }
 
-.dark .mk-tab-tag-active {
-box-shadow: none;
-}
+  .dark .mk-tab-tag-active {
+    box-shadow: none;
+  }
 
   .mk-tab-tag:hover {
     color: var(--secondary);
     background-color: var(--code-bg);
   }
 
-  .mk-tab-tag-active { 
+  .mk-tab-tag-active {
     color: rgba(255, 255, 255, 0.9);
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.16) 0%, rgba(255, 255, 255, 0) 100%), #009999;
-    box-shadow: 0px 1px 2px rgba(0, 80, 80, 0.4), 0px 0px 0px 1px rgba(0, 122, 122, 0.76);
+    background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.16) 0%,
+        rgba(255, 255, 255, 0) 100%
+      ),
+      #009999;
+    box-shadow: 0px 1px 2px rgba(0, 80, 80, 0.4),
+      0px 0px 0px 1px rgba(0, 122, 122, 0.76);
     border-radius: 6px;
   }
 
   .mk-update-time {
     margin-left: auto;
-    opacity: .7;
+    opacity: 0.7;
     color: var(--tertiary);
     font-size: 12px;
     white-space: nowrap;
@@ -220,163 +220,178 @@ box-shadow: none;
     white-space: nowrap;
     line-height: 1.4rem;
     margin-right: 0.5rem;
-}
+  }
 
-.mk-important {
+  .mk-important {
     display: flex;
     align-items: center;
     gap: 2px;
-}
-.mk-raindrop-bookmark.important {
+  }
+  .mk-raindrop-bookmark.important {
     background-color: rgb(198 239 239 / 25%);
-}
-
-.mk-raindrop-bookmark.important:hover {
-    background-color: rgb(198 239 239 / 40%);
-}
-
-.dark .mk-raindrop-bookmark.important {
-    background-color: rgb(26 55 55 / 30%);
-}
-
-.dark .mk-raindrop-bookmark.important:hover {
-    background-color: rgba(30, 65, 65, 0.3);
-}
-
-</style>
-
-<!-- Base on raindrop.io's API filters, Add a Tab switch Group to view different tags,each tag is displayed only once in the this Tab switch. -->
-<div class="mk-tab">
-  <div class="mk-tab-tag" onclick="showAll()">All</div>
-  {{ range $i, $item := index $json "items" }}
-  {{ range $j, $tag := $item.tags }}
-  <div class="mk-tab-tag" onclick="showTag('{{ $tag }}')">{{ $tag }}</div>
-  {{ end }}
-  {{ end }}
-  <div class="mk-divider"></div>
-</div>
-
-<script>
-  // 过滤掉上面mk-raindrop-tags"中重复的tag
-  var tags = document.getElementsByClassName("mk-tab-tag");
-  var tagList = [];
-  for (var i = 0; i < tags.length; i++) {
-    if (tagList.indexOf(tags[i].innerHTML) == -1) {
-      tagList.push(tags[i].innerHTML);
-    } else {
-      tags[i].style.display = "none";
-    }
   }
 
-  function showAll() { var bookmarks = document.getElementsByClassName("mk-raindrop-bookmark"); for (var i = 0; i < bookmarks.length; i++) { bookmarks[i].style.display = "block"; } var tags = document.getElementsByClassName("mk-tab-tag"); for (var i = 0; i < tags.length; i++) { tags[i].classList.remove("mk-tab-tag-active"); } document.querySelector('.mk-tab-tag').classList.add('mk-tab-tag-active'); }
+  .mk-raindrop-bookmark.important:hover {
+    background-color: rgb(198 239 239 / 40%);
+  }
 
-  function showTag(tag) { var bookmarks = document.getElementsByClassName("mk-raindrop-bookmark"); for (var i = 0; i < bookmarks.length; i++) { if (bookmarks[i].querySelectorAll('.mk-tag').length > 0) { var found = false; var bookmarkTags = bookmarks[i].querySelectorAll('.mk-tag'); for (var j = 0; j < bookmarkTags.length; j++) { if (bookmarkTags[j].innerHTML == tag) { found = true; break; } } if (found) { bookmarks[i].style.display = "block"; } else { bookmarks[i].style.display = "none"; } } else { bookmarks[i].style.display = "none"; } } var tags = document.getElementsByClassName("mk-tab-tag"); for (var i = 0; i < tags.length; i++) { if (tags[i].innerHTML == tag) { tags[i].classList.add("mk-tab-tag-active"); } else { tags[i].classList.remove("mk-tab-tag-active"); } } }
+  .dark .mk-raindrop-bookmark.important {
+    background-color: rgb(26 55 55 / 30%);
+  }
 
-  document.querySelector('.mk-tab-tag:first-child').classList.add('mk-tab-tag-active');
-  
-</script>
+  .dark .mk-raindrop-bookmark.important:hover {
+    background-color: rgba(30, 65, 65, 0.3);
+  }
+</style>
 
-<div class="mk-raindrop-bookmarks">
-  
-  {{ range $i, $item := index $json "items" }} {{ $domain := index (findRE
-  "[^.]+\\.[^.]+$" (index (findRE "//[^/]+" $item.link) 0)) 0 }}
-  <div class="mk-raindrop-bookmark">
-    <a href="{{ $item.link }}" target="_blank" rel="noopener noreferrer">
-      <div class="mk-title-wrapper">
-        <div
-          class="mk-avatar"
-          style="background-image: url('https://unavatar.io/{{ trim $domain "/" }}'); background-size: 16px 16px;"
-        ></div>
-        <div class="mk-title">
-          {{ $item.title }}
-        </div>
-        <div class="mk-svg">
-          →
-        </div>
+<script async>
+  const apiUrl =
+    "https://api.raindrop.io/rest/v1/raindrops/34199304?access_token=d7e078a0-3f49-4419-981a-8695c399b0d8&perpage=100&sort=-created";
+  fetch(apiUrl)
+    .then((response) => response.json())
+    .then((data) => {
+      const bookmarksContainer = document.querySelector(
+        ".mk-raindrop-bookmarks"
+      );
+      let html = "";
+      data.items.forEach((item) => {
+        const domain = item.link.match(/\/\/([^/]+)/)[1];
+        const tagsHtml = item.tags
+          .map((tag) => `<div class="mk-tag">${tag}</div>`)
+          .join("");
+        const importantHtml = item.important
+          ? `<span class="mk-important-description">很赞</span>`
+          : "";
+
+        html += `
+      <div class="mk-raindrop-bookmark">
+        <a href="${item.link}" target="_blank" rel="noopener noreferrer">
+          <div class="mk-title-wrapper">
+            <div class="mk-avatar" style="background-image: url('https://unavatar.io/${domain}'); background-size: 16px 16px;"></div>
+            <div class="mk-title">${item.title}</div>
+            <div class="mk-svg">→</div>
+          </div>
+          ${item.excerpt ? `<div class="mk-excerpt">${item.excerpt}</div>` : ""}
+          <div class="mk-raindrop-tags">
+            ${tagsHtml}
+            <divider></divider>
+            <div class="mk-tag mk-update-time">${item.lastUpdate}</div>
+            <spacer></spacer>
+            <div class="mk-important">${importantHtml}</div>
+          </div>
+        </a>
       </div>
-      {{ with $item.excerpt }}
-      <div class="mk-excerpt">{{ . }}</div>
-      {{ end }} {{ with $item.tags }}
-      
-      <div class="mk-raindrop-tags">
-        {{ range . }}
-        <div class="mk-tag">{{ . }}</div>
-        {{ end }}
-        <divider></divider>
-        <div class="mk-tag mk-update-time">{{ $item.lastUpdate }}</div>
-        <spacer></spacer>
-        <!-- 增加一个div class="mk-important",从Raindrop API中获取important的值,如果是Boolean增显示<span>favorite</span> -->
+      <div class="mk-divider"></div>
+    `;
+      });
 
-        <div class="mk-important">
-        {{ if eq $item.important true }}
-        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M16.6663 11.3333C15.6601 14.5 12.8534 16.6667 9.58301 16.6667C6.22871 16.75 3.33301 14.0833 3.33301 10.75C3.33301 10.3333 3.33301 10 3.41687 9.58333L5.09401 10.0833C4.75858 12.75 6.89957 15.0833 9.58301 15C12.1826 14.9167 14.4022 13.1667 15.1569 10.75L16.6663 11.3333ZM7.27431 9.16667C8.19674 9.16667 9.28689 7.66667 9.62232 5.83333C10.0416 4 9.62232 2.5 8.69988 2.5C7.77745 2.5 6.77116 4 6.35188 5.83333C5.93259 7.66667 6.35188 9.16667 7.27431 9.16667ZM12.725 9.58333C13.6475 9.58333 14.7376 8.08333 15.1569 6.25C15.5762 4.41667 15.1569 2.91667 14.2345 2.91667C13.312 2.91667 12.2219 4.41667 11.8026 6.25C11.3833 8.08333 11.8026 9.58333 12.725 9.58333Z" fill="var(--link-hover-color)"/>
-</svg>
-</span> <span class="mk-important-description">很赞</span>
-        {{ end }}
-        {{ if eq $item.important false }}
-        <div></div>
-        {{ end }}
-        </div>
-        
-      </div>        
+      bookmarksContainer.innerHTML = html;
 
-      {{ end }}
-    </a>
-      {{ if lt $i (sub (len (index $json "items")) 1) }}
-  <div class="mk-divider"></div>
-  </div>
-  {{ end }} {{ end }}
-
-</div>
-
-<script>
-  // 使用JavaScript判断,如果mk-raindrop-bookmark里存在mk-important-description元素,则mk-raindrop-bookmark的background-color修改为var(--link-background-color);
-    const bookmarks = document.querySelectorAll('.mk-raindrop-bookmark');
-  bookmarks.forEach(bookmark => {
-    const important = bookmark.querySelector('.mk-important-description');
-    if (important) {
-      bookmark.classList.add('important');
-    }
-  });
-  
-</script>
-
-
-
-<!-- 先将lastUpdate的时间格式化,再显示为相对时间,参考lately.mini.js -->
-<script>
-        var lastUpdate = document.getElementsByClassName("mk-update-time");
-        for (var i = 0; i < lastUpdate.length; i++) {
-          var time = lastUpdate[i].innerHTML;
-          var date = new Date(time);
-          var now = new Date();
-          var diff = now.getTime() - date.getTime();
-          var days = Math.floor(diff / (24 * 3600 * 1000));
-          var leave1 = diff % (24 * 3600 * 1000);
-          var hours = Math.floor(leave1 / (3600 * 1000));
-          var leave2 = leave1 % (3600 * 1000);
-          var minutes = Math.floor(leave2 / (60 * 1000));
-          var leave3 = leave2 % (60 * 1000);
-          var seconds = Math.round(leave3 / 1000);
-          if (days > 0) {
-            lastUpdate[i].innerHTML = days + " 天前";
-          } else if (hours > 0) {
-            lastUpdate[i].innerHTML = hours + " 小时前";
-          } else if (minutes > 0) {
-            lastUpdate[i].innerHTML = minutes + " 分钟前";
-          } else if (seconds > 0) {
-            lastUpdate[i].innerHTML = seconds + " 秒前";
-          }
-          // 增加月前和年前的定义
-          var months = Math.floor(days / 30);
-          var years = Math.floor(days / 365);
-          if (months > 0) {
-            lastUpdate[i].innerHTML = months + " 月前";
-          } else if (years > 0) {
-            lastUpdate[i].innerHTML = years + " 年前";
-          }
+      // 过滤掉重复的tag
+      const tags = document.querySelectorAll(".mk-tab-tag");
+      const tagList = [];
+      tags.forEach((tag) => {
+        if (tagList.indexOf(tag.innerHTML) === -1) {
+          tagList.push(tag.innerHTML);
+        } else {
+          tag.style.display = "none";
         }
-</script> 
+      });
 
-<!-- 分析上面的所有的代码,修改为使用 fetch 函数来请求获取书签数据.在下面整理修改后的完整代码. -->
+      // 显示所有书签
+      function showAll() {
+        const bookmarks = document.querySelectorAll(".mk-raindrop-bookmark");
+        bookmarks.forEach((bookmark) => (bookmark.style.display = "block"));
+
+        const tags = document.querySelectorAll(".mk-tab-tag");
+        tags.forEach((tag) => tag.classList.remove("mk-tab-tag-active"));
+
+        document
+          .querySelector(".mk-tab-tag")
+          .classList.add("mk-tab-tag-active");
+      }
+
+      // 根据tag显示书签
+      function showTag(tag) {
+        const bookmarks = document.querySelectorAll(".mk-raindrop-bookmark");
+        bookmarks.forEach((bookmark) => {
+          const tags = bookmark.querySelectorAll(".mk-tag");
+          if (tags.length > 0) {
+            let found = false;
+            tags.forEach((tagElement) => {
+              if (tagElement.innerHTML === tag) {
+                found = true;
+              }
+            });
+
+            if (found) {
+              bookmark.style.display = "block";
+            } else {
+              bookmark.style.display = "none";
+            }
+          } else {
+            bookmark.style.display = "none";
+          }
+        });
+
+        const tags = document.querySelectorAll(".mk-tab-tag");
+        tags.forEach((tagElement) => {
+          if (tagElement.innerHTML === tag) {
+            tagElement.classList.add("mk-tab-tag-active");
+          } else {
+            tagElement.classList.remove("mk-tab-tag-active");
+          }
+        });
+      }
+
+      // 标记important的书签
+      const bookmarks = document.querySelectorAll(".mk-raindrop-bookmark");
+      bookmarks.forEach((bookmark) => {
+        const important = bookmark.querySelector(".mk-important-description");
+        if (important) {
+          bookmark.classList.add("important");
+        }
+      });
+
+      // 格式化lastUpdate的时间
+      const lastUpdate = document.querySelectorAll(".mk-update-time");
+      lastUpdate.forEach((time) => {
+        const date = new Date(time.innerHTML);
+        const now = new Date();
+        const diff = now.getTime() - date.getTime();
+        const days = Math.floor(diff / (24 * 3600 * 1000));
+        const leave1 = diff % (24 * 3600 * 1000);
+        const hours = Math.floor(leave1 / (3600 * 1000));
+        const leave2 = leave1 % (3600 * 1000);
+        const minutes = Math.floor(leave2 / (60 * 1000));
+        const leave3 = leave2 % (60 * 1000);
+        const seconds = Math.round(leave3 / 1000);
+        let output = "";
+
+        if (days > 0) {
+          output = `${days} 天前`;
+        } else if (hours > 0) {
+          output = `${hours} 小时前`;
+        } else if (minutes > 0) {
+          output = `${minutes} 分钟前`;
+        } else if (seconds > 0) {
+          output = `${seconds} 秒前`;
+        }
+
+        const months = Math.floor(days / 30);
+        const years = Math.floor(days / 365);
+        if (months > 0) {
+          output = `${months} 月前`;
+        } else if (years > 0) {
+          output = `${years} 年前`;
+        }
+
+        time.innerHTML = output;
+      });
+
+      // 初始化标签第一个为active状态
+      document
+        .querySelector(".mk-tab-tag:first-child")
+        .classList.add("mk-tab-tag-active");
+    });
+</script>
