@@ -1,7 +1,7 @@
 {{ $token := "d7e078a0-3f49-4419-981a-8695c399b0d8" }}
 {{ $collection := "34199304" }}
 {{ $apiUrl := printf "https://api.raindrop.io/rest/v1/raindrops/%s" $collection }}
-{{ $json := getJSON $apiUrl "?access_token=" $token "&perpage=100&sort=-created" }}
+{{ $json := getJSON $apiUrl "?access_token=" $token "&perpage=50&sort=-created" }}
 
 <script
   type="text/javascript"
@@ -275,6 +275,7 @@ box-shadow: none;
   document.querySelector('.mk-tab-tag:first-child').classList.add('mk-tab-tag-active');
   
 </script>
+
 
 
 <div class="mk-raindrop-bookmarks">
