@@ -1,16 +1,14 @@
 {
-  "name": "wananaiko.github.io",
+  "name": "your-project-name",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "proxy.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node proxy.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
-    "@notionhq/client": "^2.2.3",
-    "axios": "^0.21.1"
+    "axios": "^0.26.1",
+    "cors": "^2.8.5",
+    "express": "^4.17.3"
   }
 }
