@@ -1,5 +1,14 @@
 {{ define "main" }} {{ $goods := getJSON "data/goods.json" }}
 <style>
+  .main.post {
+    position: relative !important;
+    min-height: calc(
+      100vh - var(--header-height) - var(--footer-height)
+    ) !important;
+    max-width: calc(var(--main-width) + var(--gap) * 2) !important;
+    margin: auto !important;
+  }
+
   .goods-bankuai {
     display: inline-block;
     vertical-align: top;
@@ -159,7 +168,7 @@
 
   /* 页面宽度大于900样式 */
 
-  @media (min-width: 900px) { 
+  @media (min-width: 900px) {
     .goods-quanju {
       font-size: 0;
       width: 106%;

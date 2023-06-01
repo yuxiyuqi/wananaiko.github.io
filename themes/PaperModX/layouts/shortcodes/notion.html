@@ -1,0 +1,67 @@
+{{ $data := getJSON "https://notion-api.splitbee.io/v1/table/687f460a214943ecb7260dc48ecb8818" }}
+
+<style>
+  .notion-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.notion-cards-row {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  text-decoration: none;
+  color: inherit;
+}
+
+.notion-card {
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.notion-card-tweet {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.notion-card-author {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.notion-card-tags {
+  font-size: 14px;
+  color: #888;
+}
+
+a.notion-cards-row {
+    transition: var(--link-transition);
+    padding-bottom: 2px;
+    box-shadow: none;
+}
+
+a.notion-cards-row:hover {
+    transition: var(--link-transition);
+    padding-bottom: 2px;
+    box-shadow: none;
+}
+
+</style>
+
+<div class="notion-cards">
+  {{ range $index, $item := $data }}
+    <a href="{{ index $item "Tweet Link" }}" class="notion-cards-row" target="_blank" rel="noopener noreferrer">
+      <div class="notion-card">
+        <div class="notion-card-tweet">{{ $item.Tweet }}</div>
+        <div class="notion-card-author">{{ $item.Author }}</div>
+        <div class="notion-card-tags">{{ $item.Tags }}</div>
+      </div>
+    </a>
+  {{ end }}
+</div>
