@@ -63,7 +63,7 @@ img {
     width: 100%;
     white-space: pre-wrap;
     overflow-wrap: break-word;
-    font-size: 1rem;
+    font-size: 16px;
     line-height: 1.8rem;
 }
 .memo-content-text a.link {
