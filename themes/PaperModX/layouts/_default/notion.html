@@ -1,0 +1,44 @@
+{{ define "main" }}
+<div id="notion-content"></div>
+<script>
+  const databaseID = "{{ .Params.databaseID }}";
+  fetchNotionContent(databaseID);
+
+  async function fetchNotionContent(databaseID) {
+    const response = await fetch(`/notion-proxy/${databaseID}`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+
+    if (response.ok) {
+      const data = await response.json();
+      const results = data.results;
+      displayNotionContent(results);
+    } else {
+      console.error("Error fetching Notion content:", response.status);
+    }
+  }
+
+  function displayNotionContent(results) {
+    const container = document.getElementById("notion-content");
+    results.forEach((result) => {
+      const tweet = result.properties.Tweet.title[0]?.text.content || "";
+      const author = result.properties.Author.rich_text[0]?.text.content || "";
+      const link = result.properties.Link.url || "";
+      const tags = result.properties.Tags.multi_select
+        .map((tag) => tag.name)
+        .join(", ");
+
+      container.innerHTML += `
+            <div>
+               <h2>${tweet}</h2>
+               <p>${author}</p>
+               <a href="${link}" target="_blank">${link}</a>
+               <p>Tags: ${tags}</p>
+            </div>`;
+    });
+  }
+</script>
+{{ end }}
