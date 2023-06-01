@@ -1,5 +1,6 @@
 {{ $data := getJSON "https://notion-api.splitbee.io/v1/table/687f460a214943ecb7260dc48ecb8818" }}
 
+
 <style>
   .notion-cards {
   display: flex;
@@ -24,20 +25,35 @@
 }
 
 .notion-card-tweet {
-  font-size: 16px;
-  font-weight: bold;
-  margin-bottom: 10px;
+    height: auto;
+    width: 100%;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+    font-size: 16px;
+    line-height: 1.8rem;
 }
 
 .notion-card-author {
-  font-size: 14px;
-  font-weight: bold;
-  margin-bottom: 10px;
+  font-size: 0.875rem;
+  color: var(--tertiary);
 }
 
 .notion-card-tags {
   font-size: 14px;
   color: #888;
+}
+
+.page-icon {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.page-icon img {
+  max-width: 100%;
+  max-height: 100%;
 }
 
 a.notion-cards-row {
@@ -54,14 +70,38 @@ a.notion-cards-row:hover {
 
 </style>
 
+
 <div class="notion-cards">
   {{ range $index, $item := $data }}
     <a href="{{ index $item "Tweet Link" }}" class="notion-cards-row" target="_blank" rel="noopener noreferrer">
       <div class="notion-card">
         <div class="notion-card-tweet">{{ $item.Tweet }}</div>
-        <div class="notion-card-author">{{ $item.Author }}</div>
+        <div class="notion-cards-row2">
+          <div class="notion-card-author">{{ $item.Author }}</div>
+          <div class="page-icon">
+            {{ $id := $item.id }}
+            {{ $iconURL := printf "https://notion-api.splitbee.io/v1/page/%s" $id }}
+            {{ $pageData := getJSON $iconURL }}
+            {{ $icon := $pageData.page_icon }}
+            {{ if and $icon (strings.HasPrefix $icon "http") }}
+              <img src="{{ $icon }}" alt="Page Icon">
+            {{ else }}
+              {{ $icon }}
+            {{ end }}
+          </div>
+        </div>
         <div class="notion-card-tags">{{ $item.Tags }}</div>
       </div>
     </a>
   {{ end }}
 </div>
+
+<script>
+  // 将上面的$id添加到链接 https://notion-api.splitbee.io/v1/page/最后面,作为下一个getJSON的地址,并使用getJSON获取数据.
+
+
+
+  // 从下一个链接中的JSON数据的"source"字段里找到png或jpg格式的图片地址,作为img图片的地址,将图片插入到<div class="page-icon"> </div>内部.
+
+
+</script>
