@@ -1,7 +1,52 @@
 {{ $token := "d7e078a0-3f49-4419-981a-8695c399b0d8" }}
 {{ $collection := "34199304" }}
 {{ $apiUrl := printf "https://api.raindrop.io/rest/v1/raindrops/%s" $collection }}
-{{ $json := getJSON $apiUrl "?access_token=" $token "&perpage=100&sort=-created" }}
+{{ $json := getJSON $apiUrl "?access_token=" $token "&perpage=50&sort=-created" }}
+
+<script>
+  $(function() {
+    var url = "{{ $apiUrl }}";
+    var page = 1;
+    var loading = false;
+
+    function loadRaindrops() {
+      if (!loading) {
+        loading = true;
+        $.getJSON(url + "&page=" + page, function(data) {
+          var raindrops = data.items;
+          if (raindrops.length > 0) {
+            $.each(raindrops, function(index, raindrop) {
+              var html = '<div class="mk-raindrop-bookmark" onclick="window.open(\'' + raindrop.link + '\')">';
+              html += '<div class="mk-raindrop-title">' + raindrop.title + '</div>';
+              html += '<div class="mk-raindrop-excerpt">' + raindrop.excerpt + '</div>';
+              html += '<div class="mk-raindrop-meta">';
+              html += '<div>' + dateFormat("2006-01-02", raindrop.created_at) + '</div>';
+              html += '<div>' + raindrop.domain + '</div>';
+              html += '</div>';
+              html += '<div class="mk-raindrop-tags">';
+              $.each(raindrop.tags, function(index, tag) {
+                html += '<a href="' + $apiUrl + '/tags/' + tag + '" class="mk-raindrop-tag">' + tag + '</a>';
+              });
+              html += '</div>';
+              html += '</div>';
+              $('.mk-raindrop-bookmarks').append(html);
+            });
+            page++;
+            loading = false;
+          }
+        });
+      }
+    }
+
+    $(window).scroll(function() {
+      if ($(window).scrollTop() + $(window).height() > $(document).height() - 100) {
+        loadRaindrops();
+      }
+    });
+
+    loadRaindrops();
+  });
+</script>
 
 <script
   type="text/javascript"
@@ -277,8 +322,6 @@ box-shadow: none;
   
 </script>
 
-
-
 <div class="mk-raindrop-bookmarks">
   
   {{ range $i, $item := index $json "items" }} {{ $domain := index (findRE
@@ -378,28 +421,3 @@ box-shadow: none;
           }
         }
 </script>
-
-<script>
-  let page = 1;
-  let loading = false;
-
-  window.addEventListener('scroll', () => {
-    const scrollHeight = document.documentElement.scrollHeight;
-    const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-    const clientHeight = document.documentElement.clientHeight;
-
-    if (scrollTop + clientHeight >= scrollHeight - 5 && !loading) {
-      loading = true;
-      page++;
-      const apiUrl = `https://api.raindrop.io/rest/v1/raindrops/34199304?access_token=d7e078a0-3f49-4419-981a-8695c399b0d8&perpage=50&page=${page}&sort=-created`;
-      fetch(apiUrl)
-        .then(response => response.json())
-        .then(data => {
-          loading = false;
-          const bookmarks = document.querySelector('.mk-raindrop-bookmarks');
-          data.items.forEach(item => {
-            const domain = item.link.match(/\/\/([^/]+)/);
-            const title = item.title || item.excerpt || item.link;
-            const excerpt = item.excerpt || '';
-            const tags = item.tags.map(tag => `<div class="mk-tag">${tag}</div>`).join(''); const bookmarkHtml = <div class="mk-raindrop-bookmark"> <a href="${item.link}" target="_blank" rel="noopener noreferrer"> <div class="mk-raindrop-image" style="background-image: url(${item.cover});"></div> <div class="mk-raindrop-info"> <div class="mk-raindrop-title">${title}</div> <div class="mk-raindrop-excerpt">${excerpt}</div> <div class="mk-raindrop-domain">${domain[1]}</div> <div class="mk-raindrop-tags">${tags}</div> </div> </a> </div>; bookmarks.insertAdjacentHTML('beforeend', bookmarkHtml); }); }) .catch(error => { console.error(error); loading = false; }); } }); 
-  </script>
