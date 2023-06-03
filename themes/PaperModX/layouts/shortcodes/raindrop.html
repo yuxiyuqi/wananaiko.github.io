@@ -119,7 +119,8 @@
     overflow: hidden;
 }
 
-  .mk-raindrop-tags {
+  
+ {
     display: flex;
     flex-wrap: wrap;
     padding: 0;
@@ -330,13 +331,10 @@ mark{
       <div class="mk-excerpt">{{ . }}</div>
       {{ end }}
 
-      <!-- 显示Raindrop API中全部的highlight,并将数据放在<mark></mark>中. -->
-      {{ with $item.highlight }}
-        {{ range . }}
-        <mark>{{ . }}</mark>
-        {{ end }}
-      {{ end }}
-
+      <!-- 显示Raindrop API中全部的highlights,并将数据放在<mark></mark>中. -->
+      {{ range $highlight := $item.highlights }}
+        <mark>{{ $highlight.text }}</mark>
+       {{ end }}
 
       {{ with $item.tags }}
       <div class="mk-raindrop-tags">
