@@ -251,11 +251,14 @@
   </script>
 </section>
 
-<script type="text/javascript" src="/memos/assets/js/marked.min.js"></script>
-
 <script type="text/javascript" src="/js/moment.min.js"></script>
 <script type="text/javascript" src="/js/moment.twitter.js"></script>
-<!-- 使用moment.mini.js显示时间 -->
+
+<script type="text/javascript" src="/memos/assets/js/marked.min.js"></script>
+<!--<script-->
+<!--  type="text/javascript"-->
+<!--  src="https://fastly.jsdelivr.net/gh/Tokinx/Lately/lately.min.js"-->
+<!--&gt;</script>-->
 
 <script type="text/javascript" src="/memos/assets/js/bibi.js"></script>
 <link
@@ -281,6 +284,22 @@
 
 <script>
   window.ViewImage && ViewImage.init(".container img");
+</script>
+
+<script>
+  //格式化<span class="date">里的时间。
+    function formatDate(date) {
+        var year = date.getFullYear();
+        var month = date.getMonth() + 1;
+        var day = date.getDate();
+        return year + "-" + month + "-" + day;
+    }
+    var date = new Date();
+    var dateStr = formatDate(date);
+    document.getElementById("date").innerHTML = dateStr;
+    // 修改为使用moment.js显示时间
+    var date = moment().format("YYYY-MM-DD");
+    document.getElementById("date").innerHTML = date;
 </script>
 
 {{- end }}{{/* end main */}}
