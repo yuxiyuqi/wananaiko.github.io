@@ -260,16 +260,13 @@
   src="https://fastly.jsdelivr.net/gh/Tokinx/Lately/lately.min.js"
 ></script>
 
-<!-- 将lately.js替换为使用moment.min.js来显示时间. -->
+<!-- 将<span class="date"> </span>的时间,修改为使用moment.min.js来显示时间. -->
 <script type="text/javascript">
-  function lately() {
-    var time = document.getElementsByClassName("lately");
-    for (var i = 0; i < time.length; i++) {
-      var t = time[i].getAttribute("datetime");
-      time[i].innerHTML = moment(t).twitter();
-    }
+  var date = document.querySelectorAll(".date");
+  for (var i = 0; i < date.length; i++) {
+    var time = date[i].getAttribute("datetime");
+    date[i].innerHTML = moment(time).twitter();
   }
-  lately();
 </script>
 
 <script type="text/javascript" src="/memos/assets/js/bibi.js"></script>
