@@ -310,8 +310,13 @@ box-shadow: none;
       </div>
       {{ with $item.excerpt }}
       <div class="mk-excerpt">{{ . }}</div>
-      {{ end }} {{ with $item.tags }}
+      {{ end }}
+
+      {{ range $highlight := $item.highlights }}
+      <div class="mk-highlight">{{ $highlight.text }}</div>
+      {{ end }}
       
+      {{ with $item.tags }}
       <div class="mk-raindrop-tags">
         {{ range . }}
         <div class="mk-tag">{{ . }}</div>
