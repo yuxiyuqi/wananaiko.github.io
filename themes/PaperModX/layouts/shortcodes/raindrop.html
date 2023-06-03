@@ -3,10 +3,6 @@
 {{ $apiUrl := printf "https://api.raindrop.io/rest/v1/raindrops/%s" $collection }}
 {{ $json := getJSON $apiUrl "?access_token=" $token "&perpage=50&sort=-created" }}
 
-<script
-  type="text/javascript"
-  src="https://fastly.jsdelivr.net/gh/Tokinx/Lately/lately.min.js"
-></script>
 
 <link rel="stylesheet" href="https://unpkg.com/pyloncss@latest/css/pylon.css"/>
 
@@ -415,6 +411,7 @@ mark{
             lastUpdate[i].innerHTML = months + " 月前";
           } else if (years > 0) {
             lastUpdate[i].innerHTML = years + " 年前";
-          }
+          }          
         }
 </script>
+    

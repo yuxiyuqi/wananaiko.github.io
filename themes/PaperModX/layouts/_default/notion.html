@@ -1,3 +1,4 @@
+{{ define "main" }} 
 {{ $data := getJSON "https://notion-api.splitbee.io/v1/table/687f460a214943ecb7260dc48ecb8818" }}
 
 
@@ -105,3 +106,5 @@ a.notion-cards-row:hover {
 
 
 </script>
+
+{{ end }}
