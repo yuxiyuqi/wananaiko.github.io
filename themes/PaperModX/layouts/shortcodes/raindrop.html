@@ -330,13 +330,13 @@ mark{
       <div class="mk-excerpt">{{ . }}</div>
       {{ end }}
 
-      {{- $highlights := slice -}}
-{{- range $highlight := $item.highlights -}}
-    {{- $highlights = append $highlights $highlight.text -}}
-{{- end -}}
-{{- range $index, $highlight := $highlights -}}
-    <mark>{{ $highlight }}</mark>{{ if ne (add $index 1) (len $highlights) }}, {{ end }}
-{{- end -}}
+      <!-- 显示Raindrop API中的highlight,如果有的话,显示在mk-excerpt下面;如果有多条的话,显示全部. -->
+      {{ with $item.highlight }}
+        {{ range . }}
+          <mark>{{ .text }}</mark>
+        {{ end }}
+      {{ end }}
+
       
       {{ with $item.tags }}
       <div class="mk-raindrop-tags">
