@@ -330,14 +330,15 @@ mark{
       <div class="mk-excerpt">{{ . }}</div>
       {{ end }}
 
-      <!-- 显示Raindrop API中的highlight,如果有的话,显示在mk-excerpt下面;如果有多条的话,显示全部. -->
+      <!-- 显示Raindrop API中全部的highlight,并将数据放在<mark></mark>中. -->
       {{ with $item.highlight }}
+      <div class="mk-highlight">
         {{ range . }}
-          <mark>{{ .text }}</mark>
+        <mark>{{ . }}</mark>
         {{ end }}
+      </div>
       {{ end }}
 
-      
       {{ with $item.tags }}
       <div class="mk-raindrop-tags">
         {{ range . }}
