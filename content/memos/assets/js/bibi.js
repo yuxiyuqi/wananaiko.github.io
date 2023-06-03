@@ -298,7 +298,7 @@ function updateHTMl(e) {
       "</div>" +
       "</div>" +
       '<div class="memo-header"><span>Aiko&nbsp;发布于&nbsp;</span><span class="date">' +
-      Lately.format(1e3 * e[a].updatedTs) +
+      moment.unix(e[a].updatedTs).fromNow() +
       "</span></div>" +
       "</div>";
   }
