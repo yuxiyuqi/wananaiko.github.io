@@ -298,14 +298,15 @@ function updateHTMl(e) {
       "</div>" +
       "</div>" +
       '<div class="memo-header"><span>Aiko&nbsp;发布于&nbsp;</span><span class="date">' +
-      data[i].id +
+      format(1e3 * e[a].updatedTs) +
       "</span></div>" +
       "</div>";
   }
 
-  // 根据文档https://momentjs.com/,使用moment.mini.js显示相对时间.
-  // 生成时间
-  var time = moment(data[i].id).twitter();
+  // 根据文档https://momentjs.com/,使用moment.mini.js显示相对时间.不使用lately.js显示时间.
+  function format(e) {
+    return moment(e).fromNow();
+  }
 
   // 生成内容
   bbDom.insertAdjacentHTML(
