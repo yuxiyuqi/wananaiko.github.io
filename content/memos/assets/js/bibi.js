@@ -305,7 +305,7 @@ function updateHTMl(e) {
 
   // 根据文档https://momentjs.com/,使用moment.mini.js显示相对时间.
   // 生成时间
-  var time = moment(data[i].id).fromNow();
+  var time = moment(data[i].id).twitter();
 
   // 生成内容
   bbDom.insertAdjacentHTML(
