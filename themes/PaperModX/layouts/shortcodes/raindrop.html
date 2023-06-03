@@ -331,12 +331,12 @@ mark{
       {{ end }}
 
       <!-- 显示Raindrop API中全部的highlight,并将数据放在<mark></mark>中. -->
-      {{ with $item.highlights }}
+      {{ with $item.highlight }}
         {{ range . }}
         <mark>{{ . }}</mark>
         {{ end }}
       {{ end }}
-      
+
 
       {{ with $item.tags }}
       <div class="mk-raindrop-tags">
