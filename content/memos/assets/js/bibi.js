@@ -298,10 +298,14 @@ function updateHTMl(e) {
       "</div>" +
       "</div>" +
       '<div class="memo-header"><span>Aiko&nbsp;发布于&nbsp;</span><span class="date">' +
-      Lately.format(1e3 * e[a].updatedTs) +
+      data[i].id +
       "</span></div>" +
       "</div>";
   }
+
+  // 根据文档https://momentjs.com/,使用moment.mini.js显示相对时间.
+  // 生成时间
+  var time = moment(data[i].id).fromNow();
 
   // 生成内容
   bbDom.insertAdjacentHTML(
@@ -330,6 +334,7 @@ bbDom &&
           : getNextList();
     }
   ));
+
 // 自动加载更多的内容
 window.addEventListener("scroll", function () {
   var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
@@ -342,12 +347,3 @@ window.addEventListener("scroll", function () {
     btn && btn.click();
   }
 });
-
-// 使用moment.mini.js显示相对时间.
-moment.locale("zh-cn");
-var memos = document.querySelectorAll(".memo-item");
-for (var i = 0; i < memos.length; i++) {
-  var memo = memos[i];
-  var time = memo.querySelector(".memo-time");
-  time.innerHTML = moment(time.innerHTML).twitter();
-}
