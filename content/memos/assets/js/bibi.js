@@ -330,7 +330,6 @@ bbDom &&
           : getNextList();
     }
   ));
-
 // 自动加载更多的内容
 window.addEventListener("scroll", function () {
   var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
@@ -343,11 +342,3 @@ window.addEventListener("scroll", function () {
     btn && btn.click();
   }
 });
-
-// 将lately.js替换为使用moment.mini.js来显示时间.
-var Lately = {
-  format: function (e) {
-    var t = moment(e);
-    return t.fromNow();
-  },
-};

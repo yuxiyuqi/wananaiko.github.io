@@ -253,12 +253,22 @@
 
 <script type="text/javascript" src="/js/moment.min.js"></script>
 <script type="text/javascript" src="/js/moment.twitter.js"></script>
+<!-- 使用moment.mini.js显示相对时间 -->
+<script>
+  moment.locale("zh-cn");
+  var memos = document.querySelectorAll(".memo-item");
+  for (var i = 0; i < memos.length; i++) {
+    var memo = memos[i];
+    var time = memo.querySelector(".memo-time");
+    time.innerHTML = moment(time.innerHTML).twitter();
+  }
+</script>
 
 <script type="text/javascript" src="/memos/assets/js/marked.min.js"></script>
-<!-- <script
+<script
   type="text/javascript"
   src="https://fastly.jsdelivr.net/gh/Tokinx/Lately/lately.min.js"
-></script> -->
+></script>
 <script type="text/javascript" src="/memos/assets/js/bibi.js"></script>
 <link
   rel="stylesheet"
