@@ -333,9 +333,10 @@ mark{
 
       <!-- 显示Raindrop API中全部的highlights,并将数据放在<mark></mark>中. -->
       {{ range $highlight := $item.highlights }}
+      <div class="mk-highlights">
         <mark>{{ $highlight.text }}</mark>
        {{ end }}
-
+      </div>
       {{ with $item.tags }}
       <div class="mk-raindrop-tags">
         {{ range . }}
