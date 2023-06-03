@@ -246,16 +246,20 @@ box-shadow: none;
 }
 
 mark{
-    all:unset;
-    margin: 18px;
-    border-radius: 0.8em 0.3em;
+    all: unset;
+    margin: 0 18px 8px 18px;
+    border-radius: var(--radius);
     background: 0 0;
-    background-image: linear-gradient( to right,rgba(255,225,0,.1),rgba(255,225,0,.6) 4%,rgba(255,225,0,.3) );
+    background-image: linear-gradient( to right,rgba(255,225,0,.3),rgba(255,225,0,.2) 4%,rgba(255,225,0,.1) );
     -webkit-box-decoration-break: clone;
     box-decoration-break: clone;
     padding: 0 0.5rem;
     font-size: 14px;
     line-height: 1.6 !important;
+    display: grid;
+    grid-auto-flow: row;
+    gap: 12px;
+    padding: 8px 12px;
 }
 
 .dark mark{
