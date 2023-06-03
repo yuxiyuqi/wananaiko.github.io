@@ -298,14 +298,9 @@ function updateHTMl(e) {
       "</div>" +
       "</div>" +
       '<div class="memo-header"><span>Aiko&nbsp;发布于&nbsp;</span><span class="date">' +
-      format(1e3 * e[a].updatedTs) +
+      Lately.format(1e3 * e[a].updatedTs) +
       "</span></div>" +
       "</div>";
-  }
-
-  // 根据文档https://momentjs.com/,使用moment.mini.js显示相对时间.不使用lately.js显示时间.
-  function format(e) {
-    return moment(e).fromNow();
   }
 
   // 生成内容
@@ -348,3 +343,11 @@ window.addEventListener("scroll", function () {
     btn && btn.click();
   }
 });
+
+// 将lately.js替换为使用moment.mini.js来显示时间.
+var Lately = {
+  format: function (e) {
+    var t = moment(e);
+    return t.fromNow();
+  },
+};
