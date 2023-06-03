@@ -313,7 +313,7 @@ box-shadow: none;
       {{ end }}
 
       {{ range $highlight := $item.highlights }}
-      <div class="mk-highlight">{{ $highlight.text }}</div>
+      <mark style="margin-left:26px;">{{ $highlight.text }}</mark>
       {{ end }}
       
       {{ with $item.tags }}
