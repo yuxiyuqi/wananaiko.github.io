@@ -298,7 +298,9 @@ function updateHTMl(e) {
       "</div>" +
       "</div>" +
       '<div class="memo-header"><span>Aiko&nbsp;发布于&nbsp;</span><span class="date">' +
-      moment.unix(e[a].updatedTs).fromNow() +
+      // Lately.format(1e3 * e[a].updatedTs) +
+      // 解释上面一行代码的意思,并修改为使用moment.js来显示时间
+      new Date(1e3 * e[a].updatedTs).toLocaleString() +
       "</span></div>" +
       "</div>";
   }
@@ -342,3 +344,6 @@ window.addEventListener("scroll", function () {
     btn && btn.click();
   }
 });
+
+// 使用moment.js来显示时间
+moment.locale("zh-cn");
