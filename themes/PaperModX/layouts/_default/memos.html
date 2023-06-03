@@ -317,15 +317,4 @@
     window.ViewImage && ViewImage.init(".container img");
 </script>
 
-<script>
-    //格式化<span class="date">里的时间，并使用moment.js显示时间。
-    var date = document.querySelectorAll(".date");
-    for (var i = 0; i < date.length; i++) {
-        var dateValue = date[i].innerHTML;
-        var dateMoment = moment(dateValue).twitter();
-        date[i].innerHTML = dateMoment;
-    }
-
-</script>
-
 {{- end }}{{/* end main */}}

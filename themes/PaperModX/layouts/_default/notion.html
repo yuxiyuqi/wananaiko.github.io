@@ -1,6 +1,6 @@
 {{ define "main" }} 
 {{ $data := getJSON "https://notion-api.splitbee.io/v1/table/687f460a214943ecb7260dc48ecb8818" }}
-
+<!-- 687f460a214943ecb7260dc48ecb8818 是你的Notion表格的ID,可以在表格的分享链接中找到. -->
 
 <style>
   .notion-cards {
@@ -74,7 +74,7 @@ a.notion-cards-row:hover {
 
 <div class="notion-cards">
   {{ range $index, $item := $data }}
-    <a href="{{ index $item "Tweet Link" }}" class="notion-cards-row" target="_blank" rel="noopener noreferrer">
+    <a href="{{ index $item "Tweet Link" }}" class="notion-cards-row" target="_blank" rel="no noreferrer">
       <div class="notion-card">
         <div class="notion-card-tweet">{{ $item.Tweet }}</div>
         <div class="notion-cards-row2">
@@ -99,8 +99,6 @@ a.notion-cards-row:hover {
 
 <script>
   // 将上面的$id添加到链接 https://notion-api.splitbee.io/v1/page/最后面,作为下一个getJSON的地址,并使用getJSON获取数据.
-
-
 
   // 从下一个链接中的JSON数据的"source"字段里找到png或jpg格式的图片地址,作为img图片的地址,将图片插入到<div class="page-icon"> </div>内部.
 
