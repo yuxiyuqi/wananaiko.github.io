@@ -342,11 +342,3 @@ window.addEventListener("scroll", function () {
     btn && btn.click();
   }
 });
-
-// 将lately.js替换为使用moment.min.js来显示时间.
-var Lately = {
-  format: function (e) {
-    var t = moment(e);
-    return t.fromNow();
-  },
-};
