@@ -298,7 +298,8 @@ function updateHTMl(e) {
       "</div>" +
       "</div>" +
       '<div class="memo-header"><span>Aiko&nbsp;发布于&nbsp;</span><span class="date">' +
-      Lately.format(1e3 * e[a].updatedTs) +
+        moment(1e3 * e[a].updatedTs).format('YYYY-MM-DD HH:mm:ss') +
+
       "</span></div>" +
       "</div>";
   }
@@ -342,3 +343,7 @@ window.addEventListener("scroll", function () {
     btn && btn.click();
   }
 });
+
+// 如何修改上面的代码，将lately.js修改为使用moment.js显示时间。
+// 1. 将lately.js中的Lately.format(1e3 * e[a].updatedTs)修改为moment(1e3 * e[a].updatedTs).format('YYYY-MM-DD HH:mm:ss')
+// 2. 在index.html中引入moment.js
