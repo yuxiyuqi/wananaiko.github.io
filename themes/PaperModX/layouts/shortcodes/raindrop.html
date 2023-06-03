@@ -330,9 +330,13 @@ mark{
       <div class="mk-excerpt">{{ . }}</div>
       {{ end }}
 
-      {{ range $highlight := $item.highlights }}
-      <mark>{{ $highlight.text }}</mark>
-      {{ end }}
+      {{- $highlights := slice -}}
+{{- range $highlight := $item.highlights -}}
+    {{- $highlights = append $highlights $highlight.text -}}
+{{- end -}}
+{{- range $index, $highlight := $highlights -}}
+    <mark>{{ $highlight }}</mark>{{ if ne (add $index 1) (len $highlights) }}, {{ end }}
+{{- end -}}
       
       {{ with $item.tags }}
       <div class="mk-raindrop-tags">
