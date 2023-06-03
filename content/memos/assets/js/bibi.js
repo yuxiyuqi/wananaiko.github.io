@@ -342,3 +342,12 @@ window.addEventListener("scroll", function () {
     btn && btn.click();
   }
 });
+
+// 使用moment.mini.js显示相对时间.
+moment.locale("zh-cn");
+var memos = document.querySelectorAll(".memo-item");
+for (var i = 0; i < memos.length; i++) {
+  var memo = memos[i];
+  var time = memo.querySelector(".memo-time");
+  time.innerHTML = moment(time.innerHTML).twitter();
+}
