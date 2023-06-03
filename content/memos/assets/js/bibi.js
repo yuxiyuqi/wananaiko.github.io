@@ -342,37 +342,3 @@ window.addEventListener("scroll", function () {
     btn && btn.click();
   }
 });
-
-// 引入moment.js库
-import moment from "moment";
-
-// 将时间戳转换为指定格式的字符串
-function formatTime(timestamp) {
-  return moment(timestamp * 1000).format("YYYY-MM-DD HH:mm:ss");
-}
-
-// 渲染最近更新的内容
-function renderLately(data) {
-  const latelyList = document.querySelector("#lately-list");
-  latelyList.innerHTML = "";
-  for (let i = 0; i < data.length; i++) {
-    const item = document.createElement("div");
-    item.classList.add("lately-item");
-    item.innerHTML = `
-      <div class="lately-title">${data[i].title}</div>
-      <div class="lately-time">${formatTime(data[i].updatedTs)}</div>
-    `;
-    latelyList.appendChild(item);
-  }
-}
-
-// 获取最近更新的内容并渲染到页面
-function loadLately() {
-  fetch("https://example.com/api/lately")
-    .then((response) => response.json())
-    .then((data) => renderLately(data));
-}
-
-// 点击按钮重新加载最近更新的内容
-const reloadBtn = document.querySelector("#reload-btn");
-reloadBtn.addEventListener("click", loadLately);
