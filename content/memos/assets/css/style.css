@@ -305,7 +305,7 @@ blockquote {
 .memos__id {
     font-size: 0.875rem;
     overflow-wrap: break-word;
-    min-width: 0px;
+    min-width: 0;
     box-sizing: border-box;
     color: var(--color-memos-id);
     display: inline;
@@ -424,47 +424,47 @@ blockquote {
 }
 
 .allstar10 {
-    background-position: 0px 0px;
+    background-position: 0 0;
 }
 
 .allstar9 {
-    background-position: 0px -15px;
+    background-position: 0 -15px;
 }
 
 .allstar8 {
-    background-position: 0px -30px;
+    background-position: 0 -30px;
 }
 
 .allstar7 {
-    background-position: 0px -45px;
+    background-position: 0 -45px;
 }
 
 .allstar6 {
-    background-position: 0px -60px;
+    background-position: 0 -60px;
 }
 
 .allstar5 {
-    background-position: 0px -75px;
+    background-position: 0 -75px;
 }
 
 .allstar4 {
-    background-position: 0px -90px;
+    background-position: 0 -90px;
 }
 
 .allstar3 {
-    background-position: 0px -105px;
+    background-position: 0 -105px;
 }
 
 .allstar2 {
-    background-position: 0px -120px;
+    background-position: 0 -120px;
 }
 
 .allstar1 {
-    background-position: 0px -135px;
+    background-position: 0 -135px;
 }
 
 .allstar0 {
-    background-position: 0px -150px;
+    background-position: 0 -150px;
 }
 
 .rating-average {
@@ -542,7 +542,7 @@ blockquote {
     }
 
     ul  {
-        padding-inline-start: 0px; !important;
+        padding-inline-start: 0; !important;
     }
 }
 
