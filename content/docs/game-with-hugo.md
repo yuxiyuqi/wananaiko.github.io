@@ -36,10 +36,10 @@ Bookmark 页面基于 Raindrop.io 官方的 API[^2]，调用了最近收藏的�
 优化了链接的可读性，取消了原来 hover 时的主题色。Bookmark 页面给“最喜欢的”书签增加了很赞标识。
 {{< /timeline >}}
 {{< timeline time="2022-05-23" title="增加 todolist 短代码" tags="shortcode" >}}
-使用 timeline来简单记录本站的折腾的过程。
+使用 timeline 来简单记录本站的折腾的过程。
 {{< /timeline >}}
 {{< timeline time="2022-05-22" title="增加 timeline 短代码" tags="shortcode" >}}
-使用 timeline来简单记录本站的折腾的过程。
+使用 timeline 来简单记录本站的折腾的过程。
 {{< /timeline >}}
 {{< timeline time="2022-05-21" title="Gallery, Goods, Stacks, Bookmark 页面上线" >}}
 基于 shortcode 实现的页面，初步上线。
