@@ -98,9 +98,9 @@ a.notion-cards-row:hover {
 </div>
 
 <script>
-  // 将上面的$id添加到链接 https://notion-api.splitbee.io/v1/page/最后面,作为下一个getJSON的地址,并使用getJSON获取数据.
+  // 将上面的$id添加到链接 https://notion-api.splitbee.io/v1/page/最后面,作为下一个getJSON的地址,并使用getJSON获取数据,将数据存储到$pageData变量中.
 
-  // 从下一个链接中的JSON数据的"source"字段里找到png或jpg格式的图片地址,作为img图片的地址,将图片插入到<div class="page-icon"> </div>内部.
+  // 从$pageData中的"page_icon"字段找到图片地址,作为$pageData变量的值,将图片插入到<div class="page-icon"> </div>内部.
 
 
 </script>
