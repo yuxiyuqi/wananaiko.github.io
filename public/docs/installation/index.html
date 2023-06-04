@@ -15,8 +15,8 @@
 /> <meta name="description" content="Read Install and Update instructions here"> <meta name="author" content="Aditya Telange"> <link rel="canonical" href="https://wananaiko.com/docs/installation/">
 <link
   crossorigin="anonymous"
-  href="/assets/css/stylesheet.min.85823f8561497ac7e4b7df07b31bcfdc0958a992cad5441a82f0ecc395e4e158.css"
-  integrity="sha256-hYI/hWFJesfkt98HsxvP3AlYqZLK1UQagvDsw5Xk4Vg="
+  href="/assets/css/stylesheet.min.b2cffcea882efe2f377b93e2f4e282906eccb2b8c4e4833e48b2fdf84600e6d2.css"
+  integrity="sha256-ss/86ogu/i83e5Pi9OKCkG7MsrjE5IM&#43;SLL9&#43;EYA5tI="
   rel="preload stylesheet"
   as="style"
 /> <link rel="icon" href="https://images.wananaiko.com/favicon.ico"> <link rel="apple-touch-icon" href="https://wananaiko.com/apple-touch-icon.png"> <link rel="alternate" hreflang="en" href="https://wananaiko.com/docs/installation/" />
@@ -396,7 +396,53 @@ button#theme-toggle {
 >
   
     </div>
-  </header> 
+  </header> <div class="toc side left">
+    <details  open>
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#intro" aria-label="Intro">Intro</a></li>
+                <li>
+                    <a href="#guide" aria-label="Guide">Guide</a><ul>
+                        
+                <li>
+                    <a href="#method-1" aria-label="Method 1">Method 1</a></li>
+                <li>
+                    <a href="#method-2" aria-label="Method 2">Method 2</a></li>
+                <li>
+                    <a href="#method-3" aria-label="Method 3">Method 3</a></li>
+                <li>
+                    <a href="#finally-" aria-label="Finally &amp;hellip;">Finally &hellip;</a></li>
+                <li>
+                    <a href="#method-4" aria-label="Method 4">Method 4</a></li></ul>
+                </li>
+                <li>
+                    <a href="#quick-links" aria-label="Quick Links">Quick Links</a><ul>
+                        
+                <li>
+                    <a href="#papermod---featuresfeatures" aria-label="Papermod - Features"><a href="../features">Papermod - Features</a></a></li>
+                <li>
+                    <a href="#papermod---faqsfaq" aria-label="Papermod - FAQs"><a href="../faq">Papermod - FAQs</a></a></li>
+                <li>
+                    <a href="#papermod---variablesvariables" aria-label="Papermod - Variables"><a href="../variables">Papermod - Variables</a></a></li>
+                <li>
+                    <a href="#papermod---iconsicons" aria-label="Papermod - Icons"><a href="../icons">Papermod - Icons</a></a></li>
+                <li>
+                    <a href="#changeloghttpsgithubcomreorxhugo-papermodxreleases" aria-label="ChangeLog"><a href="https://github.com/reorx/hugo-PaperModX/releases" target="_blank" rel="noopener">ChangeLog</a></a></li></ul>
+                </li>
+                <li>
+                    <a href="#sample-configyml" aria-label="Sample config.yml">Sample <code>config.yml</code></a></li>
+                <li>
+                    <a href="#sample-pagemd" aria-label="Sample Page.md">Sample <code>Page.md</code></a>
+                </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
   <div class="post-content slide-enter-content"><h2 id="intro">Intro</h2>
 <ul>
 <li><strong>We&rsquo;ll be using <code>yml/yaml</code> format for all examples down below, I recommend using <code>yml</code> over <code>toml</code> as it is easier to read.</strong></li>
@@ -688,7 +734,7 @@ button#theme-toggle {
     .comment-title {
       font-size: 24px;
       font-weight: bold;
-      padding: 32px 6px 0 6px;
+      padding: 32px 6px 0px 6px;
     }
     .comment-description {
       font-size: 14px;
@@ -930,7 +976,7 @@ button#theme-toggle {
   
   
   (function() {
-    const enableTocScroll = '' == '1'
+    const enableTocScroll = '1' == '1'
     if (!enableTocScroll) {
       return
     }

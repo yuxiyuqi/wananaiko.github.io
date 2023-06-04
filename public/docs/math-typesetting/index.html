@@ -15,8 +15,8 @@
 /> <meta name="description" content="A brief guide to setup KaTeX"> <meta name="author" content="Hugo Authors"> <link rel="canonical" href="https://wananaiko.com/docs/math-typesetting/">
 <link
   crossorigin="anonymous"
-  href="/assets/css/stylesheet.min.85823f8561497ac7e4b7df07b31bcfdc0958a992cad5441a82f0ecc395e4e158.css"
-  integrity="sha256-hYI/hWFJesfkt98HsxvP3AlYqZLK1UQagvDsw5Xk4Vg="
+  href="/assets/css/stylesheet.min.b2cffcea882efe2f377b93e2f4e282906eccb2b8c4e4833e48b2fdf84600e6d2.css"
+  integrity="sha256-ss/86ogu/i83e5Pi9OKCkG7MsrjE5IM&#43;SLL9&#43;EYA5tI="
   rel="preload stylesheet"
   as="style"
 /> <link rel="icon" href="https://images.wananaiko.com/favicon.ico"> <link rel="apple-touch-icon" href="https://wananaiko.com/apple-touch-icon.png"> <link rel="alternate" hreflang="en" href="https://wananaiko.com/docs/math-typesetting/" />
@@ -418,7 +418,21 @@ button#theme-toggle {
 >
   
     </div>
-  </header> 
+  </header> <div class="toc side right">
+    <details  open>
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#examples" aria-label="Examples">Examples</a>
+                </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
   <div class="post-content slide-enter-content"><p>Mathematical notation in a Hugo project can be enabled by using third party JavaScript libraries.</p>
 <p>In this example we will be using <a href="https://katex.org/" target="_blank" rel="noopener">KaTeX</a></p>
 <ul>
@@ -483,7 +497,7 @@ $$</p>
     .comment-title {
       font-size: 24px;
       font-weight: bold;
-      padding: 32px 6px 0 6px;
+      padding: 32px 6px 0px 6px;
     }
     .comment-description {
       font-size: 14px;
@@ -725,7 +739,7 @@ $$</p>
   
   
   (function() {
-    const enableTocScroll = '' == '1'
+    const enableTocScroll = '1' == '1'
     if (!enableTocScroll) {
       return
     }
