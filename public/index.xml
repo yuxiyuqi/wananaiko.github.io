@@ -141,7 +141,7 @@
 </div>
       <div class="timeline__tags">
          
-        <span class="timeline__tag">shortcode</span>
+        <span class="timeline__tag">样式更新</span>
         
       </div>
     </div>
@@ -254,7 +254,7 @@
     <div class="timeline__content">
       <div class="timeline__title">增加 todolist 短代码</div>
       <div class="timeline__description">
-使用 timeline来简单记录本站的折腾的过程。
+使用 timeline 来简单记录本站的折腾的过程。
 </div>
       <div class="timeline__tags">
          
@@ -371,7 +371,7 @@
     <div class="timeline__content">
       <div class="timeline__title">增加 timeline 短代码</div>
       <div class="timeline__description">
-使用 timeline来简单记录本站的折腾的过程。
+使用 timeline 来简单记录本站的折腾的过程。
 </div>
       <div class="timeline__tags">
          
@@ -486,7 +486,7 @@
       <div class="timeline__split-line"></div>
     </div>
     <div class="timeline__content">
-      <div class="timeline__title">Gally, Goods, Stacks, Bookmark 页面上线</div>
+      <div class="timeline__title">Gallery, Goods, Stacks, Bookmark 页面上线</div>
       <div class="timeline__description">
 基于 shortcode 实现的页面，初步上线。
 </div>
@@ -746,7 +746,7 @@
 <p>Raindrop API 官方文档：https://developer.raindrop.io/&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 <li id="fn:3">
-<p>Runavatar.io 官方介绍：https://unavatar.io/&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<p>Unavatar.io 官方介绍：https://unavatar.io/&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 </ol>
 </div>

@@ -15,8 +15,8 @@
 /> <meta name="description" content="最近在 iterm2 里使用 curl、wget、brew、git 等命令时，经常会遇到相应很慢的情况，只能慢慢的等待，网上查了查资料，可以通过以下方法实现。"> <meta name="author" content="wananaiko"> <link rel="canonical" href="https://wananaiko.com/docs/how-iterm2-show-current-proxy-status/">
 <link
   crossorigin="anonymous"
-  href="/assets/css/stylesheet.min.b2cffcea882efe2f377b93e2f4e282906eccb2b8c4e4833e48b2fdf84600e6d2.css"
-  integrity="sha256-ss/86ogu/i83e5Pi9OKCkG7MsrjE5IM&#43;SLL9&#43;EYA5tI="
+  href="/assets/css/stylesheet.min.b5fca0071ac8b9b507689244ed588df1c6e1a4d5ff0311af48b12d73c0f8c769.css"
+  integrity="sha256-tfygBxrIubUHaJJE7ViN8cbhpNX/AxGvSLEtc8D4x2k="
   rel="preload stylesheet"
   as="style"
 /> <link rel="icon" href="https://images.wananaiko.com/favicon.ico"> <link rel="apple-touch-icon" href="https://wananaiko.com/apple-touch-icon.png"> <link rel="alternate" hreflang="en" href="https://wananaiko.com/docs/how-iterm2-show-current-proxy-status/" />
@@ -418,7 +418,6 @@ button#theme-toggle {
   
     </div>
   </header> 
-
   <div class="post-content slide-enter-content"><p>最近在 iterm2 里使用 curl、wget、brew、git 等命令时，经常会遇到相应很慢的情况，只能慢慢的等待，网上查了查资料，可以通过以下方法实现。</p>
 <p>修改 <code>~/.zshrc</code>，并加入以下内容：</p>
 <pre tabindex="0"><code class="language-hljs" data-lang="hljs">export proxy_host=127.0.0.1
@@ -720,7 +719,7 @@ function pp(){
   
   
   (function() {
-    const enableTocScroll = '1' == '1'
+    const enableTocScroll = '' == '1'
     if (!enableTocScroll) {
       return
     }
