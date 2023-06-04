@@ -192,7 +192,7 @@ box-shadow: none;
     background-color: var(--code-bg);
   }
 
-  .mk-tab-tag-active { 
+  .mk-tab-tag-active {
     color: rgba(255, 255, 255, 0.9);
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.16) 0%, rgba(255, 255, 255, 0) 100%), #009999;
     box-shadow: 0px 1px 2px rgba(0, 80, 80, 0.4), 0px 0px 0px 1px rgba(0, 122, 122, 0.76);
@@ -306,12 +306,12 @@ mark{
   function showTag(tag) { var bookmarks = document.getElementsByClassName("mk-raindrop-bookmark"); for (var i = 0; i < bookmarks.length; i++) { if (bookmarks[i].querySelectorAll('.mk-tag').length > 0) { var found = false; var bookmarkTags = bookmarks[i].querySelectorAll('.mk-tag'); for (var j = 0; j < bookmarkTags.length; j++) { if (bookmarkTags[j].innerHTML == tag) { found = true; break; } } if (found) { bookmarks[i].style.display = "block"; } else { bookmarks[i].style.display = "none"; } } else { bookmarks[i].style.display = "none"; } } var tags = document.getElementsByClassName("mk-tab-tag"); for (var i = 0; i < tags.length; i++) { if (tags[i].innerHTML == tag) { tags[i].classList.add("mk-tab-tag-active"); } else { tags[i].classList.remove("mk-tab-tag-active"); } } }
 
   document.querySelector('.mk-tab-tag:first-child').classList.add('mk-tab-tag-active');
-  
+
 </script>
 
 
 <div class="mk-raindrop-bookmarks">
-  
+
   {{ range $i, $item := index $json "items" }} {{ $domain := index (findRE
   "[^.]+\\.[^.]+$" (index (findRE "//[^/]+" $item.link) 0)) 0 }}
   <div class="mk-raindrop-bookmark">
@@ -359,8 +359,8 @@ mark{
         <div></div>
         {{ end }}
         </div>
-        
-      </div>        
+
+      </div>
 
       {{ end }}
     </a>
@@ -412,7 +412,7 @@ mark{
             lastUpdate[i].innerHTML = months + " 月前";
           } else if (years > 0) {
             lastUpdate[i].innerHTML = years + " 年前";
-          }          
+          }
         }
 </script>
     
