@@ -9,12 +9,12 @@ if ("undefined" != typeof bbMemos)
 function loadCssCode(e) {
   var t = document.createElement("style");
   (t.type = "text/css"),
-      (t.rel = "stylesheet"),
-      t.appendChild(document.createTextNode(e)),
-      document.getElementsByTagName("head")[0].appendChild(t);
+    (t.rel = "stylesheet"),
+    t.appendChild(document.createTextNode(e)),
+    document.getElementsByTagName("head")[0].appendChild(t);
 }
 var btn,
-    allCSS = `
+  allCSS = `
 img {
     max-height: 70vh !important;
     max-width: 100% !important;
@@ -171,68 +171,68 @@ span.tag-span {
     flex-direction: column;
 }
 `,
-    limit = (loadCssCode(allCSS), bbMemo.limit),
-    memos = bbMemo.memos,
-    page = 1,
-    offset = 0,
-    nextLength = 0,
-    nextDom = "",
-    bbDom = document.querySelector(bbMemo.domId),
-    load =
-        '<div class="bb-load"><button class="load-btn button-load">加载中……</button></div>';
+  limit = (loadCssCode(allCSS), bbMemo.limit),
+  memos = bbMemo.memos,
+  page = 1,
+  offset = 0,
+  nextLength = 0,
+  nextDom = "",
+  bbDom = document.querySelector(bbMemo.domId),
+  load =
+    '<div class="bb-load"><button class="load-btn button-load">加载中……</button></div>';
 function getFirstList() {
   bbDom.insertAdjacentHTML("afterend", load);
   var e =
-      memos +
-      "api/memo?creatorId=" +
-      bbMemo.creatorId +
-      "&rowStatus=NORMAL&l" +
-      "imit=" +
-      limit;
+    memos +
+    "api/memo?creatorId=" +
+    bbMemo.creatorId +
+    "&rowStatus=NORMAL&l" +
+    "imit=" +
+    limit;
   fetch(e)
-      .then((e) => e.json())
-      .then((e) => {
-        updateHTMl(e.data),
-            e.data.length < limit
-                ? document.querySelector("button.button-load").remove()
-                : ((offset = limit * (++page - 1)), getNextList());
-      });
+    .then((e) => e.json())
+    .then((e) => {
+      updateHTMl(e.data),
+        e.data.length < limit
+          ? document.querySelector("button.button-load").remove()
+          : ((offset = limit * (++page - 1)), getNextList());
+    });
 }
 // 获取下一页
 function getNextList() {
   var e =
-      memos +
-      "api/memo?creatorId=" +
-      bbMemo.creatorId +
-      "&rowStatus=NORMAL&l" +
-      "imit=" +
-      limit +
-      "&offset=" +
-      offset;
+    memos +
+    "api/memo?creatorId=" +
+    bbMemo.creatorId +
+    "&rowStatus=NORMAL&l" +
+    "imit=" +
+    limit +
+    "&offset=" +
+    offset;
   fetch(e)
-      .then((e) => e.json())
-      .then((e) => {
-        (nextDom = e.data),
-            (nextLength = nextDom.length),
-            (offset = limit * (++page - 1)),
+    .then((e) => e.json())
+    .then((e) => {
+      (nextDom = e.data),
+        (nextLength = nextDom.length),
+        (offset = limit * (++page - 1)),
         nextLength < 1 && document.querySelector("button.button-load").remove();
-      });
+    });
 }
 // 加载下一页
 function meNums() {
   var e = memos + "api/memo/stats?creatorId=" + bbMemo.creatorId;
   fetch(e)
-      .then((e) => e.json())
-      .then((e) => {
-        e.data && (document.getElementById("memonums").innerHTML = e.data.length);
-      });
+    .then((e) => e.json())
+    .then((e) => {
+      e.data && (document.getElementById("memonums").innerHTML = e.data.length);
+    });
 }
 // 生成HTML
 function updateHTMl(e) {
   var t = "",
-      o = /#([^\s#]+?) /g,
-      r =
-          /<a\shref="https:\/\/www\.bilibili\.com\/video\/((av[\d]{1,10})|(BV([\w]{10})))\/?">.*<\/a>/g;
+    o = /#([^\s#]+?) /g,
+    r =
+      /<a\shref="https:\/\/www\.bilibili\.com\/video\/((av[\d]{1,10})|(BV([\w]{10})))\/?">.*<\/a>/g;
   marked.setOptions({
     breaks: !0,
     smartypants: !0,
@@ -240,24 +240,24 @@ function updateHTMl(e) {
   });
   for (var a = 0; a < e.length; a++) {
     var i = e[a].content.replace(o, "<span class='tag-span'>#$1</span> "),
-        i = marked
-            .parse(i)
-            .replace(
-                r,
-                "<div class='video-wrapper'><iframe src='//player.bilibili.com/player.html?bvid" +
-                "=$1&as_wide=1&high_quality=1&danmaku=0' scrolling='no' border='0' frameborder=" +
-                "'no' framespacing='0' allowfullscreen='true' style='position:absolute;height:1" +
-                "00%;width:100%;'></iframe></div>"
-            );
+      i = marked
+        .parse(i)
+        .replace(
+          r,
+          "<div class='video-wrapper'><iframe src='//player.bilibili.com/player.html?bvid" +
+            "=$1&as_wide=1&high_quality=1&danmaku=0' scrolling='no' border='0' frameborder=" +
+            "'no' framespacing='0' allowfullscreen='true' style='position:absolute;height:1" +
+            "00%;width:100%;'></iframe></div>"
+        );
     if (e[a].resourceList && 0 < e[a].resourceList.length) {
       for (
-          var n = e[a].resourceList, s = "", l = "", m = 0, d = 0;
-          d < n.length;
-          d++
+        var n = e[a].resourceList, s = "", l = "", m = 0, d = 0;
+        d < n.length;
+        d++
       ) {
         var c = n[d].type.slice(0, 5);
         "image" == c &&
-        ((s +=
+          ((s +=
             '<figure class="gallery-thumbnail"><img class="img thumbnail-image" src="' +
             memos +
             "o/r/" +
@@ -265,71 +265,71 @@ function updateHTMl(e) {
             "/" +
             n[d].filename +
             '"/></figure>'),
-            (m += 1)),
-        "image" !== c &&
-        (l +=
-            '<a target="_blank" rel="noreferrer" href="' +
-            memos +
-            "o/r/" +
-            n[d].id +
-            "/" +
-            n[d].filename +
-            '">' +
-            n[d].filename +
-            "</a>");
+          (m += 1)),
+          "image" !== c &&
+            (l +=
+              '<a target="_blank" rel="noreferrer" href="' +
+              memos +
+              "o/r/" +
+              n[d].id +
+              "/" +
+              n[d].filename +
+              '">' +
+              n[d].filename +
+              "</a>");
       }
       s &&
-      (i +=
+        (i +=
           '<div class="resimg ' +
           (1 !== m ? "grid grid-" + m : "") +
           '">' +
           s +
           "</div></div>"),
-      l && (i += '<p class="datasource">' + l + "</p>");
+        l && (i += '<p class="datasource">' + l + "</p>");
     }
     t +=
-        '<div class="memo-container">' +
-        '<div class="memo-content-wrapper memo-content"><div class="memo-content-text">' +
-        i +
-        "</div>" +
-        "</div>" +
-        '<div class="memo-header"><span>Aiko&nbsp;发布于&nbsp;</span><span class="date">' +
-        Lately.format(1e3 * e[a].updatedTs) +
-        "</span></div>" +
-        "</div>";
+      '<div class="memo-container">' +
+      '<div class="memo-content-wrapper memo-content"><div class="memo-content-text">' +
+      i +
+      "</div>" +
+      "</div>" +
+      '<div class="memo-header"><span>Aiko&nbsp;发布于&nbsp;</span><span class="date">' +
+      Lately.format(1e3 * e[a].updatedTs) +
+      "</span></div>" +
+      "</div>";
   }
   // 生成内容
   bbDom.insertAdjacentHTML(
-      "beforeend",
-      "<section class='bb-timeline'><ul class='bb-list-ul'>" +
+    "beforeend",
+    "<section class='bb-timeline'><ul class='bb-list-ul'>" +
       t +
       "</ul></section>"
   ),
-      fetchDB(),
-      (document.querySelector("button.button-load").textContent = "加载更多");
+    fetchDB(),
+    (document.querySelector("button.button-load").textContent = "加载更多");
 }
 // 从数据库中加载更多的内容
 function fetchDB() {}
 bbDom &&
-(getFirstList(),
-    meNums(),
-    (btn = document.querySelector("button.button-load")).addEventListener(
-        "click",
-        function () {
-          (btn.textContent = "加载中……"),
-              updateHTMl(nextDom),
-              nextLength < limit
-                  ? document.querySelector("button.button-load").remove()
-                  : getNextList();
-        }
-    ));
+  (getFirstList(),
+  meNums(),
+  (btn = document.querySelector("button.button-load")).addEventListener(
+    "click",
+    function () {
+      (btn.textContent = "加载中……"),
+        updateHTMl(nextDom),
+        nextLength < limit
+          ? document.querySelector("button.button-load").remove()
+          : getNextList();
+    }
+  ));
 // 自动加载更多的内容
 window.addEventListener("scroll", function () {
   var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
   var scrollHeight =
-      document.documentElement.scrollHeight || document.body.scrollHeight;
+    document.documentElement.scrollHeight || document.body.scrollHeight;
   var clientHeight =
-      document.documentElement.clientHeight || document.body.clientHeight;
+    document.documentElement.clientHeight || document.body.clientHeight;
   if (scrollTop + clientHeight >= scrollHeight - 10) {
     var btn = document.querySelector("button.button-load");
     btn && btn.click();
