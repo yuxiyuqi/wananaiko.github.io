@@ -41,7 +41,7 @@ Bookmark 页面基于 Raindrop.io 官方的 API[^2]，调用了最近收藏的�
 {{< timeline time="2022-05-22" title="增加 timeline 短代码" tags="shortcode" >}}
 使用 timeline来简单记录本站的折腾的过程。
 {{< /timeline >}}
-{{< timeline time="2022-05-21" title="Gally, Goods, Stacks, Bookmark 页面上线" >}}
+{{< timeline time="2022-05-21" title="Gallery, Goods, Stacks, Bookmark 页面上线" >}}
 基于 shortcode 实现的页面，初步上线。
 {{< /timeline >}}
 
@@ -55,4 +55,4 @@ Bookmark 页面基于 Raindrop.io 官方的 API[^2]，调用了最近收藏的�
 
 [^1]: usememos 官方介绍：https://github.com/usememos/memos
 [^2]: Raindrop API 官方文档：https://developer.raindrop.io/
-[^3]: Runavatar.io 官方介绍：https://unavatar.io/
+[^3]: Unavatar.io 官方介绍：https://unavatar.io/
