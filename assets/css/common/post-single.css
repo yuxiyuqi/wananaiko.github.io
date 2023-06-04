@@ -387,11 +387,11 @@ h6:hover .anchor {
         border: 5px solid var(--code-bg);
     }
     .toc.side.left {
-        left: 15px;
+        left: -320px;
         width: 250px;
     }
     .toc.side.right {
-        right: 15px;
+        right: -320px;
         width: 265px;
     }
 }
