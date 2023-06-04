@@ -1,107 +1,106 @@
-{{ define "main" }} 
+{{ define "main" }}
 {{ $data := getJSON "https://notion-api.splitbee.io/v1/table/687f460a214943ecb7260dc48ecb8818" }}
-<!-- 687f460a214943ecb7260dc48ecb8818 是你的Notion表格的ID,可以在表格的分享链接中找到. -->
+
+<!--Add the above $id to the end https://notion-api.splitbee.io/v1/page/ link as the address of the next getJSON, and use getJSON to get the data and store the data in the $pageData variable-->
 
 <style>
   .notion-cards {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
 
-.notion-cards-row {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  text-decoration: none;
-  color: inherit;
-}
+  .notion-cards-row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    text-decoration: none;
+    color: inherit;
+  }
 
-.notion-card {
-  background-color: #f2f2f2;
-  border-radius: 5px;
-  padding: 20px;
-  width: 100%;
-  box-sizing: border-box;
-}
+  .notion-card {
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+  }
 
-.notion-card-tweet {
+  .notion-card-tweet {
     height: auto;
     width: 100%;
     white-space: pre-wrap;
     overflow-wrap: break-word;
     font-size: 16px;
     line-height: 1.8rem;
-}
+  }
 
-.notion-card-author {
-  font-size: 0.875rem;
-  color: var(--tertiary);
-}
+  .notion-card-author {
+    font-size: 0.875rem;
+    color: var(--tertiary);
+  }
 
-.notion-card-tags {
-  font-size: 14px;
-  color: #888;
-}
+  .notion-card-tags {
+    font-size: 14px;
+    color: #888;
+  }
 
-.page-icon {
-  width: 24px;
-  height: 24px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+  .page-icon {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
-.page-icon img {
-  max-width: 100%;
-  max-height: 100%;
-}
+  .page-icon img {
+    max-width: 100%;
+    max-height: 100%;
+  }
 
-a.notion-cards-row {
+  a.notion-cards-row {
     transition: var(--link-transition);
     padding-bottom: 2px;
     box-shadow: none;
-}
+  }
 
-a.notion-cards-row:hover {
+  a.notion-cards-row:hover {
     transition: var(--link-transition);
     padding-bottom: 2px;
     box-shadow: none;
-}
+  }
 
 </style>
 
 
 <div class="notion-cards">
   {{ range $index, $item := $data }}
-    <a href="{{ index $item "Tweet Link" }}" class="notion-cards-row" target="_blank" rel="no noreferrer">
-      <div class="notion-card">
-        <div class="notion-card-tweet">{{ $item.Tweet }}</div>
-        <div class="notion-cards-row2">
-          <div class="notion-card-author">{{ $item.Author }}</div>
-          <div class="page-icon">
-            {{ $id := $item.id }}
-            {{ $iconURL := printf "https://notion-api.splitbee.io/v1/page/%s" $id }}
-            {{ $pageData := getJSON $iconURL }}
-            {{ $icon := $pageData.page_icon }}
-            {{ if and $icon (strings.HasPrefix $icon "http") }}
-              <img src="{{ $icon }}" alt="Page Icon">
-            {{ else }}
-              {{ $icon }}
-            {{ end }}
-          </div>
-        </div>
-        <div class="notion-card-tags">{{ $item.Tags }}</div>
+  <a href="{{ index $item "Tweet Link" }}" class="notion-cards-row" target="_blank" rel="no noreferrer">
+  <div class="notion-card">
+    <div class="notion-card-tweet">{{ $item.Tweet }}</div>
+    <div class="notion-cards-row2">
+      <div class="notion-card-author">{{ $item.Author }}</div>
+      <div class="page-icon">
+        {{ $id := $item.id }}
+        {{ $iconURL := printf "https://notion-api.splitbee.io/v1/page/%s" $id }}
+        {{ $pageData := getJSON $iconURL }}
+        {{ $icon := $pageData.page_icon }}
+        {{ if and $icon (strings.HasPrefix $icon "http") }}
+        <img src="{{ $icon }}" alt="Page Icon">
+        {{ else }}
+        {{ $icon }}
+        {{ end }}
       </div>
-    </a>
+    </div>
+    <div class="notion-card-tags">{{ $item.Tags }}</div>
+  </div>
+  </a>
   {{ end }}
 </div>
 
 <script>
-  // 将上面的$id添加到链接 https://notion-api.splitbee.io/v1/page/最后面,作为下一个getJSON的地址,并使用getJSON获取数据,将数据存储到$pageData变量中.
 
-  // 从$pageData中的"page_icon"字段找到图片地址,作为$pageData变量的值,将图片插入到<div class="page-icon"> </div>内部.
-
+  // Find the image address from the "page_icon" field in $pageData and use it as the value of the $pageData variable to insert the image into the <div class="page-icon"> </div> internal.
 
 </script>
 
