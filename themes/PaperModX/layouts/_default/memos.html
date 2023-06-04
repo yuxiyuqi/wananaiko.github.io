@@ -1,7 +1,5 @@
 {{- define "main" }} {{ $moment := resources.Get "moment.min.js" }}
-
 <meta name="referrer" content="no-referrer" charset="utf-8" />
-
 <style>
   ul ul {
     margin-left: -24px;
@@ -59,7 +57,6 @@
     left: 10px !important;
     top: 5px !important;
   }
-
   ol {
     display: block;
     list-style-type: decimal;
@@ -69,7 +66,6 @@
     margin-inline-end: 0px;
     padding-inline-start: 24px;
   }
-
   .dark .aplayer {
     background: #212121;
   }
@@ -95,12 +91,12 @@
     color: #eee;
   }
   .dark
-    .aplayer
-    .aplayer-info
-    .aplayer-controller
-    .aplayer-time
-    .aplayer-icon
-    path {
+  .aplayer
+  .aplayer-info
+  .aplayer-controller
+  .aplayer-time
+  .aplayer-icon
+  path {
     fill: #eee;
   }
   .dark .aplayer .aplayer-list {
@@ -134,32 +130,32 @@
   .dark .aplayer .aplayer-lrc:before {
     background: -moz-linear-gradient(top, #212121 0%, rgba(33, 33, 33, 0) 100%);
     background: -webkit-linear-gradient(
-      top,
-      #212121 0%,
-      rgba(33, 33, 33, 0) 100%
+            top,
+            #212121 0%,
+            rgba(33, 33, 33, 0) 100%
     );
     background: linear-gradient(
-      to bottom,
-      #212121 0%,
-      rgba(33, 33, 33, 0) 100%
+            to bottom,
+            #212121 0%,
+            rgba(33, 33, 33, 0) 100%
     );
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#212121', endColorstr='#00212121',GradientType=0 );
   }
   .dark .aplayer .aplayer-lrc:after {
     background: -moz-linear-gradient(
-      top,
-      rgba(33, 33, 33, 0) 0%,
-      rgba(33, 33, 33, 0.8) 100%
+            top,
+            rgba(33, 33, 33, 0) 0%,
+            rgba(33, 33, 33, 0.8) 100%
     );
     background: -webkit-linear-gradient(
-      top,
-      rgba(33, 33, 33, 0) 0%,
-      rgba(33, 33, 33, 0.8) 100%
+            top,
+            rgba(33, 33, 33, 0) 0%,
+            rgba(33, 33, 33, 0.8) 100%
     );
     background: linear-gradient(
-      to bottom,
-      rgba(33, 33, 33, 0) 0%,
-      rgba(33, 33, 33, 0.8) 100%
+            to bottom,
+            rgba(33, 33, 33, 0) 0%,
+            rgba(33, 33, 33, 0.8) 100%
     );
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00212121', endColorstr='#cc212121',GradientType=0 );
   }
@@ -172,7 +168,16 @@
   .dark .aplayer .aplayer-miniswitcher .aplayer-icon path {
     fill: #eee;
   }
-
+  .memo-content-text {
+    font-size: 1rem;
+    color: var(--content);
+  }
+  .memo-content-text a {
+    color: var(--content);
+    transition: var(--link-transition);
+    padding-bottom: 2px;
+    box-shadow: 0 1px rgba(125, 125, 125, 0.5);
+  }
   .memo-content-text pre {
     background-color: var(--border) !important;
     padding: 1em 1em;
@@ -182,9 +187,8 @@
     white-space: pre-wrap;
     overflow-wrap: break-word;
   }
-
   .memo-content-text code {
-    // background-color: var(--code-bg) !important;;
+    /* background-color: var(--code-bg) !important;; */
     padding: 0.2em 0.4em;
     font-size: 85%;
     border-radius: 6px;
@@ -192,15 +196,17 @@
     white-space: pre-wrap;
     overflow-wrap: break-word;
   }
+  .dark span.tag-span {
+    background-color: #2e474e;
+    color: var(--link-hover-color);
+  }
 </style>
-
 <header class="page-header">
   <h1>{{ .Title }}</h1>
   {{- if .Description }}
   <div class="post-description">{{ .Description }}</div>
   {{- end }}
 </header>
-
 <!-- memos内容区域 -->
 <section id="main" class="container slide-enter-content">
   <div class="memo-nums">
@@ -236,33 +242,30 @@
 
 <script type="text/javascript" src="/memos/assets/js/marked.min.js"></script>
 <script
-  type="text/javascript"
-  src="https://fastly.jsdelivr.net/gh/Tokinx/Lately/lately.min.js"
+        type="text/javascript"
+        src="https://fastly.jsdelivr.net/gh/Tokinx/Lately/lately.min.js"
 ></script>
 <script type="text/javascript" src="/memos/assets/js/bibi.js"></script>
 <link
-  rel="stylesheet"
-  type="text/css"
-  href="https://cdn.jsdelivr.net/npm/highlight.js@9.18.1/styles/github.css"
+        rel="stylesheet"
+        type="text/css"
+        href="https://cdn.jsdelivr.net/npm/highlight.js@9.18.1/styles/github.css"
 />
 <script
-  type="text/javascript"
-  src="https://cdn.jsdelivr.net/npm/highlight.js@9.18.1/lib/highlight.js"
+        type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/highlight.js@9.18.1/lib/highlight.js"
 ></script>
 <link
-  rel="stylesheet"
-  href="https://fastly.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css"
+        rel="stylesheet"
+        href="https://fastly.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css"
 />
 <script
-  type="text/javascript"
-  src="/memos/assets/js/view-image.min.js"
+        type="text/javascript"
+        src="/memos/assets/js/view-image.min.js"
 ></script>
-
 <!-- 页面下雪效果 -->
 <!-- <script src="https://app.embed.im/snow.js" defer></script> -->
-
 <script>
   window.ViewImage && ViewImage.init(".container img");
 </script>
-
 {{- end }}{{/* end main */}}
