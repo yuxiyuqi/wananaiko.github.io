@@ -63,16 +63,15 @@ img {
     width: 100%;
     white-space: pre-wrap;
     overflow-wrap: break-word;
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 1.8rem;
 }
 .memo-content-text a.link {
-    color: var(--content);
+    color: var(--post-link-color);
     transition: .5s;
 }
 .memo-content-text a.link:hover {
-    color: var(--content);
-    box-shadow: 0 1px 0 var(--content);
+    color: var(--link-hover-color);
 }
 .memo-content-text .img {
     padding-top: 1rem !important;
@@ -136,7 +135,7 @@ button.load-btn.button-load:hover {
     transform: scale(1.01);
 }
 .memo-content-text a {
-    color: var(--content);
+    color: var(--primary);
     padding-bottom: 2px;
     box-shadow: var(--link-underline-shadow);
     transition: .5s !important;
@@ -164,8 +163,8 @@ span.tag-span {
     color: var(--tertiary);
 }
 .memo-content-text a:hover {
-    color: var(--content);
-    box-shadow: 0 1px 0 var(--content);
+    color: var(--link-hover-color);
+    box-shadow: var(--link-hover-underline-shadow);
     padding-bottom: 2px;
 }
 .bb-load {
@@ -298,7 +297,7 @@ function updateHTMl(e) {
       "</div>" +
       "</div>" +
       '<div class="memo-header"><span>Aiko&nbsp;发布于&nbsp;</span><span class="date">' +
-        Lately.format(1e3 * e[a].updatedTs) +
+      Lately.format(1e3 * e[a].updatedTs) +
       "</span></div>" +
       "</div>";
   }
