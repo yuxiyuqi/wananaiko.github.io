@@ -396,7 +396,86 @@ button#theme-toggle {
 >
   
     </div>
-  </header> 
+  </header> <div class="toc side right">
+    <details  open>
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#intro" aria-label="Intro">Intro</a></li>
+                <li>
+                    <a href="#assets-jscss" aria-label="Assets (js/css)">Assets (js/css)</a></li>
+                <li>
+                    <a href="#default-theme-lightdarkauto" aria-label="Default Theme light/dark/auto">Default Theme light/dark/auto</a></li>
+                <li>
+                    <a href="#theme-switch-toggle-enabled-by-default" aria-label="Theme Switch Toggle (enabled by default)">Theme Switch Toggle (enabled by default)</a></li>
+                <li>
+                    <a href="#archives-layout" aria-label="Archives Layout">Archives Layout</a></li>
+                <li>
+                    <a href="#regular-mode-default-mode" aria-label="Regular Mode (default-mode)">Regular Mode (default-mode)</a></li>
+                <li>
+                    <a href="#home-info-mode" aria-label="Home-Info Mode">Home-Info Mode</a></li>
+                <li>
+                    <a href="#profile-mode" aria-label="Profile Mode">Profile Mode</a></li>
+                <li>
+                    <a href="#search-page" aria-label="Search Page">Search Page</a></li>
+                <li>
+                    <a href="#draft-page-indication" aria-label="Draft Page indication">Draft Page indication</a></li>
+                <li>
+                    <a href="#post-cover-image" aria-label="Post Cover Image">Post Cover Image</a></li>
+                <li>
+                    <a href="#share-buttons-on-post" aria-label="Share Buttons on post">Share Buttons on post</a></li>
+                <li>
+                    <a href="#show-post-reading-time" aria-label="Show post reading time">Show post reading time</a></li>
+                <li>
+                    <a href="#show-table-of-contents-toc-on-blog-post" aria-label="Show Table of Contents (Toc) on blog post">Show Table of Contents (Toc) on blog post</a></li>
+                <li>
+                    <a href="#breadcrumb-navigation" aria-label="BreadCrumb Navigation">BreadCrumb Navigation</a></li>
+                <li>
+                    <a href="#edit-link-for-posts" aria-label="Edit Link for Posts">Edit Link for Posts</a></li>
+                <li>
+                    <a href="#other-posts-suggestion-below-a-post" aria-label="Other Posts suggestion below a post">Other Posts suggestion below a post</a></li>
+                <li>
+                    <a href="#multiple-authors" aria-label="Multiple Authors">Multiple Authors</a></li>
+                <li>
+                    <a href="#comments" aria-label="Comments">Comments</a></li>
+                <li>
+                    <a href="#accesskeys" aria-label="AccessKeys">AccessKeys</a></li>
+                <li>
+                    <a href="#enhanced-seo" aria-label="Enhanced SEO">Enhanced SEO</a><ul>
+                        
+                <li>
+                    <a href="#twitter-cards-support" aria-label="Twitter Cards Support">Twitter Cards Support</a></li>
+                <li>
+                    <a href="#opengraph-support" aria-label="OpenGraph support">OpenGraph support</a></li></ul>
+                </li>
+                <li>
+                    <a href="#multilingual-support" aria-label="Multilingual Support">Multilingual Support</a></li>
+                <li>
+                    <a href="#misc" aria-label="Misc">Misc</a><ul>
+                        
+                <li>
+                    <a href="#scroll-bar-themed-by-default" aria-label="Scroll-Bar themed (by default)">Scroll-Bar themed (by default)</a></li>
+                <li>
+                    <a href="#smooth-scroll-between-in-page-links-by-default" aria-label="Smooth Scroll between in-page links (by default)">Smooth Scroll between in-page links (by default)</a></li>
+                <li>
+                    <a href="#scroll-to-top-button-by-default" aria-label="Scroll-to-Top Button (by default)">Scroll-to-Top Button (by default)</a></li>
+                <li>
+                    <a href="#google-analytics-integration" aria-label="Google Analytics integration">Google Analytics integration</a></li>
+                <li>
+                    <a href="#syntax-highlighting" aria-label="Syntax highlighting">Syntax highlighting</a></li>
+                <li>
+                    <a href="#rss-feeds" aria-label="RSS feeds">RSS feeds</a>
+                </li>
+            </ul>
+            </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
   <div class="post-content slide-enter-content"><blockquote>
 <p>source: <a href="https://adityatelange.github.io/hugo-PaperMod/posts/papermod/papermod-features/" target="_blank" rel="noopener">https://adityatelange.github.io/hugo-PaperMod/posts/papermod/papermod-features/</a></p>
 </blockquote>
@@ -1044,7 +1123,7 @@ videos.
   
   
   (function() {
-    const enableTocScroll = '' == '1'
+    const enableTocScroll = '1' == '1'
     if (!enableTocScroll) {
       return
     }

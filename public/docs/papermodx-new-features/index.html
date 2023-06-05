@@ -421,7 +421,35 @@ button#theme-toggle {
 >
   
     </div>
-  </header> 
+  </header> <div class="toc side right">
+    <details  open>
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#table-of-contents-toc-floating-on-the-side" aria-label="Table of Contents (ToC) floating on the side">Table of Contents (ToC) floating on the side</a></li>
+                <li>
+                    <a href="#instantclick-integration" aria-label="InstantClick integration">InstantClick integration</a></li>
+                <li>
+                    <a href="#give-links-an-accent-color" aria-label="Give links an accent color.">Give links an accent color.</a></li>
+                <li>
+                    <a href="#customize-pagniator-size" aria-label="Customize pagniator size">Customize pagniator size</a></li>
+                <li>
+                    <a href="#menus-external-link" aria-label="Menus external link">Menus external link</a></li>
+                <li>
+                    <a href="#highlight-code-with-chroma-no-bullshit" aria-label="Highlight code with Chroma, no bullshit">Highlight code with Chroma, no bullshit</a></li>
+                <li>
+                    <a href="#social-icons-from-simple-icons" aria-label="Social icons from Simple Icons">Social icons from Simple Icons</a></li>
+                <li>
+                    <a href="#opinionated-ui-enhancements" aria-label="Opinionated UI enhancements">Opinionated UI enhancements</a>
+                </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
   <div class="post-content slide-enter-content"><p>This page explains the new features and changes of PaperModX
 comparing to the original PaperMod.</p>
 <h2 id="table-of-contents-toc-floating-on-the-side">Table of Contents (ToC) floating on the side</h2>
@@ -773,7 +801,7 @@ to show all the icons, check it out at: <a href="https://reorx.github.io/hugo-Pa
   
   
   (function() {
-    const enableTocScroll = '' == '1'
+    const enableTocScroll = '1' == '1'
     if (!enableTocScroll) {
       return
     }

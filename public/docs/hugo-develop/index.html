@@ -417,7 +417,33 @@ button#theme-toggle {
 >
   
     </div>
-  </header> 
+  </header> <div class="toc side right">
+    <details  open>
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#%e5%a2%9e%e5%8a%a0%e7%a9%ba%e6%a0%bc%e4%b9%8b%e7%a5%9e" aria-label="增加空格之神">增加空格之神</a></li>
+                <li>
+                    <a href="#%e5%a2%9e%e5%8a%a0-waline-%e8%af%84%e8%ae%ba" aria-label="增加 Waline 评论">增加 Waline 评论</a></li>
+                <li>
+                    <a href="#%e5%a2%9e%e5%8a%a0%e9%bc%a0%e6%a0%87%e5%bd%a9%e8%99%b9%e6%95%88%e6%9e%9c" aria-label="增加鼠标彩虹效果">增加鼠标彩虹效果</a></li>
+                <li>
+                    <a href="#%e5%a2%9e%e5%8a%a0%e5%8f%8b%e6%83%85%e9%93%be%e6%8e%a5%e9%a1%b5%e9%9d%a2" aria-label="增加友情链接页面">增加友情链接页面</a></li>
+                <li>
+                    <a href="#%e5%a2%9e%e5%8a%a0%e9%a1%b5%e9%9d%a2%e4%b8%8b%e9%9b%aa%e6%95%88%e6%9e%9c" aria-label="增加页面下雪效果">增加页面下雪效果</a></li>
+                <li>
+                    <a href="#%e6%90%9c%e7%b4%a2%e9%a1%b5%e5%b1%95%e7%a4%ba%e6%a0%87%e7%ad%be%e5%88%97%e8%a1%a8" aria-label="搜索页展示标签列表">搜索页展示标签列表</a></li>
+                <li>
+                    <a href="#%e5%bc%95%e5%85%a5%e8%b1%86%e7%93%a3%e9%98%85%e8%af%bb%e5%92%8c%e7%94%b5%e5%bd%b1%e5%8d%a1%e7%89%87" aria-label="引入豆瓣阅读和电影卡片">引入豆瓣阅读和电影卡片</a>
+                </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
   <div class="post-content slide-enter-content"><h3 id="增加空格之神">增加空格之神</h3>
 <p>使用空格之神的浏览器插件很久了，真的是阅读强迫症患者的福音，<a href="https://github.com/vinta/pangu.js" target="_blank" rel="noopener">空格之神项目地址</a></p>
 <p>在 Hugo的 <code>themes/PaperModX/layouts/_default/baseof.html</code> 内增加以下代码：</p>
@@ -1311,7 +1337,7 @@ button#theme-toggle {
   
   
   (function() {
-    const enableTocScroll = '' == '1'
+    const enableTocScroll = '1' == '1'
     if (!enableTocScroll) {
       return
     }

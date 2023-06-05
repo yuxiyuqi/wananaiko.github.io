@@ -396,7 +396,45 @@ button#theme-toggle {
 >
   
     </div>
-  </header> 
+  </header> <div class="toc side right">
+    <details  open>
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#intro" aria-label="Intro">Intro</a></li>
+                <li>
+                    <a href="#override-theme-template" aria-label="Override theme template">Override theme template</a></li>
+                <li>
+                    <a href="#enable-social-metadata-and-seo" aria-label="Enable Social-Metadata and SEO">Enable Social-Metadata and SEO</a></li>
+                <li>
+                    <a href="#failed-to-find-a-valid-digest-in-the-integrity-attribute-for-resource--" aria-label="Failed to find a valid digest in the &amp;lsquo;integrity&amp;rsquo; attribute for resource &amp;hellip; ?">Failed to find a valid digest in the &lsquo;integrity&rsquo; attribute for resource &hellip; ?</a></li>
+                <li>
+                    <a href="#bundling-custom-css-with-themes-assets" aria-label="Bundling Custom css with theme&amp;rsquo;s assets">Bundling Custom css with theme&rsquo;s assets</a></li>
+                <li>
+                    <a href="#custom-head--footer" aria-label="Custom Head / Footer">Custom Head / Footer</a></li>
+                <li>
+                    <a href="#add-menu-to-site" aria-label="Add menu to site">Add menu to site</a></li>
+                <li>
+                    <a href="#pin-a-post" aria-label="Pin a Post">Pin a Post</a></li>
+                <li>
+                    <a href="#adding-custom-favicons" aria-label="Adding Custom Favicon(s)">Adding Custom Favicon(s)</a></li>
+                <li>
+                    <a href="#centering-image-in-markdown" aria-label="Centering image in markdown">Centering image in markdown</a></li>
+                <li>
+                    <a href="#using-hugos-syntax-highlighter-chroma" aria-label="Using Hugo&amp;rsquo;s Syntax highlighter &amp;ldquo;chroma&amp;rdquo;">Using Hugo&rsquo;s Syntax highlighter &ldquo;chroma&rdquo;</a></li>
+                <li>
+                    <a href="#search-not-working-" aria-label="Search not working ?">Search not working ?</a></li>
+                <li>
+                    <a href="#references" aria-label="References">References</a>
+                </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
   <div class="post-content slide-enter-content"><h2 id="intro">Intro</h2>
 <ul>
 <li>
@@ -847,7 +885,7 @@ assets:
   
   
   (function() {
-    const enableTocScroll = '' == '1'
+    const enableTocScroll = '1' == '1'
     if (!enableTocScroll) {
       return
     }

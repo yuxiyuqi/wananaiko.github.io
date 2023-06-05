@@ -417,7 +417,23 @@ button#theme-toggle {
 >
   
     </div>
-  </header> 
+  </header> <div class="toc side right">
+    <details  open>
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#social-icons" aria-label="Social Icons">Social Icons</a></li>
+                <li>
+                    <a href="#share-icons" aria-label="Share Icons">Share Icons</a>
+                </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
   <div class="post-content slide-enter-content"><h2 id="social-icons">Social Icons</h2>
 <p>Go to <a href="icons_preview">Icons Preview</a> to see a complete list of icons</p>
 <p>Usage :</p>
@@ -736,7 +752,7 @@ button#theme-toggle {
   
   
   (function() {
-    const enableTocScroll = '' == '1'
+    const enableTocScroll = '1' == '1'
     if (!enableTocScroll) {
       return
     }

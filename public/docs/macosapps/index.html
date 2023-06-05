@@ -417,7 +417,25 @@ button#theme-toggle {
 >
   
     </div>
-  </header> 
+  </header> <div class="toc side right">
+    <details  open>
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#%e6%8f%90%e5%8d%87%e6%95%88%e7%8e%87" aria-label="提升效率">提升效率</a></li>
+                <li>
+                    <a href="#%e7%b3%bb%e7%bb%9f%e7%be%8e%e5%8c%96" aria-label="系统美化">系统美化</a></li>
+                <li>
+                    <a href="#%e5%b7%a5%e4%bd%9c%e8%a7%84%e5%88%92" aria-label="工作规划">工作规划</a>
+                </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
   <div class="post-content slide-enter-content"><p>聊一聊 macOS 的一些软件使用心得，希望能够对其他人有所帮助。</p>
 <h2 id="提升效率">提升效率</h2>
 <p><strong>Setapp</strong>：参加了别人的家庭计划，属于团购车，年费 285。感觉还是很划算的，可以省去你单独买一些软件授权的费用，减少折腾。</p>
@@ -720,7 +738,7 @@ button#theme-toggle {
   
   
   (function() {
-    const enableTocScroll = '' == '1'
+    const enableTocScroll = '1' == '1'
     if (!enableTocScroll) {
       return
     }

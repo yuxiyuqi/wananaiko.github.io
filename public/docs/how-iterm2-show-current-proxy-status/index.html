@@ -418,6 +418,7 @@ button#theme-toggle {
   
     </div>
   </header> 
+
   <div class="post-content slide-enter-content"><p>最近在 iterm2 里使用 curl、wget、brew、git 等命令时，经常会遇到相应很慢的情况，只能慢慢的等待，网上查了查资料，可以通过以下方法实现。</p>
 <p>修改 <code>~/.zshrc</code>，并加入以下内容：</p>
 <pre tabindex="0"><code class="language-hljs" data-lang="hljs">export proxy_host=127.0.0.1
@@ -719,7 +720,7 @@ function pp(){
   
   
   (function() {
-    const enableTocScroll = '' == '1'
+    const enableTocScroll = '1' == '1'
     if (!enableTocScroll) {
       return
     }

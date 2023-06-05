@@ -131,6 +131,123 @@
 <div class="timeline">
   <div class="timeline__row">
     <div class="timeline__time">
+      <div class="timeline__time-text">2022-06-05</div>
+      <div class="timeline__split-line"></div>
+    </div>
+    <div class="timeline__content">
+      <div class="timeline__title">调整了 Todolist 的 light 和 dark 样式</div>
+      <div class="timeline__description">
+配色灵感来自 waffle。
+</div>
+      <div class="timeline__tags">
+         
+        <span class="timeline__tag">样式更新</span>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<style>
+  .timeline {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .timeline__row {
+    display: flex;
+  }
+
+  .timeline__time {
+    flex: 0 0 90px;
+    color: var(--secondary);
+    font-size: 14px;
+    text-transform: uppercase;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.68rem 0;
+  }
+
+  .timeline__time-text {
+    margin: 0;
+  }
+
+  .timeline__split-line {
+    position: absolute;
+    top: 0.5rem;
+    right: -20px;
+    height: 100%;
+    width: 1px;
+    background-color: var(--border);
+    z-index: -1;
+  }
+
+  .timeline__split-line:before {
+    content: "";
+    position: absolute;
+    top: 1rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 8px;
+    height: 8px;
+    background-color: var(--border);
+    box-shadow: 0 0 0 4px var(--theme);
+    border-radius: 50%;
+  }
+
+  .timeline__content {
+    flex: 1;
+    margin-left: 3rem;
+    padding: 0.5rem 0 1.2rem 0;
+  }
+
+  .timeline__title {
+    margin: 0;
+    margin-bottom: 5px;
+    color: var(--content);
+    font-family: var(--font-family-teshu);
+    font-size: 16px;
+    font-weight: 500;
+    width: fit-content;
+  }
+
+  .timeline__tags {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0.6rem 0 0.2rem 0;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .timeline__tag {
+    display: inline-block;
+    color: var(--tertiary);
+    background-color: var(--code-bg);
+    border-radius: 3px;
+    padding: 0rem 0.5rem;
+    font-size: 12px;
+    white-space: nowrap;
+    line-height: 1.4rem;
+  }
+
+  .timeline__description {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--secondary);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0.5rem 0 0.4rem 0;
+  }
+</style>
+
+<div class="timeline">
+  <div class="timeline__row">
+    <div class="timeline__time">
       <div class="timeline__time-text">2022-05-24</div>
       <div class="timeline__split-line"></div>
     </div>
@@ -511,19 +628,31 @@
     margin-top: 2rem;
   }
   .list_item {
+    position: relative;
     display: inline-block;
     width: calc(50% - 0.4rem);
-    background: var(--code-bg);
-    border-radius: var(--radius);
-    padding: 10px 1rem 1.2rem;
-    border: 1px solid var(--border);
+    background: #fbf7f4;
+    border-radius: 10px;
+    padding: 16px 16px 40px 16px;
+    border: 1px solid #ffffff;
     margin-right: 1rem;
     margin-bottom: 1rem;
   }
+
+  .dark .list_item {
+    background: #292a2f;
+    border: 1px solid #1d1e20;
+  }
+
   .list_item li {
     margin: 0 !important;
-    border-bottom: 0.5px solid var(--tertiary-bg);
+    border-bottom: 1px solid rgba(130, 100, 75, 0.1);
   }
+
+  .dark .list_item li {
+    border-bottom: 1px solid rgba(130, 100, 75, 0.1);
+  }
+
   .list_item li::marker {
     content: none;
   }
@@ -542,12 +671,16 @@
   .todo-title {
     font-size: 18px;
     line-height: 1.6;
-    font-weight: 500;
+    font-weight: 600;
     background-repeat: no-repeat;
     background-position: left center;
     background-size: 16px;
-    color: var(--content);
-    padding: 0.1rem 0 0.6rem 0;
+    color: #634d3a;
+    padding: 0 0 12px 0;
+  }
+
+  .dark .todo-title {
+    color: #bfa288;
   }
 
   li.done {
@@ -555,7 +688,7 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    padding: 0.5rem 0;
+    padding: 16px 0;
     opacity: 0.8;
     text-decoration: line-through;
   }
@@ -564,7 +697,7 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    padding: 0.8rem 0;
+    padding: 16px 0;
   }
 
   .icon-undo {
@@ -576,6 +709,11 @@
   .icon-done {
     display: flex;
     margin-right: 0.5rem;
+    opacity: 0.5;
+  }
+
+  .dark .icon-done {
+    opacity: 0.5;
   }
 
   svg {
@@ -586,30 +724,61 @@
   .undo-content {
     font-size: 14px;
     line-height: 1.6;
-    color: var(--content);
+    color: #82644b;
+  }
+
+  .dark .undo-content {
+    color: #b28761;
   }
 
   .done-content {
     font-size: 14px;
     line-height: 1.6;
-    color: var(--secondary);
+    color: #82644b;
+    opacity: 0.65;
     text-decoration-line: line-through;
+  }
+
+  .dark .done-content {
+    opacity: 0.85;
   }
 
   .todo-head {
     display: flex;
     align-items: center;
-    border-bottom: 0.5px solid var(--tertiary-bg);
+    border-bottom: 1px solid rgba(130, 100, 75, 0.1);
     justify-content: space-between;
   }
 
+  .dark .todo-head {
+    border-bottom: 1px solid rgba(130, 100, 75, 0.1);
+  }
+
   .todo-icon-right {
-    transform: translateX(8px) translateY(-26px) rotate(-20deg) scale(1)
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 32px;
+    transform: translateX(8px) translateY(-38px) rotate(35deg) scale(1)
       skew(1deg);
-    -webkit-transform: translateX(8px) translateY(-26px) rotate(-20deg) scale(1)
+    -webkit-transform: translateX(8px) translateY(-38px) rotate(35deg) scale(1)
       skew(1deg);
-    -moz-transform: translateX(8px) translateY(-26px) rotate(-20deg) scale(1)
+    -moz-transform: translateX(8px) translateY(-38px) rotate(35deg) scale(1)
       skew(1deg);
+  }
+
+  .sticky-bg {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 208px;  
+    height: 28px;  
+    background-image: url("https://images.wananaiko.com/2023/06/sticky-zheye-light2.png");
+    background-size: 208px 28px;  
+  }
+
+  .dark .sticky-bg {
+    background-image: url("https://images.wananaiko.com/2023/06/sticky-zheye-dark.png");
   }
 </style>
 
@@ -710,23 +879,20 @@
             .replace(/#.*\s/g, "")
             .replace(
               /(-\s\[\s\]\s)(.*)/g,
-              `<li class="undo"><div class="icon-undo"><?xml version="1.0" encoding="UTF-8"?><svg width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="var(--content)"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" stroke="var(--content)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></div><div class="undo-content">$2</div></li>`
+              `<li class="undo"><div class="icon-undo"><?xml version="1.0" encoding="UTF-8"?><svg width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#82644b"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" stroke="#82644b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></div><div class="undo-content">$2</div></li>`
             )
             .replace(
               /(-\s\[x\]\s)(.*)/g,
               `<li class="done">
-                  <div class="icon-done"><?xml version="1.0" encoding="UTF-8"?><svg width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="var(--secondary)"><path d="M7 12.5l3 3 7-7" stroke="var(--secondary)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" stroke="var(--secondary)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                  <div class="icon-done"><?xml version="1.0" encoding="UTF-8"?><svg width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#82644b"><path d="M7 12.5l3 3 7-7" stroke="#82644b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" stroke="#82644b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
                   </div><div class="done-content">$2</div>
                 </li>`
             );
           
           let div = document.createElement("div");
           div.className = "list_item";
-          div.innerHTML = `<div class="todo-head"><div class="todo-title">${title}</div><div class="todo-icon-right"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M8.95711 15.0429C9.34763 15.4334 9.34763 16.0666 8.95711 16.4571L3.95711 21.4571C3.56658 21.8476 2.93342 21.8476 2.54289 21.4571C2.15237 21.0666 2.15237 20.4334 2.54289 20.0429L7.54289 15.0429C7.93342 14.6524 8.56658 14.6524 8.95711 15.0429Z" fill="var(--link-hover-color)"/>
-<path d="M17.7093 2.55346C19.4569 3.18528 20.8147 4.54305 21.4465 6.29064C21.5536 6.58633 21.6798 6.93507 21.7258 7.24165C21.7801 7.60384 21.744 7.94519 21.608 8.32365C21.3168 9.13408 20.6643 9.49626 19.9452 9.89542L18.5273 10.6861C18.0145 10.9721 17.676 11.1618 17.4348 11.3286C17.2 11.4909 17.1333 11.582 17.1056 11.6358C17.0909 11.6641 17.0453 11.8022 17.0573 12.2506C17.0686 12.6742 17.1236 13.2487 17.2024 14.0663C17.3296 15.3845 17.1109 16.6904 16.3502 17.9068C16.2218 18.1123 16.0604 18.3708 15.88 18.563C15.6669 18.7901 15.4215 18.9506 15.1053 19.0787C14.7835 19.2091 14.4907 19.2619 14.1748 19.2478C13.906 19.2358 13.5974 19.1656 13.3398 19.107C11.3641 18.6584 9.47833 17.5121 7.98305 16.0169C6.48778 14.5216 5.34151 12.6359 4.89294 10.6602C4.83436 10.4027 4.76418 10.0941 4.75221 9.82535C4.73813 9.50941 4.79103 9.21658 4.92151 8.89474C5.04969 8.5786 5.21026 8.3331 5.43747 8.12006C5.62978 7.93974 5.88832 7.7784 6.09379 7.65019C7.29324 6.90084 8.58854 6.66967 9.89679 6.78538C10.7321 6.85926 11.321 6.91095 11.754 6.91998C11.968 6.92445 12.2391 6.94301 12.3803 6.86947C12.4326 6.84219 12.5235 6.7753 12.6865 6.53889C12.8534 6.29676 13.0438 5.95698 13.3302 5.44342L14.1046 4.05478C14.5037 3.33567 14.8659 2.68318 15.6763 2.39201C16.0548 2.25603 16.3961 2.2199 16.7583 2.27422C17.0649 2.32019 17.4136 2.44643 17.7093 2.55346Z" fill="var(--link-hover-color)"/>
-</svg>
-</div></div><div class="todo-container">${content}</div>`;
+          div.innerHTML = `<div class="todo-head"><div class="todo-title">${title}</div><div class="todo-icon-right">📍
+</div></div><div class="todo-container">${content}</div><div class="sticky-bg"></div>`;
           box.appendChild(div);
         });
         waterfall("#todolist");
