@@ -7,9 +7,9 @@ tags:
 draft: ture
 ---
 
-####  1、Docker 部署
+#### 1、Docker 部署
 
-安装Docker后，在终端里以 root 身份运行：
+安装 Docker 后，在终端里以 root 身份运行：
 
 ```
 docker run -d --name huntly -p 9090:80 -v /opt/huntly:/data lcomplete/huntly:0.1.0
@@ -44,7 +44,7 @@ useradd -r -s /sbin/nologin huntly
 ```
 
 ```
-mkdir -p /opt/huntly 
+mkdir -p /opt/huntly
 ```
 
 ```
@@ -95,13 +95,13 @@ journalctl -n 20 -u huntly
 
 #### 5、反向代理
 
-在宝塔“网站” 里新建你的 huntly 站点，在反向代理里设置目标URL 为：`http://127.0.0.1:9090`
+在宝塔“网站” 里新建你的 huntly 站点，在反向代理里设置目标 URL 为：`http://127.0.0.1:9090`
 
 这个时候你已经可以用你的服务器 IP 加端口号访问了，然后就是域名解析了。
 
-如果你使用 Cloudflare  接管了域名管理，可以使用 Cloudflare 自带的 SSL 证书。在Cloudflare - SSL/TLS - 源证书，创建证书，将申请后的证书 PEM 和 KEY 填到宝塔后对应域名的 SSL 中并保存。
+如果你使用 Cloudflare 接管了域名管理，可以使用 Cloudflare 自带的 SSL 证书。在 Cloudflare - SSL/TLS - 源证书，创建证书，将申请后的证书 PEM 和 KEY 填到宝塔后对应域名的 SSL 中并保存。
 
- 访问遇到520错误，在宝塔软件商店里安装  Nginx 免费防火墙，在对应的设置 - 全局配置里“导入” IP 白名单。
+访问遇到 520 错误，在宝塔软件商店里安装 Nginx 免费防火墙，在对应的设置 - 全局配置里“导入” IP 白名单。
 
 ```
 103.21.244.0/22
@@ -132,39 +132,41 @@ journalctl -n 20 -u huntly
 配合 “My Style” 浏览器插件，可以自定义一些样式：
 
 ```css
-.Tweet_mainColor__hOlrk, .Tweet_mainColor__hOlrk a {
-    color: #0f141965!important;
+.Tweet_mainColor__hOlrk,
+.Tweet_mainColor__hOlrk a {
+  color: #0f141965 !important;
 }
 
 span.font-bold.Tweet_mainColor__hOlrk {
-    font-weight: 400;
+  font-weight: 400;
 }
 
 .Tweet_secondaryColor__ubVWz a {
-    color: #0f141965!important;
+  color: #0f141965 !important;
 }
 
 pre.break-all.break-words.whitespace-pre-wrap.mt-0.mb-1 {
-font-family: -apple-system,BlinkMacSystemFont,Helvetica,helvetica neue,segoe ui,Roboto,Oxygen,Ubuntu,Cantarell,open sans,sans-serif;
-    font-size: 15px;
-    line-height: 1.5em;
-    word-break: break-word;
-    background: var(--theme);
-    letter-spacing: .01em;
+  font-family: -apple-system, BlinkMacSystemFont, Helvetica, helvetica neue, segoe
+      ui, Roboto, Oxygen, Ubuntu, Cantarell, open sans, sans-serif;
+  font-size: 15px;
+  line-height: 1.5em;
+  word-break: break-word;
+  background: var(--theme);
+  letter-spacing: 0.01em;
 }
 
 /*Twitter头像透明度*/
 img.MuiCardMedia-root.MuiCardMedia-media.MuiCardMedia-img.css-1wh7jvw {
-    opacity: 0.5;
+  opacity: 0.5;
 }
 
 /*Twitter互动信息透明度*/
 .flex.items-center.justify-between.mt-1.text-\[15px\].MuiBox-root.css-0 {
-    opacity: 0.5;
+  opacity: 0.5;
 }
 
 .flex.items-center.font-bold.text-\[14px\].Tweet_secondaryColor__ubVWz.mb-1 {
-    font-weight: 400;
+  font-weight: 400;
 }
 ```
 
@@ -172,7 +174,7 @@ img.MuiCardMedia-root.MuiCardMedia-media.MuiCardMedia-img.css-1wh7jvw {
 
 在更新 Docker 前，需要先暂停 huntly 服务：`sudo systemctl stop huntly`
 
-然后删除 Docker 容器和镜像，接着拉取最新的 huntly 代码。
+然后删除 Docker 容器和镜像，接着拉取最新的 huntly 代码 (下面的 0.3.0 以线上最新版为准)。
 
 `docker run -d --name huntly -p 9090:80 -v /opt/huntly:/data lcomplete/huntly:0.3.0`
 
