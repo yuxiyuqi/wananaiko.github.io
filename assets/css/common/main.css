@@ -110,7 +110,7 @@ mark {
 /* for post page */
 .main.post {
     /* max-width: calc(var(--post-width) + var(--gap) * 2); */
-    max-width: calc(var(--post-width) + var(--gap) * 0.1);
+    max-width: calc(var(--post-width)* 0.92 + var(--gap) * 0.1);
 }
 
 .page-header h1 {
