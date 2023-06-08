@@ -1,8 +1,6 @@
 {{ define "main" }}
 {{ $data := getJSON "https://notion-api.splitbee.io/v1/table/687f460a214943ecb7260dc48ecb8818" }}
 
-<!--Add the above $id to the end https://notion-api.splitbee.io/v1/page/ link as the address of the next getJSON, and use getJSON to get the data and store the data in the $pageData variable-->
-
 <style>
   .notion-cards {
     display: flex;
@@ -98,10 +96,6 @@
   {{ end }}
 </div>
 
-<script>
 
-  // Find the image address from the "page_icon" field in $pageData and use it as the value of the $pageData variable to insert the image into the <div class="page-icon"> </div> internal.
-
-</script>
 
 {{ end }}
