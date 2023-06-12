@@ -1,4 +1,224 @@
-{{- define "main" }} {{ $moment := resources.Get "moment.min.js" }}
+{{- define "main" }}
+
+<style>
+  .main.post {
+    position: relative;
+    min-height: calc(100vh - var(--header-height) - var(--footer-height));
+    max-width: calc(var(--main-width) + var(--gap) * 2);
+    margin: auto;
+    padding: var(--content-gap)var(--gap)0;
+}
+
+  ul{
+    all:unset;
+  }
+
+  .memos {
+    min-height: 300px;
+    text-align: left;
+    width: 100%;
+    line-height: 2;
+    margin: 2rem 0;
+}
+
+.memos a {
+    color: var(--color-link);
+    text-decoration: none;
+}
+
+.memos a:hover {
+    text-decoration: underline;
+}
+
+.memos ul {
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+}
+
+.memos__content {
+    flex-grow: 1;
+    position: relative;
+    max-width: 100%;
+    width: 100%;
+}
+
+.memos__text {
+    position: relative;
+    box-sizing: border-box;
+    color: var(--content);
+    background-color: var(--code-bg);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+}
+
+
+.timeline {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin-bottom: 1.5rem;
+}
+
+.memos__text {
+    width: 100%;
+    overflow-wrap: break-word;
+    font-size: 1rem;
+    line-height: 1.75rem;
+}
+
+.memos__text ul li {
+    list-style: none;
+}
+
+.memos__text i {
+    margin: 0 0.25rem;
+}
+
+.memos__text:before {
+    content: "";
+    position: absolute;
+    top: 23px;
+    left: -7px;
+    width: 14px;
+    height: 14px;
+    transform: rotate(45deg);
+    border-radius: 3px;
+    background: var(--color-text-bg);
+    z-index: 1;
+}
+
+.memos__text pre {
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+    max-width: 100%;
+    white-space: pre-wrap;
+    border-radius: 0.25rem;
+    background-color: var(--color-memos-pre-bg);
+    padding: 0.75rem;
+}
+
+.memos__text code {
+    display: inline-block;
+    border-radius: 0.25rem;
+    background-color: var(--color-memos-pre-bg);
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+    font-family: ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
+    font-size: .875rem;
+    line-height: 1.5rem;
+}
+
+.memos__text pre code {
+    display: block;
+}
+
+.memos__meta {
+    margin: 0;
+}
+
+.memos__meta small {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #8186a2;
+}
+
+.memos__userinfo {
+    display: flex;
+    font-weight: 500;
+    align-items: center;
+}
+
+.memos__verify {
+    margin-left: 2px;
+    max-width: 20px;
+    max-height: 20px;
+    color: #1d9bf0;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    vertical-align: text-bottom;
+    position: relative;
+    height: 1.25rem;
+    fill: currentcolor;
+    display: inline-block;
+    flex-shrink: 1;
+    margin-left: 4px;
+}
+
+.memos__id {
+    font-size: 0.875rem;
+    overflow-wrap: break-word;
+    min-width: 0px;
+    box-sizing: border-box;
+    color: var(--color-memos-id);
+    display: inline;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    flex-shrink: 1;
+    font-weight: 400;
+    margin-left: 4px;
+}
+
+.resource-wrapper {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.images-wrapper {
+    margin-top: 0.5rem;
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(2,minmax(0,1fr));
+    gap: 0.5rem;
+}
+
+small.memos__date {
+    font-size: 14px;
+    font-weight: normal;
+    margin-left: 0.5rem;
+    color: var(--tertiary);
+}
+
+.memos__text img {
+    padding-top: 1rem;
+    max-height: 40vh !important;
+}
+
+span.tag-span {
+    background-color: rgb(198 239 239 / 90%);
+    padding: 2.5px 5px;
+    border-radius: 3px;
+    font-size: small;
+    line-height: 1.5;
+    color: #0e7e9d;
+    margin-right: 4px;
+}
+
+.dark span.tag-span {
+    background-color: #2e474e;
+    color: var(--link-hover-color);
+}
+
+span.tag-span a {
+    color: #0e7e9d;
+}
+
+.dark span.tag-span a {
+    background-color: #2e474e;
+    color: var(--link-hover-color);
+}
+
+p.meta-item {
+    margin-bottom: 1rem;
+}
+
+</style>
+<link rel="stylesheet" href="/css/highlight.github.min.css" />
 
 <meta name="referrer" content="no-referrer" />
 <link rel="stylesheet" href="/assets/APlayer.min.css?v=1.10.1" />
@@ -10,27 +230,22 @@
   {{- end }}
 </header>
 
-<section id="main" class="container slide-enter-content">
-  <div id="content" class="content">
+<article class="page single special">
+
+  <section id="main" class="container slide-enter-content">
     <div class="count">
-      <blockquote>
-        共嘀咕了
-        <span id="memosCount"><i class="fas fa-spinner fa-pulse"></i></span> 条
-        <a
-          href="https://memo.wananaiko.com/"
-          target="_blank"
-          rel="noreferrer noopener nofollow"
-          >Memos</a
-        >
-        <span class="emoji">🎉</span>
-      </blockquote>
+      <p class="meta-item" style="font-size: 0.95rem; padding-top: 0.5rem">
+      当前共有
+      <span id="memonums"> … </span>
+      条memos
+    </p>
     </div>
     <div id="album"></div>
     <div id="memos">
       <!-- 嘀咕加载在这里 -->
     </div>
   </div>
-</section>
+  </section>
 
 <script type="text/javascript">
   var memos = {
@@ -52,7 +267,7 @@
 <script type="text/javascript" src="/assets/view-image.min.js?v=2.0.2"></script>
 
 <script>
-  window.ViewImage && ViewImage.init(".content img");
+  window.ViewImage && ViewImage.init(".container img");
 </script>
 
 {{- end -}}
