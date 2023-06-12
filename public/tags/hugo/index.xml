@@ -52,7 +52,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0.68rem 0;
+    padding: 0.8rem 0;
   }
 
   .timeline__time-text {
@@ -90,7 +90,8 @@
 
   .timeline__title {
     margin: 0;
-    margin-bottom: 5px;
+    margin-bottom: 2px;
+    padding-top: 3px;
     color: var(--content);
     font-family: var(--font-family-teshu);
     font-size: 16px;
@@ -169,7 +170,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0.68rem 0;
+    padding: 0.8rem 0;
   }
 
   .timeline__time-text {
@@ -207,7 +208,8 @@
 
   .timeline__title {
     margin: 0;
-    margin-bottom: 5px;
+    margin-bottom: 2px;
+    padding-top: 3px;
     color: var(--content);
     font-family: var(--font-family-teshu);
     font-size: 16px;
@@ -286,7 +288,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0.68rem 0;
+    padding: 0.8rem 0;
   }
 
   .timeline__time-text {
@@ -324,7 +326,8 @@
 
   .timeline__title {
     margin: 0;
-    margin-bottom: 5px;
+    margin-bottom: 2px;
+    padding-top: 3px;
     color: var(--content);
     font-family: var(--font-family-teshu);
     font-size: 16px;
@@ -403,7 +406,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0.68rem 0;
+    padding: 0.8rem 0;
   }
 
   .timeline__time-text {
@@ -441,7 +444,8 @@
 
   .timeline__title {
     margin: 0;
-    margin-bottom: 5px;
+    margin-bottom: 2px;
+    padding-top: 3px;
     color: var(--content);
     font-family: var(--font-family-teshu);
     font-size: 16px;
@@ -520,7 +524,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0.68rem 0;
+    padding: 0.8rem 0;
   }
 
   .timeline__time-text {
@@ -558,7 +562,8 @@
 
   .timeline__title {
     margin: 0;
-    margin-bottom: 5px;
+    margin-bottom: 2px;
+    padding-top: 3px;
     color: var(--content);
     font-family: var(--font-family-teshu);
     font-size: 16px;
@@ -632,7 +637,7 @@
     display: inline-block;
     width: calc(50% - 0.4rem);
     background: #fbf7f4;
-    border-radius: 10px;
+    border-radius: 12px;
     padding: 16px 16px 40px 16px;
     border: 1px solid #ffffff;
     margin-right: 1rem;
@@ -680,7 +685,7 @@
   }
 
   .dark .todo-title {
-    color: #bfa288;
+    color: #d09866;
   }
 
   li.done {
@@ -688,7 +693,7 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    padding: 16px 0;
+    padding: 12px 0;
     opacity: 0.8;
     text-decoration: line-through;
   }
@@ -697,7 +702,7 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    padding: 16px 0;
+    padding: 12px 0;
   }
 
   .icon-undo {
@@ -713,7 +718,7 @@
   }
 
   .dark .icon-done {
-    opacity: 0.5;
+    opacity: 0.65;
   }
 
   svg {
@@ -735,12 +740,12 @@
     font-size: 14px;
     line-height: 1.6;
     color: #82644b;
-    opacity: 0.65;
+    opacity: 0.75;
     text-decoration-line: line-through;
   }
 
   .dark .done-content {
-    opacity: 0.85;
+    opacity: 1;
   }
 
   .todo-head {
@@ -759,11 +764,11 @@
     font-weight: 400;
     font-size: 24px;
     line-height: 32px;
-    transform: translateX(8px) translateY(-38px) rotate(35deg) scale(1)
+    transform: translateX(8px) translateY(-36px) rotate(35deg) scale(1)
       skew(1deg);
-    -webkit-transform: translateX(8px) translateY(-38px) rotate(35deg) scale(1)
+    -webkit-transform: translateX(8px) translateY(-36px) rotate(35deg) scale(1)
       skew(1deg);
-    -moz-transform: translateX(8px) translateY(-38px) rotate(35deg) scale(1)
+    -moz-transform: translateX(8px) translateY(-36px) rotate(35deg) scale(1)
       skew(1deg);
   }
 

@@ -52,7 +52,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0.68rem 0;
+    padding: 0.8rem 0;
   }
 
   .timeline__time-text {
@@ -90,7 +90,8 @@
 
   .timeline__title {
     margin: 0;
-    margin-bottom: 5px;
+    margin-bottom: 2px;
+    padding-top: 3px;
     color: var(--content);
     font-family: var(--font-family-teshu);
     font-size: 16px;
@@ -169,7 +170,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0.68rem 0;
+    padding: 0.8rem 0;
   }
 
   .timeline__time-text {
@@ -207,7 +208,8 @@
 
   .timeline__title {
     margin: 0;
-    margin-bottom: 5px;
+    margin-bottom: 2px;
+    padding-top: 3px;
     color: var(--content);
     font-family: var(--font-family-teshu);
     font-size: 16px;
@@ -286,7 +288,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0.68rem 0;
+    padding: 0.8rem 0;
   }
 
   .timeline__time-text {
@@ -324,7 +326,8 @@
 
   .timeline__title {
     margin: 0;
-    margin-bottom: 5px;
+    margin-bottom: 2px;
+    padding-top: 3px;
     color: var(--content);
     font-family: var(--font-family-teshu);
     font-size: 16px;
@@ -403,7 +406,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0.68rem 0;
+    padding: 0.8rem 0;
   }
 
   .timeline__time-text {
@@ -441,7 +444,8 @@
 
   .timeline__title {
     margin: 0;
-    margin-bottom: 5px;
+    margin-bottom: 2px;
+    padding-top: 3px;
     color: var(--content);
     font-family: var(--font-family-teshu);
     font-size: 16px;
@@ -520,7 +524,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0.68rem 0;
+    padding: 0.8rem 0;
   }
 
   .timeline__time-text {
@@ -558,7 +562,8 @@
 
   .timeline__title {
     margin: 0;
-    margin-bottom: 5px;
+    margin-bottom: 2px;
+    padding-top: 3px;
     color: var(--content);
     font-family: var(--font-family-teshu);
     font-size: 16px;
@@ -632,7 +637,7 @@
     display: inline-block;
     width: calc(50% - 0.4rem);
     background: #fbf7f4;
-    border-radius: 10px;
+    border-radius: 12px;
     padding: 16px 16px 40px 16px;
     border: 1px solid #ffffff;
     margin-right: 1rem;
@@ -680,7 +685,7 @@
   }
 
   .dark .todo-title {
-    color: #bfa288;
+    color: #d09866;
   }
 
   li.done {
@@ -688,7 +693,7 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    padding: 16px 0;
+    padding: 12px 0;
     opacity: 0.8;
     text-decoration: line-through;
   }
@@ -697,7 +702,7 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    padding: 16px 0;
+    padding: 12px 0;
   }
 
   .icon-undo {
@@ -713,7 +718,7 @@
   }
 
   .dark .icon-done {
-    opacity: 0.5;
+    opacity: 0.65;
   }
 
   svg {
@@ -735,12 +740,12 @@
     font-size: 14px;
     line-height: 1.6;
     color: #82644b;
-    opacity: 0.65;
+    opacity: 0.75;
     text-decoration-line: line-through;
   }
 
   .dark .done-content {
-    opacity: 0.85;
+    opacity: 1;
   }
 
   .todo-head {
@@ -759,11 +764,11 @@
     font-weight: 400;
     font-size: 24px;
     line-height: 32px;
-    transform: translateX(8px) translateY(-38px) rotate(35deg) scale(1)
+    transform: translateX(8px) translateY(-36px) rotate(35deg) scale(1)
       skew(1deg);
-    -webkit-transform: translateX(8px) translateY(-38px) rotate(35deg) scale(1)
+    -webkit-transform: translateX(8px) translateY(-36px) rotate(35deg) scale(1)
       skew(1deg);
-    -moz-transform: translateX(8px) translateY(-38px) rotate(35deg) scale(1)
+    -moz-transform: translateX(8px) translateY(-36px) rotate(35deg) scale(1)
       skew(1deg);
   }
 
@@ -1178,22 +1183,22 @@ FROM umputun/remark42
       <pubDate>Fri, 21 Apr 2023 16:05:44 +0800</pubDate>
       
       <guid>https://wananaiko.com/docs/apr0421/</guid>
-      <description>设计参考 考虑到近期副业的项目有很多功能要优化设计，为了节省调研的时间，需要找一些设计图来参考功能设计。最近一直在关注的 nicelydone.club 刚好满足了这一需求，</description>
+      <description>设计参考 考虑到近期有很多功能需要优化设计，为了节省调研时间，我决定寻找一些参考设计图。幸运的是，我发现了 nicelydone.club，这个</description>
       <content:encoded><![CDATA[<h3 id="设计参考">设计参考</h3>
-<p>考虑到近期副业的项目有很多功能要优化设计，为了节省调研的时间，需要找一些设计图来参考功能设计。最近一直在关注的 nicelydone.club 刚好满足了这一需求，网站按应用、页面类型、组件类型、操作流程4大类划分，可以说是非常的细致了，参考的图片内容也非常多，完全符合我的需求。果断订阅了1年，$300 也不便宜，算是近期买的最值的东西。</p>
+<p>考虑到近期有很多功能需要优化设计，为了节省调研时间，我决定寻找一些参考设计图。幸运的是，我发现了 nicelydone.club，这个网站按应用、页面类型、组件类型、操作流程 4 大类划分，提供了丰富的参考图片，非常符合我的需求。我订阅了一年的服务，虽然价格高达$300，但我认为这是我最值得购买的东西之一。</p>
 <p>再加上免费的 <a href="https://refero.design/" target="_blank" rel="noopener">refero.design</a> 和 <a href="https://practicedesign.io/" target="_blank" rel="noopener">practicedesign.io</a>，完全够用了。另外，最近发现 <a href="https://layers.to/" target="_blank" rel="noopener">layers.to</a> Discover 分类下的设计图质量很高，经常也会从上面保存一些高质量的图片作为以后的参考。</p>
-<p>一开始为了查找方便，甚至使用脚本来批量下载 nicelydone 和  refero.design 的图片到 Eagle 中。后来越下越觉得没有必要，nicelydone 的图片虽然多，但是很多界面图是类似的，都整理到 Eagle 中也没有必要，后期找图反而麻烦。但是在 Eagle 中设置好标签还是很有必要的。为此，我对标签按 “页面”、“组件”、“模块”分别整理了近100个标签。以后也只会将精选的图片保存到 Eagle 中。</p>
+<p>一开始为了方便查找，我甚至使用脚本批量下载 nicelydone 和 refero.design 的图片到 Eagle 中。但是随着下载数量的增加，我逐渐意识到这样做并没有必要。虽然 nicelydone 提供了很多图片，但是很多界面图其实是类似的，将它们全部整理到 Eagle 中也没有必要，反而会增加查找图片的难度。不过，我仍然按照页面、组件和模块三个分类整理了近 100 个标签，并将精选的图片保存到了 Eagle 中。这样做还是很有必要的。</p>
 <p>
   <img loading="lazy" src="https://images.wananaiko.com/2023/04/nSKPQT.png" alt="使用脚本批量下载图片"  />
-使用脚本批量下载refero.design的图片</p>
+使用脚本批量下载 refero.design 的图片</p>
 <p>
   <img loading="lazy" src="https://images.wananaiko.com/2023/04/GXNhni.png" alt="Eagle里对标签作整理"  />
-Eagle里对标签作整理</p>
+Eagle 里对标签作整理</p>
 <hr>
 <h3 id="录制视频">录制视频</h3>
 <p>在推上看到 <a href="https://www.screen.studio/" target="_blank" rel="noopener">Screen Studio</a> 录制的一些视频非常有趣，于是买了 1 年的 3 个授权，并赠送了 1 个授权给副业的团队。实际工作中其实用到很少，只是觉得这个产品的创意很棒，偶尔需要录制一下演示视频。</p>
-<p><video id="video" controls=""  controlslist="nodownload"   preload="autoplay" allowfullscreen="true" position= "absolute" width="100%" poster="https://images.wananaiko.com/2023/04/rO0kCb.png">       <source id="mp4" src="https://images.wananaiko.com/2023/04/nicelydone.mp4" type="video/mp4" >       </video></p>
-<p>Nicelydone 下午新出了 “Flows” 功能，一开始不支持使用键盘“←”和“→”快捷浏览，给官方反馈建议后，不到2个小时就加上了，不得不说这开发效率真的太高了 👍</p>
+<p><video id="video" controls=""  controlslist="nodownload"   preload="autoplay" allowfullscreen="true" position= "absolute" width="100%" poster="https://images.wananaiko.com/2023/04/rO0kCb.png"> <source id="mp4" src="https://images.wananaiko.com/2023/04/nicelydone.mp4" type="video/mp4" > </video></p>
+<p>Nicelydone 下午新出了 “Flows” 功能，一开始不支持使用键盘“←”和“→”快捷浏览，给官方反馈建议后，不到 2 个小时就加上了，不得不说这开发效率真的太高了 👍</p>
 <hr>
 <h3 id="chatgpt">ChatGPT</h3>
 <p><a href="https://goodsnooze.gumroad.com/l/menugpt?layout=profile&amp;recommended_by=library" target="_blank" rel="noopener">MacGPT</a> 目前为止用过的最好用的 ChatGPT 客户端，除了支持快捷键呼出窗口，最好用的是可以在任何地方使用 <code>/gpt</code> + <code>回车键</code>，直接生成 AI 内容。之前收费 ¥35，现在突然免费了。</p>
@@ -1207,8 +1212,8 @@ Eagle里对标签作整理</p>
 <p>而网页版，目前主要在使用 <a href="https://immersive-translate.owenyoung.com/" target="_blank" rel="noopener">沉浸式翻译</a> ，配合火山翻译的 API，已经足够使用，大部分时候还是浏览器自带翻译用的多。</p>
 <hr>
 <h3 id="midjourney">Midjourney</h3>
-<p>分享朋友整理的 2个 不错的 MJ 内容：</p>
-<p><a href="https://rnrjayevh1.feishu.cn/wiki/wikcnHF7TTmr35bOwydpW4D3vbh?table=tbl9uQQLonUuCClB&amp;view=vewhjOF3qU" target="_blank" rel="noopener">‬⁡⁣⁤﻿‌⁢⁤⁢⁡‍⁣⁤‍⁡‬⁡⁤﻿⁡‬‍﻿⁣⁡‌⁣⁤⁢‍﻿‍⁡‬⁡⁡Prompt全览</a></p>
+<p>分享朋友整理的 2 个 不错的 MJ 内容：</p>
+<p><a href="https://rnrjayevh1.feishu.cn/wiki/wikcnHF7TTmr35bOwydpW4D3vbh?table=tbl9uQQLonUuCClB&amp;view=vewhjOF3qU" target="_blank" rel="noopener">‬⁡⁣⁤﻿‌⁢⁤⁢⁡‍⁣⁤‍⁡‬⁡⁤﻿⁡‬‍﻿⁣⁡‌⁣⁤⁢‍﻿‍⁡‬⁡⁡Prompt 全览</a></p>
 <p><a href="https://ixytmi9pq4.feishu.cn/sheets/shtcnphfw6fyRjh3ZEirkv4iFOc" target="_blank" rel="noopener">‌‬⁢‌﻿‌⁣‍⁡‬‬⁡⁤‌‬﻿⁢⁤‍⁣⁡⁣‌﻿‬﻿﻿⁡‬⁣‍⁢⁣﻿‬⁣﻿⁢‌⁤⁣⁡Midjourney 关键词整理</a></p>
 <p>生成的图片质量很高，可以用在一些 slide project 中，也算是提高了一些出图的效率。</p>
 ]]></content:encoded>
@@ -1220,9 +1225,9 @@ Eagle里对标签作整理</p>
       <pubDate>Fri, 10 Mar 2023 20:23:45 +0800</pubDate>
       
       <guid>https://wananaiko.com/docs/huntly/</guid>
-      <description>1、Docker 部署 安装Docker后，在终端里以 root 身份运行： docker run -d --name huntly -p 9090:80 -v /opt/huntly:/data lcomplete/huntly:0.1.0 查看是否安装成功：docker ps 2、安装 Java11 yum install java-11-openjdk -y 检查 Java 版</description>
+      <description>1、Docker 部署 安装 Docker 后，在终端里以 root 身份运行： docker run -d --name huntly -p 9090:80 -v /opt/huntly:/data lcomplete/huntly:0.1.0 查看是否安装成功：docker ps 2、安装 Java11 yum install java-11-openjdk -y 检查 Java 版本号是否为</description>
       <content:encoded><![CDATA[<h4 id="1docker-部署">1、Docker 部署</h4>
-<p>安装Docker后，在终端里以 root 身份运行：</p>
+<p>安装 Docker 后，在终端里以 root 身份运行：</p>
 <pre tabindex="0"><code>docker run -d --name huntly -p 9090:80 -v /opt/huntly:/data lcomplete/huntly:0.1.0
 </code></pre><p>查看是否安装成功：<code>docker ps</code></p>
 <h4 id="2安装-java11">2、安装 Java11</h4>
@@ -1235,7 +1240,7 @@ OpenJDK Runtime Environment (build 11.0.18+10-post-Debian-1deb10u1)
 OpenJDK 64-Bit Server VM (build 11.0.18+10-post-Debian-1deb10u1, mixed mode, sharing)
 </code></pre><h4 id="3安装-huntly">3、安装 huntly</h4>
 <pre tabindex="0"><code>useradd -r -s /sbin/nologin huntly
-</code></pre><pre tabindex="0"><code>mkdir -p /opt/huntly 
+</code></pre><pre tabindex="0"><code>mkdir -p /opt/huntly
 </code></pre><pre tabindex="0"><code>wget -P /opt/huntly https://github.com/lcomplete/huntly/releases/download/0.1.0/huntly-server-0.1.0-SNAPSHOT.jar
 </code></pre><p>上面这一步，如何是国内的服务器遇到下载失败的话，手动下载文件上传至目录 <code>/opt/huntly</code> 下面。</p>
 <p>终端里运行 <code>chown -R huntly: /opt/huntly</code></p>
@@ -1260,10 +1265,10 @@ WantedBy=multi-user.target
 </code></pre><pre tabindex="0"><code>systemctl enable huntly
 </code></pre><pre tabindex="0"><code>journalctl -n 20 -u huntly
 </code></pre><h4 id="5反向代理">5、反向代理</h4>
-<p>在宝塔“网站” 里新建你的 huntly 站点，在反向代理里设置目标URL 为：<code>http://127.0.0.1:9090</code></p>
+<p>在宝塔“网站” 里新建你的 huntly 站点，在反向代理里设置目标 URL 为：<code>http://127.0.0.1:9090</code></p>
 <p>这个时候你已经可以用你的服务器 IP 加端口号访问了，然后就是域名解析了。</p>
-<p>如果你使用 Cloudflare  接管了域名管理，可以使用 Cloudflare 自带的 SSL 证书。在Cloudflare - SSL/TLS - 源证书，创建证书，将申请后的证书 PEM 和 KEY 填到宝塔后对应域名的 SSL 中并保存。</p>
-<p>访问遇到520错误，在宝塔软件商店里安装  Nginx 免费防火墙，在对应的设置 - 全局配置里“导入” IP 白名单。</p>
+<p>如果你使用 Cloudflare 接管了域名管理，可以使用 Cloudflare 自带的 SSL 证书。在 Cloudflare - SSL/TLS - 源证书，创建证书，将申请后的证书 PEM 和 KEY 填到宝塔后对应域名的 SSL 中并保存。</p>
+<p>访问遇到 520 错误，在宝塔软件商店里安装 Nginx 免费防火墙，在对应的设置 - 全局配置里“导入” IP 白名单。</p>
 <pre tabindex="0"><code>103.21.244.0/22
 103.22.200.0/22
 103.31.4.0/22
@@ -1284,43 +1289,45 @@ WantedBy=multi-user.target
 <p>建议在 ARC 浏览器里使用，置顶你的 huntly 站点，配合 ARC 的 Little Arc 小窗口，可以速度方便的查看内容。</p>
 <p>同步 Twitter 内容到 huntly 里需要去<a href="https://github.com/lcomplete/huntly/" target="_blank" rel="noopener">官方的 GitHub</a> 下载安装插件，并设置你的 huntly 地址。</p>
 <p>配合 “My Style” 浏览器插件，可以自定义一些样式：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="p">.</span><span class="nc">Tweet_mainColor__hOlrk</span><span class="o">,</span> <span class="p">.</span><span class="nc">Tweet_mainColor__hOlrk</span> <span class="nt">a</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="k">color</span><span class="p">:</span> <span class="mh">#0f1419</span><span class="mi">65</span><span class="cp">!important</span><span class="p">;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="p">.</span><span class="nc">Tweet_mainColor__hOlrk</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nc">Tweet_mainColor__hOlrk</span> <span class="nt">a</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">color</span><span class="p">:</span> <span class="mh">#0f1419</span><span class="mi">65</span> <span class="cp">!important</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="nt">span</span><span class="p">.</span><span class="nc">font-bold</span><span class="p">.</span><span class="nc">Tweet_mainColor__hOlrk</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="k">font-weight</span><span class="p">:</span> <span class="mi">400</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">font-weight</span><span class="p">:</span> <span class="mi">400</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nc">Tweet_secondaryColor__ubVWz</span> <span class="nt">a</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="k">color</span><span class="p">:</span> <span class="mh">#0f1419</span><span class="mi">65</span><span class="cp">!important</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">color</span><span class="p">:</span> <span class="mh">#0f1419</span><span class="mi">65</span> <span class="cp">!important</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="nt">pre</span><span class="p">.</span><span class="nc">break-all</span><span class="p">.</span><span class="nc">break-words</span><span class="p">.</span><span class="nc">whitespace-pre-wrap</span><span class="p">.</span><span class="nc">mt-0</span><span class="p">.</span><span class="nc">mb-1</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl"><span class="k">font-family</span><span class="p">:</span> <span class="o">-</span><span class="n">apple-system</span><span class="p">,</span><span class="n">BlinkMacSystemFont</span><span class="p">,</span><span class="n">Helvetica</span><span class="p">,</span><span class="n">helvetica</span> <span class="n">neue</span><span class="p">,</span><span class="n">segoe</span> <span class="n">ui</span><span class="p">,</span><span class="n">Roboto</span><span class="p">,</span><span class="n">Oxygen</span><span class="p">,</span><span class="n">Ubuntu</span><span class="p">,</span><span class="n">Cantarell</span><span class="p">,</span><span class="kc">open</span> <span class="n">sans</span><span class="p">,</span><span class="kc">sans-serif</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="k">font-size</span><span class="p">:</span> <span class="mi">15</span><span class="kt">px</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="k">line-height</span><span class="p">:</span> <span class="mf">1.5</span><span class="kt">em</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="k">word-break</span><span class="p">:</span> <span class="kc">break-word</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="k">background</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">theme</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">    <span class="k">letter-spacing</span><span class="p">:</span> <span class="mf">.01</span><span class="kt">em</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">font-family</span><span class="p">:</span> <span class="o">-</span><span class="n">apple-system</span><span class="p">,</span> <span class="n">BlinkMacSystemFont</span><span class="p">,</span> <span class="n">Helvetica</span><span class="p">,</span> <span class="n">helvetica</span> <span class="n">neue</span><span class="p">,</span> <span class="n">segoe</span>
+</span></span><span class="line"><span class="cl">      <span class="n">ui</span><span class="p">,</span> <span class="n">Roboto</span><span class="p">,</span> <span class="n">Oxygen</span><span class="p">,</span> <span class="n">Ubuntu</span><span class="p">,</span> <span class="n">Cantarell</span><span class="p">,</span> <span class="kc">open</span> <span class="n">sans</span><span class="p">,</span> <span class="kc">sans-serif</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">font-size</span><span class="p">:</span> <span class="mi">15</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">line-height</span><span class="p">:</span> <span class="mf">1.5</span><span class="kt">em</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">word-break</span><span class="p">:</span> <span class="kc">break-word</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">background</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">theme</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="k">letter-spacing</span><span class="p">:</span> <span class="mf">0.01</span><span class="kt">em</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c">/*Twitter头像透明度*/</span>
 </span></span><span class="line"><span class="cl"><span class="nt">img</span><span class="p">.</span><span class="nc">MuiCardMedia-root</span><span class="p">.</span><span class="nc">MuiCardMedia-media</span><span class="p">.</span><span class="nc">MuiCardMedia-img</span><span class="p">.</span><span class="nc">css-1wh7jvw</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="k">opacity</span><span class="p">:</span> <span class="mf">0.5</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">opacity</span><span class="p">:</span> <span class="mf">0.5</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c">/*Twitter互动信息透明度*/</span>
 </span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nc">flex</span><span class="p">.</span><span class="nc">items-center</span><span class="p">.</span><span class="nc">justify-between</span><span class="p">.</span><span class="nc">mt-1</span><span class="p">.</span><span class="nc">text-</span><span class="err">\</span><span class="o">[</span><span class="nt">15px</span><span class="err">\</span><span class="o">]</span><span class="p">.</span><span class="nc">MuiBox-root</span><span class="p">.</span><span class="nc">css-0</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="k">opacity</span><span class="p">:</span> <span class="mf">0.5</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">opacity</span><span class="p">:</span> <span class="mf">0.5</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nc">flex</span><span class="p">.</span><span class="nc">items-center</span><span class="p">.</span><span class="nc">font-bold</span><span class="p">.</span><span class="nc">text-</span><span class="err">\</span><span class="o">[</span><span class="nt">14px</span><span class="err">\</span><span class="o">]</span><span class="p">.</span><span class="nc">Tweet_secondaryColor__ubVWz</span><span class="p">.</span><span class="nc">mb-1</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="k">font-weight</span><span class="p">:</span> <span class="mi">400</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">font-weight</span><span class="p">:</span> <span class="mi">400</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></div><h4 id="7更新-huntly">7、更新 Huntly</h4>
 <p>在更新 Docker 前，需要先暂停 huntly 服务：<code>sudo systemctl stop huntly</code></p>
-<p>然后删除 Docker 容器和镜像，接着拉取最新的 huntly 代码。</p>
+<p>然后删除 Docker 容器和镜像，接着拉取最新的 huntly 代码 (下面的 0.3.0 以线上最新版为准)。</p>
 <p><code>docker run -d --name huntly -p 9090:80 -v /opt/huntly:/data lcomplete/huntly:0.3.0</code></p>
 <p>最后再重启 huntly 服务：<code>sudo systemctl restart huntly</code></p>
 ]]></content:encoded>
@@ -1332,16 +1339,16 @@ WantedBy=multi-user.target
       <pubDate>Wed, 08 Feb 2023 18:48:56 +0800</pubDate>
       
       <guid>https://wananaiko.com/docs/about-chatgpt/</guid>
-      <description>最近，关于 ChatGPT 的讨论很激烈，在各种圈子中获得关注。然而，一些恐慌的声音出现了，暗示 ChatGPT 可以取代文案，开发、客服、销售甚至律师人员。这使得许多人思</description>
-      <content:encoded><![CDATA[<p>最近，关于 ChatGPT 的讨论很激烈，在各种圈子中获得关注。然而，一些恐慌的声音出现了，暗示 ChatGPT 可以取代文案，开发、客服、销售甚至律师人员。这使得许多人思考一个问题：自己的工作是否会被 AI 所取代？</p>
-<p>人们对于可能取代他们职业的新技术感到害怕是可以理解的。ChatGPT（以下部分使用 “AI” 代替） 仍处于早期发展阶段，尚不能完全取代这些领域的工作者。尽管 AI 可以把重复的工作减轻，但是它们仍然无法取代人类工作，因为人类的创造力是无法比拟的。人类拥有判断力，可以解决复杂的问题，而 AI 则无法做到这一点。AI 也无法替代人类的社交技能，比如沟通，解决矛盾，理解内容，以及更好的表达感受。AI 可以模仿人类的行为，但是它们却无法替代真正的人类。</p>
-<p>AI 可以帮助专业人士更好地完成他们的工作，提高工作效率。它们可以用来执行重复的任务，从而让工作者有更多的时间来完成更复杂的任务。AI 也可以帮助工作者快速获取和理解大量的信息，并根据这些信息快速做出决定。此外，AI 也可以帮助工作者更好地与客户沟通，以及更加准确地满足客户的需求。AI 的使用更加实用，能够节省许多时间，并且更容易操作。</p>
-<p>从 ChatGPT 发布初期使用到现在，对我的帮助真的很大，下面例举一些常见的使用场景：</p>
+      <description>最近关于ChatGPT的讨论非常激烈，各种圈子都在关注它。然而，一些人开始恐慌，暗示ChatGPT可以取代文案工作者、开发人员、客服人员、销</description>
+      <content:encoded><![CDATA[<p>最近关于ChatGPT的讨论非常激烈，各种圈子都在关注它。然而，一些人开始恐慌，暗示ChatGPT可以取代文案工作者、开发人员、客服人员、销售人员甚至律师。这使得许多人开始思考一个问题：他们的工作是否会被AI所取代？</p>
+<p>人们对于可能取代他们职业的新技术感到害怕是可以理解的。然而，目前ChatGPT还处于早期的发展阶段，尚不能完全取代这些领域的工作者。尽管AI可以减轻重复性工作，但它们仍然无法取代人类工作，因为人类的创造力是无法比拟的。人类拥有判断力，可以解决复杂的问题，而AI则无法做到这一点。AI也无法替代人类的社交技能，如沟通、解决矛盾、理解内容以及更好地表达感情。AI可以模仿人类行为，但它们无法取代真正的人类。</p>
+<p>AI可以帮助专业人士更好地完成工作、提高工作效率。它们可以用来执行重复性任务，从而让工作者有更多的时间来完成更复杂的任务。AI也可以帮助工作者快速获取和理解大量的信息，然后根据这些信息迅速做出决策。此外，AI还可以帮助工作者更好地与客户沟通，以及更准确地满足客户需求。AI的使用更加实用、可以节省大量时间，且更易于操作。</p>
+<p>从ChatGPT发布初期开始使用，对我帮助非常大，下面例举一些常见的使用场景：</p>
 <ul>
 <li><strong>设计</strong></li>
 </ul>
 <ol>
-<li>辅助生成文案：在界面设计中经常需要填充一些文案，为了让应用中的文案更接近真实性，我通常会通过 AI 来生成一些符合产品定位的文案。</li>
+<li>辅助生成文案：在界面设计中经常需要填充一些文案，我通常会通过AI来生成一些符合产品定位的文案。</li>
 <li>概述产品包含的功能点：比如问它，设计一个“社交App”需要包含哪些功能点。</li>
 </ol>
 <ul>
@@ -1349,24 +1356,24 @@ WantedBy=multi-user.target
 </ul>
 <ol>
 <li>Bug修复：把控制台中的错误代码发送给它，并询问如何修复。</li>
-<li>写代码的能力：让它写一个小功能，直接使用或者在它提供的代码基础上进行修改。</li>
-<li>开发文档指南：询问不懂的指令，或者让它提供某个功能的指令。</li>
+<li>写代码能力：让它写一个小功能，直接使用或在它提供的代码基础上进行修改。</li>
+<li>开发文档指南：询问不懂的指令，或让它提供某个功能的指令。</li>
 </ol>
 <ul>
 <li><strong>生活</strong></li>
 </ul>
 <ol>
 <li>
-<p>生活指南：日常生活中的任何问题都可以问它，体验甚至要优于搜索引擎。因为 AI 的回答准确度普遍较高，而且经常会对答案的内容进行总结，条理清晰，间接的节省了我的时间。</p>
+<p>日常生活中的任何问题都可以问它，体验甚至要优于搜索引擎。因为AI的回答准确度普遍较高，而且经常会对答案的内容进行总结，条理清晰，间接的节省了时间。</p>
 </li>
 <li>
-<p>角色扮演：AI 可以给出角色对应的想法，提供独特的视角，帮助你站在另一种角度去看待和解决问题。</p>
+<p>色扮演：AI可以给出角色对应的想法，提供独特的视角，帮助你站在另一种角度去看待和解决问题。</p>
 </li>
 <li>
 <p>辅助写各种文档，比如年终总结、工作计划、各种方案书等。</p>
 </li>
 </ol>
-<p>最近一两个月使用下来，ChatGPT 网页版遇到报错的概率越来越高，使用体验明显下降。个中原因，大家也明白，AI 算力本身就不便宜，能提供免费版给大家体验已经是莫大的仁慈了。</p>
+<p>然而，最近1-2个月使用ChatGPT的网页版，遇到报错的概率越来越高，使用体验明显下降。个中原因，大家也知道，AI算力本身就不便宜，所以能提供免费版给大家使用已经是莫大的仁慈了。</p>
 <p>可以通过使用第三方客户端<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> 来改善这一体验。</p>
 <p>另外，使用 ChatGPT 搭建一个微信聊天机器人<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>，也挺有意思。可以在服务器上的运行环境中，挂一个微信小号试试。</p>
 <p>关于 ChatGPT 更多的玩法介绍，可以看看这篇<a href="https://github.com/PlexPt/awesome-chatgpt-prompts-zh" target="_blank" rel="noopener">《ChatGPT 中文调教指南，怎么让它听你的话》</a> 。</p>
