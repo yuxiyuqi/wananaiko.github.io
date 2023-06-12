@@ -1,15 +1,16 @@
-{{- define "title" }}{{ .Title }} - {{ .Site.Title }}{{ end -}} {{- define
-"content" -}} {{- $params := .Scratch.Get "params" -}} {{- $toc := $params.toc
--}} {{- if eq $toc true -}} {{- $toc = .Site.Params.page.toc | default dict -}}
-{{- else if eq $toc false -}} {{- $toc = dict "enable" false -}} {{- end -}}
+{{- define "main" }} {{ $moment := resources.Get "moment.min.js" }}
 
 <meta name="referrer" content="no-referrer" />
 <link rel="stylesheet" href="/assets/APlayer.min.css?v=1.10.1" />
 
-<article class="page single special">
-  <h1 class="single-title animate__animated animate__pulse animate__faster">
-    {{ .Title }}
-  </h1>
+<header class="page-header">
+  <h1>{{ .Title }}</h1>
+  {{- if .Description }}
+  <div class="post-description">{{ .Description }}</div>
+  {{- end }}
+</header>
+
+<section id="main" class="container slide-enter-content">
   <div id="content" class="content">
     <div class="count">
       <blockquote>
@@ -29,7 +30,7 @@
       <!-- 嘀咕加载在这里 -->
     </div>
   </div>
-</article>
+</section>
 
 <script type="text/javascript">
   var memos = {
