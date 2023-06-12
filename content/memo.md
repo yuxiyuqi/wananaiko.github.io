@@ -1,6 +1,6 @@
 ---
 title: "嘀咕"
-layout: "memos"
-type: "memos"
+layout: "memo"
+type: "memo"
 comment: false
 ---
