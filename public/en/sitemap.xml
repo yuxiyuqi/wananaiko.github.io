@@ -280,7 +280,9 @@
   </url><url>
     <loc>https://wananaiko.com/hardware/</loc>
   </url><url>
-    <loc>https://wananaiko.com/memos/</loc>
+    <loc>https://wananaiko.com/memo/</loc>
+  </url><url>
+    <loc>https://wananaiko.com/memo/</loc>
   </url><url>
     <loc>https://wananaiko.com/newsletter/archives/</loc>
   </url><url>
@@ -313,7 +315,5 @@
                 />
   </url><url>
     <loc>https://wananaiko.com/stack/</loc>
-  </url><url>
-    <loc>https://wananaiko.com/memo/</loc>
   </url>
 </urlset>
