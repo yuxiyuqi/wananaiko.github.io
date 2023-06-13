@@ -786,7 +786,7 @@ h6:hover .anchor {
 .back-word {
     margin-left: 0.5rem;
     font-size: 1rem;
-    color: var(--secondary);
+    color: var(--tertiary);
 }
 
 .return-back:hover .back-icon {
