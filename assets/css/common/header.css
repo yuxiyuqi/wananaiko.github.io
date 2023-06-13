@@ -186,9 +186,15 @@ body:not(.dark) #sun {
 @media (max-width: 767px) {
     .nav {
         border: none;
-        border-radius: none;
+        border-radius: unset;
         margin-top: 0;
         background-image: none;
         box-shadow: none;
+    }
+
+    .dark .nav {
+        border: none;
+        border-radius: unset;
+        margin-top: 0;
     }
 }
