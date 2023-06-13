@@ -2,11 +2,28 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    max-width: calc(var(--nav-width) + var(--gap) * 2);
+    max-width: calc(var(--main-width) + var(--gap) * 2);
     margin-inline-start: auto;
     margin-inline-end: auto;
-    line-height: var(--header-height);
+    line-height: 56px;
+    margin-top: 1rem;
+    z-index: 999;
+    pointer-events: auto;
+    backdrop-filter: blur(12px);
+    background-image: linear-gradient(to bottom, rgba(250, 250, 250, .7), rgba(255, 255, 255, .9));
+    border: 0 solid #E5E7EB;
+    border-radius: 9999px;
+    box-shadow: #FFFFFF 0 0 0 0, rgba(24, 24, 27, 0.05) 0 0 0 1px, rgba(39, 39, 42, 0.05) 0 10px 15px -3px, rgba(39, 39, 42, 0.05) 0 4px 6px -4px;
 }
+
+.dark .nav {
+    backdrop-filter: blur(12px);
+    background-image: linear-gradient(to bottom, rgba(24, 24, 27, .7), rgba(39, 39, 42, .9));
+    border: 0 solid #E5E7EB;
+    border-radius: 9999px;
+    box-shadow: #FFFFFF 0 0 0 0, rgba(244, 244, 245, 0.1) 0 0 0 1px, rgba(39, 39, 42, 0.05) 0 10px 15px -3px, rgba(39, 39, 42, 0.05) 0 4px 6px -4px;
+}
+
 .nav ul {
     margin: 0;
     padding: 0;
@@ -27,7 +44,7 @@
 }
 
 .logo a {
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 700;
 }
 
@@ -48,13 +65,14 @@
     /* margin-left: 2px; */
 }
 
-/* 点击button id="theme-toggle"后,为svg id="sun"和svg id="moon"添加动画效果,sun和moon出现之前:缩小并且带有一些旋转角度,出现之后恢复默认大小和默认角度,带有旋转动画.加载网页默认是没有动画效果*/#sun,
+/* 点击button id="theme-toggle"后,为svg id="sun"和svg id="moon"添加动画效果,sun和moon出现之前:缩小并且带有一些旋转角度,出现之后恢复默认大小和默认角度,带有旋转动画.加载网页默认是没有动画效果*/
+#sun,
 #sun,
 #moon {
     transform-origin: center center;
     animation: scaleDown 0.3s ease-out;
     transition-duration: .3s;
-    transition-timing-function: cubic-bezier(.4,0,.2,1);
+    transition-timing-function: cubic-bezier(.4, 0, .2, 1);
 }
 
 #sun {
@@ -115,6 +133,7 @@ body:not(.dark) #sun {
     display: inline-block;
     line-height: 1.5em;
 }
+
 #menu a:hover {
     color: var(--link-hover-color);
 }
@@ -122,6 +141,7 @@ body:not(.dark) #sun {
 #menu a.active:hover {
     color: var(--link-hover-color);
 }
+
 #menu .active {
     color: var(--link-hover-color);
     box-shadow: 0 2px 0 var(--link-hover-color);
@@ -131,6 +151,7 @@ body:not(.dark) #sun {
 #menu .external-link {
     position: relative;
 }
+
 #menu .external-link svg {
     width: 13px;
     height: auto;
@@ -159,4 +180,15 @@ body:not(.dark) #sun {
 
 .logo-switches {
     flex-wrap: inherit;
+}
+
+/* 设置手机端的样式 */
+@media (max-width: 767px) {
+    .nav {
+        border: none;
+        border-radius: none;
+        margin-top: 0;
+        background-image: none;
+        box-shadow: none;
+    }
 }
