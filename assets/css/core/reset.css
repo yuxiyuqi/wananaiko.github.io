@@ -239,13 +239,19 @@ img {
 }
 
 .header {
-    /*border-bottom: 1px solid var(--border);*/
-    position: sticky;
+    position: fixed;
     z-index: 400;
     top: 0;
+    left: 0;
     opacity: .98;
     backdrop-filter: blur(6px);
-    background-color: var(--blur-bg);
+    width: 100%;
+    transition: transform 0.3s ease-in-out;
+}
+
+.hidden {
+    top: -100px;
+    transition: top 0.3s;
 }
 
 /* 去掉滚动条背景色,针对 WebKit 内核的浏览器（如 Chrome、Safari） */
