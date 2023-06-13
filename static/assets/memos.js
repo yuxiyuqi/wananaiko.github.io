@@ -220,6 +220,7 @@ function updateHTMl(data) {
       moment(data[i].createdTs * 1000)
           .locale()
           .startOf('day').fromNow()
+          .calendar()
         .format("lll") +
       "</small></div>" +
       memoContREG +
