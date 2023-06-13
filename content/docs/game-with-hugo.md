@@ -5,7 +5,7 @@ author: "wananaiko"
 tags:
   - Hugo
   - PaperModX
-  - theme
+  - Theme
 draft: false
 ---
 
