@@ -4,11 +4,12 @@
 
 .post-entry {
     position: relative;
-    margin-bottom: var(--gap);
+    /*margin-bottom: var(--gap);*/
     border-radius: var(--radius);
-    border-bottom: 0.5px solid var(--tertiary-bg);
-    padding-bottom: var(--gap);
+    /*border-bottom: 0.5px solid var(--tertiary-bg);*/
+    padding-bottom: 8px;
 }
+
 .post-entry:hover .entry-header h2 {
     color: var(--content);
     box-shadow: 0 1px 0 var(--content);
@@ -31,7 +32,7 @@
 }
 
 .entry-content {
-    margin: 12px 0;
+    margin: .8rem 0 0.5rem;
     color: var(--secondary);
     font-size: 14px;
     line-height: 1.6;
@@ -43,7 +44,7 @@
 
 .entry-footer,
 .entry-footer span > a {
-    color: var(--secondary);
+    color: var(--tertiary);
     font-size: 13px;
 }
 
@@ -77,3 +78,92 @@
     color: var(--secondary);
     box-shadow: 0 1px 0 var(--primary);
 }
+
+.post-tags > a {
+    font-size: 13px;
+    color: var(--tertiary);
+    border: 1px solid var(--tertiary-bg);
+    padding: 0.1rem 0.5rem;
+    border-radius: 999px;
+    margin: 0 0.5rem 0 0;
+}
+
+/* 设置 PC 端的样式 */
+@media (min-width: 768px) {
+    .post-tags > a {
+        font-size: 13px;
+        color: var(--tertiary);
+        border: 1px solid var(--tertiary-bg);
+        padding: 0.1rem 0.5rem;
+        border-radius: 999px;
+        margin: 0 0.5rem 0 0;
+    }
+
+    .post-time {
+        color: var(--secondary);
+        font-size: 14px;
+        box-sizing: border-box;
+        min-width: 6rem;
+        padding-top: 0.2rem;
+    }
+
+    article.post-entry {
+        display: flex;
+        gap: 1rem;
+    }
+
+    .post-container {
+        padding: 1rem;
+    }
+
+    .post-time {
+        color: var(--secondary);
+        font-size: 14px;
+        box-sizing: border-box;
+        min-width: 6rem;
+        padding-top: 1rem;
+    }
+
+    article.post-entry {
+        display: flex;
+        gap: 1rem;
+    }
+
+    .post-container {
+        padding: 1rem;
+    }
+
+    article.post-entry:hover .post-container {
+        background-color: var(--code-bg);
+        border-radius: var(--radius);
+    }
+}
+
+article.post-entry:hover .post-tags > a {
+    color: var(--secondary);
+    border: 1px solid var(--secondary);
+}
+
+.post-tags > a:hover {
+    color: var(--secondary);
+    border: 1px solid var(--secondary);
+}
+
+/* 设置手机端的样式 */
+@media (max-width: 767px) {
+    .post-time {
+        font-size: 14px;
+        color: var(--secondary);
+        margin-bottom: 4px;
+
+    }
+
+    .entry-content {
+        margin: 0.6rem 0 0.3rem rem 0;
+    }
+
+    .post-entry {
+        padding-bottom: 24px;
+    }
+}
+

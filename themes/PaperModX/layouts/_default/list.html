@@ -62,14 +62,26 @@
 {{- end }}
 
 <article class="{{ $class }}">
-  {{- $isHidden := (site.Params.cover.hidden | default site.Params.cover.hiddenInList) }}
+  <div class="post-time">
+    {{- if not .Date.IsZero -}}
+<span class="meta-time">
+  <span
+    >{{ .Date | time.Format (default "January 2, 2006" site.Params.DateFormat)
+    }}</span
+  ></span
+>
+{{- end }}
+  </div>
+
+  <div class="post-container">
+      {{- $isHidden := (site.Params.cover.hidden | default site.Params.cover.hiddenInList) }}
   {{- partial "cover.html" (dict "cxt" . "IsHome" true "isHidden" $isHidden) }}
   <header class="entry-header">
-    <h2>
+    <h3>
       {{- .Title }}
       {{- if .Draft }}<sup><span class="entry-isdraft">&nbsp;&nbsp;[Draft]</span></sup>{{- end }}
       {{- if .Weight }}<sup><span class="entry-isdraft">&nbsp;&nbsp;[Pinned]</span></sup>{{- end }}
-    </h2>
+    </h3>
   </header>
   {{- if (ne (.Param "hideSummary") true) }}
   <section class="entry-content">
@@ -85,6 +97,8 @@
     {{- partial "post_meta.html" . -}}
   </footer>
   {{- end }}
+
+  </div>
   <a class="entry-link" aria-label="post link to {{ .Title | plainify }}" href="{{ .Permalink }}"></a>
 </article>
 {{- end }}
