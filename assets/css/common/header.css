@@ -188,8 +188,6 @@ body:not(.dark) #sun {
         border: none;
         border-radius: unset;
         margin-top: 0;
-        background-image: none;
-        box-shadow: none;
     }
 
     .dark .nav {
