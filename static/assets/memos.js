@@ -217,7 +217,9 @@ function updateHTMl(data) {
       memo.name +
       " · " +
       '</div></div><div></div><small class="memos__date">' +
-      moment(data[i].createdTs * 1000).twitter() +
+      moment(data[i].createdTs * 1000)
+        .twitter()
+        .format("lll") +
       "</small></div>" +
       memoContREG +
       "</div></div></li>";
