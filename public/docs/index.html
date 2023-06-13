@@ -15,8 +15,8 @@
 /> <meta name="description" content="About design, frontend, practical tools"> <meta name="author" content="wananaiko"> <link rel="canonical" href="https://wananaiko.com/docs/">
 <link
   crossorigin="anonymous"
-  href="/assets/css/stylesheet.min.6611660b5bdd423f1b7b4c38cf8a9330e0af3dcc82fbe70e1a9f577708e922fd.css"
-  integrity="sha256-ZhFmC1vdQj8be0w4z4qTMOCvPcyC&#43;&#43;cOGp9XdwjpIv0="
+  href="/assets/css/stylesheet.min.a7e811990b6f0afd1e3191e758146e1bdd443bd24fe15024138182e0fe61c519.css"
+  integrity="sha256-p&#43;gRmQtvCv0eMZHnWBRuG91EO9JP4VAkE4GC4P5hxRk="
   rel="preload stylesheet"
   as="style"
 /> <link rel="icon" href="https://images.wananaiko.com/favicon.ico"> <link rel="apple-touch-icon" href="https://wananaiko.com/apple-touch-icon.png"> <link
@@ -234,7 +234,7 @@ button#theme-toggle {
         <div class="logo">
             <a href="https://wananaiko.com/" accesskey="h" title="wananaiko (Alt + H)">
                     <img src="https://wananaiko.com/images/forge-v2-compat.svg" alt="logo" aria-label="logo"
-                        height="30" width="30">wananaiko</a>
+                        height="24" width="30">wananaiko</a>
             <span class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)">
                     <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
@@ -307,7 +307,26 @@ button#theme-toggle {
             </li>
         </ul>
     </nav>
-</header><main class="main slide-enter-content"> 
+</header>
+
+<script>
+    
+    let lastScrollTop = 0;
+const header = document.querySelector('.header');
+
+window.addEventListener('scroll', () => {
+  let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  if (scrollTop > lastScrollTop && scrollTop > header.offsetHeight){
+    
+    header.classList.add('hidden');
+  } else {
+    
+    header.classList.remove('hidden');
+  }
+  lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; 
+}, false);
+
+</script><main class="main slide-enter-content"> 
 <header class="page-header">
   <h1>
     Article</h1>
@@ -324,833 +343,273 @@ button#theme-toggle {
 
 
 
-<article class="post-entry"> 
+<article class="post-entry">
+  <div class="post-time"><span class="meta-time">
+  <span
+    >2023-05-21</span
+  ></span
+>
+  </div>
+
+  <div class="post-container"> 
   <header class="entry-header">
-    <h2>Hugo 和 PaperModX 的折腾记录
-    </h2>
+    <h3>Hugo 和 PaperModX 的折腾记录
+    </h3>
   </header>
   <section class="entry-content">
     
       <p>最近又折腾了一下博客，起因是上周和 空白生活 要了他的好物页面源码，后来研究了一番，发现用 shortcode 来实现一个页面真的太方便了。这里，再次表达一下感谢。...</p>
     
   </section>
-  <footer class="entry-footer"><span class="meta-item">
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="24"
-    height="24"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    stroke-width="2"
-    stroke-linecap="round"
-    stroke-linejoin="round"
-    class="feather feather-calendar"
-    style="user-select: text"
-  >
-    <rect
-      x="3"
-      y="4"
-      width="18"
-      height="18"
-      rx="2"
-      ry="2"
-      style="user-select: text"
-    ></rect>
-    <line x1="16" y1="2" x2="16" y2="6" style="user-select: text"></line>
-    <line x1="8" y1="2" x2="8" y2="6" style="user-select: text"></line>
-    <line x1="3" y1="10" x2="21" y2="10" style="user-select: text"></line>
-  </svg>
-  <span
-    >2023-05-21</span
-  ></span
-><span class="meta-item">
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="24"
-    height="24"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    stroke-width="2"
-    stroke-linecap="round"
-    stroke-linejoin="round"
-    class="feather feather-tag meta-icon"
-    style="user-select: text"
-  >
-    <path
-      d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"
-      style="user-select: text"
-    ></path>
-    <line x1="7" y1="7" x2="7" y2="7" style="user-select: text"></line>
-  </svg>
-  <span class="post-tags"><a href="https://wananaiko.com/tags/hugo/">Hugo</a></span></span
-><span class="meta-item">
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="24"
-    height="24"
-    viewBox="0 0 24 24"
-    stroke="currentColor"
-    stroke-width="2"
-    fill="none"
-    stroke-linecap="round"
-    stroke-linejoin="round"
-  >
-    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-    <circle cx="12" cy="12" r="9"></circle>
-    <polyline points="12 7 12 12 15 15"></polyline>
-  </svg>
-  <span>3 min</span></span
+  <footer class="entry-footer"><span class="meta-tags">
+  <span class="post-tags"><a href="https://wananaiko.com/tags/hugo/">Hugo</a><a href="https://wananaiko.com/tags/papermodx/">PaperModX</a><a href="https://wananaiko.com/tags/theme/">Theme</a></span></span
 >
 </footer>
+
+  </div>
   <a class="entry-link" aria-label="post link to Hugo 和 PaperModX 的折腾记录" href="https://wananaiko.com/docs/game-with-hugo/"></a>
 </article>
 
-<article class="post-entry"> 
+<article class="post-entry">
+  <div class="post-time"><span class="meta-time">
+  <span
+    >2023-04-25</span
+  ></span
+>
+  </div>
+
+  <div class="post-container"> 
   <header class="entry-header">
-    <h2>Fly.io 部署 Remark42 评论系统
-    </h2>
+    <h3>Fly.io 部署 Remark42 评论系统
+    </h3>
   </header>
   <section class="entry-content">
     
       <p>Remark42 是什么 Remark42 是一个开源、轻量化、自托管的评论服务，支持使用 Google, Twitter, Facebook, Microsoft, GitHub, Yandex, Patreon, Telegram, Email 以及匿名的方式进行评论。 之前使用的是 Waline 博客评论系统，部署在 Vercel 上。个...</p>
     
   </section>
-  <footer class="entry-footer"><span class="meta-item">
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="24"
-    height="24"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    stroke-width="2"
-    stroke-linecap="round"
-    stroke-linejoin="round"
-    class="feather feather-calendar"
-    style="user-select: text"
-  >
-    <rect
-      x="3"
-      y="4"
-      width="18"
-      height="18"
-      rx="2"
-      ry="2"
-      style="user-select: text"
-    ></rect>
-    <line x1="16" y1="2" x2="16" y2="6" style="user-select: text"></line>
-    <line x1="8" y1="2" x2="8" y2="6" style="user-select: text"></line>
-    <line x1="3" y1="10" x2="21" y2="10" style="user-select: text"></line>
-  </svg>
-  <span
-    >2023-04-25</span
-  ></span
-><span class="meta-item">
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="24"
-    height="24"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    stroke-width="2"
-    stroke-linecap="round"
-    stroke-linejoin="round"
-    class="feather feather-tag meta-icon"
-    style="user-select: text"
-  >
-    <path
-      d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"
-      style="user-select: text"
-    ></path>
-    <line x1="7" y1="7" x2="7" y2="7" style="user-select: text"></line>
-  </svg>
+  <footer class="entry-footer"><span class="meta-tags">
   <span class="post-tags"><a href="https://wananaiko.com/tags/remark42/">Remark42</a><a href="https://wananaiko.com/tags/hugo/">Hugo</a></span></span
-><span class="meta-item">
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="24"
-    height="24"
-    viewBox="0 0 24 24"
-    stroke="currentColor"
-    stroke-width="2"
-    fill="none"
-    stroke-linecap="round"
-    stroke-linejoin="round"
-  >
-    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-    <circle cx="12" cy="12" r="9"></circle>
-    <polyline points="12 7 12 12 15 15"></polyline>
-  </svg>
-  <span>5 min</span></span
 >
 </footer>
+
+  </div>
   <a class="entry-link" aria-label="post link to Fly.io 部署 Remark42 评论系统" href="https://wananaiko.com/docs/install-remark42/"></a>
 </article>
 
-<article class="post-entry"> 
+<article class="post-entry">
+  <div class="post-time"><span class="meta-time">
+  <span
+    >2023-04-21</span
+  ></span
+>
+  </div>
+
+  <div class="post-container"> 
   <header class="entry-header">
-    <h2>关于提高效率，最近使用的一些很棒的产品
-    </h2>
+    <h3>关于提高效率，最近使用的一些很棒的产品
+    </h3>
   </header>
   <section class="entry-content">
     
       <p>设计参考 考虑到近期有很多功能需要优化设计，为了节省调研时间，我决定寻找一些参考设计图。幸运的是，我发现了 nicelydone.club，这个...</p>
     
   </section>
-  <footer class="entry-footer"><span class="meta-item">
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="24"
-    height="24"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    stroke-width="2"
-    stroke-linecap="round"
-    stroke-linejoin="round"
-    class="feather feather-calendar"
-    style="user-select: text"
-  >
-    <rect
-      x="3"
-      y="4"
-      width="18"
-      height="18"
-      rx="2"
-      ry="2"
-      style="user-select: text"
-    ></rect>
-    <line x1="16" y1="2" x2="16" y2="6" style="user-select: text"></line>
-    <line x1="8" y1="2" x2="8" y2="6" style="user-select: text"></line>
-    <line x1="3" y1="10" x2="21" y2="10" style="user-select: text"></line>
-  </svg>
-  <span
-    >2023-04-21</span
-  ></span
-><span class="meta-item">
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="24"
-    height="24"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    stroke-width="2"
-    stroke-linecap="round"
-    stroke-linejoin="round"
-    class="feather feather-tag meta-icon"
-    style="user-select: text"
-  >
-    <path
-      d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"
-      style="user-select: text"
-    ></path>
-    <line x1="7" y1="7" x2="7" y2="7" style="user-select: text"></line>
-  </svg>
-  <span class="post-tags"><a href="https://wananaiko.com/tags/design/">design</a><a href="https://wananaiko.com/tags/chatgpt/">ChatGPT</a><a href="https://wananaiko.com/tags/nicelydone/">nicelydone</a></span></span
-><span class="meta-item">
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="24"
-    height="24"
-    viewBox="0 0 24 24"
-    stroke="currentColor"
-    stroke-width="2"
-    fill="none"
-    stroke-linecap="round"
-    stroke-linejoin="round"
-  >
-    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-    <circle cx="12" cy="12" r="9"></circle>
-    <polyline points="12 7 12 12 15 15"></polyline>
-  </svg>
-  <span>2 min</span></span
+  <footer class="entry-footer"><span class="meta-tags">
+  <span class="post-tags"><a href="https://wananaiko.com/tags/design/">Design</a><a href="https://wananaiko.com/tags/chatgpt/">ChatGPT</a><a href="https://wananaiko.com/tags/nicelydone/">Nicelydone</a></span></span
 >
 </footer>
+
+  </div>
   <a class="entry-link" aria-label="post link to 关于提高效率，最近使用的一些很棒的产品" href="https://wananaiko.com/docs/apr0421/"></a>
 </article>
 
-<article class="post-entry"> 
+<article class="post-entry">
+  <div class="post-time"><span class="meta-time">
+  <span
+    >2023-03-10</span
+  ></span
+>
+  </div>
+
+  <div class="post-container"> 
   <header class="entry-header">
-    <h2>Huntly 部署到宝塔
-    </h2>
+    <h3>Huntly 部署到宝塔
+    </h3>
   </header>
   <section class="entry-content">
     
       <p>1、Docker 部署 安装 Docker 后，在终端里以 root 身份运行： docker run -d --name huntly -p 9090:80 -v /opt/huntly:/data lcomplete/huntly:0.1.0 查看是否安装成功：docker ps 2、安装 Java11 yum install java-11-openjdk -y 检查 Java 版本号是否为...</p>
     
   </section>
-  <footer class="entry-footer"><span class="meta-item">
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="24"
-    height="24"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    stroke-width="2"
-    stroke-linecap="round"
-    stroke-linejoin="round"
-    class="feather feather-calendar"
-    style="user-select: text"
-  >
-    <rect
-      x="3"
-      y="4"
-      width="18"
-      height="18"
-      rx="2"
-      ry="2"
-      style="user-select: text"
-    ></rect>
-    <line x1="16" y1="2" x2="16" y2="6" style="user-select: text"></line>
-    <line x1="8" y1="2" x2="8" y2="6" style="user-select: text"></line>
-    <line x1="3" y1="10" x2="21" y2="10" style="user-select: text"></line>
-  </svg>
-  <span
-    >2023-03-10</span
-  ></span
-><span class="meta-item">
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="24"
-    height="24"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    stroke-width="2"
-    stroke-linecap="round"
-    stroke-linejoin="round"
-    class="feather feather-tag meta-icon"
-    style="user-select: text"
-  >
-    <path
-      d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"
-      style="user-select: text"
-    ></path>
-    <line x1="7" y1="7" x2="7" y2="7" style="user-select: text"></line>
-  </svg>
+  <footer class="entry-footer"><span class="meta-tags">
   <span class="post-tags"><a href="https://wananaiko.com/tags/huntly/">huntly</a></span></span
-><span class="meta-item">
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="24"
-    height="24"
-    viewBox="0 0 24 24"
-    stroke="currentColor"
-    stroke-width="2"
-    fill="none"
-    stroke-linecap="round"
-    stroke-linejoin="round"
-  >
-    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-    <circle cx="12" cy="12" r="9"></circle>
-    <polyline points="12 7 12 12 15 15"></polyline>
-  </svg>
-  <span>2 min</span></span
 >
 </footer>
+
+  </div>
   <a class="entry-link" aria-label="post link to Huntly 部署到宝塔" href="https://wananaiko.com/docs/huntly/"></a>
 </article>
 
-<article class="post-entry"> 
+<article class="post-entry">
+  <div class="post-time"><span class="meta-time">
+  <span
+    >2023-02-08</span
+  ></span
+>
+  </div>
+
+  <div class="post-container"> 
   <header class="entry-header">
-    <h2>ChatGPT：帮你做事更高效，而不是取代你的工作
-    </h2>
+    <h3>ChatGPT：帮你做事更高效，而不是取代你的工作
+    </h3>
   </header>
   <section class="entry-content">
     
       <p>最近关于ChatGPT的讨论非常激烈，各种圈子都在关注它。然而，一些人开始恐慌，暗示ChatGPT可以取代文案工作者、开发人员、客服人员、销...</p>
     
   </section>
-  <footer class="entry-footer"><span class="meta-item">
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="24"
-    height="24"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    stroke-width="2"
-    stroke-linecap="round"
-    stroke-linejoin="round"
-    class="feather feather-calendar"
-    style="user-select: text"
-  >
-    <rect
-      x="3"
-      y="4"
-      width="18"
-      height="18"
-      rx="2"
-      ry="2"
-      style="user-select: text"
-    ></rect>
-    <line x1="16" y1="2" x2="16" y2="6" style="user-select: text"></line>
-    <line x1="8" y1="2" x2="8" y2="6" style="user-select: text"></line>
-    <line x1="3" y1="10" x2="21" y2="10" style="user-select: text"></line>
-  </svg>
-  <span
-    >2023-02-08</span
-  ></span
-><span class="meta-item">
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="24"
-    height="24"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    stroke-width="2"
-    stroke-linecap="round"
-    stroke-linejoin="round"
-    class="feather feather-tag meta-icon"
-    style="user-select: text"
-  >
-    <path
-      d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"
-      style="user-select: text"
-    ></path>
-    <line x1="7" y1="7" x2="7" y2="7" style="user-select: text"></line>
-  </svg>
+  <footer class="entry-footer"><span class="meta-tags">
   <span class="post-tags"><a href="https://wananaiko.com/tags/chatgpt/">ChatGPT</a></span></span
-><span class="meta-item">
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="24"
-    height="24"
-    viewBox="0 0 24 24"
-    stroke="currentColor"
-    stroke-width="2"
-    fill="none"
-    stroke-linecap="round"
-    stroke-linejoin="round"
-  >
-    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-    <circle cx="12" cy="12" r="9"></circle>
-    <polyline points="12 7 12 12 15 15"></polyline>
-  </svg>
-  <span>3 min</span></span
 >
 </footer>
+
+  </div>
   <a class="entry-link" aria-label="post link to ChatGPT：帮你做事更高效，而不是取代你的工作" href="https://wananaiko.com/docs/about-chatgpt/"></a>
 </article>
 
-<article class="post-entry"> 
+<article class="post-entry">
+  <div class="post-time"><span class="meta-time">
+  <span
+    >2023-01-15</span
+  ></span
+>
+  </div>
+
+  <div class="post-container"> 
   <header class="entry-header">
-    <h2>2022 – 2023 跨年博客
-    </h2>
+    <h3>2022 – 2023 跨年博客
+    </h3>
   </header>
   <section class="entry-content">
     
       <p>2022 年 这一年没有躺平，也无法躺平。无论是工作、生活还是家庭，经常都是处于一种忙碌的状态。 疫情 被疫情反复折腾的一年，上半年经历了上海严峻的封控措...</p>
     
   </section>
-  <footer class="entry-footer"><span class="meta-item">
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="24"
-    height="24"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    stroke-width="2"
-    stroke-linecap="round"
-    stroke-linejoin="round"
-    class="feather feather-calendar"
-    style="user-select: text"
-  >
-    <rect
-      x="3"
-      y="4"
-      width="18"
-      height="18"
-      rx="2"
-      ry="2"
-      style="user-select: text"
-    ></rect>
-    <line x1="16" y1="2" x2="16" y2="6" style="user-select: text"></line>
-    <line x1="8" y1="2" x2="8" y2="6" style="user-select: text"></line>
-    <line x1="3" y1="10" x2="21" y2="10" style="user-select: text"></line>
-  </svg>
-  <span
-    >2023-01-15</span
-  ></span
-><span class="meta-item">
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="24"
-    height="24"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    stroke-width="2"
-    stroke-linecap="round"
-    stroke-linejoin="round"
-    class="feather feather-tag meta-icon"
-    style="user-select: text"
-  >
-    <path
-      d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"
-      style="user-select: text"
-    ></path>
-    <line x1="7" y1="7" x2="7" y2="7" style="user-select: text"></line>
-  </svg>
+  <footer class="entry-footer"><span class="meta-tags">
   <span class="post-tags"><a href="https://wananaiko.com/tags/%E8%B7%A8%E5%B9%B4%E5%8D%9A%E5%AE%A2/">跨年博客</a></span></span
-><span class="meta-item">
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="24"
-    height="24"
-    viewBox="0 0 24 24"
-    stroke="currentColor"
-    stroke-width="2"
-    fill="none"
-    stroke-linecap="round"
-    stroke-linejoin="round"
-  >
-    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-    <circle cx="12" cy="12" r="9"></circle>
-    <polyline points="12 7 12 12 15 15"></polyline>
-  </svg>
-  <span>6 min</span></span
 >
 </footer>
+
+  </div>
   <a class="entry-link" aria-label="post link to 2022 – 2023 跨年博客" href="https://wananaiko.com/docs/my2022/my2022/"></a>
 </article>
 
-<article class="post-entry"> 
+<article class="post-entry">
+  <div class="post-time"><span class="meta-time">
+  <span
+    >2023-01-12</span
+  ></span
+>
+  </div>
+
+  <div class="post-container"> 
   <header class="entry-header">
-    <h2>Hugo增加相册功能
-    </h2>
+    <h3>Hugo增加相册功能
+    </h3>
   </header>
   <section class="entry-content">
     
       <p>相册效果如下： 按ESC关闭窗口 Github仓库地址: https://github.com/liwenyip/hugo-easy-gallery 按教程操作后,需要注意在文章中引用时,按下面的类似格式 (需去掉下方所有的 \ ): {{\&lt; load-photoswipe &gt;}} {{\&lt; gallery...</p>
     
   </section>
-  <footer class="entry-footer"><span class="meta-item">
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="24"
-    height="24"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    stroke-width="2"
-    stroke-linecap="round"
-    stroke-linejoin="round"
-    class="feather feather-calendar"
-    style="user-select: text"
-  >
-    <rect
-      x="3"
-      y="4"
-      width="18"
-      height="18"
-      rx="2"
-      ry="2"
-      style="user-select: text"
-    ></rect>
-    <line x1="16" y1="2" x2="16" y2="6" style="user-select: text"></line>
-    <line x1="8" y1="2" x2="8" y2="6" style="user-select: text"></line>
-    <line x1="3" y1="10" x2="21" y2="10" style="user-select: text"></line>
-  </svg>
-  <span
-    >2023-01-12</span
-  ></span
-><span class="meta-item">
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="24"
-    height="24"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    stroke-width="2"
-    stroke-linecap="round"
-    stroke-linejoin="round"
-    class="feather feather-tag meta-icon"
-    style="user-select: text"
-  >
-    <path
-      d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"
-      style="user-select: text"
-    ></path>
-    <line x1="7" y1="7" x2="7" y2="7" style="user-select: text"></line>
-  </svg>
+  <footer class="entry-footer"><span class="meta-tags">
   <span class="post-tags"><a href="https://wananaiko.com/tags/hugo/">Hugo</a><a href="https://wananaiko.com/tags/%E7%9B%B8%E5%86%8C/">相册</a></span></span
-><span class="meta-item">
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="24"
-    height="24"
-    viewBox="0 0 24 24"
-    stroke="currentColor"
-    stroke-width="2"
-    fill="none"
-    stroke-linecap="round"
-    stroke-linejoin="round"
-  >
-    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-    <circle cx="12" cy="12" r="9"></circle>
-    <polyline points="12 7 12 12 15 15"></polyline>
-  </svg>
-  <span>2 min</span></span
 >
 </footer>
+
+  </div>
   <a class="entry-link" aria-label="post link to Hugo增加相册功能" href="https://wananaiko.com/docs/hugo-easy-gallery/hugo-easy-gallery/"></a>
 </article>
 
-<article class="post-entry"> 
+<article class="post-entry">
+  <div class="post-time"><span class="meta-time">
+  <span
+    >2023-01-10</span
+  ></span
+>
+  </div>
+
+  <div class="post-container"> 
   <header class="entry-header">
-    <h2>Hugo 添加相册单页
-    </h2>
+    <h3>Hugo 添加相册单页
+    </h3>
   </header>
   <section class="entry-content">
     
       <p>参考：Hugo 添加相册页面：：木木木木木，本文仅用于备份折腾的记录。 文件目录结构： 其中 photos.html代码如下，调整了部分CSS： {{- define...</p>
     
   </section>
-  <footer class="entry-footer"><span class="meta-item">
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="24"
-    height="24"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    stroke-width="2"
-    stroke-linecap="round"
-    stroke-linejoin="round"
-    class="feather feather-calendar"
-    style="user-select: text"
-  >
-    <rect
-      x="3"
-      y="4"
-      width="18"
-      height="18"
-      rx="2"
-      ry="2"
-      style="user-select: text"
-    ></rect>
-    <line x1="16" y1="2" x2="16" y2="6" style="user-select: text"></line>
-    <line x1="8" y1="2" x2="8" y2="6" style="user-select: text"></line>
-    <line x1="3" y1="10" x2="21" y2="10" style="user-select: text"></line>
-  </svg>
-  <span
-    >2023-01-10</span
-  ></span
-><span class="meta-item">
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="24"
-    height="24"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    stroke-width="2"
-    stroke-linecap="round"
-    stroke-linejoin="round"
-    class="feather feather-tag meta-icon"
-    style="user-select: text"
-  >
-    <path
-      d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"
-      style="user-select: text"
-    ></path>
-    <line x1="7" y1="7" x2="7" y2="7" style="user-select: text"></line>
-  </svg>
+  <footer class="entry-footer"><span class="meta-tags">
   <span class="post-tags"><a href="https://wananaiko.com/tags/hugo/">Hugo</a><a href="https://wananaiko.com/tags/%E7%9B%B8%E5%86%8C/">相册</a></span></span
-><span class="meta-item">
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="24"
-    height="24"
-    viewBox="0 0 24 24"
-    stroke="currentColor"
-    stroke-width="2"
-    fill="none"
-    stroke-linecap="round"
-    stroke-linejoin="round"
-  >
-    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-    <circle cx="12" cy="12" r="9"></circle>
-    <polyline points="12 7 12 12 15 15"></polyline>
-  </svg>
-  <span>1 min</span></span
 >
 </footer>
+
+  </div>
   <a class="entry-link" aria-label="post link to Hugo 添加相册单页" href="https://wananaiko.com/docs/hugo-photo-page/"></a>
 </article>
 
-<article class="post-entry"> 
+<article class="post-entry">
+  <div class="post-time"><span class="meta-time">
+  <span
+    >2023-01-09</span
+  ></span
+>
+  </div>
+
+  <div class="post-container"> 
   <header class="entry-header">
-    <h2>Hugo 和 PaperModX 的一些配置记录
-    </h2>
+    <h3>Hugo 和 PaperModX 的一些配置记录
+    </h3>
   </header>
   <section class="entry-content">
     
       <p>增加空格之神 使用空格之神的浏览器插件很久了，真的是阅读强迫症患者的福音，空格之神项目地址 在 Hugo的 themes/PaperModX/layouts/_default/baseof.html 内增加以下代码： &lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/pangu/4.0.7/pangu.min.js&#34;&gt;&lt;/script&gt; &lt;script&gt; pangu.spacingPage(); &lt;/script&gt; 用完后感觉整...</p>
     
   </section>
-  <footer class="entry-footer"><span class="meta-item">
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="24"
-    height="24"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    stroke-width="2"
-    stroke-linecap="round"
-    stroke-linejoin="round"
-    class="feather feather-calendar"
-    style="user-select: text"
-  >
-    <rect
-      x="3"
-      y="4"
-      width="18"
-      height="18"
-      rx="2"
-      ry="2"
-      style="user-select: text"
-    ></rect>
-    <line x1="16" y1="2" x2="16" y2="6" style="user-select: text"></line>
-    <line x1="8" y1="2" x2="8" y2="6" style="user-select: text"></line>
-    <line x1="3" y1="10" x2="21" y2="10" style="user-select: text"></line>
-  </svg>
-  <span
-    >2023-01-09</span
-  ></span
-><span class="meta-item">
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="24"
-    height="24"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    stroke-width="2"
-    stroke-linecap="round"
-    stroke-linejoin="round"
-    class="feather feather-tag meta-icon"
-    style="user-select: text"
-  >
-    <path
-      d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"
-      style="user-select: text"
-    ></path>
-    <line x1="7" y1="7" x2="7" y2="7" style="user-select: text"></line>
-  </svg>
+  <footer class="entry-footer"><span class="meta-tags">
   <span class="post-tags"><a href="https://wananaiko.com/tags/hugo/">Hugo</a><a href="https://wananaiko.com/tags/waline/">waline</a><a href="https://wananaiko.com/tags/papermodx/">PaperModX</a></span></span
-><span class="meta-item">
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="24"
-    height="24"
-    viewBox="0 0 24 24"
-    stroke="currentColor"
-    stroke-width="2"
-    fill="none"
-    stroke-linecap="round"
-    stroke-linejoin="round"
-  >
-    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-    <circle cx="12" cy="12" r="9"></circle>
-    <polyline points="12 7 12 12 15 15"></polyline>
-  </svg>
-  <span>4 min</span></span
 >
 </footer>
+
+  </div>
   <a class="entry-link" aria-label="post link to Hugo 和 PaperModX 的一些配置记录" href="https://wananaiko.com/docs/hugo-develop/"></a>
 </article>
 
-<article class="post-entry"> 
+<article class="post-entry">
+  <div class="post-time"><span class="meta-time">
+  <span
+    >2023-01-08</span
+  ></span
+>
+  </div>
+
+  <div class="post-container"> 
   <header class="entry-header">
-    <h2>让 ITERM2 实时显示梯子状态
-    </h2>
+    <h3>让 ITERM2 实时显示梯子状态
+    </h3>
   </header>
   <section class="entry-content">
     
       <p>最近在 iterm2 里使用 curl、wget、brew、git 等命令时，经常会遇到相应很慢的情况，只能慢慢的等待，网上查了查资料，可以通过以下方法实现。...</p>
     
   </section>
-  <footer class="entry-footer"><span class="meta-item">
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="24"
-    height="24"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    stroke-width="2"
-    stroke-linecap="round"
-    stroke-linejoin="round"
-    class="feather feather-calendar"
-    style="user-select: text"
-  >
-    <rect
-      x="3"
-      y="4"
-      width="18"
-      height="18"
-      rx="2"
-      ry="2"
-      style="user-select: text"
-    ></rect>
-    <line x1="16" y1="2" x2="16" y2="6" style="user-select: text"></line>
-    <line x1="8" y1="2" x2="8" y2="6" style="user-select: text"></line>
-    <line x1="3" y1="10" x2="21" y2="10" style="user-select: text"></line>
-  </svg>
-  <span
-    >2023-01-08</span
-  ></span
-><span class="meta-item">
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="24"
-    height="24"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    stroke-width="2"
-    stroke-linecap="round"
-    stroke-linejoin="round"
-    class="feather feather-tag meta-icon"
-    style="user-select: text"
-  >
-    <path
-      d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"
-      style="user-select: text"
-    ></path>
-    <line x1="7" y1="7" x2="7" y2="7" style="user-select: text"></line>
-  </svg>
+  <footer class="entry-footer"><span class="meta-tags">
   <span class="post-tags"><a href="https://wananaiko.com/tags/iterm2/">iterm2</a></span></span
-><span class="meta-item">
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="24"
-    height="24"
-    viewBox="0 0 24 24"
-    stroke="currentColor"
-    stroke-width="2"
-    fill="none"
-    stroke-linecap="round"
-    stroke-linejoin="round"
-  >
-    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-    <circle cx="12" cy="12" r="9"></circle>
-    <polyline points="12 7 12 12 15 15"></polyline>
-  </svg>
-  <span>1 min</span></span
 >
 </footer>
+
+  </div>
   <a class="entry-link" aria-label="post link to 让 ITERM2 实时显示梯子状态" href="https://wananaiko.com/docs/how-iterm2-show-current-proxy-status/"></a>
 </article>
 <footer class="page-footer">

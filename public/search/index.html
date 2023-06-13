@@ -15,8 +15,8 @@
 /> <meta name="description" content="Search - wananaiko"> <meta name="author" content="wananaiko"> <link rel="canonical" href="https://wananaiko.com/search/">
 <link
   crossorigin="anonymous"
-  href="/assets/css/stylesheet.min.6611660b5bdd423f1b7b4c38cf8a9330e0af3dcc82fbe70e1a9f577708e922fd.css"
-  integrity="sha256-ZhFmC1vdQj8be0w4z4qTMOCvPcyC&#43;&#43;cOGp9XdwjpIv0="
+  href="/assets/css/stylesheet.min.a7e811990b6f0afd1e3191e758146e1bdd443bd24fe15024138182e0fe61c519.css"
+  integrity="sha256-p&#43;gRmQtvCv0eMZHnWBRuG91EO9JP4VAkE4GC4P5hxRk="
   rel="preload stylesheet"
   as="style"
 /> <link rel="icon" href="https://images.wananaiko.com/favicon.ico"> <link rel="apple-touch-icon" href="https://wananaiko.com/apple-touch-icon.png"> <link rel="alternate" hreflang="en" href="https://wananaiko.com/search/" />
@@ -263,7 +263,7 @@ button#theme-toggle {
         <div class="logo">
             <a href="https://wananaiko.com/" accesskey="h" title="wananaiko (Alt + H)">
                     <img src="https://wananaiko.com/images/forge-v2-compat.svg" alt="logo" aria-label="logo"
-                        height="30" width="30">wananaiko</a>
+                        height="24" width="30">wananaiko</a>
             <span class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)">
                     <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
@@ -336,7 +336,26 @@ button#theme-toggle {
             </li>
         </ul>
     </nav>
-</header><main class="main post slide-enter-content">
+</header>
+
+<script>
+    
+    let lastScrollTop = 0;
+const header = document.querySelector('.header');
+
+window.addEventListener('scroll', () => {
+  let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  if (scrollTop > lastScrollTop && scrollTop > header.offsetHeight){
+    
+    header.classList.add('hidden');
+  } else {
+    
+    header.classList.remove('hidden');
+  }
+  lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; 
+}, false);
+
+</script><main class="main post slide-enter-content">
 
 <header class="page-header">
     <h1>Search <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
@@ -361,7 +380,7 @@ button#theme-toggle {
         <a href="https://wananaiko.com/tags/chatgpt/">ChatGPT <sup><strong><sup>2</sup></strong></sup> </a>
     </li>
     <li>
-        <a href="https://wananaiko.com/tags/design/">design <sup><strong><sup>1</sup></strong></sup> </a>
+        <a href="https://wananaiko.com/tags/design/">Design <sup><strong><sup>1</sup></strong></sup> </a>
     </li>
     <li>
         <a href="https://wananaiko.com/tags/example/">example <sup><strong><sup>5</sup></strong></sup> </a>
@@ -388,10 +407,10 @@ button#theme-toggle {
         <a href="https://wananaiko.com/tags/math/">math <sup><strong><sup>1</sup></strong></sup> </a>
     </li>
     <li>
-        <a href="https://wananaiko.com/tags/nicelydone/">nicelydone <sup><strong><sup>1</sup></strong></sup> </a>
+        <a href="https://wananaiko.com/tags/nicelydone/">Nicelydone <sup><strong><sup>1</sup></strong></sup> </a>
     </li>
     <li>
-        <a href="https://wananaiko.com/tags/papermodx/">PaperModX <sup><strong><sup>1</sup></strong></sup> </a>
+        <a href="https://wananaiko.com/tags/papermodx/">PaperModX <sup><strong><sup>2</sup></strong></sup> </a>
     </li>
     <li>
         <a href="https://wananaiko.com/tags/remark42/">Remark42 <sup><strong><sup>1</sup></strong></sup> </a>
@@ -401,6 +420,9 @@ button#theme-toggle {
     </li>
     <li>
         <a href="https://wananaiko.com/tags/syntax/">syntax <sup><strong><sup>2</sup></strong></sup> </a>
+    </li>
+    <li>
+        <a href="https://wananaiko.com/tags/theme/">Theme <sup><strong><sup>1</sup></strong></sup> </a>
     </li>
     <li>
         <a href="https://wananaiko.com/tags/umami/">Umami <sup><strong><sup>1</sup></strong></sup> </a>

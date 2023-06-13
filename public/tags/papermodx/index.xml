@@ -10,7 +10,1042 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 09 Jan 2023 00:24:18 +0800</lastBuildDate><atom:link href="https://wananaiko.com/tags/papermodx/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 21 May 2023 21:06:57 +0800</lastBuildDate><atom:link href="https://wananaiko.com/tags/papermodx/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugo 和 PaperModX 的折腾记录</title>
+      <link>https://wananaiko.com/docs/game-with-hugo/</link>
+      <pubDate>Sun, 21 May 2023 21:06:57 +0800</pubDate>
+      
+      <guid>https://wananaiko.com/docs/game-with-hugo/</guid>
+      <description>最近又折腾了一下博客，起因是上周和 空白生活 要了他的好物页面源码，后来研究了一番，发现用 shortcode 来实现一个页面真的太方便了。这里，再次表达一下感谢。</description>
+      <content:encoded><![CDATA[<p>最近又折腾了一下博客，起因是上周和 <a href="https://koobai.com/" target="_blank" rel="noopener">空白生活</a> 要了他的好物页面源码，后来研究了一番，发现用 shortcode
+来实现一个页面真的太方便了。这里，再次表达一下感谢。</p>
+<p>于是一顿操作，增加了 Gallery，Goods，Stack，Bookmark 页面，都是基于 Hugo shortcode 开发的。CSS样式也比较简单，基本都写在了
+shortcode 页面中。</p>
+<p>还修改了 PaperModX 主题自带的一些样式，比如切换暗黑/日间模式时的微弱动态效果，顶部菜单的模糊和固定，全站页面滑动进入的效果，代码高亮颜色等等。</p>
+<p>Gallery 的实现方法来自文章 <a href="https://blog.leonus.cn/2023/photos.html" target="_blank" rel="noopener">《基于memos实现动态相册》</a>，和当前站点中的 Memos
+页面一样，都是基于开源程序 usememos<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> 实现的，发布更新内容非常方便，小程序和 App 都有。</p>
+<p>Bookmark 页面基于 Raindrop.io 官方的 API<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>，调用了最近收藏的书签，并且增了标签筛选，方便查看对应的内容。书签图标使用了
+unavatar.io <sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup>的免费服务。目前只加载最新的50条书签，加载更多没写…</p>
+<p>目前这个版本基本上已经可以养老了 😅 后面有时间再继续折腾。</p>
+<h3 id="timeline">Timeline</h3>
+<p>这不隔天我又写了一个 timeline 的 shortcode，来记录折腾的记录…以后也可以用在别的地方…
+内容发布格式：</p>
+<pre tabindex="0"><code>{/{&lt; timeline time=&#34;2022-05-22&#34; title=&#34;修改顶部菜单栏为像素风格，增加timeline 短代码&#34; tags=&#34;美化,shortcode&#34; &gt;}/}
+调整了顶部菜单栏的样式，增加了像素模糊效果，灵感来自 Framer Motion 介绍页面。调整了顶部菜单栏的样式，增加了像素模糊效果，灵感来自 Framer Motion 介绍页面。
+{/{&lt; /timeline &gt;}/}
+{/{&lt; timeline time=&#34;2022-05-21&#34; title=&#34;Gally, Goods, Stacks, Bookmark 页面上线&#34; &gt;}/}
+基于 shortcode 实现的页面，初步上线。
+{/{&lt; /timeline &gt;}/}
+</code></pre><p><style>
+  .timeline {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .timeline__row {
+    display: flex;
+  }
+
+  .timeline__time {
+    flex: 0 0 90px;
+    color: var(--secondary);
+    font-size: 14px;
+    text-transform: uppercase;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.8rem 0;
+  }
+
+  .timeline__time-text {
+    margin: 0;
+  }
+
+  .timeline__split-line {
+    position: absolute;
+    top: 0.5rem;
+    right: -20px;
+    height: 100%;
+    width: 1px;
+    background-color: var(--border);
+    z-index: -1;
+  }
+
+  .timeline__split-line:before {
+    content: "";
+    position: absolute;
+    top: 1rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 8px;
+    height: 8px;
+    background-color: var(--border);
+    box-shadow: 0 0 0 4px var(--theme);
+    border-radius: 50%;
+  }
+
+  .timeline__content {
+    flex: 1;
+    margin-left: 3rem;
+    padding: 0.5rem 0 1.2rem 0;
+  }
+
+  .timeline__title {
+    margin: 0;
+    margin-bottom: 2px;
+    padding-top: 3px;
+    color: var(--content);
+    font-family: var(--font-family-teshu);
+    font-size: 16px;
+    font-weight: 500;
+    width: fit-content;
+  }
+
+  .timeline__tags {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0.6rem 0 0.2rem 0;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .timeline__tag {
+    display: inline-block;
+    color: var(--tertiary);
+    background-color: var(--code-bg);
+    border-radius: 3px;
+    padding: 0rem 0.5rem;
+    font-size: 12px;
+    white-space: nowrap;
+    line-height: 1.4rem;
+  }
+
+  .timeline__description {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--secondary);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0.5rem 0 0.4rem 0;
+  }
+</style>
+
+<div class="timeline">
+  <div class="timeline__row">
+    <div class="timeline__time">
+      <div class="timeline__time-text">2022-06-14</div>
+      <div class="timeline__split-line"></div>
+    </div>
+    <div class="timeline__content">
+      <div class="timeline__title">修改了主页、文章页、顶部菜单栏样式</div>
+      <div class="timeline__description">
+去掉了一些多余的元素，布局上作了较多的调整。
+</div>
+      <div class="timeline__tags">
+         
+        <span class="timeline__tag">样式更新</span>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<style>
+  .timeline {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .timeline__row {
+    display: flex;
+  }
+
+  .timeline__time {
+    flex: 0 0 90px;
+    color: var(--secondary);
+    font-size: 14px;
+    text-transform: uppercase;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.8rem 0;
+  }
+
+  .timeline__time-text {
+    margin: 0;
+  }
+
+  .timeline__split-line {
+    position: absolute;
+    top: 0.5rem;
+    right: -20px;
+    height: 100%;
+    width: 1px;
+    background-color: var(--border);
+    z-index: -1;
+  }
+
+  .timeline__split-line:before {
+    content: "";
+    position: absolute;
+    top: 1rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 8px;
+    height: 8px;
+    background-color: var(--border);
+    box-shadow: 0 0 0 4px var(--theme);
+    border-radius: 50%;
+  }
+
+  .timeline__content {
+    flex: 1;
+    margin-left: 3rem;
+    padding: 0.5rem 0 1.2rem 0;
+  }
+
+  .timeline__title {
+    margin: 0;
+    margin-bottom: 2px;
+    padding-top: 3px;
+    color: var(--content);
+    font-family: var(--font-family-teshu);
+    font-size: 16px;
+    font-weight: 500;
+    width: fit-content;
+  }
+
+  .timeline__tags {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0.6rem 0 0.2rem 0;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .timeline__tag {
+    display: inline-block;
+    color: var(--tertiary);
+    background-color: var(--code-bg);
+    border-radius: 3px;
+    padding: 0rem 0.5rem;
+    font-size: 12px;
+    white-space: nowrap;
+    line-height: 1.4rem;
+  }
+
+  .timeline__description {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--secondary);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0.5rem 0 0.4rem 0;
+  }
+</style>
+
+<div class="timeline">
+  <div class="timeline__row">
+    <div class="timeline__time">
+      <div class="timeline__time-text">2022-06-05</div>
+      <div class="timeline__split-line"></div>
+    </div>
+    <div class="timeline__content">
+      <div class="timeline__title">调整了 Todolist 的 light 和 dark 样式</div>
+      <div class="timeline__description">
+配色灵感来自 waffle。
+</div>
+      <div class="timeline__tags">
+         
+        <span class="timeline__tag">样式更新</span>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<style>
+  .timeline {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .timeline__row {
+    display: flex;
+  }
+
+  .timeline__time {
+    flex: 0 0 90px;
+    color: var(--secondary);
+    font-size: 14px;
+    text-transform: uppercase;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.8rem 0;
+  }
+
+  .timeline__time-text {
+    margin: 0;
+  }
+
+  .timeline__split-line {
+    position: absolute;
+    top: 0.5rem;
+    right: -20px;
+    height: 100%;
+    width: 1px;
+    background-color: var(--border);
+    z-index: -1;
+  }
+
+  .timeline__split-line:before {
+    content: "";
+    position: absolute;
+    top: 1rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 8px;
+    height: 8px;
+    background-color: var(--border);
+    box-shadow: 0 0 0 4px var(--theme);
+    border-radius: 50%;
+  }
+
+  .timeline__content {
+    flex: 1;
+    margin-left: 3rem;
+    padding: 0.5rem 0 1.2rem 0;
+  }
+
+  .timeline__title {
+    margin: 0;
+    margin-bottom: 2px;
+    padding-top: 3px;
+    color: var(--content);
+    font-family: var(--font-family-teshu);
+    font-size: 16px;
+    font-weight: 500;
+    width: fit-content;
+  }
+
+  .timeline__tags {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0.6rem 0 0.2rem 0;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .timeline__tag {
+    display: inline-block;
+    color: var(--tertiary);
+    background-color: var(--code-bg);
+    border-radius: 3px;
+    padding: 0rem 0.5rem;
+    font-size: 12px;
+    white-space: nowrap;
+    line-height: 1.4rem;
+  }
+
+  .timeline__description {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--secondary);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0.5rem 0 0.4rem 0;
+  }
+</style>
+
+<div class="timeline">
+  <div class="timeline__row">
+    <div class="timeline__time">
+      <div class="timeline__time-text">2022-05-24</div>
+      <div class="timeline__split-line"></div>
+    </div>
+    <div class="timeline__content">
+      <div class="timeline__title">链接下划线样式调整，Bookmark 页面增加了很赞标识</div>
+      <div class="timeline__description">
+优化了链接的可读性，取消了原来 hover 时的主题色。Bookmark 页面给“最喜欢的”书签增加了很赞标识。
+</div>
+      <div class="timeline__tags">
+         
+        <span class="timeline__tag">样式更新</span>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<style>
+  .timeline {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .timeline__row {
+    display: flex;
+  }
+
+  .timeline__time {
+    flex: 0 0 90px;
+    color: var(--secondary);
+    font-size: 14px;
+    text-transform: uppercase;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.8rem 0;
+  }
+
+  .timeline__time-text {
+    margin: 0;
+  }
+
+  .timeline__split-line {
+    position: absolute;
+    top: 0.5rem;
+    right: -20px;
+    height: 100%;
+    width: 1px;
+    background-color: var(--border);
+    z-index: -1;
+  }
+
+  .timeline__split-line:before {
+    content: "";
+    position: absolute;
+    top: 1rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 8px;
+    height: 8px;
+    background-color: var(--border);
+    box-shadow: 0 0 0 4px var(--theme);
+    border-radius: 50%;
+  }
+
+  .timeline__content {
+    flex: 1;
+    margin-left: 3rem;
+    padding: 0.5rem 0 1.2rem 0;
+  }
+
+  .timeline__title {
+    margin: 0;
+    margin-bottom: 2px;
+    padding-top: 3px;
+    color: var(--content);
+    font-family: var(--font-family-teshu);
+    font-size: 16px;
+    font-weight: 500;
+    width: fit-content;
+  }
+
+  .timeline__tags {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0.6rem 0 0.2rem 0;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .timeline__tag {
+    display: inline-block;
+    color: var(--tertiary);
+    background-color: var(--code-bg);
+    border-radius: 3px;
+    padding: 0rem 0.5rem;
+    font-size: 12px;
+    white-space: nowrap;
+    line-height: 1.4rem;
+  }
+
+  .timeline__description {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--secondary);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0.5rem 0 0.4rem 0;
+  }
+</style>
+
+<div class="timeline">
+  <div class="timeline__row">
+    <div class="timeline__time">
+      <div class="timeline__time-text">2022-05-23</div>
+      <div class="timeline__split-line"></div>
+    </div>
+    <div class="timeline__content">
+      <div class="timeline__title">增加 todolist 短代码</div>
+      <div class="timeline__description">
+使用 timeline 来简单记录本站的折腾的过程。
+</div>
+      <div class="timeline__tags">
+         
+        <span class="timeline__tag">shortcode</span>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<style>
+  .timeline {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .timeline__row {
+    display: flex;
+  }
+
+  .timeline__time {
+    flex: 0 0 90px;
+    color: var(--secondary);
+    font-size: 14px;
+    text-transform: uppercase;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.8rem 0;
+  }
+
+  .timeline__time-text {
+    margin: 0;
+  }
+
+  .timeline__split-line {
+    position: absolute;
+    top: 0.5rem;
+    right: -20px;
+    height: 100%;
+    width: 1px;
+    background-color: var(--border);
+    z-index: -1;
+  }
+
+  .timeline__split-line:before {
+    content: "";
+    position: absolute;
+    top: 1rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 8px;
+    height: 8px;
+    background-color: var(--border);
+    box-shadow: 0 0 0 4px var(--theme);
+    border-radius: 50%;
+  }
+
+  .timeline__content {
+    flex: 1;
+    margin-left: 3rem;
+    padding: 0.5rem 0 1.2rem 0;
+  }
+
+  .timeline__title {
+    margin: 0;
+    margin-bottom: 2px;
+    padding-top: 3px;
+    color: var(--content);
+    font-family: var(--font-family-teshu);
+    font-size: 16px;
+    font-weight: 500;
+    width: fit-content;
+  }
+
+  .timeline__tags {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0.6rem 0 0.2rem 0;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .timeline__tag {
+    display: inline-block;
+    color: var(--tertiary);
+    background-color: var(--code-bg);
+    border-radius: 3px;
+    padding: 0rem 0.5rem;
+    font-size: 12px;
+    white-space: nowrap;
+    line-height: 1.4rem;
+  }
+
+  .timeline__description {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--secondary);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0.5rem 0 0.4rem 0;
+  }
+</style>
+
+<div class="timeline">
+  <div class="timeline__row">
+    <div class="timeline__time">
+      <div class="timeline__time-text">2022-05-22</div>
+      <div class="timeline__split-line"></div>
+    </div>
+    <div class="timeline__content">
+      <div class="timeline__title">增加 timeline 短代码</div>
+      <div class="timeline__description">
+使用 timeline 来简单记录本站的折腾的过程。
+</div>
+      <div class="timeline__tags">
+         
+        <span class="timeline__tag">shortcode</span>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<style>
+  .timeline {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .timeline__row {
+    display: flex;
+  }
+
+  .timeline__time {
+    flex: 0 0 90px;
+    color: var(--secondary);
+    font-size: 14px;
+    text-transform: uppercase;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.8rem 0;
+  }
+
+  .timeline__time-text {
+    margin: 0;
+  }
+
+  .timeline__split-line {
+    position: absolute;
+    top: 0.5rem;
+    right: -20px;
+    height: 100%;
+    width: 1px;
+    background-color: var(--border);
+    z-index: -1;
+  }
+
+  .timeline__split-line:before {
+    content: "";
+    position: absolute;
+    top: 1rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 8px;
+    height: 8px;
+    background-color: var(--border);
+    box-shadow: 0 0 0 4px var(--theme);
+    border-radius: 50%;
+  }
+
+  .timeline__content {
+    flex: 1;
+    margin-left: 3rem;
+    padding: 0.5rem 0 1.2rem 0;
+  }
+
+  .timeline__title {
+    margin: 0;
+    margin-bottom: 2px;
+    padding-top: 3px;
+    color: var(--content);
+    font-family: var(--font-family-teshu);
+    font-size: 16px;
+    font-weight: 500;
+    width: fit-content;
+  }
+
+  .timeline__tags {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0.6rem 0 0.2rem 0;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .timeline__tag {
+    display: inline-block;
+    color: var(--tertiary);
+    background-color: var(--code-bg);
+    border-radius: 3px;
+    padding: 0rem 0.5rem;
+    font-size: 12px;
+    white-space: nowrap;
+    line-height: 1.4rem;
+  }
+
+  .timeline__description {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--secondary);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0.5rem 0 0.4rem 0;
+  }
+</style>
+
+<div class="timeline">
+  <div class="timeline__row">
+    <div class="timeline__time">
+      <div class="timeline__time-text">2022-05-21</div>
+      <div class="timeline__split-line"></div>
+    </div>
+    <div class="timeline__content">
+      <div class="timeline__title">Gallery, Goods, Stacks, Bookmark 页面上线</div>
+      <div class="timeline__description">
+基于 shortcode 实现的页面，初步上线。
+</div>
+      <div class="timeline__tags">
+         
+        <span class="timeline__tag"></span>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</p>
+<h3 id="todolist-清单">Todolist 清单</h3>
+<p>根据 <a href="https://blog.leonus.cn/2023/memeos.html" target="_blank" rel="noopener">《基于Memos实现说说和清单功能》</a> 这篇文章完成了清单功能，简单修改了一下样式。</p>
+<style>
+   
+  div#todolist {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+  }
+  .list_item {
+    position: relative;
+    display: inline-block;
+    width: calc(50% - 0.4rem);
+    background: #fbf7f4;
+    border-radius: 12px;
+    padding: 16px 16px 40px 16px;
+    border: 1px solid #ffffff;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .dark .list_item {
+    background: #292a2f;
+    border: 1px solid #1d1e20;
+  }
+
+  .list_item li {
+    margin: 0 !important;
+    border-bottom: 1px solid rgba(130, 100, 75, 0.1);
+  }
+
+  .dark .list_item li {
+    border-bottom: 1px solid rgba(130, 100, 75, 0.1);
+  }
+
+  .list_item li::marker {
+    content: none;
+  }
+  @media screen and (max-width: 900px) {
+    div#todolist {
+      margin: 1rem 5px 0;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .list_item {
+      width: 100%;
+    }
+  }
+
+   
+  .todo-title {
+    font-size: 18px;
+    line-height: 1.6;
+    font-weight: 600;
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 16px;
+    color: #634d3a;
+    padding: 0 0 12px 0;
+  }
+
+  .dark .todo-title {
+    color: #d09866;
+  }
+
+  li.done {
+    text-decoration: line-through;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 12px 0;
+    opacity: 0.8;
+    text-decoration: line-through;
+  }
+
+  li.undo {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 12px 0;
+  }
+
+  .icon-undo {
+    display: flex;
+    margin-right: 0.5rem;
+    opacity: 0.8;
+  }
+
+  .icon-done {
+    display: flex;
+    margin-right: 0.5rem;
+    opacity: 0.5;
+  }
+
+  .dark .icon-done {
+    opacity: 0.65;
+  }
+
+  svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .undo-content {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #82644b;
+  }
+
+  .dark .undo-content {
+    color: #b28761;
+  }
+
+  .done-content {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #82644b;
+    opacity: 0.75;
+    text-decoration-line: line-through;
+  }
+
+  .dark .done-content {
+    opacity: 1;
+  }
+
+  .todo-head {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgba(130, 100, 75, 0.1);
+    justify-content: space-between;
+  }
+
+  .dark .todo-head {
+    border-bottom: 1px solid rgba(130, 100, 75, 0.1);
+  }
+
+  .todo-icon-right {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 32px;
+    transform: translateX(8px) translateY(-36px) rotate(35deg) scale(1)
+      skew(1deg);
+    -webkit-transform: translateX(8px) translateY(-36px) rotate(35deg) scale(1)
+      skew(1deg);
+    -moz-transform: translateX(8px) translateY(-36px) rotate(35deg) scale(1)
+      skew(1deg);
+  }
+
+  .sticky-bg {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 208px;  
+    height: 28px;  
+    background-image: url("https://images.wananaiko.com/2023/06/sticky-zheye-light2.png");
+    background-size: 208px 28px;  
+  }
+
+  .dark .sticky-bg {
+    background-image: url("https://images.wananaiko.com/2023/06/sticky-zheye-dark.png");
+  }
+</style>
+
+<script src="/js/waterfall.js"></script>
+
+<div id="todolist"></div>
+
+<script>
+  
+  function waterfall(t) {
+    function e(t, e) {
+      var n = window.getComputedStyle(e);
+      return parseFloat(n["margin" + t]) || 0;
+    }
+    function n(t) {
+      return t + "px";
+    }
+    function r(t) {
+      return parseFloat(t.style.left);
+    }
+    function o(t) {
+      return t.clientWidth;
+    }
+    function l(t) {
+      return (
+        (function (t) {
+          return parseFloat(t.style.top);
+        })(t) +
+        (function (t) {
+          return t.clientHeight;
+        })(t) +
+        e("Bottom", t)
+      );
+    }
+    function i(t) {
+      return r(t) + o(t) + e("Right", t);
+    }
+    function u(t) {
+      t = t.sort(function (t, e) {
+        return l(t) === l(e) ? r(e) - r(t) : l(e) - l(t);
+      });
+    }
+    function a(e) {
+      o(t) != h &&
+        (e.target.removeEventListener(e.type, arguments.callee), waterfall(t));
+    }
+    "string" == typeof t && (t = document.querySelector(t));
+    var s = [].map.call(t.children, function (t) {
+      return (t.style.position = "absolute"), t;
+    });
+    t.style.position = "relative";
+    var f = [];
+    s.length &&
+      ((s[0].style.top = "0px"),
+      (s[0].style.left = n(e("Left", s[0]))),
+      f.push(s[0]));
+    for (var p = 1; p < s.length; p++) {
+      var c = s[p - 1],
+        y = s[p];
+      if (!(i(c) + o(y) <= o(t))) break;
+      (y.style.top = c.style.top),
+        (y.style.left = n(i(c) + e("Left", y))),
+        f.push(y);
+    }
+    for (; p < s.length; p++) {
+      u(f);
+      y = s[p];
+      var d = f.pop();
+      (y.style.top = n(l(d) + e("Top", y))),
+        (y.style.left = n(r(d))),
+        f.push(y);
+    }
+    u(f);
+    var v = f[0];
+    t.style.height = n(l(v));
+    var h = o(t);
+    window.addEventListener
+      ? window.addEventListener("resize", a)
+      : (document.body.onresize = a);
+  }
+
+  
+  todolist();
+  function todolist() {
+    fetch("https://memo.wananaiko.com/api/memo?creatorId=1&tag=清单")
+      .then((res) => res.json())
+      .then((data) => {
+        
+        
+        data = data.data;
+        let box = document.getElementById("todolist");
+        data.forEach((item) => {
+          
+          let content = item.content,
+            title = content.match(/\[(.*?)\]/g)[0].replace(/\[(.*?)\]/, "$1");
+          
+          content = content
+            .replace(/#.*\s/g, "")
+            .replace(
+              /(-\s\[\s\]\s)(.*)/g,
+              `<li class="undo"><div class="icon-undo"><?xml version="1.0" encoding="UTF-8"?><svg width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#82644b"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" stroke="#82644b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></div><div class="undo-content">$2</div></li>`
+            )
+            .replace(
+              /(-\s\[x\]\s)(.*)/g,
+              `<li class="done">
+                  <div class="icon-done"><?xml version="1.0" encoding="UTF-8"?><svg width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#82644b"><path d="M7 12.5l3 3 7-7" stroke="#82644b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" stroke="#82644b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                  </div><div class="done-content">$2</div>
+                </li>`
+            );
+          
+          let div = document.createElement("div");
+          div.className = "list_item";
+          div.innerHTML = `<div class="todo-head"><div class="todo-title">${title}</div><div class="todo-icon-right">📍
+</div></div><div class="todo-container">${content}</div><div class="sticky-bg"></div>`;
+          box.appendChild(div);
+        });
+        waterfall("#todolist");
+      })
+      .catch();
+  }
+</script>
+
+<p> </p>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>usememos 官方介绍：https://github.com/usememos/memos&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2">
+<p>Raindrop API 官方文档：https://developer.raindrop.io/&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:3">
+<p>Unavatar.io 官方介绍：https://unavatar.io/&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+]]></content:encoded>
+    </item>
+    
     <item>
       <title>Hugo 和 PaperModX 的一些配置记录</title>
       <link>https://wananaiko.com/docs/hugo-develop/</link>
