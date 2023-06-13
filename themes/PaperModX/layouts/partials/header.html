@@ -202,5 +202,19 @@ button#theme-toggle {
 
 <script>
     // 向下滚动时,header菜单栏隐藏.
+    let lastScrollTop = 0;
+const header = document.querySelector('.header');
+
+window.addEventListener('scroll', () => {
+  let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  if (scrollTop > lastScrollTop && scrollTop > header.offsetHeight){
+    // 向下滚动
+    header.classList.add('hidden');
+  } else {
+    // 向上滚动
+    header.classList.remove('hidden');
+  }
+  lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // 为负则归零
+}, false);
 
 </script>

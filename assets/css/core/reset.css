@@ -249,9 +249,8 @@ img {
     transition: transform 0.3s ease-in-out;
 }
 
-.hidden {
-    top: -100px;
-    transition: top 0.3s;
+.header.hidden {
+  transform: translateY(-100%);
 }
 
 /* 去掉滚动条背景色,针对 WebKit 内核的浏览器（如 Chrome、Safari） */
