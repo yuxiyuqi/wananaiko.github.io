@@ -218,7 +218,7 @@ function updateHTMl(data) {
       " · " +
       '</div></div><div></div><small class="memos__date">' +
       moment(data[i].createdTs * 1000)
-          .locale()
+          .locale(zh-cn)
           .startOf('day').fromNow()
         .format("lll") +
       "</small></div>" +
