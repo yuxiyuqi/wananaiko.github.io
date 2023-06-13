@@ -399,7 +399,7 @@ h6:hover .anchor {
 @media screen and (min-width: 1350px) {
     .toc.side {
         position: fixed;
-        top: 118px;
+        top: 180px;
         z-index: 1;
         max-height: calc(100% - 150px);
         overflow: auto;
