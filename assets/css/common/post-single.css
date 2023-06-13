@@ -6,16 +6,20 @@
 .comments {
     border-top: 1px solid var(--tertiary);
 }
+
 .comments {
     margin: 40px 0 20px;
 }
+
 .comments .title {
     margin: 20px 0;
     font-size: 1.5em;
 }
+
 .comments .title > span {
     line-height: 1.5rem;
 }
+
 .comments .title .counter {
     color: var(--link-hover-color);
     font-size: 1rem;
@@ -34,7 +38,7 @@
 
 .post-description {
     font-size: 16px;
-    margin: var(--gap)0;
+    margin: var(--gap) 0;
     padding: 0 15px;
     border-inline-start: 3px solid var(--primary);
 }
@@ -48,6 +52,7 @@
     display: flex;
     flex-wrap: wrap;
 }
+
 .breadcrumbs a {
     font-size: 16px;
 }
@@ -63,6 +68,7 @@
 .post-content h6 {
     margin: 24px 0 16px;
 }
+
 .post-content h3 {
     margin: 32px 0 24px;
 }
@@ -97,26 +103,30 @@
     color: var(--content);
     transition: var(--link-transition);
     padding-bottom: 2px;
-    box-shadow: 0 1px 0 rgba(125,125,125,.5);
+    box-shadow: 0 1px 0 rgba(125, 125, 125, .5);
 }
+
 .post-content a:hover {
     color: var(--content);
     box-shadow: 0 1px 0 var(--content);
     padding-bottom: 2px;
 }
+
 .post-content a.anchor:hover {
     color: var(--primary);
     box-shadow: 0 2px 0 var(--secondary);
 }
-.description
-{
+
+.description {
     font-size: 14px;
 }
+
 .post-content a code {
     margin: auto 0;
     border-radius: 0;
     box-shadow: 0 -1px 0 var(--primary) inset;
 }
+
 .post-content a:hover code {
     box-shadow: 0 -1px 0 var(--link-hover-underline-color) inset, 0 1px 0 var(--link-hover-underline-color);
 }
@@ -266,6 +276,7 @@ h6:hover .anchor {
 .post-content .chroma {
     border-radius: var(--radius);
 }
+
 /* TODO refactor this shit */
 .post-content code {
     /* inline code */
@@ -277,6 +288,7 @@ h6:hover .anchor {
     white-space: pre-wrap;
     font-family: var(--monospace);
 }
+
 .post-content pre code {
     /* reset inline code */
     display: block;
@@ -288,6 +300,7 @@ h6:hover .anchor {
     font-family: var(--monospace);
     color: var(--content);
 }
+
 .post-content .chroma code {
     background-color: inherit;
     font-family: var(--monospace);
@@ -303,21 +316,26 @@ h6:hover .anchor {
 .post-content sup {
     line-height: 1;
 }
+
 .post-content sup a {
     box-shadow: none;
     font-family: Helvetica, Arial, sans-serif;
     color: var(--link-hover-color);
 }
+
 .post-content sup a:hover {
     box-shadow: none;
     text-decoration: underline;
 }
+
 .post-content sup a:before {
     content: "[";
 }
+
 .post-content sup a:after {
     content: "]";
 }
+
 .post-content sup:target {
     background-color: var(--link-background-color);
 }
@@ -372,6 +390,7 @@ h6:hover .anchor {
     border-radius: var(--radius);
     padding: 0.4em 0;
 }
+
 .toc.side {
     font-size: .8em;
 }
@@ -384,13 +403,16 @@ h6:hover .anchor {
         max-height: calc(100% - 150px);
         overflow: auto;
     }
+
     .toc.side::-webkit-scrollbar-thumb {
         border: 5px solid var(--code-bg);
     }
+
     .toc.side.left {
         left: -360px;
         width: 250px;
     }
+
     .toc.side.right {
         right: -360px;
         width: 265px;
@@ -415,18 +437,22 @@ h6:hover .anchor {
     margin: 0;
     padding: 0;
 }
+
 .toc li ul {
     margin-inline-start: 20px;
 }
+
 .toc li a {
     line-height: 1.5em;
     padding: 3px 5px;
     border-radius: 5px;
     display: block;
 }
+
 .toc li a.active {
     background-color: var(--link-background-color);
 }
+
 .toc li a:hover {
     text-decoration: underline;
 }
@@ -519,6 +545,7 @@ h6:hover .anchor {
 .paginav a span {
     transition: var(--link-transition);
 }
+
 .paginav a:hover span:not(.title) {
     box-shadow: 0 1px 0;
 }
@@ -551,29 +578,36 @@ h6:hover .anchor {
 .social-links {
     margin: calc(var(--content-gap) * 2) 0;
 }
+
 /* shortcode */
 .social-quote {
     padding: 1em;
 }
+
 .post-content .social-quote {
     margin-bottom: var(--content-gap);
 }
+
 .social-quote.tweet {
     background-color: var(--code-bg);
     border-left: 3px solid var(--twitter-color);
 }
+
 .social-quote.tweet svg {
     color: var(--twitter-color);
 }
+
 .social-quote .title {
     margin-bottom: .5em;
     font-weight: 500;
 }
+
 .social-quote .title svg {
     width: 20px;
     height: 20px;
     vertical-align: text-bottom;
 }
+
 .social-quote .title span {
     margin-inline-start: .5em;
 }
@@ -581,6 +615,7 @@ h6:hover .anchor {
 .social-quote p > a {
     margin-inline-start: .5em;
 }
+
 .social-quote blockquote {
     font-size: .8em;
     /* reset for .post-content blockquote */
@@ -588,12 +623,14 @@ h6:hover .anchor {
     padding: 0;
     border-inline-start: 0;
 }
+
 .social-quote blockquote a {
     font-weight: 500;
     color: var(--primary);
     box-shadow: var(--link-underline-shadow);
     transition: var(--link-transition);
 }
+
 .social-quote blockquote > a:hover {
     color: var(--twitter-color);
     box-shadow: 0 2px 0 var(--twitter-color);
@@ -614,13 +651,16 @@ h6:hover .anchor {
 .comments {
     margin: var(--content-gap) 0;
 }
+
 .comments .title {
     margin: 20px 0;
     font-size: 1.5em;
 }
+
 .comments .title > span {
     line-height: 1.5rem;
 }
+
 .comments .title .counter {
     color: var(--link-hover-color);
     font-size: 1rem;
@@ -646,31 +686,39 @@ h6:hover .anchor {
 .footnotes hr {
     display: none;
 }
+
 .footnotes a {
     box-shadow: none;
     text-decoration: underline;
 }
+
 .footnotes a:hover {
     box-shadow: none;
     text-decoration: underline;
 }
+
 .footnotes ol {
     margin: 0;
 }
+
 .footnotes ol li {
     margin: 0 0 6px 0;
 }
+
 .footnotes ol li p {
     line-height: 1.5em;
     margin: 0;
 }
+
 /* fix tweet-ref makes the li markers sink at the bottom */
 .footnotes ol li > * {
     vertical-align: top;
 }
+
 .footnotes ol li:target {
     /* background-color: var(--link-background-color); */
 }
+
 .footnotes ol:before {
     content: "Footnotes";
     font-size: 1.5em;
@@ -683,6 +731,7 @@ h6:hover .anchor {
     width: calc(100% - 2em);
     display: inline-block;
 }
+
 .tweet-ref blockquote {
     margin: 3px 0 0 0;
     border-inline-color: var(--tertiary);
@@ -695,4 +744,55 @@ h6:hover .anchor {
 
 .inline-links {
     display: none;
+}
+
+.article-time {
+    color: var(--tertiary);
+    font-size: 14px;
+    box-sizing: border-box;
+    min-width: 6rem;
+    margin-left: auto;
+}
+
+.back-icon {
+    font-size: 14px;
+    line-height: 14px;
+    color: var(--tertiary);
+    align-content: center;
+    align-items: center;
+    display: flex;
+    flex: none;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 0;
+    justify-content: center;
+    overflow: hidden;
+    padding: 4px;
+    position: relative;
+    will-change: transform;
+    background-color: var(--border);
+    border-radius: 999px;
+}
+
+.return-back {
+    display: flex;
+    align-content: center;
+    flex-direction: row;
+    margin-bottom: 1.5rem;
+    align-items: center;
+}
+
+.back-word {
+    margin-left: 0.5rem;
+    font-size: 1rem;
+    color: var(--secondary);
+}
+
+.return-back:hover .back-icon {
+    color: var(--content);
+    background-color: var(--tertiary-bg);
+}
+
+.return-back:hover .back-word {
+    color: var(--content);
 }
