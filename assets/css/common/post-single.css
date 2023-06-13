@@ -29,11 +29,12 @@
 
 .post-header {
     margin: var(--content-gap) 0 calc(var(--content-gap) * 1.5);
+    padding-bottom: 1rem;
 }
 
 .post-title {
     font-size: 32px;
-    margin-bottom: var(--content-gap);
+    margin-bottom: .5rem;
 }
 
 .post-description {
