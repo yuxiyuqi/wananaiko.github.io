@@ -31,13 +31,14 @@ unavatar.io <sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-not
 <h3 id="timeline">Timeline</h3>
 <p>这不隔天我又写了一个 timeline 的 shortcode，来记录折腾的记录…以后也可以用在别的地方…
 内容发布格式：</p>
-<pre tabindex="0"><code>{/{&lt; timeline time=&#34;2022-05-22&#34; title=&#34;修改顶部菜单栏为像素风格，增加timeline 短代码&#34; tags=&#34;美化,shortcode&#34; &gt;}/}
-调整了顶部菜单栏的样式，增加了像素模糊效果，灵感来自 Framer Motion 介绍页面。调整了顶部菜单栏的样式，增加了像素模糊效果，灵感来自 Framer Motion 介绍页面。
-{/{&lt; /timeline &gt;}/}
-{/{&lt; timeline time=&#34;2022-05-21&#34; title=&#34;Gally, Goods, Stacks, Bookmark 页面上线&#34; &gt;}/}
-基于 shortcode 实现的页面，初步上线。
-{/{&lt; /timeline &gt;}/}
-</code></pre><p><style>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl">{/{<span class="p">&lt;</span> <span class="nt">timeline</span> <span class="na">time</span><span class="o">=</span><span class="s">&#34;2022-05-22&#34;</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;修改顶部菜单栏为像素风格，增加timeline 短代码&#34;</span> <span class="na">tags</span><span class="o">=</span><span class="s">&#34;美化,shortcode&#34;</span> <span class="p">&gt;</span>}/}
+</span></span><span class="line"><span class="cl">调整了顶部菜单栏的样式，增加了像素模糊效果，灵感来自 Framer Motion 介绍页面。调整了顶部菜单栏的样式，增加了像素模糊效果，灵感来自
+</span></span><span class="line"><span class="cl">Framer Motion 介绍页面。
+</span></span><span class="line"><span class="cl">{/{<span class="p">&lt;</span> <span class="p">/</span><span class="nt">timeline</span> <span class="p">&gt;</span>}/}
+</span></span><span class="line"><span class="cl">{/{<span class="p">&lt;</span> <span class="nt">timeline</span> <span class="na">time</span><span class="o">=</span><span class="s">&#34;2022-05-21&#34;</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;Gally, Goods, Stacks, Bookmark 页面上线&#34;</span> <span class="p">&gt;</span>}/}
+</span></span><span class="line"><span class="cl">基于 shortcode 实现的页面，初步上线。
+</span></span><span class="line"><span class="cl">{/{<span class="p">&lt;</span> <span class="p">/</span><span class="nt">timeline</span> <span class="p">&gt;</span>}/}
+</span></span></code></pre></div><p><style>
   .timeline {
     display: flex;
     flex-direction: column;

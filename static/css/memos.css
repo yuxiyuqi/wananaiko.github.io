@@ -204,7 +204,19 @@ span.tag-span a {
 
 .dark span.tag-span a {
     background-color: #2e474e;
-    color: var(--link-hover-color);
+    color: var(--color9);
+}
+
+span.tag-span a:hover {
+    box-shadow: none;
+}
+
+span.tag-span a:hover {
+    color: #0e7e9d;
+}
+
+.dark span.tag-span a:hover {
+    color: var(--color9);
 }
 
 p.meta-item {
