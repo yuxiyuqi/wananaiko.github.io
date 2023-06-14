@@ -243,8 +243,8 @@ img {
     z-index: 400;
     top: 0;
     left: 0;
-    opacity: .98;
-    backdrop-filter: blur(6px);
+    /*opacity: .98;*/
+    /*backdrop-filter: blur(6px);*/
     width: 100%;
     transition: transform 0.3s ease-in-out;
 }
