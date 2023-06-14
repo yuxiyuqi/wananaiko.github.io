@@ -294,7 +294,7 @@ h6:hover .anchor {
     /* reset inline code */
     display: block;
     margin: auto 0;
-    padding: 15px;
+    padding: 32px 16px 16px 16px;
     overflow-x: auto;
     border-radius: var(--radius);
     word-break: break-all;
@@ -796,4 +796,54 @@ h6:hover .anchor {
 
 .return-back:hover .back-word {
     color: var(--content);
+}
+
+.hljs-tag {
+    font-size: 0.7rem;
+    background-color: rgba(6, 197, 197, 0.1529411765);
+    color: var(--color29);
+    display: block;
+    position: absolute;
+    top: 0;
+    padding: 0 8px;
+    border-radius: 8px 2px 2px 2px;
+    font-family: "Roboto Mono", "Source Code Pro", Monaco, Menlo, Consolas, monospace;
+}
+
+.hljs-tag-shadow {
+    font-size: 0.7rem;
+    display: block;
+    position: absolute;
+    top: 0;
+    padding: 0 8px;
+    border-radius: 8px 2px 2px 2px;
+    font-family: "Roboto Mono", "Source Code Pro", Monaco, Menlo, Consolas, monospace;
+    /*background-color: rgba(6, 197, 197, 0.3725490196);*/
+    color: var(--color29);
+    filter: blur(12px);
+}
+
+.dark .hljs-tag {
+    font-size: 0.7rem;
+    background-color: rgba(6, 197, 197, 0.1529411765);
+    color: #00ffff;
+    display: block;
+    position: absolute;
+    top: 0;
+    padding: 0 8px;
+    border-radius: 8px 2px 2px 2px;
+    font-family: "Roboto Mono", "Source Code Pro", Monaco, Menlo, Consolas, monospace;
+}
+
+.dark .hljs-tag-shadow {
+    font-size: 0.7rem;
+    display: block;
+    position: absolute;
+    top: 0;
+    padding: 0 8px;
+    border-radius: 8px 2px 2px 2px;
+    font-family: "Roboto Mono", "Source Code Pro", Monaco, Menlo, Consolas, monospace;
+    background-color: rgba(6, 197, 197, 0.3725490196);
+    color: #00ffff;
+    filter: blur(12px);
 }

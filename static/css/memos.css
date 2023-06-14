@@ -47,6 +47,9 @@ ul {
     padding: 1rem;
     border-radius: 0.5rem;
     font-size: 1rem;
+    width: 100%;
+    overflow-wrap: break-word;
+    line-height: 1.75rem;
 }
 
 
@@ -57,12 +60,6 @@ ul {
     margin-bottom: 1.5rem;
 }
 
-.memos__text {
-    width: 100%;
-    overflow-wrap: break-word;
-    font-size: 1rem;
-    line-height: 1.75rem;
-}
 
 .memos__text ul li {
     list-style: none;
