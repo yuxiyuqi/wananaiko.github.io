@@ -1,0 +1,118 @@
+{{ define "main" }}
+<!--根据readwise token=OFdpVRraBbux9PoY6HVTLxKAiKholS5r5UBOyJPcXpZItbi8S5，开发一个hugo shortcode页面，来展示 readwise 的内容，注意将token直接写在shortcode页面中。将所有的readwise tweets 的内容展示在 hugo shortcode 页面中。以卡片的形式展示每块内容。-->
+<style>
+
+    .main.post {
+        position: relative !important;
+        min-height: calc(
+            100vh - var(--header-height) - var(--footer-height)
+        ) !important;
+        max-width: calc(var(--main-width) + var(--gap) * 2) !important;
+        margin-top: 5rem;
+    }
+
+    .readwise-book{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin: .5rem;
+        padding: .5rem 1rem;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        transition: all 0.2s ease;
+    }
+
+    .readwise-book a{
+        display: flex;
+        gap:16px;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .author_avatar {
+        width: 24px;
+        height: 24px;
+        border-radius: 4px
+        overflow: hidden;
+    }
+
+    .book-title {
+        font-size: 1rem;
+        font-weight: 500;
+        margin: 0.5rem 1rem;
+        width: 320px;
+    }
+
+    .book-author {
+        font-size: .8rem;
+        font-weight: 400;
+        margin: 0.5rem 0;
+        width: 140px;
+    }
+
+    .update_time {
+        font-size: 0.8rem;
+        font-weight: 400;
+        margin: 0.5rem 0;
+    }
+
+    .highlights_url {
+        font-size: 0.8rem;
+        font-weight: 400;
+        margin-left: auto;
+    }
+
+    .highlights_url a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+
+</style>
+{{ $url := "https://readwise.io/api/v2/books/" }}
+{{ $token := "OFdpVRraBbux9PoY6HVTLxKAiKholS5r5UBOyJPcXpZItbi8S5" }}
+{{ $headers := dict "Authorization" (printf "Token %s" $token) }}
+{{ $response := getJSON $url $headers }}
+{{ $books := $response.results }}
+<!--将同一组高亮内容放在一个一个div里。-->
+{{ range $books }}
+
+<a href="{{ .source_url }}">
+    <div class="readwise-book">
+        <div class="author_avatar"><img src="{{ .cover_image_url }}" alt="" srcset=""></div>
+        <div class="book-title">{{ .title }}</div>
+        <div class="book-author">{{ .author }}</div>
+        <div class="update_time">{{ .updated }}</div>
+        <div class="highlights_url">
+            <a href="{{ .highlights_url }}">View thread</a>
+        </div>
+    </div>
+</a>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+
+
+<script>
+    // 将2023-05-24T10:04:31.697016Z这样的时间格式化后，使用moment.js来显示时间。
+    var time = document.getElementsByClassName("update_time");
+    for (var i = 0; i < time.length; i++) {
+        var t = time[i].innerHTML;
+        var t1 = moment(t).format('YYYY-MM-DD');
+        time[i].innerHTML = t1;
+    }
+// 去掉book-author中的_ on Twitter和 on Twitter
+    var author = document.getElementsByClassName("book-author");
+    for (var i = 0; i < author.length; i++) {
+        var a = author[i].innerHTML;
+        var a1 = a.replace(/_ on Twitter/g, "");
+        var a2 = a1.replace(/ on Twitter/g, "");
+        author[i].innerHTML = a2;
+    }
+
+
+</script>
+{{ end}}
+{{end}}
+
