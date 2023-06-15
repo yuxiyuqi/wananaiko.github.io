@@ -106,9 +106,25 @@ button#theme-toggle {
     font-size: 26px;
     margin: auto 4px;
 }
+
+span.rounded-full.bg-gradient-to-r.dark\:from-rose-700.dark\:via-pink-700.dark\:to-purple-700.dark\:opacity-60.from-blue-300.via-cyan-300.to-green-300.opacity-70.-z-50.aspect-square.w-full.max-w-screen-lg.blur-3xl.filter.bottom-\[calc\(100\%-200px\)\].dark\:bottom-\[calc\(100\%-180px\)\].fixed {
+    aspect-ratio: 1/1;
+    background-image: linear-gradient(to right,#1451fc,#099,#7E22CE);
+    border: 0 solid #E5E5E5;
+    border-radius: 9999px;
+    bottom: calc(100% - 180px);
+    filter: blur(64px);
+    opacity: .25;
+    position: fixed;
+    width: 100%;
+    z-index: -50;
+}
 </style>
 
 <header class="header">
+<!--顶部添加彩色模糊背景-->
+    <span class="rounded-full bg-gradient-to-r dark:from-rose-700 dark:via-pink-700 dark:to-purple-700 dark:opacity-60 from-blue-300 via-cyan-300 to-green-300 opacity-70 -z-50 aspect-square w-full max-w-screen-lg blur-3xl filter bottom-[calc(100%-200px)] dark:bottom-[calc(100%-180px)] fixed">
+</span>
     <nav class="nav">
         <div class="logo">
             {{- $label_text := (site.Params.logo.text | default site.Title) }}
