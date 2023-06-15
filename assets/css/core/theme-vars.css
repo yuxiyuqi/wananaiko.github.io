@@ -61,7 +61,8 @@
     --tertiary: rgb(123, 124, 124);
     --tertiary-bg: rgb(65, 66, 68);
     --content: rgb(196, 196, 197);
-    --code-bg: rgb(41, 42, 48);
+    /*--code-bg: rgb(41, 42, 48);*/
+    --code-bg: lch(16 2 266 / .8);
     --border: rgb(51, 51, 51);
     --border-top: 0.5px solid rgb(65 66 68 / 65%);
     --link-background-color: rgba(37, 156, 154, .6);
@@ -123,7 +124,7 @@ body::-webkit-scrollbar {
         --enter-initial: 0ms;
         animation: slide-enter 1s both 1;
         animation-delay: calc(
-                var(--enter-initial) + var(--enter-stage) * var(--enter-step)
+            var(--enter-initial) + var(--enter-stage) * var(--enter-step)
         );
     }
 
@@ -214,14 +215,18 @@ body::-webkit-scrollbar {
     .slide-enter-content > *:nth-child(22) {
         --enter-stage: 22;
     }
+
     .slide-enter-content > *:nth-child(23) {
         --enter-stage: 23;
     }
+
     .slide-enter-content > *:nth-child(24) {
         --enter-stage: 24;
     }
+
     .slide-enter-content > *:nth-child(25) {
         --enter-stage: 25;
     }
 }
+
 /* 滑动进入动画结束*/
