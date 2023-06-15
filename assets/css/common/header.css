@@ -12,16 +12,15 @@
     border-radius: 999px;
     box-shadow: #FFFFFF 0 0, rgba(244, 244, 245, .1) 0 0 0 1px, rgba(39, 39, 42, 5%) 0 10px 15px -3px, rgba(39, 39, 42, 5%) 0 4px 6px -4px;
     backdrop-filter: blur(12px);
-    background-color: rgb(255 255 255 / 65%);
+    background-color: rgb(255 255 255 / 50%);
     border: 1px solid #ffffff25;
 }
 
 .dark .nav {
     box-shadow: #FFFFFF 0 0, rgba(244, 244, 245, .1) 0 0 0 1px, rgba(39, 39, 42, 5%) 0 10px 15px -3px, rgba(39, 39, 42, 5%) 0 4px 6px -4px;
     backdrop-filter: blur(12px);
-    background-color: rgb(15 15 15/.2);
+    background-color: rgb(15 15 15/.3);
     border: 0 solid #E5E5E5;
-    background-image: none;
 }
 
 .nav ul {
