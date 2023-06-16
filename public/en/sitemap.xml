@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://wananaiko.com/docs/</loc>
-    <lastmod>2023-05-21T21:06:57+08:00</lastmod>
+    <lastmod>2023-06-16T23:47:51+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
@@ -16,16 +16,10 @@
                 />
   </url><url>
     <loc>https://wananaiko.com/tags/hugo/</loc>
-    <lastmod>2023-05-21T21:06:57+08:00</lastmod>
-  </url><url>
-    <loc>https://wananaiko.com/docs/game-with-hugo/</loc>
-    <lastmod>2023-05-21T21:06:57+08:00</lastmod>
-  </url><url>
-    <loc>https://wananaiko.com/tags/papermodx/</loc>
-    <lastmod>2023-05-21T21:06:57+08:00</lastmod>
+    <lastmod>2023-06-16T23:47:51+08:00</lastmod>
   </url><url>
     <loc>https://wananaiko.com/tags/</loc>
-    <lastmod>2023-05-21T21:06:57+08:00</lastmod>
+    <lastmod>2023-06-16T23:47:51+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
@@ -37,11 +31,8 @@
                 href="https://wananaiko.com/tags/"
                 />
   </url><url>
-    <loc>https://wananaiko.com/tags/theme/</loc>
-    <lastmod>2023-05-21T21:06:57+08:00</lastmod>
-  </url><url>
     <loc>https://wananaiko.com/</loc>
-    <lastmod>2023-05-21T21:06:57+08:00</lastmod>
+    <lastmod>2023-06-16T23:47:51+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
@@ -52,6 +43,18 @@
                 hreflang="en"
                 href="https://wananaiko.com/"
                 />
+  </url><url>
+    <loc>https://wananaiko.com/docs/readwise-show/</loc>
+    <lastmod>2023-06-16T23:47:51+08:00</lastmod>
+  </url><url>
+    <loc>https://wananaiko.com/docs/game-with-hugo/</loc>
+    <lastmod>2023-05-21T21:06:57+08:00</lastmod>
+  </url><url>
+    <loc>https://wananaiko.com/tags/papermodx/</loc>
+    <lastmod>2023-05-21T21:06:57+08:00</lastmod>
+  </url><url>
+    <loc>https://wananaiko.com/tags/theme/</loc>
+    <lastmod>2023-05-21T21:06:57+08:00</lastmod>
   </url><url>
     <loc>https://wananaiko.com/docs/install-remark42/</loc>
     <lastmod>2023-04-25T11:10:49+08:00</lastmod>
