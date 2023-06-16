@@ -77,9 +77,6 @@ themes/your_theme/layouts/_default/readwise.html
     flex-grow: 1;
   }
 
-  .readwise-avatar {
-  }
-
   .readwise-avatar img {
     max-width: unset;
     min-width: unset;
