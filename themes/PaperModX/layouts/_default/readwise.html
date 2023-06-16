@@ -77,17 +77,19 @@
 <!--将同一组高亮内容放在一个一个div里。-->
 {{ range $books }}
 
-<a href="{{ .source_url }}">
-    <div class="readwise-book">
-        <div class="author_avatar"><img src="{{ .cover_image_url }}" alt="" srcset=""></div>
-        <div class="book-title">{{ .title }}</div>
-        <div class="book-author">{{ .author }}</div>
-        <div class="update_time">{{ .updated }}</div>
-        <div class="highlights_url">
-            <a href="{{ .highlights_url }}">View thread</a>
+<div class="readwise slide-enter-content">
+    <a href="{{ .source_url }}">
+        <div class="readwise-book">
+            <div class="author_avatar"><img src="{{ .cover_image_url }}" alt="" srcset=""></div>
+            <div class="book-title">{{ .title }}</div>
+            <div class="book-author">{{ .author }}</div>
+            <div class="update_time">{{ .updated }}</div>
+            <div class="highlights_url">
+                <a href="{{ .highlights_url }}">View thread</a>
+            </div>
         </div>
-    </div>
-</a>
+    </a>
+</div>
 
 
 
