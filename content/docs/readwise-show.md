@@ -11,7 +11,7 @@ draft: false
 
 最初，我使用的服务是 [Mem](https://mem.ai/) 和 [Readwise](https://readwise.io/)，通过 Raycast 的 Snippet “mem” 来触发快捷输入：`@memdotai mem it @readwise save thread`，这样就可以快速的把内容保存到上面 2 个平台中了。
 
-介于 Notion 的生态更好一些，现在已经改为使用 [SavaToNotion]() 和 Readwise。
+因为 Notion 的生态更好一些，现在已经改为使用 [SavaToNotion]() 和 Readwise。
 
 介于 Notion 的 API 我还没研究明白，目前只实现了使用 Readwise 的 API 来展示 🐦 上的有趣内容。期待有对 Notion API 的调用比较懂的大神指点一二。
 
