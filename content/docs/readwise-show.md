@@ -15,6 +15,8 @@ draft: false
 
 介于 Notion 的 API 我还没研究明白，目前只实现了使用 Readwise 的 API 来展示 🐦 上的有趣内容。期待有对 Notion API 的调用比较懂的大神指点一二。
 
+我始终还是想基于 Notion来实现这个页面，Notion 更方便为内容设置标签。Readwise 虽然也可以设置，但是太麻烦了，实在是懒得操作了。
+
 初略研究了一下 Readwise 的 API，发现有 [V2](https://readwise.io/api_deets) 和 [V3](https://readwise.io/reader_api) 两个版本，而 V3 多了 `summary`字段对内容的总结。V2是没有的，只有截断的内容，阅读体验不是很好。
 
 因为开完发完 Thread 页面后，发现官方还没修复同步 🐦 的问题，暂时还没法更新Thread 页面的内容，等官方修复后再更新。
