@@ -108,7 +108,7 @@ url = "/bookmark/"
 weight = 5
 
 [[languages.en.menu.main]]
-name = "Thread 👀"
+name = "Thread 🧵"
 url = "/readwise/"
 weight = 6
 
