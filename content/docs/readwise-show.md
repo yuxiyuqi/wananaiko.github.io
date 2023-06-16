@@ -108,6 +108,10 @@ themes/your_theme/layouts/_default/readwise.html
     margin-left: 4px;
     line-height: 18px;
   }
+  
+  .dark .readwise-time {
+    color: var(--signature-bg);
+  }
 
   .readwise-summary {
     font-size: 14px;
@@ -203,7 +207,7 @@ description: 展示 🐦 上不错的 🧵 ,等 Reawise 同步问题修复后，
 ---
 ```
 
-到此结束，颜色样式可能需要你结合自己的主题作调整，应该不难。
+到此结束，颜色样式一定会需要你结合自己的主题作调整，应该不难。
 
 本站文章归档页暂时先隐藏了，文章太少，暂时没什么展示的价值。另外，菜单栏页面越来越多，要开始考虑下拉菜单了……
 
