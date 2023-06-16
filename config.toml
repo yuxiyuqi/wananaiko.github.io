@@ -108,14 +108,14 @@ url = "/bookmark/"
 weight = 5
 
 [[languages.en.menu.main]]
-name = "Archive"
-url = "/archives/"
+name = "Thread 👀"
+url = "/readwise/"
 weight = 6
 
 [[languages.en.menu.main]]
 name = "Links"
 url = "/links/"
-weight = 7
+weight = 8
 
 [languages.zh]
 languageName = ":cn:"

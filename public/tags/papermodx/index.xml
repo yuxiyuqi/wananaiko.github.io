@@ -115,13 +115,14 @@ unavatar.io <sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-not
 
   .timeline__tag {
     display: inline-block;
-    color: var(--tertiary);
-    background-color: var(--code-bg);
-    border-radius: 3px;
+    color: var(--secondary);
+    background-color: var(--border);
+    border-radius: 999px;
     padding: 0rem 0.5rem;
     font-size: 12px;
     white-space: nowrap;
     line-height: 1.4rem;
+    opacity: 0.8;
   }
 
   .timeline__description {
@@ -233,13 +234,14 @@ unavatar.io <sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-not
 
   .timeline__tag {
     display: inline-block;
-    color: var(--tertiary);
-    background-color: var(--code-bg);
-    border-radius: 3px;
+    color: var(--secondary);
+    background-color: var(--border);
+    border-radius: 999px;
     padding: 0rem 0.5rem;
     font-size: 12px;
     white-space: nowrap;
     line-height: 1.4rem;
+    opacity: 0.8;
   }
 
   .timeline__description {
@@ -351,13 +353,14 @@ unavatar.io <sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-not
 
   .timeline__tag {
     display: inline-block;
-    color: var(--tertiary);
-    background-color: var(--code-bg);
-    border-radius: 3px;
+    color: var(--secondary);
+    background-color: var(--border);
+    border-radius: 999px;
     padding: 0rem 0.5rem;
     font-size: 12px;
     white-space: nowrap;
     line-height: 1.4rem;
+    opacity: 0.8;
   }
 
   .timeline__description {
@@ -469,13 +472,14 @@ unavatar.io <sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-not
 
   .timeline__tag {
     display: inline-block;
-    color: var(--tertiary);
-    background-color: var(--code-bg);
-    border-radius: 3px;
+    color: var(--secondary);
+    background-color: var(--border);
+    border-radius: 999px;
     padding: 0rem 0.5rem;
     font-size: 12px;
     white-space: nowrap;
     line-height: 1.4rem;
+    opacity: 0.8;
   }
 
   .timeline__description {
@@ -587,13 +591,14 @@ unavatar.io <sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-not
 
   .timeline__tag {
     display: inline-block;
-    color: var(--tertiary);
-    background-color: var(--code-bg);
-    border-radius: 3px;
+    color: var(--secondary);
+    background-color: var(--border);
+    border-radius: 999px;
     padding: 0rem 0.5rem;
     font-size: 12px;
     white-space: nowrap;
     line-height: 1.4rem;
+    opacity: 0.8;
   }
 
   .timeline__description {
@@ -705,13 +710,14 @@ unavatar.io <sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-not
 
   .timeline__tag {
     display: inline-block;
-    color: var(--tertiary);
-    background-color: var(--code-bg);
-    border-radius: 3px;
+    color: var(--secondary);
+    background-color: var(--border);
+    border-radius: 999px;
     padding: 0rem 0.5rem;
     font-size: 12px;
     white-space: nowrap;
     line-height: 1.4rem;
+    opacity: 0.8;
   }
 
   .timeline__description {

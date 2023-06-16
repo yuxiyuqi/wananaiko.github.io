@@ -289,8 +289,6 @@
   </url><url>
     <loc>https://wananaiko.com/newsletter/archives/</loc>
   </url><url>
-    <loc>https://wananaiko.com/notion/</loc>
-  </url><url>
     <loc>https://wananaiko.com/read/</loc>
   </url><url>
     <loc>https://wananaiko.com/search/</loc>
@@ -318,5 +316,7 @@
                 />
   </url><url>
     <loc>https://wananaiko.com/stack/</loc>
+  </url><url>
+    <loc>https://wananaiko.com/readwise/</loc>
   </url>
 </urlset>
