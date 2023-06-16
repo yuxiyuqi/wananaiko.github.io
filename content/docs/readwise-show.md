@@ -90,7 +90,6 @@ themes/your_theme/layouts/_default/readwise.html
   }
   .readwise-head {
     display: flex;
-    /* justify-content: space-between; */
     align-items: center;
   }
 
@@ -127,6 +126,19 @@ themes/your_theme/layouts/_default/readwise.html
     color: var(--secondary);
     margin-left: 4px;
     line-height: 22px;
+  }
+  
+  @media (max-width: 767px) {
+    .readwise-container {
+      width: 100%;
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      padding: 1rem 0.5rem;
+    }
+    .readwise-author {
+      font-size: 14px;
+    }
   }
 </style>
 
