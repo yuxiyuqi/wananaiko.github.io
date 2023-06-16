@@ -7,9 +7,9 @@ tags:
 draft: false
 ---
 
-在逛 🐦 ( 小蓝鸟，你知道我在说什么 ) 时，经常会看到不错的 tweet 和 thread，除了默默的点赞，我更喜欢用第三方工具来收集这些内容，方便随时搜索查看内容。
+在逛 🐦 ( 小蓝鸟，你知道我在说什么 ) 时，经常会看到不错的 tweet 和 thread，除了默默的点赞，我更喜欢用第三方工具来收集这些内容，方便随时搜索查看。
 
-最初，我使用的服务是 [Mem](https://mem.ai/) 和 [Readwise](https://readwise.io/)，通过 Raycast 的 Snippet “mem” 来触发快捷输入：`@memdotai mem it @readwise save thread`，这样就可以快速的把内容保存到上面 2 个平台中了。
+最初，我使用的服务是 [Mem](https://mem.ai/) 和 [Readwise](https://readwise.io/)，通过 Raycast 的 Snippet “mem” 来触发快捷输入：`@memdotai mem it @readwise save thread`，这样就可以快速的把内容保存到上面 2 个平台中。
 
 因为 Notion 的生态更好一些，现在已经改为使用 [SavaToNotion]() 和 Readwise。
 
@@ -17,7 +17,7 @@ draft: false
 
 我始终还是想基于 Notion来实现这个页面，Notion 更方便为内容设置标签。Readwise 虽然也可以设置，但是太麻烦了，实在是懒得操作了。
 
-初略研究了一下 Readwise 的 API，发现有 [V2](https://readwise.io/api_deets) 和 [V3](https://readwise.io/reader_api) 两个版本，而 V3 多了 `summary`字段对内容的总结。V2是没有的，只有截断的内容，阅读体验不是很好。
+初略研究了一下 Readwise 的 API，发现有 [V2](https://readwise.io/api_deets) 和 [V3](https://readwise.io/reader_api) 两个版本，而 V3 多了 `summary`字段对内容的总结。V2是没有的，只有截断的标题，阅读体验不是很好。
 
 因为开完发完 Thread 页面后，发现官方还没修复同步 🐦 的问题，暂时还没法更新Thread 页面的内容，等官方修复后再更新。
 
