@@ -149,7 +149,7 @@ themes/your_theme/layouts/_default/readwise.html
 </header>
 
 {{ $url := "https://readwise.io/api/v3/list/" }} {{ $token :=
-"OFdpVRraBbux9PoY6HVTLxKAiKholS5r5UBOyJPcXpZItbi8S5" }} {{ $headers := dict
+"替换为你自己的token" }} {{ $headers := dict
 "Authorization" (printf "Token %s" $token) }} {{ $response := getJSON $url
 $headers }} {{ $books := $response.results }}
 
