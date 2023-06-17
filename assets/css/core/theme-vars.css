@@ -75,7 +75,7 @@
     --link-hover-underline-color: var(--link-hover-color);
     --link-hover-underline-shadow: 0 1px 0 var(--link-hover-underline-color);
     --blur-bg: rgba(29, 30, 32, 0.9);
-    --lord-icon-primary:rgb(200, 200, 200);
+    --lord-icon-primary:rgb(218, 218, 219);
 }
 
 .list-page {
