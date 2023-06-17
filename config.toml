@@ -111,7 +111,7 @@ url = "/bookmark/"
 weight = 6
 
 [[languages.en.menu.main]]
-name = "线索🧵"
+name = "线索"
 url = "/readwise/"
 weight = 7
 
