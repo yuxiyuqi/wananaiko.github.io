@@ -1,36 +1,36 @@
 - id: prev_page
-  translation: "Prev Page"
+  translation: "上一页"
 
 - id: next_page
-  translation: "Next Page"
+  translation: "下一页"
 
 - id: read_time
   translation:
-    one : "1 min"
-    other: "{{ .Count }} min"
+    one: "1 分钟"
+    other: "{{ .Count }} 分钟"
 
 - id: words
   translation:
-    one : "word"
-    other: "{{ .Count }} words"
+    one: "字"
+    other: "{{ .Count }} 字"
 
 - id: toc
-  translation: "Table of Contents"
+  translation: "目录"
 
 - id: translations
-  translation: "Translations"
+  translation: "其他语言"
 
 - id: home
-  translation: "Home"
+  translation: "主页"
 
 - id: edit_post
-  translation: "Edit"
+  translation: "编辑"
 
 - id: code_copy
-  translation: "copy"
+  translation: "复制"
 
 - id: code_copied
-  translation: "copied!"
+  translation: "已复制！"
 
 - id: comments
-  translation: "Comments"
+  translation: "评论"
