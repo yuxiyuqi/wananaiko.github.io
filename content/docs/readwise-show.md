@@ -152,14 +152,14 @@ themes/your_theme/layouts/_default/readwise.html
 "OFdpVRraBbux9PoY6HVTLxKAiKholS5r5UBOyJPcXpZItbi8S5" }} {{ $headers := dict
 "Authorization" (printf "Token %s" $token) }} {{ $response := getJSON $url
 $headers }} {{ $books := $response.results }}
-<!--将同一组高亮内容放在一个一个div里。-->
-{{ range $books }}
+
+{{ range $books -}}
 
 <div class="readwise">
   <a href="{{ .source_url }}" target="_blank" rel="noopener noreferrer">
     <div class="readwise-container">
       <div class="readwise-avatar">
-        <img src="{{.image_url}}" alt="" srcset="" />
+        <img src="{{.image_url}}" alt="" loading="lazy" />
       </div>
       <div class="readwise-content">
         <div class="readwise-head">
@@ -173,7 +173,7 @@ $headers }} {{ $books := $response.results }}
   </a>
 </div>
 
-{{ end}}
+{{- end }}
 
 <script type="text/javascript" src="/assets/moment.min.js?v=2.29.4"></script>
 <script src="https://cdn.jsdelivr.net/npm/moment@2.29.1/locale/zh-cn.js"></script>
@@ -194,7 +194,7 @@ $headers }} {{ $books := $response.results }}
   readwiseArray.forEach(function (item) {
     item.parentNode.appendChild(item);
   });
-  
+
   document.addEventListener("DOMContentLoaded", (event) => {
     moment.locale("zh-cn"); // 设置区域为中文
     let times = document.querySelectorAll(".readwise-time");
