@@ -187,11 +187,14 @@ $headers }} {{ $books := $response.results }}
       time.textContent = date.fromNow();
     });
 
-    // 检测当.source_url没有值时，隐藏整个div.
-    var source_url = document.querySelector(".source_url");
-    if (source_url == null) {
-      document.querySelector(".readwise-container").style.display = "none";
-    }
+    // 检测当readwise中的.source_url没有值时，隐藏当前所属的div.
+    var readwise = document.querySelectorAll(".readwise");
+    readwise.forEach((item) => {
+      var source_url = item.querySelector("a").getAttribute("href");
+      if (source_url == "") {
+        item.style.display = "none";
+      }
+    });
 
     //隐藏页面上第一个<div class="readwise">的整体div.
     var readwise = document.querySelector(".readwise");
