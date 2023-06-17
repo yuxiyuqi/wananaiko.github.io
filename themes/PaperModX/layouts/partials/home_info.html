@@ -10,8 +10,19 @@
     {{- partial "social_icons.html" (dict "icons" site.Params.socialIcons "svg" $.Site.Data.svg "MaskedEmail" site.Params.MaskedEmail "Email" site.Params.Email) -}}
   </footer> -->
 
+  <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+  <script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/tippy.js@6/animations/scale.css"
+  />
+
   <footer class="entry-footer">
-    <a href="https://wananaiko.com/index.xml">
+    <a
+      href="https://wananaiko.com/index.xml"
+      id="rss"
+      data-tippy-content="RSS订阅"
+    >
       <lord-icon
         src="https://cdn.lordicon.com/ammuypus.json"
         trigger="hover"
@@ -21,7 +32,11 @@
       </lord-icon>
     </a>
 
-    <a href="mailto:wananaiko@tu.edu.vn">
+    <a
+      href="mailto:wananaiko@tu.edu.vn"
+      id="mail"
+      data-tippy-content="发送邮件"
+    >
       <lord-icon
         src="https://cdn.lordicon.com/nfsqebdc.json"
         trigger="hover"
@@ -31,7 +46,11 @@
       </lord-icon>
     </a>
 
-    <a href="https://t.me/wananaiko">
+    <a
+      href="https://t.me/wananaiko"
+      id="telegram"
+      data-tippy-content="Telegram联系"
+    >
       <lord-icon
         src="https://cdn.lordicon.com/hpivxauj.json"
         trigger="hover"
@@ -40,6 +59,49 @@
       >
       </lord-icon>
     </a>
+
+    <a href="" id="butt" data-tippy-content="欢迎骚扰~">
+      <lord-icon
+        src="https://cdn.lordicon.com/ndppaqfb.json"
+        trigger="hover"
+        colors="inherit"
+        style="width: 32px; height: 32px"
+      >
+      </lord-icon>
+    </a>
   </footer>
+  <script>
+    tippy("#mail", {
+      animation: "scale",
+      theme: "light",
+      offset: [-10, 20],
+      placement: "top",
+      arrow: false,
+    });
+
+    tippy("#telegram", {
+      animation: "scale",
+      theme: "light",
+      offset: [-10, 20],
+      placement: "top",
+      arrow: false,
+    });
+
+    tippy("#rss", {
+      animation: "scale",
+      theme: "light",
+      offset: [-10, 20],
+      placement: "top",
+      arrow: false,
+    });
+
+    tippy("#butt", {
+      animation: "scale",
+      theme: "light",
+      offset: [-10, 20],
+      placement: "top",
+      arrow: false,
+    });
+  </script>
 </article>
 {{- end -}}
