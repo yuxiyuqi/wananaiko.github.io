@@ -87,6 +87,7 @@ themes/your_theme/layouts/_default/readwise.html
   }
   .readwise-head {
     display: flex;
+    /* justify-content: space-between; */
     align-items: center;
   }
 
@@ -100,11 +101,11 @@ themes/your_theme/layouts/_default/readwise.html
   .readwise-time {
     font-size: 12px;
     color: var(--secondary);
-    visibility: hidden;
+    /* visibility: hidden; */
     margin-left: 4px;
     line-height: 18px;
   }
-  
+
   .dark .readwise-time {
     color: var(--signature-bg);
   }
@@ -113,6 +114,7 @@ themes/your_theme/layouts/_default/readwise.html
     font-size: 14px;
     color: var(--primary);
     line-height: 22px;
+    margin-top: 8px;
   }
 
   .dark .readwise-summary {
@@ -124,7 +126,7 @@ themes/your_theme/layouts/_default/readwise.html
     margin-left: 4px;
     line-height: 22px;
   }
-  
+
   @media (max-width: 767px) {
     .readwise-container {
       width: 100%;
@@ -147,10 +149,10 @@ themes/your_theme/layouts/_default/readwise.html
 </header>
 
 {{ $url := "https://readwise.io/api/v3/list/" }} {{ $token :=
-"这里替换为你的token" }} {{ $headers := dict
+"OFdpVRraBbux9PoY6HVTLxKAiKholS5r5UBOyJPcXpZItbi8S5" }} {{ $headers := dict
 "Authorization" (printf "Token %s" $token) }} {{ $response := getJSON $url
 $headers }} {{ $books := $response.results }}
-
+<!--将同一组高亮内容放在一个一个div里。-->
 {{ range $books }}
 
 <div class="readwise">
@@ -163,7 +165,7 @@ $headers }} {{ $books := $response.results }}
         <div class="readwise-head">
           <div class="readwise-author">{{.author}}</div>
           <span class="dot">·</span>
-          <div class="readwise-time">{{.created_at}}</div>
+          <div class="readwise-time">{{.published_date}}</div>
         </div>
         <div class="readwise-summary">{{.summary}}</div>
       </div>
@@ -174,32 +176,32 @@ $headers }} {{ $books := $response.results }}
 {{ end}}
 
 <script type="text/javascript" src="/assets/moment.min.js?v=2.29.4"></script>
-<script type="text/javascript" src="/assets/moment.twitter.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/moment@2.29.1/locale/zh-cn.js"></script>
 
 <script>
-  // 检测当.source_url没有值时，隐藏整个div.
-  var source_url = document.querySelector(".source_url");
-  if (source_url == null) {
-    document.querySelector(".readwise-container").style.display = "none";
-  }
-  // 使用 moment 来解析并格式化时间
-  window.onload = function () {
-    var readwiseTimes = document.querySelectorAll(".readwise-time");
-    readwiseTimes.forEach(function (timeElement) {
-      var time = timeElement.textContent;
-      var formattedTime = moment(time, "YYYY-MM-DDTHH:mm:ss.SSSSZ").twitter();
-      timeElement.textContent = formattedTime;
-      timeElement.style.visibility = "visible";
+  document.addEventListener("DOMContentLoaded", (event) => {
+    moment.locale("zh-cn"); // 设置区域为中文
+    let times = document.querySelectorAll(".readwise-time");
+    times.forEach((time) => {
+      let date = moment.utc(time.textContent, "YYYY-MM-DD").local();
+      time.textContent = date.fromNow();
     });
-  };
 
-  //隐藏页面上第一个div class="readwise"的整体div.
-  var readwise = document.querySelector(".readwise");
-  readwise.style.display = "none";
+    // 检测当.source_url没有值时，隐藏整个div.
+    var source_url = document.querySelector(".source_url");
+    if (source_url == null) {
+      document.querySelector(".readwise-container").style.display = "none";
+    }
+
+    //隐藏页面上第一个<div class="readwise">的整体div.
+    var readwise = document.querySelector(".readwise");
+    if (readwise != null) {
+      readwise.style.display = "none";
+    }
+  });
 </script>
 
 {{end}}
-
 ```
 
 注意将上面代码中的`moment.min.js` 和 `moment.twitter.min.js` 保存到你自己的网站目录中并调用。
