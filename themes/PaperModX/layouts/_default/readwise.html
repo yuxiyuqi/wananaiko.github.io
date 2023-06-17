@@ -154,9 +154,9 @@ $headers }} {{ $books := $response.results }}
     var readwiseTimes = document.querySelectorAll(".readwise-time");
     readwiseTimes.forEach(function (timeElement) {
       var time = timeElement.textContent;
-      // 使用 moment 来解析并格式化时间
-      var formattedTime = moment(time, "YYYY-MM-DDTHH:mm:ss.SSSSZ").twitter();
-      timeElement.textContent = formattedTime;
+      // 使用 moment 来解析并格式化时间,并使用twitter()方法将时间显示为相对时间.
+      var time = moment(time).twitter();
+      timeElement.textContent = time;
       timeElement.style.visibility = "visible";
     });
   };
