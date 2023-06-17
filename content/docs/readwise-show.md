@@ -1,11 +1,12 @@
 ---
-title: "关于 Thread 页面的制作分享"
+title: "关于“线索”页面的制作分享"
 date: 2023-06-16T23:47:51+08:00
 author: "wananaiko"
 tags:
   - hugo
 draft: false
 ---
+原来叫：Thread，现在改成了"线索"。
 
 在逛 🐦 ( 小蓝鸟，你知道我在说什么 ) 时，经常会看到不错的 tweet 和 thread，除了默默的点赞，我更喜欢用第三方工具来收集这些内容，方便随时搜索查看。
 
