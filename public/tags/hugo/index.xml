@@ -146,7 +146,7 @@
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">header</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">{{ $url := &#34;https://readwise.io/api/v3/list/&#34; }} {{ $token :=
-</span></span><span class="line"><span class="cl">&#34;替换为你自己的token&#34; }} {{ $headers := dict
+</span></span><span class="line hl"><span class="cl">&#34;替换为你自己的token&#34; }} {{ $headers := dict
 </span></span><span class="line"><span class="cl">&#34;Authorization&#34; (printf &#34;Token %s&#34; $token) }} {{ $response := getJSON $url
 </span></span><span class="line"><span class="cl">$headers }} {{ $books := $response.results }}
 </span></span><span class="line"><span class="cl">

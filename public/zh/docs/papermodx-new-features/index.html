@@ -15,8 +15,8 @@
 /> <meta name="description" content="本文档描述 PaperModX 相比原版 PaperMod 增加的新功能和变化。"> <meta name="author" content="wananaiko"> <link rel="canonical" href="https://wananaiko.com/zh/docs/papermodx-new-features/">
 <link
   crossorigin="anonymous"
-  href="/assets/css/stylesheet.min.ba3b7497806df4bf96e580d3a40d7a65051cfb0f01458d4b38261e5f7f4b4178.css"
-  integrity="sha256-ujt0l4Bt9L&#43;W5YDTpA16ZQUc&#43;w8BRY1LOCYeX39LQXg="
+  href="/assets/css/stylesheet.min.be31133ae54246af55d22d957f9a7e22ffc4235716b37db7136e5a487a1d8394.css"
+  integrity="sha256-vjETOuVCRq9V0i2Vf5p&#43;Iv/EI1cWs323E25aSHodg5Q="
   rel="preload stylesheet"
   as="style"
 /> <link rel="icon" href="https://images.wananaiko.com/favicon.ico"> <link rel="apple-touch-icon" href="https://wananaiko.com/apple-touch-icon.png"> <link rel="alternate" hreflang="en" href="https://wananaiko.com/docs/papermodx-new-features/" />
@@ -423,33 +423,7 @@ window.addEventListener('scroll', () => {
 >
   
         </div>
-    </header> <div class="toc side right">
-    <details  open>
-        <summary accesskey="c" title="(Alt + C)">
-            <span class="details">目录</span>
-        </summary>
-
-        <div class="inner"><ul>
-                <li>
-                    <a href="#table-of-contents-toc-floating-on-the-side" aria-label="Table of Contents (ToC) floating on the side">Table of Contents (ToC) floating on the side</a></li>
-                <li>
-                    <a href="#instantclick-integration" aria-label="InstantClick integration">InstantClick integration</a></li>
-                <li>
-                    <a href="#give-links-an-accent-color" aria-label="Give links an accent color.">Give links an accent color.</a></li>
-                <li>
-                    <a href="#customize-pagniator-size" aria-label="Customize pagniator size">Customize pagniator size</a></li>
-                <li>
-                    <a href="#menus-external-link" aria-label="Menus external link">Menus external link</a></li>
-                <li>
-                    <a href="#social-icons-from-simple-icons" aria-label="Social icons from Simple Icons">Social icons from Simple Icons</a></li>
-                <li>
-                    <a href="#opinionated-ui-enhancements" aria-label="Opinionated UI enhancements">Opinionated UI enhancements</a>
-                </li>
-            </ul>
-        </div>
-    </details>
-</div>
-
+    </header> 
     <div class="post-content slide-enter-content"><p>本文档描述 PaperModX 相比原版 PaperMod 增加的新功能和变化。</p>
 <h2 id="table-of-contents-toc-floating-on-the-side">Table of Contents (ToC) floating on the side</h2>
 <p>By adding config:</p>
@@ -780,7 +754,7 @@ to show all the icons, check it out at: <a href="https://reorx.github.io/hugo-Pa
   
   
   (function() {
-    const enableTocScroll = '1' == '1'
+    const enableTocScroll = '' == '1'
     if (!enableTocScroll) {
       return
     }

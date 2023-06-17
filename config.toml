@@ -83,39 +83,49 @@ languageName = "English"
 weight = 1
 
 [[languages.en.menu.main]]
-name = "Memos"
-url = "/memos/"
+name = "首页"
+url = "/"
 weight = 1
 
 [[languages.en.menu.main]]
-name = "Gallery"
-url = "/gallery/"
+name = "说说"
+url = "/memos/"
 weight = 2
 
 [[languages.en.menu.main]]
-name = "Goods"
-url = "/goods/"
+name = "相册"
+url = "/gallery/"
 weight = 3
 
 [[languages.en.menu.main]]
-name = "Stack"
-url = "/stack/"
+name = "好物"
+url = "/goods/"
 weight = 4
 
 [[languages.en.menu.main]]
-name = "Bookmark"
-url = "/bookmark/"
+name = "软件"
+url = "/stack/"
 weight = 5
 
 [[languages.en.menu.main]]
-name = "Thread 🧵"
-url = "/readwise/"
+name = "书签"
+url = "/bookmark/"
 weight = 6
 
 [[languages.en.menu.main]]
-name = "Links"
-url = "/links/"
+name = "线索🧵"
+url = "/readwise/"
+weight = 7
+
+[[languages.en.menu.main]]
+name = "归档"
+url = "/archives/"
 weight = 8
+
+[[languages.en.menu.main]]
+name = "网上邻居"
+url = "/links/"
+weight = 9
 
 [languages.zh]
 languageName = ":cn:"

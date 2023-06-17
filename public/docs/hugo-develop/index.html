@@ -15,8 +15,8 @@
 /> <meta name="description" content="增加空格之神 使用空格之神的浏览器插件很久了，真的是阅读强迫症患者的福音，空格之神项目地址 在 Hugo的 themes/PaperModX/layouts/_default/baseof.html 内增加以下代码： &lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/pangu/4.0.7/pangu.min.js&#34;&gt;&lt;/script&gt; &lt;script&gt; pangu.spacingPage(); &lt;/script&gt; 用完后感觉整"> <meta name="author" content="wananaiko"> <link rel="canonical" href="https://wananaiko.com/docs/hugo-develop/">
 <link
   crossorigin="anonymous"
-  href="/assets/css/stylesheet.min.ba3b7497806df4bf96e580d3a40d7a65051cfb0f01458d4b38261e5f7f4b4178.css"
-  integrity="sha256-ujt0l4Bt9L&#43;W5YDTpA16ZQUc&#43;w8BRY1LOCYeX39LQXg="
+  href="/assets/css/stylesheet.min.be31133ae54246af55d22d957f9a7e22ffc4235716b37db7136e5a487a1d8394.css"
+  integrity="sha256-vjETOuVCRq9V0i2Vf5p&#43;Iv/EI1cWs323E25aSHodg5Q="
   rel="preload stylesheet"
   as="style"
 /> <link rel="icon" href="https://images.wananaiko.com/favicon.ico"> <link rel="apple-touch-icon" href="https://wananaiko.com/apple-touch-icon.png"> <link rel="alternate" hreflang="en" href="https://wananaiko.com/docs/hugo-develop/" />
@@ -321,38 +321,48 @@ span.rounded-full.bg-gradient-to-r.dark\:from-rose-700.dark\:via-pink-700.dark\:
         </script>
         <ul id="menu">
             <li>
-                <a href="https://wananaiko.com/memos/" title="Memos"
-                >Memos
+                <a href="https://wananaiko.com/" title="首页" class="active"
+                >首页
                 </a>
             </li>
             <li>
-                <a href="https://wananaiko.com/gallery/" title="Gallery"
-                >Gallery
+                <a href="https://wananaiko.com/memos/" title="说说"
+                >说说
                 </a>
             </li>
             <li>
-                <a href="https://wananaiko.com/goods/" title="Goods"
-                >Goods
+                <a href="https://wananaiko.com/gallery/" title="相册"
+                >相册
                 </a>
             </li>
             <li>
-                <a href="https://wananaiko.com/stack/" title="Stack"
-                >Stack
+                <a href="https://wananaiko.com/goods/" title="好物"
+                >好物
                 </a>
             </li>
             <li>
-                <a href="https://wananaiko.com/bookmark/" title="Bookmark"
-                >Bookmark
+                <a href="https://wananaiko.com/stack/" title="软件"
+                >软件
                 </a>
             </li>
             <li>
-                <a href="https://wananaiko.com/readwise/" title="Thread 🧵"
-                >Thread 🧵
+                <a href="https://wananaiko.com/bookmark/" title="书签"
+                >书签
                 </a>
             </li>
             <li>
-                <a href="https://wananaiko.com/links/" title="Links"
-                >Links
+                <a href="https://wananaiko.com/readwise/" title="线索🧵"
+                >线索🧵
+                </a>
+            </li>
+            <li>
+                <a href="https://wananaiko.com/archives/" title="归档"
+                >归档
+                </a>
+            </li>
+            <li>
+                <a href="https://wananaiko.com/links/" title="网上邻居"
+                >网上邻居
                 </a>
             </li>
         </ul>
@@ -404,33 +414,7 @@ window.addEventListener('scroll', () => {
 >
   
         </div>
-    </header> <div class="toc side right">
-    <details  open>
-        <summary accesskey="c" title="(Alt + C)">
-            <span class="details">Table of Contents</span>
-        </summary>
-
-        <div class="inner"><ul>
-                <li>
-                    <a href="#%e5%a2%9e%e5%8a%a0%e7%a9%ba%e6%a0%bc%e4%b9%8b%e7%a5%9e" aria-label="增加空格之神">增加空格之神</a></li>
-                <li>
-                    <a href="#%e5%a2%9e%e5%8a%a0-waline-%e8%af%84%e8%ae%ba" aria-label="增加 Waline 评论">增加 Waline 评论</a></li>
-                <li>
-                    <a href="#%e5%a2%9e%e5%8a%a0%e9%bc%a0%e6%a0%87%e5%bd%a9%e8%99%b9%e6%95%88%e6%9e%9c" aria-label="增加鼠标彩虹效果">增加鼠标彩虹效果</a></li>
-                <li>
-                    <a href="#%e5%a2%9e%e5%8a%a0%e5%8f%8b%e6%83%85%e9%93%be%e6%8e%a5%e9%a1%b5%e9%9d%a2" aria-label="增加友情链接页面">增加友情链接页面</a></li>
-                <li>
-                    <a href="#%e5%a2%9e%e5%8a%a0%e9%a1%b5%e9%9d%a2%e4%b8%8b%e9%9b%aa%e6%95%88%e6%9e%9c" aria-label="增加页面下雪效果">增加页面下雪效果</a></li>
-                <li>
-                    <a href="#%e6%90%9c%e7%b4%a2%e9%a1%b5%e5%b1%95%e7%a4%ba%e6%a0%87%e7%ad%be%e5%88%97%e8%a1%a8" aria-label="搜索页展示标签列表">搜索页展示标签列表</a></li>
-                <li>
-                    <a href="#%e5%bc%95%e5%85%a5%e8%b1%86%e7%93%a3%e9%98%85%e8%af%bb%e5%92%8c%e7%94%b5%e5%bd%b1%e5%8d%a1%e7%89%87" aria-label="引入豆瓣阅读和电影卡片">引入豆瓣阅读和电影卡片</a>
-                </li>
-            </ul>
-        </div>
-    </details>
-</div>
-
+    </header> 
     <div class="post-content slide-enter-content"><h3 id="增加空格之神">增加空格之神</h3>
 <p>使用空格之神的浏览器插件很久了，真的是阅读强迫症患者的福音，<a href="https://github.com/vinta/pangu.js" target="_blank" rel="noopener">空格之神项目地址</a></p>
 <p>在 Hugo的 <code>themes/PaperModX/layouts/_default/baseof.html</code> 内增加以下代码：</p>
@@ -1326,7 +1310,7 @@ window.addEventListener('scroll', () => {
   
   
   (function() {
-    const enableTocScroll = '1' == '1'
+    const enableTocScroll = '' == '1'
     if (!enableTocScroll) {
       return
     }

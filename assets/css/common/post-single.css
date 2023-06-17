@@ -39,7 +39,7 @@
 
 .post-description {
     font-size: 16px;
-    margin: var(--gap) 0;
+    margin: 24px 0 24px 4px;
     padding: 0 15px;
     border-inline-start: 3px solid var(--primary);
 }

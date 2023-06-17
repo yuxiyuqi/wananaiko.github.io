@@ -1,7 +1,7 @@
 ---
-title: "Memos"
+title: "说说"
 layout: "memos"
 type: "memos"
-description: 个人微博,碎片化内容记录。
+description: 一个自己瞎哔哔的地方, 有时候也会记录一些东西。
 comment: false
 ---
