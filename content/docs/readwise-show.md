@@ -33,7 +33,7 @@ themes/your_theme/layouts/_default/readwise.html
 
 #### 3、代码实现
 
-```html
+```html {hl_lines=[116]}
 {{ define "main" }}
 <style>
   .main.post {

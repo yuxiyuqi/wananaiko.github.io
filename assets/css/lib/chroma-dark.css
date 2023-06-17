@@ -27,7 +27,7 @@
 .chroma .hl {
     width: 100%;
     display: block;
-    background-color: rgba(110, 118, 129, 0.1);
+    background-color: var(--color47)
 }
 
 .chroma .lnt {
