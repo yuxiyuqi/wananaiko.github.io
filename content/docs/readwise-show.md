@@ -179,6 +179,22 @@ $headers }} {{ $books := $response.results }}
 <script src="https://cdn.jsdelivr.net/npm/moment@2.29.1/locale/zh-cn.js"></script>
 
 <script>
+  // 对readwise按时间进行排序.
+  var readwise = document.querySelectorAll(".readwise");
+  var readwiseArray = Array.prototype.slice.call(readwise, 0);
+  readwiseArray.sort(function (a, b) {
+    var aDate = moment
+      .utc(a.querySelector(".readwise-time").textContent, "YYYY-MM-DD")
+      .local();
+    var bDate = moment
+      .utc(b.querySelector(".readwise-time").textContent, "YYYY-MM-DD")
+      .local();
+    return bDate - aDate;
+  });
+  readwiseArray.forEach(function (item) {
+    item.parentNode.appendChild(item);
+  });
+  
   document.addEventListener("DOMContentLoaded", (event) => {
     moment.locale("zh-cn"); // 设置区域为中文
     let times = document.querySelectorAll(".readwise-time");
