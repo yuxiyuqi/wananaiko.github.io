@@ -42,12 +42,11 @@ moment.updateLocale("zh-cn", {
             else if (diff < 36e5) unit = "minutes";
             else if (diff < day) unit = "hours";
             else {
-              if ("long" !== format)
-                return this.format("YYYY年MM月DD日，HH:mm");
+              if ("long" !== format) return this.format("YYYY年M月D日，HH:mm");
               if (!(diff < week))
                 return this.year() == year
-                  ? this.format("MM月DD日，HH:mm")
-                  : this.format("YYYY年MM月DD日，HH:mm");
+                  ? this.format("M月D日，HH:mm")
+                  : this.format("YYYY年M月D日，HH:mm");
               unit = "days";
             }
             return (

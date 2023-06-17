@@ -15,8 +15,8 @@
 /> <meta name="description" content="增加空格之神 使用空格之神的浏览器插件很久了，真的是阅读强迫症患者的福音，空格之神项目地址 在 Hugo的 themes/PaperModX/layouts/_default/baseof.html 内增加以下代码： &lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/pangu/4.0.7/pangu.min.js&#34;&gt;&lt;/script&gt; &lt;script&gt; pangu.spacingPage(); &lt;/script&gt; 用完后感觉整"> <meta name="author" content="wananaiko"> <link rel="canonical" href="https://wananaiko.com/docs/hugo-develop/">
 <link
   crossorigin="anonymous"
-  href="/assets/css/stylesheet.min.be31133ae54246af55d22d957f9a7e22ffc4235716b37db7136e5a487a1d8394.css"
-  integrity="sha256-vjETOuVCRq9V0i2Vf5p&#43;Iv/EI1cWs323E25aSHodg5Q="
+  href="/assets/css/stylesheet.min.f66ea0514827e179cb2052fae4351e37fd9a856f3e2707ffb729c58519aac9c0.css"
+  integrity="sha256-9m6gUUgn4XnLIFL65DUeN/2ahW8&#43;Jwf/tynFhRmqycA="
   rel="preload stylesheet"
   as="style"
 /> <link rel="icon" href="https://images.wananaiko.com/favicon.ico"> <link rel="apple-touch-icon" href="https://wananaiko.com/apple-touch-icon.png"> <link rel="alternate" hreflang="en" href="https://wananaiko.com/docs/hugo-develop/" />
@@ -321,11 +321,6 @@ span.rounded-full.bg-gradient-to-r.dark\:from-rose-700.dark\:via-pink-700.dark\:
         </script>
         <ul id="menu">
             <li>
-                <a href="https://wananaiko.com/" title="首页" class="active"
-                >首页
-                </a>
-            </li>
-            <li>
                 <a href="https://wananaiko.com/memos/" title="说说"
                 >说说
                 </a>
@@ -351,8 +346,8 @@ span.rounded-full.bg-gradient-to-r.dark\:from-rose-700.dark\:via-pink-700.dark\:
                 </a>
             </li>
             <li>
-                <a href="https://wananaiko.com/readwise/" title="线索🧵"
-                >线索🧵
+                <a href="https://wananaiko.com/readwise/" title="线索"
+                >线索
                 </a>
             </li>
             <li>
@@ -361,8 +356,8 @@ span.rounded-full.bg-gradient-to-r.dark\:from-rose-700.dark\:via-pink-700.dark\:
                 </a>
             </li>
             <li>
-                <a href="https://wananaiko.com/links/" title="网上邻居"
-                >网上邻居
+                <a href="https://wananaiko.com/links/" title="邻居"
+                >邻居
                 </a>
             </li>
         </ul>
@@ -386,36 +381,33 @@ window.addEventListener('scroll', () => {
   lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; 
 }, false);
 
-</script><main class="main post slide-enter-content">
+</script>
+
+<script src="/assets/cdn.lordicon.com_bhenfmcm.js"></script><main class="main post slide-enter-content">
 
 <article class="post-single">
-    <header class="post-header">
-        <a href="/">
-            <div class="return-back">
-                <div class="back-icon">
-                    ←
-                </div>
-                <div class="back-word">Back</div>
-                <div class="article-time"><span class="meta-time">
-  <span
-  >2023-01-09</span
-  ></span
-                    >
-                </div>
+  <header class="post-header">
+    <a href="/">
+      <div class="return-back">
+        <div class="back-icon">←</div>
+        <div class="back-word">主页</div>
+        <div class="article-time"><span class="meta-time">
+            <span
+              >2023-01-09</span
+            ></span
+          >
+        </div>
+      </div>
+    </a>
 
-            </div>
-
-        </a>
-
-
-        <h1 class="post-title">Hugo 和 PaperModX 的一些配置记录</h1>
-        <div class="post-meta"><span class="meta-tags">
+    <h1 class="post-title">Hugo 和 PaperModX 的一些配置记录</h1>
+    <div class="post-meta"><span class="meta-tags">
   <span class="post-tags"><a href="https://wananaiko.com/tags/hugo/">Hugo</a><a href="https://wananaiko.com/tags/waline/">waline</a><a href="https://wananaiko.com/tags/papermodx/">PaperModX</a></span></span
 >
   
-        </div>
-    </header> 
-    <div class="post-content slide-enter-content"><h3 id="增加空格之神">增加空格之神</h3>
+    </div>
+  </header> 
+  <div class="post-content slide-enter-content"><h3 id="增加空格之神">增加空格之神</h3>
 <p>使用空格之神的浏览器插件很久了，真的是阅读强迫症患者的福音，<a href="https://github.com/vinta/pangu.js" target="_blank" rel="noopener">空格之神项目地址</a></p>
 <p>在 Hugo的 <code>themes/PaperModX/layouts/_default/baseof.html</code> 内增加以下代码：</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://cdnjs.cloudflare.com/ajax/libs/pangu/4.0.7/pangu.min.js&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
@@ -1038,30 +1030,30 @@ window.addEventListener('scroll', () => {
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </span></span></code></pre></div>
-    </div>
+  </div>
 
-    <footer class="post-footer">
+  <footer class="post-footer">
 <nav class="paginav">
   <a class="prev" href="https://wananaiko.com/docs/hugo-photo-page/">
     <span class="title">
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left" style="user-select: text;"><line x1="19" y1="12" x2="5" y2="12" style="user-select: text;"></line><polyline points="12 19 5 12 12 5" style="user-select: text;"></polyline></svg>&nbsp;Prev Page</span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left" style="user-select: text;"><line x1="19" y1="12" x2="5" y2="12" style="user-select: text;"></line><polyline points="12 19 5 12 12 5" style="user-select: text;"></polyline></svg>&nbsp;上一页</span>
     <br>
     <span>Hugo 添加相册单页</span>
   </a>
   <a class="next" href="https://wananaiko.com/docs/how-iterm2-show-current-proxy-status/">
-    <span class="title">Next Page&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right" style="user-select: text;"><line x1="5" y1="12" x2="19" y2="12" style="user-select: text;"></line><polyline points="12 5 19 12 12 19" style="user-select: text;"></polyline></svg>
+    <span class="title">下一页&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right" style="user-select: text;"><line x1="5" y1="12" x2="19" y2="12" style="user-select: text;"></line><polyline points="12 5 19 12 12 19" style="user-select: text;"></polyline></svg>
     </span>
     <br>
     <span>让 ITERM2 实时显示梯子状态</span>
   </a>
 </nav>
 
-    </footer>
+  </footer>
 
-    
-    
+  
+  
 
-    <head>
+  <head>
   <style>
     .comment-title {
       font-size: 24px;
@@ -1261,12 +1253,12 @@ window.addEventListener('scroll', () => {
 
     const copybutton = document.createElement('button');
     copybutton.classList.add('copy-code');
-    copybutton.innerText = 'copy';
+    copybutton.innerText = '复制';
 
     function copyingDone() {
-      copybutton.innerText = 'copied!';
+      copybutton.innerText = '已复制！';
       setTimeout(() => {
-        copybutton.innerText = 'copy';
+        copybutton.innerText = '复制';
       }, 2000);
     }
 

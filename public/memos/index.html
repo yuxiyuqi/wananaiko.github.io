@@ -15,8 +15,8 @@
 /> <meta name="description" content="一个自己瞎哔哔的地方, 有时候也会记录一些东西。"> <meta name="author" content="wananaiko"> <link rel="canonical" href="https://wananaiko.com/memos/">
 <link
   crossorigin="anonymous"
-  href="/assets/css/stylesheet.min.be31133ae54246af55d22d957f9a7e22ffc4235716b37db7136e5a487a1d8394.css"
-  integrity="sha256-vjETOuVCRq9V0i2Vf5p&#43;Iv/EI1cWs323E25aSHodg5Q="
+  href="/assets/css/stylesheet.min.f66ea0514827e179cb2052fae4351e37fd9a856f3e2707ffb729c58519aac9c0.css"
+  integrity="sha256-9m6gUUgn4XnLIFL65DUeN/2ahW8&#43;Jwf/tynFhRmqycA="
   rel="preload stylesheet"
   as="style"
 /> <link rel="icon" href="https://images.wananaiko.com/favicon.ico"> <link rel="apple-touch-icon" href="https://wananaiko.com/apple-touch-icon.png"> <link rel="alternate" hreflang="en" href="https://wananaiko.com/memos/" />
@@ -315,11 +315,6 @@ span.rounded-full.bg-gradient-to-r.dark\:from-rose-700.dark\:via-pink-700.dark\:
         </script>
         <ul id="menu">
             <li>
-                <a href="https://wananaiko.com/" title="首页" class="active"
-                >首页
-                </a>
-            </li>
-            <li>
                 <a href="https://wananaiko.com/memos/" title="说说" class="active"
                 >说说
                 </a>
@@ -345,8 +340,8 @@ span.rounded-full.bg-gradient-to-r.dark\:from-rose-700.dark\:via-pink-700.dark\:
                 </a>
             </li>
             <li>
-                <a href="https://wananaiko.com/readwise/" title="线索🧵"
-                >线索🧵
+                <a href="https://wananaiko.com/readwise/" title="线索"
+                >线索
                 </a>
             </li>
             <li>
@@ -355,8 +350,8 @@ span.rounded-full.bg-gradient-to-r.dark\:from-rose-700.dark\:via-pink-700.dark\:
                 </a>
             </li>
             <li>
-                <a href="https://wananaiko.com/links/" title="网上邻居"
-                >网上邻居
+                <a href="https://wananaiko.com/links/" title="邻居"
+                >邻居
                 </a>
             </li>
         </ul>
@@ -380,7 +375,9 @@ window.addEventListener('scroll', () => {
   lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; 
 }, false);
 
-</script><main class="main post slide-enter-content">
+</script>
+
+<script src="/assets/cdn.lordicon.com_bhenfmcm.js"></script><main class="main post slide-enter-content">
 
 <link rel="stylesheet" href="/css/highlight.github.min.css" />
 <link rel="stylesheet" href="/css/memos.css" />
@@ -576,12 +573,12 @@ window.addEventListener('scroll', () => {
 
     const copybutton = document.createElement('button');
     copybutton.classList.add('copy-code');
-    copybutton.innerText = 'copy';
+    copybutton.innerText = '复制';
 
     function copyingDone() {
-      copybutton.innerText = 'copied!';
+      copybutton.innerText = '已复制！';
       setTimeout(() => {
-        copybutton.innerText = 'copy';
+        copybutton.innerText = '复制';
       }, 2000);
     }
 

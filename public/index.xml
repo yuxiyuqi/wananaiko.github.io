@@ -12,13 +12,14 @@
     <language>en</language>
     <lastBuildDate>Fri, 16 Jun 2023 23:47:51 +0800</lastBuildDate><atom:link href="https://wananaiko.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>关于 Thread 页面的制作分享</title>
+      <title>关于“线索”页面的制作分享</title>
       <link>https://wananaiko.com/docs/readwise-show/</link>
       <pubDate>Fri, 16 Jun 2023 23:47:51 +0800</pubDate>
       
       <guid>https://wananaiko.com/docs/readwise-show/</guid>
-      <description>在逛 🐦 ( 小蓝鸟，你知道我在说什么 ) 时，经常会看到不错的 tweet 和 thread，除了默默的点赞，我更喜欢用第三方工具来收集这些内容，方便随时搜索查看</description>
-      <content:encoded><![CDATA[<p>在逛 🐦 ( 小蓝鸟，你知道我在说什么 ) 时，经常会看到不错的 tweet 和 thread，除了默默的点赞，我更喜欢用第三方工具来收集这些内容，方便随时搜索查看。</p>
+      <description>原来叫：Thread，现在改成了&amp;quot;线索&amp;quot;。 在逛 🐦 ( 小蓝鸟，你知道我在说什么 ) 时，经常会看到不错的 tweet 和 thread，除了默</description>
+      <content:encoded><![CDATA[<p>原来叫：Thread，现在改成了&quot;线索&quot;。</p>
+<p>在逛 🐦 ( 小蓝鸟，你知道我在说什么 ) 时，经常会看到不错的 tweet 和 thread，除了默默的点赞，我更喜欢用第三方工具来收集这些内容，方便随时搜索查看。</p>
 <p>最初，我使用的服务是 <a href="https://mem.ai/" target="_blank" rel="noopener">Mem</a> 和 <a href="https://readwise.io/" target="_blank" rel="noopener">Readwise</a>，通过 Raycast 的 Snippet “mem” 来触发快捷输入：<code>@memdotai mem it @readwise save thread</code>，这样就可以快速的把内容保存到上面 2 个平台中。</p>
 <p>因为 Notion 的生态更好一些，现在已经改为使用 <a href="">SavaToNotion</a> 和 Readwise。</p>
 <p>介于 Notion 的 API 我还没研究明白，目前只实现了使用 Readwise 的 API 来展示 🐦 上的有趣内容。期待有对 Notion API 的调用比较懂的大神指点一二。</p>
