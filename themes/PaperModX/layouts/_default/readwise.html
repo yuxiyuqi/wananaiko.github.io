@@ -166,7 +166,7 @@ $headers }} {{ $books := $response.results }} {{ range $books -}}
       let date = moment.utc(time.textContent, "YYYY-MM-DD").local();
       // 若时间差大于一个月，显示具体的日期；否则，显示相对的时间
       if (moment().diff(date, "months") > 3) {
-        time.textContent = date.format("YYYY年M月D日");
+        time.textContent = date.format("YYYY年MM月DD日");
       } else {
         time.textContent = date.fromNow();
       }
