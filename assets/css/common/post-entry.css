@@ -48,6 +48,16 @@
     font-size: 13px;
 }
 
+.first-entry .entry-footer {
+    font-size: 14px;
+    padding: 12px 0;
+}
+
+lord-icon {
+    margin-right: 12px;
+    color: var(--content) !important;
+}
+
 .entry-link {
     position: absolute;
     left: 0;

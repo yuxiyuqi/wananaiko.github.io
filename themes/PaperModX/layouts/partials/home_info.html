@@ -6,8 +6,40 @@
   <section class="entry-content">
     {{- trim .Content "\n" | markdownify -}}
   </section>
-  <footer class="entry-footer">
+  <!--旧的备份 <footer class="entry-footer">
     {{- partial "social_icons.html" (dict "icons" site.Params.socialIcons "svg" $.Site.Data.svg "MaskedEmail" site.Params.MaskedEmail "Email" site.Params.Email) -}}
+  </footer> -->
+
+  <footer class="entry-footer">
+    <a href="https://wananaiko.com/index.xml">
+      <lord-icon
+        src="https://cdn.lordicon.com/ammuypus.json"
+        trigger="hover"
+        colors="inherit"
+        style="width: 32px; height: 32px"
+      >
+      </lord-icon>
+    </a>
+
+    <a href="mailto:7144206@qq.com">
+      <lord-icon
+        src="https://cdn.lordicon.com/nfsqebdc.json"
+        trigger="hover"
+        colors="inherit"
+        style="width: 32px; height: 32px"
+      >
+      </lord-icon>
+    </a>
+
+    <a href="https://t.me/wananaiko">
+      <lord-icon
+        src="https://cdn.lordicon.com/hpivxauj.json"
+        trigger="hover"
+        colors="inherit"
+        style="width: 32px; height: 32px"
+      >
+      </lord-icon>
+    </a>
   </footer>
 </article>
 {{- end -}}

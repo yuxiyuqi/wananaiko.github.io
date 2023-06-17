@@ -39,6 +39,7 @@
     --color42: #c6efef;
     --color48: rgba(37, 156, 154, .6);
     --color47: rgba(37, 156, 154, .4);
+    --lord-icon-primary:rgb(30, 30, 30);
 
     /* for type pages theming */
     --signature: var(--primary);
@@ -74,6 +75,7 @@
     --link-hover-underline-color: var(--link-hover-color);
     --link-hover-underline-shadow: 0 1px 0 var(--link-hover-underline-color);
     --blur-bg: rgba(29, 30, 32, 0.9);
+    --lord-icon-primary:rgb(200, 200, 200);
 }
 
 .list-page {
@@ -235,5 +237,6 @@ body::-webkit-scrollbar {
 .no-slide-enter * {
     animation: none !important;
 }
+
 
 

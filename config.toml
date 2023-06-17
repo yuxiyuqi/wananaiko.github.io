@@ -48,14 +48,17 @@ comments = false
   imageTitle = "my image"
 
   [params.homeInfoParams]
-  Title = "Hi 👋"
+  Title = "嗨 👋"
   Content = """
 
-  Welcome to my Island.
-  
-  About me, exPM, now UI/UX, learning Frontend, living in Shanghai.
+  欢迎来到这里~
 
-  I’m writing here to share what I read and learned.
+  这里大部分是关于前端、设计和一些技术边缘的内容。看到好好玩有趣的内容，我就会分享在这里。
+
+  关于我，前产品经理，现在是UI/UX，正在学习前端中，目前生活在上海。
+
+  欢迎在本博客留言骚扰~
+
 """
 
   [[params.socialIcons]]
@@ -80,11 +83,6 @@ disableXML = true
 
 [languages.en]
 languageName = "English"
-weight = 1
-
-[[languages.en.menu.main]]
-name = "首页"
-url = "/"
 weight = 1
 
 [[languages.en.menu.main]]
