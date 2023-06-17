@@ -137,8 +137,9 @@ $headers }} {{ $books := $response.results }} {{ range $books -}}
 
 {{- end }}
 
-<script type="text/javascript" src="/assets/moment.min.js?v=2.29.4"></script>
+<script type="text/javascript" src="/js/moment.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/moment@2.29.1/locale/zh-cn.js"></script>
+<script type="text/javascript" src="/js/moment.twitter.js"></script>
 
 <script>
   // 对readwise按时间进行排序.
@@ -157,12 +158,18 @@ $headers }} {{ $books := $response.results }} {{ range $books -}}
     item.parentNode.appendChild(item);
   });
 
+  // 处理readwise-time的时间.
   document.addEventListener("DOMContentLoaded", (event) => {
     moment.locale("zh-cn"); // 设置区域为中文
     let times = document.querySelectorAll(".readwise-time");
     times.forEach((time) => {
       let date = moment.utc(time.textContent, "YYYY-MM-DD").local();
-      time.textContent = date.fromNow();
+      // 若时间差大于一个月，显示具体的日期；否则，显示相对的时间
+      if (moment().diff(date, "months") > 1) {
+        time.textContent = date.format("YYYY年M月D日");
+      } else {
+        time.textContent = date.fromNow();
+      }
     });
 
     // 检测当readwise中的.source_url没有值时，隐藏当前所属的div.
