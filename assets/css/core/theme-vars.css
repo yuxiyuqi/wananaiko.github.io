@@ -228,5 +228,12 @@ body::-webkit-scrollbar {
         --enter-stage: 25;
     }
 }
-
 /* 滑动进入动画结束*/
+
+/* 特定class禁用滑动动画*/
+.no-slide-enter,
+.no-slide-enter * {
+    animation: none !important;
+}
+
+
