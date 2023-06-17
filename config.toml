@@ -121,7 +121,7 @@ url = "/archives/"
 weight = 8
 
 [[languages.en.menu.main]]
-name = "网上邻居"
+name = "邻居"
 url = "/links/"
 weight = 9
 
