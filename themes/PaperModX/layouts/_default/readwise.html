@@ -164,7 +164,7 @@ $headers }} {{ $books := $response.results }} {{ range $books -}}
     let times = document.querySelectorAll(".readwise-time");
     times.forEach((time) => {
       let date = moment.utc(time.textContent, "YYYY-MM-DD").local();
-      // 若时间差大于一个月，显示具体的日期；否则，显示相对的时间
+      // 若时间差大于2个月，显示具体的日期；否则，显示相对的时间.
       if (moment().diff(date, "months") > 2) {
         time.textContent = date.format("YYYY年M月D日");
       } else {
