@@ -127,7 +127,9 @@
   })();
 </script>
 
+{{- if (.Param "EnableImageZoom") }}
 <script>
   mediumZoom(".entry-cover img");
   mediumZoom(".post-content img:not([no-zoom])");
 </script>
+{{- end }}
