@@ -15,8 +15,8 @@
 /> <meta name="description" content="Markdown 概述、工作原理以及用途。"> <meta name="author" content="markdown.xyz"> <link rel="canonical" href="https://wananaiko.com/zh/posts/markdown-syntax/">
 <link
   crossorigin="anonymous"
-  href="/assets/css/stylesheet.min.f66ea0514827e179cb2052fae4351e37fd9a856f3e2707ffb729c58519aac9c0.css"
-  integrity="sha256-9m6gUUgn4XnLIFL65DUeN/2ahW8&#43;Jwf/tynFhRmqycA="
+  href="/assets/css/stylesheet.min.559875abd5e90352a0d32e13b079adf3d83b5ac756c9523c4ddbb8c64cd54067.css"
+  integrity="sha256-VZh1q9XpA1Kg0y4TsHmt89g7WsdWyVI8Tdu4xkzVQGc="
   rel="preload stylesheet"
   as="style"
 /> <link rel="icon" href="https://images.wananaiko.com/favicon.ico"> <link rel="apple-touch-icon" href="https://wananaiko.com/apple-touch-icon.png"> <link rel="alternate" hreflang="en" href="https://wananaiko.com/posts/markdown-syntax/" />
@@ -993,11 +993,11 @@ Markdown</a>.
   data-no-instant
 ></script>
 <script>
-  document.querySelectorAll('pre > code').forEach((codeblock) => {
+  document.querySelectorAll("pre > code").forEach((codeblock) => {
     const container = codeblock.parentNode.parentNode;
 
-    const copybutton = document.createElement('button');
-    copybutton.classList.add('copy-code');
+    const copybutton = document.createElement("button");
+    copybutton.classList.add("copy-code");
     copybutton.innerText = '复制';
 
     function copyingDone() {
@@ -1007,8 +1007,8 @@ Markdown</a>.
       }, 2000);
     }
 
-    copybutton.addEventListener('click', (cb) => {
-      if ('clipboard' in navigator) {
+    copybutton.addEventListener("click", (cb) => {
+      if ("clipboard" in navigator) {
         navigator.clipboard.writeText(codeblock.textContent);
         copyingDone();
         return;
@@ -1020,9 +1020,9 @@ Markdown</a>.
       selection.removeAllRanges();
       selection.addRange(range);
       try {
-        document.execCommand('copy');
+        document.execCommand("copy");
         copyingDone();
-      } catch (e) { };
+      } catch (e) {}
       selection.removeRange(range);
     });
 
@@ -1030,37 +1030,42 @@ Markdown</a>.
       container.appendChild(copybutton);
     } else if (container.parentNode.firstChild == container) {
       
-    } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+    } else if (
+      codeblock.parentNode.parentNode.parentNode.parentNode.parentNode
+        .nodeName == "TABLE"
+    ) {
       
-      codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+      codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(
+        copybutton
+      );
     } else {
       
       codeblock.parentNode.appendChild(copybutton);
     }
   });
-</script>
-
-
-
-
+</script> 
 <script>
   
   
-  (function() {
-    const enableTocScroll = '1' == '1'
+  (function () {
+    const enableTocScroll =
+      '1' ==
+      "1";
     if (!enableTocScroll) {
-      return
+      return;
     }
-    if (!document.querySelector('.toc')) {
-      console.log('no toc found, ignore toc scroll')
-      return
+    if (!document.querySelector(".toc")) {
+      console.log("no toc found, ignore toc scroll");
+      return;
     }
     
 
     
-    const scrollListeners = window.scrollListeners
-    const headings = document.querySelectorAll('h1[id],h2[id],h3[id],h4[id],h5[id]');
-    const activeClass = 'active';
+    const scrollListeners = window.scrollListeners;
+    const headings = document.querySelectorAll(
+      "h1[id],h2[id],h3[id],h4[id],h5[id]"
+    );
+    const activeClass = "active";
 
     
     let activeHeading = headings[0];
@@ -1071,7 +1076,7 @@ Markdown</a>.
       for (const h of headings) {
         
         if (getOffsetTop(h) < 5) {
-          passedHeadings.push(h)
+          passedHeadings.push(h);
         } else {
           break;
         }
@@ -1086,20 +1091,20 @@ Markdown</a>.
         activeHeading = newActiveHeading;
         getLinkByHeading(activeHeading).classList.add(activeClass);
       }
-    }
+    };
 
     let timer = null;
     const scrollListener = () => {
       if (timer !== null) {
-        clearTimeout(timer)
+        clearTimeout(timer);
       }
-      timer = setTimeout(onScroll, 50)
-    }
-    window.addEventListener('scroll', scrollListener, false);
-    scrollListeners.push(scrollListener)
+      timer = setTimeout(onScroll, 50);
+    };
+    window.addEventListener("scroll", scrollListener, false);
+    scrollListeners.push(scrollListener);
 
     function getLinkByHeading(heading) {
-      const id = encodeURI(heading.getAttribute('id')).toLowerCase();
+      const id = encodeURI(heading.getAttribute("id")).toLowerCase();
       return document.querySelector(`.toc ul li a[href="#${id}"]`);
     }
 
@@ -1108,13 +1113,14 @@ Markdown</a>.
         return 0;
       }
       let rect = heading.getBoundingClientRect();
-      return rect.top
+      return rect.top;
     }
   })();
-  </script>
+</script>
+
 <script>
-  mediumZoom('.entry-cover img');
-  mediumZoom('.post-content img:not([no-zoom])');
+  mediumZoom(".entry-cover img");
+  mediumZoom(".post-content img:not([no-zoom])");
 </script>
 
 

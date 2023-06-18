@@ -15,8 +15,8 @@
 /> <meta name="description" content="增加空格之神 使用空格之神的浏览器插件很久了，真的是阅读强迫症患者的福音，空格之神项目地址 在 Hugo的 themes/PaperModX/layouts/_default/baseof.html 内增加以下代码： &lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/pangu/4.0.7/pangu.min.js&#34;&gt;&lt;/script&gt; &lt;script&gt; pangu.spacingPage(); &lt;/script&gt; 用完后感觉整"> <meta name="author" content="wananaiko"> <link rel="canonical" href="https://wananaiko.com/docs/hugo-develop/">
 <link
   crossorigin="anonymous"
-  href="/assets/css/stylesheet.min.f66ea0514827e179cb2052fae4351e37fd9a856f3e2707ffb729c58519aac9c0.css"
-  integrity="sha256-9m6gUUgn4XnLIFL65DUeN/2ahW8&#43;Jwf/tynFhRmqycA="
+  href="/assets/css/stylesheet.min.559875abd5e90352a0d32e13b079adf3d83b5ac756c9523c4ddbb8c64cd54067.css"
+  integrity="sha256-VZh1q9XpA1Kg0y4TsHmt89g7WsdWyVI8Tdu4xkzVQGc="
   rel="preload stylesheet"
   as="style"
 /> <link rel="icon" href="https://images.wananaiko.com/favicon.ico"> <link rel="apple-touch-icon" href="https://wananaiko.com/apple-touch-icon.png"> <link rel="alternate" hreflang="en" href="https://wananaiko.com/docs/hugo-develop/" />
@@ -1248,11 +1248,11 @@ window.addEventListener('scroll', () => {
   data-no-instant
 ></script>
 <script>
-  document.querySelectorAll('pre > code').forEach((codeblock) => {
+  document.querySelectorAll("pre > code").forEach((codeblock) => {
     const container = codeblock.parentNode.parentNode;
 
-    const copybutton = document.createElement('button');
-    copybutton.classList.add('copy-code');
+    const copybutton = document.createElement("button");
+    copybutton.classList.add("copy-code");
     copybutton.innerText = '复制';
 
     function copyingDone() {
@@ -1262,8 +1262,8 @@ window.addEventListener('scroll', () => {
       }, 2000);
     }
 
-    copybutton.addEventListener('click', (cb) => {
-      if ('clipboard' in navigator) {
+    copybutton.addEventListener("click", (cb) => {
+      if ("clipboard" in navigator) {
         navigator.clipboard.writeText(codeblock.textContent);
         copyingDone();
         return;
@@ -1275,9 +1275,9 @@ window.addEventListener('scroll', () => {
       selection.removeAllRanges();
       selection.addRange(range);
       try {
-        document.execCommand('copy');
+        document.execCommand("copy");
         copyingDone();
-      } catch (e) { };
+      } catch (e) {}
       selection.removeRange(range);
     });
 
@@ -1285,37 +1285,42 @@ window.addEventListener('scroll', () => {
       container.appendChild(copybutton);
     } else if (container.parentNode.firstChild == container) {
       
-    } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+    } else if (
+      codeblock.parentNode.parentNode.parentNode.parentNode.parentNode
+        .nodeName == "TABLE"
+    ) {
       
-      codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+      codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(
+        copybutton
+      );
     } else {
       
       codeblock.parentNode.appendChild(copybutton);
     }
   });
-</script>
-
-
-
-
+</script> 
 <script>
   
   
-  (function() {
-    const enableTocScroll = '' == '1'
+  (function () {
+    const enableTocScroll =
+      '' ==
+      "1";
     if (!enableTocScroll) {
-      return
+      return;
     }
-    if (!document.querySelector('.toc')) {
-      console.log('no toc found, ignore toc scroll')
-      return
+    if (!document.querySelector(".toc")) {
+      console.log("no toc found, ignore toc scroll");
+      return;
     }
     
 
     
-    const scrollListeners = window.scrollListeners
-    const headings = document.querySelectorAll('h1[id],h2[id],h3[id],h4[id],h5[id]');
-    const activeClass = 'active';
+    const scrollListeners = window.scrollListeners;
+    const headings = document.querySelectorAll(
+      "h1[id],h2[id],h3[id],h4[id],h5[id]"
+    );
+    const activeClass = "active";
 
     
     let activeHeading = headings[0];
@@ -1326,7 +1331,7 @@ window.addEventListener('scroll', () => {
       for (const h of headings) {
         
         if (getOffsetTop(h) < 5) {
-          passedHeadings.push(h)
+          passedHeadings.push(h);
         } else {
           break;
         }
@@ -1341,20 +1346,20 @@ window.addEventListener('scroll', () => {
         activeHeading = newActiveHeading;
         getLinkByHeading(activeHeading).classList.add(activeClass);
       }
-    }
+    };
 
     let timer = null;
     const scrollListener = () => {
       if (timer !== null) {
-        clearTimeout(timer)
+        clearTimeout(timer);
       }
-      timer = setTimeout(onScroll, 50)
-    }
-    window.addEventListener('scroll', scrollListener, false);
-    scrollListeners.push(scrollListener)
+      timer = setTimeout(onScroll, 50);
+    };
+    window.addEventListener("scroll", scrollListener, false);
+    scrollListeners.push(scrollListener);
 
     function getLinkByHeading(heading) {
-      const id = encodeURI(heading.getAttribute('id')).toLowerCase();
+      const id = encodeURI(heading.getAttribute("id")).toLowerCase();
       return document.querySelector(`.toc ul li a[href="#${id}"]`);
     }
 
@@ -1363,13 +1368,14 @@ window.addEventListener('scroll', () => {
         return 0;
       }
       let rect = heading.getBoundingClientRect();
-      return rect.top
+      return rect.top;
     }
   })();
-  </script>
+</script>
+
 <script>
-  mediumZoom('.entry-cover img');
-  mediumZoom('.post-content img:not([no-zoom])');
+  mediumZoom(".entry-cover img");
+  mediumZoom(".post-content img:not([no-zoom])");
 </script>
 
 
