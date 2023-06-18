@@ -43,3 +43,7 @@
     font-size: 14px;
 }
 
+sup.archive-count {
+    font-weight: normal;
+    color: var(--tertiary);
+}
