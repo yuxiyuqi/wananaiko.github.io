@@ -30,7 +30,7 @@ if .Section }} {{- $sections = slice .Section }} {{- end }} {{- $pages := where
 {{- range $pages.GroupByPublishDate "2006" }} {{- if ne .Key "0001" }}
 <div class="archive-year slide-enter-content">
   <h2 class="archive-year-header">
-    {{- replace .Key "0001" "" }}<sup class="archive-count"
+    {{- replace .Key "0001" "" }}年<sup class="archive-count"
       >&nbsp;&nbsp;{{ len .Pages }}篇</sup
     >
   </h2>
@@ -61,4 +61,5 @@ if .Section }} {{- $sections = slice .Section }} {{- end }} {{- $pages := where
   </div>
   {{- end }}
 </div>
+
 {{- end }} {{- end }} {{- end }}{{/* end main */}}
