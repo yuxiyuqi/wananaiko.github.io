@@ -124,6 +124,7 @@ lord-icon {
 
     .post-container {
         padding: 1rem;
+        width: 100%;
     }
 
     .post-time {

@@ -1,11 +1,11 @@
-
-{{- if (and (eq .Kind "page") (ne .Layout "archives") (ne .Layout "search") (.Param "ShowCodeCopyButtons")) }}
+{{- if (and (eq .Kind "page") (ne .Layout "archives") (ne .Layout "search")
+(.Param "ShowCodeCopyButtons")) }}
 <script>
-  document.querySelectorAll('pre > code').forEach((codeblock) => {
+  document.querySelectorAll("pre > code").forEach((codeblock) => {
     const container = codeblock.parentNode.parentNode;
 
-    const copybutton = document.createElement('button');
-    copybutton.classList.add('copy-code');
+    const copybutton = document.createElement("button");
+    copybutton.classList.add("copy-code");
     copybutton.innerText = '{{- i18n "code_copy" | default "copy" }}';
 
     function copyingDone() {
@@ -15,8 +15,8 @@
       }, 2000);
     }
 
-    copybutton.addEventListener('click', (cb) => {
-      if ('clipboard' in navigator) {
+    copybutton.addEventListener("click", (cb) => {
+      if ("clipboard" in navigator) {
         navigator.clipboard.writeText(codeblock.textContent);
         copyingDone();
         return;
@@ -28,9 +28,9 @@
       selection.removeAllRanges();
       selection.addRange(range);
       try {
-        document.execCommand('copy');
+        document.execCommand("copy");
         copyingDone();
-      } catch (e) { };
+      } catch (e) {}
       selection.removeRange(range);
     });
 
@@ -38,38 +38,57 @@
       container.appendChild(copybutton);
     } else if (container.parentNode.firstChild == container) {
       // td containing LineNos
-    } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+    } else if (
+      codeblock.parentNode.parentNode.parentNode.parentNode.parentNode
+        .nodeName == "TABLE"
+    ) {
       // table containing LineNos and code
-      codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+      codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(
+        copybutton
+      );
     } else {
       // code blocks not having highlight as parent class
       codeblock.parentNode.appendChild(copybutton);
     }
   });
 </script>
-{{- end }}
-
-
-
-{{/* ToC Scroll */}}
+{{- end }} {{/* ToC Scroll */}}
 <script>
   // NOTE use closure instead of DOMContentLoaded because of InstantClick,
   // every page loaded by InstantClick should run the <script> tags again.
-  (function() {
-    const enableTocScroll = '{{- if (and (eq .Kind "page") (.Content) (.Param "ShowToc") (.Param "TocSide")) }}1{{ end }}' == '1'
+  (function () {
+    // Create a new link element
+    let remark42Link = document.createElement("a");
+    remark42Link.href = "#remark42";
+    remark42Link.id = "remark42-link";
+    remark42Link.classList.add("remark42-link");
+    remark42Link.innerHTML = `
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M15.6493 13.3753C15.1021 13.3753 14.6567 12.9299 14.6567 12.3827C14.6567 11.8345 15.1021 11.3891 15.6493 11.3891C16.1975 11.3891 16.6429 11.8345 16.6429 12.3827C16.6429 12.9299 16.1975 13.3753 15.6493 13.3753ZM11.8036 13.3753C11.2564 13.3753 10.8109 12.9299 10.8109 12.3827C10.8109 11.8345 11.2564 11.3891 11.8036 11.3891C12.3517 11.3891 12.7972 11.8345 12.7972 12.3827C12.7972 12.9299 12.3517 13.3753 11.8036 13.3753ZM7.9578 13.3753C7.4106 13.3753 6.96516 12.9299 6.96516 12.3827C6.96516 11.8345 7.4106 11.3891 7.9578 11.3891C8.50596 11.3891 8.9514 11.8345 8.9514 12.3827C8.9514 12.9299 8.50596 13.3753 7.9578 13.3753ZM18.2596 5.6569C14.7037 2.10395 8.9178 2.10395 5.36196 5.6569C2.66724 8.35355 1.93284 12.4892 3.52452 15.9251C3.70788 16.3811 3.82788 16.6998 3.82788 16.9695C3.82788 17.2883 3.69252 17.6847 3.561 18.0687C3.3066 18.8156 3.01764 19.6614 3.63684 20.2796C4.257 20.9007 5.10468 20.6099 5.85252 20.3516C6.23364 20.2201 6.62916 20.0847 6.94212 20.0838C7.22628 20.0838 7.5978 20.2335 7.96836 20.3823C9.18948 20.9478 10.4941 21.2214 11.7901 21.2214C14.168 21.2214 16.5152 20.2988 18.2596 18.5555C21.8135 14.9996 21.8135 9.21371 18.2596 5.6569Z" fill="var(--secondary)"/>
+</svg>
+    `;
+    // Find a location where to insert the new link and append it
+    let topLink = document.getElementById("top-link");
+    topLink.parentNode.insertBefore(remark42Link, topLink.nextSibling);
+
+    const enableTocScroll =
+      '{{- if (and (eq .Kind "page") (.Content) (.Param "ShowToc") (.Param "TocSide")) }}1{{ end }}' ==
+      "1";
     if (!enableTocScroll) {
-      return
+      return;
     }
-    if (!document.querySelector('.toc')) {
-      console.log('no toc found, ignore toc scroll')
-      return
+    if (!document.querySelector(".toc")) {
+      console.log("no toc found, ignore toc scroll");
+      return;
     }
     // console.log('enable toc scroll')
 
     // always get an array here
-    const scrollListeners = window.scrollListeners
-    const headings = document.querySelectorAll('h1[id],h2[id],h3[id],h4[id],h5[id]');
-    const activeClass = 'active';
+    const scrollListeners = window.scrollListeners;
+    const headings = document.querySelectorAll(
+      "h1[id],h2[id],h3[id],h4[id],h5[id]"
+    );
+    const activeClass = "active";
 
     // Make the first header active
     let activeHeading = headings[0];
@@ -80,7 +99,7 @@
       for (const h of headings) {
         // 5 px as a buffer
         if (getOffsetTop(h) < 5) {
-          passedHeadings.push(h)
+          passedHeadings.push(h);
         } else {
           break;
         }
@@ -95,20 +114,23 @@
         activeHeading = newActiveHeading;
         getLinkByHeading(activeHeading).classList.add(activeClass);
       }
-    }
+    };
 
     let timer = null;
     const scrollListener = () => {
       if (timer !== null) {
-        clearTimeout(timer)
+        clearTimeout(timer);
       }
-      timer = setTimeout(onScroll, 50)
-    }
-    window.addEventListener('scroll', scrollListener, false);
-    scrollListeners.push(scrollListener)
+      timer = setTimeout(onScroll, 50);
+    };
+    window.addEventListener("scroll", scrollListener, false);
+    scrollListeners.push(scrollListener);
 
     function getLinkByHeading(heading) {
-      const id = encodeURI(heading.getAttribute('id')).toLowerCase();
+      const id = encodeURI(heading.getAttribute("id")).toLowerCase();
+      if (id === "remark42") {
+        return document.querySelector(`.remark42-link`);
+      }
       return document.querySelector(`.toc ul li a[href="#${id}"]`);
     }
 
@@ -117,14 +139,12 @@
         return 0;
       }
       let rect = heading.getBoundingClientRect();
-      return rect.top
+      return rect.top;
     }
   })();
-  </script>
-
-{{- if (.Param "EnableImageZoom") }}
-<script>
-  mediumZoom('.entry-cover img');
-  mediumZoom('.post-content img:not([no-zoom])');
 </script>
-{{- end }}
+
+<script>
+  mediumZoom(".entry-cover img");
+  mediumZoom(".post-content img:not([no-zoom])");
+</script>

@@ -1,3 +1,12 @@
+---
+title: "Installation | Update"
+summary: Read Install and Update instructions here
+date: 2021-01-20
+author: "Aditya Telange"
+TocSide: left
+draft: true	
+---
+
 Installing requirements for Web UI 安装失败的时候，记得关掉梯子试试。
 
 Prompt：先将中文翻译为英文，再通过网站：https://clio.so/ 生成优化后的 prompt。
