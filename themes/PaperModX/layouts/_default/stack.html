@@ -248,6 +248,7 @@
               <div class="stack-item-svg">→</div>
             </div>
             <p class="stack-item-description">{{ index $item 3 }}</p>
+            <spacer></spacer>
             {{- $tags := split (index $item 4) "," }} {{- if ge (len $tags) 1 }}
             <hstack class="stack-item-tags">
               {{ range $tags }}
