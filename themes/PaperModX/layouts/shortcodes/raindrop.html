@@ -405,7 +405,7 @@ getJSON $apiUrl "?access_token=" $token "&perpage=50&sort=-created" }}
       {{ end }} {{ with $item.note }}
       <div class="mk-excerpt">{{ . }}</div>
       {{ end }} {{ with $item.tags }} {{ range . }}
-      <div class="mk-tag">#{{ . }}</div>
+      <div class="mk-tag">{{ . }}</div>
       {{ end }}
       <div class="mk-raindrop-tags">
         <div class="mk-domin">{{ $item.domain }}</div>
