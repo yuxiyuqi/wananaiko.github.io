@@ -114,11 +114,14 @@ getJSON $apiUrl "?access_token=" $token "&perpage=50&sort=-created" }}
 
   .mk-tag {
     display: inline-block;
-    color: var(--secondary);
+    color: var(--tertiary);
     font-size: 12px;
     white-space: nowrap;
-    line-height: 1.4rem;
-    margin-right: 4px;
+    line-height: 12px;
+    border: 1px solid var(--border);
+    padding: 4px 8px;
+    border-radius: 12px;
+    margin: 4px 0;
   }
 
   span.mk-dot {
@@ -205,10 +208,6 @@ getJSON $apiUrl "?access_token=" $token "&perpage=50&sort=-created" }}
     font-size: 12px;
     white-space: nowrap;
     line-height: 1.4rem;
-  }
-
-  .mk-tag.mk-update-time {
-    background-color: unset;
   }
 
   span.mk-important-description {
@@ -410,7 +409,7 @@ getJSON $apiUrl "?access_token=" $token "&perpage=50&sort=-created" }}
       <div class="mk-raindrop-tags">
         <div class="mk-domin">{{ $item.domain }}</div>
         <span class="mk-dot">·</span>
-        <div class="mk-tag mk-update-time">{{ $item.lastUpdate }}</div>
+        <div class="mk-update-time">{{ $item.lastUpdate }}</div>
         <spacer></spacer>
         <!-- 增加一个div class="mk-important",从Raindrop API中获取important的值,如果是Boolean增显示<span>favorite</span> -->
       </div>
