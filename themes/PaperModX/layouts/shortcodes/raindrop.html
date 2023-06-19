@@ -81,7 +81,7 @@ getJSON $apiUrl "?access_token=" $token "&perpage=50&sort=-created" }}
     line-height: 1.5rem;
     color: var(--content);
     transition: 0.5s;
-    margin-top: 8px;
+    margin-top: 12px;
   }
 
   .mk-raindrop-bookmark:hover .mk-title {
@@ -212,7 +212,7 @@ getJSON $apiUrl "?access_token=" $token "&perpage=50&sort=-created" }}
   }
 
   span.mk-important-description {
-    margin-left: auto;
+    margin-left: 4px;
     color: var(--link-hover-color);
     font-size: 12px;
     white-space: nowrap;
@@ -223,7 +223,7 @@ getJSON $apiUrl "?access_token=" $token "&perpage=50&sort=-created" }}
   .mk-important {
     display: flex;
     align-items: center;
-    gap: 2px;
+    margin-top: 4px;
   }
   .mk-raindrop-bookmark.important {
     background-color: rgb(198 239 239 / 25%);
@@ -413,27 +413,26 @@ getJSON $apiUrl "?access_token=" $token "&perpage=50&sort=-created" }}
         <div class="mk-tag mk-update-time">{{ $item.lastUpdate }}</div>
         <spacer></spacer>
         <!-- 增加一个div class="mk-important",从Raindrop API中获取important的值,如果是Boolean增显示<span>favorite</span> -->
+      </div>
+      <div class="mk-important">
+        {{ if eq $item.important true }}
+        <svg
+          width="20"
+          height="20"
+          viewBox="0 0 20 20"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M16.6663 11.3333C15.6601 14.5 12.8534 16.6667 9.58301 16.6667C6.22871 16.75 3.33301 14.0833 3.33301 10.75C3.33301 10.3333 3.33301 10 3.41687 9.58333L5.09401 10.0833C4.75858 12.75 6.89957 15.0833 9.58301 15C12.1826 14.9167 14.4022 13.1667 15.1569 10.75L16.6663 11.3333ZM7.27431 9.16667C8.19674 9.16667 9.28689 7.66667 9.62232 5.83333C10.0416 4 9.62232 2.5 8.69988 2.5C7.77745 2.5 6.77116 4 6.35188 5.83333C5.93259 7.66667 6.35188 9.16667 7.27431 9.16667ZM12.725 9.58333C13.6475 9.58333 14.7376 8.08333 15.1569 6.25C15.5762 4.41667 15.1569 2.91667 14.2345 2.91667C13.312 2.91667 12.2219 4.41667 11.8026 6.25C11.3833 8.08333 11.8026 9.58333 12.725 9.58333Z"
+            fill="var(--link-hover-color)"
+          />
+        </svg>
 
-        <div class="mk-important">
-          {{ if eq $item.important true }}
-          <svg
-            width="20"
-            height="20"
-            viewBox="0 0 20 20"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M16.6663 11.3333C15.6601 14.5 12.8534 16.6667 9.58301 16.6667C6.22871 16.75 3.33301 14.0833 3.33301 10.75C3.33301 10.3333 3.33301 10 3.41687 9.58333L5.09401 10.0833C4.75858 12.75 6.89957 15.0833 9.58301 15C12.1826 14.9167 14.4022 13.1667 15.1569 10.75L16.6663 11.3333ZM7.27431 9.16667C8.19674 9.16667 9.28689 7.66667 9.62232 5.83333C10.0416 4 9.62232 2.5 8.69988 2.5C7.77745 2.5 6.77116 4 6.35188 5.83333C5.93259 7.66667 6.35188 9.16667 7.27431 9.16667ZM12.725 9.58333C13.6475 9.58333 14.7376 8.08333 15.1569 6.25C15.5762 4.41667 15.1569 2.91667 14.2345 2.91667C13.312 2.91667 12.2219 4.41667 11.8026 6.25C11.3833 8.08333 11.8026 9.58333 12.725 9.58333Z"
-              fill="var(--link-hover-color)"
-            />
-          </svg>
-
-          <span class="mk-important-description">很赞</span>
-          {{ end }} {{ if eq $item.important false }}
-          <div></div>
-          {{ end }}
-        </div>
+        <span class="mk-important-description">很赞</span>
+        {{ end }} {{ if eq $item.important false }}
+        <div></div>
+        {{ end }}
       </div>
 
       {{ end }}
