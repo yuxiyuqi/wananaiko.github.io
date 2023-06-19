@@ -3,7 +3,6 @@
 "https://api.raindrop.io/rest/v1/raindrops/%s" $collection }} {{ $json :=
 getJSON $apiUrl "?access_token=" $token "&perpage=50&sort=-created" }}
 
-<link rel="stylesheet" href="https://unpkg.com/pyloncss@latest/css/pylon.css" />
 <script type="text/javascript" src="/assets/moment.min.js?v=2.29.4"></script>
 <script type="text/javascript" src="/assets/moment.twitter.min.js"></script>
 
@@ -125,7 +124,6 @@ getJSON $apiUrl "?access_token=" $token "&perpage=50&sort=-created" }}
   }
 
   span.mk-dot {
-    margin-left: auto;
     color: var(--secondary);
     font-size: 18px;
     white-space: nowrap;
@@ -202,7 +200,6 @@ getJSON $apiUrl "?access_token=" $token "&perpage=50&sort=-created" }}
   }
 
   .mk-update-time {
-    margin-left: auto;
     opacity: 0.7;
     color: var(--tertiary);
     font-size: 12px;
@@ -274,7 +271,6 @@ getJSON $apiUrl "?access_token=" $token "&perpage=50&sort=-created" }}
   }
 
   .mk-domin {
-    margin-left: auto;
     opacity: 0.7;
     color: var(--tertiary);
     font-size: 12px;
