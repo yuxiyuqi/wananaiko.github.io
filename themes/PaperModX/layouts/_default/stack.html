@@ -43,7 +43,11 @@
 
   .stack-item:hover .stack-item-title {
     color: var(--content);
-    box-shadow: 0 1px 0 var(--content);
+    box-shadow: var(--box-shadow);
+  }
+
+  .dark .stack-item:hover .stack-item-title {
+    box-shadow: var(--box-shadow);
   }
 
   .stack-item-link {

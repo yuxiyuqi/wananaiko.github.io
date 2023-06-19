@@ -91,7 +91,8 @@ getJSON $apiUrl "?access_token=" $token "&perpage=50&sort=-created" }}
 
   .mk-raindrop-bookmark:hover .mk-title {
     color: var(--content);
-    box-shadow: 0 1px 0 #ffffff55;
+    box-shadow: var(--box-shadow);
+        width: fit-content;
   }
 
   .mk-excerpt {
@@ -151,6 +152,7 @@ getJSON $apiUrl "?access_token=" $token "&perpage=50&sort=-created" }}
     gap: 0.6rem;
     padding-bottom: 1.5rem;
   }
+
   .mk-cover img {
     border-radius: 6px;
     margin: 0 auto;
@@ -228,6 +230,7 @@ getJSON $apiUrl "?access_token=" $token "&perpage=50&sort=-created" }}
     align-items: center;
     margin-top: 4px;
   }
+
   .mk-raindrop-bookmark.important {
     background-color: rgb(198 239 239 / 25%);
   }
@@ -298,6 +301,7 @@ getJSON $apiUrl "?access_token=" $token "&perpage=50&sort=-created" }}
       grid-gap: 16px;
       margin: 0 auto;
     }
+
     .mk-cover img {
       border-radius: 4px;
       margin: 0 auto;
@@ -399,9 +403,8 @@ getJSON $apiUrl "?access_token=" $token "&perpage=50&sort=-created" }}
       <div class="mk-cover">
         <img src="{{ $item.cover }}" loading="lazy" />
       </div>
-      <div class="mk-title-wrapper">
-        <div class="mk-title">{{ $item.title }}</div>
-      </div>
+
+      <div class="mk-title">{{ $item.title }}</div>
       {{ with $item.excerpt }}
       <div class="mk-excerpt">{{ . }}</div>
       {{ end }} {{ with $item.note }}
