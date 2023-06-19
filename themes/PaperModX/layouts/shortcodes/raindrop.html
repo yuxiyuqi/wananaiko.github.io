@@ -108,7 +108,7 @@ getJSON $apiUrl "?access_token=" $token "&perpage=50&sort=-created" }}
     padding: 0;
     /* margin: 0.4rem 0 0 0; */
     align-items: center;
-    gap: 0.5rem;
+    gap: 4px;
   }
 
   .mk-tag {
@@ -117,6 +117,7 @@ getJSON $apiUrl "?access_token=" $token "&perpage=50&sort=-created" }}
     font-size: 12px;
     white-space: nowrap;
     line-height: 1.4rem;
+    margin-right: 4px;
   }
 
   span.mk-dot {
@@ -272,6 +273,15 @@ getJSON $apiUrl "?access_token=" $token "&perpage=50&sort=-created" }}
     opacity: 0.85;
   }
 
+  .mk-domin {
+    margin-left: auto;
+    opacity: 0.7;
+    color: var(--tertiary);
+    font-size: 12px;
+    white-space: nowrap;
+    line-height: 1.4rem;
+  }
+
   @media (max-width: 767px) {
     .mk-raindrop-bookmarks {
       display: grid;
@@ -397,7 +407,7 @@ getJSON $apiUrl "?access_token=" $token "&perpage=50&sort=-created" }}
       <div class="mk-tag">#{{ . }}</div>
       {{ end }}
       <div class="mk-raindrop-tags">
-        <div class="mk-tag mk-update-time">{{ $item.domain }}</div>
+        <div class="mk-domin">{{ $item.domain }}</div>
         <span class="mk-dot">·</span>
         <div class="mk-tag mk-update-time">{{ $item.lastUpdate }}</div>
         <spacer></spacer>
