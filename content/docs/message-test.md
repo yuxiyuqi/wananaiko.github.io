@@ -52,25 +52,25 @@ draft: false
     width: 80%;
     margin: 1rem 0;
     text-align: right;
-}
+  }
 
-.message.--self .message__text {
-        background-color: rgb(198 239 239 / 25%);
-    }
+  .message.--self .message__text {
+    background-color: rgb(198 239 239 / 25%);
+  }
 
-    .dark .message.--self .message__text {
-        background-color: rgba(0, 153, 153, 0.1);
-    }
+  .dark .message.--self .message__text {
+    background-color: rgba(0, 153, 153, 0.1);
+  }
 
-    .message.--self .message__text {
+  .message.--self .message__text {
     text-align: left;
-}
+  }
 
-.message.--self .message__meta {
+  .message.--self .message__meta {
     text-align: right;
-}
+  }
 
-img.medium-zoom-image {
+  img.medium-zoom-image {
     position: relative;
     width: 24px;
     height: 24px;
@@ -78,10 +78,10 @@ img.medium-zoom-image {
     border-radius: 50%;
     box-shadow: inset 0 0 0 1px rgba(105, 105, 105, 0.1);
     flex-shrink: 0;
-}
+  }
 
-.post-content img {
-  position: relative;
+  .post-content img {
+    position: relative;
     width: 24px;
     height: 24px;
     overflow: hidden;
@@ -89,83 +89,83 @@ img.medium-zoom-image {
     box-shadow: inset 0 0 0 1px rgba(105, 105, 105, 0.1);
     flex-shrink: 0;
     margin:unset !important;
-}
+  }
 
-.message:not(.--self) {
+  .message:not(.--self) {
     text-align: left;
-}
+  }
 
-.message__inner {
+  .message__inner {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-        align-items: flex-end;
-}
+    align-items: flex-end;
+  }
 
-.message__inner img {
+  .message__inner img {
     order: 1;
-}
+  }
 
-.message:not(.--self) .message__inner {
+  .message:not(.--self) .message__inner {
     justify-content: flex-start;
-}
+  }
 
-.message:not(.--self) .message__inner img {
+  .message:not(.--self) .message__inner img {
     order: 0;
-}
+  }
 
-.message__text {
+  .message__text {
     margin-left: 8px;
-        display: flex;
+    display: flex;
     flex-direction: column;
     gap: 4px;
     border: 1px solid var(--border);
     border-radius: var(--radius);
     padding: 12px;
     margin-right: 8px;
-        --list-opacity: 1;
+    --list-opacity: 1;
     background-color: rgb(250 250 250 / var(--list-opacity));
-}
+  }
 
-.dark .message__text {
+  .dark .message__text {
     border: 1px solid var(--border);
-        background: var(--code-bg);
-}
+    background: var(--code-bg);
+  }
 
-.message__meta {
+  .message__meta {
     color: #888;
     font-size: 0.8em;
-}
+  }
 
-.message.--self {
+  .message.--self {
     margin-left: auto;
-}
+  }
 
-.message:not(.--self) {
+  .message:not(.--self) {
     margin-right: auto;
-}
-/* 定义手机端样式 */
-@media screen and (max-width: 768px) {
+  }
+  /* 定义手机端样式 */
+  @media screen and (max-width: 768px) {
     .message {
-        width: 90%;
+      width: 90%;
     }
-}
+  }
 </style>
 
 <div class="message {{if eq (.Get "from") "self"}}--self{{end}}">
-    <div class="message__inner">
-        {{if ne (.Get "accountID") ""}}
-        <img class="avatar" src="https://unavatar.io/{{.Get "accountID"}}" width="24" height="24">
-        {{else}}
-        <img class="avatar" src="" width="24" height="24" style="visibility:hidden;">
-        {{end}}
-        <div class="message__text">
-            <hstack class="message__meta">{{.Get "name"}} <spacer></spacer> {{.Get "timestamp"}}
+  <div class="message__inner">
+    {{if ne (.Get "accountID") ""}}
+    <img class="avatar" src="https://unavatar.io/{{.Get "accountID"}}" width="24" height="24">
+    {{else}}
+    <img class="avatar" src="" width="24" height="24" style="visibility:hidden;">
+    {{end}}
+    <div class="message__text">
+      <hstack class="message__meta">{{.Get "name"}} <spacer></spacer> {{.Get "timestamp"}}
 
-            </hstack>
-            {{.Inner}}
-        </div>
+      </hstack>
+      {{.Inner}}
     </div>
+  </div>
 </div>
 ```
 
