@@ -125,7 +125,7 @@ getJSON $apiUrl "?access_token=" $token "&perpage=50&sort=-created" }}
     white-space: nowrap;
     line-height: 12px;
     border-radius: 4px;
-    margin: 4px 0;
+    margin: 4px 4px 4px 0;
   }
 
   span.mk-dot {
@@ -314,17 +314,6 @@ getJSON $apiUrl "?access_token=" $token "&perpage=50&sort=-created" }}
 <div class="mk-tab">
   <div class="mk-tab-tag" onclick="showAll()">All</div>
 
-  <!-- 跳转到Raindrop官网 -->
-  <!-- <div class="mk-tab-tag">
-  <a href="https://raindrop.io/7144206/share-on-hugo-34199304" target="_blank" rel="noreferrer" style="all:unset;display:flex;align-items:center;">
-    <svg class="raindrop" width="20" height="20" margin-right="4px" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M17.2 9.79839C17.2 5.82247 13.9767 2.59843 10 2.59843C6.02327 2.59843 2.8 5.82247 2.8 9.79839C2.8 13.7752 6.02327 16.9984 10 16.9984C13.9767 16.9984 17.2 13.7752 17.2 9.79839Z" stroke="var(--secondary)" stroke-linecap="round" stroke-linejoin="round"/>
-      <path fill-rule="evenodd" clip-rule="evenodd" d="M7.49687 12.3018L8.69016 8.48936L12.5026 7.2961L11.3094 11.1086L7.49687 12.3018Z" stroke="var(--secondary)" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg>
-    Magic
-  </a>
-</div> -->
-
   {{ range $i, $item := index $json "items" }} {{ range $j, $tag := $item.tags
   }}
   <div class="mk-tab-tag" onclick="showTag('{{ $tag }}')">{{ $tag }}</div>
@@ -337,8 +326,9 @@ getJSON $apiUrl "?access_token=" $token "&perpage=50&sort=-created" }}
   var tags = document.getElementsByClassName("mk-tab-tag");
   var tagList = [];
   for (var i = 0; i < tags.length; i++) {
-    if (tagList.indexOf(tags[i].innerHTML) == -1) {
-      tagList.push(tags[i].innerHTML);
+    var tagContent = tags[i].textContent;
+    if (tagList.indexOf(tagContent) == -1) {
+      tagList.push(tagContent);
     } else {
       tags[i].style.display = "none";
     }
@@ -363,7 +353,8 @@ getJSON $apiUrl "?access_token=" $token "&perpage=50&sort=-created" }}
         var found = false;
         var bookmarkTags = bookmarks[i].querySelectorAll(".mk-tag");
         for (var j = 0; j < bookmarkTags.length; j++) {
-          if (bookmarkTags[j].innerHTML == tag) {
+          if (bookmarkTags[j].textContent == "#" + tag) {
+            // Add the '#' prefix for comparison
             found = true;
             break;
           }
@@ -379,17 +370,14 @@ getJSON $apiUrl "?access_token=" $token "&perpage=50&sort=-created" }}
     }
     var tags = document.getElementsByClassName("mk-tab-tag");
     for (var i = 0; i < tags.length; i++) {
-      if (tags[i].innerHTML == tag) {
+      var tagContent = tags[i].textContent;
+      if (tagContent == tag) {
         tags[i].classList.add("mk-tab-tag-active");
       } else {
         tags[i].classList.remove("mk-tab-tag-active");
       }
     }
   }
-
-  document
-    .querySelector(".mk-tab-tag:first-child")
-    .classList.add("mk-tab-tag-active");
 </script>
 
 <div class="mk-raindrop-bookmarks">
@@ -407,7 +395,7 @@ getJSON $apiUrl "?access_token=" $token "&perpage=50&sort=-created" }}
       {{ end }} {{ with $item.note }}
       <div class="mk-excerpt">{{ . }}</div>
       {{ end }} {{ with $item.tags }} {{ range . }}
-      <div class="mk-tag">{{ . }}</div>
+      <div class="mk-tag">#{{ . }}</div>
       {{ end }}
       <div class="mk-raindrop-tags">
         <div class="mk-domin">{{ $item.domain }}</div>
