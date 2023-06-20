@@ -378,6 +378,8 @@ getJSON $apiUrl "?access_token=" $token "&perpage=50&sort=-created" }}
       }
     }
   }
+  // 使默认选中第一个标签All.
+  document.querySelector(".mk-tab-tag").classList.add("mk-tab-tag-active");
 </script>
 
 <div class="mk-raindrop-bookmarks">
