@@ -1,5 +1,4 @@
 {{ define "main" }} {{ $stack := getJSON "data/stack.json" }}
-
 <link rel="stylesheet" href="https://unpkg.com/pyloncss@latest/css/pylon.css" />
 
 <style>
@@ -117,6 +116,8 @@
     line-height: 1rem;
     padding: 0.1rem 0.5rem;
     color: var(--link-hover-color);
+    position: fixed;
+    right: 16px;
   }
 
   .dark span.stack-item-discount {
@@ -128,8 +129,8 @@
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
-    padding: 0;
-    margin: 0;
+    position: fixed;
+    bottom: 16px;
   }
 
   .stack-item-tags li {
@@ -193,7 +194,7 @@
   }
 
   p.stack-item-description {
-    margin: 4px 0 12px 0;
+    margin: 4px 0 32px 0;
   }
 
   a.stack-item-link {
@@ -249,25 +250,18 @@
             </div>
             <p class="stack-item-description">{{ index $item 3 }}</p>
             {{- $tags := split (index $item 4) "," }} {{- if ge (len $tags) 1 }}
-            <hstack class="stack-item-tags">
+            <div class="stack-item-tags">
               {{ range $tags }}
               <span class="stack-item-tag">{{ . }}</span>
-              {{ end }}
-              <spacer></spacer>
-              {{ if $discount }}
+              {{ end }} {{ if $discount }}
               <span class="stack-item-discount">{{ $discount }}</span>
               {{ end }}
-            </hstack>
+            </div>
             {{- end }}
           </div>
         </div>
       </div>
     </a>
-
-    <!-- 在最后一个 stack-item 之后不显示横线 -->
-    {{ if lt $index (sub (len $stack.items) 1) }}
-    <div class="stack-item-divider"></div>
-    {{ end }}
   </div>
   {{- end }} {{- end }}
 </div>
