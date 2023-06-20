@@ -40,6 +40,8 @@ draft: false
 
 #### 短代码：
 
+新建短代码文件：themes/yourtheme/layouts/shortcodes/message.html
+
 ```html
 <link rel="stylesheet" href="https://unpkg.com/pyloncss@latest/css/pylon.css"/>
 <style>
@@ -164,8 +166,6 @@ img.medium-zoom-image {
     </div>
 </div>
 ```
-
-&nbsp;
 
 #### Markdown 里的调用示例：
 
