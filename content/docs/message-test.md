@@ -3,7 +3,8 @@ title: "为了展示ChatGPT对话，写了个“message”的短代码"
 date: 2023-06-20T10:12:03+08:00
 author: "wananaiko"
 tags:
-  - test
+  - Hugo
+  - Shortcode
 draft: false
 ---
 
