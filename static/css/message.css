@@ -8,13 +8,16 @@
 
 .message.--self .message__text {
         background-color: rgb(198 239 239 / 25%);
+        border: 1px solid #b7d8d865;
+        
     }
 
-    .dark .message.--self .message__text {
+.dark .message.--self .message__text {
         background-color: rgba(0, 153, 153, 0.1);
+        border: 1px solid #b7dddd15;
     }
 
-    .message.--self .message__text {
+.message.--self .message__text {
     text-align: left;
 }
 
