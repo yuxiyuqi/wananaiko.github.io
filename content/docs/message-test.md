@@ -214,6 +214,9 @@ img.message__img.medium-zoom-image.medium-zoom-image--opened {
     box-shadow: unset;
 }
 
+img.message__img {
+    margin: unset !important;
+}
 
 /* 定义手机端样式 */
 @media screen and (max-width: 768px) {
