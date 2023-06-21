@@ -15,8 +15,8 @@
 /> <meta name="description" content="About design, frontend, practical tools"> <meta name="author" content="wananaiko"> <link rel="canonical" href="https://wananaiko.com/docs/">
 <link
   crossorigin="anonymous"
-  href="/assets/css/stylesheet.min.dd8c5ac84042410d4d6efa808cc7e94717ab67f234fd9b1c6d054badca7868a6.css"
-  integrity="sha256-3YxayEBCQQ1NbvqAjMfpRxerZ/I0/ZscbQVLrcp4aKY="
+  href="/assets/css/stylesheet.min.bfc02b7bec9a458e1c85cc2b60b880e186b9b8e8cb565d172dba8e91468504c4.css"
+  integrity="sha256-v8Are&#43;yaRY4chcwrYLiA4Ya5uOjLVl0XLbqOkUaFBMQ="
   rel="preload stylesheet"
   as="style"
 /> <link rel="icon" href="https://images.wananaiko.com/favicon.ico"> <link rel="apple-touch-icon" href="https://wananaiko.com/apple-touch-icon.png"> <link
@@ -347,6 +347,15 @@ window.addEventListener('scroll', () => {
   lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; 
 }, false);
 
+</script>
+
+<link rel="stylesheet" href="/css/pylon.css"/>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/quicklink/2.3.0/quicklink.umd.js"></script>
+<script>
+window.addEventListener('load', () => {
+  quicklink.listen();
+});
 </script><main class="main slide-enter-content"> 
 <header class="page-header">
   <h1>
@@ -363,6 +372,33 @@ window.addEventListener('scroll', () => {
 
 
 
+
+<article class="post-entry">
+  <div class="post-time"><span class="meta-time">
+  <span
+    >2023-06-20</span
+  ></span
+>
+  </div>
+
+  <div class="post-container"> 
+  <header class="entry-header">
+    <h3>为了展示 ChatGPT 对话，写了个 “message”的短代码
+    </h3>
+  </header>
+  <section class="entry-content">
+    
+      <p>起因是昨晚看到一段搞笑的“奶奶漏洞”对话，然后发挥了一下想象，可以在网站用短代码来实现这种对话形式。 头像使用了 unavatar.io 的免费服务，对话列表中的头像...</p>
+    
+  </section>
+  <footer class="entry-footer"><span class="meta-tags">
+  <span class="post-tags"><a href="https://wananaiko.com/tags/hugo/">Hugo</a><a href="https://wananaiko.com/tags/shortcode/">Shortcode</a></span></span
+>
+</footer>
+
+  </div>
+  <a class="entry-link" aria-label="post link to 为了展示 ChatGPT 对话，写了个 “message”的短代码" href="https://wananaiko.com/docs/message-test/"></a>
+</article>
 
 <article class="post-entry">
   <div class="post-time"><span class="meta-time">
@@ -605,33 +641,6 @@ window.addEventListener('scroll', () => {
 
   </div>
   <a class="entry-link" aria-label="post link to Hugo 添加相册单页" href="https://wananaiko.com/docs/hugo-photo-page/"></a>
-</article>
-
-<article class="post-entry">
-  <div class="post-time"><span class="meta-time">
-  <span
-    >2023-01-09</span
-  ></span
->
-  </div>
-
-  <div class="post-container"> 
-  <header class="entry-header">
-    <h3>Hugo 和 PaperModX 的一些配置记录
-    </h3>
-  </header>
-  <section class="entry-content">
-    
-      <p>增加空格之神 使用空格之神的浏览器插件很久了，真的是阅读强迫症患者的福音，空格之神项目地址 在 Hugo的 themes/PaperModX/layouts/_default/baseof.html 内增加以下代码： &lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/pangu/4.0.7/pangu.min.js&#34;&gt;&lt;/script&gt; &lt;script&gt; pangu.spacingPage(); &lt;/script&gt; 用完后感觉整...</p>
-    
-  </section>
-  <footer class="entry-footer"><span class="meta-tags">
-  <span class="post-tags"><a href="https://wananaiko.com/tags/hugo/">Hugo</a><a href="https://wananaiko.com/tags/waline/">waline</a><a href="https://wananaiko.com/tags/papermodx/">PaperModX</a></span></span
->
-</footer>
-
-  </div>
-  <a class="entry-link" aria-label="post link to Hugo 和 PaperModX 的一些配置记录" href="https://wananaiko.com/docs/hugo-develop/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

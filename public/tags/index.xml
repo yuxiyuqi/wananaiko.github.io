@@ -10,13 +10,23 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 16 Jun 2023 23:47:51 +0800</lastBuildDate><atom:link href="https://wananaiko.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 20 Jun 2023 10:12:03 +0800</lastBuildDate><atom:link href="https://wananaiko.com/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hugo</title>
       <link>https://wananaiko.com/tags/hugo/</link>
-      <pubDate>Fri, 16 Jun 2023 23:47:51 +0800</pubDate>
+      <pubDate>Tue, 20 Jun 2023 10:12:03 +0800</pubDate>
       
       <guid>https://wananaiko.com/tags/hugo/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Shortcode</title>
+      <link>https://wananaiko.com/tags/shortcode/</link>
+      <pubDate>Tue, 20 Jun 2023 10:12:03 +0800</pubDate>
+      
+      <guid>https://wananaiko.com/tags/shortcode/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>

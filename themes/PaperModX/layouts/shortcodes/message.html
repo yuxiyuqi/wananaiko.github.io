@@ -8,11 +8,18 @@
         <img class="avatar" src="" width="24" height="24" style="visibility:hidden;">
         {{end}}
         <div class="message__text">
-            <hstack class="message__meta">{{.Get "name"}} <spacer></spacer> {{.Get "timestamp"}}
-
-            </hstack>
+            <hstack class="message__meta">{{.Get "name"}} <spacer></spacer> {{.Get "timestamp"}}</hstack>
             {{.Inner}}
+
+            {{if ne (.Get "images") ""}}
+            <div class="grid-container">
+                {{range split (.Get "images") ","}}
+                <div class="grid-item">
+                    <img class="message__img" src="{{.}}" alt="Image">
+                </div>
+                {{end}}
+            </div>
+            {{end}}
         </div>
     </div>
 </div>
-
