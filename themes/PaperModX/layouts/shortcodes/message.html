@@ -15,7 +15,7 @@
             <div class="grid-container">
                 {{range split (.Get "images") ","}}
                 <div class="grid-item">
-                    <img class="message__img" src="{{.}}" data-action="zoom">
+                    <img class="message__img" loading="lazy" src="{{.}}" data-action="zoom">
                 </div>
                 {{end}}
             </div>
