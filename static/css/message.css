@@ -133,7 +133,6 @@ img.message__img {
     .grid-item {
         flex-basis: calc(100% - 8px); 
         box-sizing: border-box; 
-        
     }
     .message {
         width: 90%;
