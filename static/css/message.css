@@ -83,7 +83,7 @@
 .grid-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 10px;
+    grid-gap: 8px;
 }
 
 .grid-item {
@@ -118,7 +118,7 @@ img.avatar{
     margin:unset !important;
 }
 
-img.message__img.medium-zoom-image.medium-zoom-image--opened {
+img.medium-zoom-image.medium-zoom-image.medium-zoom-image--opened {
     object-fit: contain;
     position: absolute;
     width: 100%;
@@ -127,7 +127,7 @@ img.message__img.medium-zoom-image.medium-zoom-image--opened {
     box-shadow: unset;
 }
 
-img.message__img {
+img.medium-zoom-image {
     margin: unset !important;
 }
 
