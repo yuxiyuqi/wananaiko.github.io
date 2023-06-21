@@ -41,18 +41,6 @@
         </div>
     </div>
 </div>
-<script>
-    
-    
-    $(document).ready(function () {
-        mediumZoom(document.querySelectorAll('.message__img'))
-    })
-    
-    $('.message__img').load(function () {
-        mediumZoom(document.querySelectorAll('.message__img'))
-    })
-
-</script>
 <link rel="stylesheet" href="/css/message.css" />
 
 <div class="message ">
@@ -72,23 +60,23 @@
             <div class="grid-container">
                 
                 <div class="grid-item">
-                    <img class="message__img" src="https://images.wananaiko.com/2023/06/m2o65y.png" alt="Image">
+                    <img class="message__img" src="https://images.wananaiko.com/2023/06/m2o65y.png">
                 </div>
                 
                 <div class="grid-item">
-                    <img class="message__img" src="https://images.wananaiko.com/2023/06/GtO8dp.png" alt="Image">
+                    <img class="message__img" src="https://images.wananaiko.com/2023/06/GtO8dp.png">
                 </div>
                 
                 <div class="grid-item">
-                    <img class="message__img" src="https://images.wananaiko.com/2023/06/ulfWhO.jpg" alt="Image">
+                    <img class="message__img" src="https://images.wananaiko.com/2023/06/ulfWhO.jpg">
                 </div>
                 
                 <div class="grid-item">
-                    <img class="message__img" src="https://images.wananaiko.com/2023/06/fiFMOh.jpg" alt="Image">
+                    <img class="message__img" src="https://images.wananaiko.com/2023/06/fiFMOh.jpg">
                 </div>
                 
                 <div class="grid-item">
-                    <img class="message__img" src="https://images.wananaiko.com/2023/04/Splinespiration.png" alt="Image">
+                    <img class="message__img" src="https://images.wananaiko.com/2023/04/Splinespiration.png">
                 </div>
                 
             </div>
@@ -96,18 +84,6 @@
         </div>
     </div>
 </div>
-<script>
-    
-    
-    $(document).ready(function () {
-        mediumZoom(document.querySelectorAll('.message__img'))
-    })
-    
-    $('.message__img').load(function () {
-        mediumZoom(document.querySelectorAll('.message__img'))
-    })
-
-</script>
 <p> </p>
 <h4 id="自由隐藏元素">自由隐藏元素：</h4>
 <link rel="stylesheet" href="/css/message.css" />
@@ -125,18 +101,6 @@
         </div>
     </div>
 </div>
-<script>
-    
-    
-    $(document).ready(function () {
-        mediumZoom(document.querySelectorAll('.message__img'))
-    })
-    
-    $('.message__img').load(function () {
-        mediumZoom(document.querySelectorAll('.message__img'))
-    })
-
-</script>
 <link rel="stylesheet" href="/css/message.css" />
 
 <div class="message ">
@@ -152,18 +116,6 @@
         </div>
     </div>
 </div>
-<script>
-    
-    
-    $(document).ready(function () {
-        mediumZoom(document.querySelectorAll('.message__img'))
-    })
-    
-    $('.message__img').load(function () {
-        mediumZoom(document.querySelectorAll('.message__img'))
-    })
-
-</script>
 <link rel="stylesheet" href="/css/message.css" />
 
 <div class="message ">
@@ -179,18 +131,6 @@
         </div>
     </div>
 </div>
-<script>
-    
-    
-    $(document).ready(function () {
-        mediumZoom(document.querySelectorAll('.message__img'))
-    })
-    
-    $('.message__img').load(function () {
-        mediumZoom(document.querySelectorAll('.message__img'))
-    })
-
-</script>
 <p> </p>
 <h4 id="短代码">短代码：</h4>
 <p>新建短代码文件：themes/yourtheme/layouts/shortcodes/message.html</p>
