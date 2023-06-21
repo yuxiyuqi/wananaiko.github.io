@@ -93,7 +93,7 @@
     position: relative;
 }
 
-.grid-item .message__img {
+.grid-item .medium-zoom-image {
     object-fit: cover;
     position: absolute;
     width: 100%;
