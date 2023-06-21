@@ -121,8 +121,6 @@ img.avatar{
 img.medium-zoom-image.medium-zoom-image.medium-zoom-image--opened {
     object-fit: contain;
     position: absolute;
-    width: 100%;
-    height: 100%;
     border: unset;
     box-shadow: unset;
 }
