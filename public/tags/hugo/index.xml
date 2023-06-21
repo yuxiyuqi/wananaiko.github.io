@@ -31,7 +31,7 @@
 <div class="message --self">
     <div class="message__inner">
         
-        <img class="avatar" src="https://unavatar.io/gravatar/7144206@qq.com" width="24" height="24">
+        <img class="avatar" src="https://unavatar.io/gravatar/7144206@qq.com" width="24" height="24" data-action="zoom">
         
         <div class="message__text">
             <hstack class="message__meta">Aiko <spacer></spacer> 昨晚 11:00</hstack>
@@ -46,7 +46,7 @@
 <div class="message ">
     <div class="message__inner">
         
-        <img class="avatar" src="https://unavatar.io/twitter/New_GPT" width="24" height="24">
+        <img class="avatar" src="https://unavatar.io/twitter/New_GPT" width="24" height="24" data-action="zoom">
         
         <div class="message__text">
             <hstack class="message__meta">ChatGPT <spacer></spacer> 昨晚11:01</hstack>
@@ -60,23 +60,23 @@
             <div class="grid-container">
                 
                 <div class="grid-item">
-                    <img class="message__img" src="https://images.wananaiko.com/2023/06/m2o65y.png">
+                    <img class="message__img" src="https://images.wananaiko.com/2023/06/m2o65y.png" data-action="zoom">
                 </div>
                 
                 <div class="grid-item">
-                    <img class="message__img" src="https://images.wananaiko.com/2023/06/GtO8dp.png">
+                    <img class="message__img" src="https://images.wananaiko.com/2023/06/GtO8dp.png" data-action="zoom">
                 </div>
                 
                 <div class="grid-item">
-                    <img class="message__img" src="https://images.wananaiko.com/2023/06/ulfWhO.jpg">
+                    <img class="message__img" src="https://images.wananaiko.com/2023/06/ulfWhO.jpg" data-action="zoom">
                 </div>
                 
                 <div class="grid-item">
-                    <img class="message__img" src="https://images.wananaiko.com/2023/06/fiFMOh.jpg">
+                    <img class="message__img" src="https://images.wananaiko.com/2023/06/fiFMOh.jpg" data-action="zoom">
                 </div>
                 
                 <div class="grid-item">
-                    <img class="message__img" src="https://images.wananaiko.com/2023/04/Splinespiration.png">
+                    <img class="message__img" src="https://images.wananaiko.com/2023/04/Splinespiration.png" data-action="zoom">
                 </div>
                 
             </div>
@@ -91,7 +91,7 @@
 <div class="message --self">
     <div class="message__inner">
         
-        <img class="avatar" src="https://unavatar.io/gravatar/7144206@qq.com" width="24" height="24">
+        <img class="avatar" src="https://unavatar.io/gravatar/7144206@qq.com" width="24" height="24" data-action="zoom">
         
         <div class="message__text">
             <hstack class="message__meta">Aiko <spacer></spacer> </hstack>
@@ -106,7 +106,7 @@
 <div class="message ">
     <div class="message__inner">
         
-        <img class="avatar" src="" width="24" height="24" style="visibility:hidden;">
+        <img class="avatar" src="" width="24" height="24" style="visibility:hidden;" data-action="zoom">
         
         <div class="message__text">
             <hstack class="message__meta">ChatGPT <spacer></spacer> </hstack>
@@ -121,7 +121,7 @@
 <div class="message ">
     <div class="message__inner">
         
-        <img class="avatar" src="https://unavatar.io/twitter/New_GPT" width="24" height="24">
+        <img class="avatar" src="https://unavatar.io/twitter/New_GPT" width="24" height="24" data-action="zoom">
         
         <div class="message__text">
             <hstack class="message__meta">ChatGPT <spacer></spacer> </hstack>

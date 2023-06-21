@@ -71,5 +71,13 @@
 </article>
 
 <script src="/js/highlight-title.js"></script>
+<script>
+  // 给所有的图片加上 data-action="zoom" 属性.
+  // 用于 zoom.js
+  var images = document.querySelectorAll("img");
+  images.forEach(function (item) {
+    item.setAttribute("data-action", "zoom");
+  });
+</script>
 
 {{- end }}{{/* end main */}}
