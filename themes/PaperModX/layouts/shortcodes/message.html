@@ -23,15 +23,3 @@
         </div>
     </div>
 </div>
-
-<script>
-    // 解决手机浏览器里点击grid-item里的img后,图片不显示为原图尺寸.
-    // https://stackoverflow.com/questions/37166172/how-to-make-an-image-fullscreen-on-click
-    var gridItems = document.querySelectorAll('.grid-item');
-    gridItems.forEach(function(gridItem) {
-        gridItem.addEventListener('click', function() {
-            gridItem.classList.toggle('grid-item--zoom');
-        });
-    });
-
-</script>

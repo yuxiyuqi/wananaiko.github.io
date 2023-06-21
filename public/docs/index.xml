@@ -41,7 +41,11 @@
         </div>
     </div>
 </div>
+<script>
+    
+    
 
+</script>
 <link rel="stylesheet" href="/css/message.css" />
 
 <div class="message ">
@@ -61,23 +65,23 @@
             <div class="grid-container">
                 
                 <div class="grid-item">
-                    <img src="https://images.wananaiko.com/2023/06/m2o65y.png" alt="Image">
+                    <img class="message__img" src="https://images.wananaiko.com/2023/06/m2o65y.png" alt="Image">
                 </div>
                 
                 <div class="grid-item">
-                    <img src="https://images.wananaiko.com/2023/06/GtO8dp.png" alt="Image">
+                    <img class="message__img" src="https://images.wananaiko.com/2023/06/GtO8dp.png" alt="Image">
                 </div>
                 
                 <div class="grid-item">
-                    <img src="https://images.wananaiko.com/2023/06/EMMJ6a.jpg" alt="Image">
+                    <img class="message__img" src="https://images.wananaiko.com/2023/06/ulfWhO.jpg" alt="Image">
                 </div>
                 
                 <div class="grid-item">
-                    <img src="https://images.wananaiko.com/2023/06/ulfWhO.jpg" alt="Image">
+                    <img class="message__img" src="https://images.wananaiko.com/2023/06/fiFMOh.jpg" alt="Image">
                 </div>
                 
                 <div class="grid-item">
-                    <img src="https://images.wananaiko.com/2023/06/fiFMOh.jpg" alt="Image">
+                    <img class="message__img" src="https://images.wananaiko.com/2023/04/Splinespiration.png" alt="Image">
                 </div>
                 
             </div>
@@ -85,7 +89,11 @@
         </div>
     </div>
 </div>
+<script>
+    
+    
 
+</script>
 <p> </p>
 <h4 id="自由隐藏元素">自由隐藏元素：</h4>
 <link rel="stylesheet" href="/css/message.css" />
@@ -103,7 +111,11 @@
         </div>
     </div>
 </div>
+<script>
+    
+    
 
+</script>
 <link rel="stylesheet" href="/css/message.css" />
 
 <div class="message ">
@@ -119,7 +131,11 @@
         </div>
     </div>
 </div>
+<script>
+    
+    
 
+</script>
 <link rel="stylesheet" href="/css/message.css" />
 
 <div class="message ">
@@ -135,12 +151,15 @@
         </div>
     </div>
 </div>
+<script>
+    
+    
 
+</script>
 <p> </p>
 <h4 id="短代码">短代码：</h4>
 <p>新建短代码文件：themes/yourtheme/layouts/shortcodes/message.html</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;stylesheet&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://unpkg.com/pyloncss@latest/css/pylon.css&#34;</span><span class="p">/&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;stylesheet&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;/css/message.css&#34;</span> <span class="p">/&gt;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;stylesheet&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;/css/message.css&#34;</span> <span class="p">/&gt;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;message {{if eq (.Get &#34;</span><span class="na">from</span><span class="err">&#34;)</span> <span class="err">&#34;</span><span class="na">self</span><span class="err">&#34;}}</span><span class="na">--self</span><span class="err">{{</span><span class="na">end</span><span class="err">}}&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;message__inner&#34;</span><span class="p">&gt;</span>
@@ -157,7 +176,7 @@
 </span></span><span class="line"><span class="cl">            <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;grid-container&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">                {{range split (.Get &#34;images&#34;) &#34;,&#34;}}
 </span></span><span class="line"><span class="cl">                <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;grid-item&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">                    <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;{{.}}&#34;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&#34;Image&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">                    <span class="p">&lt;</span><span class="nt">img</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;message__img&#34;</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;{{.}}&#34;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&#34;Image&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">                <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">                {{end}}
 </span></span><span class="line"><span class="cl">            <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
@@ -168,7 +187,7 @@
 </span></span></code></pre></div><p> </p>
 <h4 id="css样式"><strong>CSS样式：</strong></h4>
 <p>在本地新建样式文件：static/css/message.css</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl">  <span class="p">.</span><span class="nc">message</span> <span class="p">{</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="p">.</span><span class="nc">message</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="k">font-size</span><span class="p">:</span> <span class="mi">16</span><span class="kt">px</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="k">width</span><span class="p">:</span> <span class="mi">80</span><span class="kt">%</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="c">/* padding: 10px; */</span>
@@ -195,26 +214,6 @@
 </span></span><span class="line"><span class="cl">    <span class="k">text-align</span><span class="p">:</span> <span class="kc">right</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nt">img</span><span class="p">.</span><span class="nc">medium-zoom-image</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="k">position</span><span class="p">:</span> <span class="kc">relative</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="k">width</span><span class="p">:</span> <span class="mi">24</span><span class="kt">px</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="k">height</span><span class="p">:</span> <span class="mi">24</span><span class="kt">px</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="k">overflow</span><span class="p">:</span> <span class="kc">hidden</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="k">border-radius</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="k">box-shadow</span><span class="p">:</span> <span class="kc">inset</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">1</span><span class="kt">px</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">105</span><span class="p">,</span> <span class="mi">105</span><span class="p">,</span> <span class="mi">105</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">    <span class="k">flex-shrink</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nc">post-content</span> <span class="nt">img</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="k">position</span><span class="p">:</span> <span class="kc">relative</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="k">width</span><span class="p">:</span> <span class="mi">24</span><span class="kt">px</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="k">height</span><span class="p">:</span> <span class="mi">24</span><span class="kt">px</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="k">overflow</span><span class="p">:</span> <span class="kc">hidden</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="k">border-radius</span><span class="p">:</span> <span class="mi">12</span><span class="kt">px</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="k">box-shadow</span><span class="p">:</span> <span class="kc">inset</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">1</span><span class="kt">px</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">105</span><span class="p">,</span> <span class="mi">105</span><span class="p">,</span> <span class="mi">105</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">    <span class="k">flex-shrink</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="k">margin</span><span class="p">:</span><span class="kc">unset</span> <span class="cp">!important</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nc">message</span><span class="p">:</span><span class="nd">not</span><span class="o">(</span><span class="p">.</span><span class="nc">--self</span><span class="o">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="k">text-align</span><span class="p">:</span> <span class="kc">left</span><span class="p">;</span>
@@ -283,12 +282,42 @@
 </span></span><span class="line"><span class="cl">    <span class="k">position</span><span class="p">:</span> <span class="kc">relative</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nc">grid-item</span> <span class="nt">img</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nc">grid-item</span> <span class="p">.</span><span class="nc">message__img</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="k">object-fit</span><span class="p">:</span> <span class="kc">cover</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="k">position</span><span class="p">:</span> <span class="kc">absolute</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="k">width</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="k">height</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="k">border-radius</span><span class="p">:</span> <span class="mi">8</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nc">fullsize</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">object-fit</span><span class="p">:</span> <span class="kc">contain</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">max-width</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">max-height</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nt">img</span><span class="p">.</span><span class="nc">avatar</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">position</span><span class="p">:</span> <span class="kc">relative</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">width</span><span class="p">:</span> <span class="mi">24</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">height</span><span class="p">:</span> <span class="mi">24</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">overflow</span><span class="p">:</span> <span class="kc">hidden</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">border-radius</span><span class="p">:</span> <span class="mi">12</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">box-shadow</span><span class="p">:</span> <span class="kc">inset</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">1</span><span class="kt">px</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">105</span><span class="p">,</span> <span class="mi">105</span><span class="p">,</span> <span class="mi">105</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">flex-shrink</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">margin</span><span class="p">:</span><span class="kc">unset</span> <span class="cp">!important</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nt">img</span><span class="p">.</span><span class="nc">message__img</span><span class="p">.</span><span class="nc">medium-zoom-image</span><span class="p">.</span><span class="nc">medium-zoom-image--opened</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">object-fit</span><span class="p">:</span> <span class="kc">contain</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">position</span><span class="p">:</span> <span class="kc">absolute</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">width</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">height</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">border</span><span class="p">:</span> <span class="kc">unset</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">box-shadow</span><span class="p">:</span> <span class="kc">unset</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nt">img</span><span class="p">.</span><span class="nc">message__img</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">margin</span><span class="p">:</span> <span class="kc">unset</span> <span class="cp">!important</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c">/* 定义手机端样式 */</span>
