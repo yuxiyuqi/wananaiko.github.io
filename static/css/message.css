@@ -51,9 +51,9 @@
 
 .message__text {
     margin-left: 8px;
-    display: flex;
+        display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 4px;
     border: 1px solid var(--border);
     border-radius: var(--radius);
     padding: 12px;
@@ -64,7 +64,7 @@
 
 .dark .message__text {
     border: 1px solid var(--border);
-    background: var(--code-bg);
+        background: var(--code-bg);
 }
 
 .message__meta {
@@ -83,17 +83,15 @@
 .grid-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 8px;
+    grid-gap: 10px;
 }
 
 .grid-item {
-    width: 100%;
-    height: 0;
     padding-bottom: 100%;
     position: relative;
 }
 
-.grid-item .medium-zoom-image {
+.grid-item .message__img {
     object-fit: cover;
     position: absolute;
     width: 100%;
@@ -118,14 +116,24 @@ img.avatar{
     margin:unset !important;
 }
 
-img.medium-zoom-image.medium-zoom-image.medium-zoom-image--opened {
+img.message__img.medium-zoom-image{
+    position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+img.message__img.medium-zoom-image.medium-zoom-image--opened {
     object-fit: contain;
     position: absolute;
+    width: 100%;
+    height: 100%;
     border: unset;
     box-shadow: unset;
 }
 
-img.medium-zoom-image {
+img.message__img {
     margin: unset !important;
 }
 
