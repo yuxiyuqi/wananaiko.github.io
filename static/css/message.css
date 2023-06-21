@@ -51,9 +51,9 @@
 
 .message__text {
     margin-left: 8px;
-        display: flex;
+    display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: 8px;
     border: 1px solid var(--border);
     border-radius: var(--radius);
     padding: 12px;
@@ -64,7 +64,7 @@
 
 .dark .message__text {
     border: 1px solid var(--border);
-        background: var(--code-bg);
+    background: var(--code-bg);
 }
 
 .message__meta {
