@@ -83,43 +83,22 @@
 </div>
 
 
-
+<link rel="stylesheet" href=https://wananaiko.com/css/hugo-easy-gallery.css />
 
 <div class="gallery caption-position-bottom caption-effect-slide hover-effect-zoom hover-transition" itemscope itemtype="http://schema.org/ImageGallery">
 	  
-  
-  <link rel="stylesheet" href=https://wananaiko.com/css/hugo-easy-gallery.css />
-  <div class="box" >
-    <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-      <div class="img" style="background-image: url('https://images.wananaiko.com/2023/01/jaeYun.jpg');">
-        <img itemprop="thumbnail" src="https://images.wananaiko.com/2023/01/jaeYun.jpg" alt="法师桥"/>
-      </div>
-      <a href="https://images.wananaiko.com/2023/01/jaeYun.jpg" itemprop="contentUrl"></a>
-    </figure>
-  </div>
-
-  
-  
-  <div class="box" >
-    <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-      <div class="img" style="background-image: url('https://images.wananaiko.com/2023/01/OuL560.jpg');">
-        <img itemprop="thumbnail" src="https://images.wananaiko.com/2023/01/OuL560.jpg" alt="龙美术馆"/>
-      </div>
-      <a href="https://images.wananaiko.com/2023/01/OuL560.jpg" itemprop="contentUrl"></a>
-    </figure>
-  </div>
-
-  
-  
-  <div class="box" >
-    <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-      <div class="img" style="background-image: url('https://images.wananaiko.com/2023/01/4cxcoH.jpg');">
-        <img itemprop="thumbnail" src="https://images.wananaiko.com/2023/01/4cxcoH.jpg" alt="拍摄于前滩太古里，使用了 Leica M10 &#43; 50 2aa"/>
-      </div>
-      <a href="https://images.wananaiko.com/2023/01/4cxcoH.jpg" itemprop="contentUrl"></a>
-    </figure>
-  </div>
-
+  <figure>
+      <img loading="lazy" data-action="zoom" src="https://images.wananaiko.com/2023/01/jaeYun.jpg"
+           alt="法师桥"/> 
+  </figure>
+  <figure>
+      <img loading="lazy" data-action="zoom" src="https://images.wananaiko.com/2023/01/OuL560.jpg"
+           alt="龙美术馆"/> 
+  </figure>
+  <figure>
+      <img loading="lazy" data-action="zoom" src="https://images.wananaiko.com/2023/01/4cxcoH.jpg"
+           alt="拍摄于前滩太古里，使用了 Leica M10 &#43; 50 2aa"/> 
+  </figure>
 
 </div>
 </p>
@@ -301,7 +280,7 @@
 </span></span><span class="line"><span class="cl">{{- end }}
 </span></span></code></pre></div><p>如果要调整页面的宽度请修改 <code>.main {max-width: 1008px !important;}</code>样式。</p>
 <p>
-  <img loading="lazy" src="https://images.wananaiko.com/2023/01/xT4X11.png" alt="xT4X11"  /></p>
+<img loading="lazy" data-action="zoom" src="https://images.wananaiko.com/2023/01/xT4X11.png" alt="xT4X11" /></p>
 <p>线上效果已经移除啦~</p>
 ]]></content:encoded>
     </item>

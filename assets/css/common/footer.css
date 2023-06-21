@@ -74,3 +74,7 @@
 .medium-zoom-image--opened {
     z-index: 3;
 }
+/* view-image.min.js 在暗黑模式下的背景色 */
+.dark.zoom-overlay-open .zoom-overlay{
+    background-color: var(--theme);
+}

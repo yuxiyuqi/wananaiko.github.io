@@ -1851,10 +1851,10 @@ nicelydone.club，这个网站按应用、页面类型、组件类型、操作�
 nicelydone 提供了很多图片，但是很多界面图其实是类似的，将它们全部整理到 Eagle 中也没有必要，反而会增加查找图片的难度。不过，我仍然按照页面、组件和模块三个分类整理了近
 100 个标签，并将精选的图片保存到了 Eagle 中。这样做还是很有必要的。</p>
 <p>
-  <img loading="lazy" src="https://images.wananaiko.com/2023/04/nSKPQT.png" alt="使用脚本批量下载图片"  />
+<img loading="lazy" data-action="zoom" src="https://images.wananaiko.com/2023/04/nSKPQT.png" alt="使用脚本批量下载图片" />
 使用脚本批量下载 refero.design 的图片</p>
 <p>
-  <img loading="lazy" src="https://images.wananaiko.com/2023/04/GXNhni.png" alt="Eagle里对标签作整理"  />
+<img loading="lazy" data-action="zoom" src="https://images.wananaiko.com/2023/04/GXNhni.png" alt="Eagle里对标签作整理" />
 Eagle 里对标签作整理</p>
 <hr>
 <h3 id="录制视频">录制视频</h3>
@@ -1868,9 +1868,9 @@ Eagle 里对标签作整理</p>
 <p><a href="https://goodsnooze.gumroad.com/l/menugpt?layout=profile&amp;recommended_by=library" target="_blank" rel="noopener">MacGPT</a> 目前为止用过的最好用的 ChatGPT
 客户端，除了支持快捷键呼出窗口，最好用的是可以在任何地方使用 <code>/gpt</code> + <code>回车键</code>，直接生成 AI 内容。之前收费 ¥35，现在突然免费了。</p>
 <p>
-  <img loading="lazy" src="https://images.wananaiko.com/2023/04/NWq6dA.gif" alt="NWq6dA"  /></p>
+<img loading="lazy" data-action="zoom" src="https://images.wananaiko.com/2023/04/NWq6dA.gif" alt="NWq6dA" /></p>
 <p>
-  <img loading="lazy" src="https://images.wananaiko.com/2023/04/2M3CYm.gif" alt="2M3CYm"  /></p>
+<img loading="lazy" data-action="zoom" src="https://images.wananaiko.com/2023/04/2M3CYm.gif" alt="2M3CYm" /></p>
 <hr>
 <h3 id="翻译工具">翻译工具</h3>
 <p>平时工作中使用翻译工具的频率真的蛮高的，有一段时间，单词和短语是使用 MenubarX + Deepl 和 火山翻译来使用的。接触了 Bob
@@ -2170,175 +2170,55 @@ WantedBy=multi-user.target
 </div>
 
 
-
+<link rel="stylesheet" href=https://wananaiko.com/css/hugo-easy-gallery.css />
 
 <div class="gallery caption-position-bottom caption-effect-slide hover-effect-zoom hover-transition" itemscope itemtype="http://schema.org/ImageGallery">
 	  
-
-<link rel="stylesheet" href=https://wananaiko.com/css/hugo-easy-gallery.css />
-<div class="box" >
-  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-    <div class="img" style="background-image: url('/docs/my2022/image/image0001.jpg');">
-      <img itemprop="thumbnail" src="/docs/my2022/image/image0001.jpg" />
-    </div>
-    <a href="/docs/my2022/image/image0001.jpg" itemprop="contentUrl"></a>
-  </figure>
-</div>
-
-
-
-<div class="box" >
-  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-    <div class="img" style="background-image: url('/docs/my2022/image/image0002.jpg');">
-      <img itemprop="thumbnail" src="/docs/my2022/image/image0002.jpg" />
-    </div>
-    <a href="/docs/my2022/image/image0002.jpg" itemprop="contentUrl"></a>
-  </figure>
-</div>
-
-
-
-<div class="box" >
-  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-    <div class="img" style="background-image: url('/docs/my2022/image/image0003.jpg');">
-      <img itemprop="thumbnail" src="/docs/my2022/image/image0003.jpg" />
-    </div>
-    <a href="/docs/my2022/image/image0003.jpg" itemprop="contentUrl"></a>
-  </figure>
-</div>
-
-
-
-<div class="box" >
-  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-    <div class="img" style="background-image: url('/docs/my2022/image/image0004.jpg');">
-      <img itemprop="thumbnail" src="/docs/my2022/image/image0004.jpg" />
-    </div>
-    <a href="/docs/my2022/image/image0004.jpg" itemprop="contentUrl"></a>
-  </figure>
-</div>
-
-
-
-<div class="box" >
-  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-    <div class="img" style="background-image: url('/docs/my2022/image/image0005.jpg');">
-      <img itemprop="thumbnail" src="/docs/my2022/image/image0005.jpg" />
-    </div>
-    <a href="/docs/my2022/image/image0005.jpg" itemprop="contentUrl"></a>
-  </figure>
-</div>
-
-
-
-<div class="box" >
-  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-    <div class="img" style="background-image: url('/docs/my2022/image/image0006.jpg');">
-      <img itemprop="thumbnail" src="/docs/my2022/image/image0006.jpg" />
-    </div>
-    <a href="/docs/my2022/image/image0006.jpg" itemprop="contentUrl"></a>
-  </figure>
-</div>
-
-
-
-<div class="box" >
-  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-    <div class="img" style="background-image: url('/docs/my2022/image/image0007.jpg');">
-      <img itemprop="thumbnail" src="/docs/my2022/image/image0007.jpg" />
-    </div>
-    <a href="/docs/my2022/image/image0007.jpg" itemprop="contentUrl"></a>
-  </figure>
-</div>
-
-
-
-<div class="box" >
-  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-    <div class="img" style="background-image: url('/docs/my2022/image/image0008.jpg');">
-      <img itemprop="thumbnail" src="/docs/my2022/image/image0008.jpg" />
-    </div>
-    <a href="/docs/my2022/image/image0008.jpg" itemprop="contentUrl"></a>
-  </figure>
-</div>
-
-
-
-<div class="box" >
-  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-    <div class="img" style="background-image: url('/docs/my2022/image/image0009.jpg');">
-      <img itemprop="thumbnail" src="/docs/my2022/image/image0009.jpg" />
-    </div>
-    <a href="/docs/my2022/image/image0009.jpg" itemprop="contentUrl"></a>
-  </figure>
-</div>
-
-
-
-<div class="box" >
-  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-    <div class="img" style="background-image: url('/docs/my2022/image/image0010.jpg');">
-      <img itemprop="thumbnail" src="/docs/my2022/image/image0010.jpg" />
-    </div>
-    <a href="/docs/my2022/image/image0010.jpg" itemprop="contentUrl"></a>
-  </figure>
-</div>
-
-
-
-<div class="box" >
-  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-    <div class="img" style="background-image: url('/docs/my2022/image/image0011.jpg');">
-      <img itemprop="thumbnail" src="/docs/my2022/image/image0011.jpg" />
-    </div>
-    <a href="/docs/my2022/image/image0011.jpg" itemprop="contentUrl"></a>
-  </figure>
-</div>
-
-
-
-<div class="box" >
-  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-    <div class="img" style="background-image: url('/docs/my2022/image/image0012.jpg');">
-      <img itemprop="thumbnail" src="/docs/my2022/image/image0012.jpg" />
-    </div>
-    <a href="/docs/my2022/image/image0012.jpg" itemprop="contentUrl"></a>
-  </figure>
-</div>
-
-
-
-<div class="box" >
-  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-    <div class="img" style="background-image: url('/docs/my2022/image/image0013.jpg');">
-      <img itemprop="thumbnail" src="/docs/my2022/image/image0013.jpg" />
-    </div>
-    <a href="/docs/my2022/image/image0013.jpg" itemprop="contentUrl"></a>
-  </figure>
-</div>
-
-
-
-<div class="box" >
-  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-    <div class="img" style="background-image: url('/docs/my2022/image/image0014.jpg');">
-      <img itemprop="thumbnail" src="/docs/my2022/image/image0014.jpg" />
-    </div>
-    <a href="/docs/my2022/image/image0014.jpg" itemprop="contentUrl"></a>
-  </figure>
-</div>
-
-
-
-<div class="box" >
-  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-    <div class="img" style="background-image: url('/docs/my2022/image/image0015.jpg');">
-      <img itemprop="thumbnail" src="/docs/my2022/image/image0015.jpg" />
-    </div>
-    <a href="/docs/my2022/image/image0015.jpg" itemprop="contentUrl"></a>
-  </figure>
-</div>
-
+<figure><a href="/docs/my2022/image/image0001.jpg">
+    <img loading="lazy" data-action="zoom" src=""/> </a>
+</figure>
+<figure><a href="/docs/my2022/image/image0002.jpg">
+    <img loading="lazy" data-action="zoom" src=""/> </a>
+</figure>
+<figure><a href="/docs/my2022/image/image0003.jpg">
+    <img loading="lazy" data-action="zoom" src=""/> </a>
+</figure>
+<figure><a href="/docs/my2022/image/image0004.jpg">
+    <img loading="lazy" data-action="zoom" src=""/> </a>
+</figure>
+<figure><a href="/docs/my2022/image/image0005.jpg">
+    <img loading="lazy" data-action="zoom" src=""/> </a>
+</figure>
+<figure><a href="/docs/my2022/image/image0006.jpg">
+    <img loading="lazy" data-action="zoom" src=""/> </a>
+</figure>
+<figure><a href="/docs/my2022/image/image0007.jpg">
+    <img loading="lazy" data-action="zoom" src=""/> </a>
+</figure>
+<figure><a href="/docs/my2022/image/image0008.jpg">
+    <img loading="lazy" data-action="zoom" src=""/> </a>
+</figure>
+<figure><a href="/docs/my2022/image/image0009.jpg">
+    <img loading="lazy" data-action="zoom" src=""/> </a>
+</figure>
+<figure><a href="/docs/my2022/image/image0010.jpg">
+    <img loading="lazy" data-action="zoom" src=""/> </a>
+</figure>
+<figure><a href="/docs/my2022/image/image0011.jpg">
+    <img loading="lazy" data-action="zoom" src=""/> </a>
+</figure>
+<figure><a href="/docs/my2022/image/image0012.jpg">
+    <img loading="lazy" data-action="zoom" src=""/> </a>
+</figure>
+<figure><a href="/docs/my2022/image/image0013.jpg">
+    <img loading="lazy" data-action="zoom" src=""/> </a>
+</figure>
+<figure><a href="/docs/my2022/image/image0014.jpg">
+    <img loading="lazy" data-action="zoom" src=""/> </a>
+</figure>
+<figure><a href="/docs/my2022/image/image0015.jpg">
+    <img loading="lazy" data-action="zoom" src=""/> </a>
+</figure>
 
 </div>
 </p>
@@ -2726,43 +2606,22 @@ WantedBy=multi-user.target
 </div>
 
 
-
+<link rel="stylesheet" href=https://wananaiko.com/css/hugo-easy-gallery.css />
 
 <div class="gallery caption-position-bottom caption-effect-slide hover-effect-zoom hover-transition" itemscope itemtype="http://schema.org/ImageGallery">
 	  
-  
-  <link rel="stylesheet" href=https://wananaiko.com/css/hugo-easy-gallery.css />
-  <div class="box" >
-    <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-      <div class="img" style="background-image: url('https://images.wananaiko.com/2023/01/jaeYun.jpg');">
-        <img itemprop="thumbnail" src="https://images.wananaiko.com/2023/01/jaeYun.jpg" alt="法师桥"/>
-      </div>
-      <a href="https://images.wananaiko.com/2023/01/jaeYun.jpg" itemprop="contentUrl"></a>
-    </figure>
-  </div>
-
-  
-  
-  <div class="box" >
-    <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-      <div class="img" style="background-image: url('https://images.wananaiko.com/2023/01/OuL560.jpg');">
-        <img itemprop="thumbnail" src="https://images.wananaiko.com/2023/01/OuL560.jpg" alt="龙美术馆"/>
-      </div>
-      <a href="https://images.wananaiko.com/2023/01/OuL560.jpg" itemprop="contentUrl"></a>
-    </figure>
-  </div>
-
-  
-  
-  <div class="box" >
-    <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-      <div class="img" style="background-image: url('https://images.wananaiko.com/2023/01/4cxcoH.jpg');">
-        <img itemprop="thumbnail" src="https://images.wananaiko.com/2023/01/4cxcoH.jpg" alt="拍摄于前滩太古里，使用了 Leica M10 &#43; 50 2aa"/>
-      </div>
-      <a href="https://images.wananaiko.com/2023/01/4cxcoH.jpg" itemprop="contentUrl"></a>
-    </figure>
-  </div>
-
+  <figure>
+      <img loading="lazy" data-action="zoom" src="https://images.wananaiko.com/2023/01/jaeYun.jpg"
+           alt="法师桥"/> 
+  </figure>
+  <figure>
+      <img loading="lazy" data-action="zoom" src="https://images.wananaiko.com/2023/01/OuL560.jpg"
+           alt="龙美术馆"/> 
+  </figure>
+  <figure>
+      <img loading="lazy" data-action="zoom" src="https://images.wananaiko.com/2023/01/4cxcoH.jpg"
+           alt="拍摄于前滩太古里，使用了 Leica M10 &#43; 50 2aa"/> 
+  </figure>
 
 </div>
 </p>
@@ -2944,7 +2803,7 @@ WantedBy=multi-user.target
 </span></span><span class="line"><span class="cl">{{- end }}
 </span></span></code></pre></div><p>如果要调整页面的宽度请修改 <code>.main {max-width: 1008px !important;}</code>样式。</p>
 <p>
-  <img loading="lazy" src="https://images.wananaiko.com/2023/01/xT4X11.png" alt="xT4X11"  /></p>
+<img loading="lazy" data-action="zoom" src="https://images.wananaiko.com/2023/01/xT4X11.png" alt="xT4X11" /></p>
 <p>线上效果已经移除啦~</p>
 ]]></content:encoded>
     </item>
@@ -3617,7 +3476,7 @@ function pp(){
 </code></pre><p>保存后退出，打开 iterm2，输入<code>pp</code>即可在梯子模式和和谐模式之间切换。</p>
 <p>参考：<a href="https://tin6.com/post/how-iterm2-show-current-proxy-status/" target="_blank" rel="noopener">让 iTerm2 实时显示梯子状态 </a>，还有另外两种方法。</p>
 <p>
-  <img loading="lazy" src="https://images.wananaiko.com/2023/01/WLh4ok.png" alt="WLh4ok"  /></p>
+<img loading="lazy" data-action="zoom" src="https://images.wananaiko.com/2023/01/WLh4ok.png" alt="WLh4ok" /></p>
 ]]></content:encoded>
     </item>
     
@@ -4511,10 +4370,10 @@ assets:
 </span></span></span></code></pre></div><p><strong>Note:</strong> Archives Layout does not support Multilingual Month Translations.</p>
 <hr>
 <h3 id="regular-mode-default-mode">Regular Mode (default-mode)</h3>
-<p><img loading="lazy" src="/docs/features/images/regular.jpg" type="" alt="regular"  /></p>
+<p><img loading="lazy" data-action="zoom" src="/docs/features/images/regular.jpg" type="" alt="regular" /></p>
 <hr>
 <h3 id="home-info-mode">Home-Info Mode</h3>
-<p><img loading="lazy" src="/docs/features/images/homeinfo.jpg" type="" alt="homeinfo"  /></p>
+<p><img loading="lazy" data-action="zoom" src="/docs/features/images/homeinfo.jpg" type="" alt="homeinfo" /></p>
 <p>Use 1st entry as some Information</p>
 <p>add following to config file</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="line"><span class="cl"><span class="nt">params</span><span class="p">:</span><span class="w">
@@ -4529,7 +4388,7 @@ assets:
 </span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;&lt;link2&gt;&#34;</span><span class="w">
 </span></span></span></code></pre></div><hr>
 <h3 id="profile-mode">Profile Mode</h3>
-<p><img loading="lazy" src="/docs/features/images/profile.jpg" type="" alt="profile"  /></p>
+<p><img loading="lazy" data-action="zoom" src="/docs/features/images/profile.jpg" type="" alt="profile" /></p>
 <p>Shows Index/Home page as Full Page with Social Links and Image</p>
 <p>add following to config file</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="line"><span class="cl"><span class="nt">params</span><span class="p">:</span><span class="w">

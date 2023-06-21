@@ -122,175 +122,55 @@
 </div>
 
 
-
+<link rel="stylesheet" href=https://wananaiko.com/css/hugo-easy-gallery.css />
 
 <div class="gallery caption-position-bottom caption-effect-slide hover-effect-zoom hover-transition" itemscope itemtype="http://schema.org/ImageGallery">
 	  
-
-<link rel="stylesheet" href=https://wananaiko.com/css/hugo-easy-gallery.css />
-<div class="box" >
-  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-    <div class="img" style="background-image: url('/docs/my2022/image/image0001.jpg');">
-      <img itemprop="thumbnail" src="/docs/my2022/image/image0001.jpg" />
-    </div>
-    <a href="/docs/my2022/image/image0001.jpg" itemprop="contentUrl"></a>
-  </figure>
-</div>
-
-
-
-<div class="box" >
-  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-    <div class="img" style="background-image: url('/docs/my2022/image/image0002.jpg');">
-      <img itemprop="thumbnail" src="/docs/my2022/image/image0002.jpg" />
-    </div>
-    <a href="/docs/my2022/image/image0002.jpg" itemprop="contentUrl"></a>
-  </figure>
-</div>
-
-
-
-<div class="box" >
-  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-    <div class="img" style="background-image: url('/docs/my2022/image/image0003.jpg');">
-      <img itemprop="thumbnail" src="/docs/my2022/image/image0003.jpg" />
-    </div>
-    <a href="/docs/my2022/image/image0003.jpg" itemprop="contentUrl"></a>
-  </figure>
-</div>
-
-
-
-<div class="box" >
-  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-    <div class="img" style="background-image: url('/docs/my2022/image/image0004.jpg');">
-      <img itemprop="thumbnail" src="/docs/my2022/image/image0004.jpg" />
-    </div>
-    <a href="/docs/my2022/image/image0004.jpg" itemprop="contentUrl"></a>
-  </figure>
-</div>
-
-
-
-<div class="box" >
-  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-    <div class="img" style="background-image: url('/docs/my2022/image/image0005.jpg');">
-      <img itemprop="thumbnail" src="/docs/my2022/image/image0005.jpg" />
-    </div>
-    <a href="/docs/my2022/image/image0005.jpg" itemprop="contentUrl"></a>
-  </figure>
-</div>
-
-
-
-<div class="box" >
-  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-    <div class="img" style="background-image: url('/docs/my2022/image/image0006.jpg');">
-      <img itemprop="thumbnail" src="/docs/my2022/image/image0006.jpg" />
-    </div>
-    <a href="/docs/my2022/image/image0006.jpg" itemprop="contentUrl"></a>
-  </figure>
-</div>
-
-
-
-<div class="box" >
-  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-    <div class="img" style="background-image: url('/docs/my2022/image/image0007.jpg');">
-      <img itemprop="thumbnail" src="/docs/my2022/image/image0007.jpg" />
-    </div>
-    <a href="/docs/my2022/image/image0007.jpg" itemprop="contentUrl"></a>
-  </figure>
-</div>
-
-
-
-<div class="box" >
-  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-    <div class="img" style="background-image: url('/docs/my2022/image/image0008.jpg');">
-      <img itemprop="thumbnail" src="/docs/my2022/image/image0008.jpg" />
-    </div>
-    <a href="/docs/my2022/image/image0008.jpg" itemprop="contentUrl"></a>
-  </figure>
-</div>
-
-
-
-<div class="box" >
-  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-    <div class="img" style="background-image: url('/docs/my2022/image/image0009.jpg');">
-      <img itemprop="thumbnail" src="/docs/my2022/image/image0009.jpg" />
-    </div>
-    <a href="/docs/my2022/image/image0009.jpg" itemprop="contentUrl"></a>
-  </figure>
-</div>
-
-
-
-<div class="box" >
-  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-    <div class="img" style="background-image: url('/docs/my2022/image/image0010.jpg');">
-      <img itemprop="thumbnail" src="/docs/my2022/image/image0010.jpg" />
-    </div>
-    <a href="/docs/my2022/image/image0010.jpg" itemprop="contentUrl"></a>
-  </figure>
-</div>
-
-
-
-<div class="box" >
-  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-    <div class="img" style="background-image: url('/docs/my2022/image/image0011.jpg');">
-      <img itemprop="thumbnail" src="/docs/my2022/image/image0011.jpg" />
-    </div>
-    <a href="/docs/my2022/image/image0011.jpg" itemprop="contentUrl"></a>
-  </figure>
-</div>
-
-
-
-<div class="box" >
-  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-    <div class="img" style="background-image: url('/docs/my2022/image/image0012.jpg');">
-      <img itemprop="thumbnail" src="/docs/my2022/image/image0012.jpg" />
-    </div>
-    <a href="/docs/my2022/image/image0012.jpg" itemprop="contentUrl"></a>
-  </figure>
-</div>
-
-
-
-<div class="box" >
-  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-    <div class="img" style="background-image: url('/docs/my2022/image/image0013.jpg');">
-      <img itemprop="thumbnail" src="/docs/my2022/image/image0013.jpg" />
-    </div>
-    <a href="/docs/my2022/image/image0013.jpg" itemprop="contentUrl"></a>
-  </figure>
-</div>
-
-
-
-<div class="box" >
-  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-    <div class="img" style="background-image: url('/docs/my2022/image/image0014.jpg');">
-      <img itemprop="thumbnail" src="/docs/my2022/image/image0014.jpg" />
-    </div>
-    <a href="/docs/my2022/image/image0014.jpg" itemprop="contentUrl"></a>
-  </figure>
-</div>
-
-
-
-<div class="box" >
-  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-    <div class="img" style="background-image: url('/docs/my2022/image/image0015.jpg');">
-      <img itemprop="thumbnail" src="/docs/my2022/image/image0015.jpg" />
-    </div>
-    <a href="/docs/my2022/image/image0015.jpg" itemprop="contentUrl"></a>
-  </figure>
-</div>
-
+<figure><a href="/docs/my2022/image/image0001.jpg">
+    <img loading="lazy" data-action="zoom" src=""/> </a>
+</figure>
+<figure><a href="/docs/my2022/image/image0002.jpg">
+    <img loading="lazy" data-action="zoom" src=""/> </a>
+</figure>
+<figure><a href="/docs/my2022/image/image0003.jpg">
+    <img loading="lazy" data-action="zoom" src=""/> </a>
+</figure>
+<figure><a href="/docs/my2022/image/image0004.jpg">
+    <img loading="lazy" data-action="zoom" src=""/> </a>
+</figure>
+<figure><a href="/docs/my2022/image/image0005.jpg">
+    <img loading="lazy" data-action="zoom" src=""/> </a>
+</figure>
+<figure><a href="/docs/my2022/image/image0006.jpg">
+    <img loading="lazy" data-action="zoom" src=""/> </a>
+</figure>
+<figure><a href="/docs/my2022/image/image0007.jpg">
+    <img loading="lazy" data-action="zoom" src=""/> </a>
+</figure>
+<figure><a href="/docs/my2022/image/image0008.jpg">
+    <img loading="lazy" data-action="zoom" src=""/> </a>
+</figure>
+<figure><a href="/docs/my2022/image/image0009.jpg">
+    <img loading="lazy" data-action="zoom" src=""/> </a>
+</figure>
+<figure><a href="/docs/my2022/image/image0010.jpg">
+    <img loading="lazy" data-action="zoom" src=""/> </a>
+</figure>
+<figure><a href="/docs/my2022/image/image0011.jpg">
+    <img loading="lazy" data-action="zoom" src=""/> </a>
+</figure>
+<figure><a href="/docs/my2022/image/image0012.jpg">
+    <img loading="lazy" data-action="zoom" src=""/> </a>
+</figure>
+<figure><a href="/docs/my2022/image/image0013.jpg">
+    <img loading="lazy" data-action="zoom" src=""/> </a>
+</figure>
+<figure><a href="/docs/my2022/image/image0014.jpg">
+    <img loading="lazy" data-action="zoom" src=""/> </a>
+</figure>
+<figure><a href="/docs/my2022/image/image0015.jpg">
+    <img loading="lazy" data-action="zoom" src=""/> </a>
+</figure>
 
 </div>
 </p>
