@@ -206,9 +206,9 @@ img {
 }
 
 @media only screen and (max-width: 767px) {
-  .esc_window {
-    display: none;
-  }
+    .esc_window {
+        display: none;
+    }
 }
 
 .icon_right {
@@ -216,26 +216,27 @@ img {
 }
 
 .pswp__ui--fit .pswp__top-bar, .pswp__ui--fit .pswp__caption {
-    background-color: rgba(0,0,0) !important;
+    background-color: rgba(0, 0, 0) !important;
 }
 
 .memo-content-text {
     font-size: 1rem;
 }
 
-.post-content figure>figcaption{
-    color: var(--theme) !important;  
-    font-size: 16px;
-    font-weight: 700;
-    margin-bottom: 0px !;
+.post-content figure > figcaption {
+    color: var(--secondary) !important;
+    font-size: 14px !important;
+    font-weight: normal !important;
+    margin-bottom: 0px;
+    text-align: center;
 }
 
-.post-content figure>figcaption>p {
-    color: var(--theme) !important;
-    font-size: 14px;
-    font-weight: 400;
+.post-content figure > figcaption > p {
+    color: var(--secondary) !important;
+    font-size: 14px !important;
+    font-weight: normal !important;
     padding-left: 4px;
-    text-align: left;
+    text-align: center;
 }
 
 .header {
@@ -250,7 +251,7 @@ img {
 }
 
 .header.hidden {
-  transform: translateY(-100%);
+    transform: translateY(-100%);
 }
 
 /* 去掉滚动条背景色,针对 WebKit 内核的浏览器（如 Chrome、Safari） */
@@ -265,13 +266,13 @@ body {
 }
 
 /* Blog Roll 页面a链接样式 */
-.links .item .title a{
+.links .item .title a {
     text-decoration: none;
     transition: .5s;
     padding-bottom: 2px;
 }
 
 .links .item {
-  all:unset;
-  max-width: 100%
+    all: unset;
+    max-width: 100%
 }
