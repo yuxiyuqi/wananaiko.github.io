@@ -16,8 +16,8 @@
 /> <meta name="description" content="Welcome to PaperModX."> <meta name="author" content="wananaiko"> <link rel="canonical" href="https://wananaiko.com/newsletter/001-hello-world/">
 <link
   crossorigin="anonymous"
-  href="/assets/css/stylesheet.min.a539cbb291b319da5944612ca807a7816dde12569726e4e4d7b6d879271c2b3b.css"
-  integrity="sha256-pTnLspGzGdpZRGEsqAengW3eElaXJuTk17bYeSccKzs="
+  href="/assets/css/stylesheet.min.e1417e1c2f80b8a64abfaf88773d10e46eae38bcc495f389a32d95003bb48204.css"
+  integrity="sha256-4UF&#43;HC&#43;AuKZKv6&#43;Idz0Q5G6uOLzElfOJoy2VADu0ggQ="
   rel="preload stylesheet"
   as="style"
 /> <link rel="icon" href="https://images.wananaiko.com/favicon.ico"> <link rel="apple-touch-icon" href="https://wananaiko.com/apple-touch-icon.png"> <link rel="alternate" hreflang="en" href="https://wananaiko.com/newsletter/001-hello-world/" />
@@ -642,134 +642,135 @@ window.addEventListener('load', () => {
   data-no-instant
 ></script>
 <script>
-  document.querySelectorAll("pre > code").forEach((codeblock) => {
-    const container = codeblock.parentNode.parentNode;
+    document.querySelectorAll("pre > code").forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
 
-    const copybutton = document.createElement("button");
-    copybutton.classList.add("copy-code");
-    copybutton.innerText = '复制';
-
-    function copyingDone() {
-      copybutton.innerText = '已复制！';
-      setTimeout(() => {
+        const copybutton = document.createElement("button");
+        copybutton.classList.add("copy-code");
         copybutton.innerText = '复制';
-      }, 2000);
-    }
 
-    copybutton.addEventListener("click", (cb) => {
-      if ("clipboard" in navigator) {
-        navigator.clipboard.writeText(codeblock.textContent);
-        copyingDone();
-        return;
-      }
+        function copyingDone() {
+            copybutton.innerText = '已复制！';
+            setTimeout(() => {
+                copybutton.innerText = '复制';
+            }, 2000);
+        }
 
-      const range = document.createRange();
-      range.selectNodeContents(codeblock);
-      const selection = window.getSelection();
-      selection.removeAllRanges();
-      selection.addRange(range);
-      try {
-        document.execCommand("copy");
-        copyingDone();
-      } catch (e) {}
-      selection.removeRange(range);
+        copybutton.addEventListener("click", (cb) => {
+            if ("clipboard" in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand("copy");
+                copyingDone();
+            } catch (e) {
+            }
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode
+                .nodeName == "TABLE"
+        ) {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(
+                copybutton
+            );
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
     });
-
-    if (container.classList.contains("highlight")) {
-      container.appendChild(copybutton);
-    } else if (container.parentNode.firstChild == container) {
-      
-    } else if (
-      codeblock.parentNode.parentNode.parentNode.parentNode.parentNode
-        .nodeName == "TABLE"
-    ) {
-      
-      codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(
-        copybutton
-      );
-    } else {
-      
-      codeblock.parentNode.appendChild(copybutton);
-    }
-  });
 </script> 
 <script>
-  
-  
-  (function () {
-    const enableTocScroll =
-      '' ==
-      "1";
-    if (!enableTocScroll) {
-      return;
-    }
-    if (!document.querySelector(".toc")) {
-      console.log("no toc found, ignore toc scroll");
-      return;
-    }
     
-
     
-    const scrollListeners = window.scrollListeners;
-    const headings = document.querySelectorAll(
-      "h1[id],h2[id],h3[id],h4[id],h5[id]"
-    );
-    const activeClass = "active";
-
-    
-    let activeHeading = headings[0];
-    getLinkByHeading(activeHeading).classList.add(activeClass);
-
-    const onScroll = () => {
-      const passedHeadings = [];
-      for (const h of headings) {
-        
-        if (getOffsetTop(h) < 5) {
-          passedHeadings.push(h);
-        } else {
-          break;
+    (function () {
+        const enableTocScroll =
+            '' ==
+            "1";
+        if (!enableTocScroll) {
+            return;
         }
-      }
-      if (passedHeadings.length > 0) {
-        newActiveHeading = passedHeadings[passedHeadings.length - 1];
-      } else {
-        newActiveHeading = headings[0];
-      }
-      if (activeHeading != newActiveHeading) {
-        getLinkByHeading(activeHeading).classList.remove(activeClass);
-        activeHeading = newActiveHeading;
+        if (!document.querySelector(".toc")) {
+            console.log("no toc found, ignore toc scroll");
+            return;
+        }
+        
+
+        
+        const scrollListeners = window.scrollListeners;
+        const headings = document.querySelectorAll(
+            "h1[id],h2[id],h3[id],h4[id],h5[id]"
+        );
+        const activeClass = "active";
+
+        
+        let activeHeading = headings[0];
         getLinkByHeading(activeHeading).classList.add(activeClass);
-      }
-    };
 
-    let timer = null;
-    const scrollListener = () => {
-      if (timer !== null) {
-        clearTimeout(timer);
-      }
-      timer = setTimeout(onScroll, 50);
-    };
-    window.addEventListener("scroll", scrollListener, false);
-    scrollListeners.push(scrollListener);
+        const onScroll = () => {
+            const passedHeadings = [];
+            for (const h of headings) {
+                
+                if (getOffsetTop(h) < 5) {
+                    passedHeadings.push(h);
+                } else {
+                    break;
+                }
+            }
+            if (passedHeadings.length > 0) {
+                newActiveHeading = passedHeadings[passedHeadings.length - 1];
+            } else {
+                newActiveHeading = headings[0];
+            }
+            if (activeHeading != newActiveHeading) {
+                getLinkByHeading(activeHeading).classList.remove(activeClass);
+                activeHeading = newActiveHeading;
+                getLinkByHeading(activeHeading).classList.add(activeClass);
+            }
+        };
 
-    function getLinkByHeading(heading) {
-      const id = encodeURI(heading.getAttribute("id")).toLowerCase();
-      return document.querySelector(`.toc ul li a[href="#${id}"]`);
-    }
+        let timer = null;
+        const scrollListener = () => {
+            if (timer !== null) {
+                clearTimeout(timer);
+            }
+            timer = setTimeout(onScroll, 50);
+        };
+        window.addEventListener("scroll", scrollListener, false);
+        scrollListeners.push(scrollListener);
 
-    function getOffsetTop(heading) {
-      if (!heading.getClientRects().length) {
-        return 0;
-      }
-      let rect = heading.getBoundingClientRect();
-      return rect.top;
-    }
-  })();
+        function getLinkByHeading(heading) {
+            const id = encodeURI(heading.getAttribute("id")).toLowerCase();
+            return document.querySelector(`.toc ul li a[href="#${id}"]`);
+        }
+
+        function getOffsetTop(heading) {
+            if (!heading.getClientRects().length) {
+                return 0;
+            }
+            let rect = heading.getBoundingClientRect();
+            return rect.top;
+        }
+    })();
 </script>
-<script>
-  mediumZoom(".entry-cover img");
-  mediumZoom(".post-content img:not([no-zoom])");
-</script>
+
+
+
+
 
 
 

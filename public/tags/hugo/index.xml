@@ -60,23 +60,23 @@
             <div class="grid-container">
                 
                 <div class="grid-item">
-                    <img class="message__img" src="https://images.wananaiko.com/2023/06/m2o65y.png" data-action="zoom">
+                    <img class="message__img" loading="lazy" src="https://images.wananaiko.com/2023/06/m2o65y.png" data-action="zoom">
                 </div>
                 
                 <div class="grid-item">
-                    <img class="message__img" src="https://images.wananaiko.com/2023/06/GtO8dp.png" data-action="zoom">
+                    <img class="message__img" loading="lazy" src="https://images.wananaiko.com/2023/06/GtO8dp.png" data-action="zoom">
                 </div>
                 
                 <div class="grid-item">
-                    <img class="message__img" src="https://images.wananaiko.com/2023/06/ulfWhO.jpg" data-action="zoom">
+                    <img class="message__img" loading="lazy" src="https://images.wananaiko.com/2023/06/ulfWhO.jpg" data-action="zoom">
                 </div>
                 
                 <div class="grid-item">
-                    <img class="message__img" src="https://images.wananaiko.com/2023/06/fiFMOh.jpg" data-action="zoom">
+                    <img class="message__img" loading="lazy" src="https://images.wananaiko.com/2023/06/fiFMOh.jpg" data-action="zoom">
                 </div>
                 
                 <div class="grid-item">
-                    <img class="message__img" src="https://images.wananaiko.com/2023/04/Splinespiration.png" data-action="zoom">
+                    <img class="message__img" loading="lazy" src="https://images.wananaiko.com/2023/04/Splinespiration.png" data-action="zoom">
                 </div>
                 
             </div>
