@@ -1,0 +1,25 @@
+name: Fetch Raindrop Data
+on:
+  schedule:
+    - cron:  '0 0 * * *'  # This runs the job at 00:00 UTC every day
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Fetch Raindrop Data
+      run: |
+        TOKEN="d7e078a0-3f49-4419-981a-8695c399b0d8"
+        COLLECTION="34199304"
+        API_URL=$(printf "https://api.raindrop.io/rest/v1/raindrops/%s" $COLLECTION)
+        JSON=$(curl -X GET "${API_URL}?access_token=${TOKEN}&perpage=50&sort=-created")
+        echo "$JSON" > raindrop.json
+    - name: Upload JSON
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        upload_url: https://uploads.github.com/repos/wananaiko/wananaiko.github.io/releases/latest
+        asset_path: ./raindrop.json
+        asset_name: raindrop.json
+        asset_content_type: application/json
