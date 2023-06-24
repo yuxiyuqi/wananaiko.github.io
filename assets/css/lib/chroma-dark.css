@@ -81,12 +81,12 @@
 
 .chroma .no {
     color: #099;
-    font-weight: bold;
+    font-weight: normal;
 }
 
 .chroma .nd {
     color: #d2a8ff;
-    font-weight: bold;
+    font-weight: normal;
 }
 
 .chroma .ni {
@@ -95,22 +95,22 @@
 
 .chroma .ne {
     color: #f0883e;
-    font-weight: bold;
+    font-weight: normal;
 }
 
 .chroma .nf {
     color: #d2a8ff;
-    font-weight: bold;
+    font-weight: normal;
 }
 
 .chroma .fm {
     color: #d2a8ff;
-    font-weight: bold;
+    font-weight: normal;
 }
 
 .chroma .nl {
     color: #099;
-    font-weight: bold;
+    font-weight: normal;
 }
 
 .chroma .nn {
@@ -239,12 +239,12 @@
 
 .chroma .o {
     color: #ff7b72;
-    font-weight: bold;
+    font-weight: normal;
 }
 
 .chroma .ow {
     color: #58a6ff;
-    font-weight: bold;
+    font-weight: normal;
 }
 
 .chroma .c {
@@ -254,13 +254,13 @@
 
 .chroma .cpf {
     color: #64696e;
-    font-weight: bold;
+    font-weight: normal;
 }
 
 .chroma .cs {
     color: #64696e;
     font-style: italic;
-    font-weight: bold;
+    font-weight: normal;
 }
 
 .chroma .ch {
@@ -297,7 +297,7 @@
 
 .chroma .gh {
     color: #099;
-    font-weight: bold;
+    font-weight: normal;
 }
 
 .chroma .gi {
@@ -314,7 +314,7 @@
 }
 
 .chroma .gs {
-    font-weight: bold;
+    font-weight: normal;
 }
 
 .chroma .gu {
