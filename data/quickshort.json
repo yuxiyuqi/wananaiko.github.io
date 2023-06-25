@@ -53,6 +53,15 @@
       "tag-update": "",
       "description": "播放来自 Bilibili 的视频~",
       "markdown": "{{< bilibili BVXXXXXXXX >}}"
+    },
+    {
+      "icon": "#icon-figure",
+      "color": "var(--link-hover-color)",
+      "title": "图片 figure",
+      "tag-soon": "",
+      "tag-update": "",
+      "description": "在图片下方居中显示描述文字。",
+      "markdown": "{{< figure src=\"https://…\" title=\"描述文字\" >}}"
     }
   ]
 }
