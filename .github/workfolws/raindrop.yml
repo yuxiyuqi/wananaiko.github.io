@@ -19,7 +19,7 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        upload_url: https://uploads.github.com/repos/wananaiko/wananaiko.github.io/releases/latest
+        upload_url: https://uploads.github.com/repos/wananaiko/wananaiko.github.io/releases/latest/download
         asset_path: ./raindrop.json
         asset_name: raindrop.json
         asset_content_type: application/json
