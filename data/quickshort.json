@@ -1,0 +1,36 @@
+{
+  "quickshort": [
+    {
+      "icon": "#icon-message",
+      "title": "message",
+      "tag-soon": "",
+      "tag-update": "",
+      "description": "用来模拟 2 个人的自由对话，可在对话末尾显示九宫格图片。",
+      "markdown": "{{< twitter_simple xfli5 1085870671291310081 >}}"
+    },
+    {
+      "icon": "#icon-timeline",
+      "title": "timeline",
+      "tag-soon": "",
+      "tag-update": "",
+      "description": "包括时间、标题、描述内容、标签。",
+      "markdown": "{{< timeline time=\"2022-06-14\" title=\"填写内容\" tags=\"标签名称\" >}}\n去掉了一些多余的元素，布局上作了较多的调整。{{< /timeline >}}"
+    },
+    {
+      "icon": "#icon-todolist",
+      "title": "todolist",
+      "tag-soon": "即将改造",
+      "tag-update": "",
+      "description": "基于memos的清单功能，计划改造为从hugo获取清单内容。",
+      "markdown": "{{< todolist >}}"
+    },
+    {
+      "icon": "#icon-twitter",
+      "title": "twitter",
+      "tag-soon": "",
+      "tag-update": "",
+      "description": "引用来自 twitter 的内容，样式为引用样式。",
+      "markdown": "{{< twitter_simple user 1085870671291310081 >}}"
+    }
+  ]
+}

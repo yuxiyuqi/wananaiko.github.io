@@ -9,6 +9,7 @@
   "dependencies": {
     "axios": "^0.26.1",
     "cors": "^2.8.5",
-    "express": "^4.17.3"
+    "express": "^4.17.3",
+    "sonner": "^0.5.0"
   }
 }

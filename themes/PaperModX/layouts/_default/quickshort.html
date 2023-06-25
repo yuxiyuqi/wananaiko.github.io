@@ -1,0 +1,171 @@
+{{ define "main" }} {{ $quickshort := getJSON "data/quickshort.json" }}
+
+<script src="https://lf1-cdn-tos.bytegoofy.com/obj/iconpark/svg_26576_4.843259d330ba937a33576691a33226f9.js"></script>
+
+<style>
+  .main.post {
+    position: relative !important;
+    min-height: calc(
+      100vh - var(--header-height) - var(--footer-height)
+    ) !important;
+    max-width: calc(var(--main-width) + var(--gap) * 2) !important;
+    margin-top: 5rem 0;
+  }
+
+  .shortcode-view {
+    display: grid;
+    grid-gap: 12px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .code-container {
+    display: flex;
+    padding: 16px 12px;
+    border-radius: var(--radius);
+    --list-opacity: 1;
+    background-color: rgb(250 250 250 / var(--list-opacity));
+    height: 130px;
+  }
+
+  .dark .code-container {
+    background: var(--code-bg);
+  }
+
+  .dark .code-container:hover {
+    --list-opacity: 0.1;
+    background-color: rgb(0 0 0 / var(--list-opacity));
+  }
+
+  .shortcode-content {
+    margin-left: 8px;
+  }
+
+  .code-container:hover svg.iconpark-icon {
+    color: var(--link-hover-color);
+  }
+
+  .shortcode-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .shortcode-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--primary);
+    line-height: 24px;
+  }
+
+  .shortcode-tag {
+    margin-left: auto;
+  }
+
+  .shortcode-tag-soon {
+    display: flex;
+    padding: 2px 8px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 12px;
+    background: var(--tertiary-bg);
+    color: var(--secondary);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    opacity: 0.8;
+  }
+
+  .shortcode-description {
+    font-size: 14px;
+    line-height: 1.4;
+    margin-top: 8px;
+  }
+
+  .code-container:hover {
+    background-color: var(--code-bg);
+  }
+
+  .shortcode-markdown {
+    display: none;
+  }
+
+  svg.iconpark-icon {
+    width: 24px;
+    height: 24px;
+  }
+</style>
+
+<header class="page-header">
+  <h1>{{ .Title }}</h1>
+  {{- if .Description }}
+  <div class="post-description">{{ .Description }}</div>
+  {{- end }}
+</header>
+
+<section id="main" class="container slide-enter-content">
+  <div class="shortcode-view">
+    {{ range $quickshort.quickshort}}
+    <div class="code-container" onclick="copyToClipboard(this)">
+      <div class="shortcode-icon">
+        <svg class="iconpark-icon">
+          <use href="{{ .icon | safeHTML }}"></use>
+        </svg>
+      </div>
+      <div class="shortcode-content">
+        <div class="shortcode-header">
+          <div class="shortcode-title">{{ .title }}</div>
+          <div class="shortcode-tag">
+            <!-- 从JSON中的"tag-soon"或者"tag-update"获取数据 -->
+            {{ $tag := index . "tag-soon" }} {{ $tag2 := index . "tag-update" }}
+            {{ if $tag }}
+            <div class="shortcode-tag-soon">{{ $tag }}</div>
+            {{ end }} {{ if $tag2 }}
+            <div class="shortcode-tag-update">{{ $tag2 }}</div>
+            {{ end }}
+          </div>
+        </div>
+        <div class="shortcode-description">{{ .description }}</div>
+        <div class="shortcode-markdown">{{ .markdown | safeHTML }}</div>
+      </div>
+    </div>
+    {{ end }}
+  </div>
+</section>
+
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/css/iziToast.min.css"
+/>
+<script
+  type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/js/iziToast.min.js"
+></script>
+
+<script>
+  function copyToClipboard(container) {
+    // Find the shortcode-markdown element within the container
+    var markdownElement = container.querySelector(".shortcode-markdown");
+    // Create a new textarea element to hold the markdown text
+    var textarea = document.createElement("textarea");
+    textarea.textContent = markdownElement.textContent;
+    // Add the textarea to the document (it will be invisible)
+    document.body.appendChild(textarea);
+    // Select the text in the textarea
+    textarea.select();
+    // Copy the text to the clipboard
+    document.execCommand("copy");
+    // Remove the textarea from the document
+    document.body.removeChild(textarea);
+
+    // Show a toast notification using iziToast
+    iziToast.success({
+      title: "复制成功",
+      message: "可以去粘贴了哦~",
+      position: "topRight",
+    });
+  }
+</script>
+
+{{ end }}
