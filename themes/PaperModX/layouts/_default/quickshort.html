@@ -41,7 +41,7 @@
   }
 
   .code-container:hover svg.iconpark-icon {
-    color: var(--link-hover-color);
+    color: ;
   }
 
   .shortcode-header {
@@ -122,7 +122,11 @@
 <section id="main" class="container slide-enter-content">
   <div class="shortcode-view">
     {{ range $quickshort.quickshort}}
-    <div class="code-container" onclick="copyToClipboard(this)">
+    <div
+      class="code-container"
+      data-color="{{ .color }}"
+      onclick="copyToClipboard(this)"
+    >
       <div class="shortcode-icon">
         <svg class="iconpark-icon">
           <use href="{{ .icon | safeHTML }}"></use>
@@ -182,6 +186,24 @@
       position: "topRight",
     });
   }
+</script>
+
+<script>
+  const containers = document.querySelectorAll(".code-container");
+  const defaultColor = "var(--content)"; // 你的默认颜色
+
+  containers.forEach((container) => {
+    const icon = container.querySelector("svg.iconpark-icon");
+
+    container.addEventListener("mouseover", function () {
+      let hoverColor = this.getAttribute("data-color");
+      icon.style.color = hoverColor;
+    });
+
+    container.addEventListener("mouseout", function () {
+      icon.style.color = defaultColor;
+    });
+  });
 </script>
 
 {{ end }}

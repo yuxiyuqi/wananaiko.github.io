@@ -2,6 +2,7 @@
   "quickshort": [
     {
       "icon": "#icon-message",
+      "color": "var(--link-hover-color)",
       "title": "message",
       "tag-soon": "",
       "tag-update": "",
@@ -10,6 +11,7 @@
     },
     {
       "icon": "#icon-timeline",
+      "color": "var(--link-hover-color)",
       "title": "timeline",
       "tag-soon": "",
       "tag-update": "",
@@ -18,6 +20,7 @@
     },
     {
       "icon": "#icon-todolist",
+      "color": "var(--link-hover-color)",
       "title": "todolist",
       "tag-soon": "即将改造",
       "tag-update": "",
@@ -26,6 +29,7 @@
     },
     {
       "icon": "#icon-twitter",
+      "color": "#1d9bf0",
       "title": "twitter",
       "tag-soon": "",
       "tag-update": "",
@@ -34,6 +38,7 @@
     },
     {
       "icon": "#icon-netease",
+      "color": "#c20b0d",
       "title": "网易云音乐",
       "tag-soon": "",
       "tag-update": "",
@@ -42,6 +47,7 @@
     },
     {
       "icon": "#icon-bilibili",
+      "color": "#fb7299",
       "title": "Bilibili",
       "tag-soon": "",
       "tag-update": "",
