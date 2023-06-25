@@ -6,7 +6,7 @@
       "tag-soon": "",
       "tag-update": "",
       "description": "用来模拟 2 个人的自由对话，可在对话末尾显示九宫格图片。",
-      "markdown": "{{< message from=\"self\" accountID=\"twitter/\" timestamp=\"自定义时间\" name=\"username\" >}}    这里是自定义的信息内容。 {{< /message >}} "
+      "markdown": "{{< message from=\"self\" accountID=\"twitter/\" timestamp=\"自定义时间\" name=\"name\" >}}    这里是自定义的信息内容。 {{< /message >}} "
     },
     {
       "icon": "#icon-timeline",
