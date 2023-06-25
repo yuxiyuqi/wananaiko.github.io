@@ -125,39 +125,37 @@
   {{- end }}
 </header>
 
-<section id="main" class="container slide-enter-content">
-  <div class="shortcode-view slide-enter-content">
-    {{ range $quickshort.quickshort}}
-    <div
-      class="code-container"
-      data-color="{{ .color }}"
-      onclick="copyToClipboard(this)"
-    >
-      <div class="shortcode-icon">
-        <svg class="iconpark-icon">
-          <use href="{{ .icon | safeHTML }}"></use>
-        </svg>
-      </div>
-      <div class="shortcode-content">
-        <div class="shortcode-header">
-          <div class="shortcode-title">{{ .title }}</div>
-          <div class="shortcode-tag">
-            <!-- 从JSON中的"tag-soon"或者"tag-update"获取数据 -->
-            {{ $tag := index . "tag-soon" }} {{ $tag2 := index . "tag-update" }}
-            {{ if $tag }}
-            <div class="shortcode-tag-soon">{{ $tag }}</div>
-            {{ end }} {{ if $tag2 }}
-            <div class="shortcode-tag-update">{{ $tag2 }}</div>
-            {{ end }}
-          </div>
-        </div>
-        <div class="shortcode-description">{{ .description }}</div>
-        <div class="shortcode-markdown">{{ .markdown | safeHTML }}</div>
-      </div>
+<div class="shortcode-view slide-enter-content">
+  {{ range $quickshort.quickshort}}
+  <div
+    class="code-container"
+    data-color="{{ .color }}"
+    onclick="copyToClipboard(this)"
+  >
+    <div class="shortcode-icon">
+      <svg class="iconpark-icon">
+        <use href="{{ .icon | safeHTML }}"></use>
+      </svg>
     </div>
-    {{ end }}
+    <div class="shortcode-content">
+      <div class="shortcode-header">
+        <div class="shortcode-title">{{ .title }}</div>
+        <div class="shortcode-tag">
+          <!-- 从JSON中的"tag-soon"或者"tag-update"获取数据 -->
+          {{ $tag := index . "tag-soon" }} {{ $tag2 := index . "tag-update" }}
+          {{ if $tag }}
+          <div class="shortcode-tag-soon">{{ $tag }}</div>
+          {{ end }} {{ if $tag2 }}
+          <div class="shortcode-tag-update">{{ $tag2 }}</div>
+          {{ end }}
+        </div>
+      </div>
+      <div class="shortcode-description">{{ .description }}</div>
+      <div class="shortcode-markdown">{{ .markdown | safeHTML }}</div>
+    </div>
   </div>
-</section>
+  {{ end }}
+</div>
 
 <link
   rel="stylesheet"
@@ -196,7 +194,7 @@
 
 <script>
   const containers = document.querySelectorAll(".code-container");
-  const defaultColor = "var(--content)"; // 你的默认颜色
+  const defaultColor = "var(--content)"; // 默认颜色
 
   containers.forEach((container) => {
     const icon = container.querySelector("svg.iconpark-icon");
