@@ -5,6 +5,7 @@ author: "wananaiko"
 tags:
   - huntly
 draft: ture
+ai: 该文章介绍了如何在宝塔上部署Huntly。文章主要分为以下几个部分：使用Docker部署、安装Java11、下载和配置Huntly、作为服务运行、反向代理以及使用和更新。其中每个部分提供了详细的步骤和指导。文章还附带了一些样式设置和建议，以提高使用体验。
 ---
 
 #### 1、Docker 部署

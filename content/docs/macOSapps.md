@@ -8,6 +8,7 @@ draft: false
 draft: false
 hidemeta: false
 ShowLastMod: true
+ai: 这是一篇关于macOS常用软件整理的文章，介绍了不同种类的软件以及它们的功能。文章分为三部分：提升效率、系统美化、工作规划。每一部分又分别介绍了不同的软件以及它们的用途。
 ---
 
 聊一聊 macOS 的一些软件使用心得，希望能够对其他人有所帮助。
