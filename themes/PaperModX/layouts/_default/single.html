@@ -1,75 +1,98 @@
 {{- define "main" }} {{- $isNewsletter := eq .Type "newsletter" }}
 
 <article class="post-single">
-    <header class="post-header">
-        {{ partial "breadcrumbs.html" . }} {{- if $isNewsletter -}} {{- partial
-        "newsletter_brand.html" . }} {{- end -}}
+  <header class="post-header">
+    {{ partial "breadcrumbs.html" . }} {{- if $isNewsletter -}} {{- partial
+    "newsletter_brand.html" . }} {{- end -}}
 
-        <a href="/">
-            <div class="return-back">
-                <div class="back-icon">←</div>
-                <div class="back-word">主页</div>
-                <div class="article-time">
-                    {{- if not .Date.IsZero -}}
-                    <span class="meta-time">
+    <a href="/">
+      <div class="return-back">
+        <div class="back-icon">←</div>
+        <div class="back-word">主页</div>
+        <div class="article-time">
+          {{- if not .Date.IsZero -}}
+          <span class="meta-time">
             <span
-            >{{ .Date | time.Format (default "January 2, 2006"
+              >{{ .Date | time.Format (default "January 2, 2006"
               site.Params.DateFormat) }}</span
             ></span
-                    >
-                    {{- end }}
-                </div>
-            </div>
-        </a>
-
-        <h1 class="post-title">
-            {{- if $isNewsletter -}} {{- replace .Title (.Param "titlePrefix") (.Param
-            "titlePrefixReplace") -}} {{- else -}} {{- .Title -}} {{- end -}} {{- if
-            .Draft -}}<sup><span class="entry-isdraft">&nbsp;&nbsp;[draft]</span></sup
-        >{{- end -}}
-        </h1>
-        {{- if .Description }}
-        <div class="post-description">{{- .Description -}}</div>
-        {{- end }} {{- if not (.Param "hideMeta") }}
-        <div class="post-meta">
-            {{- partial "post_meta.html" . -}} {{/* TODO move to footer */}} {{/*
-            partial "edit_post.html" . */}} {{/* partial "post_canonical.html" . */}}
+          >
+          {{- end }}
         </div>
-        {{- end }}
-    </header>
-    {{- $isHidden := .Params.cover.hidden | default
-    site.Params.cover.hiddenInSingle | default site.Params.cover.hidden }} {{-
-    partial "cover.html" (dict "cxt" . "IsHome" false "isHidden" $isHidden) }} {{-
-    if (.Param "ShowToc") }} {{- partial "toc.html" . }} {{- end }} {{- if
-    .Content }}
-    <div class="post-content slide-enter-content">
-        {{- if not (.Param "disableAnchoredHeadings") }} {{- partial
-        "anchored_headings.html" .Content -}} {{- else }}{{ .Content }}{{ end }}
+      </div>
+    </a>
+
+    <h1 class="post-title">
+      {{- if $isNewsletter -}} {{- replace .Title (.Param "titlePrefix") (.Param
+      "titlePrefixReplace") -}} {{- else -}} {{- .Title -}} {{- end -}} {{- if
+      .Draft -}}<sup><span class="entry-isdraft">&nbsp;&nbsp;[draft]</span></sup
+      >{{- end -}}
+    </h1>
+    {{- if .Description }}
+    <div class="post-description">{{- .Description -}}</div>
+    {{- end }} {{- if not (.Param "hideMeta") }}
+    <div class="post-meta">
+      {{- partial "post_meta.html" . -}} {{/* TODO move to footer */}} {{/*
+      partial "edit_post.html" . */}} {{/* partial "post_canonical.html" . */}}
     </div>
     {{- end }}
-
-    <footer class="post-footer">
-        {{- if (.Param "socialLinks") }} {{- partial "social_links.html" . }} {{-
-        end }} {{- if (.Param "ShowPostNavLinks") }} {{- partial
-        "post_nav_links.html" . }} {{- end }} {{- if $isNewsletter }}
-        <div class="newsletter-sub">
-            <div class="notice">
-                感谢你能读到这里，如果觉得有趣的话，欢迎在下方输入邮箱进行订阅。
-            </div>
-            {{- partial "newsletter_sub_form.html"}}
+  </header>
+  {{- $isHidden := .Params.cover.hidden | default
+  site.Params.cover.hiddenInSingle | default site.Params.cover.hidden }} {{-
+  partial "cover.html" (dict "cxt" . "IsHome" false "isHidden" $isHidden) }} {{-
+  if (.Param "ShowToc") }} {{- partial "toc.html" . }} {{- end }} {{- if
+  .Content }}
+  <div class="post-content slide-enter-content">
+    <!-- 下面显示contentai的内容 -->
+    {{ if .Params.ai }}
+    <div class="contentai">
+      <div class="contentai-head">
+        <div class="contentai-title">
+          <svg class="iconpark-icon">
+            <use href="#icon-contentai"></use>
+          </svg>
+          AI 摘要
         </div>
-        {{- end }}
-    </footer>
+        <div class="contentai-lastmod">
+          本文最后更新于 <span id="time">{{ .Lastmod.Unix }}</span>
+        </div>
+      </div>
+      <div class="contentai-ai">{{ .Params.ai }}</div>
+    </div>
+    {{ end }}
+    <!-- 上面显示contentai的内容 -->
+    {{- if not (.Param "disableAnchoredHeadings") }} {{- partial
+    "anchored_headings.html" .Content -}} {{- else }}{{ .Content }}{{ end }}
+  </div>
+  {{- end }}
 
-    <!--增加 外部Link 预览效果-->
-    <!-- <script src="https://js.linkz.ai/?key=641a952e5e858e300b0deeb1"></script> -->
-
-    {{ if (and .Site.Params.remark42SiteID .Params.comments) }}
-    <div id="remark42"></div>
-    {{ end }} {{- if not (.Param "noComments") }} {{- partial "comments.html" . }}
+  <footer class="post-footer">
+    {{- if (.Param "socialLinks") }} {{- partial "social_links.html" . }} {{-
+    end }} {{- if (.Param "ShowPostNavLinks") }} {{- partial
+    "post_nav_links.html" . }} {{- end }} {{- if $isNewsletter }}
+    <div class="newsletter-sub">
+      <div class="notice">
+        感谢你能读到这里，如果觉得有趣的话，欢迎在下方输入邮箱进行订阅。
+      </div>
+      {{- partial "newsletter_sub_form.html"}}
+    </div>
     {{- end }}
+  </footer>
+
+  <!--增加 外部Link 预览效果-->
+  <!-- <script src="https://js.linkz.ai/?key=641a952e5e858e300b0deeb1"></script> -->
+
+  {{ if (and .Site.Params.remark42SiteID .Params.comments) }}
+  <div id="remark42"></div>
+  {{ end }} {{- if not (.Param "noComments") }} {{- partial "comments.html" . }}
+  {{- end }}
 </article>
 
 <script src="/js/highlight-title.js"></script>
+<script>
+  var timestamp = document.getElementById("time").textContent;
+  var time = moment.unix(timestamp);
+  document.getElementById("time").textContent = time.twitterLong();
+</script>
 
 {{- end }}{{/* end main */}}

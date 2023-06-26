@@ -228,3 +228,6 @@ limit = 20
 
 [defaultCommentSystems]
 remark42 = true
+
+[frontmatter]
+  lastmod = ['lastmod', ':git', ':fileModTime', 'date', 'publishDate']

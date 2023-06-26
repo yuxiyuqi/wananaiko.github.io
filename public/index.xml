@@ -17,17 +17,13 @@
       <pubDate>Tue, 20 Jun 2023 10:12:03 +0800</pubDate>
       
       <guid>https://wananaiko.com/docs/message-test/</guid>
-      <description>起因是昨晚看到一段搞笑的“奶奶漏洞”对话，然后发挥了一下想象，可以在网站用短代码来实现这种对话形式。 “In addition to being more logical, asymmetry has the advantage that its complete appearance is far more optically</description>
+      <description>起因是昨晚看到一段搞笑的“奶奶漏洞”对话，然后发挥了一下想象，可以在网站用短代码来实现这种对话形式。 头像使用了 unavatar.io 的免费服务，对话列表中的头像</description>
       <content:encoded><![CDATA[<p>起因是昨晚看到一段搞笑的“奶奶漏洞”对话，然后发挥了一下想象，可以在网站用短代码来实现这种对话形式。</p>
-
-  <blockquote class="twitter-tweet" data-dnt="true"><p lang="en" dir="ltr">“In addition to being more logical, asymmetry has the advantage that its complete appearance is far more optically effective than symmetry.”<br>— Jan Tschichold <a href="https://t.co/gcv7SrhvJb">pic.twitter.com/gcv7SrhvJb</a></p>&mdash; Graphic Design History (@DesignReviewed) <a href="https://twitter.com/DesignReviewed/status/1085870671291310081?ref_src=twsrc%5Etfw">January 17, 2019</a></blockquote>
-
 <p>头像使用了 <a href="https://unavatar.io/" target="_blank" rel="noopener">unavatar.io</a> 的免费服务，对话列表中的头像可以从各个社交平台调取头像，这里就不一一介绍了，可以看 unavatar 的官方文档。</p>
 <p>时间可以自定义，也可以不写。如果你想换行，可以在内容中间添加<code>&lt;br&gt;</code>来换行。</p>
 <p>其实样式还可以再进一步的优化，只是作为一个简单的短代码，已经满足基本使用了。短代码分享在了最下面。</p>
 <h4 id="更新说明">更新说明：</h4>
-<p>2023-06-21，对话内容中可插入任意数量的图片，图片布局可修改 CSS 代码自由调整。</p>
-<p> </p>
+<p>2023-06-21，对话内容中可插入任意数量的图片，图片布局可修改 CSS 代码自由调整。 </p>
 <h4 id="对话形式">对话形式：</h4>
 <link rel="stylesheet" href="/css/message.css" />
 
