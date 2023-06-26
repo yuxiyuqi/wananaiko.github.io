@@ -47,12 +47,17 @@
   description = "computer loser / generalist，远古 WordPress 玩家。"
   weight = 7
 
-  [[blogroll]]
+[[blogroll]]
   name = "Dejavu's Blog"
   url = "https://blog.dejavu.moe"
   favicon = "https://images.wananaiko.com/2023/06/avatar.jpg"
   description = "Not for success, just for growing."
   weight = 8
 
-
+[[blogroll]]
+  name = "归臧"
+  url = "https://nuoea.com"
+  favicon = "https://images.wananaiko.com/2023/06/fGcbTQ.jpg"
+  description = "UI & UX Design, Blender & Eevee, 前端开发 & 小程序开发, Unity3D & Technical Art."
+  weight = 9
 

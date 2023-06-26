@@ -1,268 +1,268 @@
 {{ define "main" }} {{ $stack := getJSON "data/stack.json" }}
 
 <style>
-    .main.post {
-        position: relative !important;
-        min-height: calc(
-            100vh - var(--header-height) - var(--footer-height)
-        ) !important;
-        max-width: calc(var(--main-width) + var(--gap) * 2) !important;
-        margin-top: 5rem;
-    }
+  .main.post {
+    position: relative !important;
+    min-height: calc(
+      100vh - var(--header-height) - var(--footer-height)
+    ) !important;
+    max-width: calc(var(--main-width) + var(--gap) * 2) !important;
+    margin-top: 5rem;
+  }
 
-    .inline-links a {
-        display: none;
-    }
+  .inline-links a {
+    display: none;
+  }
 
-    .stack-list {
-        list-style: none;
-        overflow: hidden;
-        max-width: 100%;
-        grid-template-columns: repeat(3, 1fr);
-        grid-gap: 16px;
-        margin: 0 auto;
-        display: grid;
-    }
+  .stack-list {
+    list-style: none;
+    overflow: hidden;
+    max-width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 16px;
+    margin: 0 auto;
+    display: grid;
+  }
 
-    ul.stack-item-tags {
-        color: var(--tertiary);
-        font-size: 10px;
-        margin: 0 16px 12px 0;
-        font-family: var(--code-bg);
-    }
+  ul.stack-item-tags {
+    color: var(--tertiary);
+    font-size: 10px;
+    margin: 0 16px 12px 0;
+    font-family: var(--code-bg);
+  }
 
-    .stack-item {
-        display: flex;
-        overflow: hidden;
-        flex-direction: column;
-    }
+  .stack-item {
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+  }
 
-    .stack-item:hover .stack-item-title {
-        color: var(--content);
-        box-shadow: var(--box-shadow);
-    }
+  .stack-item:hover .stack-item-title {
+    color: var(--content);
+    box-shadow: var(--box-shadow);
+  }
 
-    .dark .stack-item:hover .stack-item-title {
-        box-shadow: var(--box-shadow);
-    }
+  .dark .stack-item:hover .stack-item-title {
+    box-shadow: var(--box-shadow);
+  }
 
-    .stack-item-link {
-        text-decoration: none;
-        color: inherit;
-    }
+  .stack-item-link {
+    text-decoration: none;
+    color: inherit;
+  }
 
-    .stack-item-image-container {
-        width: 64px;
-        height: 64px;
-        float: left;
-        margin-right: 16px;
-    }
+  .stack-item-image-container {
+    width: 64px;
+    height: 64px;
+    float: left;
+    margin-right: 16px;
+  }
 
-    .stack-item-content {
-        padding: 0 8px 0 16px;
-        flex: 1;
-        padding-inline-start: 0 !important;
-    }
+  .stack-item-content {
+    padding: 0 8px 0 16px;
+    flex: 1;
+    padding-inline-start: 0 !important;
+  }
 
-    .stack-item-header {
-        width: 100%;
-        flex-direction: column;
-        padding: 8px;
-    }
+  .stack-item-header {
+    width: 100%;
+    flex-direction: column;
+    padding: 8px;
+  }
 
-    .stack-item-title-container {
-        display: inline-flex;
-        align-items: center;
-        position: relative;
-    }
+  .stack-item-title-container {
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+  }
 
-    .stack-item-title {
-        color: var(--content);
-        font-size: 16px;
-        font-weight: 500;
-        width: fit-content;
-        transition: 0.5s;
-    }
+  .stack-item-title {
+    color: var(--content);
+    font-size: 16px;
+    font-weight: 500;
+    width: fit-content;
+    transition: 0.5s;
+  }
 
-    .stack-item-svg {
-        margin-left: 2px;
-        opacity: 0;
-        position: absolute;
-        right: -20px;
-        transform: translateX(20px);
-        transition: all 0.2s ease;
-        display: flex;
-        justify-content: center;
-    }
+  .stack-item-svg {
+    margin-left: 2px;
+    opacity: 0;
+    position: absolute;
+    right: -20px;
+    transform: translateX(20px);
+    transition: all 0.2s ease;
+    display: flex;
+    justify-content: center;
+  }
 
-    .stack-item:hover .stack-item-svg {
-        opacity: 1;
-        transform: translateX(0);
-    }
+  .stack-item:hover .stack-item-svg {
+    opacity: 1;
+    transform: translateX(0);
+  }
 
-    .stack-item-description {
-        font-size: 14px;
-        margin: 0 0 4px 0;
-        line-height: 1.6;
-        color: var(--secondary);
-    }
+  .stack-item-description {
+    font-size: 14px;
+    margin: 0 0 4px 0;
+    line-height: 1.6;
+    color: var(--secondary);
+  }
 
-    span.stack-item-discount {
-        background-color: rgb(198 239 239 / 50%);
-        border: 1px solid rgb(0 153 153 / 25%);
-        border-radius: 9999px;
-        font-size: 0.75rem;
-        line-height: 1rem;
-        padding: 0.1rem 0.5rem;
-        color: var(--link-hover-color);
-        position: fixed;
-        right: 16px;
-    }
+  span.stack-item-discount {
+    background-color: rgb(198 239 239 / 50%);
+    border: 1px solid rgb(0 153 153 / 25%);
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    padding: 0.1rem 0.5rem;
+    color: var(--link-hover-color);
+    position: fixed;
+    right: 16px;
+  }
 
-    .dark span.stack-item-discount {
-        background-color: rgba(30, 65, 65, 0.3);
-    }
+  .dark span.stack-item-discount {
+    background-color: rgba(30, 65, 65, 0.3);
+  }
 
-    .stack-item-tags {
-        list-style-type: none;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.5rem;
-        position: fixed;
-        bottom: 16px;
-    }
+  .stack-item-tags {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    position: fixed;
+    bottom: 16px;
+  }
 
-    .stack-item-tags li {
-        background-color: var(--code-bg);
-        border-radius: 3px;
-        padding: 0 0.5rem;
-        font-size: 0.6rem;
-        white-space: nowrap;
-    }
+  .stack-item-tags li {
+    background-color: var(--code-bg);
+    border-radius: 3px;
+    padding: 0 0.5rem;
+    font-size: 0.6rem;
+    white-space: nowrap;
+  }
 
-    .stack-item-divider {
-        border-bottom: 1px solid var(--tertiary-bg);
-        margin: 8px 0;
-        opacity: 0.65;
-        display: none;
-    }
+  .stack-item-divider {
+    border-bottom: 1px solid var(--tertiary-bg);
+    margin: 8px 0;
+    opacity: 0.65;
+    display: none;
+  }
 
-    .stack-single {
-        width: 100%;
-        border-radius: var(--radius);
-        margin: 0 auto;
-        cursor: pointer;
-        --list-opacity: 1;
-        background-color: rgb(250 250 250 / var(--list-opacity));
-        /* border: 1px solid var(--border); */
-        padding: 8px;
-    }
+  .stack-single {
+    width: 100%;
+    border-radius: var(--radius);
+    margin: 0 auto;
+    cursor: pointer;
+    --list-opacity: 1;
+    background-color: rgb(250 250 250 / var(--list-opacity));
+    /* border: 1px solid var(--border); */
+    padding: 8px;
+  }
 
-    .dark .stack-single {
-        background: var(--code-bg);
-    }
+  .dark .stack-single {
+    background: var(--code-bg);
+  }
 
-    .stack-single:hover {
-        text-decoration: none;
-        box-shadow: none;
-        --stack-list-opacity: 1;
-        background: var(--code-bg);
-        border-radius: var(--radius);
-    }
+  .stack-single:hover {
+    text-decoration: none;
+    box-shadow: none;
+    --stack-list-opacity: 1;
+    background: var(--code-bg);
+    border-radius: var(--radius);
+  }
 
-    .dark .stack-single:hover {
-        text-decoration: none;
-        box-shadow: none;
-        --stack-list-opacity: 0.1;
-        background-color: rgb(0 0 0 / var(--stack-list-opacity));
-        border-radius: var(--radius);
-    }
+  .dark .stack-single:hover {
+    text-decoration: none;
+    box-shadow: none;
+    --stack-list-opacity: 0.1;
+    background-color: rgb(0 0 0 / var(--stack-list-opacity));
+    border-radius: var(--radius);
+  }
 
-    /* .stack-single:hover .stack-item-tag {
+  /* .stack-single:hover .stack-item-tag {
       background-color: var(--border);
     } */
 
-    span.stack-item-tag {
-        border-radius: 9999px;
-        font-size: 12px;
-        line-height: 1rem;
-        padding: 0.1rem 0.5rem;
-        color: var(--secondary);
-        border: 1px solid var(--tertiary);
-        opacity: 0.4;
+  span.stack-item-tag {
+    border-radius: 9999px;
+    font-size: 12px;
+    line-height: 1rem;
+    padding: 0.1rem 0.5rem;
+    color: var(--secondary);
+    border: 1px solid var(--tertiary);
+    opacity: 0.5;
+  }
+
+  p.stack-item-description {
+    margin: 4px 0 32px 0;
+  }
+
+  a.stack-item-link {
+    color: unset;
+    box-shadow: none;
+  }
+
+  @media (max-width: 767px) {
+    .stack-list {
+      grid-template-columns: repeat(1, 1fr);
     }
 
-    p.stack-item-description {
-        margin: 4px 0 32px 0;
+    .main.post {
+      margin-top: 6rem !important;
     }
-
-    a.stack-item-link {
-        color: unset;
-        box-shadow: none;
-    }
-
-    @media (max-width: 767px) {
-        .stack-list {
-            grid-template-columns: repeat(1, 1fr);
-        }
-
-        .main.post {
-            margin-top: 6rem !important;
-        }
-    }
+  }
 </style>
 
 <header class="page-header">
-    <h1>{{ .Title }}</h1>
-    {{- if .Description }}
-    <div class="post-description">{{ .Description }}</div>
-    {{- end }}
+  <h1>{{ .Title }}</h1>
+  {{- if .Description }}
+  <div class="post-description">{{ .Description }}</div>
+  {{- end }}
 </header>
 
 <div class="stack-list slide-enter-content">
-    {{ range $index, $item := $stack.items }} {{- if ge (len $item) 5 }} {{-
-    $discount := index $item 5 | default "" }}
-    <div class="stack-single">
-        <a
-            href="{{ index $item 0 }}"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="stack-item-link"
-        >
-            <div class="stack-item">
-                <div class="stack-item-image-container">
-                    <img
-                        alt="{{ index $item 1 }}"
-                        width="64"
-                        height="64"
-                        decoding="async"
-                        data-nimg="1"
-                        src="{{ (index $item 2) | safeURL }}"
-                        style="color: transparent; margin-top: 4px"
-                    />
-                </div>
-                <div class="stack-item-content">
-                    <div class="stack-item-header">
-                        <div class="stack-item-title-container">
-                            <div class="stack-item-title">{{ index $item 1 }}</div>
-                            <div class="stack-item-svg">→</div>
-                        </div>
-                        <p class="stack-item-description">{{ index $item 3 }}</p>
-                        <spacer></spacer>
-                        {{- $tags := split (index $item 4) "," }} {{- if ge (len $tags) 1 }}
-                        <div class="stack-item-tags">
-                            {{ range $tags }}
-                            <span class="stack-item-tag">{{ . }}</span>
-                            {{ end }} {{ if $discount }}
-                            <span class="stack-item-discount">{{ $discount }}</span>
-                            {{ end }}
-                        </div>
-                        {{- end }}
-                    </div>
-                </div>
+  {{ range $index, $item := $stack.items }} {{- if ge (len $item) 5 }} {{-
+  $discount := index $item 5 | default "" }}
+  <div class="stack-single">
+    <a
+      href="{{ index $item 0 }}"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="stack-item-link"
+    >
+      <div class="stack-item">
+        <div class="stack-item-image-container">
+          <img
+            alt="{{ index $item 1 }}"
+            width="64"
+            height="64"
+            decoding="async"
+            data-nimg="1"
+            src="{{ (index $item 2) | safeURL }}"
+            style="color: transparent; margin-top: 4px"
+          />
+        </div>
+        <div class="stack-item-content">
+          <div class="stack-item-header">
+            <div class="stack-item-title-container">
+              <div class="stack-item-title">{{ index $item 1 }}</div>
+              <div class="stack-item-svg">→</div>
             </div>
-        </a>
-    </div>
-    {{- end }} {{- end }}
+            <p class="stack-item-description">{{ index $item 3 }}</p>
+            <spacer></spacer>
+            {{- $tags := split (index $item 4) "," }} {{- if ge (len $tags) 1 }}
+            <div class="stack-item-tags">
+              {{ range $tags }}
+              <span class="stack-item-tag">{{ . }}</span>
+              {{ end }} {{ if $discount }}
+              <span class="stack-item-discount">{{ $discount }}</span>
+              {{ end }}
+            </div>
+            {{- end }}
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+  {{- end }} {{- end }}
 </div>
 {{ end }}
