@@ -855,7 +855,7 @@ svg.iconpark-icon {
 
 .contentai {
     background-color: var(--code-bg);
-    border-radius: var(--radius);
+    border-radius: 10px;
     padding: 12px 12px 16px 12px;
     margin-bottom: 28px;
 }
