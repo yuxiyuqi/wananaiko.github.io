@@ -849,14 +849,14 @@ h6:hover .anchor {
 }
 
 svg.iconpark-icon {
-    width: 24px;
-    height: 24px;
+    width: 20px;
+    height: 20px;
 }
 
 .contentai {
     background-color: var(--code-bg);
     border-radius: var(--radius);
-    padding: 12px 16px 16px 16px;
+    padding: 12px 12px 16px 12px;
     margin-bottom: 28px;
 }
 
@@ -874,21 +874,21 @@ svg.iconpark-icon {
     justify-content: space-between;
     align-items: center;
     display: flex;
+    gap: 6px;
 }
 
 .contentai-ai {
-    display: flex;
     padding: 12px 16px;
     align-items: flex-start;
     font-size: 15px;
     line-height: 22px;
-    background-color: var(--entry);
+    background-color: var(--theme);
     border-radius: var(--radius);
     margin-top: 12px;
 }
 
-.contentai-lastmod {
-    font-size: 14px;
-    line-height: 22px;
+.contentai-span {
+    font-size: 13px;
+    line-height: 18px;
     color: var(--tertiary);
 }

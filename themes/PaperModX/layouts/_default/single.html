@@ -53,14 +53,20 @@
           </svg>
           AI 摘要
         </div>
-        <div class="contentai-lastmod">
-          本文最后更新于 <span id="time">{{ .Lastmod.Unix }}</span>
-        </div>
+        <div class="contentai-span">基于 ChatGPT 3.5</div>
       </div>
-      <div class="contentai-ai">{{ .Params.ai }}</div>
+      <!-- 这里给div增加了一个id "typedText"，并将内容隐藏在一个javascript变量中 -->
+      <div class="contentai-ai">
+        <span id="typedText"></span>
+        <span class="typed-cursor typed-cursor--blink">|</span>
+      </div>
+      <script>
+        var contentaiText = {{ .Params.ai | safeHTML }};
+      </script>
     </div>
     {{ end }}
     <!-- 上面显示contentai的内容 -->
+
     {{- if not (.Param "disableAnchoredHeadings") }} {{- partial
     "anchored_headings.html" .Content -}} {{- else }}{{ .Content }}{{ end }}
   </div>
@@ -89,10 +95,15 @@
 </article>
 
 <script src="/js/highlight-title.js"></script>
+
+<!-- JavaScript 打字动画库 -->
+<script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
 <script>
-  var timestamp = document.getElementById("time").textContent;
-  var time = moment.unix(timestamp);
-  document.getElementById("time").textContent = time.twitterLong();
+  var typed = new Typed("#typedText", {
+    strings: [contentaiText],
+    typeSpeed: 30,
+    cursorChar: "", // 关闭默认的光标
+  });
 </script>
 
 {{- end }}{{/* end main */}}

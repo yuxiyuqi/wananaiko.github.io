@@ -62,15 +62,6 @@
       "tag-update": "",
       "description": "在图片下方居中显示描述文字。",
       "markdown": "{{< figure src=\"https://…\" title=\"描述文字\" >}}"
-    },
-    {
-      "icon": "#icon-contentai",
-      "color": "var(--link-hover-color)",
-      "title": "AI 摘要",
-      "tag-soon": "SOON",
-      "tag-update": "",
-      "description": "显示当前文章的AI 摘要，目前是手动设置的…",
-      "markdown": ""
     }
   ]
 }
