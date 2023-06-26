@@ -7,6 +7,7 @@ tags:
   - PaperModX
   - Theme
 draft: false
+ai: 本文记录了作者使用Hugo和PaperModX主题折腾自己博客的过程，包括添加不同页面、使用shortcode等，并提供了相关的代码和样式调整。另外，作者还使用了timeline shortcode来记录整个折腾过程，也添加了todolist功能。
 ---
 
 最近又折腾了一下博客，起因是上周和 [空白生活](https://koobai.com/) 要了他的好物页面源码，后来研究了一番，发现用 shortcode

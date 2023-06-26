@@ -5,6 +5,7 @@ author: "wananaiko"
 tags:
   - hugo
 draft: false
+ai: 这篇文章分享了如何通过Readwise的API来展示Twitter上有趣的内容。作者使用了SavaToNotion来代替之前使用的Mem和Readwise，同时也研究了Readwise的API，发现V3版本中有summary字段对内容进行总结，提升了阅读体验。文章还给出了代码实现和注意事项。关键点包括：使用Readwise的API展示Twitter内容、使用SavaToNotion代替Mem和Readwise、了解Readwise的API版本和字段、提高阅读体验等。
 ---
 原来叫：Thread，现在改成了"线索"。
 

@@ -6,6 +6,7 @@ tags:
   - Remark42
   - Hugo
 draft: false
+ai: 本文介绍了如何使用Fly.io部署Remark42评论系统。Remark42是一个轻量级的评论服务，支持使用多种账号进行评论，并可以自托管。本文通过多个步骤逐步介绍了如何部署Remark42，包括安装flyctl、创建Dockerfile、创建应用、设置Docker环境变量和增加持久卷等。最后还介绍了如何在Hugo中添加Remark42评论控件以及如何适配主题颜色。关于部署过程中的具体步骤和注意事项，本文给出了详细的说明。
 ---
 
 ### Remark42 是什么
