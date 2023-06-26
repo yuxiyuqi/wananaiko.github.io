@@ -5,7 +5,7 @@
       "color": "var(--link-hover-color)",
       "title": "message",
       "tag-soon": "",
-      "tag-update": "UPDATE",
+      "tag-update": "",
       "description": "用来模拟多人自由对话，可在对话末尾显示九宫格图片。",
       "markdown": "{{< message from=\"self\" accountID=\"twitter/\" timestamp=\"自定义时间\" name=\"name\" >}}    这里是自定义的信息内容。 {{< /message >}} "
     },
