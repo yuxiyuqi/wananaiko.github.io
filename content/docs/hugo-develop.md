@@ -6,6 +6,7 @@ tags:
   - hugo
   - waline
   - PaperModX
+ai: 这是一篇关于使用 Hugo 和 PaperModX 进行配置的文章，介绍了如何添加空格之神、增加 Waline 评论、添加鼠标彩虹效果和友情链接页面等功能的具体操作方法和代码。
 ---
 
 ### 增加空格之神
