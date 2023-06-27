@@ -28,17 +28,24 @@
 
   .copy-success-tip {
     position: absolute;
-    top: 50%;
+    top: 20%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, 0);
+    opacity: 0;
     background-color: #000000e8;
     color: var(--theme);
     font-size: 12px;
     padding: 2px 12px;
     border-radius: 5px;
     z-index: 1;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-out;
     pointer-events: none;
+  }
+
+  .copy-success-show {
+    top: 30%;
+    opacity: 1;
+    transition: top 0.5s ease, opacity 0.5s ease;
   }
 
   .dark .copy-success-tip {
@@ -198,32 +205,26 @@
     container.addEventListener("click", function () {
       const markdown = this.querySelector(".shortcode-markdown code").innerText;
 
-      navigator.clipboard.writeText(markdown).then(
-        () => {
-          // 复制成功的操作
-          const tip = document.createElement("div");
-          tip.textContent = "复制成功";
-          tip.className = "copy-success-tip";
-          this.appendChild(tip); // 将提示框添加为 .code-container 的子元素
+      navigator.clipboard.writeText(markdown).then(() => {
+        // 复制成功的操作
+        const tip = document.createElement("div");
+        tip.textContent = "复制成功";
+        tip.className = "copy-success-tip";
+        this.appendChild(tip); // 将提示框添加为 .code-container 的子元素
 
-          // 让提示框逐渐显示出来
-          setTimeout(() => {
-            tip.style.opacity = "1";
-          }, 100);
+        // 让提示框逐渐显示出来
+        setTimeout(() => {
+          tip.classList.add("copy-success-show");
+        }, 100);
 
-          // 3 秒后让提示框逐渐消失并最终移除它
+        // 3 秒后让提示框逐渐消失并最终移除它
+        setTimeout(() => {
+          tip.classList.remove("copy-success-show");
           setTimeout(() => {
-            tip.style.opacity = "0";
-            setTimeout(() => {
-              tip.remove();
-            }, 300);
-          }, 1500);
-        },
-        () => {
-          // 复制失败的操作
-          console.error("复制失败");
-        }
-      );
+            tip.remove();
+          }, 500);
+        }, 1500);
+      });
     });
   });
 </script>
