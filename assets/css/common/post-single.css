@@ -892,3 +892,55 @@ svg.iconpark-icon {
     line-height: 18px;
     color: var(--tertiary);
 }
+
+/* 下面是打赏样式 */
+#QR {
+    padding-top:16px;
+}
+#QR a {
+    border:0;
+}
+
+div#wechat p {
+    font-size: 15px;
+    color: var(--secondary);
+}
+
+#QR img {
+    width:180px;
+    max-width:100%;
+    display:inline-block;
+    margin:0 2em 0 2em;
+}
+#rewardButton {
+    font-size: 16px;
+    color: #ea4c89;
+    border:1px solid #ea4c89;
+    line-height:24px;
+    text-align:center;
+    height:36px;
+    display:block;
+    border-radius:var(--radius);
+    -webkit-transition-duration:.4s;
+    transition-duration:.4s;
+    color:var(--primary);
+    margin:0 auto;
+    padding:0 20px
+}
+#rewardButton:hover {
+    border:1px solid #ea4c89;
+    background-color:#ea4c89;
+    color:#fff;
+    outline-style:none;
+}
+
+.button-text{
+    align-items: center; 
+    display: flex; 
+    gap: 6px; 
+    color: #ea4c89
+}
+
+#rewardButton:hover .button-text{
+    color: #fff
+}
