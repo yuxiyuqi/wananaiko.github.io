@@ -17,12 +17,32 @@
   }
 
   .code-container {
+    position: relative;
     display: flex;
     padding: 16px 12px;
     border-radius: var(--radius);
     --list-opacity: 1;
     background-color: rgb(250 250 250 / var(--list-opacity));
     min-height: 120px;
+  }
+
+  .copy-success-tip {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #000000e8;
+    color: var(--theme);
+    font-size: 12px;
+    padding: 2px 12px;
+    border-radius: 5px;
+    z-index: 1;
+    transition: all 0.3s ease-in-out;
+    pointer-events: none;
+  }
+
+  .dark .copy-success-tip {
+    background-color: #ffffffe8;
   }
 
   .dark .code-container {
@@ -127,11 +147,7 @@
 
 <div class="shortcode-view slide-enter-content">
   {{ range $quickshort.quickshort}}
-  <div
-    class="code-container"
-    data-color="{{ .color }}"
-    onclick="copyToClipboard(this)"
-  >
+  <div class="code-container" data-color="{{ .color }}">
     <div class="shortcode-icon">
       <svg class="iconpark-icon">
         <use href="{{ .icon | safeHTML }}"></use>
@@ -151,48 +167,16 @@
         </div>
       </div>
       <div class="shortcode-description">{{ .description }}</div>
-      <div class="shortcode-markdown">{{ .markdown | safeHTML }}</div>
+      <div class="shortcode-markdown">
+        <pre><code>{{ .markdown | safeHTML }}</code></pre>
+      </div>
     </div>
   </div>
   {{ end }}
 </div>
 
-<link
-  rel="stylesheet"
-  type="text/css"
-  href="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/css/iziToast.min.css"
-/>
-<script
-  type="text/javascript"
-  src="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/js/iziToast.min.js"
-></script>
-
 <script>
-  function copyToClipboard(container) {
-    // Find the shortcode-markdown element within the container
-    var markdownElement = container.querySelector(".shortcode-markdown");
-    // Create a new textarea element to hold the markdown text
-    var textarea = document.createElement("textarea");
-    textarea.textContent = markdownElement.textContent;
-    // Add the textarea to the document (it will be invisible)
-    document.body.appendChild(textarea);
-    // Select the text in the textarea
-    textarea.select();
-    // Copy the text to the clipboard
-    document.execCommand("copy");
-    // Remove the textarea from the document
-    document.body.removeChild(textarea);
-
-    // Show a toast notification using iziToast
-    iziToast.success({
-      title: "复制成功",
-      message: "可以去粘贴了哦~",
-      position: "topRight",
-    });
-  }
-</script>
-
-<script>
+  // 以下为图标颜色切换动画
   const containers = document.querySelectorAll(".code-container");
   const defaultColor = "var(--content)"; // 默认颜色
 
@@ -206,6 +190,40 @@
 
     container.addEventListener("mouseout", function () {
       icon.style.color = defaultColor;
+    });
+  });
+
+  // 复制到剪贴板功能
+  containers.forEach((container) => {
+    container.addEventListener("click", function () {
+      const markdown = this.querySelector(".shortcode-markdown code").innerText;
+
+      navigator.clipboard.writeText(markdown).then(
+        () => {
+          // 复制成功的操作
+          const tip = document.createElement("div");
+          tip.textContent = "复制成功";
+          tip.className = "copy-success-tip";
+          this.appendChild(tip); // 将提示框添加为 .code-container 的子元素
+
+          // 让提示框逐渐显示出来
+          setTimeout(() => {
+            tip.style.opacity = "1";
+          }, 100);
+
+          // 3 秒后让提示框逐渐消失并最终移除它
+          setTimeout(() => {
+            tip.style.opacity = "0";
+            setTimeout(() => {
+              tip.remove();
+            }, 300);
+          }, 1500);
+        },
+        () => {
+          // 复制失败的操作
+          console.error("复制失败");
+        }
+      );
     });
   });
 </script>
