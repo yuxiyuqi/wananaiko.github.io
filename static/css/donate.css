@@ -92,6 +92,10 @@
   transition: transform 0.3s ease-in-out;
 }
 
+.donate-img img.hover-effect {
+  transform: scale(1.1);
+}
+
 .hover-effect {
   transform: scale(1.1);
 }
