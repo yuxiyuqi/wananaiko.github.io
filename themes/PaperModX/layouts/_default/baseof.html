@@ -26,6 +26,13 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pangu/4.0.7/pangu.min.js"></script>
 <script>
   pangu.spacingPage();
+
+  //打赏页面中<span class="donate-month"> 6 月</span>,取消pangu.min.js造成的空格.
+  var pangu = document.getElementsByClassName("donate-month");
+  for (var i = 0; i < pangu.length; i++) {
+    pangu[i].innerHTML = pangu[i].innerHTML.replace(/ /g, "");
+  }
+
 </script>
 <!-- 增加鼠标滑动时的彩虹效果 -->
 <!-- <script async src="/memos/assets/js/browser.js"></script>
