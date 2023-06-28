@@ -34,7 +34,6 @@
   .donate-box {
     display: flex;
     max-width: 674px;
-    padding: 2px 0px;
     flex-direction: column;
     align-items: flex-start;
     /* gap: 16px; */
@@ -68,7 +67,7 @@
     align-items: center;
     align-content: flex-start;
     row-gap: 8px;
-    align-self: stretch;
+    align-self: normal;
     flex-wrap: wrap;
     padding: 12px 0;
     border-bottom: var(--border-top);
@@ -212,6 +211,15 @@
 
   .first-of-year {
     margin-top: 48px;
+  }
+
+  @media screen and (max-width: 768px) {
+    .donate-row {
+      padding: 16px 0;
+    }
+    .donate-left {
+      gap: 8px;
+    }
   }
 </style>
 
