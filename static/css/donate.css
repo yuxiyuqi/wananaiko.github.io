@@ -81,11 +81,20 @@
     flex-wrap: wrap;
   }
 
-  .donate-img img {
+  .donate-img {
+    border-radius: var(--radius);
+    overflow: hidden;
     width: 64px;
     height: 64px;
-    border-radius: var(--radius);
-  }
+}
+
+  .donate-img img {
+  transition: transform 0.3s ease-in-out;
+}
+
+.hover-effect {
+  transform: scale(1.1);
+}
 
   .donate-date {
     display: flex;

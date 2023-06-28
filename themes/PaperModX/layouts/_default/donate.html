@@ -223,5 +223,30 @@
 
 <!-- 添加打赏功能结束 -->
 
+<script>
+  // Get all images
+  var images = document.querySelectorAll(".donate-img img");
+
+  // Add mouseover and mouseout event listeners to each image
+  images.forEach(function (img) {
+    img.addEventListener("mouseover", function () {
+      // Add the hover effect
+      this.classList.add("hover-effect");
+    });
+
+    img.addEventListener("mouseout", function () {
+      // Remove the hover effect
+      this.classList.remove("hover-effect");
+    });
+  });
+
+  // Remove the hover effect from all images when the lightbox closes
+  document.addEventListener("zoom-out", function () {
+    images.forEach(function (img) {
+      img.classList.remove("hover-effect");
+    });
+  });
+</script>
+
 {{ if not (eq .Params.Comments "false") }} {{ partial "comments.html" . }} {{
 end }} {{ end }}
