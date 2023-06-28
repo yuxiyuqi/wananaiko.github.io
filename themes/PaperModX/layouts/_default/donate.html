@@ -46,11 +46,63 @@
   </div>
 </div>
 
-<script>
-  // 使渲染后的网页中的"donate-month" 不应用 pangu.min.js,去掉空格.
-  var donateMonth = document.getElementsByClassName("donate-month");
-  for (var i = 0; i < donateMonth.length; i++) {
-    donateMonth[i].setAttribute("data-pangu", "false");
-  }
-</script>
-{{ end }} {{ end }}
+{{ end }}
+
+<!-- 添加打赏功能开始 -->
+<div
+  style="
+    padding: 10px 0;
+    margin: 40px 0 0 0;
+    width: 100%;
+    font-size: 16px;
+    text-align: center;
+  "
+>
+  <button
+    id="rewardButton"
+    disable="enable"
+    onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}"
+  >
+    <span class="button-text">
+      <svg class="iconpark-icon"><use href="#ketou"></use></svg> 打赏</span
+    >
+  </button>
+  <span
+    style="
+      font-size: 13px;
+      margin-top: 12px;
+      display: inline-block;
+      align-items: center;
+      color: var(--tertiary);
+      line-height: 18px;
+      padding-bottom: 2px;
+    "
+    >感谢所有金主的打赏</span
+  >
+  <div id="QR" style="display: none">
+    <div id="wechat" style="display: inline-block">
+      <a class="fancybox" rel="group">
+        <img
+          id="wechat_qr"
+          src="https://images.wananaiko.com/2023/06/IMG_5127.JPG"
+          alt="WeChat Pay"
+          data-action="zoom"
+      /></a>
+      <p>微信打赏</p>
+    </div>
+    <!-- <div id="alipay" style="display: inline-block">
+          <a class="fancybox" rel="group">
+            <img
+              id="alipay_qr"
+              src="https://images.wananaiko.com/2023/06/IMG_5128.JPG"
+              alt="Alipay"
+          /></a>
+          <p>支付宝打赏</p>
+        </div> -->
+  </div>
+</div>
+
+<!-- 添加打赏功能结束 -->
+
+{{ if not (eq .Params.Comments "false") }} {{ partial "comments.html" . }} {{
+end }} {{ end }}
