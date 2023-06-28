@@ -914,8 +914,8 @@ div#wechat p {
 }
 #rewardButton {
     font-size: 16px;
-    color: #ea4c89;
-    border:1px solid #ea4c89;
+    color: var(--link-hover-color);
+    border:1px solid var(--link-hover-color);
     line-height:24px;
     text-align:center;
     height:36px;
@@ -928,8 +928,8 @@ div#wechat p {
     padding:0 20px
 }
 #rewardButton:hover {
-    border:1px solid #ea4c89;
-    background-color:#ea4c89;
+    border:1px solid var(--link-hover-color);
+    background-color:var(--link-hover-color);
     color:#fff;
     outline-style:none;
 }
@@ -938,7 +938,7 @@ div#wechat p {
     align-items: center; 
     display: flex; 
     gap: 6px; 
-    color: #ea4c89
+    color: var(--link-hover-color);
 }
 
 #rewardButton:hover .button-text{
