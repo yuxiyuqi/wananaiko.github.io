@@ -224,23 +224,23 @@
 <!-- 添加打赏功能结束 -->
 
 <script>
-  // Get all images
+  // 获取所有图片
   var images = document.querySelectorAll(".donate-img img");
 
-  // Add mouseover and mouseout event listeners to each image
+  // 为每张图片添加鼠标移动和鼠标退出事件监听器
   images.forEach(function (img) {
     img.addEventListener("mouseover", function () {
-      // Add the hover effect
+      // 添加悬停效果
       this.classList.add("hover-effect");
     });
 
     img.addEventListener("mouseout", function () {
-      // Remove the hover effect
+      // 移除悬停效果
       this.classList.remove("hover-effect");
     });
   });
 
-  // Remove the hover effect from all images when the lightbox closes
+  // 关闭灯箱时删除所有图片的悬停效果
   document.addEventListener("zoom-out", function () {
     images.forEach(function (img) {
       img.classList.remove("hover-effect");

@@ -43,7 +43,7 @@
   if (.Param "ShowToc") }} {{- partial "toc.html" . }} {{- end }} {{- if
   .Content }}
   <div class="post-content slide-enter-content">
-    <!-- 下面显示contentai的内容 -->
+    <!-- AI摘要功能开始 -->
     {{ if .Params.ai }}
     <div class="contentai">
       <div class="contentai-head">
@@ -65,7 +65,7 @@
       </script>
     </div>
     {{ end }}
-    <!-- 上面显示contentai的内容 -->
+    <!-- AI摘要功能结束 -->
 
     {{- if not (.Param "disableAnchoredHeadings") }} {{- partial
     "anchored_headings.html" .Content -}} {{- else }}{{ .Content }}{{ end }}
