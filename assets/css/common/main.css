@@ -166,6 +166,10 @@ mark {
   will-change: transform !important;
 }
 
+svg.iconpark-icon-home:hover {
+  color: var(--link-hover-color);
+}
+
 .social-icons a:hover::before {
   content: attr(data-tooltip);
   position: absolute;
@@ -176,7 +180,7 @@ mark {
   color: var(--entry);
   font-size: 12px;
   line-height: 20px;
-  padding: 2px 8px;
+  padding: 3px 8px;
   border-radius: 4px;
   opacity: 0;
   transition: opacity 0.2s;
