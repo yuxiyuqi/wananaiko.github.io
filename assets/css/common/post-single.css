@@ -867,11 +867,11 @@ svg.iconpark-icon {
 }
 
 .contentai-title {
-    font-size: 16px;
+    font-size:16px;
     color:var(--primary)
-    height: 24px;
-    font-weight: 600;
-    justify-content: space-between;
+    height:24px;
+    font-weight:600;
+    justify-content:space-between;
     align-items: center;
     display: flex;
     gap: 6px;
