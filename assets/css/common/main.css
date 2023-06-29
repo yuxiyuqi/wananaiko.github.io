@@ -172,7 +172,7 @@ svg.iconpark-icon-home:hover {
 .social-icons a:hover::before {
   content: attr(data-tooltip);
   position: absolute;
-  top: -30px;
+  top: -32px;
   left: 50%;
   transform: translateX(-50%);
   background-color: var(--primary);
