@@ -895,6 +895,23 @@ svg.iconpark-icon {
 
 /* 下面是打赏样式 */
 
+span.donate-bottom {
+    font-size: 13px;
+    margin-top: 12px;
+    display: inline-block;
+    align-items: center;
+    color: var(--link-hover-color);
+    line-height: 18px;
+    padding-bottom: 2px;
+    box-shadow: 0 0.5px var(--color48);
+}
+
+span.donate-bottom:hover {
+    color: var(--color33);
+    padding-bottom: 2px;
+    box-shadow: 0 0.5px var(--color33);
+}
+
 
 svg#\32 92218605 {
     width: 22px;
