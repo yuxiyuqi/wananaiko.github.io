@@ -37,6 +37,105 @@
       </a>
     </div>
   </footer>
+
+  <!-- 庆祝宝宝出生代码开始 -->
+  <style>
+    .celebrate {
+      margin: 0 auto;
+      position: relative;
+    }
+
+    @keyframes shrink-and-move-up {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(0.65);
+      }
+      100% {
+        transform: scale(0.65) translate3d(0, -118px, 0);
+      }
+    }
+  </style>
+
+  <div class="celebrate" style="width: 300px; height: 280px; overflow: hidden">
+    <lottie-player
+      id="first-animation"
+      src="https://assets10.lottiefiles.com/packages/lf20_pkanqwys.json"
+      background="transparent"
+      speed="1"
+      style="width: 100%; height: 100%"
+      autoplay
+    ></lottie-player>
+    <lottie-player
+      id="second-animation"
+      src="https://lottie.host/63f2a3e0-2789-4d01-b7c2-f8252df38f6f/QS0CVZgg8K.json"
+      background="transparent"
+      speed="1"
+      style="
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: scale(1);
+        display: none;
+      "
+    ></lottie-player>
+    <div
+      id="text-content"
+      style="
+        display: none;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        z-index: 1;
+      "
+    >
+      <span
+        style="
+          font-size: 18px;
+          font-weight: 600;
+          line-height: 28px;
+          display: block;
+        "
+        >距离宝宝出生还剩</span
+      >
+      <span
+        style="
+          font-size: 18px;
+          line-height: 24px;
+          display: block;
+          margin-top: 8px;
+          color: #099;
+        "
+        >3天</span
+      >
+    </div>
+  </div>
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+  <script>
+    let firstAnimation = document.getElementById("first-animation");
+    let secondAnimation = document.getElementById("second-animation");
+    let textContent = document.getElementById("text-content");
+
+    firstAnimation.addEventListener("complete", function () {
+      firstAnimation.style.display = "none";
+      secondAnimation.style.display = "block";
+      secondAnimation.play();
+    });
+
+    secondAnimation.addEventListener("complete", function () {
+      secondAnimation.style.animation = "shrink-and-move-up 2s forwards";
+      setTimeout(function () {
+        textContent.style.display = "block";
+      }, 2000); // Adjust this delay to match the duration of the CSS animation
+    });
+  </script>
+  <!-- 庆祝宝宝出生代码结束 -->
 </article>
 
 {{- end -}}
