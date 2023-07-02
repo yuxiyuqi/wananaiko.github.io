@@ -86,20 +86,19 @@ ai: 这篇文章介绍了使用短代码在网站上开展对话的方式。作�
 .message {
     font-size: 16px;
     width: 80%;
-    /* padding: 10px; */
     margin: 1rem 0;
     text-align: right;
 }
 
 .message.--self .message__text {
-        background-color: rgb(198 239 239 / 25%);
-        border: 1px solid #b7d8d865;
+    background-color: rgb(198 239 239 / 25%);
+    border: 1px solid #b7d8d865;
         
     }
 
 .dark .message.--self .message__text {
-        background-color: rgba(0, 153, 153, 0.1);
-        border: 1px solid #b7dddd15;
+    background-color: rgba(0, 153, 153, 0.1);
+    border: 1px solid #b7dddd15;
     }
 
 .message.--self .message__text {
@@ -119,7 +118,7 @@ ai: 这篇文章介绍了使用短代码在网站上开展对话的方式。作�
     display: flex;
     align-items: center;
     justify-content: flex-end;
-        align-items: flex-end;
+    align-items: flex-end;
 }
 
 .message__inner img {
@@ -136,20 +135,20 @@ ai: 这篇文章介绍了使用短代码在网站上开展对话的方式。作�
 
 .message__text {
     margin-left: 8px;
-        display: flex;
+    display: flex;
     flex-direction: column;
     gap: 4px;
     border: 1px solid var(--border);
     border-radius: var(--radius);
     padding: 12px;
     margin-right: 8px;
-        --list-opacity: 1;
+    --list-opacity: 1;
     background-color: rgb(250 250 250 / var(--list-opacity));
 }
 
 .dark .message__text {
     border: 1px solid var(--border);
-        background: var(--code-bg);
+    background: var(--code-bg);
 }
 
 .message__meta {

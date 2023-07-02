@@ -29,7 +29,7 @@
 .chroma .kn,
 .chroma .kp,
 .chroma .kr {
-  color: #5555a5;
+  color: var(--content);
 }
 
 /* Literal */
