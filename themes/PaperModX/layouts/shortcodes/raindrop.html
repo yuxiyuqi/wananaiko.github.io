@@ -168,7 +168,7 @@ getJSON $apiUrl "?access_token=" $token "&perpage=50&sort=-created" }}
     font-size: 13px;
     white-space: nowrap;
     line-height: 1.4rem;
-    cursor: pointer;
+    cursor: none;
   }
 
   .mk-tab-tag.mk-tab-tag-active:hover {
@@ -305,11 +305,25 @@ getJSON $apiUrl "?access_token=" $token "&perpage=50&sort=-created" }}
 
 <!-- Base on raindrop.io's API filters, Add a Tab switch Group to view different tags,each tag is displayed only once in the this Tab switch. -->
 <div class="mk-tab">
-  <div class="mk-tab-tag" onclick="showAll()">All</div>
+  <div
+    class="mk-tab-tag"
+    onclick="showAll()"
+    data-cursor="block"
+    data-cursor-style="background:var(--cursor-color)"
+  >
+    All
+  </div>
 
   {{ range $i, $item := index $json "items" }} {{ range $j, $tag := $item.tags
   }}
-  <div class="mk-tab-tag" onclick="showTag('{{ $tag }}')">{{ $tag }}</div>
+  <div
+    class="mk-tab-tag"
+    onclick="showTag('{{ $tag }}')"
+    data-cursor="block"
+    data-cursor-style="background:var(--cursor-color);"
+  >
+    {{ $tag }}
+  </div>
   {{ end }} {{ end }}
   <div class="mk-divider"></div>
 </div>

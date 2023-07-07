@@ -1,9 +1,15 @@
 {{- with site.Params.homeInfoParams }}
 <article class="first-entry home-info">
   <header class="entry-header">
-    <h1>{{ .Title | markdownify }}</h1>
+    <h1 data-cursor="text" data-cursor-style="background: currentColor">
+      {{ .Title | markdownify }}
+    </h1>
   </header>
-  <section class="entry-content">
+  <section
+    class="entry-content"
+    data-cursor="text"
+    data-cursor-style="background: currentColor"
+  >
     {{- trim .Content "\n" | markdownify -}}
   </section>
   <!--旧的备份 <footer class="entry-footer">
@@ -17,7 +23,9 @@
         target="_blank"
         data-tooltip="RSS订阅"
       >
-        <svg class="iconpark-icon-home"><use href="#rss"></use></svg>
+        <svg class="iconpark-icon-home">
+          <use href="#rss"></use>
+        </svg>
       </a>
 
       <a

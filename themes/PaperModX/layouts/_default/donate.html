@@ -11,6 +11,8 @@
 
 {{ range $donate.donate}}
 <div
+  data-cursor="text"
+  data-cursor-style="background: currentColor"
   class="donate-container slide-enter-content{{ if .firstOfYear }} first-of-year{{ end }}"
 >
   <div class="donate-year{{ if not .firstOfYear }} invisible{{ end }}">
@@ -59,6 +61,9 @@
   "
 >
   <button
+    style="cursor: none"
+    data-cursor="block"
+    data-cursor-style="background: #00999930;"
     id="rewardButton"
     disable="enable"
     onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}"

@@ -163,7 +163,7 @@ mark {
   width: 28px;
   transition: transform 150ms cubic-bezier(0.2, 0, 0.2, 1) !important;
   will-change: transform !important;
-  cursor: auto;
+  cursor: none;
   vertical-align: middle;
   display: block;
 }

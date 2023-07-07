@@ -16,8 +16,8 @@
 /> <meta name="description" content="Guide to emoji usage in Hugo"> <meta name="author" content="Hugo Authors"> <link rel="canonical" href="https://wananaiko.com/docs/emoji-support/">
 <link
   crossorigin="anonymous"
-  href="/assets/css/stylesheet.min.200f769009953ec1df41e324186c19a688c455afef0ddf0d12ef4dc827a750d1.css"
-  integrity="sha256-IA92kAmVPsHfQeMkGGwZpojEVa/vDd8NEu9NyCenUNE="
+  href="/assets/css/stylesheet.min.acaecb8268e31b6a8c741eceb583fd8393800499f8601e0a4ef8ba4ecb463e75.css"
+  integrity="sha256-rK7LgmjjG2qMdB7OtYP9g5OABJn4YB4KTvi6TstGPnU="
   rel="preload stylesheet"
   as="style"
 /> <link rel="icon" href="https://images.wananaiko.com/favicon.ico"> <link rel="apple-touch-icon" href="https://wananaiko.com/apple-touch-icon.png"> <link rel="alternate" hreflang="en" href="https://wananaiko.com/docs/emoji-support/" />
@@ -388,7 +388,7 @@ window.addEventListener('scroll', () => {
 <link rel="stylesheet" href="/css/zoom.css"/>
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/quicklink/2.3.0/quicklink.umd.js"></script>
+
 <script>
 window.addEventListener('load', () => {
   quicklink.listen();
@@ -400,7 +400,14 @@ window.addEventListener('load', () => {
 
 
 <script type="text/javascript" src="/assets/moment.min.js?v=2.29.4"></script>
-<script type="text/javascript" src="/assets/moment.twitter.min.js"></script><main class="main post slide-enter-content">
+<script type="text/javascript" src="/assets/moment.twitter.min.js"></script>
+
+
+<script type="module">
+  import { initCursor } from "https://unpkg.com/ipad-cursor@latest";
+  initCursor();
+</script><main 
+    class="main post slide-enter-content">
 
 <article class="post-single">
   <header class="post-header">
@@ -417,7 +424,11 @@ window.addEventListener('load', () => {
       </div>
     </a>
 
-    <h1 class="post-title">Emoji Support</h1>
+    <h1
+      class="post-title"
+      data-cursor="text"
+      data-cursor-style="background: currentColor"
+    >Emoji Support</h1>
     <div class="post-description">Guide to emoji usage in Hugo</div>
     <div class="post-meta"><span class="meta-tags">
   <span class="post-tags"><a href="https://wananaiko.com/tags/example/">example</a></span></span
@@ -425,10 +436,16 @@ window.addEventListener('load', () => {
   
     </div>
   </header> 
-  <div class="post-content slide-enter-content">
-    
-    
-    <p>Emoji can be enabled in a Hugo project in a number of ways.</p>
+
+  
+  
+  
+
+  <div
+    class="post-content slide-enter-content"
+    data-cursor="text"
+    data-cursor-style="background: currentColor"
+  ><p>Emoji can be enabled in a Hugo project in a number of ways.</p>
 <p>The <a href="https://gohugo.io/functions/emojify/" target="_blank" rel="noopener"><code>emojify</code></a> function can be called directly in templates or <a href="https://gohugo.io/templates/shortcode-templates/#inline-shortcodes" target="_blank" rel="noopener">Inline Shortcodes</a>.</p>
 <p>To enable emoji globally, set <code>enableEmoji</code> to <code>true</code> in your site&rsquo;s <a href="https://gohugo.io/getting-started/configuration/" target="_blank" rel="noopener">configuration</a> and then you can type emoji shorthand codes directly in content files; e.g.</p>
 <p><span class="nowrap"><span class="emojify">🙈</span> <code>🙈</code></span>  <span class="nowrap"><span class="emojify">🙉</span> <code>🙉</code></span>  <span class="nowrap"><span class="emojify">🙊</span> <code>🙊</code></span></p>
@@ -468,6 +485,9 @@ window.addEventListener('load', () => {
       "
     >
       <button
+        style="cursor: none"
+        data-cursor="block"
+        data-cursor-style="background: #00999930;"
         id="rewardButton"
         disable="enable"
         onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}"
@@ -596,7 +616,12 @@ window.addEventListener('load', () => {
         </div>
       </button>
       <a href="/donate">
-        <span class="donate-bottom">感谢各位金主的打赏</span>
+        <span
+          class="donate-bottom"
+          data-cursor="block"
+          data-cursor-style="background: #00999930"
+          >感谢各位金主的打赏</span
+        >
       </a>
       <div id="QR" style="display: none">
         <div id="wechat" style="display: inline-block">

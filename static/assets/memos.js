@@ -213,7 +213,7 @@ function updateHTMl(data) {
             }
         }
         memoResult +=
-            '<li class="timeline"><div class="memos__content"><div class="memos__text"><div class="memos__userinfo"><div>' +
+            '<li class="timeline" data-cursor="text"><div class="memos__content"><div class="memos__text"  data-cursor-style="background: currentColor"><div class="memos__userinfo"><div>' +
             '<div class="memos__memoname"> ' +
             " @" +
             memo.name +

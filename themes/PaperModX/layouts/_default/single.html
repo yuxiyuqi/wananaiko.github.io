@@ -22,7 +22,11 @@
       </div>
     </a>
 
-    <h1 class="post-title">
+    <h1
+      class="post-title"
+      data-cursor="text"
+      data-cursor-style="background: currentColor"
+    >
       {{- if $isNewsletter -}} {{- replace .Title (.Param "titlePrefix") (.Param
       "titlePrefixReplace") -}} {{- else -}} {{- .Title -}} {{- end -}} {{- if
       .Draft -}}<sup><span class="entry-isdraft">&nbsp;&nbsp;[draft]</span></sup
@@ -42,7 +46,12 @@
   partial "cover.html" (dict "cxt" . "IsHome" false "isHidden" $isHidden) }} {{-
   if (.Param "ShowToc") }} {{- partial "toc.html" . }} {{- end }} {{- if
   .Content }}
-  <div class="post-content slide-enter-content">
+
+  <div
+    class="post-content slide-enter-content"
+    data-cursor="text"
+    data-cursor-style="background: currentColor"
+  >
     <!-- AI摘要功能开始 -->
     {{ if .Params.ai }}
     <div class="contentai">
@@ -53,7 +62,7 @@
           </svg>
           AI 摘要
         </div>
-        <div class="contentai-span">基于 ChatGPT 3.5</div>
+        <div class="contentai-span" data-cursor="text">基于 ChatGPT 3.5</div>
       </div>
       <!-- 这里给div增加了一个id "typedText"，并将内容隐藏在一个javascript变量中 -->
       <div class="contentai-ai">
@@ -66,7 +75,6 @@
     </div>
     {{ end }}
     <!-- AI摘要功能结束 -->
-
     {{- if not (.Param "disableAnchoredHeadings") }} {{- partial
     "anchored_headings.html" .Content -}} {{- else }}{{ .Content }}{{ end }}
   </div>
@@ -84,6 +92,9 @@
       "
     >
       <button
+        style="cursor: none"
+        data-cursor="block"
+        data-cursor-style="background: #00999930;"
         id="rewardButton"
         disable="enable"
         onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}"
@@ -212,7 +223,12 @@
         </div>
       </button>
       <a href="/donate">
-        <span class="donate-bottom">感谢各位金主的打赏</span>
+        <span
+          class="donate-bottom"
+          data-cursor="block"
+          data-cursor-style="background: #00999930"
+          >感谢各位金主的打赏</span
+        >
       </a>
       <div id="QR" style="display: none">
         <div id="wechat" style="display: inline-block">

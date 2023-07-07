@@ -16,8 +16,8 @@
 /> <meta name="description" content="聊一聊 macOS 的一些软件使用心得，希望能够对其他人有所帮助。 提升效率 Setapp：参加了别人的家庭计划，属于团购车，年费 285。感觉还是很划算的，"> <meta name="author" content="wananaiko"> <link rel="canonical" href="https://wananaiko.com/docs/macosapps/">
 <link
   crossorigin="anonymous"
-  href="/assets/css/stylesheet.min.200f769009953ec1df41e324186c19a688c455afef0ddf0d12ef4dc827a750d1.css"
-  integrity="sha256-IA92kAmVPsHfQeMkGGwZpojEVa/vDd8NEu9NyCenUNE="
+  href="/assets/css/stylesheet.min.acaecb8268e31b6a8c741eceb583fd8393800499f8601e0a4ef8ba4ecb463e75.css"
+  integrity="sha256-rK7LgmjjG2qMdB7OtYP9g5OABJn4YB4KTvi6TstGPnU="
   rel="preload stylesheet"
   as="style"
 /> <link rel="icon" href="https://images.wananaiko.com/favicon.ico"> <link rel="apple-touch-icon" href="https://wananaiko.com/apple-touch-icon.png"> <link rel="alternate" hreflang="en" href="https://wananaiko.com/docs/macosapps/" />
@@ -388,7 +388,7 @@ window.addEventListener('scroll', () => {
 <link rel="stylesheet" href="/css/zoom.css"/>
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/quicklink/2.3.0/quicklink.umd.js"></script>
+
 <script>
 window.addEventListener('load', () => {
   quicklink.listen();
@@ -400,7 +400,14 @@ window.addEventListener('load', () => {
 
 
 <script type="text/javascript" src="/assets/moment.min.js?v=2.29.4"></script>
-<script type="text/javascript" src="/assets/moment.twitter.min.js"></script><main class="main post slide-enter-content">
+<script type="text/javascript" src="/assets/moment.twitter.min.js"></script>
+
+
+<script type="module">
+  import { initCursor } from "https://unpkg.com/ipad-cursor@latest";
+  initCursor();
+</script><main 
+    class="main post slide-enter-content">
 
 <article class="post-single">
   <header class="post-header">
@@ -417,37 +424,47 @@ window.addEventListener('load', () => {
       </div>
     </a>
 
-    <h1 class="post-title">常用的macOS软件整理</h1>
+    <h1
+      class="post-title"
+      data-cursor="text"
+      data-cursor-style="background: currentColor"
+    >常用的macOS软件整理</h1>
     <div class="post-meta"><span class="meta-tags">
   <span class="post-tags"><a href="https://wananaiko.com/tags/macos/">macOS</a></span></span
 >
   
     </div>
   </header> 
-  <div class="post-content slide-enter-content">
-    
-    
-    <div class="contentai">
-      <div class="contentai-head">
-        <div class="contentai-title">
-          <svg class="iconpark-icon">
-            <use href="#icon-contentai"></use>
-          </svg>
-          AI 摘要
-        </div>
-        <div class="contentai-span">基于 ChatGPT 3.5</div>
+
+  
+  
+  <div class="contentai">
+    <div class="contentai-head">
+      <div class="contentai-title">
+        <svg class="iconpark-icon">
+          <use href="#icon-contentai"></use>
+        </svg>
+        AI 摘要
       </div>
-      
-      <div class="contentai-ai">
-        <span id="typedText"></span>
-        <span class="typed-cursor typed-cursor--blink">|</span>
-      </div>
-      <script>
-        var contentaiText = "这是一篇关于macOS常用软件整理的文章，介绍了不同种类的软件以及它们的功能。文章分为三部分：提升效率、系统美化、工作规划。每一部分又分别介绍了不同的软件以及它们的用途。";
-      </script>
+      <div class="contentai-span" data-cursor="text">基于 ChatGPT 3.5</div>
     </div>
     
-    <p>聊一聊 macOS 的一些软件使用心得，希望能够对其他人有所帮助。</p>
+    <div class="contentai-ai">
+      <span id="typedText"></span>
+      <span class="typed-cursor typed-cursor--blink">|</span>
+    </div>
+    <script>
+      var contentaiText = "这是一篇关于macOS常用软件整理的文章，介绍了不同种类的软件以及它们的功能。文章分为三部分：提升效率、系统美化、工作规划。每一部分又分别介绍了不同的软件以及它们的用途。";
+    </script>
+  </div>
+  
+  
+
+  <div
+    class="post-content slide-enter-content"
+    data-cursor="text"
+    data-cursor-style="background: currentColor"
+  ><p>聊一聊 macOS 的一些软件使用心得，希望能够对其他人有所帮助。</p>
 <h2 id="提升效率">提升效率</h2>
 <p><strong>Setapp</strong>：参加了别人的家庭计划，属于团购车，年费 285。感觉还是很划算的，可以省去你单独买一些软件授权的费用，减少折腾。</p>
 <p><strong>BetterZip</strong>：解压工具。Setapp 内下载。</p>
@@ -493,6 +510,9 @@ window.addEventListener('load', () => {
       "
     >
       <button
+        style="cursor: none"
+        data-cursor="block"
+        data-cursor-style="background: #00999930;"
         id="rewardButton"
         disable="enable"
         onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}"
@@ -621,7 +641,12 @@ window.addEventListener('load', () => {
         </div>
       </button>
       <a href="/donate">
-        <span class="donate-bottom">感谢各位金主的打赏</span>
+        <span
+          class="donate-bottom"
+          data-cursor="block"
+          data-cursor-style="background: #00999930"
+          >感谢各位金主的打赏</span
+        >
       </a>
       <div id="QR" style="display: none">
         <div id="wechat" style="display: inline-block">
