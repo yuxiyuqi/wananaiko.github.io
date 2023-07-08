@@ -8,7 +8,7 @@ html {
   -webkit-tap-highlight-color: transparent;
   overflow-y: scroll;
   -webkit-font-smoothing: antialiased;
-  cursor: none;
+  cursor: none !important;
   /*text-rendering: optimizeLegibility; */
 }
 
@@ -33,7 +33,7 @@ body {
   word-break: break-word;
   background: var(--theme);
   letter-spacing: 0.01em;
-  cursor: none;
+  cursor: none !important;
   /* -webkit-font-smoothing: antialiased; */
 }
 
@@ -282,7 +282,8 @@ body {
 }
 
 img[data-action="zoom"] {
-  cursor: zoom-in;
+  /* cursor: zoom-in; */
+  cursor: none;
 }
 
 .zoom-img,
@@ -293,11 +294,13 @@ img[data-action="zoom"] {
 }
 
 img.zoom-img {
-  cursor: zoom-out;
+  /* cursor: zoom-out; */
+  cursor: none;
 }
 
 .zoom-overlay {
-  cursor: zoom-out;
+  /* cursor: zoom-out; */
+  cursor: none;
   z-index: 420;
   background: var(--theme) !important;
   position: fixed;

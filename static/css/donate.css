@@ -86,6 +86,7 @@
   overflow: hidden;
   width: 64px;
   height: 64px;
+  cursor: none;
 }
 
 .donate-img img {

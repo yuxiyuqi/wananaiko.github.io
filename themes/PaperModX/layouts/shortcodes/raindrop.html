@@ -60,6 +60,7 @@ getJSON $apiUrl "?access_token=" $token "&perpage=50&sort=-created" }}
     text-decoration: none;
     box-shadow: none;
     padding: 0 0.5rem;
+    background-color: unset;
   }
 
   .mk-title-wrapper {
@@ -75,17 +76,24 @@ getJSON $apiUrl "?access_token=" $token "&perpage=50&sort=-created" }}
     background-repeat: no-repeat;
     background-position: left center;
     background-size: 16px;
-    line-height: 1.5rem;
+    line-height: 22px;
     color: var(--content);
     transition: 0.5s;
     margin-top: 12px;
     width: fit-content;
+    padding: 0 4px;
+    margin-left: -4px;
   }
 
   .mk-raindrop-bookmark:hover .mk-title {
     color: var(--content);
     box-shadow: var(--box-shadow);
     width: fit-content;
+    box-shadow: none;
+    background-color: unset;
+    padding: 0 4px;
+    border-radius: 4px;
+    margin-left: -4px;
   }
 
   .mk-excerpt {
@@ -398,7 +406,13 @@ getJSON $apiUrl "?access_token=" $token "&perpage=50&sort=-created" }}
         <img src="{{ $item.cover }}" loading="lazy" />
       </div>
 
-      <div class="mk-title">{{ $item.title }}</div>
+      <div
+        class="mk-title"
+        data-cursor="block"
+        data-cursor-style="background:var(--cursor-color);border-radius:var(--radius);"
+      >
+        {{ $item.title }}
+      </div>
       {{ with $item.excerpt }}
       <div class="mk-excerpt">{{ . }}</div>
       {{ end }} {{ with $item.note }}
