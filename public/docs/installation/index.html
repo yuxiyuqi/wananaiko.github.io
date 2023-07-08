@@ -16,8 +16,8 @@
 /> <meta name="description" content="Read Install and Update instructions here"> <meta name="author" content="Aditya Telange"> <link rel="canonical" href="https://wananaiko.com/docs/installation/">
 <link
   crossorigin="anonymous"
-  href="/assets/css/stylesheet.min.acaecb8268e31b6a8c741eceb583fd8393800499f8601e0a4ef8ba4ecb463e75.css"
-  integrity="sha256-rK7LgmjjG2qMdB7OtYP9g5OABJn4YB4KTvi6TstGPnU="
+  href="/assets/css/stylesheet.min.036eff7540a1acd03d35f9dfe400444b1300be3655d371a022fc1194d01ff4de.css"
+  integrity="sha256-A27/dUChrNA9Nfnf5ABESxMAvjZV03GgIvwRlNAf9N4="
   rel="preload stylesheet"
   as="style"
 /> <link rel="icon" href="https://images.wananaiko.com/favicon.ico"> <link rel="apple-touch-icon" href="https://wananaiko.com/apple-touch-icon.png"> <link rel="alternate" hreflang="en" href="https://wananaiko.com/docs/installation/" />
@@ -404,7 +404,7 @@ window.addEventListener('load', () => {
 
 
 <script type="module">
-  import { initCursor } from "https://unpkg.com/ipad-cursor@latest";
+  import { initCursor } from "/js/ipad-cursor.mjs";
   initCursor();
 </script><main 
     class="main post slide-enter-content">
@@ -434,15 +434,14 @@ window.addEventListener('load', () => {
     </div>
   </header> 
 
-  
-  
-  
-
   <div
     class="post-content slide-enter-content"
     data-cursor="text"
     data-cursor-style="background: currentColor"
-  ><h2 id="intro">Intro</h2>
+  >
+    
+    
+    <h2 id="intro">Intro</h2>
 <ul>
 <li><strong>We&rsquo;ll be using <code>yml/yaml</code> format for all examples down below, I recommend using <code>yml</code> over <code>toml</code> as it is easier to read.</strong></li>
 <li>You can find any <a href="https://www.google.com/search?q=yml&#43;to&#43;toml" target="_blank" rel="noopener">YML to TOML</a> converters if necessary.</li>
@@ -876,14 +875,51 @@ window.addEventListener('load', () => {
 <nav class="paginav">
   <a class="prev" href="https://wananaiko.com/docs/icons/">
     <span class="title">
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left" style="user-select: text;"><line x1="19" y1="12" x2="5" y2="12" style="user-select: text;"></line><polyline points="12 19 5 12 12 5" style="user-select: text;"></polyline></svg>&nbsp;上一页</span>
-    <br>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="feather feather-arrow-left"
+        style="user-select: text"
+      >
+        <line x1="19" y1="12" x2="5" y2="12" style="user-select: text"></line>
+        <polyline
+          points="12 19 5 12 12 5"
+          style="user-select: text"
+        ></polyline></svg
+      >&nbsp;上一页</span
+    >
+    <br />
     <span>Icons</span>
   </a>
   <a class="next" href="https://wananaiko.com/docs/features/">
-    <span class="title">下一页&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right" style="user-select: text;"><line x1="5" y1="12" x2="19" y2="12" style="user-select: text;"></line><polyline points="12 5 19 12 12 19" style="user-select: text;"></polyline></svg>
+    <span class="title">下一页&nbsp;<svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="feather feather-arrow-right"
+        style="user-select: text"
+      >
+        <line x1="5" y1="12" x2="19" y2="12" style="user-select: text"></line>
+        <polyline
+          points="12 5 19 12 12 19"
+          style="user-select: text"
+        ></polyline>
+      </svg>
     </span>
-    <br>
+    <br />
     <span>PaperMod Features</span>
   </a>
 </nav>

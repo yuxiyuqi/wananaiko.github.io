@@ -16,8 +16,8 @@
 /> <meta name="description" content="Guide to emoji usage in Hugo"> <meta name="author" content="Hugo Authors"> <link rel="canonical" href="https://wananaiko.com/docs/emoji-support/">
 <link
   crossorigin="anonymous"
-  href="/assets/css/stylesheet.min.acaecb8268e31b6a8c741eceb583fd8393800499f8601e0a4ef8ba4ecb463e75.css"
-  integrity="sha256-rK7LgmjjG2qMdB7OtYP9g5OABJn4YB4KTvi6TstGPnU="
+  href="/assets/css/stylesheet.min.036eff7540a1acd03d35f9dfe400444b1300be3655d371a022fc1194d01ff4de.css"
+  integrity="sha256-A27/dUChrNA9Nfnf5ABESxMAvjZV03GgIvwRlNAf9N4="
   rel="preload stylesheet"
   as="style"
 /> <link rel="icon" href="https://images.wananaiko.com/favicon.ico"> <link rel="apple-touch-icon" href="https://wananaiko.com/apple-touch-icon.png"> <link rel="alternate" hreflang="en" href="https://wananaiko.com/docs/emoji-support/" />
@@ -404,7 +404,7 @@ window.addEventListener('load', () => {
 
 
 <script type="module">
-  import { initCursor } from "https://unpkg.com/ipad-cursor@latest";
+  import { initCursor } from "/js/ipad-cursor.mjs";
   initCursor();
 </script><main 
     class="main post slide-enter-content">
@@ -431,21 +431,25 @@ window.addEventListener('load', () => {
     >Emoji Support</h1>
     <div class="post-description">Guide to emoji usage in Hugo</div>
     <div class="post-meta"><span class="meta-tags">
-  <span class="post-tags"><a href="https://wananaiko.com/tags/example/">example</a></span></span
+  <span class="post-tags"><a
+      href="https://wananaiko.com/tags/example/"
+      data-cursor="block"
+      data-cursor-style="background:var(--cursor-color);border-radius: 9999px;"
+      >example</a
+    ></span></span
 >
   
     </div>
   </header> 
 
-  
-  
-  
-
   <div
     class="post-content slide-enter-content"
     data-cursor="text"
     data-cursor-style="background: currentColor"
-  ><p>Emoji can be enabled in a Hugo project in a number of ways.</p>
+  >
+    
+    
+    <p>Emoji can be enabled in a Hugo project in a number of ways.</p>
 <p>The <a href="https://gohugo.io/functions/emojify/" target="_blank" rel="noopener"><code>emojify</code></a> function can be called directly in templates or <a href="https://gohugo.io/templates/shortcode-templates/#inline-shortcodes" target="_blank" rel="noopener">Inline Shortcodes</a>.</p>
 <p>To enable emoji globally, set <code>enableEmoji</code> to <code>true</code> in your site&rsquo;s <a href="https://gohugo.io/getting-started/configuration/" target="_blank" rel="noopener">configuration</a> and then you can type emoji shorthand codes directly in content files; e.g.</p>
 <p><span class="nowrap"><span class="emojify">🙈</span> <code>🙈</code></span>  <span class="nowrap"><span class="emojify">🙉</span> <code>🙉</code></span>  <span class="nowrap"><span class="emojify">🙊</span> <code>🙊</code></span></p>
@@ -642,8 +646,27 @@ window.addEventListener('load', () => {
 <nav class="paginav">
   <a class="prev" href="https://wananaiko.com/docs/math-typesetting/">
     <span class="title">
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left" style="user-select: text;"><line x1="19" y1="12" x2="5" y2="12" style="user-select: text;"></line><polyline points="12 19 5 12 12 5" style="user-select: text;"></polyline></svg>&nbsp;上一页</span>
-    <br>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="feather feather-arrow-left"
+        style="user-select: text"
+      >
+        <line x1="19" y1="12" x2="5" y2="12" style="user-select: text"></line>
+        <polyline
+          points="12 19 5 12 12 5"
+          style="user-select: text"
+        ></polyline></svg
+      >&nbsp;上一页</span
+    >
+    <br />
     <span>Math Typesetting</span>
   </a>
 </nav>

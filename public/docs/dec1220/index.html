@@ -16,8 +16,8 @@
 /> <meta name="description" content="Hugo 部署到 Vercel 最近考虑把 Wordpress 博客换到 Hugo，一番折腾之后，通过 Github&#43;Vercel 的方式实现了自动部署，还挺方便的，以后只需要在本地编写 Markdown 文件并发布到 Github 就可以了。"> <meta name="author" content="wananaiko"> <link rel="canonical" href="https://wananaiko.com/docs/dec1220/">
 <link
   crossorigin="anonymous"
-  href="/assets/css/stylesheet.min.acaecb8268e31b6a8c741eceb583fd8393800499f8601e0a4ef8ba4ecb463e75.css"
-  integrity="sha256-rK7LgmjjG2qMdB7OtYP9g5OABJn4YB4KTvi6TstGPnU="
+  href="/assets/css/stylesheet.min.036eff7540a1acd03d35f9dfe400444b1300be3655d371a022fc1194d01ff4de.css"
+  integrity="sha256-A27/dUChrNA9Nfnf5ABESxMAvjZV03GgIvwRlNAf9N4="
   rel="preload stylesheet"
   as="style"
 /> <link rel="icon" href="https://images.wananaiko.com/favicon.ico"> <link rel="apple-touch-icon" href="https://wananaiko.com/apple-touch-icon.png"> <link rel="alternate" hreflang="en" href="https://wananaiko.com/docs/dec1220/" />
@@ -71,7 +71,7 @@
   "wordCount" : "919",
   "inLanguage": "en",
   "datePublished": "2022-12-20T00:00:00Z",
-  "dateModified": "2023-06-27T21:19:11.235210973+08:00",
+  "dateModified": "2023-06-27T21:19:11+08:00",
   "author":{
     "@type": "Person",
     "name": "wananaiko"
@@ -404,7 +404,7 @@ window.addEventListener('load', () => {
 
 
 <script type="module">
-  import { initCursor } from "https://unpkg.com/ipad-cursor@latest";
+  import { initCursor } from "/js/ipad-cursor.mjs";
   initCursor();
 </script><main 
     class="main post slide-enter-content">
@@ -430,41 +430,60 @@ window.addEventListener('load', () => {
       data-cursor-style="background: currentColor"
     >基于 Vercel 和 Fly.io 免费部署的应用</h1>
     <div class="post-meta"><span class="meta-tags">
-  <span class="post-tags"><a href="https://wananaiko.com/tags/vercel/">Vercel</a><a href="https://wananaiko.com/tags/hugo/">Hugo</a><a href="https://wananaiko.com/tags/umami/">Umami</a><a href="https://wananaiko.com/tags/rsshub/">RSSHub</a></span></span
+  <span class="post-tags"><a
+      href="https://wananaiko.com/tags/vercel/"
+      data-cursor="block"
+      data-cursor-style="background:var(--cursor-color);border-radius: 9999px;"
+      >Vercel</a
+    ><a
+      href="https://wananaiko.com/tags/hugo/"
+      data-cursor="block"
+      data-cursor-style="background:var(--cursor-color);border-radius: 9999px;"
+      >Hugo</a
+    ><a
+      href="https://wananaiko.com/tags/umami/"
+      data-cursor="block"
+      data-cursor-style="background:var(--cursor-color);border-radius: 9999px;"
+      >Umami</a
+    ><a
+      href="https://wananaiko.com/tags/rsshub/"
+      data-cursor="block"
+      data-cursor-style="background:var(--cursor-color);border-radius: 9999px;"
+      >RSSHub</a
+    ></span></span
 >
   
     </div>
   </header> 
 
-  
-  
-  <div class="contentai">
-    <div class="contentai-head">
-      <div class="contentai-title">
-        <svg class="iconpark-icon">
-          <use href="#icon-contentai"></use>
-        </svg>
-        AI 摘要
-      </div>
-      <div class="contentai-span" data-cursor="text">基于 ChatGPT 3.5</div>
-    </div>
-    
-    <div class="contentai-ai">
-      <span id="typedText"></span>
-      <span class="typed-cursor typed-cursor--blink">|</span>
-    </div>
-    <script>
-      var contentaiText = "这篇文章介绍了如何将 WordPress 博客换到 Hugo 并在 Vercel 上实现自动部署，以及如何将 Umami 和 RSSHub 部署到 Vercel 上，如何将 memos 部署到 fly.io";
-    </script>
-  </div>
-  
-  
-
   <div
     class="post-content slide-enter-content"
     data-cursor="text"
     data-cursor-style="background: currentColor"
-  ><h2 id="hugo-部署到-vercel">Hugo 部署到 Vercel</h2>
+  >
+    
+    
+    <div class="contentai">
+      <div class="contentai-head">
+        <div class="contentai-title">
+          <svg class="iconpark-icon">
+            <use href="#icon-contentai"></use>
+          </svg>
+          AI 摘要
+        </div>
+        <div class="contentai-span" data-cursor="text">基于 ChatGPT 3.5</div>
+      </div>
+      
+      <div class="contentai-ai">
+        <span id="typedText"></span>
+        <span class="typed-cursor typed-cursor--blink">|</span>
+      </div>
+      <script>
+        var contentaiText = "这篇文章介绍了如何将 WordPress 博客换到 Hugo 并在 Vercel 上实现自动部署，以及如何将 Umami 和 RSSHub 部署到 Vercel 上，如何将 memos 部署到 fly.io";
+      </script>
+    </div>
+    
+    <h2 id="hugo-部署到-vercel">Hugo 部署到 Vercel</h2>
 <p>最近考虑把 Wordpress 博客换到 Hugo，一番折腾之后，通过 Github+Vercel 的方式实现了自动部署，还挺方便的，以后只需要在本地编写 Markdown 文件并发布到 Github 就可以了。以 macOS 下为例：</p>
 <ol>
 <li>
@@ -683,14 +702,51 @@ window.addEventListener('load', () => {
 <nav class="paginav">
   <a class="prev" href="https://wananaiko.com/docs/howtobesuccessful/">
     <span class="title">
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left" style="user-select: text;"><line x1="19" y1="12" x2="5" y2="12" style="user-select: text;"></line><polyline points="12 19 5 12 12 5" style="user-select: text;"></polyline></svg>&nbsp;上一页</span>
-    <br>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="feather feather-arrow-left"
+        style="user-select: text"
+      >
+        <line x1="19" y1="12" x2="5" y2="12" style="user-select: text"></line>
+        <polyline
+          points="12 19 5 12 12 5"
+          style="user-select: text"
+        ></polyline></svg
+      >&nbsp;上一页</span
+    >
+    <br />
     <span>How To Be Successful → 30 条</span>
   </a>
   <a class="next" href="https://wananaiko.com/docs/icons_preview/">
-    <span class="title">下一页&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right" style="user-select: text;"><line x1="5" y1="12" x2="19" y2="12" style="user-select: text;"></line><polyline points="12 5 19 12 12 19" style="user-select: text;"></polyline></svg>
+    <span class="title">下一页&nbsp;<svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="feather feather-arrow-right"
+        style="user-select: text"
+      >
+        <line x1="5" y1="12" x2="19" y2="12" style="user-select: text"></line>
+        <polyline
+          points="12 5 19 12 12 19"
+          style="user-select: text"
+        ></polyline>
+      </svg>
     </span>
-    <br>
+    <br />
     <span>Icons Preview</span>
   </a>
 </nav>

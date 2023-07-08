@@ -16,8 +16,8 @@
 /> <meta name="description" content="聊一聊 macOS 的一些软件使用心得，希望能够对其他人有所帮助。 提升效率 Setapp：参加了别人的家庭计划，属于团购车，年费 285。感觉还是很划算的，"> <meta name="author" content="wananaiko"> <link rel="canonical" href="https://wananaiko.com/docs/macosapps/">
 <link
   crossorigin="anonymous"
-  href="/assets/css/stylesheet.min.acaecb8268e31b6a8c741eceb583fd8393800499f8601e0a4ef8ba4ecb463e75.css"
-  integrity="sha256-rK7LgmjjG2qMdB7OtYP9g5OABJn4YB4KTvi6TstGPnU="
+  href="/assets/css/stylesheet.min.036eff7540a1acd03d35f9dfe400444b1300be3655d371a022fc1194d01ff4de.css"
+  integrity="sha256-A27/dUChrNA9Nfnf5ABESxMAvjZV03GgIvwRlNAf9N4="
   rel="preload stylesheet"
   as="style"
 /> <link rel="icon" href="https://images.wananaiko.com/favicon.ico"> <link rel="apple-touch-icon" href="https://wananaiko.com/apple-touch-icon.png"> <link rel="alternate" hreflang="en" href="https://wananaiko.com/docs/macosapps/" />
@@ -71,7 +71,7 @@
   "wordCount" : "1530",
   "inLanguage": "en",
   "datePublished": "2023-01-07T20:14:36+08:00",
-  "dateModified": "2023-06-26T21:39:28.126202538+08:00",
+  "dateModified": "2023-06-26T21:39:28+08:00",
   "author":[{
     "@type": "Person",
     "name": "wananaiko"
@@ -404,7 +404,7 @@ window.addEventListener('load', () => {
 
 
 <script type="module">
-  import { initCursor } from "https://unpkg.com/ipad-cursor@latest";
+  import { initCursor } from "/js/ipad-cursor.mjs";
   initCursor();
 </script><main 
     class="main post slide-enter-content">
@@ -430,41 +430,45 @@ window.addEventListener('load', () => {
       data-cursor-style="background: currentColor"
     >常用的macOS软件整理</h1>
     <div class="post-meta"><span class="meta-tags">
-  <span class="post-tags"><a href="https://wananaiko.com/tags/macos/">macOS</a></span></span
+  <span class="post-tags"><a
+      href="https://wananaiko.com/tags/macos/"
+      data-cursor="block"
+      data-cursor-style="background:var(--cursor-color);border-radius: 9999px;"
+      >macOS</a
+    ></span></span
 >
   
     </div>
   </header> 
 
-  
-  
-  <div class="contentai">
-    <div class="contentai-head">
-      <div class="contentai-title">
-        <svg class="iconpark-icon">
-          <use href="#icon-contentai"></use>
-        </svg>
-        AI 摘要
-      </div>
-      <div class="contentai-span" data-cursor="text">基于 ChatGPT 3.5</div>
-    </div>
-    
-    <div class="contentai-ai">
-      <span id="typedText"></span>
-      <span class="typed-cursor typed-cursor--blink">|</span>
-    </div>
-    <script>
-      var contentaiText = "这是一篇关于macOS常用软件整理的文章，介绍了不同种类的软件以及它们的功能。文章分为三部分：提升效率、系统美化、工作规划。每一部分又分别介绍了不同的软件以及它们的用途。";
-    </script>
-  </div>
-  
-  
-
   <div
     class="post-content slide-enter-content"
     data-cursor="text"
     data-cursor-style="background: currentColor"
-  ><p>聊一聊 macOS 的一些软件使用心得，希望能够对其他人有所帮助。</p>
+  >
+    
+    
+    <div class="contentai">
+      <div class="contentai-head">
+        <div class="contentai-title">
+          <svg class="iconpark-icon">
+            <use href="#icon-contentai"></use>
+          </svg>
+          AI 摘要
+        </div>
+        <div class="contentai-span" data-cursor="text">基于 ChatGPT 3.5</div>
+      </div>
+      
+      <div class="contentai-ai">
+        <span id="typedText"></span>
+        <span class="typed-cursor typed-cursor--blink">|</span>
+      </div>
+      <script>
+        var contentaiText = "这是一篇关于macOS常用软件整理的文章，介绍了不同种类的软件以及它们的功能。文章分为三部分：提升效率、系统美化、工作规划。每一部分又分别介绍了不同的软件以及它们的用途。";
+      </script>
+    </div>
+    
+    <p>聊一聊 macOS 的一些软件使用心得，希望能够对其他人有所帮助。</p>
 <h2 id="提升效率">提升效率</h2>
 <p><strong>Setapp</strong>：参加了别人的家庭计划，属于团购车，年费 285。感觉还是很划算的，可以省去你单独买一些软件授权的费用，减少折腾。</p>
 <p><strong>BetterZip</strong>：解压工具。Setapp 内下载。</p>
@@ -667,14 +671,51 @@ window.addEventListener('load', () => {
 <nav class="paginav">
   <a class="prev" href="https://wananaiko.com/docs/how-iterm2-show-current-proxy-status/">
     <span class="title">
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left" style="user-select: text;"><line x1="19" y1="12" x2="5" y2="12" style="user-select: text;"></line><polyline points="12 19 5 12 12 5" style="user-select: text;"></polyline></svg>&nbsp;上一页</span>
-    <br>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="feather feather-arrow-left"
+        style="user-select: text"
+      >
+        <line x1="19" y1="12" x2="5" y2="12" style="user-select: text"></line>
+        <polyline
+          points="12 19 5 12 12 5"
+          style="user-select: text"
+        ></polyline></svg
+      >&nbsp;上一页</span
+    >
+    <br />
     <span>让 ITERM2 实时显示梯子状态</span>
   </a>
   <a class="next" href="https://wananaiko.com/docs/howtobesuccessful/">
-    <span class="title">下一页&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right" style="user-select: text;"><line x1="5" y1="12" x2="19" y2="12" style="user-select: text;"></line><polyline points="12 5 19 12 12 19" style="user-select: text;"></polyline></svg>
+    <span class="title">下一页&nbsp;<svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="feather feather-arrow-right"
+        style="user-select: text"
+      >
+        <line x1="5" y1="12" x2="19" y2="12" style="user-select: text"></line>
+        <polyline
+          points="12 5 19 12 12 19"
+          style="user-select: text"
+        ></polyline>
+      </svg>
     </span>
-    <br>
+    <br />
     <span>How To Be Successful → 30 条</span>
   </a>
 </nav>

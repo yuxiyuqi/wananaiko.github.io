@@ -16,8 +16,8 @@
 /> <meta name="description" content="Sample article showcasing basic Markdown syntax and formatting for HTML elements."> <meta name="author" content="Hugo Authors"> <link rel="canonical" href="https://wananaiko.com/posts/markdown-syntax/">
 <link
   crossorigin="anonymous"
-  href="/assets/css/stylesheet.min.acaecb8268e31b6a8c741eceb583fd8393800499f8601e0a4ef8ba4ecb463e75.css"
-  integrity="sha256-rK7LgmjjG2qMdB7OtYP9g5OABJn4YB4KTvi6TstGPnU="
+  href="/assets/css/stylesheet.min.036eff7540a1acd03d35f9dfe400444b1300be3655d371a022fc1194d01ff4de.css"
+  integrity="sha256-A27/dUChrNA9Nfnf5ABESxMAvjZV03GgIvwRlNAf9N4="
   rel="preload stylesheet"
   as="style"
 /> <link rel="icon" href="https://images.wananaiko.com/favicon.ico"> <link rel="apple-touch-icon" href="https://wananaiko.com/apple-touch-icon.png"> <link rel="alternate" hreflang="en" href="https://wananaiko.com/posts/markdown-syntax/" />
@@ -405,7 +405,7 @@ window.addEventListener('load', () => {
 
 
 <script type="module">
-  import { initCursor } from "https://unpkg.com/ipad-cursor@latest";
+  import { initCursor } from "/js/ipad-cursor.mjs";
   initCursor();
 </script><main 
     class="main post slide-enter-content">
@@ -432,7 +432,22 @@ window.addEventListener('load', () => {
     >Markdown Syntax Guide</h1>
     <div class="post-description">Sample article showcasing basic Markdown syntax and formatting for HTML elements.</div>
     <div class="post-meta"><span class="meta-tags">
-  <span class="post-tags"><a href="https://wananaiko.com/tags/markdown/">markdown</a><a href="https://wananaiko.com/tags/syntax/">syntax</a><a href="https://wananaiko.com/tags/example/">example</a></span></span
+  <span class="post-tags"><a
+      href="https://wananaiko.com/tags/markdown/"
+      data-cursor="block"
+      data-cursor-style="background:var(--cursor-color);border-radius: 9999px;"
+      >markdown</a
+    ><a
+      href="https://wananaiko.com/tags/syntax/"
+      data-cursor="block"
+      data-cursor-style="background:var(--cursor-color);border-radius: 9999px;"
+      >syntax</a
+    ><a
+      href="https://wananaiko.com/tags/example/"
+      data-cursor="block"
+      data-cursor-style="background:var(--cursor-color);border-radius: 9999px;"
+      >example</a
+    ></span></span
 ><span class="meta-item">
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -554,15 +569,14 @@ window.addEventListener('load', () => {
 </div>
 
 
-  
-  
-  
-
   <div
     class="post-content slide-enter-content"
     data-cursor="text"
     data-cursor-style="background: currentColor"
-  ><p>This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.</p>
+  >
+    
+    
+    <p>This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.</p>
 <h2 id="headings">Headings</h2>
 <p>The following HTML <code>&lt;h1&gt;</code>—<code>&lt;h6&gt;</code> elements represent six levels of section headings. <code>&lt;h1&gt;</code> is the highest section level while <code>&lt;h6&gt;</code> is the lowest.</p>
 <h1 id="h1">H1</h1>
@@ -909,9 +923,27 @@ This is pre text
     
 <nav class="paginav">
   <a class="next" href="https://wananaiko.com/posts/placeholder-text/">
-    <span class="title">下一页&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right" style="user-select: text;"><line x1="5" y1="12" x2="19" y2="12" style="user-select: text;"></line><polyline points="12 5 19 12 12 19" style="user-select: text;"></polyline></svg>
+    <span class="title">下一页&nbsp;<svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="feather feather-arrow-right"
+        style="user-select: text"
+      >
+        <line x1="5" y1="12" x2="19" y2="12" style="user-select: text"></line>
+        <polyline
+          points="12 5 19 12 12 19"
+          style="user-select: text"
+        ></polyline>
+      </svg>
     </span>
-    <br>
+    <br />
     <span>Placeholder Text</span>
   </a>
 </nav>

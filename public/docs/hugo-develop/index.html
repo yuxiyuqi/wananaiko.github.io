@@ -16,8 +16,8 @@
 /> <meta name="description" content="增加空格之神 使用空格之神的浏览器插件很久了，真的是阅读强迫症患者的福音，空格之神项目地址 在 Hugo的 themes/PaperModX/layouts/_default/baseof.html 内增加以下代码： &lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/pangu/4.0.7/pangu.min.js&#34;&gt;&lt;/script&gt; &lt;script&gt; pangu.spacingPage(); &lt;/script&gt; 用完后感觉整"> <meta name="author" content="wananaiko"> <link rel="canonical" href="https://wananaiko.com/docs/hugo-develop/">
 <link
   crossorigin="anonymous"
-  href="/assets/css/stylesheet.min.acaecb8268e31b6a8c741eceb583fd8393800499f8601e0a4ef8ba4ecb463e75.css"
-  integrity="sha256-rK7LgmjjG2qMdB7OtYP9g5OABJn4YB4KTvi6TstGPnU="
+  href="/assets/css/stylesheet.min.036eff7540a1acd03d35f9dfe400444b1300be3655d371a022fc1194d01ff4de.css"
+  integrity="sha256-A27/dUChrNA9Nfnf5ABESxMAvjZV03GgIvwRlNAf9N4="
   rel="preload stylesheet"
   as="style"
 /> <link rel="icon" href="https://images.wananaiko.com/favicon.ico"> <link rel="apple-touch-icon" href="https://wananaiko.com/apple-touch-icon.png"> <link rel="alternate" hreflang="en" href="https://wananaiko.com/docs/hugo-develop/" />
@@ -71,7 +71,7 @@
   "wordCount" : "1826",
   "inLanguage": "en",
   "datePublished": "2023-01-09T00:24:18+08:00",
-  "dateModified": "2023-06-27T21:15:40.407091324+08:00",
+  "dateModified": "2023-06-27T21:15:40+08:00",
   "author":[{
     "@type": "Person",
     "name": "wananaiko"
@@ -404,7 +404,7 @@ window.addEventListener('load', () => {
 
 
 <script type="module">
-  import { initCursor } from "https://unpkg.com/ipad-cursor@latest";
+  import { initCursor } from "/js/ipad-cursor.mjs";
   initCursor();
 </script><main 
     class="main post slide-enter-content">
@@ -430,41 +430,55 @@ window.addEventListener('load', () => {
       data-cursor-style="background: currentColor"
     >Hugo 和 PaperModX 的一些配置记录</h1>
     <div class="post-meta"><span class="meta-tags">
-  <span class="post-tags"><a href="https://wananaiko.com/tags/hugo/">Hugo</a><a href="https://wananaiko.com/tags/waline/">waline</a><a href="https://wananaiko.com/tags/papermodx/">PaperModX</a></span></span
+  <span class="post-tags"><a
+      href="https://wananaiko.com/tags/hugo/"
+      data-cursor="block"
+      data-cursor-style="background:var(--cursor-color);border-radius: 9999px;"
+      >Hugo</a
+    ><a
+      href="https://wananaiko.com/tags/waline/"
+      data-cursor="block"
+      data-cursor-style="background:var(--cursor-color);border-radius: 9999px;"
+      >waline</a
+    ><a
+      href="https://wananaiko.com/tags/papermodx/"
+      data-cursor="block"
+      data-cursor-style="background:var(--cursor-color);border-radius: 9999px;"
+      >PaperModX</a
+    ></span></span
 >
   
     </div>
   </header> 
 
-  
-  
-  <div class="contentai">
-    <div class="contentai-head">
-      <div class="contentai-title">
-        <svg class="iconpark-icon">
-          <use href="#icon-contentai"></use>
-        </svg>
-        AI 摘要
-      </div>
-      <div class="contentai-span" data-cursor="text">基于 ChatGPT 3.5</div>
-    </div>
-    
-    <div class="contentai-ai">
-      <span id="typedText"></span>
-      <span class="typed-cursor typed-cursor--blink">|</span>
-    </div>
-    <script>
-      var contentaiText = "这是一篇关于使用 Hugo 和 PaperModX 进行配置的文章，介绍了如何添加空格之神、增加 Waline 评论、添加鼠标彩虹效果和友情链接页面等功能的具体操作方法和代码。";
-    </script>
-  </div>
-  
-  
-
   <div
     class="post-content slide-enter-content"
     data-cursor="text"
     data-cursor-style="background: currentColor"
-  ><h3 id="增加空格之神">增加空格之神</h3>
+  >
+    
+    
+    <div class="contentai">
+      <div class="contentai-head">
+        <div class="contentai-title">
+          <svg class="iconpark-icon">
+            <use href="#icon-contentai"></use>
+          </svg>
+          AI 摘要
+        </div>
+        <div class="contentai-span" data-cursor="text">基于 ChatGPT 3.5</div>
+      </div>
+      
+      <div class="contentai-ai">
+        <span id="typedText"></span>
+        <span class="typed-cursor typed-cursor--blink">|</span>
+      </div>
+      <script>
+        var contentaiText = "这是一篇关于使用 Hugo 和 PaperModX 进行配置的文章，介绍了如何添加空格之神、增加 Waline 评论、添加鼠标彩虹效果和友情链接页面等功能的具体操作方法和代码。";
+      </script>
+    </div>
+    
+    <h3 id="增加空格之神">增加空格之神</h3>
 <p>使用空格之神的浏览器插件很久了，真的是阅读强迫症患者的福音，<a href="https://github.com/vinta/pangu.js" target="_blank" rel="noopener">空格之神项目地址</a></p>
 <p>在 Hugo的 <code>themes/PaperModX/layouts/_default/baseof.html</code> 内增加以下代码：</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://cdnjs.cloudflare.com/ajax/libs/pangu/4.0.7/pangu.min.js&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
@@ -1258,14 +1272,51 @@ window.addEventListener('load', () => {
 <nav class="paginav">
   <a class="prev" href="https://wananaiko.com/docs/hugo-photo-page/">
     <span class="title">
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left" style="user-select: text;"><line x1="19" y1="12" x2="5" y2="12" style="user-select: text;"></line><polyline points="12 19 5 12 12 5" style="user-select: text;"></polyline></svg>&nbsp;上一页</span>
-    <br>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="feather feather-arrow-left"
+        style="user-select: text"
+      >
+        <line x1="19" y1="12" x2="5" y2="12" style="user-select: text"></line>
+        <polyline
+          points="12 19 5 12 12 5"
+          style="user-select: text"
+        ></polyline></svg
+      >&nbsp;上一页</span
+    >
+    <br />
     <span>Hugo 添加相册单页</span>
   </a>
   <a class="next" href="https://wananaiko.com/docs/how-iterm2-show-current-proxy-status/">
-    <span class="title">下一页&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right" style="user-select: text;"><line x1="5" y1="12" x2="19" y2="12" style="user-select: text;"></line><polyline points="12 5 19 12 12 19" style="user-select: text;"></polyline></svg>
+    <span class="title">下一页&nbsp;<svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="feather feather-arrow-right"
+        style="user-select: text"
+      >
+        <line x1="5" y1="12" x2="19" y2="12" style="user-select: text"></line>
+        <polyline
+          points="12 5 19 12 12 19"
+          style="user-select: text"
+        ></polyline>
+      </svg>
     </span>
-    <br>
+    <br />
     <span>让 ITERM2 实时显示梯子状态</span>
   </a>
 </nav>
