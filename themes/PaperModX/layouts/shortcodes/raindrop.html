@@ -20,7 +20,7 @@ getJSON $apiUrl "?access_token=" $token "&perpage=50&sort=-created" }}
   .mk-raindrop-bookmark {
     width: 100%;
     margin: 0 auto;
-    cursor: pointer;
+    cursor: none;
     padding: 12px 4px 4px 4px;
     border-radius: var(--radius);
     --list-opacity: 1;
@@ -409,7 +409,7 @@ getJSON $apiUrl "?access_token=" $token "&perpage=50&sort=-created" }}
       <div
         class="mk-title"
         data-cursor="block"
-        data-cursor-style="background:var(--cursor-color);border-radius:var(--radius);"
+        data-cursor-style="background:var(--cursor-color);"
       >
         {{ $item.title }}
       </div>
