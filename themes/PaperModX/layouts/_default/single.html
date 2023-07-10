@@ -290,4 +290,15 @@
   // 当#rewardButton:hover时，修改svg id="292218605"中所有的stroke颜色为#fff,修改fill的颜色为#009999.
 </script>
 
+<script>
+  var links = document.querySelectorAll("p a");
+  for (var i = 0; i < links.length; i++) {
+    links[i].setAttribute("data-cursor", "block");
+    links[i].setAttribute(
+      "data-cursor-style",
+      "background:var(--cursor-color);"
+    );
+  }
+</script>
+
 {{- end }}{{/* end main */}}

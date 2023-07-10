@@ -111,7 +111,7 @@
 .post-content a:hover {
     color: var(--content);
     box-shadow: none;
-    background-color: var(--cursor-color);
+    background-color: unset;
     padding: 2px 4px;
     border-radius: 4px;
 }
