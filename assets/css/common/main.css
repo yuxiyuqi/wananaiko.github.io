@@ -196,7 +196,7 @@ svg.iconpark-icon-home:hover {
 .social-icons a:hover {
   color: var(--link-hover-color);
   box-shadow: var(--link-hover-underline-shadow);
-  transform: matrix(1.25, 0, 0, 1.25, 0, 0) !important;
+  /* transform: matrix(1.25, 0, 0, 1.25, 0, 0) !important; */
 }
 
 code {
