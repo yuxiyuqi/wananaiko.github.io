@@ -108,7 +108,7 @@ function getDefaultConfig() {
   const textStyle = {
     background: "rgba(100, 100, 100, 0.3)",
     scale: 1,
-    width: "4px",
+    width: "3px",
     height: "1.2em",
     border: "0px solid rgba(100, 100, 100, 0)",
     durationBackdropFilter: "1s",
@@ -121,7 +121,7 @@ function getDefaultConfig() {
     durationBase: "0.23s",
     durationBackdropFilter: "0.1s",
     backdropSaturate: "120%",
-    radius: "10px",
+    radius: "8px",
   };
   const mouseDownStyle = {
     background: "rgba(150, 150, 150, 0.3)",
