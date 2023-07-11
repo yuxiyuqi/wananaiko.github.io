@@ -180,7 +180,7 @@ svg.iconpark-icon-home:hover {
   transform: translateX(-50%);
   background-color: var(--primary);
   color: var(--entry);
-  font-size: 10px;
+  font-size: 13px;
   line-height: 20px;
   padding: 3px 8px;
   border-radius: 4px;
