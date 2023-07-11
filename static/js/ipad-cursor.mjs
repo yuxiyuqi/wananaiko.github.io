@@ -1,7 +1,11 @@
 let ready = false;
 let cursorEle = null;
-let isActive = false;
+let isBlockActive = false;
+let isTextActive = false;
+let isMouseDown = false;
 let styleTag = null;
+let latestCursorStyle = {};
+let mousedownStyleRecover = {};
 const position = { x: 0, y: 0 };
 const isServer = typeof document === "undefined";
 const registeredNodeSet = new Set();
@@ -63,7 +67,7 @@ class Utils {
   }
   static isMergebleObject(obj) {
     const isObject = (o) => o && typeof o === "object" && !Array.isArray(o);
-    return isObject(obj) && Object.keys(obj).length > 0;
+    return isObject(obj);
   }
   static mergeDeep(obj, ...sources) {
     if (!sources.length) return obj;
@@ -95,28 +99,33 @@ function getDefaultConfig() {
     durationPosition: "0s",
     durationBackdropFilter: "0s",
     background: "rgba(150, 150, 150, 0.2)",
+    scale: 1,
     border: "1px solid rgba(100, 100, 100, 0.1)",
     zIndex: 9999,
-    scale: 1,
     backdropBlur: "0px",
     backdropSaturate: "180%",
   };
   const textStyle = {
-    width: "3px",
+    background: "rgba(100, 100, 100, 0.3)",
+    scale: 1,
+    width: "4px",
     height: "1.2em",
     border: "0px solid rgba(100, 100, 100, 0)",
-    background: "rgba(100, 100, 100, 0.4)",
     durationBackdropFilter: "1s",
     radius: "10px",
   };
   const blockStyle = {
-    background: "rgba(100, 100, 100, 0.1)",
+    background: "rgba(100, 100, 100, 0.3)",
     border: "1px solid rgba(100, 100, 100, 0.05)",
     backdropBlur: "0px",
     durationBase: "0.23s",
     durationBackdropFilter: "0.1s",
     backdropSaturate: "120%",
     radius: "10px",
+  };
+  const mouseDownStyle = {
+    background: "rgba(150, 150, 150, 0.3)",
+    scale: 0.8,
   };
   const defaultConfig = {
     blockPadding: "auto",
@@ -125,6 +134,7 @@ function getDefaultConfig() {
     normalStyle,
     textStyle,
     blockStyle,
+    mouseDownStyle,
   };
   return defaultConfig;
 }
@@ -132,18 +142,72 @@ function getDefaultConfig() {
 function updateCursorStyle(keyOrObj, value) {
   if (!cursorEle) return;
   if (typeof keyOrObj === "string") {
+    latestCursorStyle[keyOrObj] = value;
     value && cursorEle.style.setProperty(keyOrObj, value);
   } else {
     Object.entries(keyOrObj).forEach(([key, value]) => {
       cursorEle && cursorEle.style.setProperty(key, value);
+      latestCursorStyle[key] = value;
     });
   }
 }
 /** record mouse position */
-function recordMousePosition(e) {
+function onMousemove(e) {
   position.x = e.clientX;
   position.y = e.clientY;
+  autoApplyTextCursor(e.target);
 }
+function onMousedown() {
+  if (isMouseDown || !config.enableMouseDownEffect || isBlockActive) return;
+  isMouseDown = true;
+  mousedownStyleRecover = { ...latestCursorStyle };
+  updateCursorStyle(Utils.style2Vars(config.mouseDownStyle || {}));
+}
+function onMouseup() {
+  if (!isMouseDown || !config.enableMouseDownEffect || isBlockActive) return;
+  isMouseDown = false;
+  const target = mousedownStyleRecover;
+  const styleToRecover = Utils.objectKeys(
+    Utils.style2Vars(config.mouseDownStyle || {})
+  ).reduce((prev, curr) => ({ ...prev, [curr]: target[curr] }), {});
+  updateCursorStyle(styleToRecover);
+}
+/**
+ * Automatically apply cursor style when hover on target
+ * @param target
+ * @returns
+ */
+function autoApplyTextCursor(target) {
+  var _a;
+  if (isBlockActive || isTextActive || !config.enableAutoTextCursor) return;
+  if (target && target.childNodes.length === 1) {
+    const child = target.childNodes[0];
+    if (
+      child.nodeType === 3 &&
+      ((_a = child.textContent) === null || _a === void 0
+        ? void 0
+        : _a.trim()) !== ""
+    ) {
+      target.setAttribute("data-cursor", "text");
+      applyTextCursor(target);
+      return;
+    }
+  }
+  resetCursorStyle();
+}
+let lastNode = null;
+const scrollHandler = () => {
+  const currentNode = document.elementFromPoint(position.x, position.y);
+  const mouseLeaveEvent = new MouseEvent("mouseleave", {
+    bubbles: true,
+    cancelable: true,
+    view: window,
+  });
+  if (currentNode !== lastNode && lastNode && mouseLeaveEvent) {
+    lastNode.dispatchEvent(mouseLeaveEvent);
+  }
+  lastNode = currentNode;
+};
 /**
  * Init cursor, hide default cursor, and listen mousemove event
  * will only run once in client even if called multiple times
@@ -153,7 +217,10 @@ function initCursor(_config) {
   if (isServer || ready) return;
   if (_config) updateConfig(_config);
   ready = true;
-  window.addEventListener("mousemove", recordMousePosition);
+  window.addEventListener("mousemove", onMousemove);
+  window.addEventListener("mousedown", onMousedown);
+  window.addEventListener("mouseup", onMouseup);
+  window.addEventListener("scroll", scrollHandler);
   createCursor();
   createStyle();
   updateCursorPosition();
@@ -166,7 +233,8 @@ function initCursor(_config) {
 function disposeCursor() {
   if (!ready) return;
   ready = false;
-  window.removeEventListener("mousemove", recordMousePosition);
+  window.removeEventListener("mousemove", onMousemove);
+  window.removeEventListener("scroll", scrollHandler);
   cursorEle && cursorEle.remove();
   styleTag && styleTag.remove();
   styleTag = null;
@@ -194,12 +262,15 @@ function updateConfig(_config) {
  */
 function createStyle() {
   if (styleTag) return;
+  const selector = `.${config.className.split(/\s+/).join(".")}`;
   styleTag = document.createElement("style");
   styleTag.innerHTML = `
     body, * {
       cursor: none;
     }
-    .${config.className.split(/\s+/).join(".")} {
+    ${selector} {
+      --cursor-transform-duration: 0.23s;
+      overflow: hidden;
       pointer-events: none;
       position: fixed;
       left: var(--cursor-x);
@@ -211,8 +282,8 @@ function createStyle() {
       border: var(--cursor-border);
       z-index: var(--cursor-z-index);
       font-size: var(--cursor-font-size);
-      backdrop-filter: 
-        blur(var(--cursor-bg-blur)) 
+      backdrop-filter:
+        blur(var(--cursor-bg-blur))
         saturate(var(--cursor-bg-saturate));
       transition:
         width var(--cursor-duration) ease,
@@ -222,10 +293,37 @@ function createStyle() {
         background-color var(--cursor-duration) ease,
         left var(--cursor-position-duration) ease,
         top var(--cursor-position-duration) ease,
-        backdrop-filter var(--cursor-blur-duration) ease;
-      transform: 
-        translate(calc(-50% + var(--cursor-translateX)), calc(-50% + var(--cursor-translateY))) 
-        scale(var(--cursor-scale));
+        backdrop-filter var(--cursor-blur-duration) ease,
+        transform var(--cursor-transform-duration) ease;
+      transform:
+        translateX(calc(var(--cursor-translateX, 0px) - 50%))
+        translateY(calc(var(--cursor-translateY, 0px) - 50%))
+        scale(var(--cursor-scale, 1));
+    }
+    ${selector}.block-active {
+      --cursor-transform-duration: 0s;
+    }
+    ${selector} .lighting {
+      display: none;
+    }
+    ${selector}.lighting--on .lighting {
+      display: block;
+      width: 0;
+      height: 0;
+      position: absolute;
+      left: calc(var(--lighting-size) / -2);
+      top: calc(var(--lighting-size) / -2);
+      transform: translateX(var(--lighting-offset-x, 0)) translateY(var(--lighting-offset-y, 0));
+      background-image: radial-gradient(
+        circle at center,
+        rgba(255, 255, 255, 0.1) 0%,
+        rgba(255, 255, 255, 0) 30%
+      );
+      border-radius: 50%;
+    }
+    ${selector}.block-active .lighting {
+      width: var(--lighting-size, 20px);
+      height: var(--lighting-size, 20px);
     }
   `;
   document.head.appendChild(styleTag);
@@ -237,7 +335,10 @@ function createStyle() {
 function createCursor() {
   if (isServer) return;
   cursorEle = document.createElement("div");
+  const lightingEle = document.createElement("div");
   cursorEle.classList.add(config.className);
+  lightingEle.classList.add("lighting");
+  cursorEle.appendChild(lightingEle);
   document.body.appendChild(cursorEle);
   resetCursorStyle();
 }
@@ -247,7 +348,7 @@ function createCursor() {
  */
 function updateCursorPosition() {
   if (isServer || !cursorEle) return;
-  if (!isActive) {
+  if (!isBlockActive) {
     updateCursorStyle("--cursor-x", `${position.x}px`);
     updateCursorStyle("--cursor-y", `${position.y}px`);
   }
@@ -259,8 +360,7 @@ function updateCursorPosition() {
  */
 function queryAllTargets() {
   if (isServer || !ready) return [];
-  const nodes = document.querySelectorAll("[data-cursor]");
-  return nodes;
+  return document.querySelectorAll("[data-cursor]");
 }
 /**
  * Detect all interactive elements in the page
@@ -269,8 +369,9 @@ function queryAllTargets() {
  */
 function updateCursor() {
   if (isServer || !ready) return;
-  const nodes = queryAllTargets();
   const nodesMap = new Map();
+  // addDataCursorText(document.body.childNodes)
+  const nodes = queryAllTargets();
   nodes.forEach((node) => {
     nodesMap.set(node, true);
     if (registeredNodeSet.has(node)) return;
@@ -282,7 +383,7 @@ function updateCursor() {
   });
 }
 function registerNode(node) {
-  const type = node.getAttribute("data-cursor");
+  let type = node.getAttribute("data-cursor");
   registeredNodeSet.add(node);
   if (type === "text") registerTextNode(node);
   if (type === "block") registerBlockNode(node);
@@ -294,6 +395,7 @@ function unregisterNode(node) {
   (_a = eventMap.get(node)) === null || _a === void 0
     ? void 0
     : _a.forEach(({ event, handler }) => {
+        if (event === "mouseleave") handler();
         node.removeEventListener(event, handler);
       });
   eventMap.delete(node);
@@ -316,23 +418,31 @@ function extractCustomStyle(node) {
  * + ---------------------- +
  */
 function registerTextNode(node) {
+  let timer;
+  function toggleTextActive(active) {
+    isTextActive = !!active;
+    cursorEle &&
+      (active
+        ? cursorEle.classList.add("text-active")
+        : cursorEle.classList.remove("text-active"));
+  }
   function onTextOver(e) {
-    updateCursorStyle(Utils.style2Vars(config.textStyle || {}));
-    const dom = e.target;
-    const fontSize = window.getComputedStyle(dom).fontSize;
-    updateCursorStyle("--cursor-font-size", fontSize);
-    updateCursorStyle(
-      Utils.style2Vars({
-        ...config.textStyle,
-        ...extractCustomStyle(dom),
-      })
-    );
+    timer && clearTimeout(timer);
+    toggleTextActive(true);
+    // for some edge case, two ele very close
+    timer = setTimeout(() => toggleTextActive(true));
+    applyTextCursor(e.target);
+  }
+  function onTextLeave() {
+    timer && clearTimeout(timer);
+    timer = setTimeout(() => toggleTextActive(false));
+    resetCursorStyle();
   }
   node.addEventListener("mouseover", onTextOver, { passive: true });
-  node.addEventListener("mouseleave", resetCursorStyle, { passive: true });
+  node.addEventListener("mouseleave", onTextLeave, { passive: true });
   eventMap.set(node, [
     { event: "mouseover", handler: onTextOver },
-    { event: "mouseleave", handler: resetCursorStyle },
+    { event: "mouseleave", handler: onTextLeave },
   ]);
 }
 /**
@@ -346,26 +456,48 @@ function registerBlockNode(_node) {
   node.addEventListener("mousemove", onBlockMove, { passive: true });
   node.addEventListener("mouseleave", onBlockLeave, { passive: true });
   let timer;
+  function toggleBlockActive(active) {
+    isBlockActive = !!active;
+    cursorEle &&
+      (active
+        ? cursorEle.classList.add("block-active")
+        : cursorEle.classList.remove("block-active"));
+  }
   function onBlockEnter() {
     var _a, _b;
+    // TODO: maybe control this in other way
+    cursorEle &&
+      cursorEle.classList.toggle("lighting--on", !!config.enableLighting);
     const rect = node.getBoundingClientRect();
     timer && clearTimeout(timer);
-    isActive = true;
+    toggleBlockActive(true);
     // for some edge case, two ele very close
-    timer = setTimeout(() => (isActive = true));
+    timer = setTimeout(() => toggleBlockActive(true));
+    cursorEle && cursorEle.classList.add("block-active");
+    const updateStyleObj = { ...(config.blockStyle || {}) };
     const blockPadding = config.blockPadding || 0;
     let padding = blockPadding;
+    let radius =
+      updateStyleObj === null || updateStyleObj === void 0
+        ? void 0
+        : updateStyleObj.radius;
     if (padding === "auto") {
       const size = Math.min(rect.width, rect.height);
       padding = Math.max(2, Math.floor(size / 25));
     }
-    cursorEle.classList.add("focus");
+    if (radius === "auto") {
+      const paddingCss = Utils.getSize(padding);
+      const nodeRadius = window.getComputedStyle(node).borderRadius;
+      if (nodeRadius.startsWith("0") || nodeRadius === "none") radius = "0";
+      else radius = `calc(${paddingCss} + ${nodeRadius})`;
+      updateStyleObj.radius = radius;
+    }
     updateCursorStyle("--cursor-x", `${rect.left + rect.width / 2}px`);
     updateCursorStyle("--cursor-y", `${rect.top + rect.height / 2}px`);
     updateCursorStyle("--cursor-width", `${rect.width + padding * 2}px`);
     updateCursorStyle("--cursor-height", `${rect.height + padding * 2}px`);
     const styleToUpdate = {
-      ...(config.blockStyle || {}),
+      ...updateStyleObj,
       ...extractCustomStyle(node),
     };
     if (styleToUpdate.durationPosition === undefined) {
@@ -384,6 +516,9 @@ function registerBlockNode(_node) {
     );
   }
   function onBlockMove() {
+    if (!isBlockActive) {
+      onBlockEnter();
+    }
     const rect = node.getBoundingClientRect();
     const halfHeight = rect.height / 2;
     const topOffset = (position.y - rect.top - halfHeight) / halfHeight;
@@ -399,21 +534,23 @@ function registerBlockNode(_node) {
       `${topOffset * ((rect.height / 100) * strength)}px`
     );
     toggleNodeTransition(false);
-    node.style.setProperty(
-      "--translateX",
-      `${leftOffset * ((rect.width / 100) * strength)}px`
-    );
-    node.style.setProperty(
-      "--translateY",
-      `${topOffset * ((rect.height / 100) * strength)}px`
-    );
+    const nodeTranslateX = leftOffset * ((rect.width / 100) * strength);
+    const nodeTranslateY = topOffset * ((rect.height / 100) * strength);
+    node.style.setProperty("--translateX", `${nodeTranslateX}px`);
+    node.style.setProperty("--translateY", `${nodeTranslateY}px`);
+    // lighting
+    if (config.enableLighting) {
+      const lightingSize = Math.max(rect.width, rect.height) * 3 * 1.2;
+      const lightingOffsetX = position.x - rect.left;
+      const lightingOffsetY = position.y - rect.top;
+      updateCursorStyle("--lighting-size", `${lightingSize}px`);
+      updateCursorStyle("--lighting-offset-x", `${lightingOffsetX}px`);
+      updateCursorStyle("--lighting-offset-y", `${lightingOffsetY}px`);
+    }
   }
   function onBlockLeave() {
     timer && clearTimeout(timer);
-    timer = setTimeout(() => {
-      isActive = false;
-      cursorEle && cursorEle.classList.remove("focus");
-    });
+    timer = setTimeout(() => toggleBlockActive(false));
     resetCursorStyle();
     toggleNodeTransition(true);
     node.style.setProperty("transform", "translate(0px, 0px)");
@@ -461,7 +598,25 @@ function registerBlockNode(_node) {
   ]);
 }
 function resetCursorStyle() {
+  var _a;
+  if (
+    ((_a = config.normalStyle) === null || _a === void 0
+      ? void 0
+      : _a.radius) === "auto"
+  )
+    config.normalStyle.radius = config.normalStyle.width;
   updateCursorStyle(Utils.style2Vars(config.normalStyle || {}));
+}
+function applyTextCursor(sourceNode) {
+  updateCursorStyle(Utils.style2Vars(config.textStyle || {}));
+  const fontSize = window.getComputedStyle(sourceNode).fontSize;
+  updateCursorStyle("--cursor-font-size", fontSize);
+  updateCursorStyle(
+    Utils.style2Vars({
+      ...config.textStyle,
+      ...extractCustomStyle(sourceNode),
+    })
+  );
 }
 /**
  * Create custom style that can be bound to `data-cursor-style`
@@ -472,12 +627,18 @@ function customCursorStyle(style) {
     .map(([key, value]) => `${key}: ${value}`)
     .join("; ");
 }
+function resetCursor() {
+  isBlockActive = false;
+  isTextActive = false;
+  resetCursorStyle();
+}
 const CursorType = {
   TEXT: "text",
   BLOCK: "block",
 };
 const exported = {
   CursorType,
+  resetCursor,
   initCursor,
   updateCursor,
   disposeCursor,
@@ -491,6 +652,7 @@ export {
   exported as default,
   disposeCursor,
   initCursor,
+  resetCursor,
   updateConfig,
   updateCursor,
 };
