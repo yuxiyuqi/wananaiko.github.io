@@ -83,7 +83,7 @@
   <script>
     window.addEventListener("load", function () {
       var elements = document.querySelectorAll(
-        ".contentai-title, .message__text, .post-content.slide-enter-content span,.post-content.slide-enter-content p, .post-content.slide-enter-content h1, .post-content.slide-enter-content h2, .post-content.slide-enter-content h3, .post-content.slide-enter-content h4, .post-content.slide-enter-content h5"
+        ".contentai-title, .message__text, .post-content.slide-enter-content span,.post-content.slide-enter-content strong,.post-content.slide-enter-content td,.post-content.slide-enter-content p, .post-content.slide-enter-content h1, .post-content.slide-enter-content h2, .post-content.slide-enter-content h3, .post-content.slide-enter-content h4, .post-content.slide-enter-content h5"
       );
 
       for (var i = 0; i < elements.length; i++) {
@@ -305,7 +305,7 @@
 </script>
 
 <script>
-  var links = document.querySelectorAll("p a");
+  var links = document.querySelectorAll("p a, td a ,li a, h1 a, h2 a, h3 a");
   for (var i = 0; i < links.length; i++) {
     links[i].setAttribute("data-cursor", "block");
     links[i].setAttribute(
