@@ -80,6 +80,20 @@
   </div>
   {{- end }}
 
+  <script>
+    window.addEventListener("load", function () {
+      var elements = document.querySelectorAll(
+        ".contentai-title, .message__text, .post-content.slide-enter-content span,.post-content.slide-enter-content p, .post-content.slide-enter-content h1, .post-content.slide-enter-content h2, .post-content.slide-enter-content h3, .post-content.slide-enter-content h4, .post-content.slide-enter-content h5"
+      );
+
+      for (var i = 0; i < elements.length; i++) {
+        var element = elements[i];
+        element.setAttribute("data-cursor", "text");
+        element.setAttribute("data-cursor-style", "background: currentColor");
+      }
+    });
+  </script>
+
   <footer class="post-footer">
     <!-- 添加打赏功能开始 -->
     <div
