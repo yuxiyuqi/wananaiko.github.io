@@ -81,6 +81,7 @@ ai: 该文章是一个关于Hugo短代码汇总页面的介绍，页面提供了
 
   .shortcode-content {
     margin-left: 8px;
+    width: -webkit-fill-available;
   }
 
   .code-container:hover svg.iconpark-icon {
