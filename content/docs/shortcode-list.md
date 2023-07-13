@@ -6,7 +6,7 @@ tags:
   - Hugo
   - Shortcode
 draft: false
-ai:该文章是一个关于Hugo短代码汇总页面的介绍，页面提供了各种Hugo短代码，并且点击卡片即可复制对应的短代码。
+ai: 该文章是一个关于Hugo短代码汇总页面的介绍，页面提供了各种Hugo短代码，并且点击卡片即可复制对应的短代码。
 ---
 
 为了方便调用 Hugo Shortcode ，做了个命令汇总页面，点击卡片即可复制对应的短代码，[预览地址](https://wananaiko.com/quickshort/)
