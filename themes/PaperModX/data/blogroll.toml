@@ -61,3 +61,9 @@
   description = "UI & UX Design, Blender & Eevee, 前端开发 & 小程序开发, Unity3D & Technical Art."
   weight = 9
 
+[[blogroll]]
+  name = "D_SUPER BLOG"
+  url = "https://dsuper.xyz"
+  favicon = "https://dsuper.xyz/avatar.png"
+  description = "分享效率笔记、互联网技术、生活娱乐。"
+  weight = 10
