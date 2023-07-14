@@ -2,7 +2,12 @@
 <span class="meta-tags">
   <span class="post-tags">
     {{- range ($.GetTerms "tags") -}}
-    <a href="{{ .Permalink }}">{{ .LinkTitle }}</a>
+    <a
+      href="{{ .Permalink }}"
+      data-cursor="block"
+      data-cursor-style="background:var(--cursor-color)"
+      >{{ .LinkTitle }}</a
+    >
     {{- end -}}
   </span></span
 >

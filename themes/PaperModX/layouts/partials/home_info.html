@@ -1,9 +1,15 @@
 {{- with site.Params.homeInfoParams }}
 <article class="first-entry home-info">
   <header class="entry-header">
-    <h1>{{ .Title | markdownify }}</h1>
+    <h1 data-cursor="text" data-cursor-style="background: currentColor">
+      {{ .Title | markdownify }}
+    </h1>
   </header>
-  <section class="entry-content">
+  <section
+    class="entry-content"
+    data-cursor="text"
+    data-cursor-style="background: currentColor"
+  >
     {{- trim .Content "\n" | markdownify -}}
   </section>
   <!--旧的备份 <footer class="entry-footer">
@@ -16,23 +22,40 @@
         href="https://wananaiko.com/index.xml"
         target="_blank"
         data-tooltip="RSS订阅"
+        data-cursor="block"
+        data-cursor-style="background: var(--cursor-color)"
       >
-        <svg class="iconpark-icon-home"><use href="#rss"></use></svg>
+        <svg class="iconpark-icon-home">
+          <use href="#rss"></use>
+        </svg>
       </a>
 
       <a
         href="mailto:wananaiko@tu.edu.vn"
         target="_blank"
         data-tooltip="发送邮件"
+        data-cursor="block"
+        data-cursor-style="background: var(--cursor-color)"
       >
         <svg class="iconpark-icon-home"><use href="#email"></use></svg>
       </a>
 
-      <a href="https://t.me/timetosay88" target="_blank" data-tooltip="TG联系">
+      <a
+        href="https://t.me/timetosay88"
+        target="_blank"
+        data-tooltip="TG联系"
+        data-cursor="block"
+        data-cursor-style="background: var(--cursor-color)"
+      >
         <svg class="iconpark-icon-home"><use href="#telegram"></use></svg>
       </a>
 
-      <a href="/links/" data-tooltip="打个招呼吧~">
+      <a
+        href="/links/"
+        data-tooltip="打个招呼吧~"
+        data-cursor="block"
+        data-cursor-style="background: var(--cursor-color)"
+      >
         <svg class="iconpark-icon-home"><use href="#sayhi"></use></svg>
       </a>
     </div>

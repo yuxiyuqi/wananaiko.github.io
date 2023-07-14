@@ -1,265 +1,279 @@
 {{ define "main" }} {{ $goods := getJSON "data/goods.json" }}
 <style>
+  .main.post {
+    position: relative !important;
+    min-height: calc(
+      100vh - var(--header-height) - var(--footer-height)
+    ) !important;
+    max-width: calc(var(--main-width) + var(--gap) * 2) !important;
+    margin-top: 5rem 0;
+  }
+
+  .post-content a:hover {
+    background-color: unset !important;
+  }
+
+  .goods-bankuai {
+    display: inline-block;
+    vertical-align: top;
+    width: calc(33.33% - 16px);
+    height: 326px;
+    margin: 0 8px 12px 0;
+    list-style: none;
+    overflow: hidden;
+    border-radius: var(--radius);
+    background: var(--code-bg);
+    padding: 0 16px;
+  }
+
+  .goods-duiqi {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .goods-duiqi img {
+    width: 80%;
+    margin: 0;
+    transition: transform 0.2s ease-in-out;
+    cursor: pointer;
+  }
+
+  .goods-duiqi:hover img {
+    transform: translateY(-4px);
+  }
+
+  .goods-title {
+    color: var(--text-highlight-color);
+    font-family: var(--font-family-teshu);
+    /* letter-spacing: 0.5px; */
+    font-size: 14px;
+    margin: 0 0 0 0;
+    color: var(--content);
+    transition: 0.5s;
+  }
+
+  .goods-title a {
+    font-size: 14px;
+    /* color: var(--text-highlight-color); */
+    text-decoration: none;
+    background-color: unset;
+  }
+
+  .goods-jiage {
+    color: #999;
+    font-size: 14px;
+    line-height: 1.4rem;
+    font-family: var(--font-family-code);
+  }
+
+  .goods-note {
+    font-size: 14px;
+    line-height: 1.3rem;
+    color: var(--secondary);
+  }
+
+  /* 页面宽度小于767样式 */
+
+  @media (max-width: 767px) {
     .main.post {
-        position: relative !important;
-        min-height: calc(
-            100vh - var(--header-height) - var(--footer-height)
-        ) !important;
-        max-width: calc(var(--main-width) + var(--gap) * 2) !important;
-        margin-top: 5rem 0;
+      position: relative !important;
+      min-height: calc(
+        100vh - var(--header-height) - var(--footer-height)
+      ) !important;
+      max-width: calc(var(--main-width) + var(--gap) * 2) !important;
+      margin-top: 6rem;
     }
 
     .goods-bankuai {
-        display: inline-block;
-        vertical-align: top;
-        width: calc(33.33% - 16px);
-        height: 326px;
-        margin: 0 8px 12px 0;
-        list-style: none;
-        overflow: hidden;
-        border-radius: var(--radius);
-        background: var(--code-bg);
-        padding: 0 16px;
-    }
-
-    .goods-duiqi {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .goods-duiqi img {
-        width: 80%;
-        margin: 0;
-        transition: transform 0.2s ease-in-out;
-        cursor: pointer;
-    }
-
-    .goods-duiqi:hover img {
-        transform: translateY(-4px);
+      width: 100%;
+      height: 100%;
+      padding: 0 2% 5% 2%;
+      border-radius: var(--radius);
+      background: var(--code-bg);
     }
 
     .goods-title {
-        color: var(--text-highlight-color);
-        font-family: var(--font-family-teshu);
-        /* letter-spacing: 0.5px; */
-        font-size: 14px;
-        margin: 0 0 0 0;
-        color: var(--content);
-        transition: 0.5s;
-    }
-
-    .goods-title a {
-        font-size: 14px;
-        /* color: var(--text-highlight-color); */
-        text-decoration: none;
+      color: var(--text-highlight-color);
+      font-family: var(--font-family-teshu);
+      font-size: 14px;
+      margin: 0 10px !important;
+      color: var(--content);
+      transition: 0.5s;
     }
 
     .goods-jiage {
-        color: #999;
-        font-size: 14px;
-        line-height: 1.4rem;
-        font-family: var(--font-family-code);
+      margin: 0 10px 0 10px;
+    }
+
+    .goods-duiqi img {
+      width: 50%;
+      margin: 0;
     }
 
     .goods-note {
-        font-size: 14px;
-        line-height: 1.3rem;
-        color: var(--secondary);
+      line-height: 1.3rem;
+      margin: 8px 10px 0 10px;
     }
 
-    /* 页面宽度小于767样式 */
-
-    @media (max-width: 767px) {
-        .main.post {
-            position: relative !important;
-            min-height: calc(
-                100vh - var(--header-height) - var(--footer-height)
-            ) !important;
-            max-width: calc(var(--main-width) + var(--gap) * 2) !important;
-            margin-top: 6rem;
-        }
-
-        .goods-bankuai {
-            width: 100%;
-            height: 100%;
-            padding: 0 2% 5% 2%;
-            border-radius: var(--radius);
-            background: var(--code-bg);
-        }
-
-        .goods-title {
-            color: var(--text-highlight-color);
-            font-family: var(--font-family-teshu);
-            font-size: 14px;
-            margin: 0 10px !important;
-            color: var(--content);
-            transition: 0.5s;
-        }
-
-        .goods-jiage {
-            margin: 0 10px 0 10px;
-        }
-
-        .goods-duiqi img {
-            width: 50%;
-            margin: 0;
-        }
-
-        .goods-note {
-            line-height: 1.3rem;
-            margin: 8px 10px 0 10px;
-        }
-
-        .goods-title {
-            color: var(--text-highlight-color);
-            font-family: var(--font-family-teshu);
-            /* letter-spacing: 0.5px; */
-            font-size: 14px;
-            margin: 0 auto;
-            line-height: 1.5rem;
-            color: var(--content);
-        }
-
-        .goods-title a {
-            font-size: 14px;
-            /* color: var(--text-highlight-color); */
-            text-decoration: none;
-            box-shadow: none;
-        }
+    .goods-title {
+      color: var(--text-highlight-color);
+      font-family: var(--font-family-teshu);
+      /* letter-spacing: 0.5px; */
+      font-size: 14px;
+      margin: 0 auto;
+      line-height: 1.5rem;
+      color: var(--content);
     }
 
-    /* 页面宽度大于700小于900样式 */
+    .goods-title a {
+      font-size: 14px;
+      /* color: var(--text-highlight-color); */
+      text-decoration: none;
+      box-shadow: none;
+    }
+  }
 
-    @media screen and (min-width: 700px) and (max-width: 900px) {
-        .main.post {
-            position: relative !important;
-            min-height: calc(
-                100vh - var(--header-height) - var(--footer-height)
-            ) !important;
-            max-width: calc(var(--main-width) + var(--gap) * 2) !important;
-            margin: auto !important;
-            padding-top: 0 !important;
-        }
+  /* 页面宽度大于700小于900样式 */
 
-        .goods-quanju {
-            font-size: 0;
-            width: 106%;
-        }
-
-        .goods-bankuai {
-            display: inline-block;
-            vertical-align: top;
-            width: 40%;
-            margin-right: 15px;
-            height: 420px;
-            border-radius: var(--radius);
-            border: 1px solid var(--border);
-            background: var(--code-bg);
-        }
-
-        .goods-title {
-            color: var(--text-highlight-color);
-            font-family: var(--font-family-teshu);
-            /* letter-spacing: 0.5px; */
-            font-size: 14px;
-            margin: 0 auto;
-            line-height: 1.5rem;
-            color: var(--content);
-            transition: 0.5s;
-        }
-
-        .goods-title a {
-            font-size: 14px;
-            /* color: var(--text-highlight-color); */
-            text-decoration: none;
-            box-shadow: none;
-        }
+  @media screen and (min-width: 700px) and (max-width: 900px) {
+    .main.post {
+      position: relative !important;
+      min-height: calc(
+        100vh - var(--header-height) - var(--footer-height)
+      ) !important;
+      max-width: calc(var(--main-width) + var(--gap) * 2) !important;
+      margin: auto !important;
+      padding-top: 0 !important;
     }
 
-    /* 页面宽度大于900样式 */
-
-    @media (min-width: 900px) {
-        .goods-quanju {
-            font-size: 0;
-            width: 106%;
-        }
-
-        .goods-bankuai {
-            display: inline-block;
-            vertical-align: top;
-            width: calc(33.33% - 16px);
-            height: 312px;
-            margin: 0 8px 12px 0;
-        }
-
-        .goods-note {
-            font-size: 14px;
-            line-height: 1.3rem;
-            margin-top: 0.5rem;
-        }
-
-        .goods-duiqi img {
-            width: 80%;
-            margin: 0;
-        }
-
-        .goods-bankuai.img-hide img {
-            transition: transform 0.2s ease-in-out;
-            cursor: pointer;
-        }
-
-        .goods-bankuai.img-hide:hover img {
-            transform: translateY(-4px);
-        }
-
-        .goods-title {
-            font-family: var(--font-family-teshu);
-            /* letter-spacing: 0.5px; */
-            font-size: 16px;
-            margin: 0 auto;
-            line-height: 1.6rem;
-            color: var(--content);
-            transition: 0.5s;
-        }
-
-        .goods-title a {
-            font-size: 16px;
-            /* color: var(--text-highlight-color); */
-            text-decoration: none;
-            box-shadow: none;
-            transition: 0.5s;
-        }
+    .goods-quanju {
+      font-size: 0;
+      width: 106%;
     }
+
+    .goods-bankuai {
+      display: inline-block;
+      vertical-align: top;
+      width: 40%;
+      margin-right: 15px;
+      height: 420px;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      background: var(--code-bg);
+    }
+
+    .goods-title {
+      color: var(--text-highlight-color);
+      font-family: var(--font-family-teshu);
+      /* letter-spacing: 0.5px; */
+      font-size: 14px;
+      margin: 0 auto;
+      line-height: 1.5rem;
+      color: var(--content);
+      transition: 0.5s;
+    }
+
+    .goods-title a {
+      font-size: 14px;
+      /* color: var(--text-highlight-color); */
+      text-decoration: none;
+      box-shadow: none;
+    }
+  }
+
+  /* 页面宽度大于900样式 */
+
+  @media (min-width: 900px) {
+    .goods-quanju {
+      font-size: 0;
+      width: 106%;
+    }
+
+    .goods-bankuai {
+      display: inline-block;
+      vertical-align: top;
+      width: calc(33.33% - 16px);
+      height: 312px;
+      margin: 0 8px 12px 0;
+    }
+
+    .goods-note {
+      font-size: 14px;
+      line-height: 1.3rem;
+      margin-top: 0.5rem;
+    }
+
+    .goods-duiqi img {
+      width: 80%;
+      margin: 0;
+    }
+
+    .goods-bankuai.img-hide img {
+      transition: transform 0.2s ease-in-out;
+      cursor: pointer;
+    }
+
+    .goods-bankuai.img-hide:hover img {
+      transform: translateY(-4px);
+    }
+
+    .goods-title {
+      font-family: var(--font-family-teshu);
+      /* letter-spacing: 0.5px; */
+      font-size: 16px;
+      margin: 0 auto;
+      line-height: 1.6rem;
+      color: var(--content);
+      transition: 0.5s;
+    }
+
+    .goods-title a {
+      font-size: 16px;
+      /* color: var(--text-highlight-color); */
+      text-decoration: none;
+      box-shadow: none;
+      transition: 0.5s;
+      margin-left: -4px;
+      padding: 2px 4px;
+    }
+  }
 </style>
 
 <header class="page-header">
-    <h1>{{ .Title }}</h1>
-    {{- if .Description }}
-    <div class="post-description">{{ .Description }}</div>
-    {{- end }}
+  <h1>{{ .Title }}</h1>
+  {{- if .Description }}
+  <div class="post-description">{{ .Description }}</div>
+  {{- end }}
 </header>
 
 <section id="main" class="container slide-enter-content">
-    <div class="post-content goods">
-        {{ .Content }} {{ range $goods.good}}
-        <div class="goods-bankuai img-hide">
-            <div class="goods-duiqi">
-                <img decoding="async" src="{{ .image }}"/>
-            </div>
-            <div class="goods-jiage">{{ .jiage }}</div>
-            <div class="goods-title"><a href="{{ .link }}">{{ .title }}</a></div>
-            <div class="goods-note">{{ .note }}</div>
-        </div>
-        {{ end }}
+  <div class="post-content goods">
+    {{ .Content }} {{ range $goods.good}}
+    <div class="goods-bankuai img-hide">
+      <div class="goods-duiqi">
+        <img decoding="async" src="{{ .image }}" />
+      </div>
+      <div class="goods-jiage">{{ .jiage }}</div>
+      <div class="goods-title">
+        <a
+          href="{{ .link }}"
+          data-cursor="block"
+          data-cursor-style="background:var(--cursor-color)"
+          >{{ .title }}</a
+        >
+      </div>
+      <div class="goods-note">{{ .note }}</div>
     </div>
+    {{ end }}
+  </div>
 </section>
 
 <script>
-    // 禁用图片弹窗
-    document.querySelectorAll(".goods img").forEach(function (img) {
-        img.style.pointerEvents = "none";
-    });
+  // 禁用图片弹窗
+  document.querySelectorAll(".goods img").forEach(function (img) {
+    img.style.pointerEvents = "none";
+  });
 </script>
 <!-- {{ if not (eq .Params.Comments "false") }} {{ partial "comments.html" . }} {{
 end }}  -->

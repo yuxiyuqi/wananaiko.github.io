@@ -16,8 +16,8 @@
 /> <meta name="description" content="Markdown 概述、工作原理以及用途。"> <meta name="author" content="markdown.xyz"> <link rel="canonical" href="https://wananaiko.com/zh/posts/markdown-syntax/">
 <link
   crossorigin="anonymous"
-  href="/assets/css/stylesheet.min.200f769009953ec1df41e324186c19a688c455afef0ddf0d12ef4dc827a750d1.css"
-  integrity="sha256-IA92kAmVPsHfQeMkGGwZpojEVa/vDd8NEu9NyCenUNE="
+  href="/assets/css/stylesheet.min.0f20a0f71ac24ca9e5efa956687ffbe4f8fc799692321b4224cc07e6c54882a9.css"
+  integrity="sha256-DyCg9xrCTKnl76lWaH/75Pj8eZaSMhtCJMwH5sVIgqk="
   rel="preload stylesheet"
   as="style"
 /> <link rel="icon" href="https://images.wananaiko.com/favicon.ico"> <link rel="apple-touch-icon" href="https://wananaiko.com/apple-touch-icon.png"> <link rel="alternate" hreflang="en" href="https://wananaiko.com/posts/markdown-syntax/" />
@@ -380,7 +380,7 @@ window.addEventListener('scroll', () => {
 <link rel="stylesheet" href="/css/zoom.css"/>
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/quicklink/2.3.0/quicklink.umd.js"></script>
+
 <script>
 window.addEventListener('load', () => {
   quicklink.listen();
@@ -392,7 +392,14 @@ window.addEventListener('load', () => {
 
 
 <script type="text/javascript" src="/assets/moment.min.js?v=2.29.4"></script>
-<script type="text/javascript" src="/assets/moment.twitter.min.js"></script><main class="main post slide-enter-content">
+<script type="text/javascript" src="/assets/moment.twitter.min.js"></script>
+
+
+<script type="module">
+  import { initCursor } from "/js/ipad-cursor.mjs";
+  initCursor();
+</script><main 
+    class="main post slide-enter-content">
 
 <article class="post-single">
   <header class="post-header">
@@ -409,10 +416,29 @@ window.addEventListener('load', () => {
       </div>
     </a>
 
-    <h1 class="post-title">Markdown 入门指南</h1>
+    <h1
+      class="post-title"
+      data-cursor="text"
+      data-cursor-style="background: currentColor"
+    >Markdown 入门指南</h1>
     <div class="post-description">Markdown 概述、工作原理以及用途。</div>
     <div class="post-meta"><span class="meta-tags">
-  <span class="post-tags"><a href="https://wananaiko.com/zh/tags/markdown/">markdown</a><a href="https://wananaiko.com/zh/tags/syntax/">syntax</a><a href="https://wananaiko.com/zh/tags/example/">example</a></span></span
+  <span class="post-tags"><a
+      href="https://wananaiko.com/zh/tags/markdown/"
+      data-cursor="block"
+      data-cursor-style="background:var(--cursor-color);border-radius: 9999px;"
+      >markdown</a
+    ><a
+      href="https://wananaiko.com/zh/tags/syntax/"
+      data-cursor="block"
+      data-cursor-style="background:var(--cursor-color);border-radius: 9999px;"
+      >syntax</a
+    ><a
+      href="https://wananaiko.com/zh/tags/example/"
+      data-cursor="block"
+      data-cursor-style="background:var(--cursor-color);border-radius: 9999px;"
+      >example</a
+    ></span></span
 ><span class="meta-item">
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -488,7 +514,12 @@ window.addEventListener('load', () => {
     </details>
 </div>
 
-  <div class="post-content slide-enter-content">
+
+  <div
+    class="post-content slide-enter-content"
+    data-cursor="text"
+    data-cursor-style="background: currentColor"
+  >
     
     
     <h1 id="markdown-入门">Markdown 入门</h1>
@@ -823,6 +854,9 @@ Markdown</a>.
       "
     >
       <button
+        style="cursor: none"
+        data-cursor="block"
+        data-cursor-style="background: #00999930;border-radius:10px"
         id="rewardButton"
         disable="enable"
         onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}"
@@ -951,7 +985,12 @@ Markdown</a>.
         </div>
       </button>
       <a href="/donate">
-        <span class="donate-bottom">感谢各位金主的打赏</span>
+        <span
+          class="donate-bottom"
+          data-cursor="block"
+          data-cursor-style="background: #00999930;"
+          >感谢各位金主的打赏</span
+        >
       </a>
       <div id="QR" style="display: none">
         <div id="wechat" style="display: inline-block">
@@ -1051,6 +1090,17 @@ Markdown</a>.
   });
 
   
+</script>
+
+<script>
+  var links = document.querySelectorAll("p a");
+  for (var i = 0; i < links.length; i++) {
+    links[i].setAttribute("data-cursor", "block");
+    links[i].setAttribute(
+      "data-cursor-style",
+      "background:var(--cursor-color);"
+    );
+  }
 </script>
 </main>
     

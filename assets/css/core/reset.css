@@ -1,14 +1,15 @@
 *,
 ::after,
 ::before {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html {
-    -webkit-tap-highlight-color: transparent;
-    overflow-y: scroll;
-    -webkit-font-smoothing: antialiased;
-    /*text-rendering: optimizeLegibility; */
+  -webkit-tap-highlight-color: transparent;
+  overflow-y: scroll;
+  -webkit-font-smoothing: antialiased;
+  cursor: none !important;
+  /*text-rendering: optimizeLegibility; */
 }
 
 a,
@@ -20,18 +21,20 @@ h3,
 h4,
 h5,
 h6 {
-    color: var(--primary);
+  color: var(--primary);
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, Helvetica, 'Helvetica Neue', 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', sans-serif;
-    /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
-    font-size: 18px;
-    line-height: 1.6em;
-    word-break: break-word;
-    background: var(--theme);
-    letter-spacing: 0.01em;
-    /* -webkit-font-smoothing: antialiased; */
+  font-family: -apple-system, BlinkMacSystemFont, Helvetica, "Helvetica Neue",
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", sans-serif;
+  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
+  font-size: 18px;
+  line-height: 1.6em;
+  word-break: break-word;
+  background: var(--theme);
+  letter-spacing: 0.01em;
+  cursor: none !important;
+  /* -webkit-font-smoothing: antialiased; */
 }
 
 article,
@@ -45,7 +48,7 @@ main,
 nav,
 section,
 table {
-    display: block;
+  display: block;
 }
 
 h1,
@@ -54,7 +57,7 @@ h3,
 h4,
 h5,
 h6 {
-    line-height: 1.2;
+  line-height: 1.2;
 }
 
 h1,
@@ -64,247 +67,251 @@ h4,
 h5,
 h6,
 p {
-    margin-top: 0;
-    margin-bottom: 0;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 a {
-    text-decoration: none;
-    transition: .5s ease-in-out;
+  text-decoration: none;
+  transition: 0.5s ease-in-out;
 }
 
 body,
 figure {
-    margin: 0;
+  margin: 0;
 }
 
 table {
-    width: 100%;
-    border-collapse: collapse;
-    border-spacing: 0;
-    overflow-x: auto;
-    word-break: keep-all;
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  overflow-x: auto;
+  word-break: keep-all;
 }
 
 button,
 input,
 textarea {
-    padding: 0;
-    font: inherit;
-    background: 0 0;
-    border: 0;
+  padding: 0;
+  font: inherit;
+  background: 0 0;
+  border: 0;
 }
 
 input,
 textarea {
-    outline: 0;
+  outline: 0;
 }
 
 button,
-input[type=button],
-input[type=submit] {
-    cursor: pointer;
+input[type="button"],
+input[type="submit"] {
+  cursor: pointer;
 }
 
 input:-webkit-autofill,
 textarea:-webkit-autofill {
-    box-shadow: 0 0 0 50px var(--theme) inset;
+  box-shadow: 0 0 0 50px var(--theme) inset;
 }
 
 img {
-    display: block;
-    max-width: 100%;
+  display: block;
+  max-width: 100%;
 }
 
 ::-webkit-scrollbar-track {
-    background: 0 0;
+  background: 0 0;
 }
 
 .list-page:not(.dark)::-webkit-scrollbar-track {
-    background: var(--code-bg);
+  background: var(--code-bg);
 }
 
 ::-webkit-scrollbar-thumb {
-    background: var(--tertiary-bg);
-    border: 5px solid var(--theme);
-    border-radius: var(--radius);
+  background: var(--tertiary-bg);
+  border: 5px solid var(--theme);
+  border-radius: var(--radius);
 }
 
 .list-page:not(.dark)::-webkit-scrollbar-thumb {
-    border: 5px solid var(--code-bg);
+  border: 5px solid var(--code-bg);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: var(--secondary);
+  background: var(--secondary);
 }
 
 /* 相册弹窗中的样式调整 */
 .gallery {
-    overflow: hidden;
-    margin: 0 auto !important;
-    max-width: 790px !important;
+  overflow: hidden;
+  margin: 0 auto !important;
+  max-width: 790px !important;
 }
 
 .pswp__item {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    overflow: hidden;
-    background-color: #000000 !important;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  overflow: hidden;
+  background-color: #000000 !important;
 }
 
 .pswp img {
-    max-width: none;
-    /* max-height: 85vh; */
+  max-width: none;
+  /* max-height: 85vh; */
 }
 
 .pswp__caption {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    min-height: 72px !important;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  min-height: 72px !important;
 }
 
 .pswp__counter {
-    position: absolute;
-    left: 10px;
-    top: 0;
-    height: 44px;
-    font-size: 13px;
-    line-height: 44px;
-    color: #FFF;
-    opacity: .75;
-    padding: 0 20px;
+  position: absolute;
+  left: 10px;
+  top: 0;
+  height: 44px;
+  font-size: 13px;
+  line-height: 44px;
+  color: #fff;
+  opacity: 0.75;
+  padding: 0 20px;
 }
 
 .pswp__caption__center {
-    text-align: left;
-    max-width: 790px !important;
-    margin: 0 auto !important;
-    font-size: 14px !important;
-    padding-bottom: 12px;
-    padding-top: 12px;
-    line-height: 20px;
-    color: #CCC;
+  text-align: left;
+  max-width: 790px !important;
+  margin: 0 auto !important;
+  font-size: 14px !important;
+  padding-bottom: 12px;
+  padding-top: 12px;
+  line-height: 20px;
+  color: #ccc;
 }
 
 .esc_window {
-    float: left;
-    height: 44px;
-    font-size: 13px;
-    line-height: 44px;
-    color: #fff;
-    opacity: .75;
-    padding: 0 10px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  float: left;
+  height: 44px;
+  font-size: 13px;
+  line-height: 44px;
+  color: #fff;
+  opacity: 0.75;
+  padding: 0 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 @media only screen and (max-width: 767px) {
-    .esc_window {
-        display: none;
-    }
+  .esc_window {
+    display: none;
+  }
 }
 
 .icon_right {
-    padding-right: 10px;
+  padding-right: 10px;
 }
 
-.pswp__ui--fit .pswp__top-bar, .pswp__ui--fit .pswp__caption {
-    background-color: rgba(0, 0, 0) !important;
+.pswp__ui--fit .pswp__top-bar,
+.pswp__ui--fit .pswp__caption {
+  background-color: rgba(0, 0, 0) !important;
 }
 
 .memo-content-text {
-    font-size: 1rem;
+  font-size: 1rem;
 }
 
 .post-content figure > figcaption {
-    color: var(--secondary) !important;
-    font-size: 14px !important;
-    font-weight: normal !important;
-    margin-bottom: 0px;
-    text-align: center;
+  color: var(--secondary) !important;
+  font-size: 14px !important;
+  font-weight: normal !important;
+  margin-bottom: 0px;
+  text-align: center;
 }
 
 .post-content figure > figcaption > p {
-    color: var(--secondary) !important;
-    font-size: 14px !important;
-    font-weight: normal !important;
-    padding-left: 4px;
-    text-align: center;
+  color: var(--secondary) !important;
+  font-size: 14px !important;
+  font-weight: normal !important;
+  padding-left: 4px;
+  text-align: center;
 }
 
 .header {
-    position: fixed;
-    z-index: 400;
-    top: 0;
-    left: 0;
-    /*opacity: .98;*/
-    /*backdrop-filter: blur(6px);*/
-    width: 100%;
-    transition: transform 0.3s ease-in-out;
+  position: fixed;
+  z-index: 400;
+  top: 0;
+  left: 0;
+  /*opacity: .98;*/
+  /*backdrop-filter: blur(6px);*/
+  width: 100%;
+  transition: transform 0.3s ease-in-out;
 }
 
 .header.hidden {
-    transform: translateY(-100%);
+  transform: translateY(-100%);
 }
 
 /* 去掉滚动条背景色,针对 WebKit 内核的浏览器（如 Chrome、Safari） */
 ::-webkit-scrollbar {
-    background-color: transparent;
+  background-color: transparent;
 }
 
 /* 去掉滚动条背景色,针对 Internet Explorer */
 body {
-    scrollbar-face-color: transparent;
-    scrollbar-track-color: transparent;
+  scrollbar-face-color: transparent;
+  scrollbar-track-color: transparent;
 }
 
 /* Blog Roll 页面a链接样式 */
 .links .item .title a {
-    text-decoration: none;
-    transition: .5s;
-    padding-bottom: 2px;
+  text-decoration: none;
+  transition: 0.5s;
+  padding-bottom: 2px;
 }
 
 .links .item {
-    all: unset;
-    max-width: 100%
+  all: unset;
+  max-width: 100%;
 }
 
 img[data-action="zoom"] {
-    cursor: zoom-in;
+  /* cursor: zoom-in; */
+  cursor: none;
 }
 
 .zoom-img,
 .zoom-img-wrap {
-    position: relative;
-    z-index: 666;
-    transition: all 300ms;
+  position: relative;
+  z-index: 666;
+  transition: all 300ms;
 }
 
 img.zoom-img {
-    cursor: zoom-out;
+  /* cursor: zoom-out; */
+  cursor: none;
 }
 
 .zoom-overlay {
-    cursor: zoom-out;
-    z-index: 420;
-    background: var(--theme) !important;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    opacity: 0;
-    transition: opacity 300ms;
+  /* cursor: zoom-out; */
+  cursor: none;
+  z-index: 420;
+  background: var(--theme) !important;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  transition: opacity 300ms;
 }
 
 .zoom-overlay-open .zoom-overlay {
-    opacity: 1;
+  opacity: 1;
 }

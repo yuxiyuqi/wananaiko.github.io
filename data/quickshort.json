@@ -71,6 +71,15 @@
       "tag-update": "",
       "description": "播放来自 YouTube 的视频",
       "markdown": "{{< youtube w7Ft2ymGmfc >}}"
+    },
+    {
+      "icon": "#douban",
+      "color": "#072",
+      "title": "豆瓣书影音",
+      "tag-soon": "",
+      "tag-update": "NEW",
+      "description": "展示豆瓣上的书影音内容",
+      "markdown": "{{< neodb \"https://neodb.social/movie/1bgVODaWCBKlCQ1AuGlLzC\" >}}"
     }
   ]
 }

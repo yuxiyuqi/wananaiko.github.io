@@ -240,15 +240,31 @@ window.addEventListener('scroll', () => {
 
 <!-- 启用Quicklink试试 -->
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/quicklink/2.3.0/quicklink.umd.js"></script> -->
-<script>
+<!-- <script>
 window.addEventListener('load', () => {
   quicklink.listen();
 });
-</script>
+</script> -->
 
 <!-- 引用iconpark自定义图标库 -->
-<script src="https://lf1-cdn-tos.bytegoofy.com/obj/iconpark/svg_26576_19.d22f4155f0ceb00717cae13b21ac2dbd.js"></script>
+<script src="https://lf1-cdn-tos.bytegoofy.com/obj/iconpark/svg_26576_20.98e869d6e3a4f962470cfad7717d0fff.js"></script>
 
 <!-- twitter风格的时间显示 -->
 <script type="text/javascript" src="/assets/moment.min.js?v=2.29.4"></script>
 <script type="text/javascript" src="/assets/moment.twitter.min.js"></script>
+
+<!-- 模拟 iPad Cursor 效果 -->
+<script type="module">
+  import { initCursor } from "/js/ipad-cursor.mjs";
+  initCursor();
+</script>
+
+<!-- 流量统计工具 -->
+<script
+  defer
+  type="text/javascript"
+  src="https://datapulse.app/datapulse.min.js"
+  id="datapulse"
+  data-endpoint="https://datapulse.app/api/v1/event"
+  data-workspace="cljxpc7200xk18j37f86000ca"
+></script>
