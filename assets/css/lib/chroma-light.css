@@ -103,3 +103,11 @@
 .chroma .kt {
   color: #cc5599;
 }
+
+.chroma .c1 {
+  color: #33333380;
+}
+
+.chroma .n {
+  color: #399;
+}
