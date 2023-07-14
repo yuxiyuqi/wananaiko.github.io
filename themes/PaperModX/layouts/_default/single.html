@@ -22,11 +22,7 @@
       </div>
     </a>
 
-    <h1
-      class="post-title"
-      data-cursor="text"
-      data-cursor-style="background: currentColor"
-    >
+    <h1 class="post-title">
       {{- if $isNewsletter -}} {{- replace .Title (.Param "titlePrefix") (.Param
       "titlePrefixReplace") -}} {{- else -}} {{- .Title -}} {{- end -}} {{- if
       .Draft -}}<sup><span class="entry-isdraft">&nbsp;&nbsp;[draft]</span></sup
@@ -46,12 +42,7 @@
   partial "cover.html" (dict "cxt" . "IsHome" false "isHidden" $isHidden) }} {{-
   if (.Param "ShowToc") }} {{- partial "toc.html" . }} {{- end }} {{- if
   .Content }}
-
-  <div
-    class="post-content slide-enter-content"
-    data-cursor="text"
-    data-cursor-style="background: currentColor"
-  >
+  <div class="post-content slide-enter-content">
     <!-- AI摘要功能开始 -->
     {{ if .Params.ai }}
     <div class="contentai">
@@ -62,7 +53,7 @@
           </svg>
           AI 摘要
         </div>
-        <div class="contentai-span" data-cursor="text">基于 ChatGPT 3.5</div>
+        <div class="contentai-span">基于 ChatGPT 3.5</div>
       </div>
       <!-- 这里给div增加了一个id "typedText"，并将内容隐藏在一个javascript变量中 -->
       <div class="contentai-ai">
@@ -75,24 +66,11 @@
     </div>
     {{ end }}
     <!-- AI摘要功能结束 -->
+
     {{- if not (.Param "disableAnchoredHeadings") }} {{- partial
     "anchored_headings.html" .Content -}} {{- else }}{{ .Content }}{{ end }}
   </div>
   {{- end }}
-
-  <script>
-    window.addEventListener("load", function () {
-      var elements = document.querySelectorAll(
-        ".contentai-title, .message__text, .post-content.slide-enter-content span,.post-content.slide-enter-content strong,.post-content.slide-enter-content td,.post-content.slide-enter-content p, .post-content.slide-enter-content h1, .post-content.slide-enter-content h2, .post-content.slide-enter-content h3, .post-content.slide-enter-content h4, .post-content.slide-enter-content h5"
-      );
-
-      for (var i = 0; i < elements.length; i++) {
-        var element = elements[i];
-        element.setAttribute("data-cursor", "text");
-        element.setAttribute("data-cursor-style", "background: currentColor");
-      }
-    });
-  </script>
 
   <footer class="post-footer">
     <!-- 添加打赏功能开始 -->
@@ -106,9 +84,6 @@
       "
     >
       <button
-        style="cursor: none"
-        data-cursor="block"
-        data-cursor-style="background: #00999930;border-radius:10px"
         id="rewardButton"
         disable="enable"
         onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}"
@@ -237,12 +212,7 @@
         </div>
       </button>
       <a href="/donate">
-        <span
-          class="donate-bottom"
-          data-cursor="block"
-          data-cursor-style="background: #00999930;"
-          >感谢各位金主的打赏</span
-        >
+        <span class="donate-bottom">感谢各位金主的打赏</span>
       </a>
       <div id="QR" style="display: none">
         <div id="wechat" style="display: inline-block">
@@ -302,17 +272,6 @@
   });
 
   // 当#rewardButton:hover时，修改svg id="292218605"中所有的stroke颜色为#fff,修改fill的颜色为#009999.
-</script>
-
-<script>
-  var links = document.querySelectorAll("p a, td a ,ol a, h1 a, h2 a, h3 a");
-  for (var i = 0; i < links.length; i++) {
-    links[i].setAttribute("data-cursor", "block");
-    links[i].setAttribute(
-      "data-cursor-style",
-      "background:var(--cursor-color);"
-    );
-  }
 </script>
 
 {{- end }}{{/* end main */}}

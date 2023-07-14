@@ -1,203 +1,199 @@
 .nav {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  max-width: calc(var(--main-width) + var(--gap) * 2);
-  margin-inline-start: auto;
-  margin-inline-end: auto;
-  line-height: 56px;
-  margin-top: 1rem;
-  z-index: 999;
-  pointer-events: auto;
-  border-radius: 999px;
-  box-shadow: #ffffff 0 0, rgba(244, 244, 245, 0.1) 0 0 0 1px,
-    rgba(39, 39, 42, 5%) 0 10px 15px -3px, rgba(39, 39, 42, 5%) 0 4px 6px -4px;
-  backdrop-filter: blur(12px);
-  background-color: rgb(255 255 255 / 50%);
-  border: 1px solid #ffffff25;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: calc(var(--main-width) + var(--gap) * 2);
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+    line-height: 56px;
+    margin-top: 1rem;
+    z-index: 999;
+    pointer-events: auto;
+    border-radius: 999px;
+    box-shadow: #FFFFFF 0 0, rgba(244, 244, 245, .1) 0 0 0 1px, rgba(39, 39, 42, 5%) 0 10px 15px -3px, rgba(39, 39, 42, 5%) 0 4px 6px -4px;
+    backdrop-filter: blur(12px);
+    background-color: rgb(255 255 255 / 50%);
+    border: 1px solid #ffffff25;
 }
 
 .dark .nav {
-  box-shadow: #ffffff 0 0, rgba(244, 244, 245, 0.05) 0 0 0 1px,
-    rgba(0, 0, 0, 15%) 0 10px 15px -3px, rgba(0, 0, 0, 15%) 0 4px 6px -4px;
-  backdrop-filter: blur(12px);
-  background-color: rgb(15 15 15/0.3);
-  border: 0 solid #e5e5e5;
+    box-shadow: #FFFFFF 0 0, rgba(244, 244, 245, .05) 0 0 0 1px, rgba(0, 0, 0, 15%) 0 10px 15px -3px, rgba(0, 0, 0, 15%) 0 4px 6px -4px;
+    backdrop-filter: blur(12px);
+    background-color: rgb(15 15 15/.3);
+    border: 0 solid #E5E5E5;
 }
 
 .nav ul {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 .logo a {
-  display: block;
+    display: block;
 }
 
 .logo,
 #menu {
-  display: flex;
-  margin: auto var(--gap);
+    display: flex;
+    margin: auto var(--gap);
 }
 
 .logo {
-  flex-wrap: inherit;
+    flex-wrap: inherit;
 }
 
 .logo a {
-  font-size: 20px;
-  font-weight: 700;
+    font-size: 20px;
+    font-weight: 700;
 }
 
 .logo a img,
 .logo a svg {
-  display: inline;
-  vertical-align: middle;
-  pointer-events: none;
-  transform: translate(0, -10%);
-  border-radius: 6px;
-  margin-inline-end: 8px;
-  image-rendering: -webkit-optimize-contrast;
+    display: inline;
+    vertical-align: middle;
+    pointer-events: none;
+    transform: translate(0, -10%);
+    border-radius: 6px;
+    margin-inline-end: 8px;
+    image-rendering: -webkit-optimize-contrast;
 }
 
 #theme-toggle svg {
-  height: 20px;
-  width: 20px;
-  /* margin-left: 2px; */
+    height: 20px;
+    width: 20px;
+    /* margin-left: 2px; */
 }
 
 /* 点击button id="theme-toggle"后,为svg id="sun"和svg id="moon"添加动画效果,sun和moon出现之前:缩小并且带有一些旋转角度,出现之后恢复默认大小和默认角度,带有旋转动画.加载网页默认是没有动画效果*/
 #sun,
 #sun,
 #moon {
-  transform-origin: center center;
-  animation: scaleDown 0.3s ease-out;
-  transition-duration: 0.3s;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transform-origin: center center;
+    animation: scaleDown 0.3s ease-out;
+    transition-duration: .3s;
+    transition-timing-function: cubic-bezier(.4, 0, .2, 1);
 }
 
 #sun {
-  animation-name: scaleUp;
+    animation-name: scaleUp;
 }
 
 @keyframes scaleDown {
-  0% {
-    transform: scale(0.5) rotate(30deg);
-    opacity: 0;
-  }
-  100% {
-    transform: scale(1) rotate(0deg);
-    opacity: 1;
-  }
+    0% {
+        transform: scale(0.5) rotate(30deg);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1) rotate(0deg);
+        opacity: 1;
+    }
 }
 
 @keyframes scaleUp {
-  0% {
-    transform: scale(0.5) rotate(-30deg);
-    opacity: 0;
-  }
-  100% {
-    transform: scale(1) rotate(0deg);
-    opacity: 1;
-  }
+    0% {
+        transform: scale(0.5) rotate(-30deg);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1) rotate(0deg);
+        opacity: 1;
+    }
 }
 
 button#theme-toggle {
-  font-size: 26px;
-  margin: auto 4px;
-  cursor: none;
-  padding: 0 2px;
+    font-size: 26px;
+    margin: auto 4px;
 }
 
 body.dark #moon {
-  vertical-align: middle;
-  display: none;
+    vertical-align: middle;
+    display: none;
 }
 
 body:not(.dark) #sun {
-  display: none;
+    display: none;
 }
 
 #menu {
-  list-style: none;
-  word-break: keep-all;
-  overflow-x: auto;
-  white-space: nowrap;
+    list-style: none;
+    word-break: keep-all;
+    overflow-x: auto;
+    white-space: nowrap;
 }
 
 #menu li + li {
-  margin-inline-start: var(--gap);
+    margin-inline-start: var(--gap);
 }
 
 #menu a {
-  font-size: 16px;
-  font-weight: 500;
-  color: var(--secondary);
-  display: inline-block;
-  line-height: 1.5em;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--secondary);
+    display: inline-block;
+    line-height: 1.5em;
 }
 
 #menu a:hover {
-  color: var(--link-hover-color);
+    color: var(--link-hover-color);
 }
 
 #menu a.active:hover {
-  color: var(--link-hover-color);
+    color: var(--link-hover-color);
 }
 
 #menu .active {
-  color: var(--link-hover-color);
-  box-shadow: 0 2px 0 var(--link-hover-color);
-  padding-bottom: 16px;
+    color: var(--link-hover-color);
+    box-shadow: 0 2px 0 var(--link-hover-color);
+    padding-bottom: 16px;
 }
 
 #menu .external-link {
-  position: relative;
+    position: relative;
 }
 
 #menu .external-link svg {
-  width: 13px;
-  height: auto;
-  position: relative;
-  top: 1px;
-  margin-left: 3px;
+    width: 13px;
+    height: auto;
+    position: relative;
+    top: 1px;
+    margin-left: 3px;
 }
 
 .lang-switch li,
 .lang-switch ul,
 .logo-switches {
-  display: inline-flex;
-  margin: auto 4px;
+    display: inline-flex;
+    margin: auto 4px;
 }
 
 .lang-switch {
-  display: flex;
-  flex-wrap: inherit;
+    display: flex;
+    flex-wrap: inherit;
 }
 
 .lang-switch a {
-  margin: auto 3px;
-  font-size: 16px;
-  font-weight: 500;
+    margin: auto 3px;
+    font-size: 16px;
+    font-weight: 500;
 }
 
 .logo-switches {
-  flex-wrap: inherit;
+    flex-wrap: inherit;
 }
 
 /* 设置手机端的样式 */
 @media (max-width: 767px) {
-  .nav {
-    border: none;
-    border-radius: unset;
-    margin-top: 0;
-    background-color: var(--theme);
-  }
+    .nav {
+        border: none;
+        border-radius: unset;
+        margin-top: 0;
+        background-color: var(--theme);
+    }
 
-  .dark .nav {
-    border: none;
-    border-radius: unset;
-    margin-top: 0;
-    background-color: var(--theme);
-  }
+    .dark .nav {
+        border: none;
+        border-radius: unset;
+        margin-top: 0;
+        background-color: var(--theme);
+    }
 }

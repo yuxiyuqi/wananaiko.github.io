@@ -105,15 +105,12 @@
     transition: var(--link-transition);
     padding-bottom: 2px;
     box-shadow: 0 1px 0 rgba(125, 125, 125, .5);
-    /* padding: 2px 4px; */
 }
 
 .post-content a:hover {
     color: var(--content);
-    box-shadow: none;
-    background-color: unset;
-    /* padding: 2px 4px; */
-    border-radius: 4px;
+    box-shadow: 0 1px 0 var(--content);
+    padding-bottom: 2px;
 }
 
 .post-content a.anchor:hover {

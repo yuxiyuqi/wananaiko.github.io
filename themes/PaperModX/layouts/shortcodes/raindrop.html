@@ -20,7 +20,7 @@ getJSON $apiUrl "?access_token=" $token "&perpage=50&sort=-created" }}
   .mk-raindrop-bookmark {
     width: 100%;
     margin: 0 auto;
-    cursor: none;
+    cursor: pointer;
     padding: 12px 4px 4px 4px;
     border-radius: var(--radius);
     --list-opacity: 1;
@@ -60,7 +60,6 @@ getJSON $apiUrl "?access_token=" $token "&perpage=50&sort=-created" }}
     text-decoration: none;
     box-shadow: none;
     padding: 0 0.5rem;
-    background-color: unset;
   }
 
   .mk-title-wrapper {
@@ -76,24 +75,17 @@ getJSON $apiUrl "?access_token=" $token "&perpage=50&sort=-created" }}
     background-repeat: no-repeat;
     background-position: left center;
     background-size: 16px;
-    line-height: 22px;
+    line-height: 1.5rem;
     color: var(--content);
     transition: 0.5s;
     margin-top: 12px;
     width: fit-content;
-    padding: 0 4px;
-    margin-left: -4px;
   }
 
   .mk-raindrop-bookmark:hover .mk-title {
     color: var(--content);
     box-shadow: var(--box-shadow);
     width: fit-content;
-    box-shadow: none;
-    background-color: unset;
-    padding: 0 4px;
-    border-radius: 4px;
-    margin-left: -4px;
   }
 
   .mk-excerpt {
@@ -176,7 +168,7 @@ getJSON $apiUrl "?access_token=" $token "&perpage=50&sort=-created" }}
     font-size: 13px;
     white-space: nowrap;
     line-height: 1.4rem;
-    cursor: none;
+    cursor: pointer;
   }
 
   .mk-tab-tag.mk-tab-tag-active:hover {
@@ -313,25 +305,11 @@ getJSON $apiUrl "?access_token=" $token "&perpage=50&sort=-created" }}
 
 <!-- Base on raindrop.io's API filters, Add a Tab switch Group to view different tags,each tag is displayed only once in the this Tab switch. -->
 <div class="mk-tab">
-  <div
-    class="mk-tab-tag"
-    onclick="showAll()"
-    data-cursor="block"
-    data-cursor-style="background:var(--cursor-color)"
-  >
-    All
-  </div>
+  <div class="mk-tab-tag" onclick="showAll()">All</div>
 
   {{ range $i, $item := index $json "items" }} {{ range $j, $tag := $item.tags
   }}
-  <div
-    class="mk-tab-tag"
-    onclick="showTag('{{ $tag }}')"
-    data-cursor="block"
-    data-cursor-style="background:var(--cursor-color);"
-  >
-    {{ $tag }}
-  </div>
+  <div class="mk-tab-tag" onclick="showTag('{{ $tag }}')">{{ $tag }}</div>
   {{ end }} {{ end }}
   <div class="mk-divider"></div>
 </div>
@@ -406,13 +384,7 @@ getJSON $apiUrl "?access_token=" $token "&perpage=50&sort=-created" }}
         <img src="{{ $item.cover }}" loading="lazy" />
       </div>
 
-      <div
-        class="mk-title"
-        data-cursor="block"
-        data-cursor-style="background:var(--cursor-color);"
-      >
-        {{ $item.title }}
-      </div>
+      <div class="mk-title">{{ $item.title }}</div>
       {{ with $item.excerpt }}
       <div class="mk-excerpt">{{ . }}</div>
       {{ end }} {{ with $item.note }}

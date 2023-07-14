@@ -218,18 +218,4 @@ end }}
   })(remark_config.components || ['embed']);
 </script>
 
-<script>
-  // 网页加载完后,给 class="post-content slide-enter-content"内部所有的a标签中加上属性 data-cursor="block" data-cursor-style="background: var(--cursor-color)"
-  window.onload = function () {
-    var a_tags = document.querySelectorAll(".post-content a");
-    for (var i = 0; i < a_tags.length; i++) {
-      a_tags[i].setAttribute("data-cursor", "block");
-      a_tags[i].setAttribute(
-        "data-cursor-style",
-        "background: var(--cursor-color)"
-      );
-    }
-  };
-</script>
-
 {{ end }} {{- end }} {{- end -}}

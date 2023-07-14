@@ -38,19 +38,12 @@
   }
 
   .stack-item:hover .stack-item-title {
-    line-height: 24px;
     color: var(--content);
-    box-shadow: none;
-    background-color: unset;
-    padding: 0 4px;
-    border-radius: 4px;
+    box-shadow: var(--box-shadow);
   }
 
   .dark .stack-item:hover .stack-item-title {
-    box-shadow: none;
-    background-color: unset;
-    padding: 0px 4px;
-    border-radius: 4px;
+    box-shadow: var(--box-shadow);
   }
 
   .stack-item-link {
@@ -86,12 +79,9 @@
   .stack-item-title {
     color: var(--content);
     font-size: 16px;
-    line-height: 24px;
     font-weight: 500;
     width: fit-content;
     transition: 0.5s;
-    padding: 2px 4px;
-    margin-left: -4px;
   }
 
   .stack-item-svg {
@@ -161,7 +151,7 @@
     width: 100%;
     border-radius: var(--radius);
     margin: 0 auto;
-    cursor: none;
+    cursor: pointer;
     --list-opacity: 1;
     background-color: rgb(250 250 250 / var(--list-opacity));
     /* border: 1px solid var(--border); */
@@ -189,8 +179,8 @@
   }
 
   /* .stack-single:hover .stack-item-tag {
-        background-color: var(--border);
-      } */
+      background-color: var(--border);
+    } */
 
   span.stack-item-tag {
     border-radius: 9999px;
@@ -254,33 +244,17 @@
         <div class="stack-item-content">
           <div class="stack-item-header">
             <div class="stack-item-title-container">
-              <div
-                class="stack-item-title"
-                data-cursor="block"
-                data-cursor-style="background:var(--cursor-color);"
-              >
-                {{ index $item 1 }}
-              </div>
-              <!-- <div class="stack-item-svg">→</div> -->
+              <div class="stack-item-title">{{ index $item 1 }}</div>
+              <div class="stack-item-svg">→</div>
             </div>
             <p class="stack-item-description">{{ index $item 3 }}</p>
             <spacer></spacer>
             {{- $tags := split (index $item 4) "," }} {{- if ge (len $tags) 1 }}
             <div class="stack-item-tags">
               {{ range $tags }}
-              <span
-                class="stack-item-tag"
-                data-cursor="block"
-                data-cursor-style="background:var(--cursor-color);"
-                >{{ . }}</span
-              >
+              <span class="stack-item-tag">{{ . }}</span>
               {{ end }} {{ if $discount }}
-              <span
-                class="stack-item-discount"
-                data-cursor="block"
-                data-cursor-style="background:var(--cursor-color);"
-                >{{ $discount }}</span
-              >
+              <span class="stack-item-discount">{{ $discount }}</span>
               {{ end }}
             </div>
             {{- end }}

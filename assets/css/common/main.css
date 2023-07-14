@@ -163,7 +163,7 @@ mark {
   width: 28px;
   transition: transform 150ms cubic-bezier(0.2, 0, 0.2, 1) !important;
   will-change: transform !important;
-  cursor: none;
+  cursor: auto;
   vertical-align: middle;
   display: block;
 }
@@ -180,7 +180,7 @@ svg.iconpark-icon-home:hover {
   transform: translateX(-50%);
   background-color: var(--primary);
   color: var(--entry);
-  font-size: 13px;
+  font-size: 10px;
   line-height: 20px;
   padding: 3px 8px;
   border-radius: 4px;
@@ -196,7 +196,7 @@ svg.iconpark-icon-home:hover {
 .social-icons a:hover {
   color: var(--link-hover-color);
   box-shadow: var(--link-hover-underline-shadow);
-  /* transform: matrix(1.25, 0, 0, 1.25, 0, 0) !important; */
+  transform: matrix(1.25, 0, 0, 1.25, 0, 0) !important;
 }
 
 code {
