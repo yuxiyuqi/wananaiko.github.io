@@ -175,7 +175,7 @@ img.MuiCardMedia-root.MuiCardMedia-media.MuiCardMedia-img.css-1wh7jvw {
 
 在更新 Docker 前，需要先暂停 huntly 服务：`sudo systemctl stop huntly`
 
-然后删除 Docker 容器和镜像，接着拉取最新的 huntly 代码 (下面的 0.3.0 以线上最新版为准)。
+然后删除 Docker 容器和镜像，接着拉取最新的 huntly 代码 (下面的 0.3.0 需要修改为实际最新的版本号)。
 
 `docker run -d --name huntly -p 9090:80 -v /opt/huntly:/data lcomplete/huntly:0.3.0`
 
