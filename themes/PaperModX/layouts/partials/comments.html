@@ -15,47 +15,29 @@
     }
   </style>
 </head>
-<body>
-  <div class="comment-title">欢迎讨论</div>
-  <div class="comment-description">请通过电子邮件订阅以接收回复通知。</div>
-  <div id="remark42"></div>
-
-  <script>
-    var remark_config = {
-      host: "https://remark42.wananaiko.com",
-      site_id: "wananaiko",
-      locale: "zh",
-      page_title: "Comments",
-      theme: "auto",
-    };
-    (function (c) {
-      /* Adjust the theme using the local-storage pref-theme if set */
-      if (localStorage.getItem("pref-theme") === "dark") {
-        remark_config.theme = "dark";
-      } else if (localStorage.getItem("pref-theme") === "light") {
-        remark_config.theme = "light";
-      }
-      /* Add remark42 widget */
-      for (var i = 0; i < c.length; i++) {
-        var d = document,
-          s = d.createElement("script");
-        s.src = remark_config.host + "/web/" + c[i] + ".js";
-        s.defer = true;
-        (d.head || d.body).appendChild(s);
-      }
-    })(remark_config.components || ["embed"]);
-  </script>
-  <script>
-    !(function (e, n) {
-      for (var o = 0; o < e.length; o++) {
-        var r = n.createElement("script"),
-          c = ".js",
-          d = n.head || n.body;
-        "noModule" in r ? ((r.type = "module"), (c = ".mjs")) : (r.async = !0),
-          (r.defer = !0),
-          (r.src = remark_config.host + "/web/" + e[o] + c),
-          d.appendChild(r);
-      }
-    })(remark_config.components || ["embed"], document);
-  </script>
-</body>
+<head>
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/@waline/client@2.14.6/dist/waline.css">
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/@waline/client@2.14.6/dist/waline-meta.css">
+  </head>
+  <body>
+    <!-- ... -->
+    <div id="waline"></div>
+    <script type="module">
+      import { init } from 'https://unpkg.com/@waline/client@v2.14.6/dist/waline.mjs';
+  
+      init({
+        el: '#waline',
+        lang: 'zh-CN',
+        reaction: true, // 开启反应
+        serverURL: 'https://chat.wananaiko.design',
+        dark: 'body.dark',
+        copyright: false,
+        
+      // 设置 emoji 为贴吧与哔哩哔哩
+      emoji: [
+        '//cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/tieba',
+        '//cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/bilibili',
+      ],
+      });
+    </script>
+  </body>
