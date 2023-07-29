@@ -35,7 +35,7 @@ TocSide = "right"
 EnableInstantClick = false
 EnableImageZoom = true
 hideMeta = false
-comments = true
+comments = false
 
 
   [params.logo]
@@ -96,9 +96,29 @@ url = "/gallery/"
 weight = 3
 
 [[languages.en.menu.main]]
+name = "好物"
+url = "/goods/"
+weight = 4
+
+[[languages.en.menu.main]]
+name = "软件"
+url = "/stack/"
+weight = 5
+
+[[languages.en.menu.main]]
+name = "书签"
+url = "/bookmark/"
+weight = 6
+
+[[languages.en.menu.main]]
+name = "线索"
+url = "/readwise/"
+weight = 7
+
+[[languages.en.menu.main]]
 name = "归档"
 url = "/archives/"
-weight = 4
+weight = 8
 
 [languages.zh]
 languageName = ":cn:"
