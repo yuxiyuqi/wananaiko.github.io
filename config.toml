@@ -120,11 +120,6 @@ name = "归档"
 url = "/archives/"
 weight = 8
 
-[[languages.en.menu.main]]
-name = "邻居"
-url = "/links/"
-weight = 9
-
 [languages.zh]
 languageName = ":cn:"
 weight = 2
