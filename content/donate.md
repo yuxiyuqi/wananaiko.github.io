@@ -1,6 +1,6 @@
 ---
 title: "打赏"
 layout: "donate"
-description: 感谢各位金主的打赏，谢谢 🙏 。当前非真实数据，仅用于模拟展示 。
+description: 感谢各位金主的打赏，记得备注你的昵称，谢谢 🙏 。
 comments: true
 ---
