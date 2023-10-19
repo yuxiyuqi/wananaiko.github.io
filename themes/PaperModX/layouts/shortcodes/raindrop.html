@@ -327,6 +327,7 @@ getJSON $apiUrl "?access_token=" $token "&perpage=50&sort=-created" }}
     }
   }
 
+  // 根据点击的tag来显示对应的书签
   function showAll() {
     var bookmarks = document.getElementsByClassName("mk-raindrop-bookmark");
     for (var i = 0; i < bookmarks.length; i++) {

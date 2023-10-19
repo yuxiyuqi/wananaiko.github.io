@@ -3,41 +3,11 @@
     {
       "year": "2023年",
       "firstOfYear": true,
-      "month": "6月",
-      "day": "28",
-      "user": "Aiko",
-      "price": "¥35.00",
-      "goods": "1 杯星巴克「 大溪地香草情冰镇浓缩 」",
-      "img": "https://images.wananaiko.com/2023/06/coffee.jpg"
-    },
-    {
-      "year": "2023年",
-      "firstOfYear": false,
-      "month": "6月",
-      "day": "26",
-      "user": "Aiko",
-      "price": "¥35.00",
-      "goods": "1 杯星巴克「 大溪地香草情冰镇浓缩 」",
-      "img": "https://images.wananaiko.com/2023/06/coffee.jpg"
-    },
-    {
-      "year": "2023年",
-      "firstOfYear": false,
-      "month": "6月",
-      "day": "20",
-      "user": "Aiko",
-      "price": "¥35.00",
-      "goods": "1 杯星巴克「 大溪地香草情冰镇浓缩 」",
-      "img": "https://images.wananaiko.com/2023/06/coffee.jpg"
-    },
-    {
-      "year": "2022年",
-      "firstOfYear": true,
-      "month": "12月",
-      "day": "25",
-      "user": "Aiko",
-      "price": "¥35.00",
-      "goods": "1 杯星巴克「 大溪地香草情冰镇浓缩 」",
+      "month": "10月",
+      "day": "19",
+      "user": "恩典",
+      "price": "¥99.00",
+      "goods": "3 杯星巴克「 可芮朵 」",
       "img": "https://images.wananaiko.com/2023/06/donate-empty.png"
     }
   ]
