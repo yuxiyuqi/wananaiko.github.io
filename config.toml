@@ -110,6 +110,11 @@ name = "书签"
 url = "/bookmark/"
 weight = 6
 
+[[languages.en.menu.main]]
+name = "邻居"
+url = "/links/"
+weight = 6
+
 
 [[languages.en.menu.main]]
 name = "归档"
