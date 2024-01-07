@@ -1,5 +1,5 @@
-baseURL = "https://wananaiko.com/"
-title = "wananaiko"
+baseURL = "https://wananaiko-github-io.pages.dev/"
+title = "Yuxi & Yuqi"
 paginate = 8
 theme = "PaperModX"
 enableInlineShortcodes = true
@@ -17,7 +17,7 @@ author = "wananaiko"
 mainSections = [ "docs", "posts" ]
 disableAnchoredHeadings = true
 images = [ "cover.png" ]
-favicon = "https://images.wananaiko.com/favicon.ico"
+favicon = ""
 DateFormat = "2006-01-02"
 useCustomAnalytics = true
 defaultTheme = "auto"
